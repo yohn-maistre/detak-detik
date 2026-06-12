@@ -113,9 +113,11 @@ export const KEHENINGAN = {
     { k: 'Ternak babi', v: '38.420', sumber: 'BPS 2025' },
   ],
   absen: [
-    { k: 'Warga mengungsi akibat konflik', v: '—', catatan: 'data resmi tidak tersedia' },
+    { k: 'Warga mengungsi akibat konflik (sorotan edisi: Papua Tengah)', v: '—', catatan: 'data resmi tidak tersedia' },
     { k: 'Femisida (pembunuhan perempuan karena gendernya), nasional', v: '—', catatan: 'tidak ada penghitungan resmi; pihak ketiga menghitung dari pemberitaan' },
     { k: 'Publikasi akademisi di jurnal predator, nasional', v: '—', catatan: 'tidak ada audit resmi yang terbit' },
+    { k: 'Kematian dalam tahanan, nasional', v: '—', catatan: 'tidak ada rekapitulasi resmi tahunan yang terbuka' },
+    { k: 'Aktivis 1997–1998 yang masih hilang: status pencarian resmi', v: '—', catatan: '13 nama tercatat; pembaruan resmi tidak terbit' },
   ],
   laneC: { teks: '107.039 jiwa tercatat mengungsi di Tanah Papua', chip: 'HRM · Mar 2026' },
 };

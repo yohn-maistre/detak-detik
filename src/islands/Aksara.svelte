@@ -145,7 +145,7 @@
   });
 </script>
 
-<div class="aksara" data-no-stempel>
+<div class="aksara" data-no-stempel data-register="mesin">
   <div id="aksara-bubble" class="bubble mono" aria-live="polite"></div>
 
   {#if buka}
@@ -182,9 +182,9 @@
   .pill {
     font-size: 11px;
     letter-spacing: 0.18em;
-    background: var(--ink);
-    color: var(--bg);
-    border: 1px solid var(--ink);
+    background: #15130e;
+    color: #d6cbac;
+    border: 1px solid #2e2c28;
     padding: 9px 14px;
     cursor: pointer;
     transition: transform 0.25s var(--ease-out);
@@ -199,8 +199,8 @@
     bottom: calc(100% + 10px);
     max-width: min(340px, 76vw);
     width: max-content;
-    background: var(--ink);
-    color: var(--bg);
+    background: #15130e;
+    color: #d6cbac;
     font-size: 11.5px;
     line-height: 1.5;
     padding: 9px 12px;
@@ -215,7 +215,7 @@
     left: 18px;
     top: 100%;
     border: 6px solid transparent;
-    border-top-color: var(--ink);
+    border-top-color: #15130e;
   }
   .bubble:global(.is-talking) { opacity: 1; transform: none; }
 

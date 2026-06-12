@@ -8,7 +8,8 @@ import IndeksPagi from '../islands/IndeksPagi.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
-import PetaAtlas from '../islands/PetaAtlas.svelte';
+import IngatanHero from '../islands/IngatanHero.svelte';
+import SensusDiri from '../islands/SensusDiri.svelte';
 import TebakDaerah from '../islands/TebakDaerah.svelte';
 import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
@@ -42,7 +43,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <button class="detak mono" data-detak={EDISI.terbitEpoch} title="Detik sejak edisi terbit">
               ● <span class="detak-beat">00.00.00</span>
             </button>
-            <span class="coordstamp-inline">{EDISI.koordinat.label} · {EDISI.koordinat.wilayah}</span>
+            <span class="coordstamp-inline">SOROTAN EDISI · {EDISI.koordinat.label} · {EDISI.koordinat.wilayah}</span>
           </div>
 
           <div class="masthead-grid">
@@ -286,9 +287,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
       <div class="tex tex-hatch" aria-hidden="true"></div>
       <div class="wrap">
         <h2 class="sect-title-atlas display reveal-glyphs">Atlas Tanah Air</h2>
-        <p class="atlas-sub fig">Fig. 1. · Plat arsip Nusantara; segel madder menandai catatan edisi. Peta hidup bertugas di halaman depan.</p>
+        <p class="atlas-sub fig">Fig. 1. · Halaman ingatan: sejarah, manusia, alam, dan rupa Nusantara — berganti tiap terbit.</p>
 
-        <PetaAtlas client:visible />
+        <IngatanHero client:visible />
 
         <section class="dunia-blok" aria-label="Peringkat Indonesia di mata dunia">
           <span class="eyebrow">LAMPIRAN B · DUNIA MEMANDANG · PERINGKAT TERAKHIR YANG TERBIT</span>
@@ -337,6 +338,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <div class="main-rak">
           <TebakDaerah client:visible />
           <BenarSalah client:visible />
+          <SensusDiri client:visible />
         </div>
       </div>
     </section>
