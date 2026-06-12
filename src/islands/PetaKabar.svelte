@@ -277,6 +277,9 @@
     <div class="kb-koordinat mono">{koordinat}</div>
   </div>
 
+  {#if plat === 'cuaca'}
+    <div class="kb-info mono">▦ RADAR HUJAN 10 MENIT TERAKHIR · RAINVIEWER — BILA TIDAK ADA HUJAN, PLAT TAMPAK BERSIH</div>
+  {/if}
   {#if infoGempa}
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}

@@ -1,0 +1,97 @@
+---
+/**
+ * The receipts drawer: every data source the paper touches, where it is
+ * used, how it is processed, and the formula when a number is derived.
+ * If a row says CONTOH, the pipeline has not replaced the sample yet —
+ * that status is printed, never hidden.
+ */
+import Paper from '../layouts/Paper.astro';
+
+type Baris = { nama: string; url: string; dipakai: string; metode: string; status: 'LANGSUNG' | 'CONTOH' | 'SEGERA' };
+const SUMBER: Baris[] = [
+  { nama: 'BMKG · gempa terkini', url: 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', dipakai: 'Peta Kabar · lapisan GEMPA', metode: 'JSON publik tanpa kunci, dibaca langsung di peramban; gagal → sampel berlabel', status: 'LANGSUNG' },
+  { nama: 'ER-API · kurs USD/IDR', url: 'https://open.er-api.com/v6/latest/USD', dipakai: 'Pasar Pagi', metode: 'kurs harian, dibaca langsung; gagal → sampel berlabel', status: 'LANGSUNG' },
+  { nama: 'CoinGecko · Bitcoin', url: 'https://api.coingecko.com/api/v3/simple/price', dipakai: 'Pasar Pagi', metode: 'harga spot IDR, dibaca langsung', status: 'LANGSUNG' },
+  { nama: 'RainViewer · radar hujan', url: 'https://api.rainviewer.com/public/weather-maps.json', dipakai: 'Peta Kabar · plat CUACA', metode: 'ubin radar 10 menit terakhir di atas plat atlas', status: 'LANGSUNG' },
+  { nama: 'OpenFreeMap / OSM', url: 'https://openfreemap.org', dipakai: 'Peta Kabar · plat ATLAS', metode: 'ubin vektor tanpa kunci', status: 'LANGSUNG' },
+  { nama: 'Esri World Imagery', url: 'https://www.arcgis.com', dipakai: 'Peta Kabar · plat SATELIT', metode: 'ubin raster citra, atribusi tercetak di peta', status: 'LANGSUNG' },
+  { nama: 'BPS · IHK, PDB, Sakernas', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi', metode: 'rilis resmi terakhir disalin manual; pipa WebAPI menyusul', status: 'CONTOH' },
+  { nama: 'Proyeksi penduduk BPS', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi · jam penduduk', metode: 'interpolasi linear: 284,4 jt (medio 2026) + 2,1 jt/tahun ÷ 31,5 jt detik', status: 'CONTOH' },
+  { nama: 'APBN 2026 (pagu)', url: 'https://www.kemenkeu.go.id', dipakai: 'Indeks Pagi · belanja negara', metode: 'laju rata-rata: Rp 3.786 T ÷ 31,5 jt detik ≈ Rp 120 jt/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
+  { nama: 'Panel Harga Bapanas', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Harga Pangan (7 komoditas)', metode: 'seri 30 hari per komoditas; sementara deret deterministik berlabel contoh', status: 'CONTOH' },
+  { nama: 'Kemnaker Satudata · PHK', url: 'https://satudata.kemnaker.go.id', dipakai: 'Papan Angka', metode: 'angka bulanan disalin dari rilis; hanya pekerja ter-JKP', status: 'CONTOH' },
+  { nama: 'GFW/UMD · kehilangan hutan', url: 'https://www.globalforestwatch.org', dipakai: 'Papan Angka · Obituari Hutan', metode: '296.000 ha (2025) ÷ 8.760 jam ≈ 33,8 ha/jam; obituari memakai peringatan GLAD/RADD harian', status: 'CONTOH' },
+  { nama: 'IQAir · PM2.5 Jakarta', url: 'https://www.iqair.com/indonesia/jakarta', dipakai: 'Papan Angka · Sehari Bernapas', metode: 'rata-rata tahunan 41,7 µg/m³ ÷ 22 µg ≈ 1,9 batang rokok (rumus Berkeley Earth)', status: 'CONTOH' },
+  { nama: 'Kemenkes · defisit BPJS', url: 'https://www.kemkes.go.id', dipakai: 'Papan Angka', metode: 'proyeksi Rp 24 T/2026 ÷ 31,5 jt detik ≈ Rp 761 rb/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
+  { nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Angka Edisi · Gradien Keadilan', metode: 'ekstraksi terstruktur per putusan (perkara, kerugian, vonis, pasal) → sebar log', status: 'SEGERA' },
+  { nama: 'DJPK Kemenkeu · APBD', url: 'https://djpk.kemenkeu.go.id', dipakai: 'Struk Belanja Negara · Temuan', metode: 'rasio belanja per fungsi dihitung dari tabel APBD', status: 'CONTOH' },
+  { nama: 'World Bank API', url: 'https://api.worldbank.org', dipakai: 'Garis Start Sama · Dunia Memandang', metode: 'CSV indikator (manufaktur %PDB, FDI %PDB) seri disederhanakan', status: 'CONTOH' },
+  { nama: 'OECD PISA', url: 'https://www.oecd.org/pisa', dipakai: 'Garis Start Sama', metode: 'skor resmi 2003–2022; pembaruan 8 Sep 2026', status: 'CONTOH' },
+  { nama: 'RSF · indeks kebebasan pers', url: 'https://rsf.org', dipakai: 'Dunia Memandang', metode: 'peringkat tahunan disalin dari tabel resmi', status: 'CONTOH' },
+  { nama: 'Wikimedia Feed API', url: 'https://api.wikimedia.org', dipakai: 'Hari Ini dalam Sejarah (menyusul)', metode: 'JSON resmi onthisday + featured, di-cache worker saat cetak', status: 'SEGERA' },
+  { nama: 'NVIDIA NIM / Workers AI', url: 'https://build.nvidia.com', dipakai: 'Aksara (tanya, tur)', metode: 'model tidak pernah menghasilkan angka: prosa di atas lembar fakta, gerbang fakta menolak angka tak berdokumen', status: 'SEGERA' },
+];
+const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', SEGERA: 'off' };
+---
+
+<Paper title="Sumber & Metode — DETAK DETIK" description="Setiap sumber data Detak Detik: tautan, tempat dipakai, cara diolah, dan rumusnya.">
+  <main class="src-hal" data-register="dinas" data-stempel-pad>
+    <div class="wrap">
+      <a class="src-back mono ink-link" href="/">← DETAK DETIK · EDISI #41</a>
+      <h1 class="src-judul display">Sumber & Metode</h1>
+      <p class="src-sub">
+        Laci kuitansi. Setiap angka di koran ini berasal dari salah satu baris di bawah —
+        lengkap dengan tautan, tempat ia dipakai, dan rumus bila ia diturunkan.
+        Baris berstatus <b>CONTOH</b> berarti pipa datanya belum menggantikan sampel; status itu dicetak, tidak disembunyikan.
+      </p>
+
+      <div class="src-tabel mono" role="table" aria-label="Daftar sumber data">
+        <div class="src-row head" role="row">
+          <span>SUMBER</span><span>DIPAKAI DI</span><span>METODE / RUMUS</span><span>STATUS</span>
+        </div>
+        {SUMBER.map((s) => (
+          <div class="src-row" role="row">
+            <span><a class="ink-link" href={s.url} rel="noopener">{s.nama}</a></span>
+            <span>{s.dipakai}</span>
+            <span class="metode">{s.metode}</span>
+            <span class={`status ${KELAS[s.status]}`}>{s.status}</span>
+          </div>
+        ))}
+      </div>
+
+      <p class="src-kaki mono">
+        HUKUM BESI №1 · KUTIPAN ATAU DIAM — MODEL BAHASA TIDAK PERNAH MENGHASILKAN ANGKA; PIPA DATA YANG MENGHITUNG, MODEL HANYA MERANGKAI KALIMAT DI ATAS LEMBAR FAKTA, DAN GERBANG FAKTA MENOLAK KALIMAT YANG ANGKANYA TIDAK BERDOKUMEN.
+      </p>
+    </div>
+  </main>
+</Paper>
+
+<style>
+  .src-hal { min-height: 100vh; background: var(--bg); color: var(--ink); padding: 30px 0 80px; }
+  .src-back { display: inline-block; font-size: 10px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 26px; }
+  .src-judul { font-size: clamp(36px, 7vw, 88px); }
+  .src-sub { font-size: 15.5px; max-width: 62ch; margin: 12px 0 32px; }
+  .src-sub b { color: var(--accent); }
+  .src-tabel { border: 1px solid var(--line); font-size: 11px; }
+  .src-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1.6fr 90px;
+    gap: 14px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .src-row:last-child { border-bottom: none; }
+  .src-row.head { background: var(--ink); color: var(--bg); font-size: 9px; letter-spacing: 0.18em; }
+  .metode { color: var(--muted); }
+  .status { font-size: 9px; letter-spacing: 0.14em; }
+  .status.on { color: var(--accent); }
+  .status.mid { color: var(--muted); }
+  .status.off { color: var(--line-soft); }
+  @media (max-width: 760px) {
+    .src-row { grid-template-columns: 1fr 80px; }
+    .src-row span:nth-child(2) { display: none; }
+    .src-row.head span:nth-child(2) { display: none; }
+  }
+  .src-kaki { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); margin-top: 24px; max-width: 90ch; line-height: 1.8; }
+</style>

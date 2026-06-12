@@ -55,7 +55,7 @@
 
 <section class="pp" aria-label="Pasar pagi: kurs, komoditas, indeks" data-no-stempel>
   <div class="pp-head">
-    <span class="inkbar"><span class="dot">●</span>PASAR PAGI</span>
+    <span class="inkbar"><span class="dot">●</span>§2 · PASAR PAGI</span>
     <div class="pp-denom mono" role="group" aria-label="Satuan tampilan harga">
       <span class="pp-denom-label">SATUAN</span>
       {#each Object.entries(DENOMS) as [key, d] (key)}

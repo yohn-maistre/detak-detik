@@ -89,37 +89,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <!-- Peta Kabar: the living front photograph -->
         <section class="kabar-blok">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>PETA KABAR</span>
+            <span class="inkbar"><span class="dot">●</span>§1 · PETA KABAR</span>
             <span class="eyebrow">LAPISAN DATA LANGSUNG · SATU KOSAKATA PERINTAH</span>
           </div>
           <PetaKabar client:load />
-        </section>
-
-        <!-- Angka Edisi -->
-        <section class="angka-blok" aria-labelledby="angka-label">
-          <div class="angka-kiri">
-            <span class="inkbar"><span class="dot">●</span>ANGKA EDISI · SATU ANGKA YANG PALING BERBICARA</span>
-            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
-              {ANGKA_EDISI.prefix} {fmtAngka}
-            </p>
-            <p class="angka-label" id="angka-label">
-              {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
-            </p>
-            <div class="cite-chips">
-              {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
-              <button class="chip hop">Jadikan tur →</button>
-            </div>
-          </div>
-          <div class="angka-sela" aria-hidden="true"></div>
-          <div class="angka-kanan">
-            <span class="eyebrow">PUTUSAN MASUK · 14 HARI TERAKHIR</span>
-            <div class="sparkbars" role="img" aria-label={`Diagram batang ${sparkTotal} putusan dalam 14 hari`}>
-              {PUTUSAN_HARIAN.map((v) => (
-                <i class="sparkbar" style={`--h:${Math.round((v / sparkMax) * 100)}%`} data-v={v}></i>
-              ))}
-            </div>
-            <p class="spark-foot mono"><b class="num">{sparkTotal}</b> PUTUSAN BERKEKUATAN TETAP · <span class="spark-max num">PUNCAK {sparkMax}/HARI</span></p>
-          </div>
         </section>
 
         <PasarPagi client:visible />
@@ -147,11 +120,38 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
       <div class="wrap">
         <DitherNusantara client:visible />
 
+        <!-- Angka Edisi -->
+        <section class="angka-blok" aria-labelledby="angka-label">
+          <div class="angka-kiri">
+            <span class="inkbar"><span class="dot">●</span>BUKTI №1 · ANGKA EDISI</span>
+            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
+              {ANGKA_EDISI.prefix} {fmtAngka}
+            </p>
+            <p class="angka-label" id="angka-label">
+              {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
+            </p>
+            <div class="cite-chips">
+              {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+              <button class="chip hop">Jadikan tur →</button>
+            </div>
+          </div>
+          <div class="angka-sela" aria-hidden="true"></div>
+          <div class="angka-kanan">
+            <span class="eyebrow">PUTUSAN MASUK · 14 HARI TERAKHIR</span>
+            <div class="sparkbars" role="img" aria-label={`Diagram batang ${sparkTotal} putusan dalam 14 hari`}>
+              {PUTUSAN_HARIAN.map((v) => (
+                <i class="sparkbar" style={`--h:${Math.round((v / sparkMax) * 100)}%`} data-v={v}></i>
+              ))}
+            </div>
+            <p class="spark-foot mono"><b class="num">{sparkTotal}</b> PUTUSAN BERKEKUATAN TETAP · <span class="spark-max num">PUNCAK {sparkMax}/HARI</span></p>
+          </div>
+        </section>
+
         <section class="hening-blok">
           <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
           <p class="hening-sub">
-            Setiap statistik resmi {KEHENINGAN.wilayah} punya baris dan sumbernya.
-            Satu baris tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
+            Setiap statistik resmi punya baris dan sumbernya — contoh edisi ini: {KEHENINGAN.wilayah}.
+            Baris-baris di bawah tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
           </p>
 
           <div class="ledger hening-ledger">
@@ -161,21 +161,26 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
                 <span class="v num">{b.v}</span>
               </div>
             ))}
-            <div class="hening-absen">
-              <span>{KEHENINGAN.absen.k} <span class="hening-sumber mono">{KEHENINGAN.absen.catatan}</span></span>
-              <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{KEHENINGAN.absen.v}</span>
-            </div>
+            {KEHENINGAN.absen.map((a, i) => (
+              <div class="hening-absen">
+                <span>{a.k} <span class="hening-sumber mono">{a.catatan}</span></span>
+                {i === 0
+                  ? <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{a.v}</span>
+                  : <span class="v num">{a.v}</span>}
+              </div>
+            ))}
             <div class="hening-lanec">
               <span>{KEHENINGAN.laneC.teks}</span>
               <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
             </div>
           </div>
+          <p class="hening-foot mono">SATU WILAYAH ATAU TEMA DISOROT TIAP EDISI · USULKAN BARIS KOSONG LAIN DI GITHUB</p>
         </section>
 
         <!-- Temuan -->
         <section class="temuan-blok">
           <div class="temuan-head-row">
-            <span class="inkbar"><span class="dot">●</span>TEMUAN HARI INI</span>
+            <span class="inkbar"><span class="dot">●</span>BUKTI №2 · TEMUAN HARI INI</span>
             <span class="eyebrow">SEMUA KLAIM MEMBAWA KUITANSI</span>
           </div>
           <div class="temuan-grid">
@@ -230,6 +235,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <ObituariHutan />
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
+          <span class="eyebrow ganda-eyebrow">LAYAR GANDA · DUA KABAR SEMALAM, SENGAJA TANPA KETERANGAN</span>
           <div class="ganda">
             <div class="ganda-panel" data-rise>
               <p class="ganda-angka display num">{LAYAR_GANDA.kiri.angka}</p>
@@ -284,6 +290,26 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <PetaAtlas client:visible />
 
+        <section class="dunia-blok" aria-label="Peringkat Indonesia di mata dunia">
+          <span class="eyebrow">LAMPIRAN B · DUNIA MEMANDANG · PERINGKAT TERAKHIR YANG TERBIT</span>
+          <div class="dunia-grid">
+            {[
+              { nilai: '129/180', label: 'Kebebasan pers', chip: 'rsf 2026' },
+              { nilai: '62', label: 'Kekuatan paspor', chip: 'henley 2026' },
+              { nilai: '366', label: 'PISA matematika (Vietnam: 469)', chip: 'oecd 2022' },
+              { nilai: '7/9', label: 'Kecepatan internet seluler, ASEAN', chip: 'speedtest 2026' },
+              { nilai: '10,1%', label: 'Rasio pajak (rerata ASEAN: 14,3%)', chip: 'oecd 2025' },
+              { nilai: '№2', label: 'Bahasa daerah terbanyak di dunia (718)', chip: 'badan bahasa' },
+            ].map((d) => (
+              <div class="dunia-tile" data-rise>
+                <p class="dunia-nilai display num">{d.nilai}</p>
+                <p class="dunia-label">{d.label}</p>
+                <span class="mono dunia-chip">⊙ {d.chip}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <div class="atlas-grid">
           <section class="janji-blok card" data-rise>
             <span class="eyebrow">JANJI · BUKU BESAR YANG MENGINGAT</span>
@@ -307,6 +333,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         </div>
 
         <!-- the play shelf: same puzzle for every reader -->
+        <span class="eyebrow rak-eyebrow">LAMPIRAN C · PERMAINAN · TEKA-TEKI YANG SAMA UNTUK SEMUA PEMBACA</span>
         <div class="main-rak">
           <TebakDaerah client:visible />
           <BenarSalah client:visible />
@@ -351,7 +378,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </div>
         <p class="kolofon-bawah mono">
-          DD/EDI/041/VI/2026 · DICETAK OTOMATIS 05.00 WIB · BAGAIMANA EDISI INI DISUSUN: LOG REDAKSI TERBUKA (SEGERA) · ⌘ TIDAK ADA PELACAK, TIDAK ADA PROFIL
+          DD/EDI/041/VI/2026 · DICETAK OTOMATIS 05.00 WIB · <a class="ink-link" href="/sumber">SUMBER & METODE: SEMUA KUITANSI DI SATU LACI →</a> · <a class="ink-link" href="/arsip">ARSIP PERSPEKTIF</a> · ⌘ TIDAK ADA PELACAK, TIDAK ADA PROFIL
         </p>
       </div>
     </footer>
@@ -480,7 +507,16 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
   .kabar-blok { padding-top: 22px; }
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
-  .gelombang-blok { max-width: 720px; margin-top: 34px; }
+  .gelombang-blok { max-width: 760px; margin-top: 34px; }
+
+  .dunia-blok { margin-top: 52px; }
+  .dunia-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); margin-top: 16px; }
+  @media (max-width: 760px) { .dunia-grid { grid-template-columns: repeat(2, 1fr); } }
+  .dunia-tile { padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; gap: 6px; }
+  .dunia-nilai { font-family: 'Fraunces Variable', serif; font-weight: 460; font-size: clamp(26px, 3.4vw, 42px); line-height: 1; color: var(--accent2); }
+  .dunia-label { font-size: 13px; color: var(--muted); flex: 1; }
+  .dunia-chip { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); }
+  .rak-eyebrow { display: block; margin-top: 52px; }
   .main-rak { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; align-items: start; }
   @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
 
@@ -584,13 +620,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   /* ---------- SEAMS: the split-flap departure board ---------- */
   .seam {
     position: relative;
-    height: clamp(180px, 34vh, 380px);
+    height: 100vh;
+    height: 100svh;
     display: grid;
     place-items: center;
     perspective: 1100px;
     background: var(--from);
   }
-  @media (max-width: 760px) { .seam { height: clamp(140px, 22vh, 220px); } }
+  .seam.is-static { height: clamp(160px, 26vh, 300px); }
   .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
   .slat { position: relative; transform-style: preserve-3d; will-change: transform; }
   .slat i { position: absolute; inset: -0.6px 0; backface-visibility: hidden; }
@@ -636,6 +673,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     color: #c96a5a;
   }
   .hening-absen .hening-sumber { color: #c96a5a; font-style: italic; }
+  .hening-foot { margin-top: 14px; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
   .hening-lanec {
     display: flex;
     justify-content: space-between;
@@ -647,6 +685,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     color: var(--muted);
   }
 
+  .ganda-eyebrow { margin-bottom: 18px; }
   .ganda { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(20px, 5vw, 64px); align-items: stretch; }
   @media (max-width: 760px) { .ganda { grid-template-columns: 1fr; } .ganda-sela { display: none; } }
   .ganda-sela { background: var(--line); }

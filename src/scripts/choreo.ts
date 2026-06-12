@@ -125,21 +125,22 @@ function seamFlip() {
       seam.classList.add('is-static');
       return;
     }
-    gsap.to(slats, {
-      rotateX: -180,
-      ease: 'none',
-      stagger: 0.14,
-      scrollTrigger: { trigger: seam, start: 'top 78%', end: 'bottom 40%', scrub: 0.3 },
-    });
+    // pinned: the board fills the viewport and flips while the page holds,
+    // so the next act can never slide in underneath mid-flip
     const label = seam.querySelector('.seam-label');
-    if (label) {
-      gsap.fromTo(label, { yPercent: 40, opacity: 0.25 }, {
-        yPercent: -40,
-        opacity: 1,
-        ease: 'none',
-        scrollTrigger: { trigger: seam, start: 'top bottom', end: 'bottom top', scrub: 0.8 },
-      });
-    }
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: seam,
+        start: 'top top',
+        end: '+=130%',
+        scrub: 0.3,
+        pin: true,
+        anticipatePin: 1,
+      },
+    });
+    if (label) tl.fromTo(label, { opacity: 0, yPercent: 30 }, { opacity: 1, yPercent: 0, duration: 0.18 }, 0);
+    tl.to(slats, { rotateX: -180, ease: 'none', stagger: 0.1, duration: 0.74 }, 0.06);
+    if (label) tl.to(label, { opacity: 0, yPercent: -30, duration: 0.14 }, 0.86);
   });
 }
 
@@ -273,11 +274,22 @@ function odometer() {
 
 /* ---------- 5 · the fidget layer ---------- */
 
-/** Detak: the masthead heartbeat. Ticks every second; click for the count. */
+/** Detak: the masthead heartbeat, counting from the most recent pressing
+    (05.00 or 17.00 WIB) — never from a stale sample epoch. */
 function detak() {
   const el = document.querySelector<HTMLElement>('[data-detak]');
   if (!el) return;
-  const terbit = Number(el.dataset.detak ?? Date.now());
+  const lastPress = (): number => {
+    const wib = new Date(Date.now() + 7 * 3600_000);
+    const d = new Date(wib);
+    d.setUTCMinutes(0, 0, 0);
+    const h = wib.getUTCHours();
+    if (h >= 17) d.setUTCHours(17);
+    else if (h >= 5) d.setUTCHours(5);
+    else { d.setUTCDate(d.getUTCDate() - 1); d.setUTCHours(17); }
+    return d.getTime() - 7 * 3600_000;
+  };
+  const terbit = lastPress();
   const beat = el.querySelector<HTMLElement>('.detak-beat');
   const render = () => {
     const s = Math.max(0, Math.floor((Date.now() - terbit) / 1000));
