@@ -1,6 +1,9 @@
 ---
 import Paper from '../layouts/Paper.astro';
 import Loader from '../components/Loader.astro';
+import PetaKabar from '../islands/PetaKabar.svelte';
+import PasarPagi from '../islands/PasarPagi.svelte';
+import PapanAngka from '../islands/PapanAngka.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
@@ -73,6 +76,15 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </div>
 
+        <!-- Peta Kabar: the living front photograph -->
+        <section class="kabar-blok">
+          <div class="kabar-head">
+            <span class="inkbar"><span class="dot">●</span>PETA KABAR</span>
+            <span class="eyebrow">LAPISAN DATA LANGSUNG · SATU KOSAKATA PERINTAH</span>
+          </div>
+          <PetaKabar client:load />
+        </section>
+
         <!-- Angka Edisi -->
         <section class="angka-blok" aria-labelledby="angka-label">
           <div class="angka-kiri">
@@ -99,6 +111,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <p class="spark-foot mono"><b class="num">{sparkTotal}</b> PUTUSAN BERKEKUATAN TETAP · <span class="spark-max num">PUNCAK {sparkMax}/HARI</span></p>
           </div>
         </section>
+
+        <PasarPagi client:visible />
+
+        <PapanAngka client:visible />
 
         <!-- Temuan -->
         <section class="temuan-blok">
@@ -151,6 +167,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
               <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · TARIK KE BAWAH UNTUK MEROBEK</p>
             </div>
           </div>
+        </section>
+
+        <!-- Permainan pagi -->
+        <section class="main-pagi">
+          <TebakDaerah client:visible />
         </section>
       </div>
     </section>
@@ -235,7 +256,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
       <div class="tex tex-hatch" aria-hidden="true"></div>
       <div class="wrap">
         <h2 class="sect-title-atlas display reveal-glyphs">Atlas Tanah Air</h2>
-        <p class="atlas-sub fig">Fig. 1. · Peta dasar Nusantara, gaya plat atlas; pesisir sage, batas madder.</p>
+        <p class="atlas-sub fig">Fig. 1. · Plat arsip Nusantara; segel madder menandai catatan edisi. Peta hidup bertugas di halaman depan.</p>
 
         <PetaAtlas client:visible />
 
@@ -257,8 +278,6 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
             <p class="janji-foot mono">PENILAIAN ARITMETIKA SAAT BANGUN, BUKAN OPINI. (DATA CONTOH)</p>
           </section>
-
-          <TebakDaerah client:visible />
         </div>
       </div>
     </section>
@@ -427,6 +446,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   }
   .folio b { color: var(--accent); font-weight: 600; }
 
+  .kabar-blok { padding-top: 22px; }
+  .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+  .main-pagi { margin-top: 34px; max-width: 720px; }
+
   .angka-blok {
     display: grid;
     grid-template-columns: 1.7fr 1px 1fr;
@@ -483,7 +506,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .spark-foot b { color: var(--ink); font-size: 12px; }
   .spark-max { color: var(--accent); }
 
-  .temuan-blok { padding: 26px 0 30px; border-top: 1px solid var(--line); }
+  .wrap > :global(.pp), .wrap > :global(.wall) { margin-top: 34px; }
+  .temuan-blok { padding: 26px 0 30px; border-top: 1px solid var(--line); margin-top: 34px; }
   .temuan-head-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
   .temuan-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
   @media (max-width: 900px) { .temuan-grid { grid-template-columns: 1fr; } }
@@ -617,8 +641,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     margin-bottom: 8px;
   }
   .atlas-sub { font-size: 15px; margin-bottom: 26px; }
-  .atlas-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 22px; margin-top: 46px; align-items: start; }
-  @media (max-width: 940px) { .atlas-grid { grid-template-columns: 1fr; } }
+  .atlas-grid { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: 46px; max-width: 760px; }
 
   .janji-list { display: grid; gap: 22px; margin-top: 14px; }
   .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }

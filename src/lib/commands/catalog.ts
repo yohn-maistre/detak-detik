@@ -26,6 +26,12 @@ export const commandSchemas = {
     layer: z.string(),
     on: z.boolean(),
   }),
+  set_basemap: z.object({
+    plat: z.enum(['atlas', 'satelit', 'cuaca']),
+  }),
+  denominate: z.object({
+    unit: z.enum(['rp', 'nasi', 'mbg', 'umphari']),
+  }),
   highlight: z.object({
     ids: z.array(z.string()).max(40),
   }),

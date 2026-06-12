@@ -7,6 +7,7 @@
 import Lenis from 'lenis';
 import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
+import { setDenom, onDenom, getDenom, formatUang } from '../lib/denominasi';
 
 let lenis: Lenis | null = null;
 
@@ -229,9 +230,8 @@ function odometer() {
   const el = document.querySelector<HTMLElement>('[data-odometer]');
   if (!el) return;
   const target = Number(el.dataset.odometer ?? 0);
-  const prefix = el.dataset.prefix ?? '';
-  const fmt = new Intl.NumberFormat('id-ID');
-  const render = (n: number) => { el.textContent = `${prefix} ${fmt.format(Math.round(n))}`; };
+  const render = (n: number) => { el.textContent = formatUang(n, getDenom()); };
+  onDenom(() => render(target));
   if (reducedMotion()) { render(target); return; }
   render(0);
   const proxy = { n: 0 };
@@ -569,5 +569,6 @@ function dispatchScrollHandler() {
   import('../lib/commands/dispatcher').then(({ on }) => {
     on('scroll_to', ({ anchor }) => scrollToAnchor(anchor));
     on('say', ({ teks, tahan_ms }) => say(teks, tahan_ms));
+    on('denominate', ({ unit }) => setDenom(unit));
   });
 }
