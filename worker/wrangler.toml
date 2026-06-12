@@ -11,8 +11,21 @@ crons = ["0 * * * *"]
 binding = "CACHE"
 id = "REPLACE_WITH_KV_NAMESPACE_ID"
 
+# Workers AI: the free third lane (10k neurons/day, never bills)
+[ai]
+binding = "AI"
+
 [vars]
 MODEL_PRIMARY = "qwen/qwen3.5-397b-a17b"
 MODEL_FALLBACK = "nvidia/nemotron-3-ultra-550b-a55b"
+# Workers AI model officially tuned for Indonesian/Malay
+MODEL_LOCAL = "@cf/aisingapore/gemma-sea-lion-v4-27b-it"
+# Point this at an AI Gateway URL to get free response caching + analytics:
+# https://gateway.ai.cloudflare.com/v1/<ACCOUNT_ID>/<GATEWAY>/compat
+# (leave as-is to talk to NIM directly)
+NIM_BASE_URL = "https://integrate.api.nvidia.com/v1"
 
-# secret, never in code: wrangler secret put NIM_API_KEY  (nvapi-...)
+# secrets, never in code:
+#   wrangler secret put NIM_API_KEY          (nvapi-...)
+#   wrangler secret put TURNSTILE_SECRET     (0x4AAA... — enables the bot gate;
+#                                             unset = gate stays open for dev)

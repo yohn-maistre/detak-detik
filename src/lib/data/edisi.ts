@@ -164,14 +164,14 @@ export const REGIONS = [
 /** Putusan per hari, 14 hari terakhir — sparkbar pendamping Angka Edisi. */
 export const PUTUSAN_HARIAN = [3, 5, 2, 7, 4, 6, 9, 5, 8, 6, 11, 7, 6, 5];
 
-/** Arsip atau Isapan: pernyataan untuk permainan verifikasi cepat (Mesin). */
-export const ARSIP_ISAPAN: { teks: string; arsip: boolean; catatan: string; sumber: string }[] = [
-  { teks: 'Belanja pegawai Kabupaten Nabire memakan 58,2% dari APBD 2026.', arsip: true, catatan: 'Persis seperti di struk: 58,2%, belanja modal hanya 11,4%.', sumber: 'djpk_apbd · 2026' },
-  { teks: 'Rasio elektrifikasi Papua sudah menyentuh 100% sejak 2023.', arsip: false, catatan: 'Tercatat 94,8% per Desember 2025. Janji 100% tidak tercapai.', sumber: 'esdm · des 2025' },
-  { teks: '214 peringatan deforestasi terdeteksi kemarin, 31 di dalam konsesi.', arsip: true, catatan: 'Peringatan GLAD/RADD, beririsan dengan poligon konsesi PSN.', sumber: 'gfw_alerts · 11 jun' },
-  { teks: 'Harga cabai rawit di Manado turun 41% dalam sepekan terakhir.', arsip: false, catatan: 'Terbalik: harganya NAIK 41% dalam sepekan.', sumber: 'panel harga · 11 jun' },
-  { teks: 'APBD Kabupaten Puncak tahun 2026 melewati angka satu triliun rupiah.', arsip: true, catatan: 'Rp 1,12 T untuk 2.731 aparatur dan 9 puskesmas.', sumber: 'djpk · 2026' },
-  { teks: 'Semua kabupaten di Papua Tengah punya data pengungsian resmi.', arsip: false, catatan: 'Baris itu kosong di statistik resmi. Ketiadaan juga dokumen.', sumber: 'keheningan · edisi 41' },
+/** Benar atau Salah: pernyataan untuk permainan verifikasi cepat (Mesin). */
+export const BENAR_SALAH: { teks: string; benar: boolean; catatan: string; sumber: string }[] = [
+  { teks: 'Belanja pegawai Kabupaten Nabire memakan 58,2% dari APBD 2026.', benar: true, catatan: 'Persis seperti di struk: 58,2%, belanja modal hanya 11,4%.', sumber: 'djpk_apbd · 2026' },
+  { teks: 'Rasio elektrifikasi Papua sudah menyentuh 100% sejak 2023.', benar: false, catatan: 'Tercatat 94,8% per Desember 2025. Janji 100% tidak tercapai.', sumber: 'esdm · des 2025' },
+  { teks: '214 peringatan deforestasi terdeteksi kemarin, 31 di dalam konsesi.', benar: true, catatan: 'Peringatan GLAD/RADD, beririsan dengan poligon konsesi PSN.', sumber: 'gfw_alerts · 11 jun' },
+  { teks: 'Harga cabai rawit di Manado turun 41% dalam sepekan terakhir.', benar: false, catatan: 'Terbalik: harganya NAIK 41% dalam sepekan.', sumber: 'panel harga · 11 jun' },
+  { teks: 'APBD Kabupaten Puncak tahun 2026 melewati angka satu triliun rupiah.', benar: true, catatan: 'Rp 1,12 T untuk 2.731 aparatur dan 9 puskesmas.', sumber: 'djpk · 2026' },
+  { teks: 'Semua kabupaten di Papua Tengah punya data pengungsian resmi.', benar: false, catatan: 'Baris itu kosong di statistik resmi. Ketiadaan juga dokumen.', sumber: 'keheningan · edisi 41' },
 ];
 
 export const TEBAK = {

@@ -6,7 +6,7 @@ import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import TebakDaerah from '../islands/TebakDaerah.svelte';
-import ArsipIsapan from '../islands/ArsipIsapan.svelte';
+import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN } from '../lib/data/edisi';
 
@@ -77,7 +77,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <section class="angka-blok" aria-labelledby="angka-label">
           <div class="angka-kiri">
             <span class="inkbar"><span class="dot">●</span>ANGKA EDISI · SATU ANGKA YANG PALING BERBICARA</span>
-            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik angkanya">
+            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
               {ANGKA_EDISI.prefix} {fmtAngka}
             </p>
             <p class="angka-label" id="angka-label">
@@ -146,9 +146,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
                   <div class="row tot mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
                 ))}
                 <div class="dash"></div>
-                <p class="roast">{STRUK.roast}</p>
+                <p class="roast" data-annotate="box" data-annotate-color="#e44a06">{STRUK.roast}</p>
               </div>
-              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · TARIK KE BAWAH UNTUK MENYOBEK</p>
+              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · TARIK KE BAWAH UNTUK MEROBEK</p>
             </div>
           </div>
         </section>
@@ -176,7 +176,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
           <p class="hening-sub">
             Setiap statistik resmi {KEHENINGAN.wilayah} punya baris dan sumbernya.
-            Satu baris tidak punya. Ketiadaan itu juga dokumen. <span class="mono">(data contoh)</span>
+            Satu baris tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
           </p>
 
           <div class="ledger hening-ledger">
@@ -188,7 +188,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             ))}
             <div class="hening-absen">
               <span>{KEHENINGAN.absen.k} <span class="hening-sumber mono">{KEHENINGAN.absen.catatan}</span></span>
-              <span class="v num">{KEHENINGAN.absen.v}</span>
+              <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{KEHENINGAN.absen.v}</span>
             </div>
             <div class="hening-lanec">
               <span>{KEHENINGAN.laneC.teks}</span>
@@ -217,7 +217,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <div class="gelombang-blok card" data-rise>
             <Gelombang client:visible />
           </div>
-          <ArsipIsapan client:visible />
+          <BenarSalah client:visible />
         </section>
       </div>
     </section>

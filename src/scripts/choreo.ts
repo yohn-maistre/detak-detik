@@ -5,6 +5,7 @@
  * Reduced motion: instant states, zero performance.
  */
 import Lenis from 'lenis';
+import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
 
 type Palette = Record<'--bg' | '--card' | '--ink' | '--muted' | '--accent' | '--accent2' | '--line' | '--line-soft', string>;
@@ -229,6 +230,37 @@ function reveals() {
     ScrollTrigger.create({
       trigger: el, start: 'top 90%', once: true,
       onEnter: () => gsap.to(el, { y: 0, opacity: 1, duration: 0.75, ease: EASE_SETTLE, delay: (i % 3) * 0.08 }),
+    });
+  });
+}
+
+/* ---------- 3b · the editor's red pen: rough-notation marks ----------
+   Elements opt in with data-annotate="underline|circle|box|highlight".
+   Colors name a token (data-annotate-color="accent2") or a literal hex;
+   tokens resolve at reveal time so each act keeps its own register. */
+
+function redPen() {
+  document.querySelectorAll<HTMLElement>('[data-annotate]').forEach((el) => {
+    const type = el.dataset.annotate as 'underline' | 'circle' | 'box' | 'highlight';
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 78%',
+      once: true,
+      onEnter() {
+        const token = el.dataset.annotateColor ?? 'accent';
+        const color = token.startsWith('#')
+          ? token
+          : getComputedStyle(el).getPropertyValue(`--${token}`).trim() || '#e44a06';
+        annotate(el, {
+          type,
+          color,
+          strokeWidth: 2,
+          padding: type === 'circle' ? 8 : 4,
+          iterations: 2,
+          multiline: true,
+          animationDuration: reducedMotion() ? 0 : 850,
+        }).show();
+      },
     });
   });
 }
@@ -459,7 +491,7 @@ function strukTear() {
           })
           .set(struk, { y: -36, rotate: 0, opacity: 0 })
           .to(struk, { y: 0, opacity: 1, duration: 0.6, ease: EASE_SETTLE });
-        say('Struk sobek. Mesin mencetak salinan baru — angka yang sama, kertas yang baru.');
+        say('Struk terobek. Mesin mencetak salinan baru — angka yang sama, kertas yang baru.');
       } else {
         gsap.to(struk, { y: 0, rotate: 0, duration: 0.8, ease: 'elastic.out(1, 0.35)' });
       }
@@ -543,6 +575,7 @@ export function boot() {
 
   registerMorph();
   reveals();
+  redPen();
   odometer();
   detak();
   stempelPad();

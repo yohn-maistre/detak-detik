@@ -58,7 +58,7 @@
     <h3 class="display">Gelombang Harga</h3>
     <button class="chip" onclick={draw}>↻</button>
   </div>
-  <p class="gw-sub">Cabai rawit, indeks 30 hari. Usap grafiknya untuk memutar hari. <span class="mono">(data contoh)</span></p>
+  <p class="gw-sub">Cabai rawit, indeks 30 hari. Telusuri grafik untuk membaca hari demi hari. <span class="mono">(data contoh)</span></p>
   <svg
     bind:this={svgEl}
     viewBox="0 0 {W} {H}"

@@ -1,7 +1,7 @@
 /**
  * DETAK DETIK · the one stateless Worker (law 6: amnesiac by design).
  *
- * /ask    : rate-limit -> KV cache -> NVIDIA NIM (OpenAI-compatible) -> SSE
+ * /ask    : turnstile -> rate-limit -> KV cache -> NIM -> Workers AI -> JSON
  * /tour   : single tour-generation call, validated against the command catalog
  * /ticker : Lane A RSS headlines from KV (written by the hourly cron)
  * cron    : fetch RSS pass-through (verbatim headline + source + link only,
@@ -12,18 +12,31 @@
  *   agentic models: qwen/qwen3.5-397b-a17b, nvidia/nemotron-3-ultra-550b-a55b
  *   batch narration: deepseek-ai/deepseek-v4-flash (streaming tool calls flaky,
  *   fine for non-streamed newsroom work)
+ *
+ * Cloudflare free-tier wiring (see docs/CLOUDFLARE.md):
+ *   Turnstile  : enabled the moment TURNSTILE_SECRET is set; the client sends
+ *                its token in the CF-Turnstile-Token header.
+ *   Workers AI : third lane behind both NIM models — 10k neurons/day, free,
+ *                gemma-sea-lion is officially tuned for Indonesian.
+ *   AI Gateway : point NIM_BASE_URL at a gateway /compat URL for free
+ *                response caching + analytics; no code change needed.
  */
 
 export interface Env {
-  NIM_API_KEY: string;
+  NIM_API_KEY?: string;
+  TURNSTILE_SECRET?: string;
   CACHE: KVNamespace;
+  AI?: { run: (model: string, options: Record<string, unknown>) => Promise<{ response?: string }> };
   MODEL_PRIMARY?: string;
   MODEL_FALLBACK?: string;
+  MODEL_LOCAL?: string;
+  NIM_BASE_URL?: string;
 }
 
-const NIM_BASE = 'https://integrate.api.nvidia.com/v1';
+const DEFAULT_NIM_BASE = 'https://integrate.api.nvidia.com/v1';
 const DEFAULT_PRIMARY = 'qwen/qwen3.5-397b-a17b';
 const DEFAULT_FALLBACK = 'nvidia/nemotron-3-ultra-550b-a55b';
+const DEFAULT_LOCAL = '@cf/aisingapore/gemma-sea-lion-v4-27b-it';
 
 const RSS_FEEDS: { src: string; url: string }[] = [
   { src: 'ANTARA', url: 'https://www.antaranews.com/rss/terkini.xml' },
@@ -35,7 +48,7 @@ const RSS_FEEDS: { src: string; url: string }[] = [
 const CORS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Headers': 'Content-Type, CF-Turnstile-Token',
 };
 
 export default {
@@ -64,6 +77,27 @@ function json(body: unknown, status = 200): Response {
   });
 }
 
+/* ---------- turnstile: the bot gate in front of the model lanes ----------
+   Off until TURNSTILE_SECRET exists, so dev and CI never need a token.
+   Once armed, every /ask and /tour must carry a fresh widget token. */
+
+async function turnstileOk(req: Request, env: Env): Promise<boolean> {
+  if (!env.TURNSTILE_SECRET) return true;
+  const token = req.headers.get('CF-Turnstile-Token');
+  if (!token) return false;
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      secret: env.TURNSTILE_SECRET,
+      response: token,
+      remoteip: req.headers.get('CF-Connecting-IP') ?? undefined,
+    }),
+  });
+  const data = (await res.json()) as { success?: boolean };
+  return data.success === true;
+}
+
 /* ---------- rate limit: a polite per-IP token bucket in KV ---------- */
 
 async function limited(req: Request, env: Env): Promise<boolean> {
@@ -78,8 +112,11 @@ async function limited(req: Request, env: Env): Promise<boolean> {
 /* ---------- /ask ---------- */
 
 async function ask(req: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  if (!(await turnstileOk(req, env))) {
+    return json({ galat: 'Verifikasi Turnstile gagal. Muat ulang halaman.', degrade: 'turnstile' }, 403);
+  }
   if (await limited(req, env)) {
-    return json({ galat: 'Aksara lagi istirahat. Coba lagi sebentar.', degrade: 'rate_limit' }, 429);
+    return json({ galat: 'Aksara sedang beristirahat. Coba lagi sebentar.', degrade: 'rate_limit' }, 429);
   }
 
   const body = (await req.json()) as { messages: unknown[]; tools?: unknown[] };
@@ -92,21 +129,61 @@ async function ask(req: Request, env: Env, ctx: ExecutionContext): Promise<Respo
     });
   }
 
-  const upstream = await nim(env, env.MODEL_PRIMARY ?? DEFAULT_PRIMARY, body)
-    .catch(() => nim(env, env.MODEL_FALLBACK ?? DEFAULT_FALLBACK, body));
-
-  const text = await upstream.text();
-  if (upstream.ok) {
-    ctx.waitUntil(env.CACHE.put(cacheKey, text, { expirationTtl: 60 * 60 * 24 * 7 }));
+  // lanes 1 + 2: NIM primary then fallback (skipped entirely without a key)
+  let upstream: Response | null = null;
+  if (env.NIM_API_KEY) {
+    upstream = await nim(env, env.MODEL_PRIMARY ?? DEFAULT_PRIMARY, body)
+      .catch(() => nim(env, env.MODEL_FALLBACK ?? DEFAULT_FALLBACK, body))
+      .catch(() => null);
   }
-  return new Response(text, {
-    status: upstream.status,
-    headers: { 'Content-Type': 'application/json', 'X-Detak-Cache': 'miss', ...CORS },
-  });
+
+  if (upstream?.ok) {
+    const text = await upstream.text();
+    ctx.waitUntil(env.CACHE.put(cacheKey, text, { expirationTtl: 60 * 60 * 24 * 7 }));
+    return new Response(text, {
+      status: 200,
+      headers: { 'Content-Type': 'application/json', 'X-Detak-Cache': 'miss', 'X-Detak-Lane': 'nim', ...CORS },
+    });
+  }
+
+  // lane 3: Workers AI — free, local to the edge, fluent in Indonesian
+  if (env.AI) {
+    try {
+      const out = await env.AI.run(env.MODEL_LOCAL ?? DEFAULT_LOCAL, {
+        messages: body.messages,
+        max_tokens: 1024,
+        temperature: 0.2,
+      });
+      const shaped = JSON.stringify({
+        id: `dd-${Date.now()}`,
+        object: 'chat.completion',
+        model: env.MODEL_LOCAL ?? DEFAULT_LOCAL,
+        choices: [{
+          index: 0,
+          message: { role: 'assistant', content: out.response ?? '' },
+          finish_reason: 'stop',
+        }],
+      });
+      ctx.waitUntil(env.CACHE.put(cacheKey, shaped, { expirationTtl: 60 * 60 * 24 * 7 }));
+      return new Response(shaped, {
+        headers: { 'Content-Type': 'application/json', 'X-Detak-Cache': 'miss', 'X-Detak-Lane': 'workers-ai', ...CORS },
+      });
+    } catch {
+      // fall through to whatever NIM said, or the 503 below
+    }
+  }
+
+  if (upstream) {
+    return new Response(await upstream.text(), {
+      status: upstream.status,
+      headers: { 'Content-Type': 'application/json', 'X-Detak-Cache': 'miss', 'X-Detak-Lane': 'nim', ...CORS },
+    });
+  }
+  return json({ galat: 'Semua lajur model sedang gelap. Edisi tetap terbaca tanpa Aksara.' }, 503);
 }
 
 async function nim(env: Env, model: string, body: { messages: unknown[]; tools?: unknown[] }): Promise<Response> {
-  const res = await fetch(`${NIM_BASE}/chat/completions`, {
+  const res = await fetch(`${env.NIM_BASE_URL ?? DEFAULT_NIM_BASE}/chat/completions`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${env.NIM_API_KEY}`,
@@ -134,17 +211,24 @@ dengan skema: {"tour_id":string,"judul":string,"asal":"generated",
 Narasi hanya menyebut fakta yang ada pada konteks yang diberikan.`;
 
 async function tour(req: Request, env: Env): Promise<Response> {
+  if (!(await turnstileOk(req, env))) return json({ galat: 'verifikasi turnstile gagal' }, 403);
   if (await limited(req, env)) return json({ galat: 'rate limit' }, 429);
   const { topik, konteks } = (await req.json()) as { topik: string; konteks?: string };
 
-  const res = await nim(env, env.MODEL_PRIMARY ?? DEFAULT_PRIMARY, {
-    messages: [
-      { role: 'system', content: TOUR_SYSTEM },
-      { role: 'user', content: `Topik: ${topik}\nKonteks (baris bercatatan): ${konteks ?? '-'}` },
-    ],
-  });
-  const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-  const raw = data.choices?.[0]?.message?.content ?? '';
+  const messages = [
+    { role: 'system', content: TOUR_SYSTEM },
+    { role: 'user', content: `Topik: ${topik}\nKonteks (baris bercatatan): ${konteks ?? '-'}` },
+  ];
+
+  let raw = '';
+  if (env.NIM_API_KEY) {
+    const res = await nim(env, env.MODEL_PRIMARY ?? DEFAULT_PRIMARY, { messages });
+    const data = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    raw = data.choices?.[0]?.message?.content ?? '';
+  } else if (env.AI) {
+    const out = await env.AI.run(env.MODEL_LOCAL ?? DEFAULT_LOCAL, { messages, max_tokens: 1024, temperature: 0.2 });
+    raw = out.response ?? '';
+  }
 
   // the gate: parse, validate verbs, drop anything else. invalid = not executed.
   const ALLOWED = new Set(['fly_to', 'scroll_to', 'set_lens', 'highlight', 'say']);
