@@ -1,0 +1,501 @@
+---
+import Paper from '../layouts/Paper.astro';
+import Loader from '../components/Loader.astro';
+import GradienKeadilan from '../islands/GradienKeadilan.svelte';
+import Gelombang from '../islands/Gelombang.svelte';
+import DitherNusantara from '../islands/DitherNusantara.svelte';
+import PetaAtlas from '../islands/PetaAtlas.svelte';
+import TebakDaerah from '../islands/TebakDaerah.svelte';
+import Aksara from '../islands/Aksara.svelte';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI } from '../lib/data/edisi';
+
+const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
+---
+
+<Paper>
+  <Loader />
+
+  <main data-stempel-pad>
+    <!-- ============ ACT I · DINAS ============ -->
+    <section class="act act-dinas" data-act="dinas" id="depan" data-crosshair>
+      <div class="tex tex-scan" aria-hidden="true"></div>
+      <div class="wrap">
+        <header class="masthead-block">
+          <div class="folio-top mono">
+            <span>{EDISI.serial}</span>
+            <button class="detak mono" data-detak={EDISI.terbitEpoch} title="Detik sejak edisi terbit">
+              ● <span class="detak-beat">00.00.00</span>
+            </button>
+            <span class="coordstamp-inline">{EDISI.koordinat.label} · {EDISI.koordinat.wilayah}</span>
+          </div>
+
+          <h1 class="masthead display" id="masthead">DETAK<br />DETIK</h1>
+
+          <div class="folio mono">
+            <span>Edisi <b class="num">#{EDISI.nomor}</b></span>
+            <span>{EDISI.tanggal}</span>
+            <span>Dicetak otomatis <b>{EDISI.dicetak}</b></span>
+            <span>Gratis · Terbuka · Bercatatan</span>
+          </div>
+          <div class="service-stripe" aria-hidden="true"></div>
+        </header>
+
+        <div class="ticker" aria-label="Berita kilat dari media lain, tautan keluar apa adanya">
+          <div class="ticker-track">
+            {TICKER.map((t) => (
+              <Fragment>
+                <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
+              </Fragment>
+            ))}
+            {TICKER.map((t) => (
+              <Fragment>
+                <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+
+        <!-- Angka Edisi -->
+        <section class="angka-blok" aria-labelledby="angka-label">
+          <span class="eyebrow">ANGKA EDISI · SATU ANGKA YANG PALING BERBICARA HARI INI</span>
+          <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix}>
+            {ANGKA_EDISI.prefix} {fmtAngka}
+          </p>
+          <p class="angka-label" id="angka-label">
+            {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
+          </p>
+          <div class="cite-chips">
+            {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+            <button class="chip hop">Jadikan tur →</button>
+          </div>
+        </section>
+
+        <div class="rule" aria-hidden="true"></div>
+
+        <!-- Temuan -->
+        <section class="temuan-blok">
+          <span class="eyebrow">TEMUAN HARI INI · SEMUA KLAIM MEMBAWA KUITANSI</span>
+          <div class="temuan-grid">
+            {TEMUAN.map((t) => (
+              <article class="card temuan" data-rise id={t.id}>
+                <header class="temuan-head mono">
+                  <span class="temuan-lens">{t.lens}</span>
+                  <span class="serial">{t.serial}</span>
+                </header>
+                <h2 class="temuan-headline">{t.headline}</h2>
+                <p class="temuan-body">{t.body}</p>
+                <footer class="temuan-foot">
+                  <div class="cite-chips">
+                    {t.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+                  </div>
+                  <span class="stamp" data-stamp-in>{t.stamp}</span>
+                </footer>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- Hukum: the wave-maker -->
+        <section class="hukum-blok" id="hukum">
+          <h2 class="sect-title display reveal-glyphs">Angka bicara, dokumen menjawab.</h2>
+          <div class="hukum-grid">
+            <GradienKeadilan client:visible />
+            <div class="struk-rail">
+              <div class="struk tilt" data-rise>
+                <span class="stamp struk-stamp" data-stamp-in>{STRUK.stamp}</span>
+                <h4 class="mono">{STRUK.judul}</h4>
+                <p class="struk-sub mono">{STRUK.sub}</p>
+                <div class="dash"></div>
+                {STRUK.baris.map((b) => (
+                  <div class="row mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
+                ))}
+                <div class="dash"></div>
+                {STRUK.total.map((b) => (
+                  <div class="row tot mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
+                ))}
+                <div class="dash"></div>
+                <p class="roast">{STRUK.roast}</p>
+              </div>
+              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · EKSPOR KARTU IG MENYUSUL</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ SEAM I · siang turun ============ -->
+    <div class="seam" data-seam="dinas-mesin" aria-hidden="true">
+      <svg class="seam-wave" viewBox="0 0 1200 160" preserveAspectRatio="none">
+        <path
+          d="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
+          data-flat="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
+          data-bent="M0,80 C200,18 400,142 600,62 C800,-8 1000,148 1200,80"
+        ></path>
+      </svg>
+      <p class="seam-label mono">MESIN CETAK TIDAK PERNAH BERHENTI · PUKUL 03.00</p>
+    </div>
+
+    <!-- ============ ACT II · MESIN ============ -->
+    <section class="act act-mesin" data-act="mesin" id="mesin">
+      <div class="wrap">
+        <DitherNusantara client:visible />
+
+        <section class="hening-blok">
+          <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
+          <p class="hening-sub">
+            Setiap statistik resmi {KEHENINGAN.wilayah} punya baris dan sumbernya.
+            Satu baris tidak punya. Ketiadaan itu juga dokumen. <span class="mono">(data contoh)</span>
+          </p>
+
+          <div class="ledger hening-ledger">
+            {KEHENINGAN.baris.map((b) => (
+              <div>
+                <span>{b.k} <span class="hening-sumber mono">{b.sumber}</span></span>
+                <span class="v num">{b.v}</span>
+              </div>
+            ))}
+            <div class="hening-absen">
+              <span>{KEHENINGAN.absen.k} <span class="hening-sumber mono">{KEHENINGAN.absen.catatan}</span></span>
+              <span class="v num">{KEHENINGAN.absen.v}</span>
+            </div>
+            <div class="hening-lanec">
+              <span>{KEHENINGAN.laneC.teks}</span>
+              <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
+          <div class="ganda">
+            <div class="ganda-panel" data-rise>
+              <p class="ganda-angka display num">{LAYAR_GANDA.kiri.angka}</p>
+              <p class="ganda-label">{LAYAR_GANDA.kiri.label}</p>
+              <button class="chip"><span class="tick">⊙</span>{LAYAR_GANDA.kiri.chip}</button>
+            </div>
+            <div class="ganda-sela" aria-hidden="true"></div>
+            <div class="ganda-panel" data-rise>
+              <p class="ganda-angka display num">{LAYAR_GANDA.kanan.angka}</p>
+              <p class="ganda-label">{LAYAR_GANDA.kanan.label}</p>
+              <button class="chip lane-c">{LAYAR_GANDA.kanan.chip}</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="gelombang-blok card" data-rise>
+          <Gelombang client:visible />
+        </section>
+      </div>
+    </section>
+
+    <!-- ============ SEAM II · fajar arsip ============ -->
+    <div class="seam" data-seam="mesin-atlas" aria-hidden="true">
+      <svg class="seam-wave" viewBox="0 0 1200 160" preserveAspectRatio="none">
+        <path
+          d="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
+          data-flat="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
+          data-bent="M0,80 C200,150 400,10 600,95 C800,170 1000,15 1200,80"
+        ></path>
+      </svg>
+      <p class="seam-label mono">PLAT NO. 094 · UNTUK CATATAN YANG HARUS AWET</p>
+    </div>
+
+    <!-- ============ ACT III · ATLAS LAMA ============ -->
+    <section class="act act-atlas" data-act="atlas" id="atlas">
+      <div class="tex tex-hatch" aria-hidden="true"></div>
+      <div class="wrap">
+        <h2 class="sect-title-atlas display reveal-glyphs">Atlas Tanah Air</h2>
+        <p class="atlas-sub fig">Fig. 1. · Peta dasar Nusantara, gaya plat atlas; pesisir sage, batas madder.</p>
+
+        <PetaAtlas client:visible />
+
+        <div class="atlas-grid">
+          <section class="janji-blok card" data-rise>
+            <span class="eyebrow">JANJI · BUKU BESAR YANG MENGINGAT</span>
+            <div class="janji-list">
+              {JANJI.map((j) => (
+                <article class="janji">
+                  <p class="janji-teks">{j.teks}</p>
+                  <p class="janji-meta mono">{j.sumber}</p>
+                  <div class="janji-baris mono">
+                    <span>TARGET · {j.target}</span>
+                    <span>TERUKUR · {j.realisasi}</span>
+                  </div>
+                  <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
+                </article>
+              ))}
+            </div>
+            <p class="janji-foot mono">PENILAIAN ARITMETIKA SAAT BANGUN, BUKAN OPINI. (DATA CONTOH)</p>
+          </section>
+
+          <TebakDaerah client:visible />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COLOPHON ============ -->
+    <footer class="kolofon">
+      <div class="wrap">
+        <div class="rule" aria-hidden="true"></div>
+        <div class="kolofon-grid">
+          <div>
+            <p class="kolofon-mast display">DETAK DETIK</p>
+            <p class="kolofon-tag fig">Koran sipil yang dicetak mesin, diperiksa hukum, dan menyimpan ingatan.</p>
+          </div>
+          <div class="agate">
+            <b>HUKUM BESI</b><br />
+            1 · Kutipan atau diam.<br />
+            2 · Dua lajur, tak pernah bersilang.<br />
+            3 · Dokumen bicara, tak ada yang menuduh.<br />
+            4 · Satu kosakata perintah.<br />
+            5 · Edisi bersama untuk semua.<br />
+            6 · Lokal dulu, tanpa pengawasan.
+          </div>
+          <div class="agate">
+            <b>IRAMA DATA</b><br />
+            Putusan · harian<br />
+            Peringatan hutan · harian<br />
+            Harga pangan · harian<br />
+            APBD · triwulanan<br />
+            Janji · dinilai tiap terbit<br />
+            Ralat · transparan, selalu
+          </div>
+          <div class="agate">
+            <b>KOLOFON</b><br />
+            Astro 6 · Svelte 5 · MapLibre<br />
+            Peta: OpenFreeMap · OSM<br />
+            Aksara: Fraunces · Archivo · Geist Mono<br />
+            Semua angka halaman ini: <b>data contoh</b><br />
+            <a class="ink-link" href="https://github.com/yohn-maistre/detak-detik">github.com/yohn-maistre/detak-detik</a>
+          </div>
+        </div>
+        <p class="kolofon-bawah mono">
+          DD/EDI/041/VI/2026 · DICETAK OTOMATIS 05.00 WIB · BAGAIMANA EDISI INI DISUSUN: LOG REDAKSI TERBUKA (SEGERA) · ⌘ TIDAK ADA PELACAK, TIDAK ADA PROFIL
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- page-curl: the corner peels to the next edition -->
+  <div class="curl" id="curl" aria-hidden="true">
+    <div class="curl-fold"></div>
+    <p class="curl-tip mono">EDISI PETANG DALAM <span id="curl-count">—</span></p>
+  </div>
+
+  <Aksara client:load />
+
+  <script>
+    import { boot } from '../scripts/choreo';
+    boot();
+
+    // page-curl countdown to Edisi Petang (17.00 WIB = 10.00 UTC)
+    const count = document.getElementById('curl-count');
+    if (count) {
+      const tick = () => {
+        const now = new Date();
+        const target = new Date(now);
+        target.setUTCHours(10, 0, 0, 0);
+        if (target.getTime() <= now.getTime()) target.setUTCDate(target.getUTCDate() + 1);
+        const s = Math.floor((target.getTime() - now.getTime()) / 1000);
+        const hh = String(Math.floor(s / 3600)).padStart(2, '0');
+        const mm = String(Math.floor((s % 3600) / 60)).padStart(2, '0');
+        const ss = String(s % 60).padStart(2, '0');
+        count.textContent = `${hh}.${mm}.${ss}`;
+      };
+      tick();
+      setInterval(tick, 1000);
+    }
+  </script>
+</Paper>
+
+<style>
+  main { overflow-x: clip; }
+  .act { position: relative; padding: 0 0 96px; }
+
+  /* ---------- ACT I ---------- */
+  .masthead-block { padding-top: clamp(20px, 4vh, 44px); }
+  .folio-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    justify-content: space-between;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .detak { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 10px; letter-spacing: 0.16em; }
+  .detak-beat { display: inline-block; color: var(--ink); }
+  .coordstamp-inline { white-space: nowrap; }
+  @media (max-width: 760px) { .coordstamp-inline { white-space: normal; } }
+
+  .masthead {
+    font-size: clamp(64px, 15vw, 230px);
+    line-height: 0.88;
+    letter-spacing: -0.03em;
+    margin: 22px 0 12px;
+    overflow: hidden;
+  }
+  .masthead :global(.glyph) { display: inline-block; will-change: transform; }
+  .masthead :global(.glyph:hover) { color: var(--accent); transition: color 0.2s; }
+
+  .folio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 10px 0 14px;
+  }
+  .folio b { color: var(--accent); font-weight: 600; }
+  .service-stripe { height: 3px; background: var(--accent); margin-bottom: 0; }
+
+  .angka-blok { padding: clamp(40px, 7vh, 80px) 0 28px; }
+  .angka {
+    font-size: clamp(44px, 9vw, 120px);
+    line-height: 1;
+    color: var(--accent);
+    margin: 14px 0 10px;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+  .angka-label { max-width: 44ch; color: var(--muted); font-size: 15px; }
+  .cite-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+  .rule { margin: 26px 0; }
+
+  .temuan-blok { padding: 14px 0 30px; }
+  .temuan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
+  .temuan { display: flex; flex-direction: column; gap: 10px; }
+  .temuan-head { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); }
+  .temuan-lens { color: var(--accent); font-weight: 700; }
+  .temuan-headline { font-size: clamp(18px, 2vw, 22px); line-height: 1.18; }
+  .temuan-body { font-size: 13.5px; color: var(--muted); flex: 1; }
+  .temuan-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
+  .temuan-foot .cite-chips { margin: 0; }
+
+  .hukum-blok { padding-top: 30px; }
+  .sect-title { font-size: clamp(34px, 5.6vw, 72px); margin-bottom: 26px; max-width: 18ch; }
+  .hukum-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+  @media (max-width: 900px) { .hukum-grid { grid-template-columns: 1fr; } }
+  .struk-rail { display: grid; justify-items: center; gap: 14px; }
+  .struk-stamp { position: absolute; top: 12px; right: 12px; font-size: 9px; }
+  .struk-sub { text-align: center; color: #6e675c; font-size: 11px; }
+  .struk h4 { text-align: center; letter-spacing: 0.1em; font-size: 13px; }
+  .tilt { transition: transform 0.5s var(--ease-out), box-shadow 0.5s; transform-style: preserve-3d; }
+  .tilt:hover { transform: perspective(900px) rotateX(4deg) rotateY(-5deg) translateY(-4px); box-shadow: 0 28px 50px -24px rgba(0, 0, 0, 0.5); }
+  .figcap-dinas { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
+
+  /* ---------- SEAMS ---------- */
+  .seam { position: relative; height: 46vh; display: grid; place-items: center; }
+  .seam-wave { position: absolute; inset: auto 0; width: 100%; height: 120px; overflow: visible; }
+  .seam-wave path { fill: none; stroke: var(--muted); stroke-width: 1.2; opacity: 0.6; }
+  .seam-label { font-size: 9.5px; letter-spacing: 0.3em; color: var(--muted); text-align: center; padding: 0 20px; }
+
+  /* ---------- ACT II ---------- */
+  .act-mesin .wrap { display: grid; gap: clamp(48px, 9vh, 110px); }
+  .sect-title-mesin {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 340;
+    font-size: clamp(40px, 8vw, 110px);
+    letter-spacing: -0.005em;
+  }
+  .hening-sub { max-width: 52ch; color: var(--muted); margin: 14px 0 26px; font-size: 15px; }
+  .hening-ledger > div { padding: 9px 0; }
+  .hening-sumber { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); margin-left: 10px; text-transform: uppercase; }
+  .hening-absen {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    color: #c96a5a;
+  }
+  .hening-absen .hening-sumber { color: #c96a5a; font-style: italic; }
+  .hening-lanec {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    padding: 12px 0 9px 22px;
+    border-bottom: none !important;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .ganda { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(20px, 5vw, 64px); align-items: stretch; }
+  @media (max-width: 760px) { .ganda { grid-template-columns: 1fr; } .ganda-sela { display: none; } }
+  .ganda-sela { background: var(--line); }
+  .ganda-angka {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 340;
+    font-size: clamp(48px, 7.5vw, 100px);
+    line-height: 1;
+  }
+  .ganda-label { color: var(--muted); margin: 10px 0 14px; font-size: 14px; }
+
+  .gelombang-blok { max-width: 720px; }
+
+  /* ---------- ACT III ---------- */
+  .act-atlas { padding-top: 10px; }
+  .sect-title-atlas {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 460;
+    font-size: clamp(38px, 6.5vw, 92px);
+    margin-bottom: 8px;
+  }
+  .atlas-sub { font-size: 15px; margin-bottom: 26px; }
+  .atlas-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 22px; margin-top: 46px; align-items: start; }
+  @media (max-width: 940px) { .atlas-grid { grid-template-columns: 1fr; } }
+
+  .janji-list { display: grid; gap: 22px; margin-top: 14px; }
+  .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+  .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; }
+  .janji-meta { font-size: 10px; letter-spacing: 0.12em; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; }
+  .janji-baris { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 11px; color: var(--muted); }
+  .janji-stamp { position: absolute; top: 0; right: 0; font-size: 9px; }
+  .janji-stamp.s-tidak-tercapai { color: var(--accent2); border-color: var(--accent2); }
+  .janji-stamp.s-data-hilang { color: var(--muted); border-color: var(--muted); border-style: dashed; }
+  .janji-foot { margin-top: 16px; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
+
+  /* ---------- colophon ---------- */
+  .kolofon { padding: 40px 0 110px; }
+  .kolofon-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; padding: 30px 0; }
+  @media (max-width: 940px) { .kolofon-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .kolofon-grid { grid-template-columns: 1fr; } }
+  .kolofon-mast { font-size: clamp(26px, 3.4vw, 40px); }
+  .kolofon-tag { font-size: 15px; margin-top: 8px; max-width: 30ch; }
+  .agate b { color: var(--ink); letter-spacing: 0.14em; }
+  .kolofon-bawah { font-size: 9.5px; letter-spacing: 0.16em; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+
+  /* ---------- page curl ---------- */
+  .curl { position: fixed; right: 0; bottom: 0; z-index: 130; width: 64px; height: 64px; overflow: visible; }
+  .curl-fold {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 56px 56px;
+    border-color: transparent transparent var(--card) transparent;
+    filter: drop-shadow(-3px -3px 6px rgba(0, 0, 0, 0.18));
+    transition: border-width 0.45s var(--ease-out);
+  }
+  .curl:hover .curl-fold { border-width: 0 0 96px 96px; }
+  .curl-tip {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: max-content;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out);
+  }
+  .curl:hover .curl-tip { opacity: 1; transform: translate(-44px, -34px); }
+</style>

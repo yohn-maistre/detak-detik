@@ -1,0 +1,15 @@
+{
+  "edisi": 41,
+  "terbit": "2026-06-11T05:00:00+07:00",
+  "sesi": "pagi",
+  "catatan": "EDISI CONTOH. Semua angka adalah data contoh untuk spesifikasi visual, ditandai (data contoh) di antarmuka. Pipeline nyata menulis berkas ini dua kali sehari.",
+  "angka_edisi": {
+    "nilai": 4218530114,
+    "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+    "cited_ids": ["putusan_ma:contoh"]
+  },
+  "lead": "tmn-041-01",
+  "temuan": ["tmn-041-01", "tmn-041-02", "tmn-041-03"],
+  "kamera_pembuka": "tour://pembuka-041",
+  "log": null
+}

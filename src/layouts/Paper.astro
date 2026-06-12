@@ -1,0 +1,42 @@
+---
+import '@fontsource-variable/fraunces/index.css';
+import '@fontsource-variable/archivo/index.css';
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
+import '@fontsource/geist-mono/400.css';
+import '@fontsource/geist-mono/500.css';
+import '@fontsource/geist-mono/700.css';
+import '../styles/base.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'DETAK DETIK — Koran sipil otomatis',
+  description = 'Koran harian sipil Indonesia. Dicetak otomatis dua kali sehari dari data publik. Apa yang tidak bisa dikutip, tidak diterbitkan.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#d8ceb2" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>document.documentElement.classList.remove('no-js');</script>
+  </head>
+  <body>
+    <div class="regmarks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="sidelabel" aria-hidden="true">DETAK DETIK · SERI 041 · DICETAK OTOMATIS</div>
+    <slot />
+  </body>
+</html>
