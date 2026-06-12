@@ -14,6 +14,7 @@ import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN } from '../lib/data/edisi';
+import { PIECES } from '../lib/perspektif';
 
 const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
 const sparkMax = Math.max(...PUTUSAN_HARIAN);
@@ -239,6 +240,23 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
               <p class="ganda-label">{LAYAR_GANDA.kanan.label}</p>
               <button class="chip lane-c">{LAYAR_GANDA.kanan.chip}</button>
             </div>
+          </div>
+        </section>
+
+        <section class="arsip-teaser" aria-label="Lembar perspektif dari arsip">
+          <div class="arsip-head">
+            <h2 class="sect-title-mesin display reveal-glyphs">Arsip Perspektif</h2>
+            <a class="mono ink-link arsip-semua" href="/arsip">RAK LENGKAP →</a>
+          </div>
+          <div class="arsip-grid">
+            {PIECES.map((p, i) => (
+              <a class="arsip-card" href={`/perspektif/${p.slug}`} data-rise>
+                <span class="mono arsip-no num">{String(i + 1).padStart(3, '0')}</span>
+                <h3 class="arsip-judul">{p.judul}</h3>
+                <p class="arsip-kalimat">{p.satuKalimat}</p>
+                <span class="mono arsip-bentuk">{p.bentuk.toUpperCase()} →</span>
+              </a>
+            ))}
           </div>
         </section>
 
@@ -635,6 +653,24 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     line-height: 1;
   }
   .ganda-label { color: var(--muted); margin: 10px 0 14px; font-size: 14px; }
+
+  .arsip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .arsip-semua { font-size: 10px; letter-spacing: 0.18em; color: var(--accent2); }
+  .arsip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 26px; }
+  @media (max-width: 900px) { .arsip-grid { grid-template-columns: 1fr; } }
+  .arsip-card {
+    display: flex; flex-direction: column; gap: 10px;
+    border: 1px solid var(--line);
+    padding: 20px;
+    background: var(--card);
+    text-decoration: none;
+    transition: transform 0.3s var(--ease-out), border-color 0.3s;
+  }
+  .arsip-card:hover { transform: translateY(-3px); border-color: var(--accent2); }
+  .arsip-no { font-size: 11px; color: var(--accent2); letter-spacing: 0.14em; }
+  .arsip-judul { font-family: 'Fraunces Variable', serif; font-weight: 400; font-size: clamp(20px, 2.2vw, 26px); line-height: 1.15; }
+  .arsip-kalimat { font-size: 13px; color: var(--muted); flex: 1; }
+  .arsip-bentuk { font-size: 8.5px; letter-spacing: 0.16em; color: var(--accent2); }
 
   .mesin-duo {
     display: grid;

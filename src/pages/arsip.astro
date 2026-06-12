@@ -1,0 +1,64 @@
+---
+/**
+ * The archive index: every perspective piece ever printed, one line each.
+ * The paper picks daily; this shelf remembers.
+ */
+import Paper from '../layouts/Paper.astro';
+import { PIECES } from '../lib/perspektif';
+---
+
+<Paper title="Arsip Perspektif — DETAK DETIK" description="Semua lembar perspektif Detak Detik: sintesis data publik yang menggeser sudut pandang.">
+  <main class="rak" data-register="atlas" data-stempel-pad>
+    <div class="wrap">
+      <a class="rak-back mono ink-link" href="/">← DETAK DETIK · EDISI #41</a>
+      <h1 class="rak-judul display">Arsip Perspektif</h1>
+      <p class="rak-sub fig">Rak yang mengingat. Halaman depan memilih tiap terbit; lembar-lembar ini menetap.</p>
+
+      <div class="rak-list">
+        {PIECES.map((p, i) => (
+          <a class="rak-item" href={`/perspektif/${p.slug}`}>
+            <span class="rak-no mono num">{String(i + 1).padStart(3, '0')}</span>
+            <div>
+              <h2 class="rak-item-judul">{p.judul}</h2>
+              <p class="rak-item-kalimat">{p.satuKalimat}</p>
+              <p class="rak-item-meta mono">{p.bentuk.toUpperCase()} · {p.sumber.join(' · ').toUpperCase()}</p>
+            </div>
+            <span class="rak-panah" aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+
+      <p class="rak-kaki mono">LEMBAR BARU TERBIT SEIRING PIPA DATA TERPASANG · USULAN PERSPEKTIF: BUKA ISU DI GITHUB</p>
+    </div>
+  </main>
+</Paper>
+
+<style>
+  .rak { min-height: 100vh; background: var(--bg); color: var(--ink); padding: 30px 0 80px; }
+  .rak-back { display: inline-block; font-size: 10px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 26px; }
+  .rak-judul {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 460;
+    font-size: clamp(38px, 7vw, 92px);
+  }
+  .rak-sub { font-size: 16px; margin: 8px 0 36px; }
+  .rak-list { border-top: 1px solid var(--line); }
+  .rak-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 6px;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition: background 0.25s, padding-left 0.3s var(--ease-out);
+  }
+  .rak-item:hover { background: color-mix(in oklab, var(--accent) 6%, transparent); padding-left: 14px; }
+  .rak-no { font-size: 12px; color: var(--accent2); }
+  .rak-item-judul { font-family: 'Fraunces Variable', serif; font-weight: 460; font-size: clamp(20px, 2.6vw, 28px); }
+  .rak-item-kalimat { font-size: 14px; color: var(--muted); margin-top: 4px; max-width: 64ch; }
+  .rak-item-meta { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); margin-top: 8px; }
+  .rak-panah { font-size: 20px; color: var(--accent2); transition: transform 0.3s var(--ease-out); }
+  .rak-item:hover .rak-panah { transform: translateX(6px); }
+  .rak-kaki { font-size: 9px; letter-spacing: 0.16em; color: var(--muted); margin-top: 30px; }
+</style>

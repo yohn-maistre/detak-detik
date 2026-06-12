@@ -1,0 +1,58 @@
+---
+/**
+ * A perspective permalink: one juxtaposition, its chart, its receipts.
+ * The dark register full-page; the front page only ever links here.
+ */
+import Paper from '../../layouts/Paper.astro';
+import { PIECES } from '../../lib/perspektif';
+import DuaGaris from '../../islands/DuaGaris.svelte';
+import GarisStart from '../../islands/GarisStart.svelte';
+import PabrikUU from '../../islands/PabrikUU.svelte';
+
+export function getStaticPaths() {
+  return PIECES.map((p) => ({ params: { slug: p.slug }, props: { piece: p } }));
+}
+
+const { piece } = Astro.props;
+---
+
+<Paper title={`${piece.judul} — DETAK DETIK`} description={piece.satuKalimat}>
+  <main class="lembar" data-register="mesin" data-stempel-pad>
+    <div class="wrap">
+      <header class="lembar-head">
+        <a class="lembar-back mono ink-link" href="/">← DETAK DETIK · EDISI #41</a>
+        <span class="eyebrow">ARSIP PERSPEKTIF · {piece.bentuk.toUpperCase()}</span>
+        <h1 class="lembar-judul display">{piece.judul}</h1>
+        <p class="lembar-kalimat fig">{piece.satuKalimat}</p>
+      </header>
+
+      {piece.slug === 'dua-garis-kemiskinan' && <DuaGaris client:load />}
+      {piece.slug === 'garis-start-sama' && <GarisStart client:load />}
+      {piece.slug === 'pabrik-undang-undang' && <PabrikUU client:load />}
+
+      <footer class="lembar-foot">
+        <div class="lembar-sumber">
+          {piece.sumber.map((s) => <span class="chip"><span class="tick">⊙</span>{s}</span>)}
+        </div>
+        <p class="mono lembar-kolofon">DD/PRS/{piece.slug.toUpperCase().slice(0, 12)} · SEMUA ANGKA HALAMAN INI: DATA CONTOH SAMPAI PIPA DATA MENGGANTIKANNYA · <a class="ink-link" href="/arsip">ARSIP LENGKAP →</a></p>
+      </footer>
+    </div>
+  </main>
+</Paper>
+
+<style>
+  .lembar { min-height: 100vh; background: var(--bg); color: var(--ink); padding: 30px 0 80px; }
+  .lembar-head { margin-bottom: 38px; }
+  .lembar-back { display: inline-block; font-size: 10px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 26px; }
+  .lembar-judul {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 340;
+    font-size: clamp(36px, 7vw, 88px);
+    margin: 10px 0 14px;
+  }
+  .lembar-kalimat { font-size: clamp(16px, 2vw, 20px); max-width: 56ch; }
+  .lembar-foot { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 18px; }
+  .lembar-sumber { display: flex; flex-wrap: wrap; gap: 8px; }
+  .lembar-sumber .chip { cursor: default; }
+  .lembar-kolofon { font-size: 9px; letter-spacing: 0.16em; color: var(--muted); margin-top: 16px; }
+</style>
