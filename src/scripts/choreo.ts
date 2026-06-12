@@ -8,23 +8,6 @@ import Lenis from 'lenis';
 import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
 
-type Palette = Record<'--bg' | '--card' | '--ink' | '--muted' | '--accent' | '--accent2' | '--line' | '--line-soft', string>;
-
-const PALETTES: Record<'dinas' | 'mesin' | 'atlas', Palette> = {
-  dinas: {
-    '--bg': '#d6cbac', '--card': '#e3dabf', '--ink': '#15130e', '--muted': '#5a5345',
-    '--accent': '#e44a06', '--accent2': '#15130e', '--line': '#15130e', '--line-soft': '#aaa085',
-  },
-  mesin: {
-    '--bg': '#100f0d', '--card': '#1a1815', '--ink': '#f2efe6', '--muted': '#8f897c',
-    '--accent': '#f2efe6', '--accent2': '#cdb47a', '--line': '#34312b', '--line-soft': '#26241f',
-  },
-  atlas: {
-    '--bg': '#ece2cb', '--card': '#f5edda', '--ink': '#28221a', '--muted': '#756956',
-    '--accent': '#47745a', '--accent2': '#ad5038', '--line': '#c4b28b', '--line-soft': '#d6c7a4',
-  },
-};
-
 let lenis: Lenis | null = null;
 
 /* ---------- utilities ---------- */
@@ -127,55 +110,30 @@ function runLoader(onDone: () => void) {
   window.addEventListener('keydown', skip, { once: true });
 }
 
-/* ---------- 2 · the register morph between acts ---------- */
+/* ---------- 2 · the split-flap seam between acts ----------
+   Acts own their registers statically now (scoped [data-register] tokens —
+   no more whole-page palette animation, which repainted everything and
+   turned phones to syrup). The seam is a departure board: full-width slats
+   flip from the previous act's paper to the next act's, staggered like a
+   split-flap display, GPU transforms only. */
 
-function setPalette(p: Palette) {
-  for (const [k, v] of Object.entries(p)) document.documentElement.style.setProperty(k, v);
-}
-
-function registerMorph() {
-  const seams = document.querySelectorAll<HTMLElement>('[data-seam]');
-  seams.forEach((seam) => {
-    const [from, to] = (seam.dataset.seam ?? '').split('-') as ['dinas' | 'mesin' | 'atlas', 'dinas' | 'mesin' | 'atlas'];
-    if (!PALETTES[from] || !PALETTES[to]) return;
-    const proxy = { t: 0 };
-    const fromP = PALETTES[from];
-    const toP = PALETTES[to];
-    gsap.to(proxy, {
-      t: 1,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: seam,
-        start: 'top 85%',
-        end: 'bottom 30%',
-        scrub: 0.4,
-      },
-      onUpdate() {
-        const mixed = {} as Palette;
-        for (const key of Object.keys(fromP) as (keyof Palette)[]) {
-          mixed[key] = gsap.utils.interpolate(fromP[key], toP[key])(proxy.t);
-        }
-        setPalette(mixed);
-      },
-    });
-
-    // the ink wave bends through the seam; the label drifts against it
-    const wave = seam.querySelector<SVGPathElement>('.seam-wave path');
-    if (wave) {
-      const flat = wave.dataset.flat;
-      const bent = wave.dataset.bent;
-      if (flat && bent) {
-        gsap.fromTo(wave, { attr: { d: flat } }, {
-          attr: { d: bent },
-          ease: 'none',
-          scrollTrigger: { trigger: seam, start: 'top bottom', end: 'bottom top', scrub: 0.6 },
-        });
-      }
+function seamFlip() {
+  document.querySelectorAll<HTMLElement>('[data-seam]').forEach((seam) => {
+    const slats = seam.querySelectorAll<HTMLElement>('.slat');
+    if (!slats.length || reducedMotion()) {
+      seam.classList.add('is-static');
+      return;
     }
+    gsap.to(slats, {
+      rotateX: -180,
+      ease: 'none',
+      stagger: 0.14,
+      scrollTrigger: { trigger: seam, start: 'top 78%', end: 'bottom 40%', scrub: 0.3 },
+    });
     const label = seam.querySelector('.seam-label');
-    if (label && !reducedMotion()) {
-      gsap.fromTo(label, { yPercent: 60, opacity: 0.2 }, {
-        yPercent: -60,
+    if (label) {
+      gsap.fromTo(label, { yPercent: 40, opacity: 0.25 }, {
+        yPercent: -40,
         opacity: 1,
         ease: 'none',
         scrollTrigger: { trigger: seam, start: 'top bottom', end: 'bottom top', scrub: 0.8 },
@@ -351,24 +309,45 @@ function stempelPad() {
 
       let blot: HTMLElement | null = null;
       let grow: gsap.core.Tween | null = null;
+      let moved = false;
+      const x0 = e.clientX;
+      const y0 = e.clientY;
       const holdTimer = setTimeout(() => {
-        // the long press: ink soaks into the paper
+        // the long press: ink soaks into the paper — but a press is
+        // stationary; a scroll is not, and never inks the page
+        if (moved || document.querySelector('.ink-blot')) return;
         blot = document.createElement('span');
         blot.className = 'ink-blot';
         blot.style.left = `${e.clientX}px`;
         blot.style.top = `${e.clientY}px`;
         document.body.appendChild(blot);
-        grow = gsap.to(blot, { scale: 14, duration: 2.6, ease: 'power1.in' });
-      }, 300);
+        grow = gsap.to(blot, { scale: 9, duration: 2.4, ease: 'power1.in' });
+      }, 350);
+
+      const onMove = (ev: PointerEvent) => {
+        if (Math.abs(ev.clientX - x0) + Math.abs(ev.clientY - y0) > 8) {
+          moved = true;
+          clearTimeout(holdTimer);
+          if (blot) {
+            grow?.kill();
+            gsap.to(blot, { opacity: 0, duration: 0.5, onComplete: () => blot!.remove() });
+            blot = null;
+          }
+        }
+      };
+      window.addEventListener('pointermove', onMove);
 
       const up = () => {
         clearTimeout(holdTimer);
         window.removeEventListener('pointerup', up);
+        window.removeEventListener('pointercancel', up);
+        window.removeEventListener('pointermove', onMove);
         if (blot) {
           grow?.kill();
-          gsap.to(blot, { opacity: 0, duration: 1.6, delay: 0.4, onComplete: () => blot!.remove() });
+          gsap.to(blot, { opacity: 0, duration: 1.4, delay: 0.3, onComplete: () => blot!.remove() });
           return;
         }
+        if (moved) return;
         // the tap: a small seal at the cursor
         const seal = document.createElement('span');
         seal.className = 'stempel-seal mono';
@@ -388,6 +367,7 @@ function stempelPad() {
         }
       };
       window.addEventListener('pointerup', up);
+      window.addEventListener('pointercancel', up);
     });
   });
 }
@@ -573,7 +553,7 @@ export function boot() {
     mastheadRipple();
   });
 
-  registerMorph();
+  seamFlip();
   reveals();
   redPen();
   odometer();

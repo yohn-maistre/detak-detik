@@ -20,7 +20,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
   <main data-stempel-pad>
     <!-- ============ ACT I · DINAS ============ -->
-    <section class="act act-dinas" data-act="dinas" id="depan" data-crosshair>
+    <section class="act act-dinas" data-act="dinas" data-register="dinas" id="depan" data-crosshair>
       <div class="tex tex-scan" aria-hidden="true"></div>
       <div class="wrap">
         <header class="masthead-block">
@@ -156,19 +156,17 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     </section>
 
     <!-- ============ SEAM I · siang turun ============ -->
-    <div class="seam" data-seam="dinas-mesin" aria-hidden="true">
-      <svg class="seam-wave" viewBox="0 0 1200 160" preserveAspectRatio="none">
-        <path
-          d="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
-          data-flat="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
-          data-bent="M0,80 C200,18 400,142 600,62 C800,-8 1000,148 1200,80"
-        ></path>
-      </svg>
+    <div class="seam" data-seam="dinas-mesin" style="--from:#d6cbac;--to:#100f0d" aria-hidden="true">
+      <div class="slats">
+        {Array.from({ length: 7 }).map(() => (
+          <div class="slat"><i class="f"></i><i class="b"></i></div>
+        ))}
+      </div>
       <p class="seam-label mono">MESIN CETAK TIDAK PERNAH BERHENTI · PUKUL 03.00</p>
     </div>
 
     <!-- ============ ACT II · MESIN ============ -->
-    <section class="act act-mesin" data-act="mesin" id="mesin">
+    <section class="act act-mesin" data-act="mesin" data-register="mesin" id="mesin">
       <div class="wrap">
         <DitherNusantara client:visible />
 
@@ -223,19 +221,17 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     </section>
 
     <!-- ============ SEAM II · fajar arsip ============ -->
-    <div class="seam" data-seam="mesin-atlas" aria-hidden="true">
-      <svg class="seam-wave" viewBox="0 0 1200 160" preserveAspectRatio="none">
-        <path
-          d="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
-          data-flat="M0,80 C200,80 400,80 600,80 C800,80 1000,80 1200,80"
-          data-bent="M0,80 C200,150 400,10 600,95 C800,170 1000,15 1200,80"
-        ></path>
-      </svg>
+    <div class="seam" data-seam="mesin-atlas" style="--from:#100f0d;--to:#ece2cb" aria-hidden="true">
+      <div class="slats">
+        {Array.from({ length: 7 }).map(() => (
+          <div class="slat"><i class="f"></i><i class="b"></i></div>
+        ))}
+      </div>
       <p class="seam-label mono">PLAT NO. 094 · UNTUK CATATAN YANG HARUS AWET</p>
     </div>
 
     <!-- ============ ACT III · ATLAS LAMA ============ -->
-    <section class="act act-atlas" data-act="atlas" id="atlas">
+    <section class="act act-atlas" data-act="atlas" data-register="atlas" id="atlas">
       <div class="tex tex-hatch" aria-hidden="true"></div>
       <div class="wrap">
         <h2 class="sect-title-atlas display reveal-glyphs">Atlas Tanah Air</h2>
@@ -268,7 +264,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     </section>
 
     <!-- ============ COLOPHON ============ -->
-    <footer class="kolofon">
+    <footer class="kolofon" data-register="atlas">
       <div class="wrap">
         <div class="rule2" aria-hidden="true"></div>
         <div class="kolofon-grid">
@@ -344,7 +340,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
 <style>
   main { overflow-x: clip; }
-  .act { position: relative; padding: 0 0 96px; }
+  /* acts own their registers statically; each paints its own paper */
+  .act, .kolofon { position: relative; background: var(--bg); color: var(--ink); }
+  .act { padding: 0 0 clamp(56px, 9vh, 96px); }
 
   /* ---------- ACT I ---------- */
   .masthead-block { padding-top: clamp(20px, 4vh, 44px); }
@@ -525,11 +523,40 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .struk h4 { text-align: center; letter-spacing: 0.1em; font-size: 13px; }
   .figcap-dinas { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
 
-  /* ---------- SEAMS ---------- */
-  .seam { position: relative; height: 46vh; display: grid; place-items: center; }
-  .seam-wave { position: absolute; inset: auto 0; width: 100%; height: 120px; overflow: visible; }
-  .seam-wave path { fill: none; stroke: var(--muted); stroke-width: 1.2; opacity: 0.6; }
-  .seam-label { font-size: 9.5px; letter-spacing: 0.3em; color: var(--muted); text-align: center; padding: 0 20px; }
+  /* ---------- SEAMS: the split-flap departure board ---------- */
+  .seam {
+    position: relative;
+    height: clamp(180px, 34vh, 380px);
+    display: grid;
+    place-items: center;
+    perspective: 1100px;
+    background: var(--from);
+  }
+  @media (max-width: 760px) { .seam { height: clamp(140px, 22vh, 220px); } }
+  .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
+  .slat { position: relative; transform-style: preserve-3d; will-change: transform; }
+  .slat i { position: absolute; inset: -0.6px 0; backface-visibility: hidden; }
+  .slat .f {
+    background: var(--from);
+    box-shadow: inset 0 -1px color-mix(in oklab, var(--to) 22%, transparent);
+  }
+  .slat .b {
+    background: var(--to);
+    transform: rotateX(180deg);
+    box-shadow: inset 0 1px color-mix(in oklab, var(--from) 16%, transparent);
+  }
+  .seam.is-static .slats { display: none; }
+  .seam.is-static { background: linear-gradient(var(--from), var(--to)); }
+  .seam-label {
+    position: relative;
+    z-index: 2;
+    font-size: 9.5px;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 0 20px;
+    color: #9b9484;
+    mix-blend-mode: difference;
+  }
 
   /* ---------- ACT II ---------- */
   .act-mesin .wrap { display: grid; gap: clamp(48px, 9vh, 110px); }

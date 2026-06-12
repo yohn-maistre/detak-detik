@@ -114,9 +114,10 @@ a { color: inherit; }
 [data-register='atlas'] .card,
 .act-atlas .card { outline: 1px solid var(--line); outline-offset: 5px; box-shadow: none; border: 1px solid var(--line); }
 
-/* ---- registration corner brackets (fixed chrome, Dinas law) ---- */
-.regmarks { position: fixed; inset: 10px; pointer-events: none; z-index: 90; }
-.regmarks i { position: absolute; width: 18px; height: 18px; border: 0 solid var(--ink); opacity: 0.9; transition: border-color 0.4s; }
+/* ---- registration corner brackets (fixed chrome over every register) ----
+   gray + difference blend reads dark on paper and light on the press act */
+.regmarks { position: fixed; inset: 10px; pointer-events: none; z-index: 90; mix-blend-mode: difference; }
+.regmarks i { position: absolute; width: 18px; height: 18px; border: 0 solid #8a8578; opacity: 0.9; }
 .regmarks i:nth-child(1) { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
 .regmarks i:nth-child(2) { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
 .regmarks i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
@@ -131,7 +132,8 @@ a { color: inherit; }
   font-size: 10px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #8a8578;
+  mix-blend-mode: difference;
   z-index: 90;
   pointer-events: none;
 }
@@ -362,7 +364,7 @@ a { color: inherit; }
   border-radius: 47% 53% 58% 42% / 52% 44% 56% 48%;
   background: var(--ink);
   transform: translate(-50%, -50%) scale(0.2);
-  opacity: 0.85;
+  opacity: 0.6;
 }
 .crosshair-tag {
   position: fixed;
