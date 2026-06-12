@@ -4,6 +4,7 @@ import Loader from '../components/Loader.astro';
 import PetaKabar from '../islands/PetaKabar.svelte';
 import PasarPagi from '../islands/PasarPagi.svelte';
 import PapanAngka from '../islands/PapanAngka.svelte';
+import IndeksPagi from '../islands/IndeksPagi.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
@@ -123,7 +124,53 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <PasarPagi client:visible />
 
-        <PapanAngka client:visible />
+        <section class="gelombang-blok card" data-rise>
+          <Gelombang client:visible />
+        </section>
+
+        <IndeksPagi client:visible />
+      </div>
+    </section>
+
+    <!-- ============ SEAM I · siang turun ============ -->
+    <div class="seam" data-seam="dinas-mesin" style="--from:#d6cbac;--to:#100f0d" aria-hidden="true">
+      <div class="slats">
+        {Array.from({ length: 7 }).map(() => (
+          <div class="slat"><i class="f"></i><i class="b"></i></div>
+        ))}
+      </div>
+      <p class="seam-label mono">MESIN CETAK TIDAK PERNAH BERHENTI · PUKUL 03.00</p>
+    </div>
+
+    <!-- ============ ACT II · MESIN ============ -->
+    <section class="act act-mesin" data-act="mesin" data-register="mesin" id="mesin">
+      <div class="wrap">
+        <DitherNusantara client:visible />
+
+        <section class="hening-blok">
+          <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
+          <p class="hening-sub">
+            Setiap statistik resmi {KEHENINGAN.wilayah} punya baris dan sumbernya.
+            Satu baris tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
+          </p>
+
+          <div class="ledger hening-ledger">
+            {KEHENINGAN.baris.map((b) => (
+              <div>
+                <span>{b.k} <span class="hening-sumber mono">{b.sumber}</span></span>
+                <span class="v num">{b.v}</span>
+              </div>
+            ))}
+            <div class="hening-absen">
+              <span>{KEHENINGAN.absen.k} <span class="hening-sumber mono">{KEHENINGAN.absen.catatan}</span></span>
+              <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{KEHENINGAN.absen.v}</span>
+            </div>
+            <div class="hening-lanec">
+              <span>{KEHENINGAN.laneC.teks}</span>
+              <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
+            </div>
+          </div>
+        </section>
 
         <!-- Temuan -->
         <section class="temuan-blok">
@@ -178,52 +225,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <!-- Permainan pagi -->
-        <section class="main-pagi">
-          <TebakDaerah client:visible />
-        </section>
-      </div>
-    </section>
-
-    <!-- ============ SEAM I · siang turun ============ -->
-    <div class="seam" data-seam="dinas-mesin" style="--from:#d6cbac;--to:#100f0d" aria-hidden="true">
-      <div class="slats">
-        {Array.from({ length: 7 }).map(() => (
-          <div class="slat"><i class="f"></i><i class="b"></i></div>
-        ))}
-      </div>
-      <p class="seam-label mono">MESIN CETAK TIDAK PERNAH BERHENTI · PUKUL 03.00</p>
-    </div>
-
-    <!-- ============ ACT II · MESIN ============ -->
-    <section class="act act-mesin" data-act="mesin" data-register="mesin" id="mesin">
-      <div class="wrap">
-        <DitherNusantara client:visible />
-
-        <section class="hening-blok">
-          <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
-          <p class="hening-sub">
-            Setiap statistik resmi {KEHENINGAN.wilayah} punya baris dan sumbernya.
-            Satu baris tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
-          </p>
-
-          <div class="ledger hening-ledger">
-            {KEHENINGAN.baris.map((b) => (
-              <div>
-                <span>{b.k} <span class="hening-sumber mono">{b.sumber}</span></span>
-                <span class="v num">{b.v}</span>
-              </div>
-            ))}
-            <div class="hening-absen">
-              <span>{KEHENINGAN.absen.k} <span class="hening-sumber mono">{KEHENINGAN.absen.catatan}</span></span>
-              <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{KEHENINGAN.absen.v}</span>
-            </div>
-            <div class="hening-lanec">
-              <span>{KEHENINGAN.laneC.teks}</span>
-              <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
-            </div>
-          </div>
-        </section>
+        <PapanAngka client:visible />
 
         <ObituariHutan />
 
@@ -260,12 +262,6 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <section class="mesin-duo">
-          <div class="gelombang-blok card" data-rise>
-            <Gelombang client:visible />
-          </div>
-          <BenarSalah client:visible />
-        </section>
       </div>
     </section>
 
@@ -308,6 +304,12 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </section>
 
           <AlmanakSains client:visible />
+        </div>
+
+        <!-- the play shelf: same puzzle for every reader -->
+        <div class="main-rak">
+          <TebakDaerah client:visible />
+          <BenarSalah client:visible />
         </div>
       </div>
     </section>
@@ -478,7 +480,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
   .kabar-blok { padding-top: 22px; }
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
-  .main-pagi { margin-top: 34px; max-width: 720px; }
+  .gelombang-blok { max-width: 720px; margin-top: 34px; }
+  .main-rak { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; align-items: start; }
+  @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
 
   .angka-blok {
     display: grid;

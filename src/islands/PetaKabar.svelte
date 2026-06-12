@@ -241,18 +241,18 @@
 </script>
 
 <div class="kb-wrap" data-no-stempel id="peta">
+  <div class="kb-tabs mono" role="tablist" aria-label="Pilihan plat dasar">
+    <span class="kb-tabs-label">PLAT</span>
+    <button class="kb-tab" class:aktif={plat === 'atlas'} onclick={() => pilihPlat('atlas')}>ATLAS</button>
+    <button class="kb-tab" class:aktif={plat === 'satelit'} onclick={() => pilihPlat('satelit')}>SATELIT</button>
+    <button class="kb-tab" class:aktif={plat === 'cuaca'} disabled={cuacaSiap === false} onclick={() => pilihPlat('cuaca')}>
+      CUACA{cuacaSiap === false ? ' ✕' : ''}
+    </button>
+  </div>
+
   <div class="kb-plate">
     <div class="kb-peta" bind:this={mapEl}></div>
     <canvas class="kb-engrave" class:siap={petaSiap} bind:this={engraveEl} aria-hidden="true"></canvas>
-
-    <div class="kb-tabs mono" role="tablist" aria-label="Pilihan plat dasar">
-      <span class="kb-tabs-label">PLAT</span>
-      <button class="kb-tab" class:aktif={plat === 'atlas'} onclick={() => pilihPlat('atlas')}>ATLAS</button>
-      <button class="kb-tab" class:aktif={plat === 'satelit'} onclick={() => pilihPlat('satelit')}>SATELIT</button>
-      <button class="kb-tab" class:aktif={plat === 'cuaca'} disabled={cuacaSiap === false} onclick={() => pilihPlat('cuaca')}>
-        CUACA{cuacaSiap === false ? ' · MATI' : ''}
-      </button>
-    </div>
 
     <div class="kb-legenda mono" class:buka={legendaBuka}>
       <button class="kb-leg-head" onclick={() => (legendaBuka = !legendaBuka)} aria-expanded={legendaBuka}>
@@ -275,10 +275,11 @@
     </div>
 
     <div class="kb-koordinat mono">{koordinat}</div>
-    {#if infoGempa}
-      <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG' : 'DATA CONTOH'}</span></div>
-    {/if}
   </div>
+
+  {#if infoGempa}
+    <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
+  {/if}
 
   <div class="kb-chips">
     {#each REGIONS.slice(0, 4) as r (r.kode)}
@@ -302,11 +303,11 @@
   .kb-engrave.siap { opacity: 0; }
 
   .kb-tabs {
-    position: absolute; top: 12px; left: 12px; z-index: 4;
-    display: flex; align-items: stretch;
+    display: inline-flex; align-items: stretch;
     border: 1px solid var(--line);
-    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    background: var(--card);
     font-size: 9.5px; letter-spacing: 0.14em;
+    margin-bottom: 10px;
   }
   .kb-tabs-label { padding: 6px 8px; color: var(--muted); border-right: 1px solid var(--line); }
   .kb-tab {
@@ -344,11 +345,10 @@
     border: 1px solid var(--line); padding: 4px 8px;
   }
   .kb-info {
-    position: absolute; right: 12px; bottom: 12px; z-index: 4;
-    font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink);
-    background: color-mix(in oklab, var(--bg) 88%, transparent);
-    border: 1px solid var(--line); padding: 4px 8px;
-    max-width: min(60%, 380px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-size: 10px; letter-spacing: 0.1em; color: var(--ink);
+    border: 1px solid var(--line); border-top: none;
+    background: var(--card);
+    padding: 6px 10px;
   }
   .kb-info .dot { color: var(--accent); }
   .kb-info .src { margin-left: 6px; }
