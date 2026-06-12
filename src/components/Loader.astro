@@ -16,7 +16,7 @@
       <i class="l-sheet" data-sheet="dinas"></i>
       <i class="l-sheet" data-sheet="orange"></i>
     </div>
-    <div class="l-mast display" id="l-mast">DETAK<br />DETIK</div>
+    <div class="l-mast display" id="l-mast"><span class="l-line">DETAK</span><span class="l-line">DETIK</span></div>
     <p class="l-folio mono">EDISI #41 · DICETAK OTOMATIS 05.00 WIB · GRATIS · TERBUKA · BERCATATAN</p>
   </div>
   <div class="l-stripe"></div>
@@ -64,6 +64,7 @@
     color: #f2efe6;
   }
   .l-mast :global(.glyph) { display: inline-block; }
+  .l-line { display: block; white-space: nowrap; }
   .l-folio {
     margin-top: 26px;
     font-size: 10px;

@@ -25,24 +25,26 @@
 
 /* Registered so the scroll choreography can interpolate them
    and transitions resolve in a defined color space. */
-@property --bg { syntax: '<color>'; inherits: true; initial-value: #d8ceb2; }
-@property --card { syntax: '<color>'; inherits: true; initial-value: #e5ddc4; }
-@property --ink { syntax: '<color>'; inherits: true; initial-value: #181611; }
-@property --muted { syntax: '<color>'; inherits: true; initial-value: #5c564a; }
-@property --accent { syntax: '<color>'; inherits: true; initial-value: #e8500a; }
-@property --accent2 { syntax: '<color>'; inherits: true; initial-value: #181611; }
-@property --line { syntax: '<color>'; inherits: true; initial-value: #181611; }
+@property --bg { syntax: '<color>'; inherits: true; initial-value: #d6cbac; }
+@property --card { syntax: '<color>'; inherits: true; initial-value: #e3dabf; }
+@property --ink { syntax: '<color>'; inherits: true; initial-value: #15130e; }
+@property --muted { syntax: '<color>'; inherits: true; initial-value: #5a5345; }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #e44a06; }
+@property --accent2 { syntax: '<color>'; inherits: true; initial-value: #15130e; }
+@property --line { syntax: '<color>'; inherits: true; initial-value: #15130e; }
+@property --line-soft { syntax: '<color>'; inherits: true; initial-value: #aaa085; }
 
 :root {
   /* ---- DINAS (root default): khaki field, service orange,
      heavy Archivo, spec-sheet furniture ---- */
-  --bg: #d8ceb2;
-  --card: #e5ddc4;
-  --ink: #181611;
-  --muted: #5c564a;
-  --accent: #e8500a;
-  --accent2: #181611;
-  --line: #181611;
+  --bg: #d6cbac;
+  --card: #e3dabf;
+  --ink: #15130e;
+  --muted: #5a5345;
+  --accent: #e44a06;
+  --accent2: #15130e;
+  --line: #15130e;
+  --line-soft: #aaa085;
 
   --font-display: 'Archivo Variable', sans-serif;
   --font-body: 'Archivo Variable', sans-serif;
@@ -61,13 +63,14 @@
 }
 
 [data-register='dinas'] {
-  --bg: #d8ceb2;
-  --card: #e5ddc4;
-  --ink: #181611;
-  --muted: #5c564a;
-  --accent: #e8500a;
-  --accent2: #181611;
-  --line: #181611;
+  --bg: #d6cbac;
+  --card: #e3dabf;
+  --ink: #15130e;
+  --muted: #5a5345;
+  --accent: #e44a06;
+  --accent2: #15130e;
+  --line: #15130e;
+  --line-soft: #aaa085;
   --font-display: 'Archivo Variable', sans-serif;
   --disp-weight: 800;
   --disp-track: -0.02em;
@@ -79,13 +82,14 @@
 /* ---- MESIN: black field, huge light Fraunces, one pale gold.
    The machine that never stops printing. Natural dark mode. ---- */
 [data-register='mesin'] {
-  --bg: #121110;
-  --card: #1b1a18;
+  --bg: #100f0d;
+  --card: #1a1815;
   --ink: #f2efe6;
-  --muted: #8b857a;
+  --muted: #8f897c;
   --accent: #f2efe6;
-  --accent2: #c9b27e;
-  --line: #2e2c28;
+  --accent2: #cdb47a;
+  --line: #34312b;
+  --line-soft: #26241f;
   --font-display: 'Fraunces Variable', serif;
   --disp-weight: 340;
   --disp-track: -0.005em;
@@ -97,13 +101,14 @@
 /* ---- ATLAS LAMA: aged paper, sage coastline, madder route,
    engraved hatching. True in fifty years. ---- */
 [data-register='atlas'] {
-  --bg: #efe6d2;
-  --card: #f6efdd;
-  --ink: #2a241c;
-  --muted: #7a6e5b;
-  --accent: #4c7a5e;
-  --accent2: #b4543c;
-  --line: #c9b894;
+  --bg: #ece2cb;
+  --card: #f5edda;
+  --ink: #28221a;
+  --muted: #756956;
+  --accent: #47745a;
+  --accent2: #ad5038;
+  --line: #c4b28b;
+  --line-soft: #d6c7a4;
   --font-display: 'Fraunces Variable', serif;
   --disp-weight: 460;
   --disp-track: -0.005em;

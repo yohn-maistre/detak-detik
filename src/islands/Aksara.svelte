@@ -14,6 +14,23 @@
     { teks: 'AKSARA v0.1 · terminal perintah. Ketik "bantu" untuk daftar verba.', jenis: 'out' },
   ]);
   let logEl: HTMLElement | undefined = $state();
+  let histori: string[] = [];
+  let historiIdx = -1;
+
+  function naikTurun(e: KeyboardEvent) {
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!histori.length) return;
+      historiIdx = historiIdx < 0 ? histori.length - 1 : Math.max(0, historiIdx - 1);
+      input = histori[historiIdx]!;
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      if (historiIdx < 0) return;
+      historiIdx++;
+      input = historiIdx >= histori.length ? '' : histori[historiIdx]!;
+      if (historiIdx >= histori.length) historiIdx = -1;
+    }
+  }
 
   const TUR_PEMBUKA = {
     tour_id: 'pembuka-041',
@@ -39,6 +56,8 @@
     const baris = input.trim();
     if (!baris) return;
     tulis(`> ${baris}`, 'in');
+    histori.push(baris);
+    historiIdx = -1;
     input = '';
 
     if (baris === 'bantu') {
@@ -74,6 +93,7 @@
   {#if buka}
     <div class="term card">
       <div class="term-head mono">
+        <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <span>AKSARA · TERMINAL PERINTAH</span>
         <button class="term-x mono" onclick={() => (buka = false)}>✕</button>
       </div>
@@ -84,7 +104,7 @@
       </div>
       <form class="term-in" onsubmit={(e) => { e.preventDefault(); jalankan(); }}>
         <span class="mono term-prompt">&gt;</span>
-        <input class="mono" bind:value={input} placeholder="tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
+        <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
@@ -149,15 +169,23 @@
     padding: 0;
     overflow: hidden;
   }
+  .term {
+    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 3%, transparent) 0 1px, transparent 1px 4px);
+  }
   .term-head {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     font-size: 10px;
     letter-spacing: 0.18em;
     padding: 10px 14px;
     border-bottom: 1px solid var(--line);
     color: var(--muted);
   }
+  .term-head > span:nth-child(2) { flex: 1; }
+  .term-dots { display: inline-flex; gap: 4px; }
+  .term-dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--muted); }
+  .term-dots i:first-child { background: var(--accent); border-color: var(--accent); }
   .term-x { background: none; border: none; cursor: pointer; color: var(--muted); }
   .term-log { max-height: 200px; overflow-y: auto; padding: 12px 14px; font-size: 11.5px; line-height: 1.7; }
   .term-log .r-in { color: var(--accent); }

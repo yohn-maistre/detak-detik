@@ -6,10 +6,13 @@ import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import TebakDaerah from '../islands/TebakDaerah.svelte';
+import ArsipIsapan from '../islands/ArsipIsapan.svelte';
 import Aksara from '../islands/Aksara.svelte';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN } from '../lib/data/edisi';
 
 const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
+const sparkMax = Math.max(...PUTUSAN_HARIAN);
+const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 ---
 
 <Paper>
@@ -29,55 +32,84 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
             <span class="coordstamp-inline">{EDISI.koordinat.label} · {EDISI.koordinat.wilayah}</span>
           </div>
 
-          <h1 class="masthead display" id="masthead">DETAK<br />DETIK</h1>
+          <div class="masthead-grid">
+            <h1 class="masthead display" id="masthead">
+              <span class="mast-line">DETAK</span>
+              <span class="mast-line">DETIK</span>
+            </h1>
+            <aside class="infobox mono" aria-label="Kotak edisi">
+              <div class="infobox-row"><span>EDISI</span><b class="num">#{EDISI.nomor}</b></div>
+              <div class="infobox-row"><span>SESI</span><b>PAGI · 05.00 WIB</b></div>
+              <div class="infobox-row"><span>HARGA</span><b>GRATIS</b></div>
+              <div class="infobox-row"><span>OPLAH</span><b>SELURUH REPUBLIK</b></div>
+              <div class="barcode" aria-hidden="true"></div>
+              <p class="infobox-foot">DICETAK MESIN ·<br />DIPERIKSA HUKUM</p>
+            </aside>
+          </div>
 
           <div class="folio mono">
-            <span>Edisi <b class="num">#{EDISI.nomor}</b></span>
             <span>{EDISI.tanggal}</span>
             <span>Dicetak otomatis <b>{EDISI.dicetak}</b></span>
-            <span>Gratis · Terbuka · Bercatatan</span>
+            <span>Terbuka · Bercatatan · Tanpa pelacak</span>
           </div>
-          <div class="service-stripe" aria-hidden="true"></div>
+          <div class="rule2" aria-hidden="true"></div>
         </header>
 
         <div class="ticker" aria-label="Berita kilat dari media lain, tautan keluar apa adanya">
-          <div class="ticker-track">
-            {TICKER.map((t) => (
-              <Fragment>
-                <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
-              </Fragment>
-            ))}
-            {TICKER.map((t) => (
-              <Fragment>
-                <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
-              </Fragment>
-            ))}
+          <span class="ticker-tab"><i class="pulse-dot"></i>KILAS</span>
+          <div class="ticker-belt">
+            <div class="ticker-track">
+              {TICKER.map((t) => (
+                <Fragment>
+                  <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
+                </Fragment>
+              ))}
+              {TICKER.map((t) => (
+                <Fragment>
+                  <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
+                </Fragment>
+              ))}
+            </div>
           </div>
         </div>
 
         <!-- Angka Edisi -->
         <section class="angka-blok" aria-labelledby="angka-label">
-          <span class="eyebrow">ANGKA EDISI · SATU ANGKA YANG PALING BERBICARA HARI INI</span>
-          <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix}>
-            {ANGKA_EDISI.prefix} {fmtAngka}
-          </p>
-          <p class="angka-label" id="angka-label">
-            {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
-          </p>
-          <div class="cite-chips">
-            {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
-            <button class="chip hop">Jadikan tur →</button>
+          <div class="angka-kiri">
+            <span class="inkbar"><span class="dot">●</span>ANGKA EDISI · SATU ANGKA YANG PALING BERBICARA</span>
+            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik angkanya">
+              {ANGKA_EDISI.prefix} {fmtAngka}
+            </p>
+            <p class="angka-label" id="angka-label">
+              {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
+            </p>
+            <div class="cite-chips">
+              {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+              <button class="chip hop">Jadikan tur →</button>
+            </div>
+          </div>
+          <div class="angka-sela" aria-hidden="true"></div>
+          <div class="angka-kanan">
+            <span class="eyebrow">PUTUSAN MASUK · 14 HARI TERAKHIR</span>
+            <div class="sparkbars" role="img" aria-label={`Diagram batang ${sparkTotal} putusan dalam 14 hari`}>
+              {PUTUSAN_HARIAN.map((v) => (
+                <i class="sparkbar" style={`--h:${Math.round((v / sparkMax) * 100)}%`} data-v={v}></i>
+              ))}
+            </div>
+            <p class="spark-foot mono"><b class="num">{sparkTotal}</b> PUTUSAN BERKEKUATAN TETAP · <span class="spark-max num">PUNCAK {sparkMax}/HARI</span></p>
           </div>
         </section>
 
-        <div class="rule" aria-hidden="true"></div>
-
         <!-- Temuan -->
         <section class="temuan-blok">
-          <span class="eyebrow">TEMUAN HARI INI · SEMUA KLAIM MEMBAWA KUITANSI</span>
+          <div class="temuan-head-row">
+            <span class="inkbar"><span class="dot">●</span>TEMUAN HARI INI</span>
+            <span class="eyebrow">SEMUA KLAIM MEMBAWA KUITANSI</span>
+          </div>
           <div class="temuan-grid">
-            {TEMUAN.map((t) => (
-              <article class="card temuan" data-rise id={t.id}>
+            {TEMUAN.map((t, i) => (
+              <article class="temuan" data-rise id={t.id}>
+                <span class="ghost-num num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
                 <header class="temuan-head mono">
                   <span class="temuan-lens">{t.lens}</span>
                   <span class="serial">{t.serial}</span>
@@ -101,7 +133,7 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
           <div class="hukum-grid">
             <GradienKeadilan client:visible />
             <div class="struk-rail">
-              <div class="struk tilt" data-rise>
+              <div class="struk" data-rise>
                 <span class="stamp struk-stamp" data-stamp-in>{STRUK.stamp}</span>
                 <h4 class="mono">{STRUK.judul}</h4>
                 <p class="struk-sub mono">{STRUK.sub}</p>
@@ -116,7 +148,7 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
                 <div class="dash"></div>
                 <p class="roast">{STRUK.roast}</p>
               </div>
-              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · EKSPOR KARTU IG MENYUSUL</p>
+              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · TARIK KE BAWAH UNTUK MENYOBEK</p>
             </div>
           </div>
         </section>
@@ -181,8 +213,11 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
           </div>
         </section>
 
-        <section class="gelombang-blok card" data-rise>
-          <Gelombang client:visible />
+        <section class="mesin-duo">
+          <div class="gelombang-blok card" data-rise>
+            <Gelombang client:visible />
+          </div>
+          <ArsipIsapan client:visible />
         </section>
       </div>
     </section>
@@ -235,7 +270,7 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
     <!-- ============ COLOPHON ============ -->
     <footer class="kolofon">
       <div class="wrap">
-        <div class="rule" aria-hidden="true"></div>
+        <div class="rule2" aria-hidden="true"></div>
         <div class="kolofon-grid">
           <div>
             <p class="kolofon-mast display">DETAK DETIK</p>
@@ -330,15 +365,57 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
   .coordstamp-inline { white-space: nowrap; }
   @media (max-width: 760px) { .coordstamp-inline { white-space: normal; } }
 
-  .masthead {
-    font-size: clamp(64px, 15vw, 230px);
-    line-height: 0.88;
-    letter-spacing: -0.03em;
+  .masthead-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: clamp(16px, 4vw, 56px);
+    align-items: stretch;
     margin: 22px 0 12px;
+  }
+  @media (max-width: 860px) { .masthead-grid { grid-template-columns: 1fr; } }
+
+  .masthead {
+    font-size: clamp(64px, 12.5vw, 196px);
+    line-height: 0.86;
+    letter-spacing: -0.03em;
     overflow: hidden;
   }
+  .mast-line { display: block; white-space: nowrap; }
   .masthead :global(.glyph) { display: inline-block; will-change: transform; }
   .masthead :global(.glyph:hover) { color: var(--accent); transition: color 0.2s; }
+
+  .infobox {
+    align-self: end;
+    border: 1px solid var(--line);
+    padding: 14px 16px 12px;
+    min-width: 218px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+  @media (max-width: 860px) { .infobox { display: none; } }
+  .infobox-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 4px 0;
+    border-bottom: 1px dashed var(--line-soft);
+  }
+  .infobox-row b { color: var(--ink); font-weight: 600; }
+  .infobox-row b.num { color: var(--accent); }
+  .barcode {
+    height: 30px;
+    margin: 12px 0 8px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--ink) 0 2px, transparent 2px 4px,
+      var(--ink) 4px 7px, transparent 7px 9px,
+      var(--ink) 9px 10px, transparent 10px 14px,
+      var(--ink) 14px 16px, transparent 16px 17px,
+      var(--ink) 17px 21px, transparent 21px 24px
+    );
+  }
+  .infobox-foot { font-size: 8.5px; letter-spacing: 0.2em; line-height: 1.7; }
 
   .folio {
     display: flex;
@@ -351,27 +428,89 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
     margin: 10px 0 14px;
   }
   .folio b { color: var(--accent); font-weight: 600; }
-  .service-stripe { height: 3px; background: var(--accent); margin-bottom: 0; }
 
-  .angka-blok { padding: clamp(40px, 7vh, 80px) 0 28px; }
+  .angka-blok {
+    display: grid;
+    grid-template-columns: 1.7fr 1px 1fr;
+    gap: clamp(20px, 4vw, 52px);
+    align-items: end;
+    padding: clamp(40px, 7vh, 80px) 0 28px;
+  }
+  @media (max-width: 900px) {
+    .angka-blok { grid-template-columns: 1fr; }
+    .angka-sela { display: none; }
+  }
+  .angka-sela { background: var(--line); align-self: stretch; }
   .angka {
-    font-size: clamp(44px, 9vw, 120px);
+    font-size: clamp(44px, 8.4vw, 116px);
     line-height: 1;
     color: var(--accent);
-    margin: 14px 0 10px;
+    margin: 18px 0 10px;
     font-variant-numeric: tabular-nums lining-nums;
+    user-select: none;
   }
   .angka-label { max-width: 44ch; color: var(--muted); font-size: 15px; }
   .cite-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 
-  .rule { margin: 26px 0; }
+  .sparkbars {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 110px;
+    margin: 14px 0 10px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 0;
+  }
+  .sparkbar {
+    flex: 1;
+    height: var(--h);
+    background: var(--ink);
+    position: relative;
+    transition: background 0.25s;
+    min-width: 6px;
+  }
+  .sparkbar:last-child { background: var(--accent); }
+  .sparkbar:hover { background: var(--accent); }
+  .sparkbar:hover::after {
+    content: attr(data-v);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    translate: -50% 0;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--ink);
+  }
+  .spark-foot { font-size: 10px; letter-spacing: 0.14em; color: var(--muted); }
+  .spark-foot b { color: var(--ink); font-size: 12px; }
+  .spark-max { color: var(--accent); }
 
-  .temuan-blok { padding: 14px 0 30px; }
-  .temuan-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
-  .temuan { display: flex; flex-direction: column; gap: 10px; }
-  .temuan-head { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); }
-  .temuan-lens { color: var(--accent); font-weight: 700; }
-  .temuan-headline { font-size: clamp(18px, 2vw, 22px); line-height: 1.18; }
+  .temuan-blok { padding: 26px 0 30px; border-top: 1px solid var(--line); }
+  .temuan-head-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .temuan-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+  @media (max-width: 900px) { .temuan-grid { grid-template-columns: 1fr; } }
+  .temuan {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 8px clamp(14px, 2vw, 26px) 4px;
+    border-left: 1px solid var(--line);
+  }
+  .temuan:first-child { border-left: none; padding-left: 0; }
+  @media (max-width: 900px) {
+    .temuan { border-left: none; padding: 18px 0; border-top: 1px dashed var(--line-soft); }
+    .temuan:first-child { border-top: none; }
+  }
+  .temuan .ghost-num { position: absolute; top: 2px; right: clamp(8px, 1.4vw, 18px); }
+  .temuan-head { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); padding-right: 64px; }
+  .temuan-lens {
+    color: var(--bg);
+    background: var(--accent);
+    font-weight: 700;
+    padding: 2px 7px 1px;
+  }
+  .temuan-headline { font-size: clamp(18px, 2vw, 22px); line-height: 1.16; }
   .temuan-body { font-size: 13.5px; color: var(--muted); flex: 1; }
   .temuan-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
   .temuan-foot .cite-chips { margin: 0; }
@@ -384,8 +523,6 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
   .struk-stamp { position: absolute; top: 12px; right: 12px; font-size: 9px; }
   .struk-sub { text-align: center; color: #6e675c; font-size: 11px; }
   .struk h4 { text-align: center; letter-spacing: 0.1em; font-size: 13px; }
-  .tilt { transition: transform 0.5s var(--ease-out), box-shadow 0.5s; transform-style: preserve-3d; }
-  .tilt:hover { transform: perspective(900px) rotateX(4deg) rotateY(-5deg) translateY(-4px); box-shadow: 0 28px 50px -24px rgba(0, 0, 0, 0.5); }
   .figcap-dinas { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
 
   /* ---------- SEAMS ---------- */
@@ -436,7 +573,13 @@ const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
   }
   .ganda-label { color: var(--muted); margin: 10px 0 14px; font-size: 14px; }
 
-  .gelombang-blok { max-width: 720px; }
+  .mesin-duo {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: clamp(20px, 3vw, 36px);
+    align-items: start;
+  }
+  @media (max-width: 940px) { .mesin-duo { grid-template-columns: 1fr; } }
 
   /* ---------- ACT III ---------- */
   .act-atlas { padding-top: 10px; }

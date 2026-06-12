@@ -11,6 +11,7 @@
   let tebakan = $state<string[]>([]);
   let selesai = $state(false);
   let menang = $state(false);
+  let tersalin = $state(false);
   let gridEl: HTMLElement;
 
   function pilih(nama: string) {
@@ -37,10 +38,20 @@
     tebakan = [];
     selesai = false;
     menang = false;
+    tersalin = false;
   }
 
   const kotak = (nama: string) =>
     nama === TEBAK.jawaban ? '🟩' : tebakan.includes(nama) ? '⬜' : '·';
+
+  async function bagikan() {
+    const teks = `DETAK DETIK №41 · Tebak Daerah ${menang ? tebakan.length : 'X'}/3 · ${tebakan.map(kotak).join(' ')} · detak-detik.pages.dev`;
+    try {
+      await navigator.clipboard.writeText(teks);
+      tersalin = true;
+      setTimeout(() => (tersalin = false), 2400);
+    } catch { /* clipboard blocked: the share line stays visible to copy by hand */ }
+  }
 </script>
 
 <div class="td card" bind:this={gridEl} data-no-stempel>
@@ -79,6 +90,7 @@
         <span class="stamp td-verdict gagal">JAWABAN: {TEBAK.jawaban}</span>
       {/if}
       <span class="mono td-share">DETAK DETIK №41 · {tebakan.map(kotak).join(' ')}</span>
+      <button class="chip" onclick={bagikan}>{tersalin ? '✓ Tersalin' : '⧉ Bagikan'}</button>
     </div>
   {/if}
   <p class="td-foot mono">SETIAP PEMBACA MENDAPAT TEKA-TEKI YANG SAMA. (DATA CONTOH)</p>

@@ -1,7 +1,8 @@
 /* ============================================================
    DETAK DETIK · base + paper furniture
-   Registration marks, hatching, grain, hairlines, chips, stamps.
-   Everything here is CSS-only ornament: no images, no blur.
+   Registration marks, hatching, grain, hairlines, chips, stamps,
+   double rules, ink bars, ghost numerals. CSS-only ornament:
+   no images, no blur filters.
    ============================================================ */
 
 @import './tokens.css';
@@ -9,6 +10,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
 
 body {
   background: var(--bg);
@@ -20,6 +23,18 @@ body {
   overflow-x: hidden;
 }
 
+/* paper grain: one fixed turbulence layer over everything */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
 ::selection { background: var(--accent); color: var(--bg); }
 
 h1, h2, h3, .display {
@@ -28,6 +43,7 @@ h1, h2, h3, .display {
   letter-spacing: var(--disp-track);
   line-height: 1.02;
   font-variation-settings: 'opsz' 144;
+  text-wrap: balance;
 }
 
 .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
@@ -40,17 +56,34 @@ h1, h2, h3, .display {
 
 a { color: inherit; }
 
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 .wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); position: relative; }
 
 /* ---- eyebrow: the mono section label ---- */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.16em;
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
   display: block;
 }
+
+/* ---- ink bar: a reversed section label, the broadsheet's weight ---- */
+.inkbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 6px 12px 5px;
+}
+.inkbar .dot { color: var(--accent); }
 
 /* ---- hairlines that draw themselves on reveal ---- */
 .rule {
@@ -60,6 +93,16 @@ a { color: inherit; }
   transform: scaleX(0);
 }
 .rule.is-drawn, .no-js .rule { transform: scaleX(1); }
+
+/* ---- double rule: the classic thick-thin newspaper cut ---- */
+.rule2 {
+  height: 7px;
+  border-top: 3px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.rule2.is-drawn, .no-js .rule2 { transform: scaleX(1); }
 
 /* ---- the card ---- */
 .card {
@@ -105,8 +148,11 @@ a { color: inherit; }
 }
 .coordstamp b { color: var(--ink); font-weight: 500; }
 
-/* ---- citation chips ---- */
+/* ---- citation chips: ink sweeps in from the left on hover ---- */
 .chip {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.04em;
@@ -116,13 +162,28 @@ a { color: inherit; }
   background: transparent;
   color: var(--ink);
   cursor: pointer;
-  transition: border-color 0.25s var(--ease-out), color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 }
-.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
-.chip .tick { color: var(--accent); margin-right: 5px; }
+.chip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.34s var(--ease-out);
+}
+.chip:hover { color: var(--bg); border-color: var(--ink); }
+.chip:hover::before { transform: scaleX(1); }
+.chip:active { transform: translateY(1px); }
+.chip .tick { color: var(--accent); margin-right: 5px; transition: color 0.3s; }
+.chip:hover .tick { color: var(--bg); }
 .chip.hop { border-style: dashed; }
 /* Lane C gets its own chip register: readers always know which lane speaks */
 .chip.lane-c { border-style: solid; border-color: var(--accent2); color: var(--accent2); border-left-width: 4px; }
+.chip.lane-c::before { background: var(--accent2); }
+.chip.lane-c:hover { color: var(--bg); }
 
 /* ---- serial numbers + folio furniture ---- */
 .serial { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
@@ -130,6 +191,7 @@ a { color: inherit; }
 /* ---- the stamp (TERUJI LAPANGAN / verification seals) ---- */
 .stamp {
   display: inline-block;
+  position: relative;
   color: var(--accent);
   border: 2px solid var(--accent);
   border-radius: 3px;
@@ -140,7 +202,28 @@ a { color: inherit; }
   text-transform: uppercase;
   transform: rotate(-4deg);
 }
+.stamp::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px dashed currentColor;
+  border-radius: 2px;
+  opacity: 0.55;
+  pointer-events: none;
+}
 .stamp.fill { background: var(--accent); color: var(--bg); }
+
+/* ---- ghost numeral: the oversized folio index behind columns ---- */
+.ghost-num {
+  font-family: var(--font-display);
+  font-weight: var(--disp-weight);
+  font-size: clamp(56px, 7vw, 96px);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1.2px var(--line-soft);
+  user-select: none;
+  pointer-events: none;
+}
 
 /* ---- texture layers (CSS-only, opacity-animated) ---- */
 .tex { position: absolute; inset: 0; pointer-events: none; }
@@ -184,28 +267,54 @@ a { color: inherit; }
 
 /* ---- ledger table ---- */
 .ledger { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 13.5px; line-height: 1.9; border-top: 1px solid var(--line); }
-.ledger > div { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding: 4px 0; }
+.ledger > div { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding: 4px 0; transition: background 0.25s, padding-left 0.25s var(--ease-out); }
+.ledger > div:hover { background: color-mix(in oklab, var(--accent2) 7%, transparent); padding-left: 8px; }
 .ledger .v { font-weight: 600; white-space: nowrap; }
 
-/* ---- ticker ---- */
+/* ---- ticker: a black strip with a service-orange source tab ---- */
 .ticker {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: stretch;
+  background: var(--ink);
+  color: var(--bg);
   overflow: hidden;
   white-space: nowrap;
-  padding: 9px 0;
   font-family: var(--font-mono);
   font-size: 12.5px;
-  mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
 }
-.ticker-track { display: inline-block; padding-left: 100%; animation: tick 42s linear infinite; }
+.ticker-tab {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #15130e;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  padding: 9px 14px;
+  font-weight: 700;
+}
+.ticker-tab .pulse-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #15130e;
+  animation: tdot 1.4s ease-in-out infinite;
+}
+@keyframes tdot { 50% { opacity: 0.25; } }
+.ticker-belt {
+  overflow: hidden;
+  flex: 1;
+  mask-image: linear-gradient(90deg, transparent, black 4%, black 96%, transparent);
+  padding: 9px 0;
+}
+.ticker-track { display: inline-block; padding-left: 100%; animation: tick 48s linear infinite; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker .src { color: var(--accent); font-weight: 600; }
-.ticker .sep { color: var(--muted); margin: 0 14px; }
+.ticker .sep { opacity: 0.45; margin: 0 14px; }
 @keyframes tick { to { transform: translateX(-100%); } }
 
 /* ---- headline glyph reveal (performs once, then stands still) ---- */
 .glyph { display: inline-block; }
+.word { display: inline-block; white-space: nowrap; }
 .reveal-glyphs .glyph {
   display: inline-block;
   clip-path: inset(0 0 100% 0);
@@ -243,6 +352,17 @@ a { color: inherit; }
   padding: 3px 7px;
   text-transform: uppercase;
   white-space: nowrap;
+}
+.ink-blot {
+  position: fixed;
+  z-index: 119;
+  pointer-events: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 47% 53% 58% 42% / 52% 44% 56% 48%;
+  background: var(--ink);
+  transform: translate(-50%, -50%) scale(0.2);
+  opacity: 0.85;
 }
 .crosshair-tag {
   position: fixed;
