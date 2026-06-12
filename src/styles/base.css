@@ -1,0 +1,268 @@
+/* ============================================================
+   DETAK DETIK · base + paper furniture
+   Registration marks, hatching, grain, hairlines, chips, stamps.
+   Everything here is CSS-only ornament: no images, no blur.
+   ============================================================ */
+
+@import './tokens.css';
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: var(--disp-weight);
+  letter-spacing: var(--disp-track);
+  line-height: 1.02;
+  font-variation-settings: 'opsz' 144;
+}
+
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.num { font-variant-numeric: tabular-nums lining-nums; }
+.fig {
+  font-family: var(--font-fig);
+  font-style: italic;
+  color: var(--muted);
+}
+
+a { color: inherit; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); position: relative; }
+
+/* ---- eyebrow: the mono section label ---- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+}
+
+/* ---- hairlines that draw themselves on reveal ---- */
+.rule {
+  height: 1px;
+  background: var(--line);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+.rule.is-drawn, .no-js .rule { transform: scaleX(1); }
+
+/* ---- the card ---- */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--line);
+  padding: clamp(18px, 3vw, 28px);
+}
+[data-register='atlas'] .card,
+.act-atlas .card { outline: 1px solid var(--line); outline-offset: 5px; box-shadow: none; border: 1px solid var(--line); }
+
+/* ---- registration corner brackets (fixed chrome, Dinas law) ---- */
+.regmarks { position: fixed; inset: 10px; pointer-events: none; z-index: 90; }
+.regmarks i { position: absolute; width: 18px; height: 18px; border: 0 solid var(--ink); opacity: 0.9; transition: border-color 0.4s; }
+.regmarks i:nth-child(1) { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
+.regmarks i:nth-child(2) { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
+.regmarks i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
+.regmarks i:nth-child(4) { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
+
+/* ---- vertical side label ---- */
+.sidelabel {
+  position: fixed; right: 7px; top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  z-index: 90;
+  pointer-events: none;
+}
+@media (max-width: 760px) { .sidelabel { display: none; } }
+
+/* ---- the coordinate stamp (replaces all flag furniture) ---- */
+.coordstamp {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.coordstamp b { color: var(--ink); font-weight: 500; }
+
+/* ---- citation chips ---- */
+.chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 5px 11px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease-out), color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+.chip .tick { color: var(--accent); margin-right: 5px; }
+.chip.hop { border-style: dashed; }
+/* Lane C gets its own chip register: readers always know which lane speaks */
+.chip.lane-c { border-style: solid; border-color: var(--accent2); color: var(--accent2); border-left-width: 4px; }
+
+/* ---- serial numbers + folio furniture ---- */
+.serial { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
+
+/* ---- the stamp (TERUJI LAPANGAN / verification seals) ---- */
+.stamp {
+  display: inline-block;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  padding: 4px 9px;
+  text-transform: uppercase;
+  transform: rotate(-4deg);
+}
+.stamp.fill { background: var(--accent); color: var(--bg); }
+
+/* ---- texture layers (CSS-only, opacity-animated) ---- */
+.tex { position: absolute; inset: 0; pointer-events: none; }
+.tex-hatch {
+  background-image: repeating-linear-gradient(45deg, currentColor 0 1px, transparent 1px 7px);
+  opacity: 0.05;
+}
+.tex-grain {
+  background-image: radial-gradient(currentColor 0.6px, transparent 0.9px);
+  background-size: 3px 3px;
+  opacity: 0.05;
+}
+.tex-scan {
+  background-image: repeating-linear-gradient(0deg, currentColor 0 1px, transparent 1px 4px);
+  opacity: 0.035;
+}
+
+/* ---- struk (thermal receipt) ---- */
+.struk {
+  background: #f6f3ea;
+  color: #1b1813;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 24px 22px 30px;
+  position: relative;
+  font-variant-numeric: tabular-nums;
+  max-width: 380px;
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.45);
+}
+.struk::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 12px;
+  background: radial-gradient(circle at 8px -3px, transparent 8px, #f6f3ea 8.5px);
+  background-size: 16px 12px;
+  background-position: bottom;
+}
+.struk .row { display: flex; justify-content: space-between; padding: 3px 0; }
+.struk .dash { border-top: 1px dashed #b9b2a0; margin: 9px 0; }
+.struk .tot { font-weight: 700; }
+.struk .roast { margin-top: 13px; text-align: center; font-size: 11.5px; color: #6e675c; font-style: italic; }
+
+/* ---- ledger table ---- */
+.ledger { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 13.5px; line-height: 1.9; border-top: 1px solid var(--line); }
+.ledger > div { display: flex; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--line); padding: 4px 0; }
+.ledger .v { font-weight: 600; white-space: nowrap; }
+
+/* ---- ticker ---- */
+.ticker {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 9px 0;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  mask-image: linear-gradient(90deg, transparent, black 5%, black 95%, transparent);
+}
+.ticker-track { display: inline-block; padding-left: 100%; animation: tick 42s linear infinite; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker .src { color: var(--accent); font-weight: 600; }
+.ticker .sep { color: var(--muted); margin: 0 14px; }
+@keyframes tick { to { transform: translateX(-100%); } }
+
+/* ---- headline glyph reveal (performs once, then stands still) ---- */
+.glyph { display: inline-block; }
+.reveal-glyphs .glyph {
+  display: inline-block;
+  clip-path: inset(0 0 100% 0);
+  transform: translateY(0.12em);
+}
+.reveal-glyphs.is-revealed .glyph, .no-js .reveal-glyphs .glyph { clip-path: inset(0 0 -10% 0); transform: none; }
+
+/* ---- ink-spread underline on hover ---- */
+.ink-link { position: relative; text-decoration: none; }
+.ink-link::after {
+  content: '';
+  position: absolute; left: 0; bottom: -2px;
+  width: 100%; height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s var(--ease-out);
+}
+.ink-link:hover::after { transform: scaleX(1); }
+
+/* ---- agate corner furniture ---- */
+.agate { font-family: var(--font-mono); font-size: 11px; line-height: 1.8; color: var(--muted); }
+
+/* ---- fidget layer ---- */
+.stempel-seal {
+  position: fixed;
+  z-index: 120;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(var(--rot, -6deg));
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  border-radius: 2px;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  padding: 3px 7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.crosshair-tag {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 110;
+  pointer-events: none;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* ---- reduced motion: instant state, no performance ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.001s !important;
+  }
+  .ticker-track { animation: none; padding-left: 0; }
+}

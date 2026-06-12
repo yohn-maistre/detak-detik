@@ -1,0 +1,113 @@
+/* ============================================================
+   DETAK DETIK · design tokens
+   Three registers, one paper: Dinas (the working daily skin),
+   Mesin (the 3am gravitas mode), Atlas Lama (the permanent record).
+   Registers are scoped token sets, not page themes: a single
+   viewport can carry all three at once. The page-level scroll
+   choreography lerps the *root* tokens between acts; components
+   may pin their own register with [data-register].
+   ============================================================ */
+
+@import 'tailwindcss';
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent2: var(--accent2);
+  --color-line: var(--line);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+/* Registered so the scroll choreography can interpolate them
+   and transitions resolve in a defined color space. */
+@property --bg { syntax: '<color>'; inherits: true; initial-value: #d8ceb2; }
+@property --card { syntax: '<color>'; inherits: true; initial-value: #e5ddc4; }
+@property --ink { syntax: '<color>'; inherits: true; initial-value: #181611; }
+@property --muted { syntax: '<color>'; inherits: true; initial-value: #5c564a; }
+@property --accent { syntax: '<color>'; inherits: true; initial-value: #e8500a; }
+@property --accent2 { syntax: '<color>'; inherits: true; initial-value: #181611; }
+@property --line { syntax: '<color>'; inherits: true; initial-value: #181611; }
+
+:root {
+  /* ---- DINAS (root default): khaki field, service orange,
+     heavy Archivo, spec-sheet furniture ---- */
+  --bg: #d8ceb2;
+  --card: #e5ddc4;
+  --ink: #181611;
+  --muted: #5c564a;
+  --accent: #e8500a;
+  --accent2: #181611;
+  --line: #181611;
+
+  --font-display: 'Archivo Variable', sans-serif;
+  --font-body: 'Archivo Variable', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --font-fig: 'Instrument Serif', serif;
+
+  --disp-weight: 800;
+  --disp-track: -0.02em;
+  --disp-opsz: 100;
+
+  --ease: cubic-bezier(0.7, 0, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 0.32s;
+  --radius: 0px;
+  --hairline: 1px solid var(--line);
+}
+
+[data-register='dinas'] {
+  --bg: #d8ceb2;
+  --card: #e5ddc4;
+  --ink: #181611;
+  --muted: #5c564a;
+  --accent: #e8500a;
+  --accent2: #181611;
+  --line: #181611;
+  --font-display: 'Archivo Variable', sans-serif;
+  --disp-weight: 800;
+  --disp-track: -0.02em;
+  --ease: cubic-bezier(0.7, 0, 0.3, 1);
+  --dur: 0.32s;
+  --radius: 0px;
+}
+
+/* ---- MESIN: black field, huge light Fraunces, one pale gold.
+   The machine that never stops printing. Natural dark mode. ---- */
+[data-register='mesin'] {
+  --bg: #121110;
+  --card: #1b1a18;
+  --ink: #f2efe6;
+  --muted: #8b857a;
+  --accent: #f2efe6;
+  --accent2: #c9b27e;
+  --line: #2e2c28;
+  --font-display: 'Fraunces Variable', serif;
+  --disp-weight: 340;
+  --disp-track: -0.005em;
+  --ease: cubic-bezier(0.33, 0, 0.2, 1);
+  --dur: 1.05s;
+  --radius: 2px;
+}
+
+/* ---- ATLAS LAMA: aged paper, sage coastline, madder route,
+   engraved hatching. True in fifty years. ---- */
+[data-register='atlas'] {
+  --bg: #efe6d2;
+  --card: #f6efdd;
+  --ink: #2a241c;
+  --muted: #7a6e5b;
+  --accent: #4c7a5e;
+  --accent2: #b4543c;
+  --line: #c9b894;
+  --font-display: 'Fraunces Variable', serif;
+  --disp-weight: 460;
+  --disp-track: -0.005em;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 1.3s;
+  --radius: 3px;
+}
