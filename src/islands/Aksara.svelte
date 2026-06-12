@@ -7,6 +7,59 @@
    */
   import { onMount } from 'svelte';
   import { dispatch, playTour, stopTour } from '../lib/commands/dispatcher';
+  import { ANGKA_EDISI, TEMUAN, KEHENINGAN, EDISI } from '../lib/data/edisi';
+
+  const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
+
+  // the edition is the model's whole world: facts in, citations out
+  const SISTEM = [
+    'Kamu adalah Aksara, suara harian koran sipil DETAK DETIK.',
+    'Jawab dalam bahasa Indonesia formal, maksimal tiga kalimat, tanpa opini.',
+    'Hanya gunakan fakta dari konteks edisi berikut; jika tidak ada di konteks, katakan datanya belum ada di edisi ini.',
+    `Edisi #${EDISI.nomor} (${EDISI.tanggal}). Angka edisi: ${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} — ${ANGKA_EDISI.label}`,
+    ...TEMUAN.map((t) => `Temuan ${t.lens}: ${t.headline}. ${t.body}`),
+    `Yang tidak dihitung (${KEHENINGAN.wilayah}): baris "${KEHENINGAN.absen.k}" kosong di statistik resmi; pihak ketiga mencatat ${KEHENINGAN.laneC.teks} (${KEHENINGAN.laneC.chip}).`,
+    'Semua angka edisi ini berstatus data contoh.',
+  ].join('\n');
+
+  let sibuk = $state(false);
+
+  async function tanya(q: string) {
+    if (!AKSARA_URL) {
+      tulis('lajur model belum terpasang. setel Variable AKSARA_URL di repo lalu deploy ulang.', 'err');
+      return;
+    }
+    sibuk = true;
+    tulis('… menyusun jawaban', 'out');
+    try {
+      const res = await fetch(`${AKSARA_URL}/ask`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [
+            { role: 'system', content: SISTEM },
+            { role: 'user', content: q },
+          ],
+        }),
+        signal: AbortSignal.timeout(30_000),
+      });
+      const lane = res.headers.get('X-Detak-Lane') ?? '';
+      const data = (await res.json()) as { choices?: { message?: { content?: string } }[]; galat?: string };
+      riwayat = riwayat.filter((r) => r.teks !== '… menyusun jawaban');
+      if (!res.ok || data.galat) {
+        tulis(data.galat ?? `lajur model gelap (HTTP ${res.status}).`, 'err');
+      } else {
+        const teks = data.choices?.[0]?.message?.content?.trim() ?? '(jawaban kosong)';
+        tulis(teks + (lane ? `  [lajur: ${lane}]` : ''));
+        dispatch({ cmd: 'say', params: { teks: teks.slice(0, 270), cited_ids: [], tahan_ms: 7000 } });
+      }
+    } catch {
+      riwayat = riwayat.filter((r) => r.teks !== '… menyusun jawaban');
+      tulis('lajur model tidak terjangkau dari jaringan ini.', 'err');
+    } finally {
+      sibuk = false;
+    }
+  }
 
   let buka = $state(false);
   let input = $state('');
@@ -61,8 +114,8 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: fly_to <kode|nama> · scroll_to <depan|hukum|mesin|atlas> · say <teks> · tur · stop · bersih');
-      tulis('contoh: fly_to 9412 · scroll_to atlas');
+      tulis('verba: tanya <pertanyaan> · fly_to <kode> · scroll_to <depan|peta|hukum|mesin|atlas> · say <teks> · tur · stop · bersih');
+      tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
     if (baris === 'bersih') { riwayat = []; return; }
@@ -71,6 +124,11 @@
 
     const [cmd, ...rest] = baris.split(/\s+/);
     const arg = rest.join(' ');
+    if (cmd === 'tanya') {
+      if (!arg) { tulis('tanya apa? contoh: tanya berapa kerugian negara bulan ini', 'err'); return; }
+      if (!sibuk) void tanya(arg);
+      return;
+    }
     let ok = false;
     if (cmd === 'fly_to') ok = dispatch({ cmd, params: { kode: arg } });
     else if (cmd === 'scroll_to') ok = dispatch({ cmd, params: { anchor: arg } });
@@ -104,7 +162,7 @@
       </div>
       <form class="term-in" onsubmit={(e) => { e.preventDefault(); jalankan(); }}>
         <span class="mono term-prompt">&gt;</span>
-        <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
+        <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tanya … · tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>

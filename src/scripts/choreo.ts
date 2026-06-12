@@ -481,6 +481,87 @@ function strukTear() {
   });
 }
 
+/** Tarik Fajar: pulling down past the top of the morning edition stretches
+    open a dithered sunrise plate — a rubber band with a view. Touch only;
+    the page itself never moves. */
+function tarikFajar() {
+  if (reducedMotion()) return;
+  const panel = document.getElementById('fajar');
+  const canvas = panel?.querySelector('canvas');
+  if (!panel || !canvas) return;
+
+  let drawn = false;
+  const draw = async () => {
+    const { BAYER_4 } = await import('../lib/seed');
+    const { field, GRID_COLS } = await import('../lib/nusantara');
+    const w = panel.clientWidth;
+    const h = 200;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    const ctx = canvas.getContext('2d')!;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = '#100f0d';
+    ctx.fillRect(0, 0, w, h);
+    const sunX = w * 0.72;
+    const sunY = h * 0.66;
+    const cell = 5;
+    for (let y = 0; y < h - 26; y += cell) {
+      for (let x = 0; x < w; x += cell) {
+        const dSun = Math.hypot(x - sunX, y - sunY);
+        const glow = Math.max(0, 1 - dSun / (w * 0.42));
+        const sky = Math.max(0, 0.45 - (y / h) * 0.45);
+        const v = Math.min(1, glow * glow * 1.4 + sky * 0.5);
+        if (v > BAYER_4[(y / cell) % 4 | 0]![(x / cell) % 4 | 0]!) {
+          ctx.fillStyle = dSun < 26 ? '#e44a06' : '#cdb47a';
+          ctx.fillRect(x, y, 2.2, 2.2);
+        }
+      }
+    }
+    // archipelago silhouette along the horizon
+    ctx.fillStyle = '#d6cbac';
+    for (let x = 0; x < w; x += 2) {
+      const gx = (x / w) * GRID_COLS;
+      let land = 0;
+      for (let gy = 14; gy < 46; gy += 4) land = Math.max(land, field(gx, gy));
+      if (land > 0.4) ctx.fillRect(x, h - 22, 2, 8 + land * 10);
+    }
+    drawn = true;
+  };
+
+  let startY = 0;
+  let pulling = false;
+  let dist = 0;
+  window.addEventListener('touchstart', (e) => {
+    if (window.scrollY <= 1) {
+      startY = e.touches[0]!.clientY;
+      pulling = true;
+      dist = 0;
+      if (!drawn) void draw();
+    }
+  }, { passive: true });
+  window.addEventListener('touchmove', (e) => {
+    if (!pulling) return;
+    dist = e.touches[0]!.clientY - startY;
+    if (dist > 6 && window.scrollY <= 1) {
+      const d = Math.min(200, (dist - 6) * 0.45);
+      panel.style.height = `${d}px`;
+    }
+  }, { passive: true });
+  window.addEventListener('touchend', () => {
+    if (!pulling) return;
+    pulling = false;
+    const held = Math.min(200, (dist - 6) * 0.45) > 130;
+    gsap.to(panel, {
+      height: 0,
+      duration: 0.7,
+      delay: held ? 0.9 : 0,
+      ease: 'elastic.out(1, 0.5)',
+      onUpdate: () => { /* height is layout-bound; the panel is short-lived */ },
+    });
+  }, { passive: true });
+}
+
 /* ---------- 6 · Aksara speech (the say verb, rendered) ---------- */
 
 let sayTimer: ReturnType<typeof setTimeout> | undefined;
@@ -561,6 +642,7 @@ export function boot() {
   stempelPad();
   crosshair();
   strukTear();
+  tarikFajar();
   actWhispers();
 }
 

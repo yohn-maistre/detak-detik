@@ -32,6 +32,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+        env:
+          # repo Variable (Settings -> Secrets and variables -> Actions -> Variables):
+          # AKSARA_URL = the worker URL, e.g. https://detak-detik-worker.<subdomain>.workers.dev
+          PUBLIC_AKSARA_URL: ${{ vars.AKSARA_URL }}
 
       # idempotent: creates the project on first run, no-ops after
       - name: Ensure Pages project exists

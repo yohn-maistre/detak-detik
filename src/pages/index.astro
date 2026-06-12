@@ -11,6 +11,8 @@ import PetaAtlas from '../islands/PetaAtlas.svelte';
 import TebakDaerah from '../islands/TebakDaerah.svelte';
 import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
+import AlmanakSains from '../islands/AlmanakSains.svelte';
+import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN } from '../lib/data/edisi';
 
 const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
@@ -20,6 +22,12 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
 <Paper>
   <Loader />
+
+  <!-- tarik fajar: the overscroll dawn, opened by pulling past the top -->
+  <div id="fajar" aria-hidden="true">
+    <canvas></canvas>
+    <p class="fajar-label mono">EDISI PAGI · MATAHARI DICETAK 05.00 WIB</p>
+  </div>
 
   <main data-stempel-pad>
     <!-- ============ ACT I · DINAS ============ -->
@@ -216,6 +224,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
+        <ObituariHutan />
+
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
           <div class="ganda">
             <div class="ganda-panel" data-rise>
@@ -278,6 +288,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
             <p class="janji-foot mono">PENILAIAN ARITMETIKA SAAT BANGUN, BUKAN OPINI. (DATA CONTOH)</p>
           </section>
+
+          <AlmanakSains client:visible />
         </div>
       </div>
     </section>
@@ -641,7 +653,27 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     margin-bottom: 8px;
   }
   .atlas-sub { font-size: 15px; margin-bottom: 26px; }
-  .atlas-grid { display: grid; grid-template-columns: 1fr; gap: 22px; margin-top: 46px; max-width: 760px; }
+  .atlas-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin-top: 46px; align-items: start; }
+  @media (max-width: 940px) { .atlas-grid { grid-template-columns: 1fr; } }
+
+  /* tarik fajar */
+  #fajar {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    background: #100f0d;
+  }
+  #fajar canvas { display: block; width: 100%; height: 200px; }
+  .fajar-label {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: 8.5px;
+    letter-spacing: 0.26em;
+    color: #cdb47a;
+    white-space: nowrap;
+  }
 
   .janji-list { display: grid; gap: 22px; margin-top: 14px; }
   .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }

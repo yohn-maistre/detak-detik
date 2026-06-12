@@ -1,0 +1,46 @@
+---
+/**
+ * Obituari Hutan: the obituary column for yesterday's forest. The form is
+ * borrowed from the back pages of every broadsheet — black double border,
+ * centered serif, formal grief — and the content is GLAD/RADD arithmetic.
+ * No accusations; survivors listed by document.
+ */
+const OBITUARI = {
+  ha: 214,
+  wilayah: 'Merauke, Papua Selatan',
+  tanggal: '11 Juni 2026',
+  lapangan: Math.round(214 / 0.714),
+  kumulatif: '22.272 ha',
+  konsesi: 'MRK-07',
+};
+---
+
+<aside class="obit" data-rise aria-label="Obituari hutan, catatan kehilangan harian">
+  <p class="obit-tanda fig" aria-hidden="true">✣</p>
+  <p class="obit-kepala mono">IN MEMORIAM</p>
+  <h3 class="obit-nama fig">{OBITUARI.ha} hektare hutan primer</h3>
+  <p class="obit-teks fig">
+    berpulang di {OBITUARI.wilayah}, {OBITUARI.tanggal} — seluas {OBITUARI.lapangan} lapangan
+    sepak bola dalam satu hari. Didahului oleh {OBITUARI.kumulatif} kerabatnya sejak proyek dimulai.
+  </p>
+  <p class="obit-teks fig">Ditinggalkan oleh satu izin konsesi yang masih berlaku ({OBITUARI.konsesi}).</p>
+  <p class="obit-kaki mono">PERINGATAN GLAD/RADD · GFW · (DATA CONTOH) · KOLOM INI TERBIT SETIAP HARI SELAMA MASIH ADA YANG HARUS DITULIS</p>
+</aside>
+
+<style>
+  .obit {
+    max-width: 460px;
+    margin: 0 auto;
+    border: 3px double var(--line);
+    outline: 1px solid var(--line);
+    outline-offset: 4px;
+    padding: 26px 30px 20px;
+    text-align: center;
+    background: var(--card);
+  }
+  .obit-tanda { font-size: 22px; font-style: normal; color: var(--ink); }
+  .obit-kepala { font-size: 9px; letter-spacing: 0.34em; color: var(--muted); margin: 8px 0 12px; }
+  .obit-nama { font-size: clamp(22px, 2.6vw, 30px); font-style: italic; color: var(--ink); line-height: 1.15; }
+  .obit-teks { font-size: 14.5px; margin-top: 12px; line-height: 1.6; }
+  .obit-kaki { font-size: 8px; letter-spacing: 0.16em; color: var(--muted); margin-top: 18px; border-top: 1px solid var(--line); padding-top: 10px; }
+</style>
