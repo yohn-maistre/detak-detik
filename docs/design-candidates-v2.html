@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="lembaran">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lembaran — 10 Design Language Candidates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@400;500;700&family=Archivo:wght@500;700;800;900&family=Instrument+Serif:ital@0;1&family=Albert+Sans:wght@400;500;700&family=Anton&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+:root{ --maxw:1080px; }
+
+/* ============ ORIGINAL FOUR ============ */
+[data-theme="lembaran"]{
+  --bg:#ECEAE3; --card:#F4F2EC; --ink:#1B1813; --muted:#6E675C;
+  --accent:#641623; --accent2:#8C6F4E; --line:#C9C3B5;
+  --font-display:'Fraunces',serif; --disp-weight:560; --disp-style:normal; --disp-track:-0.015em; --disp-case:none;
+  --font-body:'Space Grotesk',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.22,1,0.36,1); --dur:0.7s; --radius:2px;
+  --shadow:0 1px 0 var(--line), 0 14px 30px -22px rgba(27,24,19,.45);
+}
+[data-theme="sirkulasi"]{
+  --bg:#FAFAF7; --card:#FFFFFF; --ink:#101113; --muted:#7A7E86;
+  --accent:#E0301E; --accent2:#15428C; --line:#D9DAD6;
+  --font-display:'Archivo',sans-serif; --disp-weight:850; --disp-style:normal; --disp-track:-0.03em; --disp-case:none;
+  --font-body:'Archivo',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.65,0,0.35,1); --dur:0.38s; --radius:0px;
+  --shadow:0 0 0 1px var(--line);
+}
+[data-theme="sogan"]{
+  --bg:#191726; --card:#211E31; --ink:#F0E7D3; --muted:#9A8FA0;
+  --accent:#D29A4B; --accent2:#B0503A; --line:#3A3450;
+  --font-display:'Instrument Serif',serif; --disp-weight:400; --disp-style:italic; --disp-track:0em; --disp-case:none;
+  --font-body:'Albert Sans',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.4,0,0.2,1); --dur:1.1s; --radius:8px;
+  --shadow:0 24px 50px -30px rgba(0,0,0,.8);
+}
+[data-theme="stensil"]{
+  --bg:#F1EFE6; --card:#F8F6EE; --ink:#16161A; --muted:#5B5B66;
+  --accent:#FF3D8A; --accent2:#0A52C8; --line:#16161A;
+  --font-display:'Anton',sans-serif; --disp-weight:400; --disp-style:normal; --disp-track:0.01em; --disp-case:uppercase;
+  --font-body:'Space Mono',monospace; --font-mono:'Space Mono',monospace;
+  --ease:cubic-bezier(0.34,1.56,0.64,1); --dur:0.3s; --radius:0px;
+  --shadow:5px 5px 0 var(--ink);
+}
+
+/* ============ SIX NEW ============ */
+[data-theme="dinas"]{
+  --bg:#D8CEB2; --card:#E5DDC4; --ink:#181611; --muted:#5C564A;
+  --accent:#E8500A; --accent2:#181611; --line:#181611;
+  --font-display:'Archivo',sans-serif; --disp-weight:800; --disp-style:normal; --disp-track:-0.02em; --disp-case:none;
+  --font-body:'Archivo',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.7,0,0.3,1); --dur:0.32s; --radius:0px;
+  --shadow:0 0 0 1.5px var(--ink);
+}
+[data-theme="mesin"]{
+  --bg:#121110; --card:#1B1A18; --ink:#F2EFE6; --muted:#8B857A;
+  --accent:#F2EFE6; --accent2:#C9B27E; --line:#2E2C28;
+  --font-display:'Fraunces',serif; --disp-weight:340; --disp-style:normal; --disp-track:-0.005em; --disp-case:none;
+  --font-body:'Space Grotesk',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.33,0,0.2,1); --dur:1.05s; --radius:2px;
+  --shadow:0 0 0 1px var(--line);
+}
+[data-theme="ruangdata"]{
+  --bg:#060606; --card:#0E0E0D; --ink:#F5F2EA; --muted:#7C7A72;
+  --accent:#FF5A1F; --accent2:#FFB12B; --line:#242422;
+  --font-display:'IBM Plex Mono',monospace; --disp-weight:600; --disp-style:normal; --disp-track:0.005em; --disp-case:none;
+  --font-body:'Space Grotesk',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.2,0.9,0.25,1); --dur:0.28s; --radius:4px;
+  --shadow:0 0 0 1px var(--line);
+}
+[data-theme="risoarsip"]{
+  --bg:#F3EEDF; --card:#FBF8EE; --ink:#14130F; --muted:#6B6655;
+  --accent:#1D2BE0; --accent2:#C9A227; --line:#D8D0BC;
+  --font-display:'Instrument Serif',serif; --disp-weight:400; --disp-style:normal; --disp-track:-0.005em; --disp-case:none;
+  --font-body:'Albert Sans',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.5,0,0.2,1); --dur:0.5s; --radius:0px;
+  --shadow:4px 4px 0 rgba(29,43,224,.16);
+}
+[data-theme="songket"]{
+  --bg:#F0EEE8; --card:#F7F5EF; --ink:#1C1B22; --muted:#6A6772;
+  --accent:#96577B; --accent2:#9FB32E; --line:#CFCBC0;
+  --font-display:'DotGothic16',monospace; --disp-weight:400; --disp-style:normal; --disp-track:0.015em; --disp-case:none;
+  --font-body:'Space Grotesk',sans-serif; --font-mono:'Space Mono',monospace;
+  --ease:steps(6,end); --dur:0.45s; --radius:0px;
+  --shadow:0 0 0 1.5px var(--ink);
+}
+[data-theme="atlaslama"]{
+  --bg:#EFE6D2; --card:#F6EFDD; --ink:#2A241C; --muted:#7A6E5B;
+  --accent:#4C7A5E; --accent2:#B4543C; --line:#C9B894;
+  --font-display:'Fraunces',serif; --disp-weight:460; --disp-style:normal; --disp-track:-0.005em; --disp-case:none;
+  --font-body:'Albert Sans',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  --ease:cubic-bezier(0.4,0,0.2,1); --dur:1.3s; --radius:3px;
+  --shadow:0 1px 0 var(--line), 0 16px 34px -26px rgba(42,36,28,.5);
+}
+
+/* ============ BASE ============ */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--font-body); font-size:16px; line-height:1.55;
+  transition:background .5s ease, color .5s ease;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px; position:relative; z-index:2}
+.tex{position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0; transition:opacity .6s ease}
+[data-theme="stensil"] .tex.halftone{opacity:.5; background-image:radial-gradient(rgba(22,22,26,.16) 1px, transparent 1.4px); background-size:7px 7px}
+[data-theme="songket"] .tex.halftone{opacity:.35; background-image:radial-gradient(rgba(28,27,34,.14) 1px, transparent 1.3px); background-size:5px 5px}
+[data-theme="sirkulasi"] .tex.grid{opacity:1; background-image:linear-gradient(to right, rgba(16,17,19,.045) 1px, transparent 1px); background-size:calc(100%/12) 100%}
+[data-theme="ruangdata"] .tex.grid{opacity:1; background-image:linear-gradient(to right, rgba(245,242,234,.05) 1px, transparent 1px),linear-gradient(to bottom, rgba(245,242,234,.05) 1px, transparent 1px); background-size:56px 56px}
+[data-theme="sogan"] .tex.glow{opacity:1; background:radial-gradient(1200px 500px at 70% -10%, rgba(210,154,75,.12), transparent 60%)}
+[data-theme="mesin"] .tex.glow{opacity:1; background:radial-gradient(1000px 480px at 50% -10%, rgba(242,239,230,.05), transparent 60%)}
+[data-theme="lembaran"] .tex.grain{opacity:.4; background-image:radial-gradient(rgba(27,24,19,.05) 1px, transparent 1px); background-size:3px 3px}
+[data-theme="dinas"] .tex.vlines{opacity:.16; background-image:repeating-linear-gradient(90deg, rgba(24,22,17,.6) 0 1px, transparent 1px 4px);
+  -webkit-mask-image:linear-gradient(90deg,black 0 56px,transparent 56px calc(100% - 56px),black calc(100% - 56px));
+          mask-image:linear-gradient(90deg,black 0 56px,transparent 56px calc(100% - 56px),black calc(100% - 56px));}
+[data-theme="risoarsip"] .tex.hlines{opacity:.5; background-image:repeating-linear-gradient(0deg, rgba(29,43,224,.06) 0 1px, transparent 1px 9px)}
+[data-theme="atlaslama"] .tex.hatch{opacity:.35; background-image:repeating-linear-gradient(45deg, rgba(42,36,28,.05) 0 1px, transparent 1px 6px)}
+
+/* dinas registration frame */
+.frame{display:none; position:fixed; inset:10px; pointer-events:none; z-index:40}
+[data-theme="dinas"] .frame{display:block}
+.frame i{position:absolute; width:18px; height:18px; border:0 solid var(--ink)}
+.frame i:nth-child(1){top:0;left:0;border-top-width:2px;border-left-width:2px}
+.frame i:nth-child(2){top:0;right:0;border-top-width:2px;border-right-width:2px}
+.frame i:nth-child(3){bottom:0;left:0;border-bottom-width:2px;border-left-width:2px}
+.frame i:nth-child(4){bottom:0;right:0;border-bottom-width:2px;border-right-width:2px}
+.sidelabel{position:fixed; right:6px; top:50%; transform:translateY(-50%); writing-mode:vertical-rl;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--muted); z-index:40; display:none}
+[data-theme="dinas"] .sidelabel,[data-theme="atlaslama"] .sidelabel,[data-theme="mesin"] .sidelabel{display:block}
+
+h1,h2,h3,.display{
+  font-family:var(--font-display);
+  font-weight:var(--disp-weight); font-style:var(--disp-style);
+  letter-spacing:var(--disp-track); text-transform:var(--disp-case);
+  line-height:1.04;
+}
+.mono{font-family:var(--font-mono); font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.eyebrow{font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:10px}
+section{padding:52px 0 8px}
+.card{background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:26px;
+  transition:background .5s ease, box-shadow .5s ease}
+[data-theme="atlaslama"] .card{outline:1px solid var(--line); outline-offset:5px}
+a{color:inherit}
+
+/* HEADER / SWITCHER */
+header.spec{padding:36px 0 6px}
+.spec-title{font-size:clamp(32px,5.6vw,54px); margin-bottom:6px}
+.spec-sub{color:var(--muted); max-width:62ch}
+.switcher{display:flex; flex-wrap:wrap; gap:8px; margin:24px 0 4px; position:sticky; top:10px; z-index:50}
+.tbtn{display:flex; align-items:center; gap:8px;
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.07em; text-transform:uppercase;
+  background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:var(--radius);
+  padding:8px 11px; cursor:pointer; transition:transform var(--dur) var(--ease), background .3s, border-color .3s; box-shadow:var(--shadow)}
+.tbtn:hover{transform:translateY(-2px)}
+.tbtn[aria-pressed="true"]{border-color:var(--accent); outline:2px solid var(--accent); outline-offset:-2px}
+.tbtn .dot{width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.25);background:var(--sw,#999)}
+.register{font-family:var(--font-mono); font-size:12.5px; color:var(--muted);
+  border-left:3px solid var(--accent); padding:6px 0 6px 14px; margin-top:16px; max-width:78ch}
+
+/* MASTHEAD */
+.masthead{border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:20px 0 15px; margin-top:30px}
+.nameplate{font-size:clamp(42px,8.6vw,88px); line-height:.96}
+.folio{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:10px;
+  font-family:var(--font-mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.folio b{color:var(--accent); font-weight:600}
+[data-theme="mesin"] .folio b,[data-theme="ruangdata"] .folio b{color:var(--accent2)}
+.ticker{border-bottom:1px solid var(--line); overflow:hidden; white-space:nowrap; padding:9px 0;
+  font-family:var(--font-mono); font-size:12.5px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,black 6%,black 94%,transparent);
+          mask-image:linear-gradient(90deg,transparent,black 6%,black 94%,transparent)}
+.ticker-track{display:inline-block; padding-left:100%; animation:tick 38s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker .src{color:var(--accent); font-weight:600}
+[data-theme="mesin"] .ticker .src{color:var(--accent2)}
+.ticker .sep{color:var(--muted); margin:0 14px}
+@keyframes tick{to{transform:translateX(-100%)}}
+
+/* BADGES */
+.badges{display:flex; flex-wrap:wrap; gap:10px; margin-top:16px}
+.badge{font-family:var(--font-mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+  border:1.5px solid var(--ink); padding:6px 11px; border-radius:var(--radius);
+  transform:translateY(10px); opacity:0; animation:rise var(--dur) var(--ease) forwards}
+.badge.fill{background:var(--accent); color:var(--bg); border-color:var(--accent)}
+[data-theme="mesin"] .badge.fill{color:#121110}
+.badge.alt{border-color:var(--accent2); color:var(--accent2)}
+.badge.star{border-style:dashed}
+
+/* PALETTE */
+.swatches{display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:12px; margin-top:16px}
+.swatch{border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:var(--shadow);
+  transform:translateY(14px); opacity:0; animation:rise var(--dur) var(--ease) forwards}
+.swatch .chipc{height:70px; background:var(--sw)}
+.swatch .meta{padding:10px 12px; font-family:var(--font-mono); font-size:11px}
+.swatch .meta b{display:block; letter-spacing:.06em; text-transform:uppercase}
+.swatch .meta span{color:var(--muted)}
+@keyframes rise{to{transform:none; opacity:1}}
+
+/* TYPE */
+.specimen-display{font-size:clamp(36px,7vw,80px); margin:16px 0 8px; line-height:1.02}
+.specimen-display .accent{color:var(--accent)}
+[data-theme="mesin"] .specimen-display .accent{color:var(--accent2)}
+.specimen-row{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:24px}
+@media(max-width:760px){.specimen-row{grid-template-columns:1fr}}
+.spec-block .label{font-family:var(--font-mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:8px}
+.ledger{font-family:var(--font-mono); font-variant-numeric:tabular-nums; font-size:14px; line-height:1.9; border-top:1px solid var(--line)}
+.ledger div{display:flex; justify-content:space-between; border-bottom:1px solid var(--line); padding:2px 0}
+.ledger .v{font-weight:600}
+
+/* ANGKA */
+.angka-card{display:grid; grid-template-columns:1.5fr 1fr; gap:26px; align-items:end}
+@media(max-width:760px){.angka-card{grid-template-columns:1fr}}
+.angka{font-family:var(--font-display); font-weight:var(--disp-weight); font-style:var(--disp-style);
+  font-size:clamp(40px,8.2vw,96px); line-height:1; font-variant-numeric:tabular-nums lining-nums; color:var(--accent)}
+[data-theme="mesin"] .angka{color:var(--ink)}
+[data-theme="ruangdata"] .angka{text-shadow:0 0 24px rgba(255,90,31,.4)}
+.angka-label{font-size:15px; color:var(--muted); max-width:36ch; margin-top:10px}
+.cite-chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+.chip{font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; border:1px solid var(--line); border-radius:999px;
+  padding:5px 11px; background:var(--card); cursor:pointer; transition:all .25s var(--ease)}
+[data-theme="dinas"] .chip,[data-theme="songket"] .chip,[data-theme="stensil"] .chip,[data-theme="sirkulasi"] .chip,[data-theme="risoarsip"] .chip{border-radius:0}
+.chip:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-1px)}
+.chip.hop{border-style:dashed}
+.chip .tick{color:var(--accent); margin-right:5px}
+
+/* CHARTS */
+.charts{display:grid; grid-template-columns:1.25fr 1fr; gap:20px}
+@media(max-width:860px){.charts{grid-template-columns:1fr}}
+.chart-head{display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:6px}
+.chart-title{font-size:clamp(20px,3vw,26px)}
+.replay{font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.1em;
+  background:none; border:1px solid var(--line); border-radius:var(--radius); color:var(--muted); padding:6px 11px; cursor:pointer; transition:all .25s var(--ease)}
+.replay:hover{color:var(--accent); border-color:var(--accent)}
+svg text{font-family:var(--font-mono); font-size:10px; fill:var(--muted)}
+svg .axis{stroke:var(--line)}
+svg .gridline{stroke:var(--line); stroke-dasharray:2 5; opacity:.7}
+.dot-k{fill:var(--accent)}
+[data-theme="mesin"] .dot-k{fill:var(--accent2)}
+.dot-p{fill:var(--muted)}
+[data-theme="ruangdata"] .dot-k{filter:drop-shadow(0 0 5px var(--accent))}
+.trend{stroke:var(--accent2); stroke-width:1.6; fill:none; stroke-dasharray:4 4}
+.legend{display:flex; gap:18px; font-family:var(--font-mono); font-size:11px; color:var(--muted); margin-top:10px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}
+.tooltip{position:fixed; pointer-events:none; z-index:90; opacity:0; transform:translate(-50%,-130%);
+  background:var(--ink); color:var(--bg); font-family:var(--font-mono); font-size:11.5px;
+  padding:7px 10px; border-radius:var(--radius); transition:opacity .15s; max-width:240px; line-height:1.45}
+.wavepath{fill:none; stroke:var(--accent); stroke-width:2.2}
+[data-theme="mesin"] .wavepath{stroke:var(--accent2)}
+[data-theme="ruangdata"] .wavepath{filter:drop-shadow(0 0 7px var(--accent))}
+.wavefill{opacity:.14}
+.pulse{fill:var(--accent)}
+[data-theme="mesin"] .pulse{fill:var(--accent2)}
+.figcap{display:none; font-family:'Instrument Serif',serif; font-style:italic; color:var(--muted); font-size:14px; margin-top:10px; text-align:center}
+[data-theme="atlaslama"] .figcap{display:block}
+.bar-demo .bar{height:13px; background:var(--accent); border-radius:var(--radius); width:0; transition:width 1s var(--ease)}
+[data-theme="mesin"] .bar-demo .bar{background:var(--accent2)}
+[data-theme="ruangdata"] .bar-demo .bar{background:linear-gradient(90deg,var(--accent2),var(--accent)); box-shadow:0 0 10px rgba(255,90,31,.35)}
+.bar-demo .bar.b2{background:var(--accent2)}
+.bar-demo .bar.b3{background:var(--muted)}
+.bar-demo .brow{display:grid; grid-template-columns:120px 1fr 64px; align-items:center; gap:12px; padding:7px 0; font-family:var(--font-mono); font-size:12px}
+.bar-demo .brow span:last-child{text-align:right; font-variant-numeric:tabular-nums}
+
+/* ORNAMENT */
+.orn-wrap{padding:0}
+#ornament{width:100%; height:auto; display:block; border-radius:var(--radius)}
+.orn-note{font-family:var(--font-mono); font-size:11.5px; color:var(--muted); margin-top:10px}
+
+/* STRUK */
+.struk-grid{display:grid; grid-template-columns:1fr 1.2fr; gap:26px; align-items:start}
+@media(max-width:860px){.struk-grid{grid-template-columns:1fr}}
+.struk{background:var(--card); font-family:var(--font-mono); font-size:13px; padding:22px 20px 28px; position:relative;
+  box-shadow:var(--shadow); border-radius:var(--radius); font-variant-numeric:tabular-nums; max-width:380px}
+.struk::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:12px;
+  background:radial-gradient(circle at 8px -3px, transparent 8px, var(--card) 8.5px); background-size:16px 12px; background-position:bottom}
+.struk h4{font-family:var(--font-mono); font-weight:700; text-align:center; letter-spacing:.1em; font-size:13px}
+.struk .small{text-align:center; color:var(--muted); font-size:11px; margin-bottom:12px}
+.struk .row{display:flex; justify-content:space-between; padding:3px 0}
+.struk .dash{border-top:1px dashed var(--line); margin:9px 0}
+.struk .tot{font-weight:700}
+.struk .roast{margin-top:13px; text-align:center; font-size:11.5px; color:var(--muted); font-style:italic}
+.stamp{position:absolute; top:14px; right:14px; color:var(--accent); border:2px solid var(--accent); border-radius:4px;
+  font-family:var(--font-mono); font-size:10px; letter-spacing:.18em; padding:4px 8px; text-transform:uppercase;
+  transform:rotate(8deg) scale(2.6); opacity:0}
+.stamp.slam{animation:slam .5s var(--ease) .6s forwards}
+@keyframes slam{60%{transform:rotate(-6deg) scale(.94); opacity:1} 100%{transform:rotate(-6deg) scale(1); opacity:.92}}
+
+footer{padding:48px 0 70px; color:var(--muted); font-family:var(--font-mono); font-size:11.5px; line-height:1.8}
+.fade-seq{opacity:0; transform:translateY(12px); animation:rise var(--dur) var(--ease) forwards}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001s!important; animation-delay:0s!important; transition-duration:.001s!important}
+  .ticker-track{animation:none; padding-left:0}
+}
+</style>
+</head>
+<body>
+<div class="tex halftone"></div><div class="tex grid"></div><div class="tex glow"></div><div class="tex grain"></div>
+<div class="tex vlines"></div><div class="tex hlines"></div><div class="tex hatch"></div>
+<div class="frame"><i></i><i></i><i></i><i></i></div>
+<div class="sidelabel" id="sideLabel">LEMBARAN · SERI 094</div>
+
+<div class="wrap">
+
+<header class="spec">
+  <span class="eyebrow">Spec halaman hidup · 10 kandidat</span>
+  <h1 class="spec-title">Design Language Candidates v2</h1>
+  <p class="spec-sub">Sepuluh arah, semua berat di tipografi dan gerak. Ganti tema: warna, huruf, ornamen, dan karakter geraknya ikut berubah. Empat asli, enam baru hasil bedah referensi.</p>
+
+  <div class="switcher" role="tablist" aria-label="Pilih tema">
+    <button class="tbtn" data-set="lembaran" style="--sw:#641623" aria-pressed="true"><span class="dot"></span>Lembaran</button>
+    <button class="tbtn" data-set="sirkulasi" style="--sw:#E0301E" aria-pressed="false"><span class="dot"></span>Sirkulasi</button>
+    <button class="tbtn" data-set="sogan" style="--sw:#D29A4B" aria-pressed="false"><span class="dot"></span>Sogan</button>
+    <button class="tbtn" data-set="stensil" style="--sw:#FF3D8A" aria-pressed="false"><span class="dot"></span>Stensil</button>
+    <button class="tbtn" data-set="dinas" style="--sw:#E8500A" aria-pressed="false"><span class="dot"></span>Dinas</button>
+    <button class="tbtn" data-set="mesin" style="--sw:#C9B27E" aria-pressed="false"><span class="dot"></span>Mesin</button>
+    <button class="tbtn" data-set="ruangdata" style="--sw:#FF5A1F" aria-pressed="false"><span class="dot"></span>Ruang Data</button>
+    <button class="tbtn" data-set="risoarsip" style="--sw:#1D2BE0" aria-pressed="false"><span class="dot"></span>Riso Arsip</button>
+    <button class="tbtn" data-set="songket" style="--sw:#96577B" aria-pressed="false"><span class="dot"></span>Songket Piksel</button>
+    <button class="tbtn" data-set="atlaslama" style="--sw:#4C7A5E" aria-pressed="false"><span class="dot"></span>Atlas Lama</button>
+  </div>
+  <p class="register" id="registerLine"></p>
+</header>
+
+<!-- MASTHEAD -->
+<div class="masthead fade-seq" data-anim>
+  <div class="nameplate display">LEMBARAN</div>
+  <div class="folio">
+    <span>Edisi <b class="num">#41</b></span>
+    <span>Kamis, 11 Juni 2026</span>
+    <span>Dicetak otomatis <b>05.00 WIB</b></span>
+    <span>Gratis · Terbuka · Bercatatan</span>
+  </div>
+</div>
+<div class="ticker fade-seq" data-anim>
+  <div class="ticker-track">
+    <span class="src">BMKG</span> Gempa M4,8 tercatat 38 km tenggara Halmahera Barat, 03.12 WIT <span class="sep">●</span>
+    <span class="src">ANTARA</span> DPR jadwalkan rapat paripurna pembahasan RUU hari ini <span class="sep">●</span>
+    <span class="src">TEMPO</span> Harga cabai rawit di Manado naik 41% dalam sepekan <span class="sep">●</span>
+    <span class="src">BBC INDONESIA</span> Laporan baru soroti tata kelola tambang nikel <span class="sep">●</span>
+    <span class="src">GFW</span> 214 peringatan deforestasi terdeteksi kemarin <span class="sep">●</span>
+  </div>
+</div>
+
+<div class="badges" id="badges">
+  <span class="badge fill">Teruji Lapangan</span>
+  <span class="badge">Edisi #41</span>
+  <span class="badge alt">Seri LMB-094</span>
+  <span class="badge">Data Bertanda Tangan</span>
+  <span class="badge star">★ Terbit 2× Sehari</span>
+</div>
+
+<!-- PALETTE -->
+<section>
+  <span class="eyebrow">01 · Palet</span>
+  <h2 class="chart-title">Warna</h2>
+  <div class="swatches" id="swatches"></div>
+</section>
+
+<!-- TYPE -->
+<section>
+  <span class="eyebrow">02 · Tipografi</span>
+  <div class="specimen-display display fade-seq" data-anim>Angka bicara,<br><span class="accent">dokumen</span> menjawab.</div>
+  <div class="specimen-row">
+    <div class="spec-block">
+      <div class="label" id="bodyFontLabel">Body</div>
+      <p>Setiap klaim membawa kuitansinya sendiri. Redaksi robot menyusun edisi dua kali sehari; apa yang tidak bisa dikutip, tidak diterbitkan. Pembaca menarik kesimpulan, dokumen yang berbicara.</p>
+    </div>
+    <div class="spec-block">
+      <div class="label" id="monoFontLabel">Data · tabular figures</div>
+      <div class="ledger">
+        <div><span>Belanja pegawai</span><span class="v num">Rp 412.806.114.207</span></div>
+        <div><span>Belanja modal</span><span class="v num">Rp&nbsp;&nbsp;38.450.020.111</span></div>
+        <div><span>Kerugian (kasus #2241)</span><span class="v num">Rp&nbsp;&nbsp;&nbsp;4.218.530.114</span></div>
+        <div><span>Vonis</span><span class="v num">14 bulan</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGKA EDISI -->
+<section>
+  <span class="eyebrow">03 · Angka Edisi (odometer)</span>
+  <div class="card angka-card">
+    <div>
+      <div class="angka num" id="odometer">Rp 0</div>
+      <p class="angka-label">Total kerugian negara dalam vonis korupsi yang diputus bulan ini. <span class="mono">(data contoh)</span></p>
+    </div>
+    <div>
+      <div class="cite-chips">
+        <button class="chip"><span class="tick">⊙</span>putusan_ma · 84 baris</button>
+        <button class="chip"><span class="tick">⊙</span>edisi #41</button>
+        <button class="chip hop">Bandingkan dengan Mei →</button>
+        <button class="chip hop">Jadikan tur →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORNAMENT -->
+<section>
+  <span class="eyebrow">04 · Ornamen generatif (per tema)</span>
+  <div class="card orn-wrap">
+    <canvas id="ornament" width="1040" height="320" role="img" aria-label="Ornamen generatif tema"></canvas>
+  </div>
+  <p class="orn-note" id="ornNote"></p>
+</section>
+
+<!-- CHARTS -->
+<section>
+  <span class="eyebrow">05 · Visual khas</span>
+  <div class="charts">
+    <div class="card">
+      <div class="chart-head">
+        <h3 class="chart-title">Gradien Keadilan</h3>
+        <button class="replay" data-replay="scatter">↻ Putar ulang</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px">Kerugian (log) × vonis. Titik jatuh seperti sedimen; sentuh untuk detail. <span class="mono">(data contoh)</span></p>
+      <svg id="scatter" viewBox="0 0 620 360" width="100%" role="img" aria-label="Scatter plot contoh"></svg>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>Korupsi</span>
+        <span><i style="background:var(--muted)"></i>Pencurian ringan</span>
+        <span><i style="display:inline-block;width:14px;height:0;border-top:2px dashed var(--accent2);margin-right:6px;border-radius:0"></i>Kurva tren</span>
+      </div>
+      <div class="figcap">Fig. 2. · Gradien vonis terhadap kerugian negara.</div>
+    </div>
+    <div class="card">
+      <div class="chart-head">
+        <h3 class="chart-title">Gelombang Harga</h3>
+        <button class="replay" data-replay="wave">↻ Putar ulang</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:8px">Cabai rawit, 30 hari. Garis menggambar dirinya. <span class="mono">(data contoh)</span></p>
+      <svg id="wave" viewBox="0 0 420 300" width="100%" role="img" aria-label="Grafik garis harga contoh"></svg>
+      <div class="bar-demo" style="margin-top:14px">
+        <div class="brow"><span>Manado</span><div class="bar" data-w="86%"></div><span>+41%</span></div>
+        <div class="brow"><span>Ternate</span><div class="bar b2" data-w="61%"></div><span>+24%</span></div>
+        <div class="brow"><span>Ambon</span><div class="bar b3" data-w="34%"></div><span>+9%</span></div>
+      </div>
+      <div class="figcap">Fig. 5. · Rambatan harga lintas kepulauan.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUK -->
+<section>
+  <span class="eyebrow">06 · Artefak: Struk Belanja Negara</span>
+  <div class="struk-grid">
+    <div class="struk" id="struk">
+      <div class="stamp" id="stamp">Terverifikasi · Edisi 41</div>
+      <h4>STRUK BELANJA NEGARA</h4>
+      <div class="small">Kab. Nabire · APBD 2026 · per kapita</div>
+      <div class="dash"></div>
+      <div class="row"><span>Belanja pegawai</span><span class="num">58,2%</span></div>
+      <div class="row"><span>Barang &amp; jasa</span><span class="num">24,1%</span></div>
+      <div class="row"><span>Belanja modal</span><span class="num">11,4%</span></div>
+      <div class="row"><span>Lainnya</span><span class="num">6,3%</span></div>
+      <div class="dash"></div>
+      <div class="row tot"><span>TOTAL APBD</span><span class="num">Rp 1,82 T</span></div>
+      <div class="row"><span>Per kapita</span><span class="num">Rp 10,4 jt</span></div>
+      <div class="dash"></div>
+      <div class="roast">“Jalan kabupaten: 3,1%. Sabar ya, ban depan.”</div>
+    </div>
+    <div>
+      <p style="max-width:46ch">Struk adalah objek paling mudah dibagikan: estetika cetak termal, angka rata kanan, perforasi, satu kalimat kering di kaki struk. Stempel <span style="color:var(--accent);font-weight:600">terverifikasi</span> menghantam masuk seperti cap basah dokumen resmi.</p>
+      <div class="cite-chips" style="margin-top:16px">
+        <button class="chip"><span class="tick">⊙</span>djpk_apbd · 2026</button>
+        <button class="chip hop">Ekspor kartu IG →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Semua angka pada halaman ini adalah <b>data contoh</b> untuk keperluan spesifikasi visual, bukan data riil.<br>
+  Tipografi: <span id="fontsFooter"></span>. Gerak menghormati <span class="mono">prefers-reduced-motion</span>.
+</footer>
+</div>
+
+<div class="tooltip" id="tip"></div>
+
+<script>
+/* ============ THEME DATA ============ */
+const THEMES = {
+  lembaran:{
+    reg:"LEMBARAN · Lembaran negara dibawa hidup. Kertas batu-tulis, tinta, segel oxblood. Fraunces memimpin; gerak tegas seperti cap basah.",
+    side:"LEMBARAN · SERI 094",
+    orn:"Ornamen: segel resmi, lingkaran konsentris dan gerigi cap.",
+    fonts:{display:"Fraunces", body:"Space Grotesk", mono:"IBM Plex Mono"},
+    colors:[{n:"Kertas",h:"#ECEAE3"},{n:"Tinta",h:"#1B1813"},{n:"Oxblood",h:"#641623"},{n:"Sogan muda",h:"#8C6F4E"},{n:"Garis",h:"#C9C3B5"}]
+  },
+  sirkulasi:{
+    reg:"SIRKULASI · Modernisme sipil Swiss. Putih, hitam, satu merah sinyal. Grid terlihat; gerak mekanis presisi papan keberangkatan.",
+    side:"", orn:"Ornamen: kisi titik presisi dengan satu rute merah.",
+    fonts:{display:"Archivo 850", body:"Archivo", mono:"IBM Plex Mono"},
+    colors:[{n:"Putih",h:"#FAFAF7"},{n:"Tinta",h:"#101113"},{n:"Merah sinyal",h:"#E0301E"},{n:"Kobalt arsip",h:"#15428C"},{n:"Garis",h:"#D9DAD6"}]
+  },
+  sogan:{
+    reg:"SOGAN · Nokturna pewarna batik: indigo malam, krem, amber sogan, madder. Gerak lambat mengalir seperti malam canting.",
+    side:"", orn:"Ornamen: gelombang parang, garis canting mengalir.",
+    fonts:{display:"Instrument Serif (italic)", body:"Albert Sans", mono:"IBM Plex Mono"},
+    colors:[{n:"Indigo malam",h:"#191726"},{n:"Krem",h:"#F0E7D3"},{n:"Amber sogan",h:"#D29A4B"},{n:"Madder",h:"#B0503A"},{n:"Garis",h:"#3A3450"}]
+  },
+  stensil:{
+    reg:"STENSIL · Zine riso, garis keturunan cetak rakyat. Dua tinta: pink fluoresen + biru riso, raster halftone, kapital Anton. Gerak menghantam.",
+    side:"", orn:"Ornamen: cetak tindih dua tinta dengan salah-register disengaja.",
+    fonts:{display:"Anton", body:"Space Mono", mono:"Space Mono"},
+    colors:[{n:"Kertas pucat",h:"#F1EFE6"},{n:"Tinta",h:"#16161A"},{n:"Pink fluo",h:"#FF3D8A"},{n:"Biru riso",h:"#0A52C8"},{n:"Garis",h:"#16161A"}]
+  },
+  dinas:{
+    reg:"DINAS · Lembar spesifikasi industri jadi surat tugas. Khaki, tinta, label oranye dinas, tanda registrasi di sudut viewport, nomor seri di mana-mana. Gerak utilitarian: cepat, tanpa basa-basi.",
+    side:"DOKUMEN DINAS · LMB/094/VI/2026",
+    orn:"Ornamen: tanda registrasi, crosshair, barcode, dan bendera dwiwarna.",
+    fonts:{display:"Archivo 800", body:"Archivo", mono:"IBM Plex Mono"},
+    colors:[{n:"Khaki",h:"#D8CEB2"},{n:"Tinta",h:"#181611"},{n:"Oranye dinas",h:"#E8500A"},{n:"Kertas tugas",h:"#E5DDC4"},{n:"Garis",h:"#181611"}]
+  },
+  mesin:{
+    reg:"MESIN · Hitam pekat, serif tipis raksasa, satu emas pudar. Citra negara di-dither piksel demi piksel. Gerak lambat, berwibawa, seperti mesin cetak besar yang mulai berputar.",
+    side:"MESIN CETAK · UNIT 01",
+    orn:"Ornamen: nusantara di-dither Bayer, digambar baris demi baris.",
+    fonts:{display:"Fraunces 340", body:"Space Grotesk", mono:"IBM Plex Mono"},
+    colors:[{n:"Malam",h:"#121110"},{n:"Kertas",h:"#F2EFE6"},{n:"Emas pudar",h:"#C9B27E"},{n:"Arang",h:"#1B1A18"},{n:"Garis",h:"#2E2C28"}]
+  },
+  ruangdata:{
+    reg:"RUANG DATA · Ruang kendali OLED: hitam sejati, kisi samar, blok data bara-ke-amber yang menyala. Headline mono. Gerak cepat dengan denyut fosfor. Peta paling dramatis di sini.",
+    side:"", orn:"Ornamen: balok data menyala dengan gradien bara.",
+    fonts:{display:"IBM Plex Mono 600", body:"Space Grotesk", mono:"IBM Plex Mono"},
+    colors:[{n:"Hitam",h:"#060606"},{n:"Fosfor",h:"#F5F2EA"},{n:"Bara",h:"#FF5A1F"},{n:"Amber",h:"#FFB12B"},{n:"Garis",h:"#242422"}]
+  },
+  risoarsip:{
+    reg:"RISO ARSIP · Krem plus satu biru listrik. Serif tinggi, foto arsip diperlakukan halftone, anotasi mono biru. Editorial-arsip: koran yang dicetak di studio riso.",
+    side:"", orn:"Ornamen: bola halftone biru, raster titik radial.",
+    fonts:{display:"Instrument Serif", body:"Albert Sans", mono:"IBM Plex Mono"},
+    colors:[{n:"Krem",h:"#F3EEDF"},{n:"Tinta",h:"#14130F"},{n:"Biru listrik",h:"#1D2BE0"},{n:"Kuning arsip",h:"#C9A227"},{n:"Garis",h:"#D8D0BC"}]
+  },
+  songket:{
+    reg:"SONGKET PIKSEL · Tenun adalah grid piksel pertama. Motif songket dirakit ulang sebagai ornamen piksel, huruf display bertitik, aksen manggis + acid + persik. Gerak melompat dalam langkah, seperti alat tenun.",
+    side:"", orn:"Ornamen: motif songket generatif, kuadran dicerminkan seperti tenunan.",
+    fonts:{display:"DotGothic16", body:"Space Grotesk", mono:"Space Mono"},
+    colors:[{n:"Kelabu film",h:"#F0EEE8"},{n:"Tinta",h:"#1C1B22"},{n:"Ungu manggis",h:"#96577B"},{n:"Hijau acid",h:"#9FB32E"},{n:"Persik",h:"#F2B68C"}]
+  },
+  atlaslama:{
+    reg:"ATLAS LAMA · Plat atlas abad-19: kertas tua, arsiran gravür, pesisir hijau sage, garis rute madder, takarir 'Fig.' di bawah tiap grafik. Gerak melayang pelan seperti kamera menyusuri peta tua.",
+    side:"PLAT NO. 094 · TERBITAN LEMBARAN",
+    orn:"Ornamen: garis pantai tergravür dengan arsiran dan mawar kompas.",
+    fonts:{display:"Fraunces 460", body:"Albert Sans", mono:"IBM Plex Mono"},
+    colors:[{n:"Kertas tua",h:"#EFE6D2"},{n:"Sepia",h:"#2A241C"},{n:"Hijau pesisir",h:"#4C7A5E"},{n:"Madder",h:"#B4543C"},{n:"Garis",h:"#C9B894"}]
+  }
+};
+
+const root=document.documentElement;
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function setTheme(name){
+  root.setAttribute('data-theme', name);
+  document.querySelectorAll('.tbtn').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.set===name)));
+  const t=THEMES[name];
+  document.getElementById('registerLine').textContent=t.reg;
+  document.getElementById('bodyFontLabel').textContent='Body · '+t.fonts.body;
+  document.getElementById('monoFontLabel').textContent='Data · '+t.fonts.mono+' · tabular figures';
+  document.getElementById('fontsFooter').textContent=t.fonts.display+' / '+t.fonts.body+' / '+t.fonts.mono;
+  const sl=document.getElementById('sideLabel'); sl.textContent=t.side||'';
+  document.getElementById('ornNote').textContent=t.orn;
+  renderSwatches(t);
+  replayAll(name);
+}
+document.querySelectorAll('.tbtn').forEach(b=>b.addEventListener('click',()=>setTheme(b.dataset.set)));
+
+function renderSwatches(t){
+  const el=document.getElementById('swatches'); el.innerHTML='';
+  t.colors.forEach((c,i)=>{
+    const d=document.createElement('div');
+    d.className='swatch'; d.style.setProperty('--sw',c.h); d.style.animationDelay=(i*70)+'ms';
+    d.innerHTML=`<div class="chipc"></div><div class="meta"><b>${c.n}</b><span>${c.h}</span></div>`;
+    el.appendChild(d);
+  });
+}
+
+/* ============ HELPERS ============ */
+function mulberry(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function cssv(n){return getComputedStyle(root).getPropertyValue(n).trim()}
+
+/* ============ ODOMETER ============ */
+let odoRAF;
+function runOdometer(){
+  cancelAnimationFrame(odoRAF);
+  const el=document.getElementById('odometer');
+  const target=4218530114207; const dur=reduced?1:1800; const t0=performance.now();
+  function step(now){
+    const p=Math.min((now-t0)/dur,1); const e=1-Math.pow(1-p,4);
+    el.textContent='Rp '+Math.round(target*e).toLocaleString('id-ID');
+    if(p<1) odoRAF=requestAnimationFrame(step);
+  }
+  odoRAF=requestAnimationFrame(step);
+}
+
+/* ============ ORNAMENT CANVAS ============ */
+let ornRAF;
+function paintOrnament(theme){
+  cancelAnimationFrame(ornRAF);
+  const c=document.getElementById('ornament'); const x=c.getContext('2d');
+  const W=c.width, H=c.height;
+  const ink=cssv('--ink'), acc=cssv('--accent'), acc2=cssv('--accent2'), card=cssv('--card'), line=cssv('--line'), muted=cssv('--muted');
+  x.clearRect(0,0,W,H); x.fillStyle=card; x.fillRect(0,0,W,H);
+  const r=mulberry(theme.length*97+13);
+
+  if(theme==='lembaran'){
+    const cx=W/2, cy=H/2;
+    x.strokeStyle=acc; x.lineWidth=2;
+    [110,96,58].forEach(rad=>{x.beginPath();x.arc(cx,cy,rad,0,7);x.stroke();});
+    for(let i=0;i<48;i++){const a=i/48*Math.PI*2;
+      x.beginPath();x.moveTo(cx+Math.cos(a)*100,cy+Math.sin(a)*100);
+      x.lineTo(cx+Math.cos(a)*108,cy+Math.sin(a)*108);x.stroke();}
+    x.fillStyle=acc; x.font='600 26px IBM Plex Mono'; x.textAlign='center';
+    x.fillText('LMB',cx,cy+9);
+    x.strokeStyle=line; x.lineWidth=1;
+    x.beginPath();x.moveTo(40,cy);x.lineTo(cx-130,cy);x.moveTo(cx+130,cy);x.lineTo(W-40,cy);x.stroke();
+  }
+  else if(theme==='sirkulasi'){
+    x.fillStyle=line;
+    const cols=26, rows=8, gx=W/(cols+1), gy=H/(rows+1);
+    for(let i=1;i<=cols;i++)for(let j=1;j<=rows;j++){x.beginPath();x.arc(i*gx,j*gy,2.2,0,7);x.fill();}
+    x.strokeStyle=acc; x.lineWidth=3; x.beginPath();
+    let px=1, py=4+Math.floor(r()*2);
+    x.moveTo(px*gx,py*gy);
+    while(px<cols){px+=1+Math.floor(r()*2); py=Math.max(1,Math.min(rows,py+(r()<.5?-1:1)*Math.ceil(r()*2)));
+      x.lineTo(Math.min(px,cols)*gx,py*gy);}
+    x.stroke();
+    x.fillStyle=acc; x.fillRect(gx-10,4*gy-10,20,20);
+  }
+  else if(theme==='sogan'){
+    for(let w=0;w<6;w++){
+      x.strokeStyle=w%2? acc2:acc; x.globalAlpha=.55+w*.07; x.lineWidth=2.4;
+      x.beginPath();
+      for(let i=0;i<=W;i+=6){
+        const y=H/2+Math.sin(i/95+w*1.3)*(34+w*9)+(w-2.5)*16;
+        i? x.lineTo(i,y):x.moveTo(i,y);
+      }
+      x.stroke();
+    }
+    x.globalAlpha=1;
+  }
+  else if(theme==='stensil'){
+    const cx=W/2, cy=H/2;
+    function halftone(col,ox,oy){
+      x.fillStyle=col;
+      for(let i=-13;i<=13;i++)for(let j=-7;j<=7;j++){
+        const d=Math.hypot(i,j*1.7)/14; if(d>1)continue;
+        const rad=(1-d)*7.5;
+        x.beginPath();x.arc(cx+i*16+ox,cy+j*16+oy,Math.max(.6,rad),0,7);x.fill();
+      }
+    }
+    x.globalCompositeOperation='multiply';
+    halftone(acc2,0,0); halftone(acc,9,6);
+    x.globalCompositeOperation='source-over';
+  }
+  else if(theme==='dinas'){
+    x.strokeStyle=ink; x.lineWidth=2;
+    [[26,26],[W-26,26],[26,H-26],[W-26,H-26]].forEach(([px,py],i)=>{
+      x.beginPath();
+      x.moveTo(px+(i%2?-18:18),py); x.lineTo(px,py); x.lineTo(px,py+(i<2?18:-18)); x.stroke();
+    });
+    const cx=W/2,cy=H/2;
+    x.beginPath();x.arc(cx,cy,54,0,7);x.stroke();
+    x.beginPath();x.moveTo(cx-78,cy);x.lineTo(cx+78,cy);x.moveTo(cx,cy-78);x.lineTo(cx,cy+78);x.stroke();
+    // bendera dwiwarna
+    x.strokeStyle=ink;x.strokeRect(80,H/2-30,90,60);
+    x.fillStyle=acc; x.fillRect(80,H/2-30,90,30);
+    // barcode
+    let bx=W-220;
+    for(let i=0;i<34;i++){const w=1+Math.floor(r()*4); x.fillStyle=ink; x.fillRect(bx,H/2-34,w,68); bx+=w+2+Math.floor(r()*3);}
+    x.fillStyle=muted; x.font='11px IBM Plex Mono'; x.textAlign='left';
+    x.fillText('LMB/094/VI/2026',80,H/2+52);
+    x.textAlign='right'; x.fillText('TERUJI LAPANGAN',W-80,H/2+52);
+  }
+  else if(theme==='mesin'){
+    // dithered archipelago, drawn row by row
+    const cell=6, cols=Math.floor(W/cell), rows=Math.floor(H/cell);
+    const blobs=[]; for(let i=0;i<7;i++) blobs.push({bx:r()*W, by:H*.3+r()*H*.4, rr:30+r()*70});
+    const bayer=[[0,8,2,10],[12,4,14,6],[3,11,1,9],[15,7,13,5]];
+    let row=0;
+    function drawRows(){
+      const until=Math.min(rows,row+(reduced?rows:3));
+      x.fillStyle=ink;
+      for(;row<until;row++){
+        for(let cI=0;cI<cols;cI++){
+          const px=cI*cell+cell/2, py=row*cell+cell/2;
+          let f=0; blobs.forEach(b=>{const d=Math.hypot(px-b.bx,py-b.by); f+=(b.rr*b.rr)/(d*d+1);});
+          const t=.85+(bayer[row%4][cI%4]/16)*.9;
+          if(f>t) x.fillRect(cI*cell,row*cell,cell-1.5,cell-1.5);
+        }
+      }
+      if(row<rows) ornRAF=requestAnimationFrame(drawRows);
+      else{
+        x.fillStyle=acc2; x.font='12px IBM Plex Mono'; x.textAlign='right';
+        x.fillText('NUSANTARA · DITHER BAYER 4×4', W-20, H-16);
+      }
+    }
+    drawRows();
+  }
+  else if(theme==='ruangdata'){
+    x.strokeStyle=line; x.lineWidth=1;
+    for(let gx=0;gx<W;gx+=52){x.beginPath();x.moveTo(gx,0);x.lineTo(gx,H);x.stroke();}
+    let yy=34, i=0;
+    function bar(){
+      if(yy>H-24){return;}
+      const w=80+r()*(W-200);
+      const g=x.createLinearGradient(40,0,40+w,0);
+      g.addColorStop(0,acc2); g.addColorStop(1,acc);
+      x.shadowColor=acc; x.shadowBlur=14;
+      x.fillStyle=g; x.fillRect(40,yy,w,16);
+      x.shadowBlur=0;
+      x.fillStyle=muted; x.font='10px IBM Plex Mono'; x.textAlign='left';
+      x.fillText('CH-'+String(i+1).padStart(2,'0'), 40+w+10, yy+12);
+      yy+=34; i++;
+      ornRAF=requestAnimationFrame(bar);
+    }
+    bar();
+  }
+  else if(theme==='risoarsip'){
+    const cx=W*.32, cy=H/2;
+    x.fillStyle=acc;
+    for(let i=-12;i<=12;i++)for(let j=-8;j<=8;j++){
+      const nx=i/12, ny=j/8, d=Math.hypot(nx,ny); if(d>1)continue;
+      const shade=Math.max(0,(nx*0.7+ny*0.5+1)/2);
+      const rad=(1-d*.25)*(1.2+shade*5.4);
+      x.beginPath();x.arc(cx+i*13,cy+j*13,rad,0,7);x.fill();
+    }
+    x.strokeStyle=acc; x.lineWidth=1;
+    for(let s=0;s<3;s++){
+      const sy=H*.25+s*H*.25;
+      for(let k=0;k<7;k++){x.beginPath();x.moveTo(W*.6,sy+k*3);x.lineTo(W-50,sy+k*3);x.stroke();}
+    }
+    x.fillStyle=ink; x.font='italic 22px Instrument Serif'; x.textAlign='left';
+    x.fillText('Arsip, dicetak dua tinta.', W*.6, H*.18);
+  }
+  else if(theme==='songket'){
+    const cell=13, q=12;
+    const quad=[]; for(let i=0;i<q;i++){quad.push([]);for(let j=0;j<q;j++)quad[i].push(r());}
+    const colF=v=> v>.72? acc : v>.5? acc2 : v>.42? '#F2B68C' : null;
+    const ox=(W-q*2*cell*3)/2, oy=(H-q*2*cell)/2;
+    let stepI=0; const total=q*2*q*2;
+    function drawPx(){
+      const until=Math.min(total, stepI+(reduced?total:40));
+      for(;stepI<until;stepI++){
+        const i=stepI%(q*2), j=Math.floor(stepI/(q*2));
+        const qi=i<q? i : q*2-1-i, qj=j<q? j : q*2-1-j;
+        const col=colF(quad[qi][qj]); if(!col) continue;
+        for(let rep=0;rep<3;rep++){
+          x.fillStyle=col;
+          x.fillRect(ox+rep*q*2*cell+i*cell, oy+j*cell, cell-2, cell-2);
+        }
+      }
+      if(stepI<total) ornRAF=requestAnimationFrame(drawPx);
+    }
+    drawPx();
+  }
+  else if(theme==='atlaslama'){
+    // engraved hatching
+    x.strokeStyle=ink; x.globalAlpha=.16; x.lineWidth=.7;
+    for(let yy=8;yy<H;yy+=7){x.beginPath();x.moveTo(0,yy);x.lineTo(W,yy);x.stroke();}
+    x.globalAlpha=1;
+    // coastline random walk
+    x.strokeStyle=acc; x.lineWidth=2.6; x.beginPath();
+    let px=0, py=H*.55;
+    x.moveTo(px,py);
+    const pts=[[px,py]];
+    while(px<W){px+=14+r()*22; py=Math.max(H*.3,Math.min(H*.8,py+(r()-.5)*46)); x.lineTo(px,py); pts.push([px,py]);}
+    x.stroke();
+    x.strokeStyle=ink; x.globalAlpha=.5; x.lineWidth=.8;
+    pts.forEach(([qx,qy],i)=>{ if(i%2)return;
+      for(let k=1;k<5;k++){x.beginPath();x.moveTo(qx,qy+k*5);x.lineTo(qx+10,qy+k*5+2);x.stroke();}
+    });
+    x.globalAlpha=1;
+    // route line
+    x.strokeStyle=acc2; x.setLineDash([7,6]); x.lineWidth=1.8;
+    x.beginPath(); x.moveTo(W*.1,H*.22);
+    x.bezierCurveTo(W*.4,H*.05,W*.6,H*.4,W*.92,H*.25); x.stroke(); x.setLineDash([]);
+    // compass
+    const cx=W-90, cy=70;
+    x.strokeStyle=ink; x.lineWidth=1.2;
+    x.beginPath();x.arc(cx,cy,26,0,7);x.stroke();
+    x.beginPath();x.moveTo(cx,cy-34);x.lineTo(cx,cy+34);x.moveTo(cx-34,cy);x.lineTo(cx+34,cy);x.stroke();
+    x.font='italic 20px Instrument Serif'; x.fillStyle=ink; x.textAlign='left';
+    x.fillText('Fig. 1. · Pesisir, tergravür.', 24, H-20);
+  }
+}
+
+/* ============ SCATTER ============ */
+const randS=mulberry(41);
+const CASES=[];
+for(let i=0;i<70;i++){const k=Math.pow(10,8.3+randS()*4.2);
+  CASES.push({type:'k',kerugian:k,vonis:Math.max(4,10+Math.log10(k)*2.2+(randS()-0.5)*26)});}
+for(let i=0;i<55;i++){CASES.push({type:'p',kerugian:Math.pow(10,5+randS()*2.4),vonis:Math.max(2,6+randS()*26)});}
+const tip=document.getElementById('tip');
+function fmtRp(n){
+  if(n>=1e12)return 'Rp '+(n/1e12).toFixed(1)+' T';
+  if(n>=1e9)return 'Rp '+(n/1e9).toFixed(1)+' M';
+  if(n>=1e6)return 'Rp '+(n/1e6).toFixed(1)+' jt';
+  return 'Rp '+Math.round(n).toLocaleString('id-ID');
+}
+function drawScatter(){
+  const svg=document.getElementById('scatter'); svg.innerHTML='';
+  const W=620,H=360,m={l:54,r:14,t:14,b:40};
+  const X=v=>m.l+((Math.log10(v)-4.6)/(12.8-4.6))*(W-m.l-m.r);
+  const Y=v=>H-m.b-(v/60)*(H-m.t-m.b);
+  const NS='http://www.w3.org/2000/svg';
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
+  [0,12,24,36,48,60].forEach(v=>{
+    svg.appendChild(mk('line',{x1:m.l,x2:W-m.r,y1:Y(v),y2:Y(v),class:'gridline'}));
+    const t=mk('text',{x:m.l-8,y:Y(v)+3,'text-anchor':'end'});t.textContent=v;svg.appendChild(t);
+  });
+  [['1 jt',1e6],['100 jt',1e8],['10 M',1e10],['1 T',1e12]].forEach(([lab,v])=>{
+    const t=mk('text',{x:X(v),y:H-m.b+18,'text-anchor':'middle'});t.textContent=lab;svg.appendChild(t);
+  });
+  svg.appendChild(mk('line',{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:'axis'}));
+  svg.appendChild(mk('line',{x1:m.l,x2:m.l,y1:m.t,y2:H-m.b,class:'axis'}));
+  const yl=mk('text',{x:m.l-38,y:m.t+8});yl.textContent='bulan';svg.appendChild(yl);
+  const xl=mk('text',{x:W-m.r,y:H-6,'text-anchor':'end'});xl.textContent='kerugian (log)';svg.appendChild(xl);
+  svg.appendChild(mk('path',{class:'trend',d:`M ${X(2e8)} ${Y(14)} C ${X(8e9)} ${Y(20)}, ${X(2e11)} ${Y(26)}, ${X(6e12)} ${Y(33)}`}));
+  CASES.forEach((cse,i)=>{
+    const cy=Y(cse.vonis), cx=X(cse.kerugian);
+    const dot=mk('circle',{cx,cy:reduced?cy:cy-200,r:cse.type==='k'?5:4,class:cse.type==='k'?'dot-k':'dot-p',opacity:reduced?0.85:0});
+    dot.style.transition=`cy ${0.55+randS()*0.5}s var(--ease) ${i*9}ms, opacity .4s ease ${i*9}ms, r .15s ease`;
+    svg.appendChild(dot);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{dot.setAttribute('cy',cy);dot.setAttribute('opacity',0.85)}));
+    const show=(e)=>{dot.setAttribute('r',cse.type==='k'?8:7);
+      tip.style.opacity=1; tip.style.left=e.clientX+'px'; tip.style.top=e.clientY+'px';
+      tip.innerHTML=(cse.type==='k'?'Korupsi':'Pencurian ringan')+' · kerugian '+fmtRp(cse.kerugian)+' · vonis '+Math.round(cse.vonis)+' bln<br>(data contoh)';};
+    dot.addEventListener('pointermove',show);
+    dot.addEventListener('pointerdown',show);
+    dot.addEventListener('pointerleave',()=>{dot.setAttribute('r',cse.type==='k'?5:4);tip.style.opacity=0});
+  });
+}
+
+/* ============ WAVE ============ */
+function drawWave(){
+  const svg=document.getElementById('wave'); svg.innerHTML='';
+  const W=420,H=300,m={l:44,r:14,t:16,b:30};
+  const NS='http://www.w3.org/2000/svg';
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
+  const r2=mulberry(7);
+  const pts=[]; let v=52;
+  for(let i=0;i<30;i++){v+=(r2()-0.42)*9; v=Math.max(34,Math.min(96,v)); pts.push(v);}
+  const X=i=>m.l+(i/29)*(W-m.l-m.r);
+  const Y=val=>H-m.b-((val-30)/70)*(H-m.t-m.b);
+  [40,60,80].forEach(g=>{
+    svg.appendChild(mk('line',{x1:m.l,x2:W-m.r,y1:Y(g),y2:Y(g),class:'gridline'}));
+    const t=mk('text',{x:m.l-8,y:Y(g)+3,'text-anchor':'end'});t.textContent=g+'rb';svg.appendChild(t);
+  });
+  svg.appendChild(mk('line',{x1:m.l,x2:W-m.r,y1:H-m.b,y2:H-m.b,class:'axis'}));
+  let d='M '+X(0)+' '+Y(pts[0]);
+  for(let i=1;i<30;i++){const cx=(X(i-1)+X(i))/2; d+=` Q ${X(i-1)} ${Y(pts[i-1])}, ${cx} ${(Y(pts[i-1])+Y(pts[i]))/2}`;}
+  d+=` T ${X(29)} ${Y(pts[29])}`;
+  const fill=mk('path',{d:d+` L ${X(29)} ${H-m.b} L ${X(0)} ${H-m.b} Z`,class:'wavefill',fill:'var(--accent)'});
+  svg.appendChild(fill);
+  const path=mk('path',{d,class:'wavepath'}); svg.appendChild(path);
+  const L=path.getTotalLength();
+  if(!reduced){
+    path.style.strokeDasharray=L; path.style.strokeDashoffset=L;
+    path.style.transition='stroke-dashoffset 1.6s var(--ease)';
+    fill.style.opacity=0; fill.style.transition='opacity .8s ease 1.2s';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{path.style.strokeDashoffset=0; fill.style.opacity=0.14}));
+  }
+  svg.appendChild(mk('circle',{cx:X(29),cy:Y(pts[29]),r:4.5,class:'pulse'}));
+  const ring=mk('circle',{cx:X(29),cy:Y(pts[29]),r:4.5,fill:'none',stroke:'var(--accent)','stroke-width':1.5});
+  svg.appendChild(ring);
+  if(!reduced){ring.animate([{r:4.5,opacity:.9},{r:16,opacity:0}],{duration:1600,iterations:Infinity,easing:'ease-out',delay:1700});}
+  const t=mk('text',{x:X(29),y:Y(pts[29])-14,'text-anchor':'end'});t.textContent='hari ini';svg.appendChild(t);
+  document.querySelectorAll('.bar-demo .bar').forEach(b=>{b.style.width='0'; setTimeout(()=>{b.style.width=b.dataset.w},250);});
+}
+
+/* ============ STAMP + REPLAY ============ */
+function slamStamp(){
+  const s=document.getElementById('stamp');
+  s.classList.remove('slam'); void s.offsetWidth; s.classList.add('slam');
+}
+function replayAll(theme){
+  runOdometer(); drawScatter(); drawWave(); slamStamp(); paintOrnament(theme||root.getAttribute('data-theme'));
+  document.querySelectorAll('[data-anim]').forEach(el=>{el.classList.remove('fade-seq'); void el.offsetWidth; el.classList.add('fade-seq');});
+  document.querySelectorAll('.badge').forEach((b,i)=>{b.style.animation='none'; void b.offsetWidth; b.style.animation=''; b.style.animationDelay=(i*60)+'ms';});
+}
+document.querySelectorAll('.replay').forEach(b=>b.addEventListener('click',()=>{
+  if(b.dataset.replay==='scatter')drawScatter(); else drawWave();
+}));
+
+setTheme('lembaran');
+</script>
+</body>
+</html>

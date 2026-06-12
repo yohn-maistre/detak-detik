@@ -1,0 +1,29 @@
+name: Newsroom
+
+# Two print runs a day, like newspapers ran them.
+# 04.30 WIB = 21.30 UTC (previous day) · 16.30 WIB = 09.30 UTC
+on:
+  schedule:
+    - cron: '30 21 * * *'
+    - cron: '30 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  edisi:
+    runs-on: ubuntu-latest
+    # flip to true once NIM_API_KEY secret + artifact storage exist
+    if: ${{ vars.NEWSROOM_ENABLED == 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Run the pipeline
+        env:
+          NIM_API_KEY: ${{ secrets.NIM_API_KEY }}
+        run: pnpm exec tsx newsroom/index.ts
