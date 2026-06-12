@@ -132,6 +132,76 @@ X/Twitter API: dead for zero budget (no free tier since Feb 2026). Instead:
 Print under every sentiment chart: each source measures a different
 population; show side-by-side, never blended.
 
+## Tier 3 — second sweep additions (June 2026 brainstorm)
+
+### Generasi vs Generasi *(Mesin — one interactive piece, cohort toggle)*
+One frame, four cohorts; the toggle re-renders every row. Rows:
+- **Rumah pertama dalam tahun-gaji** — BI residential property index (SHPR)
+  + UMP history: from ~5 years of wages to 20+. The killer row.
+- Youth unemployment 16,16% vs national 4,68% (BPS Sakernas).
+- I-NAMHS 2022 (UGM/UQ): **1 in 3 adolescents (~15,5 jt) had a mental
+  health problem in the past year; 1 in 20 a diagnosable disorder** —
+  against the mental-health sliver of the health budget (verify share).
+- Marriage age, education attainment, formal-job share by cohort (BPS).
+Feasibility: EASY — all BPS/BI/I-NAMHS published.
+
+### Satu Hari Digital *(Dinas counter wall)*
+Radial 24-h clock of the average Indonesian's media day: ~7,5 h internet,
+~3 h social media (DataReportal, free annual), against Perpusnas reading
+time (~6 jam per MINGGU). Books per year vs scroll-hours per day.
+Film admissions (filmindonesia.or.id) and gaming penetration as side
+dials. Feasibility: EASY; VERIFY exact current DataReportal figures.
+
+### Listrik Dua Kecepatan *(Peta Kabar layer + Atlas choropleth)*
+- Rasio elektrifikasi per province (ESDM annual).
+- **SAIDI/SAIFI per region** (PLN statistics PDF): blackout hours per year,
+  Jakarta minutes vs Papua hours — same tariff, different reliability.
+- Captive-coal sites + geothermal fields as map dots (GEM tracker; RI holds
+  ~40% of world geothermal potential, ~2,4 GW of ~23 GW installed —
+  the emptiest bar in the country).
+- **Negeri Pengimpor Minyak** — oil production vs consumption lines
+  crossing ~2003–04 (Energy Institute Statistical Review, free CSV).
+  Classic crossover chart, pure documents.
+
+### Uang Sekolah vs Nilai Sekolah *(Mesin — new Gradien)*
+Scatter per district: education spending per student (Neraca Pendidikan
+Daerah, npd.kemdikbud.go.id — per-district budgets, teacher certification,
+accreditation) × Rapor Pendidikan literacy outcomes (public downloads).
+If money predicted results, the cloud would slope; where it doesn't, the
+chart asks why. Teacher:student ratio choropleth as the atlas companion
+(distribution, not headcount, is the problem — same as doctors).
+
+### More heavy pieces (verified-source candidates)
+- **Diskon Hukuman** — corruptor sentences vs actually served (remisi +
+  bebas bersyarat ledger from Ditjen PAS releases): Gantt pairs, vonis
+  bar vs served bar. SCRAPE/news-compiled.
+- **Bansos & Kalender Pemilu** — monthly social-assistance disbursement
+  2013–2026 (APBN KiTa) with election dates marked. The bars speak.
+- **Republik Galon** — piped-water household access (BPS Susenas, ~low
+  teens %) vs one of the world's largest bottled-water markets. An
+  archipelago that buys its drinking water.
+- **Amnesti yang Tidak Pulang** — 2016 tax amnesty: ~Rp 4.881 T declared,
+  ~Rp 147 T repatriated (≈3%) — waffle of forgiveness vs return. VERIFY
+  exact figures against DJP.
+- **Konflik Agraria** — KPA annual land-conflict counts + hectares + map.
+- **UU ITE Menjerat Siapa** — SAFEnet case data by complainant type
+  (officials vs citizens) per year.
+
+### Nusantara Profil — image logic
+Wikipedia REST `page/media-list` supplies photos when the page has them.
+Fallback is a *feature*, not a patch: every profile renders as a framed
+atlas plate; when no photo exists, the frame holds a public-domain
+Indonesian painting (Wikimedia Commons, Raden Saleh / Mooi Indië era)
+with the chip `PLAT PENGGANTI · FOTO BELUM TERSEDIA DI ARSIP TERBUKA` —
+the absence is documented in house grammar, and the gallery reads as one
+continuous portrait of the peoples called Indonesia.
+
+### Cohesiveness rule
+Every candidate passes the one-sentence test: if the juxtaposition can't
+be said in one sentence, it ships as an archive permalink, not front-page.
+Daily counters → Dinas wall; cohort/structural → Mesin rotation pool;
+world, history, culture → Atlas. Sentiment: still parked.
+
 ## Standing caveats
 
 - Most .go.id and NGO sites 403 datacenter IPs — fetch from the Worker
