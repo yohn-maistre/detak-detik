@@ -46,24 +46,31 @@
   onMount(async () => {
     // alternate days lead with history; the feed is official and CORS-open
     if (HARI % 2 === 0) return;
-    try {
-      const d = new Date();
-      const mm = String(d.getMonth() + 1).padStart(2, '0');
-      const dd = String(d.getDate()).padStart(2, '0');
-      const res = await fetch(`https://api.wikimedia.org/feed/v1/wikipedia/id/onthisday/events/${mm}/${dd}`, { signal: AbortSignal.timeout(6000) });
-      const data = (await res.json()) as { events?: { text: string; year?: number; pages?: { titles?: { normalized?: string } }[] }[] };
-      const ev = data.events?.find((e) => /indonesia|nusantara|jakarta|batavia|hindia/i.test(e.text)) ?? data.events?.[0];
-      if (ev) {
-        plat = {
-          jenis: 'HARI INI DALAM SEJARAH',
-          judul: ev.pages?.[0]?.titles?.normalized ?? `Tahun ${ev.year ?? '—'}`,
-          teks: ev.text,
-          chip: `wikipedia id · ${dd}/${mm}`,
-          tahun: ev.year ? String(ev.year) : undefined,
-        };
-        liveSejarah = true;
-      }
-    } catch { /* the curated deck stands in */ }
+    type Ev = { text: string; year?: number; pages?: { titles?: { normalized?: string } }[] };
+    const d = new Date();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    const RX = /indonesia|nusantara|jakarta|batavia|hindia|papua|aceh|jawa|sumatra|sulawesi|borneo|kalimantan|majapahit|sriwijaya/i;
+    // the onthisday feed may not serve `id`; fall back to `en`, filter for us
+    const ambil = async (lang: string): Promise<Ev | null> => {
+      try {
+        const res = await fetch(`https://api.wikimedia.org/feed/v1/wikipedia/${lang}/onthisday/events/${mm}/${dd}`, { signal: AbortSignal.timeout(6000) });
+        const data = (await res.json()) as { events?: Ev[] };
+        if (!data.events?.length) return null;
+        return data.events.find((e) => RX.test(e.text)) ?? (lang === 'id' ? data.events[0]! : null);
+      } catch { return null; }
+    };
+    const ev = (await ambil('id')) ?? (await ambil('en'));
+    if (ev) {
+      plat = {
+        jenis: 'HARI INI DALAM SEJARAH',
+        judul: ev.pages?.[0]?.titles?.normalized ?? `Tahun ${ev.year ?? '—'}`,
+        teks: ev.text,
+        chip: `wikipedia · ${dd}/${mm}`,
+        tahun: ev.year ? String(ev.year) : undefined,
+      };
+      liveSejarah = true;
+    }
   });
 </script>
 

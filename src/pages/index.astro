@@ -18,6 +18,8 @@ import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
+import OtsusGrafik from '../islands/OtsusGrafik.svelte';
+import TuguRakyat from '../islands/TuguRakyat.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, CABANG, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
@@ -263,7 +265,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
                 <p class="aparat-note">defisit {EKONOMI.apbn.defisit} · rasio pajak {EKONOMI.apbn.pajak}</p>
               </div>
               <div class="ekonomi-otsus">
-                <span class="eyebrow">OTONOMI KHUSUS · BELANJA DAN HASIL</span>
+                <span class="eyebrow">OTONOMI KHUSUS PAPUA · BELANJA DAN HASIL</span>
+                <OtsusGrafik client:visible />
                 <p class="ekonomi-teks">{EKONOMI.otsus.teks}</p>
                 <button class="chip"><span class="tick">⊙</span>{EKONOMI.otsus.chip}</button>
               </div>
@@ -454,6 +457,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <TebakDaerah client:visible />
           <BenarSalah client:visible />
           <SensusDiri client:visible />
+        </div>
+
+        <div class="tugu-wrap">
+          <TuguRakyat client:visible />
         </div>
       </div>
     </section>
@@ -695,6 +702,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   /* ---- Act III + Ruang Main ---- */
   .nusantara-grid { margin-top: 34px; max-width: 640px; }
   #hutan { margin-top: 8px; }
+  .tugu-wrap { margin-top: 22px; max-width: 820px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
   .main-rule { height: 1px; background: var(--line); margin: 8px 0 0; }
   .rak-eyebrow { display: block; margin-top: 40px; }
