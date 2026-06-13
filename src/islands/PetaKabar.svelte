@@ -312,7 +312,7 @@
     font-size: 9.5px; letter-spacing: 0.14em;
     margin-bottom: 10px;
   }
-  .kb-tabs-label { padding: 6px 8px; color: var(--muted); border-right: 1px solid var(--line); }
+  .kb-tabs-label { padding: 6px 9px; background: var(--ink); color: var(--bg); border-right: 1px solid var(--line); display: flex; align-items: center; letter-spacing: 0.16em; }
   .kb-tab {
     background: none; border: none; border-right: 1px solid var(--line);
     padding: 6px 10px; font: inherit; letter-spacing: inherit; color: var(--ink); cursor: pointer;

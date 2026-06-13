@@ -125,22 +125,22 @@ function seamFlip() {
       seam.classList.add('is-static');
       return;
     }
-    // pinned: the board fills the viewport and flips while the page holds,
-    // so the next act can never slide in underneath mid-flip
-    const label = seam.querySelector('.seam-label');
+    // pinned briefly: the board fills the viewport and flips while the page
+    // holds, so the next act can never slide in underneath mid-flip
+    const card = seam.querySelector('.seam-card');
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: seam,
         start: 'top top',
-        end: '+=130%',
+        end: '+=85%',
         scrub: 0.3,
         pin: true,
         anticipatePin: 1,
       },
     });
-    if (label) tl.fromTo(label, { opacity: 0, yPercent: 30 }, { opacity: 1, yPercent: 0, duration: 0.18 }, 0);
-    tl.to(slats, { rotateX: -180, ease: 'none', stagger: 0.1, duration: 0.74 }, 0.06);
-    if (label) tl.to(label, { opacity: 0, yPercent: -30, duration: 0.14 }, 0.86);
+    if (card) tl.fromTo(card, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.22 }, 0);
+    tl.to(slats, { rotateX: -180, ease: 'none', stagger: 0.085, duration: 0.7 }, 0.08);
+    if (card) tl.to(card, { opacity: 0, y: -24, duration: 0.16 }, 0.88);
   });
 }
 
@@ -274,41 +274,42 @@ function odometer() {
 
 /* ---------- 5 · the fidget layer ---------- */
 
-/** Detak: the masthead heartbeat, counting from the most recent pressing
-    (05.00 or 17.00 WIB) — never from a stale sample epoch. */
-function detak() {
-  const el = document.querySelector<HTMLElement>('[data-detak]');
-  if (!el) return;
-  const lastPress = (): number => {
-    const wib = new Date(Date.now() + 7 * 3600_000);
-    const d = new Date(wib);
-    d.setUTCMinutes(0, 0, 0);
-    const h = wib.getUTCHours();
-    if (h >= 17) d.setUTCHours(17);
-    else if (h >= 5) d.setUTCHours(5);
-    else { d.setUTCDate(d.getUTCDate() - 1); d.setUTCHours(17); }
-    return d.getTime() - 7 * 3600_000;
+/** Jam tri-zona: the masthead clock in the three Indonesian time zones,
+    from the device's own clock. WIB=UTC+7, WITA=UTC+8, WIT=UTC+9. */
+function jamTri() {
+  const slots = {
+    wib: document.querySelector<HTMLElement>('[data-jam="wib"]'),
+    wita: document.querySelector<HTMLElement>('[data-jam="wita"]'),
+    wit: document.querySelector<HTMLElement>('[data-jam="wit"]'),
   };
-  const terbit = lastPress();
-  const beat = el.querySelector<HTMLElement>('.detak-beat');
+  if (!slots.wib) return;
+  const hhmmss = (offsetH: number) => {
+    const t = new Date(Date.now() + offsetH * 3600_000);
+    const p = (n: number) => String(n).padStart(2, '0');
+    return `${p(t.getUTCHours())}.${p(t.getUTCMinutes())}.${p(t.getUTCSeconds())}`;
+  };
   const render = () => {
-    const s = Math.max(0, Math.floor((Date.now() - terbit) / 1000));
-    const hh = String(Math.floor(s / 3600)).padStart(2, '0');
-    const mm = String(Math.floor((s % 3600) / 60)).padStart(2, '0');
-    const ss = String(s % 60).padStart(2, '0');
-    if (beat) beat.textContent = `${hh}.${mm}.${ss}`;
+    if (slots.wib) slots.wib.textContent = hhmmss(7);
+    if (slots.wita) slots.wita.textContent = hhmmss(8);
+    if (slots.wit) slots.wit.textContent = hhmmss(9);
   };
   render();
-  setInterval(() => {
-    render();
-    if (!reducedMotion() && beat) {
-      gsap.fromTo(beat, { scale: 1.06 }, { scale: 1, duration: 0.3, ease: 'power2.out' });
-    }
-  }, 1000);
-  el.addEventListener('click', () => {
-    const s = Math.floor((Date.now() - terbit) / 1000);
-    say(`${new Intl.NumberFormat('id-ID').format(s)} detik sejak edisi ini dicetak. Detak terus.`);
+  setInterval(render, 1000);
+}
+
+/** The denominasi lever beside the loss figure: re-prices that one number
+    (and any subscriber) into nasi bungkus, MBG portions, or wage-days. */
+function denomLever() {
+  const btns = [...document.querySelectorAll<HTMLElement>('[data-denom]')];
+  if (!btns.length) return;
+  import('../lib/commands/dispatcher').then(({ dispatch }) => {
+    btns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        dispatch({ cmd: 'denominate', params: { unit: btn.dataset.denom } });
+      });
+    });
   });
+  onDenom((d) => btns.forEach((b) => b.classList.toggle('aktif', b.dataset.denom === d)));
 }
 
 /** Stempel pad: a click stamps a seal; holding the press inks a blot. */
@@ -650,7 +651,8 @@ export function boot() {
   reveals();
   redPen();
   odometer();
-  detak();
+  jamTri();
+  denomLever();
   stempelPad();
   crosshair();
   strukTear();

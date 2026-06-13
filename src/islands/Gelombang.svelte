@@ -29,17 +29,24 @@
 
   const W = 560;
   const H = 250;
-  const PAD = { l: 16, r: 76, t: 24, b: 26 };
+  const PAD = { l: 16, r: 64, t: 24, b: 26 };
 
   let pilihan = $state(ROSTER[0]!);
   const data = $derived(seri(pilihan));
-  const min = $derived(Math.min(...data));
-  const max = $derived(Math.max(...data));
+  // "kisaran wajar": the first-week average ± 8% — anything outside reads as
+  // above or below normal at a glance, without a verdict in words
+  const normal = $derived(data.slice(0, 7).reduce((a, b) => a + b, 0) / 7);
+  const bandHi = $derived(normal * 1.08);
+  const bandLo = $derived(normal * 0.92);
+  const min = $derived(Math.min(...data, bandLo));
+  const max = $derived(Math.max(...data, bandHi));
   const px = (i: number) => PAD.l + (i / 29) * (W - PAD.l - PAD.r);
   const py = $derived((v: number) => H - PAD.b - ((v - min) / (max - min || 1)) * (H - PAD.t - PAD.b));
   const path = $derived(data.map((v, i) => `${i === 0 ? 'M' : 'L'} ${px(i).toFixed(1)} ${py(v).toFixed(1)}`).join(' '));
   const area = $derived(`${path} L ${px(29).toFixed(1)} ${H - PAD.b} L ${PAD.l} ${H - PAD.b} Z`);
   const ubah = $derived(Math.round(((data[29]! - data[0]!) / data[0]!) * 100));
+  const status = $derived(data[29]! > bandHi ? 'DI ATAS WAJAR' : data[29]! < bandLo ? 'DI BAWAH WAJAR' : 'DALAM KISARAN WAJAR');
+  const statusNada = $derived(data[29]! > bandHi ? 'buruk' : 'datar');
 
   let svgEl: SVGSVGElement;
   let pathEl: SVGPathElement | undefined = $state();
@@ -81,8 +88,11 @@
 
 <div class="gw" data-no-stempel>
   <div class="gw-head">
-    <h3 class="display">Harga Pangan</h3>
-    <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS · (DATA CONTOH)</span>
+    <div>
+      <h3 class="display">Harga Pangan</h3>
+      <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS · (DATA CONTOH)</span>
+    </div>
+    <span class={`gw-status mono ${statusNada}`}>{status}</span>
   </div>
   <div class="gw-roster">
     {#each ROSTER as k (k.id)}
@@ -104,12 +114,14 @@
         <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
       </linearGradient>
     </defs>
-    <line class="base" x1={PAD.l} x2={W - PAD.r} y1={py(data[0]!)} y2={py(data[0]!)} />
+    <rect class="band" x={PAD.l} y={py(bandHi)} width={W - PAD.l - PAD.r} height={Math.max(0, py(bandLo) - py(bandHi))} />
+    <line class="band-line" x1={PAD.l} x2={W - PAD.r} y1={py(normal)} y2={py(normal)} />
+    <text class="band-label" x={PAD.l + 4} y={py(bandHi) - 4}>KISARAN WAJAR</text>
     <path class="area" d={area} />
     <path bind:this={pathEl} class="wave" d={path} />
-    <circle class="pulse" cx={px(29)} cy={py(data[29]!)} r="4.5" />
-    <text class="end-val num" x={px(29) + 10} y={py(data[29]!) + 4}>Rp {fmt.format(data[29]!)}</text>
-    <text class="end-sub" x={px(29) + 10} y={py(data[29]!) + 17}>{ubah >= 0 ? '▲ +' : '▼ '}{ubah}% · /{pilihan.satuan}</text>
+    <circle class="pulse" cx={px(29)} cy={py(data[29]!)} r="4" />
+    <text class="end-val num" x={px(29) + 8} y={py(data[29]!) + 4}>Rp {fmt.format(data[29]!)}</text>
+    <text class="end-sub" x={px(29) + 8} y={py(data[29]!) + 16}>{ubah >= 0 ? '▲+' : '▼'}{ubah}%/{pilihan.satuan}</text>
     {#if scrub !== null}
       <line class="scrub-line" x1={px(scrub)} x2={px(scrub)} y1={PAD.t - 6} y2={H - PAD.b} />
       <circle class="scrub-dot" cx={px(scrub)} cy={py(data[scrub]!)} r="5" />
@@ -133,11 +145,16 @@
   svg { touch-action: pan-y; cursor: crosshair; }
   .wave { fill: none; stroke: var(--accent); stroke-width: 2.2; }
   .area { fill: url(#gw-fill); }
-  .base { stroke: var(--muted); stroke-width: 0.7; stroke-dasharray: 3 5; opacity: 0.7; }
+  .band { fill: var(--muted); opacity: 0.10; }
+  .band-line { stroke: var(--muted); stroke-width: 0.6; stroke-dasharray: 2 4; opacity: 0.6; }
+  .band-label { font-family: var(--font-mono); font-size: 7.5px; letter-spacing: 0.14em; fill: var(--muted); }
+  .gw-status { font-size: 9px; letter-spacing: 0.16em; padding: 4px 8px; border: 1px solid currentColor; }
+  .gw-status.buruk { color: var(--accent); }
+  .gw-status.datar { color: var(--muted); }
   .pulse { fill: var(--accent); animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
   @keyframes pulse { 50% { opacity: 0.45; } }
-  .end-val { font-family: var(--font-mono); font-size: 13px; font-weight: 700; fill: var(--accent); }
-  .end-sub { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.08em; fill: var(--muted); }
+  .end-val { font-family: var(--font-mono); font-size: 12px; font-weight: 700; fill: var(--accent); }
+  .end-sub { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.04em; fill: var(--muted); }
   .scrub-line { stroke: var(--ink); stroke-width: 0.7; opacity: 0.6; }
   .scrub-dot { fill: var(--ink); }
   .scrub-read { font-family: var(--font-mono); font-size: 10.5px; fill: var(--ink); }

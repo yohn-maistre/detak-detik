@@ -6,14 +6,11 @@
    * honest; every card carries its receipt.
    */
   import { onMount } from 'svelte';
-  import { formatUang, getDenom, onDenom, type Denom } from '../lib/denominasi';
-
-  let denom = $state<Denom>(getDenom());
 
   // BPJS: ~Rp 24 T projected 2026 deficit -> Rp/second, ticking since 00.00 WIB
   const BPJS_PER_DETIK = 24e12 / (365 * 24 * 3600);
-  // forest: 296,000 ha primary loss in 2025 -> ha/hour average
-  const HUTAN_HA_PER_JAM = 296_000 / (365 * 24);
+  // forest: 433,751 ha total loss in 2025 (Auriga) -> ha/hour average
+  const HUTAN_HA_PER_JAM = 433_751 / (365 * 24);
   // Danantara: launched 24 Feb 2025, no financial report published since
   const DANANTARA_EPOCH = Date.UTC(2025, 1, 24);
 
@@ -30,12 +27,12 @@
     };
     tick();
     const iv = setInterval(tick, 1000);
-    const off = onDenom((dn) => (denom = dn));
-    return () => { clearInterval(iv); off(); };
+    return () => clearInterval(iv);
   });
 
   const fmt = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
   const fmt1 = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 1 });
+  const rp = (n: number) => `Rp ${fmt.format(Math.round(n))}`;
 
   const PHK_BULANAN = [
     { b: 'JAN', v: 5730 }, { b: 'FEB', v: 7443 }, { b: 'MAR', v: 5729 }, { b: 'APR', v: 3739 }, { b: 'MEI', v: 829 },
@@ -56,8 +53,8 @@
 
     <article class="wall-card">
       <span class="eyebrow">DEFISIT BPJS HARI INI</span>
-      <p class="wall-val num">{formatUang(BPJS_PER_DETIK * detikHariIni, denom)}</p>
-      <p class="wall-note">bertambah ± {formatUang(BPJS_PER_DETIK, denom)} per detik</p>
+      <p class="wall-val num accent">{rp(BPJS_PER_DETIK * detikHariIni)}</p>
+      <p class="wall-note">bertambah ± {rp(BPJS_PER_DETIK)} per detik · rasio klaim 111,9% (2026)</p>
       <span class="wall-chip mono">⊙ proyeksi Rp 24 T/2026 · menkes, mei 2026 · laju rata-rata</span>
     </article>
 
@@ -99,7 +96,7 @@
       <div class="wall-bullet" role="img" aria-label="Keranjang sembako sebagai persen upah harian">
         <i style={`--w:${Math.round((SEMBAKO.basket / SEMBAKO.upahHarian) * 100)}%`}></i>
       </div>
-      <p class="wall-note">keranjang harian {formatUang(SEMBAKO.basket, denom)} dari upah {formatUang(SEMBAKO.upahHarian, denom)}</p>
+      <p class="wall-note">keranjang harian {rp(SEMBAKO.basket)} dari upah harian {rp(SEMBAKO.upahHarian)}</p>
       <span class="wall-chip mono">⊙ panel harga + ump dki/22 · (data contoh)</span>
     </article>
 
@@ -132,6 +129,7 @@
     min-height: 150px;
   }
   .wall-val { font-family: var(--font-display); font-weight: 800; font-size: clamp(20px, 2.4vw, 30px); line-height: 1; }
+  .wall-val.accent { color: var(--accent); }
   .wall-val small { font-size: 0.45em; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; }
   .wall-note { font-size: 12px; color: var(--muted); }
   .wall-chip { margin-top: auto; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); }

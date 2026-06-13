@@ -40,10 +40,12 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <header class="masthead-block">
           <div class="folio-top mono">
             <span>{EDISI.serial}</span>
-            <button class="detak mono" data-detak={EDISI.terbitEpoch} title="Detik sejak edisi terbit">
-              ● <span class="detak-beat">00.00.00</span>
-            </button>
-            <span class="coordstamp-inline">SOROTAN EDISI · {EDISI.koordinat.label} · {EDISI.koordinat.wilayah}</span>
+            <span class="jam-tri" id="jam-tri" aria-label="Waktu Indonesia tiga zona">
+              <span class="jam-z"><b data-jam="wib">--.--.--</b> WIB</span>
+              <span class="jam-z"><b data-jam="wita">--.--.--</b> WITA</span>
+              <span class="jam-z"><b data-jam="wit">--.--.--</b> WIT</span>
+            </span>
+            <span class="coordstamp-inline">GRATIS · TERBUKA · TANPA PELACAK</span>
           </div>
 
           <div class="masthead-grid">
@@ -109,11 +111,15 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     <!-- ============ SEAM I · siang turun ============ -->
     <div class="seam" data-seam="dinas-mesin" style="--from:#d6cbac;--to:#100f0d" aria-hidden="true">
       <div class="slats">
-        {Array.from({ length: 7 }).map(() => (
+        {Array.from({ length: 6 }).map(() => (
           <div class="slat"><i class="f"></i><i class="b"></i></div>
         ))}
       </div>
-      <p class="seam-label mono">MESIN CETAK TIDAK PERNAH BERHENTI · PUKUL 03.00</p>
+      <div class="seam-card">
+        <p class="seam-kicker mono">PERGANTIAN BABAK · MALAM</p>
+        <p class="seam-title display">Mesin cetak tidak pernah berhenti.</p>
+        <p class="seam-label mono">PUKUL 03.00 · YANG TAK INGIN DICATAT, TETAP DICATAT</p>
+      </div>
     </div>
 
     <!-- ============ ACT II · MESIN ============ -->
@@ -131,6 +137,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <p class="angka-label" id="angka-label">
               {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
             </p>
+            <div class="angka-denom mono" role="group" aria-label="Setarakan kerugian dengan satuan lain">
+              <span class="angka-denom-label">SETARA DENGAN</span>
+              <button class="angka-denom-btn aktif" data-denom="rp">RUPIAH</button>
+              <button class="angka-denom-btn" data-denom="nasi">NASI BUNGKUS</button>
+              <button class="angka-denom-btn" data-denom="mbg">PORSI MBG</button>
+              <button class="angka-denom-btn" data-denom="umphari">HARI UPAH MINIMUM</button>
+            </div>
             <div class="cite-chips">
               {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
               <button class="chip hop">Jadikan tur →</button>
@@ -207,7 +220,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- Hukum: the wave-maker -->
         <section class="hukum-blok" id="hukum">
-          <h2 class="sect-title display reveal-glyphs">Angka bicara, dokumen menjawab.</h2>
+          <h2 class="sect-title display reveal-glyphs">Vonis dibanding kerugian.</h2>
           <div class="hukum-grid">
             <GradienKeadilan client:visible />
             <div class="struk-rail">
@@ -275,11 +288,15 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     <!-- ============ SEAM II · fajar arsip ============ -->
     <div class="seam" data-seam="mesin-atlas" style="--from:#100f0d;--to:#ece2cb" aria-hidden="true">
       <div class="slats">
-        {Array.from({ length: 7 }).map(() => (
+        {Array.from({ length: 6 }).map(() => (
           <div class="slat"><i class="f"></i><i class="b"></i></div>
         ))}
       </div>
-      <p class="seam-label mono">PLAT NO. 094 · UNTUK CATATAN YANG HARUS AWET</p>
+      <div class="seam-card">
+        <p class="seam-kicker mono">PERGANTIAN BABAK · ARSIP</p>
+        <p class="seam-title display">Untuk catatan yang harus awet.</p>
+        <p class="seam-label mono">PLAT NO. 094 · INGATAN, SEJARAH, DAN RUPA NUSANTARA</p>
+      </div>
     </div>
 
     <!-- ============ ACT III · ATLAS LAMA ============ -->
@@ -439,9 +456,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     border-bottom: 1px solid var(--line);
   }
   .detak { background: none; border: none; cursor: pointer; color: var(--accent); font-size: 10px; letter-spacing: 0.16em; }
-  .detak-beat { display: inline-block; color: var(--ink); }
+  .jam-tri { display: flex; gap: 14px; flex-wrap: wrap; }
+  .jam-z { color: var(--muted); }
+  .jam-z b { color: var(--accent); font-weight: 500; font-variant-numeric: tabular-nums; }
   .coordstamp-inline { white-space: nowrap; }
-  @media (max-width: 760px) { .coordstamp-inline { white-space: normal; } }
+  @media (max-width: 760px) { .coordstamp-inline { white-space: normal; } .jam-tri { gap: 10px; } }
 
   .masthead-grid {
     display: grid;
@@ -544,6 +563,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   }
   .angka-label { max-width: 44ch; color: var(--muted); font-size: 15px; }
   .cite-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .angka-denom { display: inline-flex; flex-wrap: wrap; align-items: stretch; border: 1px solid var(--line); margin-top: 16px; font-size: 9px; letter-spacing: 0.1em; }
+  .angka-denom-label { padding: 6px 9px; background: var(--ink); color: var(--bg); display: flex; align-items: center; }
+  .angka-denom-btn { background: none; border: none; border-left: 1px solid var(--line); padding: 6px 10px; font: inherit; letter-spacing: inherit; color: var(--ink); cursor: pointer; transition: background 0.2s, color 0.2s; }
+  .angka-denom-btn.aktif { background: var(--accent); color: var(--bg); }
 
   .sparkbars {
     display: flex;
@@ -619,17 +642,17 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .struk h4 { text-align: center; letter-spacing: 0.1em; font-size: 13px; }
   .figcap-dinas { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
 
-  /* ---------- SEAMS: the split-flap departure board ---------- */
+  /* ---------- SEAMS: the split-flap act-title interstitial ---------- */
   .seam {
     position: relative;
-    height: 100vh;
-    height: 100svh;
+    height: 84vh;
+    height: 84svh;
     display: grid;
     place-items: center;
-    perspective: 1100px;
-    background: var(--from);
+    perspective: 1200px;
+    background: var(--to);
   }
-  .seam.is-static { height: clamp(160px, 26vh, 300px); }
+  .seam.is-static { height: clamp(150px, 24vh, 280px); background: linear-gradient(var(--from), var(--to)); }
   .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
   .slat { position: relative; transform-style: preserve-3d; will-change: transform; }
   .slat i { position: absolute; inset: -0.6px 0; backface-visibility: hidden; }
@@ -643,16 +666,29 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     box-shadow: inset 0 1px color-mix(in oklab, var(--from) 16%, transparent);
   }
   .seam.is-static .slats { display: none; }
-  .seam.is-static { background: linear-gradient(var(--from), var(--to)); }
-  .seam-label {
+  /* the title card rides above the flip, always legible via difference blend */
+  .seam-card {
     position: relative;
     z-index: 2;
-    font-size: 9.5px;
-    letter-spacing: 0.3em;
     text-align: center;
-    padding: 0 20px;
-    color: #9b9484;
+    padding: 0 24px;
+    color: #8d8676;
     mix-blend-mode: difference;
+    max-width: 22ch;
+  }
+  .seam-kicker { font-size: 9px; letter-spacing: 0.34em; margin-bottom: 16px; }
+  .seam-title {
+    font-family: 'Fraunces Variable', serif;
+    font-weight: 360;
+    font-size: clamp(30px, 6vw, 76px);
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+  }
+  .seam-label {
+    display: block;
+    margin-top: 18px;
+    font-size: 9px;
+    letter-spacing: 0.26em;
   }
 
   /* ---------- ACT II ---------- */

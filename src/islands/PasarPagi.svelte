@@ -1,129 +1,132 @@
 <script lang="ts">
   /**
-   * Pasar Pagi: six small instruments and one big lever. Live quotes are
-   * fetched best-effort (keyless, CORS-open feeds); dark feeds keep their
-   * sample values and say so on the chip. The lever is denominasi — one
-   * tap re-prices every rupiah figure on the page through the command bus,
-   * so Aksara can pull it too.
+   * Pasar Pagi: the macro & resource ticker — the prices every Indonesian
+   * feels, each read against its own normal so a glance tells you good or
+   * bad. Live quotes are best-effort (keyless, CORS-open); dark feeds keep
+   * a labelled sample. No re-pricing lever here — the rupiah is the rupiah;
+   * the nasi-bungkus lever lives with the money that was *lost* (Act II).
    */
   import { onMount } from 'svelte';
-  import { dispatch } from '../lib/commands/dispatcher';
-  import { DENOMS, getDenom, onDenom, formatUang, type Denom } from '../lib/denominasi';
 
+  type Sentimen = 'baikNaik' | 'burukNaik' | 'netral';
   type Inst = {
-    id: string; label: string; val: number; rupiah: boolean; satuan?: string;
-    spark: number[]; src: string; live: boolean;
+    id: string; label: string; val: number; unit: string; rupiah: boolean;
+    spark: number[]; src: string; live: boolean; sentimen: Sentimen;
   };
 
-  let denom = $state<Denom>(getDenom());
   let instrumen = $state<Inst[]>([
-    { id: 'usd', label: 'USD → IDR', val: 16_485, rupiah: true, spark: [62, 64, 63, 66, 68, 67, 70, 72, 71, 74, 73, 76], src: 'er-api · contoh', live: false },
-    { id: 'btc', label: 'BITCOIN', val: 1_842_000_000, rupiah: true, spark: [40, 44, 38, 52, 49, 58, 54, 62, 70, 66, 74, 78], src: 'coingecko · contoh', live: false },
-    { id: 'emas', label: 'EMAS / GR', val: 1_973_000, rupiah: true, spark: [50, 52, 55, 54, 58, 60, 63, 62, 66, 70, 72, 75], src: 'antam · contoh', live: false },
-    { id: 'ihsg', label: 'IHSG', val: 7_412, rupiah: false, satuan: 'poin', spark: [60, 58, 62, 64, 61, 65, 63, 67, 70, 68, 71, 69], src: '^jkse · contoh', live: false },
-    { id: 'bbm', label: 'PERTAMAX / L', val: 12_400, rupiah: true, spark: [70, 70, 70, 72, 72, 72, 72, 71, 71, 71, 71, 71], src: 'mypertamina · jun', live: false },
-    { id: 'cabai', label: 'CABAI RAWIT', val: 114, rupiah: false, satuan: 'indeks', spark: [30, 32, 35, 40, 44, 50, 56, 62, 70, 78, 86, 95], src: 'panel harga · contoh', live: false },
+    { id: 'usd', label: 'USD → IDR', val: 16_485, unit: '', rupiah: true, sentimen: 'burukNaik',
+      spark: [161, 162, 162, 163, 164, 164, 165, 165, 164, 165, 165, 165], src: 'er-api · contoh', live: false },
+    { id: 'emas', label: 'EMAS · /GRAM', val: 1_973_000, unit: '', rupiah: true, sentimen: 'netral',
+      spark: [180, 182, 185, 184, 188, 190, 193, 192, 196, 197, 197, 197], src: 'antam · contoh', live: false },
+    { id: 'ihsg', label: 'IHSG', val: 7_412, unit: 'poin', rupiah: false, sentimen: 'baikNaik',
+      spark: [73, 72, 74, 75, 73, 75, 74, 76, 77, 74, 75, 74], src: '^jkse · contoh', live: false },
+    { id: 'brent', label: 'MINYAK BRENT · /BAREL', val: 71, unit: 'US$', rupiah: false, sentimen: 'burukNaik',
+      spark: [68, 69, 70, 72, 71, 73, 74, 72, 73, 71, 72, 71], src: 'eia · contoh', live: false },
+    { id: 'nikel', label: 'NIKEL · /TON', val: 15_280, unit: 'US$', rupiah: false, sentimen: 'netral',
+      spark: [167, 165, 162, 160, 158, 156, 155, 153, 152, 153, 152, 153], src: 'lme · contoh', live: false },
+    { id: 'bbm', label: 'PERTAMAX · /LITER', val: 12_400, unit: '', rupiah: true, sentimen: 'burukNaik',
+      spark: [121, 121, 121, 124, 124, 124, 124, 124, 124, 124, 124, 124], src: 'mypertamina · jun', live: false },
   ]);
 
   onMount(() => {
-    const off = onDenom((d) => (denom = d));
     (async () => {
       try {
         const res = await fetch('https://open.er-api.com/v6/latest/USD', { signal: AbortSignal.timeout(5000) });
         const data = (await res.json()) as { rates?: { IDR?: number } };
-        if (data.rates?.IDR) {
-          instrumen = instrumen.map((i) => i.id === 'usd' ? { ...i, val: Math.round(data.rates!.IDR!), src: 'er-api · langsung', live: true } : i);
-        }
-      } catch { /* chip keeps saying contoh */ }
-      try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=idr', { signal: AbortSignal.timeout(5000) });
-        const data = (await res.json()) as { bitcoin?: { idr?: number } };
-        if (data.bitcoin?.idr) {
-          instrumen = instrumen.map((i) => i.id === 'btc' ? { ...i, val: data.bitcoin!.idr!, src: 'coingecko · langsung', live: true } : i);
-        }
-      } catch { /* idem */ }
+        if (data.rates?.IDR) instrumen = instrumen.map((i) => i.id === 'usd' ? { ...i, val: Math.round(data.rates!.IDR!), src: 'er-api · langsung', live: true } : i);
+      } catch { /* sample stands, chip says so */ }
     })();
-    return off;
   });
 
-  const sparkPath = (s: number[]) =>
-    s.map((v, i) => `${i === 0 ? 'M' : 'L'} ${(i / (s.length - 1)) * 100} ${34 - (v / 100) * 30}`).join(' ');
+  const sparkPath = (s: number[]) => {
+    const lo = Math.min(...s), hi = Math.max(...s);
+    return s.map((v, i) => `${i === 0 ? 'M' : 'L'} ${(i / (s.length - 1)) * 100} ${30 - ((v - lo) / (hi - lo || 1)) * 26}`).join(' ');
+  };
+  const baseY = (s: number[]) => {
+    const lo = Math.min(...s), hi = Math.max(...s);
+    return 30 - ((s[0]! - lo) / (hi - lo || 1)) * 26;
+  };
 
-  const fmtNum = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
-  const tampil = (i: Inst) => (i.rupiah ? formatUang(i.val, denom) : `${fmtNum.format(i.val)} ${i.satuan ?? ''}`);
+  const fmt = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
+  const tampil = (i: Inst) => {
+    if (i.rupiah) return `Rp ${fmt.format(i.val)}`;
+    if (i.unit === 'poin') return `${fmt.format(i.val)} poin`;
+    if (i.unit === 'US$') return `US$ ${fmt.format(i.val)}`;
+    return fmt.format(i.val);
+  };
+
+  function verdikt(i: Inst): { arah: string; pct: string; nada: 'baik' | 'buruk' | 'datar' } {
+    const pct = ((i.spark.at(-1)! - i.spark[0]!) / i.spark[0]!) * 100;
+    const arah = Math.abs(pct) < 1.2 ? '→' : pct > 0 ? '▲' : '▼';
+    let nada: 'baik' | 'buruk' | 'datar' = 'datar';
+    if (Math.abs(pct) >= 1.2 && i.sentimen !== 'netral') {
+      const buruk = (pct > 0) === (i.sentimen === 'burukNaik');
+      nada = buruk ? 'buruk' : 'baik';
+    }
+    return { arah, pct: `${pct >= 0 ? '+' : ''}${pct.toFixed(1)}%`, nada };
+  }
 </script>
 
-<section class="pp" aria-label="Pasar pagi: kurs, komoditas, indeks" data-no-stempel>
+<section class="pp" aria-label="Pasar pagi: kurs, komoditas, sumber daya" data-no-stempel>
   <div class="pp-head">
     <span class="inkbar"><span class="dot">●</span>§2 · PASAR PAGI</span>
-    <div class="pp-denom mono" role="group" aria-label="Satuan tampilan harga">
-      <span class="pp-denom-label">SATUAN</span>
-      {#each Object.entries(DENOMS) as [key, d] (key)}
-        <button
-          class="pp-denom-btn"
-          class:aktif={denom === key}
-          title={d.basis}
-          onclick={() => dispatch({ cmd: 'denominate', params: { unit: key as Denom } })}
-        >{d.label}</button>
-      {/each}
-    </div>
+    <span class="eyebrow">HARGA YANG DITANGGUNG SEMUA · WARNA MENANDAI BAIK ATAU BURUK</span>
   </div>
-  {#if denom !== 'rp'}
-    <p class="pp-basis mono">DASAR KONVERSI · {DENOMS[denom].basis.toUpperCase()}</p>
-  {/if}
 
   <div class="pp-grid">
     {#each instrumen as i (i.id)}
+      {@const v = verdikt(i)}
       <article class="pp-card">
         <header class="pp-card-head mono">
           <span>{i.label}</span>
           <span class="pp-live" class:on={i.live}>{i.live ? '● LANGSUNG' : '○ CONTOH'}</span>
         </header>
         <p class="pp-val num">{tampil(i)}</p>
-        <svg viewBox="0 0 100 36" preserveAspectRatio="none" aria-hidden="true">
-          <path d={sparkPath(i.spark)} />
-        </svg>
-        <span class="pp-src mono">⊙ {i.src}</span>
+        <div class="pp-spark">
+          <svg viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden="true">
+            <line class="pp-base" x1="0" x2="100" y1={baseY(i.spark)} y2={baseY(i.spark)} />
+            <path class={`pp-line ${v.nada}`} d={sparkPath(i.spark)} />
+          </svg>
+          <span class={`pp-verdikt mono ${v.nada}`}>{v.arah} {v.pct}</span>
+        </div>
+        <span class="pp-src mono">⊙ {i.src} · 30 hari</span>
       </article>
     {/each}
   </div>
 </section>
 
 <style>
-  .pp { border-top: 1px solid var(--line); padding-top: 22px; }
-  .pp-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; }
-  .pp-denom { display: flex; align-items: stretch; border: 1px solid var(--line); font-size: 9.5px; letter-spacing: 0.12em; }
-  .pp-denom-label { padding: 5px 8px; color: var(--muted); border-right: 1px solid var(--line); }
-  .pp-denom-btn {
-    background: none; border: none; border-right: 1px solid var(--line);
-    padding: 5px 9px; font: inherit; letter-spacing: inherit; color: var(--ink); cursor: pointer;
-    transition: background 0.2s, color 0.2s;
-  }
-  .pp-denom-btn:last-child { border-right: none; }
-  .pp-denom-btn.aktif { background: var(--accent); color: var(--bg); }
-  .pp-basis { font-size: 9px; letter-spacing: 0.16em; color: var(--accent); margin-top: 8px; }
-
+  .pp { border-top: 1px solid var(--line); padding-top: 26px; margin-top: 8px; }
+  .pp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
   .pp-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 0;
-    margin-top: 16px;
     border: 1px solid var(--line);
   }
   @media (max-width: 1020px) { .pp-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 560px) { .pp-grid { grid-template-columns: repeat(2, 1fr); } }
   .pp-card {
-    padding: 12px 14px 10px;
+    padding: 14px 15px 12px;
     border-right: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
-    display: flex; flex-direction: column; gap: 6px;
+    display: flex; flex-direction: column; gap: 8px;
     background: var(--card);
   }
-  .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
-  .pp-live { font-size: 8px; }
+  .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 8.5px; letter-spacing: 0.13em; color: var(--muted); }
+  .pp-live { font-size: 8px; white-space: nowrap; }
   .pp-live.on { color: var(--accent); }
-  .pp-val { font-size: clamp(15px, 1.6vw, 19px); font-weight: 700; line-height: 1.1; min-height: 2.2em; display: flex; align-items: center; }
-  svg { width: 100%; height: 26px; }
-  svg path { fill: none; stroke: var(--accent); stroke-width: 1.6; }
-  .pp-src { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); }
+  .pp-val { font-size: clamp(16px, 1.7vw, 21px); font-weight: 700; line-height: 1; }
+  .pp-spark { display: flex; align-items: center; gap: 10px; }
+  .pp-spark svg { flex: 1; height: 30px; }
+  .pp-base { stroke: var(--line-soft); stroke-width: 0.6; stroke-dasharray: 2 3; }
+  .pp-line { fill: none; stroke-width: 1.8; }
+  .pp-line.buruk { stroke: var(--accent); }
+  .pp-line.baik { stroke: var(--ink); }
+  .pp-line.datar { stroke: var(--muted); }
+  .pp-verdikt { font-size: 10px; letter-spacing: 0.04em; white-space: nowrap; }
+  .pp-verdikt.buruk { color: var(--accent); }
+  .pp-verdikt.baik { color: var(--ink); }
+  .pp-verdikt.datar { color: var(--muted); }
+  .pp-src { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); }
 </style>
