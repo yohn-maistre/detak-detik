@@ -154,3 +154,85 @@ ICW datasets, LHKPN scrape, Aksara NIM lane (two GitHub secrets away).
   cabinet, BPJS creep, APBD ratios, poverty spread, dynasty seats).
 - Oligarchy angle (UMKM tax vs migas royalty, land concentration, 50-richest,
   Danantara, cronies): PENDING agent — fold in when it lands.
+
+---
+
+# STRUCTURE v4 — the agreed narrative (June 13, decisions locked)
+
+Spine: **a day in the life of a republic.** Three acts; the satire lives
+ONLY in Act II's data juxtapositions; Acts I and III speak plainly.
+Decisions: Act II uses BOTH a thematic-chapter narrative AND a branch-of-
+power scoreboard. Perspective pieces: latest inline + archive strip.
+Regional relevance: national default + opt-in Lensa Daerah. Act III is
+renamed (proposal: NUSANTARA) and turned UPLIFTING/EDUCATIONAL — world
+stats on top, culture/nature/history below. Games + Tugu Rakyat move to a
+separate room near the footer, divided by a rule. Citations become links.
+Aksara stays pinned; its tours must be rewritten for the new layout.
+
+## ACT I — PAGI · "Keadaan hari ini" (national, neutral)
+Masthead + KILAS wire · §1 Peta Kabar (national dashboard, layers, Aksara-
+driven; remove regional fly-tos, restore compass) · §2 Pasar Pagi · §3
+Indeks Pagi · §4 Harga Pangan. One scroll = where the republic stands today.
+
+## ACT II — MALAM · "Yang tak ingin dilihat" (the investigation)
+TWO interlocking structures:
+
+A) THEMATIC BABS (narrative deep-dives; findings folded in, no standalone
+   "Temuan"):
+   - Angka Edisi — the day's most damning number (kerugian + nasi lever)
+   - Bab · Kuasa & Harta — Republik Oligarki (inline) · Danantara (AUM,
+     no-report counter, the 2026 export "gate") · BUMN projects & losses ·
+     50-richest · APBN where-the-money-goes
+   - Bab · Wakil — DPR/DPD: bills sprint-vs-stall, allowances, attendance,
+     dynasty seats
+   - Bab · Hukum & Vonis — Gradien Keadilan · 90-menit corruption clock ·
+     KPK recovery rate · LHKPN gradient
+   - Bab · Aparat — Polri/TNI: officers in civilian posts, budget,
+     impunity (how cases get dropped), notable unpunished cases
+   - Bab · Daerah & Otsus — APBD pegawai-vs-pembangunan · Dana Otsus Aceh &
+     Papua (allocation vs outcome) · the Lensa Daerah lives here
+   - Bab · Yang Tidak Dihitung — NATIONAL absences (cross-cutting)
+   - Bab · Janji — promises tracker, MOVED here from the atlas
+   - Arsip Perspektif — latest piece full inline + compact archive strip
+
+B) PEMANTAU CABANG KEKUASAAN (the scoreboard): a compact reference grid —
+   EKSEKUTIF / LEGISLATIF / YUDIKATIF / APARAT / DAERAH — each card a
+   one-line explainer of what the branch IS (incl. bodies like Badan
+   Pengarah Papua) + 2–3 live metrics + link to its tracker. Themes are the
+   deep-dives; this is the at-a-glance version.
+
+## ACT III — NUSANTARA · plain, uplifting, educational (rename pending)
+Reordered: world stats TOP, culture/nature BOTTOM.
+   - Dunia Memandang — how Indonesia is doing now (ranks, SDG, happiness,
+     biodiversity) — a mix of proud and sobering, plainly stated
+   - Ingatan — today in history (Wikimedia feed)
+   - Rupa Nusantara — a daily PUBLIC-DOMAIN colonial-era painting + a
+     Wikipedia-sourced sentence of context
+   - Hayati — rotating endemic flora & fauna (GBIF/IUCN, license-clean image)
+   - Manusia — rotating indigenous-peoples profile (with provenance)
+   - Almanak — scientific wonders/facts
+No accountability here. Uplifting close.
+
+## RUANG MAIN — separate, near the footer, divided by a rule
+Tebak Daerah · Benar Salah · Sensus Diri · **Tugu Rakyat (r/place clone)**.
+Visibly separate from Act III ("this is play, not record").
+
+## FINALE — the painting (Danau Tigi, 38 provinces) — awaiting images.
+
+## CROSS-CUTTING (carry from v3 plan)
+- Transitions: drop the fullscreen pin → short non-pinned ribbon flip,
+  contiguous flaps, bottom flap matches next act (no bleed), tiny kicker
+- Aksara terminal text: dark-on-dark bug — set terminal colours explicitly
+- Aksara pill stays pinned; add page bottom padding so it never covers content
+- Aksara TOURS: rewrite for the new layout (map is at top now) + national framing
+- Citations: every ⊙ chip becomes a link (to /sumber row or external source)
+- Map: restore compass, remove Papua fly-to buttons, Aksara/region drive fly-to
+- Tarik fajar: remove the touch-drag (fights browser refresh) → button/easter-egg
+- Harga Pangan: fix right gap + bottom spacing
+- Loader: once-per-session, instant on internal nav
+
+## RESEARCH IN FLIGHT (June 13)
+- Agent A — accountability open data per branch (APBN, ministries, Danantara
+  + export gate, BUMN, Polri/TNI impunity, Otsus Aceh/Papua, APBD, courts)
+- Agent B — cultural/educational open data (PD colonial paintings + license,
+  GBIF/IUCN species, indigenous peoples, science facts, world stats, history)
