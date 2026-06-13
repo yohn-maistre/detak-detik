@@ -23,7 +23,7 @@
   let gempaOn = $state(true);
   let gempaLive = $state(false);
   let infoGempa = $state('');
-  let aktif = $state('');
+  let bearing = $state(0);
 
   /* sample fallback, marked contoh, so the layer always demonstrates */
   const GEMPA_CONTOH = [
@@ -180,6 +180,7 @@
         cooperativeGestures: true,
         fadeDuration: 150,
       });
+      mapRef = map;
 
       map.on('sourcedata', (e) => {
         if (e.isSourceLoaded && map!.areTilesLoaded()) petaSiap = true;
@@ -188,6 +189,7 @@
       map.on('move', () => {
         const c = map!.getCenter();
         koordinat = `${Math.abs(c.lat).toFixed(2)}°${c.lat < 0 ? 'LS' : 'LU'} · ${c.lng.toFixed(2)}°BT`;
+        bearing = map!.getBearing();
       });
       map.on('click', 'gempa-dot', (e) => {
         const p = e.features?.[0]?.properties as { mag?: number; wilayah?: string; jam?: string } | undefined;
@@ -215,7 +217,6 @@
         const lon = target?.lon ?? p.lon;
         const lat = target?.lat ?? p.lat;
         if (lon == null || lat == null) return;
-        aktif = target?.kode ?? '';
         marker!.setLngLat([lon, lat]).addTo(map);
         map.flyTo({ center: [lon, lat], zoom: target?.zoom ?? p.zoom ?? 8, speed: 0.9, curve: 1.6 });
       }));
@@ -236,8 +237,9 @@
     };
   });
 
+  let mapRef: import('maplibre-gl').Map | undefined;
+  const resetNorth = () => mapRef?.easeTo({ bearing: 0, pitch: 0, duration: 600 });
   const pilihPlat = (p: typeof plat) => dispatch({ cmd: 'set_basemap', params: { plat: p } });
-  const terbang = (kode: string) => dispatch({ cmd: 'fly_to', params: { kode } });
 </script>
 
 <div class="kb-wrap" data-no-stempel id="peta">
@@ -275,6 +277,18 @@
     </div>
 
     <div class="kb-koordinat mono">{koordinat}</div>
+
+    <button class="kb-rose" onclick={resetNorth} title="Kembali ke utara" aria-label="Orientasi utara">
+      <svg viewBox="0 0 100 100" style={`transform: rotate(${-bearing}deg)`}>
+        <circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5" />
+        {#each Array.from({ length: 8 }) as _, i}
+          <line x1="50" y1={i % 2 === 0 ? 6 : 11} x2="50" y2="16" stroke="currentColor" stroke-width={i % 2 === 0 ? 1.4 : 0.6} transform="rotate({i * 45} 50 50)" />
+        {/each}
+        <path d="M50 14 L55 50 L50 86 L45 50 Z" fill="currentColor" opacity="0.5" />
+        <path d="M50 14 L54 50 L50 50 L46 50 Z" fill="#e44a06" />
+        <text x="50" y="11" text-anchor="middle" font-size="11" fill="currentColor" font-family="var(--font-mono)">U</text>
+      </svg>
+    </button>
   </div>
 
   {#if plat === 'cuaca'}
@@ -284,11 +298,7 @@
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}
 
-  <div class="kb-chips">
-    {#each REGIONS.slice(0, 4) as r (r.kode)}
-      <button class="chip" class:aktif={aktif === r.kode} onclick={() => terbang(r.kode)}>✈ {r.nama}</button>
-    {/each}
-  </div>
+  <p class="kb-tip mono">Geser, perbesar, atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
 </div>
 
 <style>
@@ -356,7 +366,16 @@
   .kb-info .dot { color: var(--accent); }
   .kb-info .src { margin-left: 6px; }
 
-  .kb-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .kb-rose {
+    position: absolute; right: 12px; bottom: 12px; z-index: 4;
+    width: 52px; height: 52px; padding: 5px;
+    background: color-mix(in oklab, var(--bg) 86%, transparent);
+    border: 1px solid var(--line); color: var(--ink); cursor: pointer;
+  }
+  .kb-rose svg { width: 100%; height: 100%; display: block; transition: transform 0.2s linear; }
+  .kb-rose:hover { border-color: var(--accent); }
+  .kb-tip { margin-top: 12px; font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
+  .kb-tip-cmd { color: var(--accent); }
   .chip.aktif { border-color: var(--accent); color: var(--accent); }
   :global(.kabar-seal) {
     width: 20px; height: 20px; border: 2px solid #e44a06; border-radius: 50%;

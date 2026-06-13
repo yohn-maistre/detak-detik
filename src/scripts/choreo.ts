@@ -111,12 +111,12 @@ function runLoader(onDone: () => void) {
   window.addEventListener('keydown', skip, { once: true });
 }
 
-/* ---------- 2 · the split-flap seam between acts ----------
-   Acts own their registers statically now (scoped [data-register] tokens —
-   no more whole-page palette animation, which repainted everything and
-   turned phones to syrup). The seam is a departure board: full-width slats
-   flip from the previous act's paper to the next act's, staggered like a
-   split-flap display, GPU transforms only. */
+/* ---------- 2 · the ribbon flip between acts ----------
+   Acts own their registers statically. The seam is a compact, non-pinned
+   band whose flaps flip from the previous act's paper to the next act's as
+   it scrolls past. Flaps flip bottom-first and the band's backdrop is the
+   destination colour, so the page reads as light-on-top / dark-on-bottom
+   with the dark growing upward, and never bleeds the next section early. */
 
 function seamFlip() {
   document.querySelectorAll<HTMLElement>('[data-seam]').forEach((seam) => {
@@ -125,22 +125,25 @@ function seamFlip() {
       seam.classList.add('is-static');
       return;
     }
-    // pinned briefly: the board fills the viewport and flips while the page
-    // holds, so the next act can never slide in underneath mid-flip
-    const card = seam.querySelector('.seam-card');
-    const tl = gsap.timeline({
+    gsap.to(slats, {
+      rotateX: -180,
+      ease: 'none',
+      stagger: { each: 0.05, from: 'end' },
       scrollTrigger: {
         trigger: seam,
-        start: 'top top',
-        end: '+=85%',
-        scrub: 0.3,
-        pin: true,
-        anticipatePin: 1,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 0.4,
       },
     });
-    if (card) tl.fromTo(card, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.22 }, 0);
-    tl.to(slats, { rotateX: -180, ease: 'none', stagger: 0.085, duration: 0.7 }, 0.08);
-    if (card) tl.to(card, { opacity: 0, y: -24, duration: 0.16 }, 0.88);
+    const kicker = seam.querySelector('.seam-kicker');
+    if (kicker) {
+      gsap.fromTo(kicker, { opacity: 0 }, {
+        opacity: 1,
+        ease: 'none',
+        scrollTrigger: { trigger: seam, start: 'top 70%', end: 'center center', scrub: true },
+      });
+    }
   });
 }
 
@@ -494,16 +497,16 @@ function strukTear() {
   });
 }
 
-/** Tarik Fajar: pulling down past the top of the morning edition stretches
-    open a dithered sunrise plate — a rubber band with a view. Touch only;
-    the page itself never moves. */
-function tarikFajar() {
-  if (reducedMotion()) return;
+/** Fajar: a small button opens a dithered sunrise plate — an easter egg,
+    not an overscroll gesture (that fought the browser's pull-to-refresh). */
+function fajarButton() {
   const panel = document.getElementById('fajar');
   const canvas = panel?.querySelector('canvas');
-  if (!panel || !canvas) return;
+  const btn = document.querySelector<HTMLElement>('[data-fajar-open]');
+  if (!panel || !canvas || !btn) return;
 
   let drawn = false;
+  let open = false;
   const draw = async () => {
     const { BAYER_4 } = await import('../lib/seed');
     const { field, GRID_COLS } = await import('../lib/nusantara');
@@ -542,37 +545,15 @@ function tarikFajar() {
     drawn = true;
   };
 
-  let startY = 0;
-  let pulling = false;
-  let dist = 0;
-  window.addEventListener('touchstart', (e) => {
-    if (window.scrollY <= 1) {
-      startY = e.touches[0]!.clientY;
-      pulling = true;
-      dist = 0;
-      if (!drawn) void draw();
-    }
-  }, { passive: true });
-  window.addEventListener('touchmove', (e) => {
-    if (!pulling) return;
-    dist = e.touches[0]!.clientY - startY;
-    if (dist > 6 && window.scrollY <= 1) {
-      const d = Math.min(200, (dist - 6) * 0.45);
-      panel.style.height = `${d}px`;
-    }
-  }, { passive: true });
-  window.addEventListener('touchend', () => {
-    if (!pulling) return;
-    pulling = false;
-    const held = Math.min(200, (dist - 6) * 0.45) > 130;
-    gsap.to(panel, {
-      height: 0,
-      duration: 0.7,
-      delay: held ? 0.9 : 0,
-      ease: 'elastic.out(1, 0.5)',
-      onUpdate: () => { /* height is layout-bound; the panel is short-lived */ },
-    });
-  }, { passive: true });
+  const toggle = async () => {
+    open = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    if (open && !drawn) await draw();
+    if (reducedMotion()) { panel.style.height = open ? '200px' : '0px'; return; }
+    gsap.to(panel, { height: open ? 200 : 0, duration: open ? 0.8 : 0.5, ease: open ? 'elastic.out(1, 0.6)' : 'power2.in' });
+  };
+  btn.addEventListener('click', toggle);
+  panel.addEventListener('click', () => { if (open) void toggle(); });
 }
 
 /* ---------- 6 · Aksara speech (the say verb, rendered) ---------- */
@@ -656,7 +637,7 @@ export function boot() {
   stempelPad();
   crosshair();
   strukTear();
-  tarikFajar();
+  fajarButton();
   actWhispers();
 }
 

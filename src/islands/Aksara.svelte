@@ -226,10 +226,13 @@
     width: min(420px, calc(100vw - 40px));
     padding: 0;
     overflow: hidden;
+    /* the panel owns its register: pin colours so inherited body text
+       (computed dark) cannot leak in and obfuscate the log */
+    color: var(--ink);
+    background-color: var(--card);
+    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 4%, transparent) 0 1px, transparent 1px 4px);
   }
-  .term {
-    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 3%, transparent) 0 1px, transparent 1px 4px);
-  }
+  .term-log p { color: var(--ink); }
   .term-head {
     display: flex;
     align-items: center;

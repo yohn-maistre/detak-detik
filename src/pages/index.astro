@@ -67,6 +67,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span>{EDISI.tanggal}</span>
             <span>Dicetak otomatis <b>{EDISI.dicetak}</b></span>
             <span>Terbuka · Bercatatan · Tanpa pelacak</span>
+            <button class="fajar-btn mono" data-fajar-open aria-expanded="false" aria-label="Buka fajar">◐ FAJAR</button>
           </div>
           <div class="rule2" aria-hidden="true"></div>
         </header>
@@ -111,15 +112,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     <!-- ============ SEAM I · siang turun ============ -->
     <div class="seam" data-seam="dinas-mesin" style="--from:#d6cbac;--to:#100f0d" aria-hidden="true">
       <div class="slats">
-        {Array.from({ length: 6 }).map(() => (
+        {Array.from({ length: 8 }).map(() => (
           <div class="slat"><i class="f"></i><i class="b"></i></div>
         ))}
       </div>
-      <div class="seam-card">
-        <p class="seam-kicker mono">PERGANTIAN BABAK · MALAM</p>
-        <p class="seam-title display">Mesin cetak tidak pernah berhenti.</p>
-        <p class="seam-label mono">PUKUL 03.00 · YANG TAK INGIN DICATAT, TETAP DICATAT</p>
-      </div>
+      <p class="seam-kicker mono">↓ MALAM · YANG TAK INGIN DICATAT, TETAP DICATAT</p>
     </div>
 
     <!-- ============ ACT II · MESIN ============ -->
@@ -288,15 +285,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     <!-- ============ SEAM II · fajar arsip ============ -->
     <div class="seam" data-seam="mesin-atlas" style="--from:#100f0d;--to:#ece2cb" aria-hidden="true">
       <div class="slats">
-        {Array.from({ length: 6 }).map(() => (
+        {Array.from({ length: 8 }).map(() => (
           <div class="slat"><i class="f"></i><i class="b"></i></div>
         ))}
       </div>
-      <div class="seam-card">
-        <p class="seam-kicker mono">PERGANTIAN BABAK · ARSIP</p>
-        <p class="seam-title display">Untuk catatan yang harus awet.</p>
-        <p class="seam-label mono">PLAT NO. 094 · INGATAN, SEJARAH, DAN RUPA NUSANTARA</p>
-      </div>
+      <p class="seam-kicker mono">↓ NUSANTARA · TANAH, HAYATI, DAN RUPA</p>
     </div>
 
     <!-- ============ ACT III · ATLAS LAMA ============ -->
@@ -525,6 +518,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     margin: 10px 0 14px;
   }
   .folio b { color: var(--accent); font-weight: 600; }
+  .fajar-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-size: inherit; letter-spacing: inherit; padding: 0; transition: color 0.25s; }
+  .fajar-btn:hover { color: var(--accent); }
 
   .kabar-blok { padding-top: 22px; }
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -642,51 +637,32 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .struk h4 { text-align: center; letter-spacing: 0.1em; font-size: 13px; }
   .figcap-dinas { font-size: 9px; letter-spacing: 0.2em; color: var(--muted); }
 
-  /* ---------- SEAMS: the split-flap act-title interstitial ---------- */
+  /* ---------- SEAMS: the compact ribbon flip ---------- */
   .seam {
     position: relative;
-    height: 84vh;
-    height: 84svh;
+    height: 56vh;
+    height: 56svh;
     display: grid;
     place-items: center;
-    perspective: 1200px;
+    perspective: 1400px;
     background: var(--to);
   }
-  .seam.is-static { height: clamp(150px, 24vh, 280px); background: linear-gradient(var(--from), var(--to)); }
+  @media (max-width: 760px) { .seam { height: 42vh; height: 42svh; } }
+  .seam.is-static { height: clamp(120px, 20vh, 220px); background: linear-gradient(var(--from), var(--to)); }
   .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
   .slat { position: relative; transform-style: preserve-3d; will-change: transform; }
-  .slat i { position: absolute; inset: -0.6px 0; backface-visibility: hidden; }
-  .slat .f {
-    background: var(--from);
-    box-shadow: inset 0 -1px color-mix(in oklab, var(--to) 22%, transparent);
-  }
-  .slat .b {
-    background: var(--to);
-    transform: rotateX(180deg);
-    box-shadow: inset 0 1px color-mix(in oklab, var(--from) 16%, transparent);
-  }
+  .slat i { position: absolute; inset: -0.5px 0; backface-visibility: hidden; }
+  .slat .f { background: var(--from); }
+  .slat .b { background: var(--to); transform: rotateX(180deg); }
   .seam.is-static .slats { display: none; }
-  /* the title card rides above the flip, always legible via difference blend */
-  .seam-card {
+  /* a tiny kicker rides above the flip, legible on either paper via blend */
+  .seam-kicker {
     position: relative;
     z-index: 2;
     text-align: center;
     padding: 0 24px;
     color: #8d8676;
     mix-blend-mode: difference;
-    max-width: 22ch;
-  }
-  .seam-kicker { font-size: 9px; letter-spacing: 0.34em; margin-bottom: 16px; }
-  .seam-title {
-    font-family: 'Fraunces Variable', serif;
-    font-weight: 360;
-    font-size: clamp(30px, 6vw, 76px);
-    line-height: 1.04;
-    letter-spacing: -0.01em;
-  }
-  .seam-label {
-    display: block;
-    margin-top: 18px;
     font-size: 9px;
     letter-spacing: 0.26em;
   }
