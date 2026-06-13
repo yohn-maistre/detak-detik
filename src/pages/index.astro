@@ -20,6 +20,7 @@ import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
+import KartuWilayah from '../islands/KartuWilayah.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, CABANG, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
@@ -108,6 +109,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
           <PetaKabar client:load />
         </section>
+
+        <KartuWilayah client:visible />
 
         <PasarPagi client:visible />
 

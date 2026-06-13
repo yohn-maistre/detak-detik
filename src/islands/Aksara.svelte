@@ -114,7 +114,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · fly_to <kode> · scroll_to <depan|peta|kuasa|hukum|aparat|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh> · fly_to <kode> · scroll_to <depan|peta|kuasa|hukum|aparat|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
@@ -124,6 +124,13 @@
 
     const [cmd, ...rest] = baris.split(/\s+/);
     const arg = rest.join(' ');
+    if (cmd === 'lensa') {
+      const peta: Record<string, string> = { nasional: 'nasional', jakarta: '31', dki: '31', papua: '94', bali: '51', jabar: '32', sulsel: '73', aceh: '11' };
+      const kode = peta[arg.toLowerCase()] ?? arg;
+      const ok2 = dispatch({ cmd: 'set_lensa', params: { kode } });
+      tulis(ok2 ? `lensa daerah: ${arg || 'nasional'}` : `daerah tak dikenal: ${arg}. coba: jakarta, papua, bali, jabar, sulsel, aceh`, ok2 ? 'out' : 'err');
+      return;
+    }
     if (cmd === 'tanya') {
       if (!arg) { tulis('tanya apa? contoh: tanya berapa kerugian negara bulan ini', 'err'); return; }
       if (!sibuk) void tanya(arg);

@@ -32,6 +32,9 @@ export const commandSchemas = {
   denominate: z.object({
     unit: z.enum(['rp', 'nasi', 'mbg', 'umphari']),
   }),
+  set_lensa: z.object({
+    kode: z.string(),
+  }),
   highlight: z.object({
     ids: z.array(z.string()).max(40),
   }),

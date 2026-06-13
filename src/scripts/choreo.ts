@@ -8,6 +8,7 @@ import Lenis from 'lenis';
 import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
 import { setDenom, onDenom, getDenom, formatUang } from '../lib/denominasi';
+import { setLensa } from '../lib/lensa';
 
 let lenis: Lenis | null = null;
 
@@ -647,5 +648,6 @@ function dispatchScrollHandler() {
     on('scroll_to', ({ anchor }) => scrollToAnchor(anchor));
     on('say', ({ teks, tahan_ms }) => say(teks, tahan_ms));
     on('denominate', ({ unit }) => setDenom(unit));
+    on('set_lensa', ({ kode }) => setLensa(kode));
   });
 }

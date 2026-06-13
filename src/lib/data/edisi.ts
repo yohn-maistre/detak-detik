@@ -264,3 +264,16 @@ export const EKONOMI = {
     chip: 'djpk · bps',
   },
 };
+
+/** Lensa Daerah: national default + a handful of regions. Stats are sample
+    (contoh), shaped for the BPS WebAPI + DJPK pipe. 'nasional' is the
+    aggregate every reader sees first; a reader (or Aksara) can switch. */
+export const DAERAH = [
+  { kode: 'nasional', nama: 'Indonesia', penduduk: '284,4 jt', ump: 'Rp 3,1 jt', miskin: '8,25%', dokter: '0,76', ipm: '74,4', pegawai: '35%', fakta: 'Rerata nasional. Pilih daerah untuk membandingkan.' },
+  { kode: '31', nama: 'DKI Jakarta', penduduk: '10,6 jt', ump: 'Rp 5,73 jt', miskin: '4,40%', dokter: '2,53', ipm: '83,0', pegawai: '28%', fakta: 'Rasio dokter tertinggi di Indonesia: 2,53 per 1.000 jiwa.' },
+  { kode: '94', nama: 'Papua Pegunungan', penduduk: '1,4 jt', ump: 'Rp 4,0 jt', miskin: '30,03%', dokter: '~0,10', ipm: '49,0', pegawai: '52%', fakta: 'Kemiskinan tertinggi di Indonesia; rasio dokter nyaris nol.' },
+  { kode: '51', nama: 'Bali', penduduk: '4,4 jt', ump: 'Rp 2,9 jt', miskin: '3,72%', dokter: '1,10', ipm: '78,0', pegawai: '30%', fakta: 'Kemiskinan terendah di Indonesia: 3,72%.' },
+  { kode: '32', nama: 'Jawa Barat', penduduk: '49,9 jt', ump: 'Rp 2,2 jt', miskin: '7,46%', dokter: '0,55', ipm: '74,2', pegawai: '34%', fakta: 'Provinsi terpadat; PHK terbanyak sepanjang Jan–Mei 2026.' },
+  { kode: '73', nama: 'Sulawesi Selatan', penduduk: '9,4 jt', ump: 'Rp 3,6 jt', miskin: '8,70%', dokter: '0,70', ipm: '73,5', pegawai: '36%', fakta: 'Gerbang timur; lumbung pangan dengan ketimpangan layanan.' },
+  { kode: '11', nama: 'Aceh', penduduk: '5,5 jt', ump: 'Rp 3,7 jt', miskin: '14,23%', dokter: '0,80', ipm: '74,7', pegawai: '41%', fakta: 'Dana Otsus ± Rp 3,7 T (2026); alokasi khusus menurun bertahap.' },
+];
