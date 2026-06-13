@@ -236,3 +236,84 @@ Visibly separate from Act III ("this is play, not record").
   + export gate, BUMN, Polri/TNI impunity, Otsus Aceh/Papua, APBD, courts)
 - Agent B — cultural/educational open data (PD colonial paintings + license,
   GBIF/IUCN species, indigenous peoples, science facts, world stats, history)
+
+---
+
+# DATA SOURCES VERIFIED, ACT III (cultural/educational, agent B)
+
+License-clean, mostly keyless. Build the closing act on these:
+1. Wikimedia Commons (daily lukisan): commons.wikimedia.org/w/api.php, no key;
+   generator=categorymembers + iiprop=extmetadata returns image + Artist +
+   Description + Year + License in one call. Filter to PD/CC0/CC-BY. Seed cats
+   (smoke-test exact titles): Mooi Indie, Raden Saleh, Paintings of the Dutch
+   East Indies. Deterministic rotation by day-of-year mod count.
+2. GBIF (endemic species plate): api.gbif.org/v1/occurrence/search?country=ID
+   &mediaType=StillImage&license=CC0_1_0|CC_BY_4_0, no key; re-check per-record
+   license field. Vernacular via /species/{key}/vernacularNames?language=ind.
+3. Wikipedia REST summary (blurbs): {lang}.wikipedia.org/api/rest_v1/page/
+   summary/{title}, id+en, no key.
+4. World Bank WDI (how Indonesia is doing): api.worldbank.org/v2/country/idn/
+   indicator/{CODE}?format=json, no key. Mix proud + sobering.
+5. Smithsonian GVP WFS (volcano wonder): webservices.volcano.si.edu/geoserver/
+   GVP-VOTW/wfs, no key, GeoJSON. 101 Holocene volcanoes.
+6. iNaturalist (premium photos): api.inaturalist.org/v1/observations?place_id=
+   {ID}&photo_license=cc0,cc-by, no key.
+7. IUCN Red List v4 (status line): api.iucnredlist.org/api/v4, free token.
+8. On-this-day: id support NOT confirmed. CHECK id.wikipedia.org/api/rest_v1/
+   feed/onthisday/events/MM/DD; fall back to en feed filtered for Indonesia.
+   NOTE: shipped Ingatan uses id feed, so it is probably on its curated
+   fallback now; fix in the Act III rebuild.
+Indigenous peoples: no clean API (curation). BPS Sensus 2010 = 1,331 groups;
+rotating list from id.wikipedia "Suku bangsa di Indonesia"; image from a
+Commons CC file of dress/architecture (never an identifiable person).
+Wonder facts (citable): 2nd-most biodiverse nation; Coral Triangle 76% of
+coral species; 718 living languages (2nd after PNG); Wallace Line; Ring of
+Fire. Sobering: World Happiness rank ~87 and falling; V-Dem decline.
+
+---
+
+# DATA SOURCES VERIFIED, ACT II (accountability, agent A)
+
+Top buildable branch trackers (ranked feasibility x impact):
+1. APBN spend-by-function/ministry: data-apbn.kemenkeu.go.id + APBN KiTa
+   (monthly PDF). EASY. Chart: stacked-area "where every rupiah goes" + pct of
+   target. Per-K/L ceilings public (Kemhan Rp187,1T; Polri Rp145,7T; OIKN Rp6,26T).
+2. Provincial scoreboard (cleanest API in the audit): BPS WebAPI
+   webapi.bps.go.id (JSON, free token) for IPM/poverty/Gini + DJPK Portal APBD
+   djpk.kemenkeu.go.id/portal/data/apbd (545 pemda). TRIVIAL. Chart: scatter of
+   38 provinces, x=APBD/capita, y=poverty, bubble=belanja-pegawai ratio.
+3. MK case tracker (rare ready-made judicial dataset): data.go.id MK PUU
+   dataset + mkri.id recap. EASY. 2025 = record 701 cases; PUU 263 decided
+   (33 granted). Chart: constitutional-review scoreboard.
+4. Polri/TNI budget vs police-violence (the Aparat ask): APBN K/L line +
+   KontraS annual (kontras.org/laporan). KontraS Jul24-Jun25 = 602 police-
+   violence incidents, 411 shootings, 38 torture (10 dead). Imparsial: 2.569
+   active officers in civilian posts (2023). Chart: incidents vs how many
+   reached criminal court vs ethics-only = the impunity gap. Flagship case:
+   Affan Kurniawan (Brimob rantis, 28 Aug 2025) -> officers PTDH/demosi via
+   ethics while civilian protesters were criminally prosecuted.
+5. BPK/BUMN red-flag: BPK IHPS (semiannual PDF) + IDX filings. IHPS I-2025 =
+   Rp69,21T findings, Rp63,57T in BUMN/bodies; Pupuk Indonesia Rp12,59T. ~65
+   BUMN (list on data.go.id). Chart: bubble, ROE vs BPK-flag value.
+6. KPK "13% problem": state loss adjudicated vs uang pengganti recovered. KPK
+   2024 recovery Rp731,55B; ICW est only ~13% of losses recovered 2019-2023.
+   SCRAPE. The single most damning anti-corruption metric.
+
+Killer flagship (very high impact, hand-joined): OTSUS "Rp138T, lalu apa?" —
+Papua Otsus cumulative Rp138,65T (2002-2021), Jilid II ~Rp234T to 2041, vs
+Papua provinces' poverty/IPM (BPS). Flat outcomes against rising spend. 2026
+Otsus ~Rp13-14T (Papua ~Rp8,4-9,4T, Aceh ~Rp3,7-4,2T). Aceh share steps down
+2%->1%, special allocation widely cited ending ~2027/28 [CHECK].
+
+Danantara export gate [VERIFIED]: PT Danantara Sumberdaya Indonesia (DSI)
+became sole "satu pintu" exporter of coal, CPO, ferroalloys from 1 Jun 2026
+(announced 20 May 2026), justified by ~US$908B cumulative under-invoicing
+1991-2024 and ~US$20B lost on coal. Critics call DSI a "calo ekspor" taking
+margins; COO says service fees only. Plan: sole BUYER by 2027. Financials
+HARD/DEAD (statutorily opaque) -> track the CONTROVERSY, not the books.
+Transparency gaps to surface as gaps: Danantara books, BPP/BP3OKP budget (no
+separable pagu found), DPR attendance (scanned PDFs only).
+
+Caveat: most .go.id portals 403'd the sandbox; confirm JSON endpoints from an
+unblocked env. Reconcile RAPBN vs enacted UU APBN figures before display.
+Start fast with BPS WebAPI + data.go.id MK dataset (lowest risk).
