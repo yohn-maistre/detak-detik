@@ -90,13 +90,13 @@
     judul: 'Edisi #41 dalam 30 detik',
     asal: 'newsroom' as const,
     langkah: [
-      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Satu koran, dua cetakan sehari.', tahan_ms: 3600 },
-      { cmd: 'scroll_to', params: { anchor: 'hukum' }, narasi: 'Gradien Keadilan: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 5200 },
-      { cmd: 'scroll_to', params: { anchor: 'mesin' }, narasi: 'Yang tidak dihitung: baris kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 5600 },
-      { cmd: 'scroll_to', params: { anchor: 'atlas' }, narasi: 'Dan peta yang harus awet lima puluh tahun.', tahan_ms: 2800 },
-      { cmd: 'fly_to', params: { kode: '9412' }, narasi: 'Mimika. Koordinat hari ini: LS 4°05′ BT 136°53′.', tahan_ms: 5200 },
-      { cmd: 'fly_to', params: { kode: '9301' }, narasi: 'Merauke, zona PSN terluas. Dokumen bicara; tidak ada yang menuduh.', tahan_ms: 5200 },
-      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Selamat membaca. Semua angka membawa kuitansinya.', tahan_ms: 3000 },
+      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
+      { cmd: 'scroll_to', params: { anchor: 'peta' }, narasi: 'Peta Kabar: lapisan data langsung. Coba minta saya tunjukkan gempa di satu pulau.', tahan_ms: 4200 },
+      { cmd: 'scroll_to', params: { anchor: 'kuasa' }, narasi: 'Bab I, Kuasa dan Harta: siapa yang memiliki republik ini, dan siapa yang menanggungnya.', tahan_ms: 5200 },
+      { cmd: 'scroll_to', params: { anchor: 'hukum' }, narasi: 'Bab II: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4600 },
+      { cmd: 'scroll_to', params: { anchor: 'aparat' }, narasi: 'Bab III, Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 5200 },
+      { cmd: 'scroll_to', params: { anchor: 'hening' }, narasi: 'Bab V: baris kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 4600 },
+      { cmd: 'scroll_to', params: { anchor: 'nusantara' }, narasi: 'Dan penutup: tanah, hayati, dan rupa. Selamat membaca. Semua angka membawa kuitansinya.', tahan_ms: 3600 },
     ],
   };
 
@@ -114,7 +114,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · fly_to <kode> · scroll_to <depan|peta|hukum|mesin|atlas> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · fly_to <kode> · scroll_to <depan|peta|kuasa|hukum|aparat|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
@@ -166,8 +166,8 @@
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'fly_to', params: { kode: '9532' } })}>✈ Puncak</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'scroll_to', params: { anchor: 'mesin' } })}>↓ Yang tidak dihitung</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'scroll_to', params: { anchor: 'kuasa' } })}>↓ Kuasa & Harta</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'scroll_to', params: { anchor: 'hening' } })}>↓ Yang tidak dihitung</button>
       </div>
     </div>
   {/if}

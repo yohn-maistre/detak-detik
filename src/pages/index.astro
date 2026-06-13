@@ -14,9 +14,14 @@ import TebakDaerah from '../islands/TebakDaerah.svelte';
 import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
+import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, CABANG, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
+
+const fmtRp = new Intl.NumberFormat('id-ID');
+const oligarki = PIECES.find((p) => p.slug === 'republik-oligarki');
+const arsipLain = PIECES.filter((p) => p.slug !== 'republik-oligarki');
 
 const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
 const sparkMax = Math.max(...PUTUSAN_HARIAN);
@@ -106,6 +111,29 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         </section>
 
         <IndeksPagi client:visible />
+
+        <section class="dunia-blok" aria-label="Indonesia di mata dunia">
+          <div class="kabar-head">
+            <span class="inkbar"><span class="dot">●</span>§4 · INDONESIA DI MATA DUNIA</span>
+            <span class="eyebrow">PERINGKAT TERAKHIR YANG TERBIT · BANGGA DAN PRIHATIN</span>
+          </div>
+          <div class="dunia-grid">
+            {[
+              { nilai: '№2', label: 'Negara paling kaya hayati di dunia', chip: 'cbd · megadiverse', baik: true },
+              { nilai: '718', label: 'Bahasa daerah hidup (kedua terbanyak di dunia)', chip: 'badan bahasa', baik: true },
+              { nilai: '76%', label: 'Spesies karang dunia ada di perairan kita', chip: 'coral triangle', baik: true },
+              { nilai: '129/180', label: 'Kebebasan pers (turun dari 111 pada 2024)', chip: 'rsf 2026', baik: false },
+              { nilai: '~87', label: 'Indeks kebahagiaan dunia, dan menurun', chip: 'whr 2026', baik: false },
+              { nilai: '5,62', label: 'Skor kebahagiaan (di bawah tetangga ASEAN)', chip: 'whr 2026', baik: false },
+            ].map((d) => (
+              <div class="dunia-tile" data-rise>
+                <p class={`dunia-nilai display num ${d.baik ? 'baik' : 'buruk'}`}>{d.nilai}</p>
+                <p class="dunia-label">{d.label}</p>
+                <button class="chip"><span class="tick">⊙</span>{d.chip}</button>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
     </section>
 
@@ -158,13 +186,110 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <section class="hening-blok">
-          <h2 class="sect-title-mesin display reveal-glyphs">Yang Tidak Dihitung</h2>
-          <p class="hening-sub">
-            Setiap statistik resmi punya baris dan sumbernya — contoh edisi ini: {KEHENINGAN.wilayah}.
-            Baris-baris di bawah tidak punya. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span> <span class="mono">(data contoh)</span>
-          </p>
+        <PapanAngka client:visible />
 
+        <!-- BAB I · KUASA & HARTA -->
+        <section class="bab" id="kuasa">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB I · KUASA & HARTA</span>
+            <p class="bab-dek">Siapa yang memiliki republik ini, dan siapa yang menanggungnya.</p>
+          </div>
+          {oligarki && (
+            <div class="bab-lembar" data-rise>
+              <h2 class="bab-judul display">{oligarki.judul}</h2>
+              <p class="bab-kalimat fig">{oligarki.satuKalimat}</p>
+              <RepublikOligarki client:visible />
+            </div>
+          )}
+        </section>
+
+        <!-- BAB II · HUKUM & VONIS -->
+        <section class="bab" id="hukum">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB II · HUKUM & VONIS</span>
+            <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
+          </div>
+          <div class="hukum-grid">
+            <GradienKeadilan client:visible />
+            <div class="struk-rail">
+              <p class="figcap-dinas mono">SATU PUTUSAN, DIPERIKSA:</p>
+              {TEMUAN[0].chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+              <span class="stamp" data-stamp-in>{TEMUAN[0].stamp}</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- BAB III · APARAT -->
+        <section class="bab" id="aparat">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB III · APARAT</span>
+            <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
+          </div>
+          <div class="aparat-grid">
+            <div class="aparat-col" data-rise>
+              <span class="eyebrow">ANGGARAN 2026</span>
+              {APARAT.anggaran.map((a) => (
+                <div class="aparat-row mono"><span>{a.k}</span><b class="num">{a.v}</b></div>
+              ))}
+              <p class="aparat-note">Dua pos terbesar dalam APBN.</p>
+              <button class="chip"><span class="tick">⊙</span>apbn 2026</button>
+            </div>
+            <div class="aparat-col besar" data-rise>
+              <span class="eyebrow">KEKERASAN POLISI · {APARAT.kekerasan.periode}</span>
+              <p class="aparat-angka display num accent">{APARAT.kekerasan.jumlah}</p>
+              <p class="aparat-note">insiden tercatat — {APARAT.kekerasan.tembak} dengan tembakan, {APARAT.kekerasan.tewas} korban tewas. <span data-annotate="underline" data-annotate-color="#e44a06">{fmtRp.format(APARAT.perwiraSipil)} perwira aktif menduduki jabatan sipil.</span></p>
+              <p class="aparat-impun">{APARAT.impunitas}</p>
+              <button class="chip"><span class="tick">⊙</span>{APARAT.kekerasan.sumber} · imparsial</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- BAB IV · EKONOMI & DAERAH -->
+        <section class="bab" id="ekonomi">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB IV · EKONOMI & DAERAH</span>
+            <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
+          </div>
+          <div class="hukum-grid">
+            <div class="ekonomi-col" data-rise>
+              <div class="ekonomi-stat">
+                <span class="eyebrow">BELANJA NEGARA 2026</span>
+                <p class="aparat-angka display num">{EKONOMI.apbn.belanja}</p>
+                <p class="aparat-note">defisit {EKONOMI.apbn.defisit} · rasio pajak {EKONOMI.apbn.pajak}</p>
+              </div>
+              <div class="ekonomi-otsus">
+                <span class="eyebrow">OTONOMI KHUSUS · BELANJA DAN HASIL</span>
+                <p class="ekonomi-teks">{EKONOMI.otsus.teks}</p>
+                <button class="chip"><span class="tick">⊙</span>{EKONOMI.otsus.chip}</button>
+              </div>
+            </div>
+            <div class="struk-rail">
+              <div class="struk" data-rise>
+                <span class="stamp struk-stamp" data-stamp-in>{STRUK.stamp}</span>
+                <h4 class="mono">{STRUK.judul}</h4>
+                <p class="struk-sub mono">{STRUK.sub}</p>
+                <div class="dash"></div>
+                {STRUK.baris.map((b) => (
+                  <div class="row mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
+                ))}
+                <div class="dash"></div>
+                {STRUK.total.map((b) => (
+                  <div class="row tot mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
+                ))}
+                <div class="dash"></div>
+                <p class="roast" data-annotate="box" data-annotate-color="#e44a06">{STRUK.roast}</p>
+              </div>
+              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA DAERAH · TARIK KE BAWAH UNTUK MEROBEK</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- BAB V · YANG TIDAK DIHITUNG -->
+        <section class="bab hening-blok" id="hening">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB V · YANG TIDAK DIHITUNG</span>
+            <p class="bab-dek">Setiap statistik resmi punya baris dan sumbernya. Baris-baris di bawah tidak. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span></p>
+          </div>
           <div class="ledger hening-ledger">
             {KEHENINGAN.baris.map((b) => (
               <div>
@@ -188,61 +313,28 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <p class="hening-foot mono">SATU WILAYAH ATAU TEMA DISOROT TIAP EDISI · USULKAN BARIS KOSONG LAIN DI GITHUB</p>
         </section>
 
-        <!-- Temuan -->
-        <section class="temuan-blok">
-          <div class="temuan-head-row">
-            <span class="inkbar"><span class="dot">●</span>BUKTI №2 · TEMUAN HARI INI</span>
-            <span class="eyebrow">SEMUA KLAIM MEMBAWA KUITANSI</span>
+        <!-- BAB VI · JANJI -->
+        <section class="bab" id="janji">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>BAB VI · JANJI</span>
+            <p class="bab-dek">Buku besar yang mengingat. Dinilai dengan aritmetika, bukan opini.</p>
           </div>
-          <div class="temuan-grid">
-            {TEMUAN.map((t, i) => (
-              <article class="temuan" data-rise id={t.id}>
-                <span class="ghost-num num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
-                <header class="temuan-head mono">
-                  <span class="temuan-lens">{t.lens}</span>
-                  <span class="serial">{t.serial}</span>
-                </header>
-                <h2 class="temuan-headline">{t.headline}</h2>
-                <p class="temuan-body">{t.body}</p>
-                <footer class="temuan-foot">
-                  <div class="cite-chips">
-                    {t.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
-                  </div>
-                  <span class="stamp" data-stamp-in>{t.stamp}</span>
-                </footer>
+          <div class="janji-list">
+            {JANJI.map((j) => (
+              <article class="janji">
+                <p class="janji-teks">{j.teks}</p>
+                <p class="janji-meta mono">{j.sumber}</p>
+                <div class="janji-baris mono">
+                  <span>TARGET · {j.target}</span>
+                  <span>TERUKUR · {j.realisasi}</span>
+                </div>
+                <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
               </article>
             ))}
           </div>
         </section>
 
-        <!-- Hukum: the wave-maker -->
-        <section class="hukum-blok" id="hukum">
-          <h2 class="sect-title display reveal-glyphs">Vonis dibanding kerugian.</h2>
-          <div class="hukum-grid">
-            <GradienKeadilan client:visible />
-            <div class="struk-rail">
-              <div class="struk" data-rise>
-                <span class="stamp struk-stamp" data-stamp-in>{STRUK.stamp}</span>
-                <h4 class="mono">{STRUK.judul}</h4>
-                <p class="struk-sub mono">{STRUK.sub}</p>
-                <div class="dash"></div>
-                {STRUK.baris.map((b) => (
-                  <div class="row mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
-                ))}
-                <div class="dash"></div>
-                {STRUK.total.map((b) => (
-                  <div class="row tot mono"><span>{b.k}</span><span class="num">{b.v}</span></div>
-                ))}
-                <div class="dash"></div>
-                <p class="roast" data-annotate="box" data-annotate-color="#e44a06">{STRUK.roast}</p>
-              </div>
-              <p class="figcap-dinas mono">ARTEFAK · STRUK BELANJA NEGARA · TARIK KE BAWAH UNTUK MEROBEK</p>
-            </div>
-          </div>
-        </section>
-
-        <PapanAngka client:visible />
-
+        <!-- env coda + the wordless juxtaposition -->
         <ObituariHutan />
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
@@ -262,18 +354,41 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <section class="arsip-teaser" aria-label="Lembar perspektif dari arsip">
+        <!-- the scoreboard -->
+        <section class="cabang-blok" aria-label="Pemantau cabang kekuasaan">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>PEMANTAU CABANG KEKUASAAN</span>
+            <p class="bab-dek">Apa tiap cabang itu, dan beberapa angka yang menandainya hari ini.</p>
+          </div>
+          <div class="cabang-grid">
+            {CABANG.map((c) => (
+              <article class="cabang-col" data-rise>
+                <h3 class="cabang-nama mono">{c.nama}</h3>
+                <p class="cabang-apa">{c.apa}</p>
+                <div class="cabang-metrik">
+                  {c.metrik.map((m) => (
+                    <div class="cabang-row mono"><span>{m.k}</span><b class="num">{m.v}</b></div>
+                  ))}
+                </div>
+                <button class="chip"><span class="tick">⊙</span>{c.chip}</button>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- archive strip: the rest of the shelf -->
+        <section class="arsip-teaser" aria-label="Lembar perspektif lain dari arsip">
           <div class="arsip-head">
-            <h2 class="sect-title-mesin display reveal-glyphs">Arsip Perspektif</h2>
+            <span class="inkbar"><span class="dot">●</span>ARSIP PERSPEKTIF</span>
             <a class="mono ink-link arsip-semua" href="/arsip">RAK LENGKAP →</a>
           </div>
-          <div class="arsip-grid">
-            {PIECES.map((p, i) => (
-              <a class="arsip-card" href={`/perspektif/${p.slug}`} data-rise>
-                <span class="mono arsip-no num">{String(i + 1).padStart(3, '0')}</span>
-                <h3 class="arsip-judul">{p.judul}</h3>
-                <p class="arsip-kalimat">{p.satuKalimat}</p>
-                <span class="mono arsip-bentuk">{p.bentuk.toUpperCase()} →</span>
+          <div class="arsip-strip">
+            {arsipLain.map((p, i) => (
+              <a class="arsip-baris" href={`/perspektif/${p.slug}`}>
+                <span class="mono arsip-no num">{String(i + 2).padStart(2, '0')}</span>
+                <span class="arsip-baris-judul">{p.judul}</span>
+                <span class="arsip-baris-kalimat">{p.satuKalimat}</span>
+                <span class="arsip-baris-panah" aria-hidden="true">→</span>
               </a>
             ))}
           </div>
@@ -292,59 +407,26 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
       <p class="seam-kicker mono">↓ NUSANTARA · TANAH, HAYATI, DAN RUPA</p>
     </div>
 
-    <!-- ============ ACT III · ATLAS LAMA ============ -->
-    <section class="act act-atlas" data-act="atlas" data-register="atlas" id="atlas">
+    <!-- ============ ACT III · NUSANTARA ============ -->
+    <section class="act act-atlas" data-act="atlas" data-register="atlas" id="nusantara">
       <div class="tex tex-hatch" aria-hidden="true"></div>
       <div class="wrap">
-        <h2 class="sect-title-atlas display reveal-glyphs">Atlas Tanah Air</h2>
-        <p class="atlas-sub fig">Fig. 1. · Halaman ingatan: sejarah, manusia, alam, dan rupa Nusantara — berganti tiap terbit.</p>
+        <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
+        <p class="atlas-sub fig">Tanah, hayati, dan rupa — sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
         <IngatanHero client:visible />
 
-        <section class="dunia-blok" aria-label="Peringkat Indonesia di mata dunia">
-          <span class="eyebrow">LAMPIRAN B · DUNIA MEMANDANG · PERINGKAT TERAKHIR YANG TERBIT</span>
-          <div class="dunia-grid">
-            {[
-              { nilai: '129/180', label: 'Kebebasan pers', chip: 'rsf 2026' },
-              { nilai: '62', label: 'Kekuatan paspor', chip: 'henley 2026' },
-              { nilai: '366', label: 'PISA matematika (Vietnam: 469)', chip: 'oecd 2022' },
-              { nilai: '7/9', label: 'Kecepatan internet seluler, ASEAN', chip: 'speedtest 2026' },
-              { nilai: '10,1%', label: 'Rasio pajak (rerata ASEAN: 14,3%)', chip: 'oecd 2025' },
-              { nilai: '№2', label: 'Bahasa daerah terbanyak di dunia (718)', chip: 'badan bahasa' },
-            ].map((d) => (
-              <div class="dunia-tile" data-rise>
-                <p class="dunia-nilai display num">{d.nilai}</p>
-                <p class="dunia-label">{d.label}</p>
-                <span class="mono dunia-chip">⊙ {d.chip}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <div class="atlas-grid">
-          <section class="janji-blok card" data-rise>
-            <span class="eyebrow">JANJI · BUKU BESAR YANG MENGINGAT</span>
-            <div class="janji-list">
-              {JANJI.map((j) => (
-                <article class="janji">
-                  <p class="janji-teks">{j.teks}</p>
-                  <p class="janji-meta mono">{j.sumber}</p>
-                  <div class="janji-baris mono">
-                    <span>TARGET · {j.target}</span>
-                    <span>TERUKUR · {j.realisasi}</span>
-                  </div>
-                  <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
-                </article>
-              ))}
-            </div>
-            <p class="janji-foot mono">PENILAIAN ARITMETIKA SAAT BANGUN, BUKAN OPINI. (DATA CONTOH)</p>
-          </section>
-
+        <div class="nusantara-grid">
           <AlmanakSains client:visible />
         </div>
+      </div>
+    </section>
 
-        <!-- the play shelf: same puzzle for every reader -->
-        <span class="eyebrow rak-eyebrow">LAMPIRAN C · PERMAINAN · TEKA-TEKI YANG SAMA UNTUK SEMUA PEMBACA</span>
+    <!-- ============ RUANG MAIN ============ -->
+    <section class="ruang-main" data-register="atlas" aria-label="Ruang main">
+      <div class="wrap">
+        <div class="main-rule" aria-hidden="true"></div>
+        <span class="eyebrow rak-eyebrow">RUANG MAIN · TEKA-TEKI YANG SAMA UNTUK SEMUA PEMBACA</span>
         <div class="main-rak">
           <TebakDaerah client:visible />
           <BenarSalah client:visible />
@@ -525,15 +607,74 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
   .gelombang-blok { max-width: 760px; margin-top: 34px; margin-bottom: 40px; }
 
-  .dunia-blok { margin-top: 52px; }
+  .dunia-blok { margin-top: 38px; }
   .dunia-grid { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); margin-top: 16px; }
   @media (max-width: 760px) { .dunia-grid { grid-template-columns: repeat(2, 1fr); } }
   .dunia-tile { padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; gap: 6px; }
-  .dunia-nilai { font-family: 'Fraunces Variable', serif; font-weight: 460; font-size: clamp(26px, 3.4vw, 42px); line-height: 1; color: var(--accent2); }
+  .dunia-nilai { font-family: 'Fraunces Variable', serif; font-weight: 460; font-size: clamp(26px, 3.4vw, 42px); line-height: 1; }
+  .dunia-nilai.baik { color: var(--accent2); }
+  .dunia-nilai.buruk { color: var(--accent); }
   .dunia-label { font-size: 13px; color: var(--muted); flex: 1; }
-  .dunia-chip { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); }
-  .rak-eyebrow { display: block; margin-top: 52px; }
-  .main-rak { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 22px; align-items: start; }
+  .dunia-tile .chip { align-self: flex-start; }
+
+  /* ---- BAB chapter headers (Act II) ---- */
+  .bab { padding-top: 8px; }
+  .bab-head { margin-bottom: 22px; }
+  .bab-dek { font-size: clamp(15px, 1.9vw, 19px); color: var(--muted); margin-top: 12px; max-width: 60ch; line-height: 1.5; }
+  .bab-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.04; }
+  .bab-kalimat { font-size: clamp(15px, 1.8vw, 18px); margin: 8px 0 22px; max-width: 56ch; }
+
+  /* ---- Aparat ---- */
+  .aparat-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 22px; align-items: start; }
+  @media (max-width: 800px) { .aparat-grid { grid-template-columns: 1fr; } }
+  .aparat-col { border: 1px solid var(--line); padding: 18px; background: var(--card); display: flex; flex-direction: column; gap: 10px; }
+  .aparat-row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 6px 0; font-size: 13px; }
+  .aparat-row b { color: var(--accent); }
+  .aparat-angka { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
+  .aparat-angka.accent { color: var(--accent); }
+  .aparat-note { font-size: 14px; color: var(--muted); line-height: 1.55; }
+  .aparat-impun { font-size: 13px; color: var(--muted); line-height: 1.6; border-left: 2px solid var(--line); padding-left: 12px; }
+  .aparat-col .chip, .ekonomi-otsus .chip { align-self: flex-start; }
+
+  /* ---- Ekonomi & Daerah ---- */
+  .ekonomi-col { display: grid; gap: 22px; align-content: start; }
+  .ekonomi-stat { display: grid; gap: 6px; }
+  .ekonomi-otsus { display: grid; gap: 10px; border-top: 1px solid var(--line); padding-top: 18px; }
+  .ekonomi-teks { font-size: 14.5px; line-height: 1.6; color: var(--muted); max-width: 52ch; }
+
+  /* ---- Janji (now Bab VI) ---- */
+  .janji-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 800px) { .janji-list { grid-template-columns: 1fr; } }
+
+  /* ---- the scoreboard ---- */
+  .cabang-blok { padding-top: 8px; }
+  .cabang-grid { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); }
+  @media (max-width: 980px) { .cabang-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .cabang-grid { grid-template-columns: 1fr; } }
+  .cabang-col { padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; gap: 10px; }
+  .cabang-nama { font-size: 11px; letter-spacing: 0.18em; color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 6px; }
+  .cabang-apa { font-size: 12px; color: var(--muted); line-height: 1.5; min-height: 4.6em; }
+  .cabang-metrik { display: grid; gap: 5px; }
+  .cabang-row { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; border-bottom: 1px dashed var(--line-soft); padding-bottom: 4px; }
+  .cabang-row b { color: var(--ink); white-space: nowrap; }
+  .cabang-col .chip { align-self: flex-start; font-size: 8.5px; padding: 4px 7px; }
+
+  /* ---- archive strip ---- */
+  .arsip-strip { border-top: 1px solid var(--line); margin-top: 18px; }
+  .arsip-baris { display: grid; grid-template-columns: auto 1.1fr 2fr auto; gap: 16px; align-items: baseline; padding: 16px 4px; border-bottom: 1px solid var(--line); text-decoration: none; transition: background 0.2s, padding-left 0.25s var(--ease-out); }
+  .arsip-baris:hover { background: color-mix(in oklab, var(--accent) 6%, transparent); padding-left: 12px; }
+  @media (max-width: 700px) { .arsip-baris { grid-template-columns: auto 1fr; } .arsip-baris-kalimat, .arsip-baris-panah { display: none; } }
+  .arsip-baris .arsip-no { color: var(--accent2); font-size: 11px; }
+  .arsip-baris-judul { font-family: 'Fraunces Variable', serif; font-weight: 400; font-size: clamp(17px, 2vw, 22px); }
+  .arsip-baris-kalimat { font-size: 13px; color: var(--muted); }
+  .arsip-baris-panah { color: var(--accent2); font-size: 18px; }
+
+  /* ---- Act III + Ruang Main ---- */
+  .nusantara-grid { margin-top: 34px; }
+  .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
+  .main-rule { height: 1px; background: var(--line); margin: 8px 0 0; }
+  .rak-eyebrow { display: block; margin-top: 40px; }
+  .main-rak { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; align-items: start; }
   @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
 
   .angka-blok {
@@ -768,7 +909,6 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     white-space: nowrap;
   }
 
-  .janji-list { display: grid; gap: 22px; margin-top: 14px; }
   .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
   .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; }
   .janji-meta { font-size: 10px; letter-spacing: 0.12em; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; }
