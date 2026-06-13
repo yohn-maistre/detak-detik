@@ -15,6 +15,9 @@ import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
+import PetaPiksel from '../islands/PetaPiksel.svelte';
+import SembilanPuluh from '../islands/SembilanPuluh.svelte';
+import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, CABANG, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
@@ -188,6 +191,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <PapanAngka client:visible />
 
+        <SembilanPuluh client:visible />
+
         <!-- BAB I · KUASA & HARTA -->
         <section class="bab" id="kuasa">
           <div class="bab-head">
@@ -334,8 +339,24 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <!-- env coda + the wordless juxtaposition -->
+        <!-- env coda: the obituary, then the long view -->
         <ObituariHutan />
+
+        <section class="bab" id="hutan">
+          <PetaPiksel
+            client:visible
+            judul="Hutan yang Hilang"
+            dek="Setiap hari sejak 2015, satu piksel. Warna menandai luas peringatan deforestasi hari itu. Garis emas: hari ini."
+            satuan="ha"
+            sumber="gfw/umd · (data contoh)"
+            tahunMulai={2015}
+            seed="hutan-hilang-harian"
+            puncak={250}
+            tren={0.07}
+            dasar={28}
+            goyang={0.55}
+          />
+        </section>
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
           <span class="eyebrow ganda-eyebrow">LAYAR GANDA · DUA KABAR SEMALAM, SENGAJA TANPA KETERANGAN</span>
@@ -415,6 +436,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <p class="atlas-sub fig">Tanah, hayati, dan rupa — sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
         <IngatanHero client:visible />
+
+        <GaleriNusantara client:visible />
 
         <div class="nusantara-grid">
           <AlmanakSains client:visible />
@@ -670,7 +693,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .arsip-baris-panah { color: var(--accent2); font-size: 18px; }
 
   /* ---- Act III + Ruang Main ---- */
-  .nusantara-grid { margin-top: 34px; }
+  .nusantara-grid { margin-top: 34px; max-width: 640px; }
+  #hutan { margin-top: 8px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
   .main-rule { height: 1px; background: var(--line); margin: 8px 0 0; }
   .rak-eyebrow { display: block; margin-top: 40px; }
