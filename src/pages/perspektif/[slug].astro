@@ -8,6 +8,7 @@ import { PIECES } from '../../lib/perspektif';
 import DuaGaris from '../../islands/DuaGaris.svelte';
 import GarisStart from '../../islands/GarisStart.svelte';
 import PabrikUU from '../../islands/PabrikUU.svelte';
+import RepublikOligarki from '../../islands/RepublikOligarki.svelte';
 
 export function getStaticPaths() {
   return PIECES.map((p) => ({ params: { slug: p.slug }, props: { piece: p } }));
@@ -26,6 +27,7 @@ const { piece } = Astro.props;
         <p class="lembar-kalimat fig">{piece.satuKalimat}</p>
       </header>
 
+      {piece.slug === 'republik-oligarki' && <RepublikOligarki client:load />}
       {piece.slug === 'dua-garis-kemiskinan' && <DuaGaris client:load />}
       {piece.slug === 'garis-start-sama' && <GarisStart client:load />}
       {piece.slug === 'pabrik-undang-undang' && <PabrikUU client:load />}
