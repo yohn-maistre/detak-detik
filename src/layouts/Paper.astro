@@ -38,5 +38,16 @@ const {
     <div class="regmarks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
     <div class="sidelabel" aria-hidden="true">DETAK DETIK · SERI 041 · DICETAK OTOMATIS</div>
     <slot />
+    <script is:inline>
+      // every citation chip (a chip carrying a ⊙ tick) is a receipt: clicking
+      // opens Sumber & Metode, or its own data-src. Site-wide, delegated.
+      document.addEventListener('click', function (e) {
+        var chip = e.target.closest && e.target.closest('.chip');
+        if (!chip || chip.dataset.noLink !== undefined) return;
+        if (!chip.querySelector('.tick')) return;
+        e.preventDefault();
+        window.location.assign(chip.dataset.src || '/sumber');
+      });
+    </script>
   </body>
 </html>

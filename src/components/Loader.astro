@@ -8,6 +8,12 @@
  */
 ---
 
+<script is:inline>
+  // hide the loader before paint on repeat visits / back-navigation, so it
+  // never flashes when returning from an inner page
+  try { if (sessionStorage.getItem('dd-loader')) document.documentElement.classList.add('loader-seen'); } catch (e) {}
+</script>
+
 <div id="loader" aria-hidden="true">
   <div class="l-inner">
     <p class="l-status mono"><span id="l-status-text">MENYUSUN EDISI #41</span><span class="l-cursor">▮</span></p>
@@ -34,6 +40,7 @@
     cursor: pointer;
   }
   #loader.is-done { display: none; }
+  :global(html.loader-seen) #loader { display: none; }
   .l-inner { text-align: center; padding: 24px; }
   .l-status {
     font-size: 11px;
