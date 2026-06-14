@@ -1,7 +1,8 @@
 <script lang="ts">
-  /** Harga Pangan: one wave, seven staples. Pick the commodity; the line
-      redraws itself. Series are deterministic samples (marked contoh) in
-      the exact shape the Panel Harga Bapanas pipeline will pour into. */
+  /** Harga Pangan: the wave on the left, the day's basket on the right. Pick a
+      commodity from the ranked list; the line redraws itself. Series are
+      deterministic samples (marked contoh) in the exact shape the Panel Harga
+      Bapanas pipeline will pour into. */
   import { gsap, reducedMotion } from '../lib/motion';
   import { rngFrom } from '../lib/seed';
 
@@ -27,14 +28,24 @@
     return out;
   }
 
-  const W = 560;
+  // pre-compute every commodity once: last price + 30-day change, for the
+  // ranked list and the basket
+  const SEMUA = ROSTER.map((k) => {
+    const s = seri(k);
+    const last = s[29]!;
+    const ubah = Math.round(((last - s[0]!) / s[0]!) * 100);
+    return { k, s, last, ubah };
+  });
+  const basket = SEMUA.reduce((a, d) => a + d.last, 0);
+  const UPAH_HARIAN = 3_100_000 / 30; // UMP rerata nasional per hari
+  const basketPct = Math.round((basket / UPAH_HARIAN) * 100);
+
+  const W = 520;
   const H = 250;
-  const PAD = { l: 16, r: 64, t: 24, b: 26 };
+  const PAD = { l: 16, r: 66, t: 24, b: 26 };
 
   let pilihan = $state(ROSTER[0]!);
-  const data = $derived(seri(pilihan));
-  // "kisaran wajar": the first-week average ± 8% — anything outside reads as
-  // above or below normal at a glance, without a verdict in words
+  const data = $derived(SEMUA.find((d) => d.k.id === pilihan.id)!.s);
   const normal = $derived(data.slice(0, 7).reduce((a, b) => a + b, 0) / 7);
   const bandHi = $derived(normal * 1.08);
   const bandLo = $derived(normal * 0.92);
@@ -57,9 +68,7 @@
   function draw() {
     if (reducedMotion() || !pathEl) return;
     const len = pathEl.getTotalLength();
-    gsap.fromTo(pathEl,
-      { strokeDasharray: len, strokeDashoffset: len },
-      { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' });
+    gsap.fromTo(pathEl, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: 1.6, ease: 'power2.inOut' });
   }
 
   function pilih(k: Komoditas) {
@@ -93,66 +102,92 @@
       <h3 class="display">Harga Pangan</h3>
       <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS · (DATA CONTOH)</span>
     </div>
-    <span class={`gw-status mono ${statusNada}`}>{status}</span>
+    <span class={`gw-status mono ${statusNada}`}>{pilihan.nama} · {status}</span>
   </div>
-  <div class="gw-roster">
-    {#each ROSTER as k (k.id)}
-      <button class="chip" class:aktif={pilihan.id === k.id} onclick={() => pilih(k)}>{k.nama}</button>
-    {/each}
-  </div>
-  <svg
-    bind:this={svgEl}
-    viewBox="0 0 {W} {H}"
-    width="100%"
-    role="img"
-    aria-label={`Grafik harga ${pilihan.nama} 30 hari, data contoh`}
-    onpointermove={onScrub}
-    onpointerleave={() => (scrub = null)}
-  >
-    <defs>
-      <linearGradient id="gw-fill" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.16" />
-        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
-      </linearGradient>
-    </defs>
-    <rect class="band" x={PAD.l} y={py(bandHi)} width={W - PAD.l - PAD.r} height={Math.max(0, py(bandLo) - py(bandHi))} />
-    <line class="band-line" x1={PAD.l} x2={W - PAD.r} y1={py(normal)} y2={py(normal)} />
-    <text class="band-label" x={PAD.l + 4} y={py(bandHi) - 4}>KISARAN WAJAR</text>
-    <path class="area" d={area} />
-    <path bind:this={pathEl} class="wave" d={path} />
-    <circle class="pulse" cx={px(29)} cy={py(data[29]!)} r="4" />
-    <text class="end-val num" x={px(29) + 8} y={py(data[29]!) + 4}>Rp {fmt.format(data[29]!)}</text>
-    <text class="end-sub" x={px(29) + 8} y={py(data[29]!) + 16}>{ubah >= 0 ? '▲+' : '▼'}{ubah}%/{pilihan.satuan}</text>
-    {#if scrub !== null}
-      <line class="scrub-line" x1={px(scrub)} x2={px(scrub)} y1={PAD.t - 6} y2={H - PAD.b} />
-      <circle class="scrub-dot" cx={px(scrub)} cy={py(data[scrub]!)} r="5" />
-      <text class="scrub-read num" x={px(scrub)} y={PAD.t - 12} text-anchor="middle">
-        H−{29 - scrub} · Rp {fmt.format(data[scrub]!)}
-      </text>
-    {/if}
-  </svg>
-  <div class="gw-foot mono">
-    <span>−30 HARI</span>
-    <span class="up">{pilihan.nama.toUpperCase()} · {ubah >= 0 ? `▲ +${ubah}%` : `▼ ${ubah}%`} · HARI INI</span>
+
+  <div class="gw-body">
+    <div class="gw-chart">
+      <svg
+        bind:this={svgEl}
+        viewBox="0 0 {W} {H}"
+        width="100%"
+        role="img"
+        aria-label={`Grafik harga ${pilihan.nama} 30 hari, data contoh`}
+        onpointermove={onScrub}
+        onpointerleave={() => (scrub = null)}
+      >
+        <defs>
+          <linearGradient id="gw-fill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.16" />
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        <rect class="band" x={PAD.l} y={py(bandHi)} width={W - PAD.l - PAD.r} height={Math.max(0, py(bandLo) - py(bandHi))} />
+        <line class="band-line" x1={PAD.l} x2={W - PAD.r} y1={py(normal)} y2={py(normal)} />
+        <text class="band-label" x={PAD.l + 4} y={py(bandHi) - 4}>KISARAN WAJAR</text>
+        <path class="area" d={area} />
+        <path bind:this={pathEl} class="wave" d={path} />
+        <circle class="pulse" cx={px(29)} cy={py(data[29]!)} r="4" />
+        <text class="end-val num" x={px(29) + 8} y={py(data[29]!) + 4}>Rp {fmt.format(data[29]!)}</text>
+        <text class="end-sub" x={px(29) + 8} y={py(data[29]!) + 16}>{ubah >= 0 ? '▲+' : '▼'}{ubah}%/{pilihan.satuan}</text>
+        {#if scrub !== null}
+          <line class="scrub-line" x1={px(scrub)} x2={px(scrub)} y1={PAD.t - 6} y2={H - PAD.b} />
+          <circle class="scrub-dot" cx={px(scrub)} cy={py(data[scrub]!)} r="5" />
+          <text class="scrub-read num" x={px(scrub)} y={PAD.t - 12} text-anchor="middle">H−{29 - scrub} · Rp {fmt.format(data[scrub]!)}</text>
+        {/if}
+      </svg>
+      <div class="gw-foot mono">
+        <span>−30 HARI</span>
+        <span class="up">{pilihan.nama.toUpperCase()} · {ubah >= 0 ? `▲ +${ubah}%` : `▼ ${ubah}%`} · HARI INI</span>
+      </div>
+    </div>
+
+    <aside class="gw-ctx">
+      <div class="gw-basket">
+        <span class="eyebrow">BELANJA POKOK HARI INI · TUJUH BAHAN</span>
+        <p class="gw-basket-n num">Rp {fmt.format(basket)}</p>
+        <span class="gw-basket-sub mono">≈ {basketPct}% UPAH MINIMUM SEHARI (RP {fmt.format(Math.round(UPAH_HARIAN))})</span>
+        <div class="gw-basket-bar"><i style={`--p:${Math.min(100, basketPct)}%`}></i></div>
+      </div>
+
+      <div class="gw-list" role="listbox" aria-label="Daftar komoditas, urut dari kenaikan tertinggi">
+        {#each [...SEMUA].sort((a, b) => b.ubah - a.ubah) as d (d.k.id)}
+          <button
+            class="gw-li mono"
+            class:aktif={pilihan.id === d.k.id}
+            class:naik={d.ubah > 0}
+            onclick={() => pilih(d.k)}
+            role="option"
+            aria-selected={pilihan.id === d.k.id}
+          >
+            <span class="gw-li-nama">{d.k.nama}</span>
+            <span class="gw-li-harga num">Rp {fmt.format(d.last)}</span>
+            <span class="gw-li-ubah num">{d.ubah >= 0 ? `▲+${d.ubah}` : `▼${d.ubah}`}%</span>
+          </button>
+        {/each}
+      </div>
+      <p class="gw-ctx-foot mono">URUT DARI KENAIKAN 30 HARI TERTINGGI · KETUK UNTUK MELIHAT GELOMBANGNYA</p>
+    </aside>
   </div>
 </div>
 
 <style>
   .gw-bar { display: inline-flex; margin-bottom: 8px; }
-  .gw-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .gw-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
   .gw-head h3 { font-size: clamp(20px, 2.6vw, 28px); }
-  .gw-roster { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 6px; }
-  .chip.aktif { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .chip.aktif :global(.tick) { color: var(--bg); }
+  .gw-status { font-size: 9px; letter-spacing: 0.14em; padding: 4px 8px; border: 1px solid currentColor; white-space: nowrap; }
+  .gw-status.buruk { color: var(--accent); }
+  .gw-status.datar { color: var(--muted); }
+
+  .gw-body { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(20px, 4vw, 44px); align-items: start; }
+  @media (max-width: 820px) { .gw-body { grid-template-columns: 1fr; } }
+
   svg { touch-action: pan-y; cursor: crosshair; }
   .wave { fill: none; stroke: var(--accent); stroke-width: 2.2; }
   .area { fill: url(#gw-fill); }
   .band { fill: var(--muted); opacity: 0.10; }
   .band-line { stroke: var(--muted); stroke-width: 0.6; stroke-dasharray: 2 4; opacity: 0.6; }
   .band-label { font-family: var(--font-mono); font-size: 7.5px; letter-spacing: 0.14em; fill: var(--muted); }
-  .gw-status { font-size: 9px; letter-spacing: 0.16em; padding: 4px 8px; border: 1px solid currentColor; }
-  .gw-status.buruk { color: var(--accent); }
-  .gw-status.datar { color: var(--muted); }
   .pulse { fill: var(--accent); animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
   @keyframes pulse { 50% { opacity: 0.45; } }
   .end-val { font-family: var(--font-mono); font-size: 12px; font-weight: 700; fill: var(--accent); }
@@ -162,5 +197,30 @@
   .scrub-read { font-family: var(--font-mono); font-size: 10.5px; fill: var(--ink); }
   .gw-foot { display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: 0.12em; color: var(--muted); margin-top: 8px; }
   .gw-foot .up { color: var(--accent); }
+
+  /* context column */
+  .gw-basket { border: 1px solid var(--line); padding: 14px 16px 16px; margin-bottom: 16px; }
+  .gw-basket-n { font-family: 'Fraunces Variable', serif; font-weight: 380; font-size: clamp(30px, 4.6vw, 46px); line-height: 1; margin: 8px 0 6px; }
+  .gw-basket-sub { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); display: block; }
+  .gw-basket-bar { height: 4px; background: var(--line-soft); margin-top: 12px; position: relative; }
+  .gw-basket-bar i { position: absolute; left: 0; top: 0; bottom: 0; width: var(--p); background: var(--accent); }
+
+  .gw-list { display: grid; border-top: 1px solid var(--line); }
+  .gw-li {
+    display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: baseline;
+    background: none; border: none; border-bottom: 1px solid var(--line-soft);
+    padding: 9px 4px; cursor: pointer; text-align: left; color: var(--ink);
+    transition: background 0.15s, padding-left 0.15s var(--ease-out);
+  }
+  .gw-li:hover { background: color-mix(in oklab, var(--accent) 8%, transparent); padding-left: 8px; }
+  .gw-li.aktif { background: var(--ink); color: var(--bg); }
+  .gw-li-nama { font-size: 11px; letter-spacing: 0.02em; }
+  .gw-li-harga { font-size: 11px; color: var(--muted); }
+  .gw-li.aktif .gw-li-harga { color: var(--bg); opacity: 0.8; }
+  .gw-li-ubah { font-size: 10.5px; color: var(--muted); min-width: 44px; text-align: right; }
+  .gw-li.naik .gw-li-ubah { color: var(--accent); }
+  .gw-li.aktif .gw-li-ubah { color: var(--bg); }
+  .gw-ctx-foot { font-size: 8px; letter-spacing: 0.12em; color: var(--muted); margin-top: 10px; }
+
   @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } }
 </style>
