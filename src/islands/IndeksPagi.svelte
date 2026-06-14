@@ -42,7 +42,7 @@
 </script>
 
 <section class="ip" aria-label="Indeks pagi: angka makro nasional" data-no-stempel>
-  <span class="inkbar"><span class="dot">●</span>§3 · INDEKS PAGI · ANGKA DASAR NASIONAL</span>
+  <span class="inkbar"><span class="dot">●</span>§5 · INDEKS PAGI · ANGKA DASAR NASIONAL</span>
   <div class="ip-grid">
     <article class="ip-card lebar">
       <span class="eyebrow">PENDUDUK REPUBLIK SAAT INI</span>

@@ -45,7 +45,7 @@
       <span class="ak-no mono">02</span>
       <h3 class="ak-nama display">Legislatif</h3>
       <p class="ak-apa">DPR 580 kursi dan DPD: menyusun undang-undang dan anggaran negara.</p>
-      <a class="ak-baca mono" href="#janji">→ Janji &amp; undang-undang</a>
+      <a class="ak-baca mono" href="#pabrik">→ Pabrik undang-undang</a>
     </div>
     <div class="ak-right">
       <div class="ak-gantt">

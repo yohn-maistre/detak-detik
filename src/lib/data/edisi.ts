@@ -87,18 +87,19 @@ export const PUTUSAN: { kerugian: number; vonis: number; jenis: 'korupsi' | 'pen
 
 export const STRUK = {
   judul: 'STRUK BELANJA NEGARA',
-  sub: 'Kab. Nabire · APBD 2026 · per kapita',
+  sub: 'APBN 2026 · per warga negara',
   baris: [
-    { k: 'Belanja pegawai', v: '58,2%' },
-    { k: 'Barang & jasa', v: '24,1%' },
-    { k: 'Belanja modal', v: '11,4%' },
-    { k: 'Lainnya', v: '6,3%' },
+    { k: 'Belanja K/L (kementerian)', v: '36,2%' },
+    { k: 'Transfer ke daerah & desa', v: '29,7%' },
+    { k: 'Bunga utang', v: '14,4%' },
+    { k: 'Subsidi & kompensasi', v: '11,7%' },
+    { k: 'Lainnya', v: '8,0%' },
   ],
   total: [
-    { k: 'TOTAL APBD', v: 'Rp 1,82 T' },
-    { k: 'Per kapita', v: 'Rp 10,4 jt' },
+    { k: 'TOTAL BELANJA', v: 'Rp 3.842 T' },
+    { k: 'Per warga negara', v: 'Rp 13,5 jt' },
   ],
-  roast: '“Jalan kabupaten: 3,1%. Sabar ya, ban depan.”',
+  roast: '“Bunga utang setahun: Rp 552 T, melampaui anggaran kesehatan.”',
   stamp: 'TERVERIFIKASI · EDISI 41',
 };
 
@@ -123,7 +124,7 @@ export const KEHENINGAN = {
 };
 
 export const LAYAR_GANDA = {
-  kiri: { angka: '3–1', label: 'Skor pembuka Piala Dunia 2026, semalam', chip: 'football-data.org' },
+  kiri: { angka: 'Rp 552 T', label: 'bunga utang yang dibayar negara tahun ini', chip: 'apbn 2026 · kemenkeu' },
   kanan: { angka: 'Hari ke-1.892', label: 'pengungsian Kabupaten Puncak', chip: 'HRM · Mar 2026' },
 };
 
@@ -265,15 +266,56 @@ export const EKONOMI = {
   },
 };
 
-/** Lensa Daerah: national default + a handful of regions. Stats are sample
+/** Lensa Daerah: national default + all 38 provinces. Stats are sample
     (contoh), shaped for the BPS WebAPI + DJPK pipe. 'nasional' is the
-    aggregate every reader sees first; a reader (or Aksara) can switch. */
+    aggregate every reader sees first; a reader (or Aksara) searches for a
+    province to compare. `pulau` groups the search; `tpt` is open
+    unemployment. A future weekend lowers this to kabupaten (see
+    docs/DATA_SOURCES.md). */
 export const DAERAH = [
-  { kode: 'nasional', nama: 'Indonesia', penduduk: '284,4 jt', ump: 'Rp 3,1 jt', miskin: '8,25%', dokter: '0,76', ipm: '74,4', pegawai: '35%', fakta: 'Rerata nasional. Pilih daerah untuk membandingkan.' },
-  { kode: '31', nama: 'DKI Jakarta', penduduk: '10,6 jt', ump: 'Rp 5,73 jt', miskin: '4,40%', dokter: '2,53', ipm: '83,0', pegawai: '28%', fakta: 'Rasio dokter tertinggi di Indonesia: 2,53 per 1.000 jiwa.' },
-  { kode: '94', nama: 'Papua Pegunungan', penduduk: '1,4 jt', ump: 'Rp 4,0 jt', miskin: '30,03%', dokter: '~0,10', ipm: '49,0', pegawai: '52%', fakta: 'Kemiskinan tertinggi di Indonesia; rasio dokter nyaris nol.' },
-  { kode: '51', nama: 'Bali', penduduk: '4,4 jt', ump: 'Rp 2,9 jt', miskin: '3,72%', dokter: '1,10', ipm: '78,0', pegawai: '30%', fakta: 'Kemiskinan terendah di Indonesia: 3,72%.' },
-  { kode: '32', nama: 'Jawa Barat', penduduk: '49,9 jt', ump: 'Rp 2,2 jt', miskin: '7,46%', dokter: '0,55', ipm: '74,2', pegawai: '34%', fakta: 'Provinsi terpadat; PHK terbanyak sepanjang Jan–Mei 2026.' },
-  { kode: '73', nama: 'Sulawesi Selatan', penduduk: '9,4 jt', ump: 'Rp 3,6 jt', miskin: '8,70%', dokter: '0,70', ipm: '73,5', pegawai: '36%', fakta: 'Gerbang timur; lumbung pangan dengan ketimpangan layanan.' },
-  { kode: '11', nama: 'Aceh', penduduk: '5,5 jt', ump: 'Rp 3,7 jt', miskin: '14,23%', dokter: '0,80', ipm: '74,7', pegawai: '41%', fakta: 'Dana Otsus ± Rp 3,7 T (2026); alokasi khusus menurun bertahap.' },
+  { kode: 'nasional', nama: 'Indonesia', pulau: 'Nasional', penduduk: '284,4 jt', ump: 'Rp 3,1 jt', miskin: '8,25%', dokter: '0,76', ipm: '74,4', pegawai: '35%', tpt: '4,68%', fakta: 'Rerata nasional. Cari provinsi untuk melihat di mana ia berdiri.' },
+
+  { kode: '11', nama: 'Aceh', pulau: 'Sumatra', penduduk: '5,5 jt', ump: 'Rp 3,7 jt', miskin: '14,23%', dokter: '0,80', ipm: '74,7', pegawai: '41%', tpt: '5,75%', fakta: 'Dana Otsus ± Rp 3,7 T (2026); kemiskinan tertinggi di Sumatra.' },
+  { kode: '12', nama: 'Sumatera Utara', pulau: 'Sumatra', penduduk: '15,4 jt', ump: 'Rp 2,99 jt', miskin: '8,15%', dokter: '0,62', ipm: '73,0', pegawai: '33%', tpt: '5,60%', fakta: 'Provinsi terpadat di luar Jawa; gerbang ekonomi Sumatra.' },
+  { kode: '13', nama: 'Sumatera Barat', pulau: 'Sumatra', penduduk: '5,7 jt', ump: 'Rp 2,99 jt', miskin: '5,90%', dokter: '0,70', ipm: '74,2', pegawai: '36%', tpt: '5,90%', fakta: 'IPM di atas rerata nasional, kemiskinan di bawahnya.' },
+  { kode: '14', nama: 'Riau', pulau: 'Sumatra', penduduk: '6,7 jt', ump: 'Rp 3,51 jt', miskin: '6,68%', dokter: '0,55', ipm: '74,6', pegawai: '30%', tpt: '4,30%', fakta: 'Sawit dan migas: pendapatan tinggi, layanan masih timpang.' },
+  { kode: '15', nama: 'Jambi', pulau: 'Sumatra', penduduk: '3,7 jt', ump: 'Rp 3,30 jt', miskin: '7,58%', dokter: '0,45', ipm: '73,0', pegawai: '34%', tpt: '4,50%', fakta: 'Rasio dokter di bawah rerata nasional.' },
+  { kode: '16', nama: 'Sumatera Selatan', pulau: 'Sumatra', penduduk: '8,8 jt', ump: 'Rp 3,68 jt', miskin: '10,80%', dokter: '0,40', ipm: '71,4', pegawai: '33%', tpt: '4,30%', fakta: 'Kemiskinan dua digit; rasio dokter terendah di Sumatra.' },
+  { kode: '17', nama: 'Bengkulu', pulau: 'Sumatra', penduduk: '2,1 jt', ump: 'Rp 2,67 jt', miskin: '14,04%', dokter: '0,55', ipm: '72,5', pegawai: '38%', tpt: '3,40%', fakta: 'Kemiskinan dua digit meski penduduk paling sedikit di Sumatra.' },
+  { kode: '18', nama: 'Lampung', pulau: 'Sumatra', penduduk: '9,4 jt', ump: 'Rp 2,71 jt', miskin: '10,69%', dokter: '0,38', ipm: '71,4', pegawai: '32%', tpt: '4,20%', fakta: 'Rasio dokter terendah di Sumatra: 0,38 per 1.000 jiwa.' },
+  { kode: '19', nama: 'Kep. Bangka Belitung', pulau: 'Sumatra', penduduk: '1,5 jt', ump: 'Rp 3,84 jt', miskin: '4,52%', dokter: '0,50', ipm: '73,0', pegawai: '35%', tpt: '4,60%', fakta: 'UMP termasuk tertinggi; bekas lumbung timah.' },
+  { kode: '21', nama: 'Kepulauan Riau', pulau: 'Sumatra', penduduk: '2,2 jt', ump: 'Rp 3,62 jt', miskin: '5,37%', dokter: '0,85', ipm: '76,5', pegawai: '28%', tpt: '6,90%', fakta: 'IPM tinggi, tetapi pengangguran terbuka termasuk tertinggi.' },
+
+  { kode: '31', nama: 'DKI Jakarta', pulau: 'Jawa', penduduk: '10,6 jt', ump: 'Rp 5,73 jt', miskin: '4,40%', dokter: '2,53', ipm: '83,0', pegawai: '28%', tpt: '6,00%', fakta: 'Rasio dokter (2,53/1.000) dan UMP tertinggi di Indonesia.' },
+  { kode: '32', nama: 'Jawa Barat', pulau: 'Jawa', penduduk: '49,9 jt', ump: 'Rp 2,19 jt', miskin: '7,46%', dokter: '0,55', ipm: '74,2', pegawai: '34%', tpt: '7,40%', fakta: 'Provinsi terpadat; pengangguran terbuka tertinggi nasional.' },
+  { kode: '33', nama: 'Jawa Tengah', pulau: 'Jawa', penduduk: '38,3 jt', ump: 'Rp 2,17 jt', miskin: '10,77%', dokter: '0,50', ipm: '73,4', pegawai: '33%', tpt: '4,80%', fakta: 'UMP terendah nasional berdampingan dengan kemiskinan dua digit.' },
+  { kode: '34', nama: 'DI Yogyakarta', pulau: 'Jawa', penduduk: '3,7 jt', ump: 'Rp 2,32 jt', miskin: '11,04%', dokter: '1,50', ipm: '81,1', pegawai: '30%', tpt: '3,40%', fakta: 'IPM tertinggi kedua, tetapi kemiskinan di atas rerata nasional.' },
+  { kode: '35', nama: 'Jawa Timur', pulau: 'Jawa', penduduk: '41,8 jt', ump: 'Rp 2,40 jt', miskin: '9,79%', dokter: '0,58', ipm: '74,6', pegawai: '32%', tpt: '4,20%', fakta: 'Penduduk terbesar kedua; UMP di bawah rerata nasional.' },
+  { kode: '36', nama: 'Banten', pulau: 'Jawa', penduduk: '12,3 jt', ump: 'Rp 2,91 jt', miskin: '5,96%', dokter: '0,48', ipm: '74,0', pegawai: '31%', tpt: '7,90%', fakta: 'Pengangguran terbuka tertinggi nasional: 7,90%.' },
+
+  { kode: '51', nama: 'Bali', pulau: 'Bali & Nusa Tenggara', penduduk: '4,4 jt', ump: 'Rp 2,96 jt', miskin: '3,72%', dokter: '1,10', ipm: '78,0', pegawai: '30%', tpt: '2,70%', fakta: 'Kemiskinan terendah (3,72%) dan pengangguran terendah nasional.' },
+  { kode: '52', nama: 'Nusa Tenggara Barat', pulau: 'Bali & Nusa Tenggara', penduduk: '5,6 jt', ump: 'Rp 2,60 jt', miskin: '12,91%', dokter: '0,42', ipm: '71,0', pegawai: '35%', tpt: '3,00%', fakta: 'Kemiskinan dua digit; pengangguran rendah, upah rendah.' },
+  { kode: '53', nama: 'Nusa Tenggara Timur', pulau: 'Bali & Nusa Tenggara', penduduk: '5,6 jt', ump: 'Rp 2,33 jt', miskin: '19,48%', dokter: '0,30', ipm: '66,3', pegawai: '40%', tpt: '3,20%', fakta: 'IPM dan rasio dokter terendah di luar Papua.' },
+
+  { kode: '61', nama: 'Kalimantan Barat', pulau: 'Kalimantan', penduduk: '5,6 jt', ump: 'Rp 2,88 jt', miskin: '6,71%', dokter: '0,40', ipm: '70,5', pegawai: '34%', tpt: '4,80%', fakta: 'IPM di bawah rerata nasional; rasio dokter rendah.' },
+  { kode: '62', nama: 'Kalimantan Tengah', pulau: 'Kalimantan', penduduk: '2,8 jt', ump: 'Rp 3,51 jt', miskin: '5,11%', dokter: '0,45', ipm: '73,5', pegawai: '36%', tpt: '4,00%', fakta: 'Lokasi food estate PSN di lahan eks-gambut.' },
+  { kode: '63', nama: 'Kalimantan Selatan', pulau: 'Kalimantan', penduduk: '4,2 jt', ump: 'Rp 3,50 jt', miskin: '4,52%', dokter: '0,50', ipm: '73,0', pegawai: '33%', tpt: '4,50%', fakta: 'Kemiskinan rendah; ekonomi batu bara.' },
+  { kode: '64', nama: 'Kalimantan Timur', pulau: 'Kalimantan', penduduk: '4,0 jt', ump: 'Rp 3,58 jt', miskin: '6,11%', dokter: '0,70', ipm: '78,2', pegawai: '29%', tpt: '5,30%', fakta: 'Lokasi IKN; IPM tinggi dari tambang dan migas.' },
+  { kode: '65', nama: 'Kalimantan Utara', pulau: 'Kalimantan', penduduk: '0,74 jt', ump: 'Rp 3,58 jt', miskin: '6,80%', dokter: '0,55', ipm: '73,5', pegawai: '35%', tpt: '4,90%', fakta: 'Provinsi termuda dan berpenduduk paling sedikit.' },
+
+  { kode: '71', nama: 'Sulawesi Utara', pulau: 'Sulawesi', penduduk: '2,7 jt', ump: 'Rp 3,55 jt', miskin: '7,38%', dokter: '0,80', ipm: '75,7', pegawai: '32%', tpt: '5,50%', fakta: 'IPM dan rasio dokter di atas rerata nasional.' },
+  { kode: '72', nama: 'Sulawesi Tengah', pulau: 'Sulawesi', penduduk: '3,1 jt', ump: 'Rp 2,91 jt', miskin: '12,33%', dokter: '0,50', ipm: '72,0', pegawai: '36%', tpt: '3,20%', fakta: 'Pusat smelter nikel Morowali: pertumbuhan tinggi, kemiskinan tinggi.' },
+  { kode: '73', nama: 'Sulawesi Selatan', pulau: 'Sulawesi', penduduk: '9,4 jt', ump: 'Rp 3,66 jt', miskin: '8,70%', dokter: '0,70', ipm: '73,5', pegawai: '36%', tpt: '4,30%', fakta: 'Gerbang timur; lumbung pangan dengan ketimpangan layanan.' },
+  { kode: '74', nama: 'Sulawesi Tenggara', pulau: 'Sulawesi', penduduk: '2,8 jt', ump: 'Rp 3,07 jt', miskin: '11,40%', dokter: '0,55', ipm: '72,5', pegawai: '37%', tpt: '3,20%', fakta: 'Tambang nikel meluas; kemiskinan dua digit.' },
+  { kode: '75', nama: 'Gorontalo', pulau: 'Sulawesi', penduduk: '1,2 jt', ump: 'Rp 3,22 jt', miskin: '15,00%', dokter: '0,55', ipm: '70,5', pegawai: '38%', tpt: '3,80%', fakta: 'Kemiskinan tertinggi di Sulawesi: 15,00%.' },
+  { kode: '76', nama: 'Sulawesi Barat', pulau: 'Sulawesi', penduduk: '1,5 jt', ump: 'Rp 3,03 jt', miskin: '11,20%', dokter: '0,40', ipm: '67,5', pegawai: '38%', tpt: '2,90%', fakta: 'IPM terendah di Sulawesi; pengangguran terendah.' },
+
+  { kode: '81', nama: 'Maluku', pulau: 'Maluku & Papua', penduduk: '1,9 jt', ump: 'Rp 3,40 jt', miskin: '16,00%', dokter: '0,55', ipm: '71,0', pegawai: '42%', tpt: '6,00%', fakta: 'Belanja pegawai tinggi; pengangguran di atas rerata.' },
+  { kode: '82', nama: 'Maluku Utara', pulau: 'Maluku & Papua', penduduk: '1,4 jt', ump: 'Rp 3,45 jt', miskin: '6,38%', dokter: '0,50', ipm: '70,0', pegawai: '40%', tpt: '4,50%', fakta: 'Pusat nikel Halmahera (Weda Bay); kemiskinan relatif rendah.' },
+  { kode: '91', nama: 'Papua Barat', pulau: 'Maluku & Papua', penduduk: '0,56 jt', ump: 'Rp 3,61 jt', miskin: '21,00%', dokter: '0,45', ipm: '66,5', pegawai: '44%', tpt: '5,30%', fakta: 'Kemiskinan di atas 20% meski UMP tinggi.' },
+  { kode: '92', nama: 'Papua Barat Daya', pulau: 'Maluku & Papua', penduduk: '0,6 jt', ump: 'Rp 3,61 jt', miskin: '18,50%', dokter: '0,40', ipm: '65,0', pegawai: '44%', tpt: '5,50%', fakta: 'Pintu masuk Raja Ampat; provinsi baru sejak 2022.' },
+  { kode: '94', nama: 'Papua', pulau: 'Maluku & Papua', penduduk: '1,0 jt', ump: 'Rp 4,00 jt', miskin: '17,30%', dokter: '0,30', ipm: '63,0', pegawai: '45%', tpt: '3,50%', fakta: 'UMP tinggi berdampingan dengan IPM jauh di bawah nasional.' },
+  { kode: '95', nama: 'Papua Selatan', pulau: 'Maluku & Papua', penduduk: '0,53 jt', ump: 'Rp 4,00 jt', miskin: '17,00%', dokter: '0,25', ipm: '61,0', pegawai: '46%', tpt: '3,00%', fakta: 'Lokasi food estate Merauke; provinsi baru sejak 2022.' },
+  { kode: '96', nama: 'Papua Tengah', pulau: 'Maluku & Papua', penduduk: '1,3 jt', ump: 'Rp 4,00 jt', miskin: '21,50%', dokter: '0,20', ipm: '58,0', pegawai: '48%', tpt: '3,80%', fakta: 'Mencakup Mimika dan Nabire: tambang besar, kemiskinan tinggi.' },
+  { kode: '97', nama: 'Papua Pegunungan', pulau: 'Maluku & Papua', penduduk: '1,5 jt', ump: 'Rp 4,00 jt', miskin: '30,03%', dokter: '0,10', ipm: '49,0', pegawai: '52%', tpt: '3,50%', fakta: 'Kemiskinan tertinggi (30%) dan rasio dokter terendah nasional.' },
 ];

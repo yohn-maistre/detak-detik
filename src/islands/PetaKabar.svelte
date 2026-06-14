@@ -367,13 +367,14 @@
   .kb-info .src { margin-left: 6px; }
 
   .kb-rose {
-    position: absolute; right: 12px; bottom: 12px; z-index: 4;
-    width: 52px; height: 52px; padding: 5px;
-    background: color-mix(in oklab, var(--bg) 86%, transparent);
+    position: absolute; left: 12px; top: 12px; z-index: 5;
+    width: 50px; height: 50px; padding: 5px;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
     border: 1px solid var(--line); color: var(--ink); cursor: pointer;
+    transition: border-color 0.25s, box-shadow 0.25s;
   }
   .kb-rose svg { width: 100%; height: 100%; display: block; transition: transform 0.2s linear; }
-  .kb-rose:hover { border-color: var(--accent); }
+  .kb-rose:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
   .kb-tip { margin-top: 12px; font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
   .kb-tip-cmd { color: var(--accent); }
   .chip.aktif { border-color: var(--accent); color: var(--accent); }

@@ -89,6 +89,7 @@
 <div class="gw" data-no-stempel>
   <div class="gw-head">
     <div>
+      <span class="inkbar gw-bar"><span class="dot">●</span>§4 · HARGA PANGAN</span>
       <h3 class="display">Harga Pangan</h3>
       <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS · (DATA CONTOH)</span>
     </div>
@@ -137,6 +138,7 @@
 </div>
 
 <style>
+  .gw-bar { display: inline-flex; margin-bottom: 8px; }
   .gw-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .gw-head h3 { font-size: clamp(20px, 2.6vw, 28px); }
   .gw-roster { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 6px; }

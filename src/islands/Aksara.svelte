@@ -18,11 +18,14 @@
     'Hanya gunakan fakta dari konteks edisi berikut; jika tidak ada di konteks, katakan datanya belum ada di edisi ini.',
     `Edisi #${EDISI.nomor} (${EDISI.tanggal}). Angka edisi: ${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} — ${ANGKA_EDISI.label}`,
     ...TEMUAN.map((t) => `Temuan ${t.lens}: ${t.headline}. ${t.body}`),
-    `Yang tidak dihitung (${KEHENINGAN.wilayah}): baris "${KEHENINGAN.absen.k}" kosong di statistik resmi; pihak ketiga mencatat ${KEHENINGAN.laneC.teks} (${KEHENINGAN.laneC.chip}).`,
+    `Yang tidak dihitung (${KEHENINGAN.wilayah}): baris "${KEHENINGAN.absen[0]?.k ?? ''}" kosong di statistik resmi; pihak ketiga mencatat ${KEHENINGAN.laneC.teks} (${KEHENINGAN.laneC.chip}).`,
     'Semua angka edisi ini berstatus data contoh.',
   ].join('\n');
 
   let sibuk = $state(false);
+  // the pill/terminal carry the register of whichever act sits behind them, so
+  // they invert against the page and always stand out (dark on Pagi, light on Malam)
+  let reg = $state('dinas');
 
   async function tanya(q: string) {
     if (!AKSARA_URL) {
@@ -114,7 +117,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh> · fly_to <kode> · scroll_to <depan|peta|kuasa|hukum|aparat|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|dunia|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
@@ -148,11 +151,30 @@
     const t = setTimeout(() => {
       dispatch({ cmd: 'say', params: { teks: 'Mau saya tunjukkan edisi ini? Buka terminal lalu ketik "tur".', cited_ids: [], tahan_ms: 6000 } });
     }, 6500);
-    return () => clearTimeout(t);
+
+    // follow the act in view so the pill inverts against the current paper
+    const acts = Array.from(document.querySelectorAll<HTMLElement>('[data-act]'));
+    const ratios = new Map<Element, number>();
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) ratios.set(e.target, e.isIntersecting ? e.intersectionRatio : 0);
+        let best: HTMLElement | null = null;
+        let bestR = -1;
+        for (const a of acts) {
+          const r = ratios.get(a) ?? 0;
+          if (r >= bestR) { bestR = r; best = a; }
+        }
+        if (best && bestR > 0) reg = best.getAttribute('data-register') ?? 'dinas';
+      },
+      { threshold: [0, 0.2, 0.4, 0.6, 0.8, 1] }
+    );
+    acts.forEach((a) => io.observe(a));
+
+    return () => { clearTimeout(t); io.disconnect(); };
   });
 </script>
 
-<div class="aksara" data-no-stempel data-register="mesin">
+<div class="aksara" data-no-stempel data-register={reg}>
   <div id="aksara-bubble" class="bubble mono" aria-live="polite"></div>
 
   {#if buka}
@@ -186,12 +208,13 @@
 
 <style>
   .aksara { position: fixed; left: 16px; bottom: 16px; z-index: 140; }
+  /* inverted chip: ink field, paper text — dark on Pagi, light on Malam */
   .pill {
     font-size: 11px;
     letter-spacing: 0.18em;
-    background: #15130e;
-    color: #d6cbac;
-    border: 1px solid #2e2c28;
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
     padding: 9px 14px;
     cursor: pointer;
     transition: transform 0.25s var(--ease-out);
@@ -206,8 +229,8 @@
     bottom: calc(100% + 10px);
     max-width: min(340px, 76vw);
     width: max-content;
-    background: #15130e;
-    color: #d6cbac;
+    background: var(--ink);
+    color: var(--bg);
     font-size: 11.5px;
     line-height: 1.5;
     padding: 9px 12px;
@@ -222,7 +245,7 @@
     left: 18px;
     top: 100%;
     border: 6px solid transparent;
-    border-top-color: #15130e;
+    border-top-color: var(--ink);
   }
   .bubble:global(.is-talking) { opacity: 1; transform: none; }
 
