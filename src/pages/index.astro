@@ -21,8 +21,9 @@ import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import KartuWilayah from '../islands/KartuWilayah.svelte';
+import AnatomiKekuasaan from '../islands/AnatomiKekuasaan.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, CABANG, APARAT, EKONOMI } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
@@ -382,26 +383,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         </section>
 
         <!-- the scoreboard -->
-        <section class="cabang-blok" aria-label="Pemantau cabang kekuasaan">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>PEMANTAU CABANG KEKUASAAN</span>
-            <p class="bab-dek">Apa tiap cabang itu, dan beberapa angka yang menandainya hari ini.</p>
-          </div>
-          <div class="cabang-grid">
-            {CABANG.map((c) => (
-              <article class="cabang-col" data-rise>
-                <h3 class="cabang-nama mono">{c.nama}</h3>
-                <p class="cabang-apa">{c.apa}</p>
-                <div class="cabang-metrik">
-                  {c.metrik.map((m) => (
-                    <div class="cabang-row mono"><span>{m.k}</span><b class="num">{m.v}</b></div>
-                  ))}
-                </div>
-                <button class="chip"><span class="tick">⊙</span>{c.chip}</button>
-              </article>
-            ))}
-          </div>
-        </section>
+        <AnatomiKekuasaan client:visible />
 
         <!-- archive strip: the rest of the shelf -->
         <section class="arsip-teaser" aria-label="Lembar perspektif lain dari arsip">
