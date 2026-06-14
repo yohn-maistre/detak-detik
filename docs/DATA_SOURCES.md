@@ -61,3 +61,43 @@ BMKG, data.go.id CKAN, DJPK.
 
 Pengisi irama lambat: BBM (bulanan), tarif PLN (kuartalan), CPI BPS
 (bulanan), berita Setkab (harian, butuh ekstraksi).
+
+---
+
+## Lensa kabupaten (riset kelayakan, Jun 2026)
+
+Lensa Daerah kini menampung 38 provinsi (data contoh). Langkah berikutnya
+adalah turun ke 514 kabupaten/kota. Temuan agen riset:
+
+**BPS WebAPI** memilih wilayah lewat parameter `domain` (2 digit provinsi
+atau 4 digit kabupaten/kota). Butuh kunci gratis. Untuk satu metrik di 514
+kabupaten, lebih praktis melooping 38 domain provinsi (tiap domain memuat
+kabupatennya sebagai baris `vervar`) ketimbang 514 domain.
+
+**Jebakan kode wilayah:** kode BPS (Wilkerstat) berbeda dari kode
+Kemendagri. API BPS memakai kode BPS, sedangkan batas/GeoJSON dan APBD
+sering memakai kode Kemendagri. Wajib pakai tabel jembatan: SIG BPS
+"bridging-kode" (sig.bps.go.id/bridging-kode) atau repo `zakiego/
+Kode-Wilayah-Administrasi-Indonesia-Relasi-BPS-Kemendagri`.
+
+**Master kode wilayah:** `cahyadsn/wilayah` (Kepmendagri 300.2.2-2430/2025).
+
+**GeoJSON kabupaten:** geoBoundaries IDN ADM2 simplified (CC BY 4.0, ~beberapa
+MB, 522 fitur — rekonsiliasi ke 514 lewat kode), atau `cahyadsn/
+wilayah_boundaries` bila ingin kode yang langsung cocok dengan master.
+
+**Tidak ada satu tabel kabupaten gabungan.** Rakit per metrik. Peringkat
+kelayakan (paling mudah dulu):
+
+1. Penduduk · BPS WebAPI + Dukcapil/Satu Data · TRIVIAL
+2. Kemiskinan (P0) · BPS WebAPI, 514 lengkap, tahunan · MUDAH
+3. IPM · BPS WebAPI, 514 lengkap, tahunan · MUDAH
+4. Capaian pendidikan · Rapor Pendidikan (Excel) · MUDAH/SCRAPE
+5. APBD & rasio belanja pegawai · DJPK SIKD (djpk.kemenkeu.go.id) · SCRAPE
+6. UMK · 38 SK gubernur · SCRAPE
+7. Pengangguran terbuka (TPT) · BPS Sakernas (Agustus, caveat) · SCRAPE
+8. Stunting · SKI/SSGI (PDF, kadang) · SCRAPE/HARD
+
+Tunda: Gini ratio (cakupan kabupaten tak lengkap) dan rasio dokter
+(SISDMK, hanya PDF/portal). Sandbox memblokir sebagian fetch primer;
+verifikasi ukuran GeoJSON dan teks dokumentasi WebAPI sebelum implementasi.

@@ -25,6 +25,8 @@ import AnatomiKekuasaan from '../islands/AnatomiKekuasaan.svelte';
 import PabrikUU from '../islands/PabrikUU.svelte';
 import GarisStart from '../islands/GarisStart.svelte';
 import DuaGaris from '../islands/DuaGaris.svelte';
+import JanjiCair from '../islands/JanjiCair.svelte';
+import SisaAlam from '../islands/SisaAlam.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
@@ -374,23 +376,58 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <!-- env coda: the obituary, then the long view -->
-        <ObituariHutan />
+        <!-- UMUM · LINGKUNGAN & EKSTRAKSI -->
+        <section class="bab" id="lingkungan">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>LINGKUNGAN & EKSTRAKSI</span>
+            <p class="bab-dek">Di luar cabang kekuasaan: tanah, udara, dan hayati yang menanggung pertumbuhan. Dokumen berdampingan, pembaca menyimpulkan.</p>
+          </div>
 
-        <section class="bab" id="hutan">
-          <PetaPiksel
-            client:visible
-            judul="Hutan yang Hilang"
-            dek="Setiap hari sejak 2015, satu piksel. Warna menandai luas peringatan deforestasi hari itu. Garis emas: hari ini."
-            satuan="ha"
-            sumber="gfw/umd · (data contoh)"
-            tahunMulai={2015}
-            seed="hutan-hilang-harian"
-            puncak={250}
-            tren={0.07}
-            dasar={28}
-            goyang={0.55}
-          />
+          <ObituariHutan />
+
+          <div class="lingk-sub bab-sub" id="hutan">
+            <PetaPiksel
+              client:visible
+              judul="Hutan yang Hilang"
+              dek="Setiap hari sejak 2015, satu piksel. Warna menandai luas peringatan deforestasi hari itu. Garis emas: hari ini."
+              satuan="ha"
+              sumber="gfw/umd · (data contoh)"
+              tahunMulai={2015}
+              seed="hutan-hilang-harian"
+              puncak={250}
+              tren={0.07}
+              dasar={28}
+              goyang={0.55}
+            />
+          </div>
+
+          <div class="lingk-sub bab-sub" id="udara">
+            <PetaPiksel
+              client:visible
+              judul="Udara Jakarta"
+              dek="Satu piksel per hari. PM2,5 harian dibanding ambang WHO (5 µg/m³); musim kemarau menyala tiap tahun. Garis emas: hari ini."
+              satuan="µg/m³"
+              sumber="waqi/iqair · (data contoh)"
+              tahunMulai={2018}
+              seed="udara-jakarta-harian"
+              puncak={150}
+              tren={0.015}
+              dasar={36}
+              goyang={0.5}
+            />
+          </div>
+
+          <div class="lingk-sub bab-sub">
+            <h3 class="bab-subjudul display">Janji yang Belum Cair</h3>
+            <p class="bab-kalimat fig">Uang transisi energi yang dijanjikan dunia, dan batu bara yang tetap dibangun untuk menambang nikelnya.</p>
+            <JanjiCair client:visible />
+          </div>
+
+          <div class="lingk-sub bab-sub">
+            <h3 class="bab-subjudul display">Sisa di Alam Liar</h3>
+            <p class="bab-kalimat fig">Indonesia memimpin dunia dalam jumlah mamalia terancam punah. Inilah yang tersisa dari empat yang paling dekat dengan garis akhir.</p>
+            <SisaAlam client:visible />
+          </div>
         </section>
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
