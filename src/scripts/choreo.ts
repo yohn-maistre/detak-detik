@@ -9,6 +9,7 @@ import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
 import { setDenom, onDenom, getDenom, formatUang } from '../lib/denominasi';
 import { setLensa } from '../lib/lensa';
+import { pulseRef } from '../lib/motion-kit';
 
 let lenis: Lenis | null = null;
 
@@ -649,5 +650,7 @@ function dispatchScrollHandler() {
     on('say', ({ teks, tahan_ms }) => say(teks, tahan_ms));
     on('denominate', ({ unit }) => setDenom(unit));
     on('set_lensa', ({ kode }) => setLensa(kode));
+    // the agent reaches into the page: ring what it cites, draw a connector
+    on('highlight', ({ ids }) => ids.forEach((id, k) => pulseRef(id, k === 0)));
   });
 }

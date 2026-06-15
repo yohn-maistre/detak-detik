@@ -94,12 +94,13 @@
     asal: 'newsroom' as const,
     langkah: [
       { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
-      { cmd: 'scroll_to', params: { anchor: 'peta' }, narasi: 'Peta Kabar: lapisan data langsung. Coba minta saya tunjukkan gempa di satu pulau.', tahan_ms: 4200 },
-      { cmd: 'scroll_to', params: { anchor: 'kuasa' }, narasi: 'Bab I, Kuasa dan Harta: siapa yang memiliki republik ini, dan siapa yang menanggungnya.', tahan_ms: 5200 },
-      { cmd: 'scroll_to', params: { anchor: 'hukum' }, narasi: 'Bab II: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4600 },
-      { cmd: 'scroll_to', params: { anchor: 'aparat' }, narasi: 'Bab III, Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 5200 },
-      { cmd: 'scroll_to', params: { anchor: 'hening' }, narasi: 'Bab V: baris kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 4600 },
-      { cmd: 'scroll_to', params: { anchor: 'nusantara' }, narasi: 'Dan penutup: tanah, hayati, dan rupa. Selamat membaca. Semua angka membawa kuitansinya.', tahan_ms: 3600 },
+      { cmd: 'highlight', params: { ids: ['peta'] }, narasi: 'Peta Kabar: lapisan data langsung. Minta saya tunjukkan gempa, kebakaran, atau udara di satu pulau.', tahan_ms: 4400 },
+      { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Daerah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
+      { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: siapa yang memiliki republik ini, dan siapa yang menanggungnya.', tahan_ms: 4800 },
+      { cmd: 'highlight', params: { ids: ['hukum'] }, narasi: 'Yudikatif: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4400 },
+      { cmd: 'highlight', params: { ids: ['aparat'] }, narasi: 'Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 4800 },
+      { cmd: 'highlight', params: { ids: ['hening'] }, narasi: 'Yang tidak dihitung: baris yang kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 4400 },
+      { cmd: 'scroll_to', params: { anchor: 'nusantara' }, narasi: 'Dan penutup: tanah, hayati, dan rupa. Semua angka membawa kuitansinya.', tahan_ms: 3600 },
     ],
   };
 
@@ -117,7 +118,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|dunia|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · sorot <bagian> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|dunia|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
@@ -142,6 +143,7 @@
     let ok = false;
     if (cmd === 'fly_to') ok = dispatch({ cmd, params: { kode: arg } });
     else if (cmd === 'scroll_to') ok = dispatch({ cmd, params: { anchor: arg } });
+    else if (cmd === 'sorot' || cmd === 'highlight') ok = dispatch({ cmd: 'highlight', params: { ids: arg.split(/[\s,]+/).filter(Boolean) } });
     else if (cmd === 'say') ok = dispatch({ cmd, params: { teks: arg, cited_ids: [], tahan_ms: 3500 } });
     else { tulis(`verba tidak dikenal: ${cmd}. perintah tak valid tidak pernah dieksekusi.`, 'err'); return; }
     tulis(ok ? 'ok · perintah lolos katalog' : 'ditolak · parameter tidak valid', ok ? 'out' : 'err');
@@ -195,8 +197,9 @@
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'scroll_to', params: { anchor: 'kuasa' } })}>↓ Kuasa & Harta</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'scroll_to', params: { anchor: 'hening' } })}>↓ Yang tidak dihitung</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>◎ Sorot Lensa</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>◎ Kuasa & Harta</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>◎ Yang tidak dihitung</button>
       </div>
     </div>
   {/if}
