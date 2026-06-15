@@ -28,6 +28,8 @@ import DuaGaris from '../islands/DuaGaris.svelte';
 import JanjiCair from '../islands/JanjiCair.svelte';
 import SisaAlam from '../islands/SisaAlam.svelte';
 import RupiahIHSG from '../islands/RupiahIHSG.svelte';
+import JciVsPeers from '../islands/JciVsPeers.svelte';
+import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
@@ -416,6 +418,18 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
               <RepublikOligarki client:visible />
             </div>
           )}
+
+          <div class="bab-lembar bab-sub" data-rise>
+            <h3 class="bab-subjudul display">Pasar yang Tipis</h3>
+            <p class="bab-kalimat fig">Pada sejumlah emiten terbesar, hampir seluruh saham dipegang segelintir pengendali; ambang free float Jakarta termasuk paling rendah di antara bursa besar.</p>
+            <FloatKonsentrasi client:visible />
+          </div>
+
+          <div class="bab-lembar bab-sub" data-rise>
+            <h3 class="bab-subjudul display">Diukur dari Luar</h3>
+            <p class="bab-kalimat fig">Diindeks dari titik yang sama, bursa Jakarta meluncur paling dalam di antara indeks utama dunia pada 2026, sementara tetangganya menanjak.</p>
+            <JciVsPeers client:visible />
+          </div>
 
           <div class="bab-lembar bab-sub" data-rise>
             <h3 class="bab-subjudul display">Di Antara yang Terlemah Dunia</h3>
