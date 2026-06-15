@@ -14,6 +14,7 @@ import TebakDaerah from '../islands/TebakDaerah.svelte';
 import BenarSalah from '../islands/BenarSalah.svelte';
 import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
+import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
@@ -564,6 +565,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <IngatanHero client:visible />
           <AlmanakSains client:visible />
         </div>
+
+        <!-- the living understory: order out of chaos, the catharsis -->
+        <RimbaHidup client:visible />
 
         <blockquote class="atlas-quote fig">
           Yang tetap tinggal setelah kuasa, harga, dan vonis: tanah ini, dan segala yang hidup di atasnya.

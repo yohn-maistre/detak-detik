@@ -197,9 +197,9 @@
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>◎ Sorot Lensa</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>◎ Kuasa & Harta</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>◎ Yang tidak dihitung</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Daerah</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Kuasa & Harta</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>↓ Yang tidak dihitung</button>
       </div>
     </div>
   {/if}
