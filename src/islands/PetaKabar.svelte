@@ -125,48 +125,136 @@
 
   /* the clickable province layer: 38 centroids; click sets the lensa, which
      drives the dossier below and recentres the map */
-  const provinsiGeo = {
-    type: 'FeatureCollection' as const,
-    features: DAERAH.filter((d) => PROV_GEO[d.kode]).map((d, i) => ({
-      type: 'Feature' as const,
-      id: i,
-      geometry: { type: 'Point' as const, coordinates: PROV_GEO[d.kode]! },
-      properties: { kode: d.kode, nama: d.nama },
-    })),
-  };
+  /* ADM1 province polygons, fetched as a static asset; codes patched to join
+     DAERAH (see scripts/patch-prov-geojson.mjs). MapLibre fetches the URL. */
+  const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson`;
+  type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
+  type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
+  let provData: { features: ProvFeature[] } | null = null;
+  const provDataReady = fetch(PROV_URL).then((r) => r.json()).then((d: { features: ProvFeature[] }) => (provData = d)).catch(() => null);
+
   let provinsiOn = $state(true);
   let lensaKode = $state(getLensa());
+  let hoverKode: string | null = null;
+  /** choropleth fill expression, set by the map_choropleth verb; null = plain */
+  let choroExpr: unknown = null;
+  let choroLegend = $state<{ judul: string; satuan: string; lo: number; hi: number } | null>(null);
+
+  /** bounding box of a province polygon, for framing the selection */
+  function bboxProv(kode: string): [[number, number], [number, number]] | null {
+    const f = provData?.features.find((x) => x.properties.kode === kode);
+    if (!f) return null;
+    let minX = 180, minY = 90, maxX = -180, maxY = -90;
+    const scan = (ring: number[][]) => {
+      for (const pt of ring) {
+        const x = pt[0]!, y = pt[1]!;
+        if (x < minX) minX = x; if (x > maxX) maxX = x;
+        if (y < minY) minY = y; if (y > maxY) maxY = y;
+      }
+    };
+    const g = f.geometry;
+    if (g.type === 'Polygon') (g.coordinates as number[][][]).forEach(scan);
+    else (g.coordinates as number[][][][]).forEach((poly) => poly.forEach(scan));
+    return [[minX, minY], [maxX, maxY]];
+  }
 
   function addProvinsi() {
     if (!map) return;
-    if (!map.getSource('provinsi')) map.addSource('provinsi', { type: 'geojson', data: provinsiGeo });
-    const vis = provinsiOn ? 'visible' : 'none';
-    if (!map.getLayer('provinsi-dot')) {
-      map.addLayer({
-        id: 'provinsi-dot', type: 'circle', source: 'provinsi', layout: { visibility: vis },
-        paint: { 'circle-radius': 4, 'circle-color': plat === 'satelit' ? '#f2efe6' : '#15130e', 'circle-opacity': 0.5, 'circle-stroke-color': plat === 'satelit' ? '#15130e' : '#d6cbac', 'circle-stroke-width': 1.5 },
-      });
-    }
-    if (!map.getLayer('provinsi-sel')) {
-      map.addLayer({
-        id: 'provinsi-sel', type: 'circle', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
-        paint: { 'circle-radius': 8, 'circle-color': '#e44a06', 'circle-stroke-color': '#d6cbac', 'circle-stroke-width': 2 },
-      });
-    }
-    if (!map.getLayer('provinsi-lab')) {
-      map.addLayer({
-        id: 'provinsi-lab', type: 'symbol', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode],
-        layout: { visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'], 'text-size': 11.5, 'text-offset': [0, 1.5], 'text-anchor': 'top', 'text-transform': 'uppercase', 'text-letter-spacing': 0.1 },
-        paint: { 'text-color': plat === 'satelit' ? '#f2efe6' : '#15130e', 'text-halo-color': plat === 'satelit' ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 },
-      });
-    }
+    void provDataReady.then(() => {
+      if (!map || !provData) return;
+      const sat = plat === 'satelit';
+      const vis = provinsiOn ? 'visible' : 'none';
+      const ink = sat ? '#f2efe6' : '#15130e';
+      // keep the polygons beneath the hazard dots so dots stay legible and clickable
+      const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+      if (!map.getSource('provinsi')) map.addSource('provinsi', { type: 'geojson', data: provData as never, promoteId: 'kode' });
+      if (!map.getLayer('provinsi-fill')) {
+        map.addLayer({
+          id: 'provinsi-fill', type: 'fill', source: 'provinsi', layout: { visibility: vis },
+          paint: {
+            'fill-color': (choroExpr as string) ?? ink,
+            'fill-opacity': choroExpr ? 0.72 : ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04],
+          },
+        }, below);
+      }
+      if (!map.getLayer('provinsi-line')) {
+        map.addLayer({
+          id: 'provinsi-line', type: 'line', source: 'provinsi', layout: { visibility: vis },
+          paint: { 'line-color': ink, 'line-width': 0.7, 'line-opacity': 0.4 },
+        }, below);
+      }
+      if (!map.getLayer('provinsi-sel-fill')) {
+        map.addLayer({
+          id: 'provinsi-sel-fill', type: 'fill', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
+          paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.12 },
+        }, below);
+      }
+      if (!map.getLayer('provinsi-sel')) {
+        map.addLayer({
+          id: 'provinsi-sel', type: 'line', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
+          paint: { 'line-color': '#e44a06', 'line-width': 2.2 },
+        }, below);
+      }
+      if (!map.getLayer('provinsi-lab')) {
+        map.addLayer({
+          id: 'provinsi-lab', type: 'symbol', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode],
+          layout: { visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'], 'text-size': 11.5, 'text-transform': 'uppercase', 'text-letter-spacing': 0.1 },
+          paint: { 'text-color': ink, 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 },
+        });
+      }
+    });
   }
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-dot', 'provinsi-sel', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'provinsi-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
+  }
+
+  /* choropleth + pins: the map_choropleth and map_label verbs, for one-shot
+     answers from Aksara or a tour. Values come from DAERAH (cited rows). */
+  const METRIK_PETA: Record<string, { judul: string; satuan: string }> = {
+    miskin: { judul: 'Kemiskinan', satuan: '%' },
+    ipm: { judul: 'IPM', satuan: '' },
+    dokter: { judul: 'Dokter / 1.000', satuan: '' },
+    ump: { judul: 'UMP', satuan: 'jt' },
+    pegawai: { judul: 'Belanja pegawai', satuan: '%' },
+    tpt: { judul: 'Pengangguran', satuan: '%' },
+  };
+  const angkaDaerah = (s: string | undefined): number => {
+    if (!s) return NaN;
+    const m = s.replace(/\./g, '').replace(',', '.').match(/-?\d+(\.\d+)?/);
+    return m ? parseFloat(m[0]!) : NaN;
+  };
+  const RAMP = [[232, 220, 187], [205, 154, 78], [205, 120, 40], [228, 74, 6], [150, 28, 10]];
+  function rampWarna(t: number): string {
+    const p = Math.max(0, Math.min(1, t)) * (RAMP.length - 1);
+    const i = Math.min(RAMP.length - 2, Math.floor(p));
+    const f = p - i, a = RAMP[i]!, b = RAMP[i + 1]!;
+    return `rgb(${Math.round(a[0]! + (b[0]! - a[0]!) * f)},${Math.round(a[1]! + (b[1]! - a[1]!) * f)},${Math.round(a[2]! + (b[2]! - a[2]!) * f)})`;
+  }
+  function buildChoro(metric: string): { expr: unknown[]; lo: number; hi: number } {
+    const rows = (DAERAH as unknown as Record<string, string>[])
+      .filter((d) => d.kode !== 'nasional')
+      .map((d) => ({ kode: d.kode!, v: angkaDaerah(d[metric]) }))
+      .filter((r) => Number.isFinite(r.v));
+    const lo = Math.min(...rows.map((r) => r.v)), hi = Math.max(...rows.map((r) => r.v));
+    const expr: unknown[] = ['match', ['get', 'kode']];
+    for (const r of rows) expr.push(r.kode, rampWarna((r.v - lo) / (hi - lo || 1)));
+    expr.push('#bcb094');
+    return { expr, lo, hi };
+  }
+  const fmtLeg = (n: number) => new Intl.NumberFormat('id-ID', { maximumFractionDigits: 1 }).format(n);
+
+  type PinFeat = { type: 'Feature'; geometry: { type: 'Point'; coordinates: [number, number] }; properties: { teks: string } };
+  let pins: PinFeat[] = [];
+  function ensurePins() {
+    if (!map) return;
+    const sat = plat === 'satelit';
+    if (!map.getSource('pins')) map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: pins } as never });
+    if (!map.getLayer('pins-dot')) map.addLayer({ id: 'pins-dot', type: 'circle', source: 'pins', paint: { 'circle-radius': 4, 'circle-color': '#e44a06', 'circle-stroke-color': sat ? '#15130e' : '#f2efe6', 'circle-stroke-width': 1.5 } });
+    if (!map.getLayer('pins-lab')) map.addLayer({ id: 'pins-lab', type: 'symbol', source: 'pins', layout: { 'text-field': ['get', 'teks'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-anchor': 'top', 'text-letter-spacing': 0.04 }, paint: { 'text-color': sat ? '#f2efe6' : '#15130e', 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 } });
   }
 
   const DINAS_STYLE = {
@@ -382,12 +470,24 @@
         const p = e.features?.[0]?.properties as { mag?: number; wilayah?: string; jam?: string } | undefined;
         if (p) infoGempa = `M${p.mag} · ${p.wilayah} · ${p.jam}`;
       });
-      map.on('click', 'provinsi-dot', (e) => {
+      map.on('click', 'provinsi-fill', (e) => {
         const k = e.features?.[0]?.properties?.kode as string | undefined;
         if (k) dispatch({ cmd: 'set_lensa', params: { kode: k } });
       });
-      map.on('mouseenter', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = 'pointer'; });
-      map.on('mouseleave', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = ''; });
+      map.on('mousemove', 'provinsi-fill', (e) => {
+        const k = e.features?.[0]?.properties?.kode as string | undefined;
+        if (!map || !k || k === hoverKode) return;
+        if (hoverKode) map.setFeatureState({ source: 'provinsi', id: hoverKode }, { hover: false });
+        hoverKode = k;
+        map.setFeatureState({ source: 'provinsi', id: k }, { hover: true });
+        map.getCanvas().style.cursor = 'pointer';
+      });
+      map.on('mouseleave', 'provinsi-fill', () => {
+        if (!map) return;
+        if (hoverKode) map.setFeatureState({ source: 'provinsi', id: hoverKode }, { hover: false });
+        hoverKode = null;
+        map.getCanvas().style.cursor = '';
+      });
 
       const seal = document.createElement('div');
       seal.className = 'kabar-seal';
@@ -413,11 +513,48 @@
       }));
       unsubs.push(onLensa((k) => {
         lensaKode = k;
-        if (map?.getLayer('provinsi-sel')) map.setFilter('provinsi-sel', ['==', ['get', 'kode'], k]);
-        if (map?.getLayer('provinsi-lab')) map.setFilter('provinsi-lab', ['==', ['get', 'kode'], k]);
-        const g = PROV_GEO[k];
-        if (g) map?.flyTo({ center: g, zoom: 6.4, speed: 0.85, curve: 1.5 });
-        else map?.flyTo({ center: [118, -2.6], zoom: 4.0, speed: 0.85 });
+        for (const id of ['provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
+          if (map?.getLayer(id)) map.setFilter(id, ['==', ['get', 'kode'], k]);
+        }
+        if (!map) return;
+        if (k === 'nasional') { map.fitBounds(IDN_BOUNDS, { padding: fitPad(), duration: 900 }); return; }
+        void provDataReady.then(() => {
+          const bb = bboxProv(k);
+          if (bb) map?.fitBounds(bb, { padding: fitPad() + 24, maxZoom: 7.5, duration: 900 });
+          else {
+            const g = PROV_GEO[k];
+            if (g) map?.flyTo({ center: g, zoom: 6.4, speed: 0.85, curve: 1.5 });
+          }
+        });
+      }));
+
+      unsubs.push(on('map_choropleth', ({ metric, judul }) => {
+        if (!map?.getLayer('provinsi-fill')) return;
+        if (metric === 'mati') {
+          choroExpr = null; choroLegend = null;
+          map.setPaintProperty('provinsi-fill', 'fill-color', plat === 'satelit' ? '#f2efe6' : '#15130e');
+          map.setPaintProperty('provinsi-fill', 'fill-opacity', ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04] as never);
+          return;
+        }
+        const meta = METRIK_PETA[metric];
+        if (!meta) return;
+        const { expr, lo, hi } = buildChoro(metric);
+        choroExpr = expr;
+        choroLegend = { judul: judul || meta.judul, satuan: meta.satuan, lo, hi };
+        map.setPaintProperty('provinsi-fill', 'fill-color', expr as never);
+        map.setPaintProperty('provinsi-fill', 'fill-opacity', 0.72);
+      }));
+      unsubs.push(on('map_label', ({ kode, lat, lon, teks, sub }) => {
+        if (!map) return;
+        const src = () => map!.getSource('pins') as { setData?: (d: unknown) => void } | undefined;
+        if (!teks) { pins = []; src()?.setData?.({ type: 'FeatureCollection', features: [] }); return; }
+        let coord: [number, number] | undefined;
+        if (kode && PROV_GEO[kode]) coord = PROV_GEO[kode];
+        else if (lon != null && lat != null) coord = [lon, lat];
+        if (!coord) return;
+        pins = [...pins.slice(-11), { type: 'Feature', geometry: { type: 'Point', coordinates: coord }, properties: { teks: sub ? `${teks} · ${sub}` : teks } }];
+        ensurePins();
+        src()?.setData?.({ type: 'FeatureCollection', features: pins });
       }));
 
       void muatLapisan();
@@ -478,6 +615,14 @@
     </div>
 
     <div class="kb-koordinat mono">{koordinat}</div>
+
+    {#if choroLegend}
+      <div class="kb-choro mono">
+        <span class="kb-choro-judul">{choroLegend.judul}</span>
+        <div class="kb-choro-ramp" aria-hidden="true"></div>
+        <span class="kb-choro-skala">{fmtLeg(choroLegend.lo)} → {fmtLeg(choroLegend.hi)} {choroLegend.satuan}</span>
+      </div>
+    {/if}
 
     <button class="kb-rose" onclick={resetNorth} title="Kembali ke utara" aria-label="Orientasi utara">
       <svg viewBox="0 0 100 100" style={`transform: rotate(${-bearing}deg)`}>
@@ -563,6 +708,15 @@
     background: color-mix(in oklab, var(--bg) 85%, transparent);
     border: 1px solid var(--line); padding: 4px 8px;
   }
+  .kb-choro {
+    position: absolute; right: 12px; bottom: 12px; z-index: 5;
+    display: flex; flex-direction: column; gap: 5px;
+    background: color-mix(in oklab, var(--bg) 88%, transparent);
+    border: 1px solid var(--line); padding: 7px 9px; max-width: 180px;
+  }
+  .kb-choro-judul { font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+  .kb-choro-ramp { height: 7px; background: linear-gradient(90deg, rgb(232,220,187), rgb(205,154,78), rgb(205,120,40), rgb(228,74,6), rgb(150,28,10)); }
+  .kb-choro-skala { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); }
   .kb-info {
     font-size: 10px; letter-spacing: 0.1em; color: var(--ink);
     border: 1px solid var(--line); border-top: none;

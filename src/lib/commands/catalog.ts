@@ -35,6 +35,17 @@ export const commandSchemas = {
   set_lensa: z.object({
     kode: z.string(),
   }),
+  map_label: z.object({
+    kode: z.string().optional(),
+    lat: z.number().min(-11).max(6).optional(),
+    lon: z.number().min(95).max(141).optional(),
+    teks: z.string().max(60),
+    sub: z.string().max(40).optional(),
+  }),
+  map_choropleth: z.object({
+    metric: z.enum(['miskin', 'ipm', 'dokter', 'ump', 'pegawai', 'tpt', 'mati']),
+    judul: z.string().max(40).optional(),
+  }),
   highlight: z.object({
     ids: z.array(z.string()).max(40),
   }),
