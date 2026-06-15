@@ -48,9 +48,21 @@ jobs:
         run: npx wrangler@4 deploy --config worker/wrangler.toml
 
       - name: Push NIM_API_KEY secret
-        if: ${{ secrets.NIM_API_KEY != '' }}
-        run: echo "${{ secrets.NIM_API_KEY }}" | npx wrangler@4 secret put NIM_API_KEY --config worker/wrangler.toml
+        env:
+          NIM_API_KEY: ${{ secrets.NIM_API_KEY }}
+        run: |
+          if [ -n "$NIM_API_KEY" ]; then
+            echo "$NIM_API_KEY" | npx wrangler@4 secret put NIM_API_KEY --config worker/wrangler.toml
+          else
+            echo "NIM_API_KEY belum diisi, lewati."
+          fi
 
       - name: Push TURNSTILE_SECRET secret
-        if: ${{ secrets.TURNSTILE_SECRET != '' }}
-        run: echo "${{ secrets.TURNSTILE_SECRET }}" | npx wrangler@4 secret put TURNSTILE_SECRET --config worker/wrangler.toml
+        env:
+          TURNSTILE_SECRET: ${{ secrets.TURNSTILE_SECRET }}
+        run: |
+          if [ -n "$TURNSTILE_SECRET" ]; then
+            echo "$TURNSTILE_SECRET" | npx wrangler@4 secret put TURNSTILE_SECRET --config worker/wrangler.toml
+          else
+            echo "TURNSTILE_SECRET belum diisi, lewati."
+          fi
