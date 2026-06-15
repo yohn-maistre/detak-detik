@@ -68,7 +68,7 @@
     outline-offset: 5px;
     padding: clamp(18px, 3vw, 28px);
     background: var(--card);
-    max-width: 560px;
+    align-self: start;
   }
   .alm-head { font-size: 9px; letter-spacing: 0.22em; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 9px; }
   .alm-judul { font-size: clamp(20px, 2.4vw, 26px); margin: 14px 0 10px; color: var(--ink); }

@@ -17,6 +17,7 @@ import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
+import GunungApi from '../islands/GunungApi.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import LensaWilayah from '../islands/LensaWilayah.svelte';
@@ -643,8 +644,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <!-- lead feature: the day's painting and the day's species -->
         <GaleriNusantara client:visible />
 
-        <!-- the day's almanac: a wonder of nature -->
-        <AlmanakSains client:visible />
+        <!-- a composed spread: the land that breathes, beside the day's almanac -->
+        <div class="atlas-grid">
+          <GunungApi client:visible />
+          <AlmanakSains client:visible />
+        </div>
 
         <!-- the living understory: order out of chaos, the catharsis -->
         <RimbaHidup client:visible />
