@@ -390,29 +390,6 @@ function stempelPad() {
   });
 }
 
-/** Crosshair readout: a spec-sheet coordinate follows the pointer (Act I). */
-function crosshair() {
-  if (!window.matchMedia('(pointer: fine)').matches || reducedMotion()) return;
-  const zone = document.querySelector<HTMLElement>('[data-crosshair]');
-  if (!zone) return;
-  const tag = document.createElement('span');
-  tag.className = 'crosshair-tag mono';
-  tag.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(tag);
-  let raf = 0;
-  zone.addEventListener('pointermove', (e) => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      const lat = (e.clientY / window.innerHeight) * 11 - 6;
-      const lon = (e.clientX / window.innerWidth) * 46 + 95;
-      tag.textContent = `${Math.abs(lat).toFixed(2)}°${lat < 0 ? 'LS' : 'LU'} · ${lon.toFixed(2)}°BT`;
-      tag.style.transform = `translate(${e.clientX + 16}px, ${e.clientY + 18}px)`;
-      tag.style.opacity = '1';
-    });
-  });
-  zone.addEventListener('pointerleave', () => { tag.style.opacity = '0'; });
-}
-
 /** Masthead ripple: the title's ink thins under the pointer like lead type
     under a thumb, and springs back to full weight when it leaves. */
 function mastheadRipple() {
@@ -637,7 +614,6 @@ export function boot() {
   jamTri();
   denomLever();
   stempelPad();
-  crosshair();
   strukTear();
   fajarButton();
   actWhispers();

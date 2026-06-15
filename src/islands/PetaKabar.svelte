@@ -37,6 +37,11 @@
 
   const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
 
+  /* the archipelago's bounding box, so the map frames the whole republic on
+     any screen instead of a fixed center/zoom that crops on narrow phones */
+  const IDN_BOUNDS: [[number, number], [number, number]] = [[94.5, -11.3], [141.2, 6.3]];
+  const fitPad = () => (window.innerWidth < 640 ? 8 : 24);
+
   /* the four planned legend layers, each with a contoh fallback so it always
      renders, and a live path (direct or via the Worker /geo proxy) for deploy */
   type GeoPt = Record<string, number | string>;
@@ -356,8 +361,8 @@
       map = new maplibregl.Map({
         container: mapEl,
         style: DINAS_STYLE as never,
-        center: [118, -2.6],
-        zoom: 4.0,
+        bounds: IDN_BOUNDS,
+        fitBoundsOptions: { padding: fitPad() },
         attributionControl: { compact: true },
         cooperativeGestures: true,
         fadeDuration: 150,
@@ -383,17 +388,6 @@
       });
       map.on('mouseenter', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = 'pointer'; });
       map.on('mouseleave', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = ''; });
-
-      if (!reducedMotion()) {
-        let drift: number;
-        const breathe = () => {
-          if (!map || map.isMoving()) { drift = window.setTimeout(breathe, 4000); return; }
-          map.easeTo({ center: [map.getCenter().lng + 0.15, map.getCenter().lat], duration: 8000, easing: (t) => t });
-          drift = window.setTimeout(breathe, 9000);
-        };
-        drift = window.setTimeout(breathe, 6000);
-        map.on('remove', () => clearTimeout(drift));
-      }
 
       const seal = document.createElement('div');
       seal.className = 'kabar-seal';

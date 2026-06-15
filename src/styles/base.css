@@ -368,17 +368,6 @@ a { color: inherit; }
   transform: translate(-50%, -50%) scale(0.2);
   opacity: 0.6;
 }
-.crosshair-tag {
-  position: fixed;
-  left: 0; top: 0;
-  z-index: 110;
-  pointer-events: none;
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
 /* ---- reduced motion: instant state, no performance ---- */
 @media (prefers-reduced-motion: reduce) {
