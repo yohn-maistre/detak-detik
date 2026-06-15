@@ -25,6 +25,8 @@
 export interface Env {
   NIM_API_KEY?: string;
   TURNSTILE_SECRET?: string;
+  FIRMS_MAP_KEY?: string;
+  WAQI_TOKEN?: string;
   CACHE: KVNamespace;
   AI?: { run: (model: string, options: Record<string, unknown>) => Promise<{ response?: string }> };
   MODEL_PRIMARY?: string;
@@ -57,6 +59,7 @@ export default {
     const url = new URL(req.url);
     try {
       if (url.pathname === '/ticker') return ticker(env);
+      if (url.pathname.startsWith('/geo/')) return geo(url.pathname.slice(5), env, ctx);
       if (url.pathname === '/ask' && req.method === 'POST') return ask(req, env, ctx);
       if (url.pathname === '/tour' && req.method === 'POST') return tour(req, env);
       return json({ galat: 'rute tidak dikenal' }, 404);
@@ -272,6 +275,67 @@ async function refreshTicker(env: Env): Promise<void> {
     }
   }
   await env.CACHE.put('ticker:v1', JSON.stringify(items), { expirationTtl: 7200 });
+}
+
+/* ---------- /geo: map layer proxy (keyless out, cached, CORS) ----------
+   Browsers cannot reach FIRMS/WAQI/MAGMA directly (keys + CORS); the Worker
+   fetches server-side, normalises to GeoJSON points, and caches 5 min to
+   respect upstream rate limits. PetaBencana stays a direct client fetch. */
+
+const IDN_BBOX = '95,-11,141,6'; // west,south,east,north
+
+function geojson(features: unknown[]): Response {
+  return new Response(JSON.stringify({ type: 'FeatureCollection', features }), {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS },
+  });
+}
+const feat = (lon: number, lat: number, props: Record<string, unknown>) => ({
+  type: 'Feature',
+  geometry: { type: 'Point', coordinates: [lon, lat] },
+  properties: props,
+});
+
+async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Response> {
+  const cacheKey = `geo:${id}`;
+  const cached = await env.CACHE.get(cacheKey);
+  if (cached) return new Response(cached, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+
+  let features: unknown[] = [];
+  try {
+    if (id === 'udara' && env.WAQI_TOKEN) {
+      const r = await fetch(`https://api.waqi.info/map/bounds/?latlng=-11,95,6,141&token=${env.WAQI_TOKEN}`);
+      const d = (await r.json()) as { data?: { lat: number; lon: number; aqi: string; station?: { name?: string } }[] };
+      features = (d.data ?? [])
+        .filter((s) => Number.isFinite(s.lat) && Number.isFinite(s.lon) && s.aqi !== '-')
+        .map((s) => feat(s.lon, s.lat, { aqi: Number(s.aqi), nama: s.station?.name ?? '' }));
+    } else if (id === 'kebakaran' && env.FIRMS_MAP_KEY) {
+      const r = await fetch(`https://firms.modaps.eosdis.nasa.gov/api/area/csv/${env.FIRMS_MAP_KEY}/VIIRS_NOAA20_NRT/${IDN_BBOX}/1`);
+      const csv = await r.text();
+      const rows = csv.trim().split('\n');
+      const head = (rows.shift() ?? '').split(',');
+      const iLat = head.indexOf('latitude'), iLon = head.indexOf('longitude'), iFrp = head.indexOf('frp');
+      features = rows
+        .map((line) => line.split(','))
+        .filter((c) => c.length > Math.max(iLat, iLon, iFrp))
+        .map((c) => feat(Number(c[iLon]), Number(c[iLat]), { frp: Number(c[iFrp]) || 10 }))
+        .filter((f) => Number.isFinite((f.geometry.coordinates as number[])[0]));
+    } else if (id === 'gunungapi') {
+      // MAGMA exposes no clean GeoJSON; best-effort, empty keeps the client contoh
+      const r = await fetch('https://magma.esdm.go.id/api/v1/magma-var-latest', { headers: { Accept: 'application/json' } });
+      if (r.ok) {
+        const d = (await r.json()) as { data?: { longitude?: number; latitude?: number; level?: number; name?: string }[] };
+        features = (d.data ?? [])
+          .filter((v) => Number.isFinite(v.longitude) && Number.isFinite(v.latitude))
+          .map((v) => feat(v.longitude!, v.latitude!, { level: v.level ?? 1, nama: v.name ?? '' }));
+      }
+    }
+  } catch {
+    features = [];
+  }
+
+  const out = JSON.stringify({ type: 'FeatureCollection', features });
+  if (features.length) ctx.waitUntil(env.CACHE.put(cacheKey, out, { expirationTtl: 300 }));
+  return new Response(out, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
 }
 
 async function sha256(s: string): Promise<string> {

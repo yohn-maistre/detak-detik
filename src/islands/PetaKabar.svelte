@@ -34,6 +34,89 @@
     { mag: 4.5, lon: 140.1, lat: -2.9, wilayah: 'Jayapura', jam: '06.51 WIT' },
   ];
 
+  const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
+
+  /* the four planned legend layers, each with a contoh fallback so it always
+     renders, and a live path (direct or via the Worker /geo proxy) for deploy */
+  type GeoPt = Record<string, number | string>;
+  const LAYER_CONTOH: Record<string, GeoPt[]> = {
+    gunungapi: [
+      { lon: 110.446, lat: -7.54, level: 3, nama: 'Merapi' },
+      { lon: 112.922, lat: -8.108, level: 3, nama: 'Semeru' },
+      { lon: 127.63, lat: 1.488, level: 4, nama: 'Ibu' },
+      { lon: 122.77, lat: -8.53, level: 4, nama: 'Lewotobi' },
+      { lon: 100.473, lat: -0.381, level: 2, nama: 'Marapi' },
+      { lon: 105.423, lat: -6.102, level: 3, nama: 'Anak Krakatau' },
+    ],
+    udara: [
+      { lon: 106.85, lat: -6.21, aqi: 165, nama: 'Jakarta' },
+      { lon: 107.61, lat: -6.92, aqi: 120, nama: 'Bandung' },
+      { lon: 112.75, lat: -7.26, aqi: 98, nama: 'Surabaya' },
+      { lon: 101.45, lat: 0.51, aqi: 180, nama: 'Pekanbaru' },
+      { lon: 113.92, lat: -2.21, aqi: 210, nama: 'Palangkaraya' },
+      { lon: 98.67, lat: 3.59, aqi: 110, nama: 'Medan' },
+    ],
+    banjir: [
+      { lon: 106.83, lat: -6.17, state: 3, nama: 'Jakarta Pusat' },
+      { lon: 107.0, lat: -6.24, state: 2, nama: 'Bekasi' },
+      { lon: 110.42, lat: -6.97, state: 2, nama: 'Semarang' },
+      { lon: 107.6, lat: -6.95, state: 1, nama: 'Bandung' },
+    ],
+    kebakaran: [
+      { lon: 101.7, lat: 0.5, frp: 45, nama: 'Riau' },
+      { lon: 104.0, lat: -2.9, frp: 60, nama: 'Sumsel' },
+      { lon: 110.0, lat: -0.5, frp: 38, nama: 'Kalbar' },
+      { lon: 113.5, lat: -2.2, frp: 75, nama: 'Kalteng' },
+      { lon: 103.0, lat: -1.6, frp: 30, nama: 'Jambi' },
+    ],
+  };
+
+  const LAYERS: { id: string; nama: string; sym: string; sumber: string; paint: Record<string, unknown> }[] = [
+    {
+      id: 'gunungapi', nama: 'GUNUNG API', sym: '▲', sumber: 'magma/pvmbg',
+      paint: {
+        'circle-radius': ['interpolate', ['linear'], ['get', 'level'], 1, 4, 4, 12],
+        'circle-color': ['step', ['get', 'level'], '#5a8f6a', 2, '#cdb47a', 3, '#e08a1e', 4, '#e44a06'],
+      },
+    },
+    {
+      id: 'udara', nama: 'UDARA · PM2.5', sym: '◍', sumber: 'waqi',
+      paint: {
+        'circle-radius': 6,
+        'circle-color': ['step', ['get', 'aqi'], '#5a8f6a', 51, '#cdb47a', 101, '#e08a1e', 151, '#e44a06', 201, '#8a1b6a'],
+      },
+    },
+    {
+      id: 'banjir', nama: 'BANJIR · LAPORAN', sym: '✚', sumber: 'petabencana',
+      paint: {
+        'circle-radius': ['interpolate', ['linear'], ['get', 'state'], 1, 4, 3, 11],
+        'circle-color': ['step', ['get', 'state'], '#7fa8c9', 2, '#3f6fa0', 3, '#1d3f66'],
+      },
+    },
+    {
+      id: 'kebakaran', nama: 'TITIK API', sym: '▒', sumber: 'firms/viirs',
+      paint: {
+        'circle-radius': ['interpolate', ['linear'], ['get', 'frp'], 20, 3, 80, 10],
+        'circle-color': ['interpolate', ['linear'], ['get', 'frp'], 20, '#e08a1e', 80, '#e44a06'],
+        'circle-opacity': 0.72,
+      },
+    },
+  ];
+
+  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false });
+  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false });
+
+  function ptsGeo(pts: GeoPt[]) {
+    return {
+      type: 'FeatureCollection' as const,
+      features: pts.map((p) => ({
+        type: 'Feature' as const,
+        geometry: { type: 'Point' as const, coordinates: [Number(p.lon), Number(p.lat)] },
+        properties: p,
+      })),
+    };
+  }
+
   const DINAS_STYLE = {
     version: 8 as const,
     glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',
@@ -109,6 +192,23 @@
         },
       });
     }
+    for (const L of LAYERS) {
+      if (!map.getSource(L.id)) map.addSource(L.id, { type: 'geojson', data: ptsGeo(LAYER_CONTOH[L.id] ?? []) });
+      if (!map.getLayer(`${L.id}-dot`)) {
+        map.addLayer({
+          id: `${L.id}-dot`,
+          type: 'circle',
+          source: L.id,
+          layout: { visibility: layerOn[L.id] ? 'visible' : 'none' },
+          paint: {
+            'circle-opacity': 0.8,
+            'circle-stroke-color': plat === 'satelit' ? '#f2efe6' : '#15130e',
+            'circle-stroke-width': 0.8,
+            ...(L.paint as Record<string, never>),
+          },
+        });
+      }
+    }
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
       map.addSource('radar', {
         type: 'raster',
@@ -131,6 +231,40 @@
     gempaOn = onState;
     if (map?.getLayer('gempa-dot')) {
       map.setLayoutProperty('gempa-dot', 'visibility', onState ? 'visible' : 'none');
+    }
+  }
+
+  function toggleLayer(id: string, onState: boolean) {
+    layerOn[id] = onState;
+    if (map?.getLayer(`${id}-dot`)) map.setLayoutProperty(`${id}-dot`, 'visibility', onState ? 'visible' : 'none');
+  }
+
+  /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
+     Worker /geo proxy when PUBLIC_AKSARA_URL is set. Any failure keeps contoh. */
+  async function muatLapisan() {
+    const set = (id: string, pts: GeoPt[]) => {
+      if (!pts.length) return;
+      (map?.getSource(id) as { setData?: (d: unknown) => void } | undefined)?.setData?.(ptsGeo(pts));
+      layerLive[id] = true;
+    };
+    try {
+      const res = await fetch('https://data.petabencana.id/reports?timeperiod=43200', { signal: AbortSignal.timeout(6000) });
+      const data = (await res.json()) as { result?: { features?: { geometry?: { coordinates?: number[] }; properties?: Record<string, unknown> }[] } };
+      const pts = (data.result?.features ?? [])
+        .map((f) => ({ lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN, state: Number(f.properties?.state ?? 1), nama: String(f.properties?.title ?? 'laporan') }))
+        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
+      set('banjir', pts as GeoPt[]);
+    } catch { /* contoh stays */ }
+    if (!AKSARA_URL) return;
+    for (const id of ['gunungapi', 'udara', 'kebakaran']) {
+      try {
+        const res = await fetch(`${AKSARA_URL}/geo/${id}`, { signal: AbortSignal.timeout(6000) });
+        const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
+        const pts = (data.features ?? [])
+          .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
+          .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
+        set(id, pts as GeoPt[]);
+      } catch { /* contoh stays */ }
     }
   }
 
@@ -226,7 +360,10 @@
       }));
       unsubs.push(on('set_layer', ({ layer, on: onState }) => {
         if (layer === 'gempa') toggleGempa(onState);
+        else if (LAYERS.some((l) => l.id === layer)) toggleLayer(layer, onState);
       }));
+
+      void muatLapisan();
     })();
 
     return () => {
@@ -267,10 +404,12 @@
             <span class="sym gempa">◉</span> GEMPA · 24 JAM
             <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'CONTOH'}</span>
           </label>
-          {#each [['▒', 'HUTAN · GFW'], ['◍', 'UDARA · AQI'], ['▲', 'GUNUNG API'], ['✚', 'BENCANA · BNPB']] as [sym, nama]}
-            <div class="kb-leg-row mati">
-              <span class="sym">{sym}</span> {nama} <span class="src">SEGERA</span>
-            </div>
+          {#each LAYERS as L (L.id)}
+            <label class="kb-leg-row">
+              <input type="checkbox" checked={layerOn[L.id]} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: L.id, on: e.currentTarget.checked } })} />
+              <span class={`sym sym-${L.id}`}>{L.sym}</span> {L.nama}
+              <span class="src">{layerLive[L.id] ? `${L.sumber.split('/')[0].toUpperCase()} · LANGSUNG` : 'CONTOH'}</span>
+            </label>
           {/each}
         </div>
       {/if}
@@ -349,6 +488,10 @@
   .kb-leg-row input { accent-color: var(--accent); width: 11px; height: 11px; }
   .sym { width: 12px; text-align: center; }
   .sym.gempa { color: var(--accent); }
+  .sym-gunungapi { color: #e08a1e; }
+  .sym-udara { color: #8a1b6a; }
+  .sym-banjir { color: #3f6fa0; }
+  .sym-kebakaran { color: var(--accent); }
   .src { margin-left: auto; font-size: 8px; color: var(--muted); letter-spacing: 0.16em; }
 
   .kb-koordinat {
