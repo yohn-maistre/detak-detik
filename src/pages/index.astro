@@ -21,7 +21,8 @@ import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import KartuWilayah from '../islands/KartuWilayah.svelte';
-import AnatomiKekuasaan from '../islands/AnatomiKekuasaan.svelte';
+import CabangBand from '../islands/CabangBand.svelte';
+import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
 import GarisStart from '../islands/GarisStart.svelte';
 import DuaGaris from '../islands/DuaGaris.svelte';
@@ -202,15 +203,30 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <SembilanPuluh client:visible />
 
-        <!-- the five branches: the opener that links down to each section -->
-        <AnatomiKekuasaan client:visible />
+        <!-- the five branches, as a slim index; each band now leads its chapter -->
+        <nav class="cabang-indeks" aria-label="Lima cabang kekuasaan">
+          <span class="ci-head mono"><span class="dot">●</span>LIMA CABANG KEKUASAAN</span>
+          <ol class="ci-list">
+            {CABANG.map((c) => (
+              <li class="ci-item">
+                <a href={`#${c.anchor}`}>
+                  <span class="ci-no mono">{c.no}</span>
+                  <span class="ci-nama display">{c.nama}</span>
+                  <span class="ci-ringkas">{c.ringkas}</span>
+                  <span class="ci-panah" aria-hidden="true">↓</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
 
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">
           <div class="bab-head">
             <span class="inkbar"><span class="dot">●</span>EKSEKUTIF · KUASA & HARTA</span>
-            <p class="bab-dek">Presiden, 109 pejabat kabinet, dan badan seperti Danantara. Siapa yang memiliki republik ini, dan siapa yang menanggungnya.</p>
+            <p class="bab-dek">Siapa yang memiliki republik ini, dan siapa yang menanggungnya.</p>
           </div>
+          <CabangBand cabang="eksekutif" client:visible />
           {oligarki && (
             <div class="bab-lembar" data-rise>
               <h2 class="bab-judul display">{oligarki.judul}</h2>
@@ -226,6 +242,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="inkbar"><span class="dot">●</span>LEGISLATIF · WAKIL & UNDANG-UNDANG</span>
             <p class="bab-dek">DPR 580 kursi menyusun undang-undang dan anggaran. Kecepatannya menyahkan sebuah RUU bercerita tentang prioritasnya.</p>
           </div>
+          <CabangBand cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
               <h2 class="bab-judul display">{pabrik.judul}</h2>
@@ -241,6 +258,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="inkbar"><span class="dot">●</span>YUDIKATIF · HUKUM & VONIS</span>
             <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
           </div>
+          <CabangBand cabang="yudikatif" client:visible />
           <div class="hukum-grid">
             <GradienKeadilan client:visible />
             <div class="struk-rail">
@@ -257,6 +275,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="inkbar"><span class="dot">●</span>APARAT · ALAT PAKSA NEGARA</span>
             <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
           </div>
+          <CabangBand cabang="aparat" client:visible />
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
               <span class="eyebrow">ANGGARAN 2026</span>
@@ -282,6 +301,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="inkbar"><span class="dot">●</span>EKONOMI & DAERAH · ANGGARAN NEGARA</span>
             <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
           </div>
+          <CabangBand cabang="daerah" client:visible />
           <div class="hukum-grid">
             <div class="ekonomi-col" data-rise>
               <div class="ekonomi-stat">
@@ -740,6 +760,21 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .bab { padding-top: 8px; }
   .bab-head { margin-bottom: 22px; }
   .bab-dek { font-size: clamp(15px, 1.9vw, 19px); color: var(--muted); margin-top: 12px; max-width: 60ch; line-height: 1.5; }
+
+  /* the five-branch index strip (bands now live in their chapters) */
+  .cabang-indeks { border-top: 1px solid var(--line); }
+  .ci-head { display: block; font-size: 9px; letter-spacing: 0.2em; color: var(--accent2); padding: 12px 2px 4px; }
+  .ci-head .dot { color: var(--accent); margin-right: 8px; }
+  .ci-list { list-style: none; display: grid; margin: 0; padding: 0; }
+  .ci-item { border-top: 1px solid var(--line-soft); }
+  .ci-item a { display: grid; grid-template-columns: auto auto 1fr auto; align-items: baseline; gap: clamp(12px, 2vw, 26px); padding: 14px 2px; text-decoration: none; color: var(--ink); transition: padding-left 0.25s var(--ease-out), background 0.2s; }
+  .ci-item a:hover { padding-left: 14px; background: color-mix(in oklab, var(--accent2) 9%, transparent); }
+  .ci-no { font-size: 10px; letter-spacing: 0.14em; color: var(--accent); }
+  .ci-nama { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(20px, 2.6vw, 30px); line-height: 1; }
+  .ci-ringkas { font-size: 12.5px; color: var(--muted); }
+  .ci-panah { color: var(--accent2); font-size: 14px; transition: transform 0.25s var(--ease-out); }
+  .ci-item a:hover .ci-panah { transform: translateY(3px); }
+  @media (max-width: 680px) { .ci-item a { grid-template-columns: auto 1fr auto; } .ci-ringkas { display: none; } }
   .bab-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.04; }
   .bab-kalimat { font-size: clamp(15px, 1.8vw, 18px); margin: 8px 0 22px; max-width: 56ch; }
 

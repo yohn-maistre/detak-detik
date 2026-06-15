@@ -178,7 +178,7 @@
   <div id="aksara-bubble" class="bubble mono" aria-live="polite"></div>
 
   {#if buka}
-    <div class="term card">
+    <div class="term card" class:light={reg === 'mesin'}>
       <div class="term-head mono">
         <span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
         <span>AKSARA · TERMINAL PERINTAH</span>
@@ -249,6 +249,9 @@
   }
   .bubble:global(.is-talking) { opacity: 1; transform: none; }
 
+  /* the terminal inverts against the page, like the pill: a dark panel over the
+     light acts, a cream panel over the dark act. Self-contained theme vars so
+     the monochrome dark-register accent never washes out. */
   .term {
     position: absolute;
     left: 0;
@@ -256,13 +259,16 @@
     width: min(420px, calc(100vw - 40px));
     padding: 0;
     overflow: hidden;
-    /* the panel owns its register: pin colours so inherited body text
-       (computed dark) cannot leak in and obfuscate the log */
-    color: var(--ink);
-    background-color: var(--card);
-    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 4%, transparent) 0 1px, transparent 1px 4px);
+    --t-bg: #15130e; --t-ink: #ece2cb; --t-muted: #9a917f; --t-accent: #e8500a; --t-accent2: #cdb47a; --t-line: rgba(236, 226, 203, 0.16);
+    color: var(--t-ink);
+    background-color: var(--t-bg);
+    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--t-ink) 5%, transparent) 0 1px, transparent 1px 4px);
+    box-shadow: 0 22px 50px -28px rgba(0, 0, 0, 0.7);
   }
-  .term-log p { color: var(--ink); }
+  .term.light {
+    --t-bg: #ece2cb; --t-ink: #211b13; --t-muted: #756956; --t-accent: #ad5038; --t-accent2: #8a6a2e; --t-line: rgba(33, 27, 19, 0.16);
+  }
+  .term-log p { color: var(--t-ink); }
   .term-head {
     display: flex;
     align-items: center;
@@ -270,26 +276,30 @@
     font-size: 10px;
     letter-spacing: 0.18em;
     padding: 10px 14px;
-    border-bottom: 1px solid var(--line);
-    color: var(--muted);
+    border-bottom: 1px solid var(--t-line);
+    color: var(--t-muted);
   }
   .term-head > span:nth-child(2) { flex: 1; }
   .term-dots { display: inline-flex; gap: 4px; }
-  .term-dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--muted); }
-  .term-dots i:first-child { background: var(--accent); border-color: var(--accent); }
-  .term-x { background: none; border: none; cursor: pointer; color: var(--muted); }
+  .term-dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--t-muted); }
+  .term-dots i:first-child { background: var(--t-accent); border-color: var(--t-accent); }
+  .term-x { background: none; border: none; cursor: pointer; color: var(--t-muted); }
   .term-log { max-height: 200px; overflow-y: auto; padding: 12px 14px; font-size: 11.5px; line-height: 1.7; }
-  .term-log .r-in { color: var(--accent); }
-  .term-log .r-err { color: var(--accent2); font-style: italic; }
-  .term-in { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--line); }
-  .term-prompt { color: var(--accent); }
+  .term-log .r-in { color: var(--t-accent); }
+  .term-log .r-err { color: var(--t-accent2); font-style: italic; }
+  .term-in { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--t-line); }
+  .term-prompt { color: var(--t-accent); }
   .term-in input {
     flex: 1;
     background: none;
     border: none;
     outline: none;
-    color: var(--ink);
+    color: var(--t-ink);
     font-size: 12px;
   }
+  .term-in input::placeholder { color: var(--t-muted); }
   .term-quick { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 14px 14px; }
+  .term-quick :global(.chip) { color: var(--t-ink); border-color: var(--t-line); background: transparent; }
+  .term-quick :global(.chip:hover) { border-color: var(--t-accent); color: var(--t-accent); }
+  .term-quick :global(.chip .tick) { color: var(--t-accent); }
 </style>
