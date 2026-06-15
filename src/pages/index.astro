@@ -210,6 +210,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <SembilanPuluh client:visible />
 
+        <!-- ╌╌ GERAK I · LIMA CABANG KEKUASAAN ╌╌ -->
+        <div class="gerak" data-rise>
+          <span class="gerak-no mono">GERAK I</span>
+          <h2 class="gerak-judul display">Lima Cabang Kekuasaan</h2>
+          <p class="gerak-dek fig">Siapa yang memegang kuasa di republik ini, dan bagaimana ia memakainya.</p>
+        </div>
+
         <!-- the five branches, as a slim index; each band now leads its chapter -->
         <nav class="cabang-indeks" aria-label="Lima cabang kekuasaan">
           <span class="ci-head mono"><span class="dot">●</span>LIMA CABANG KEKUASAAN</span>
@@ -230,17 +237,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">
           <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>EKSEKUTIF · KUASA & HARTA</span>
-            <p class="bab-dek">Siapa yang memiliki republik ini, dan siapa yang menanggungnya.</p>
+            <span class="inkbar"><span class="dot">●</span>EKSEKUTIF · PRESIDEN & KABINET</span>
+            <p class="bab-dek">Presiden dan kabinet terbesar sejak 1966: seberapa luas kuasa eksekutif, dan seberapa terbuka pertanggungjawabannya.</p>
           </div>
           <CabangBand cabang="eksekutif" client:visible />
-          {oligarki && (
-            <div class="bab-lembar" data-rise>
-              <h2 class="bab-judul display">{oligarki.judul}</h2>
-              <p class="bab-kalimat fig">{oligarki.satuKalimat}</p>
-              <RepublikOligarki client:visible />
-            </div>
-          )}
         </section>
 
         <!-- CABANG · LEGISLATIF -->
@@ -302,10 +302,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <!-- BAB IV · EKONOMI & DAERAH -->
-        <section class="bab" id="ekonomi">
+        <!-- CABANG · DAERAH -->
+        <section class="bab" id="daerah">
           <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>EKONOMI & DAERAH · ANGGARAN NEGARA</span>
+            <span class="inkbar"><span class="dot">●</span>DAERAH · PEMERINTAHAN & ANGGARAN</span>
             <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
           </div>
           <CabangBand cabang="daerah" client:visible />
@@ -343,14 +343,6 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </div>
 
-          <!-- inlined perspektif: two poverty lines, national -->
-          {duaGaris && (
-            <div class="bab-lembar bab-sub" data-rise>
-              <h3 class="bab-subjudul display">{duaGaris.judul}</h3>
-              <p class="bab-kalimat fig">{duaGaris.satuKalimat}</p>
-              <DuaGaris client:visible />
-            </div>
-          )}
         </section>
 
         <!-- BAB V · YANG TIDAK DIHITUNG -->
@@ -403,23 +395,32 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </div>
         </section>
 
-        <!-- UMUM · NEGARA & RUMAH TANGGA -->
-        <section class="bab" id="rumah-tangga">
+        <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
+        <div class="gerak" data-rise>
+          <span class="gerak-no mono">GERAK II</span>
+          <h2 class="gerak-judul display">Keadaan Negeri</h2>
+          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: pasar, lingkungan, rumah tangga, dan tempat republik ini berdiri di dunia.</p>
+        </div>
+
+        <!-- TEMA · PASAR & EKONOMI -->
+        <section class="bab" id="ekonomi">
           <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>NEGARA & RUMAH TANGGA</span>
-            <p class="bab-dek">Angka yang ditanggung tiap rumah: nilai rupiah di kantong, dan ongkos yang menyertai program terbesar negara.</p>
+            <span class="inkbar"><span class="dot">●</span>PASAR & EKONOMI</span>
+            <p class="bab-dek">Harga uang, pemusatan kepemilikan, dan bursa yang diukur dari luar. Dokumen berdampingan, pembaca menyimpulkan.</p>
           </div>
 
-          <div class="bab-lembar" data-rise>
-            <h3 class="bab-subjudul display">Terburuk Sedunia</h3>
-            <p class="bab-kalimat fig">Rupiah dan bursa Jakarta, diukur dari luar, termasuk yang paling lemah di dunia pada 2026.</p>
-            <RupiahIHSG client:visible />
-          </div>
+          {oligarki && (
+            <div class="bab-lembar" data-rise>
+              <h2 class="bab-judul display">{oligarki.judul}</h2>
+              <p class="bab-kalimat fig">{oligarki.satuKalimat}</p>
+              <RepublikOligarki client:visible />
+            </div>
+          )}
 
           <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
-            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
-            <MbgKorban client:visible />
+            <h3 class="bab-subjudul display">Di Antara yang Terlemah Dunia</h3>
+            <p class="bab-kalimat fig">Rupiah dan bursa Jakarta, diukur dari luar, termasuk yang paling lemah di dunia pada 2026.</p>
+            <RupiahIHSG client:visible />
           </div>
         </section>
 
@@ -475,6 +476,28 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <p class="bab-kalimat fig">Indonesia memimpin dunia dalam jumlah mamalia terancam punah. Inilah yang tersisa dari empat yang paling dekat dengan garis akhir.</p>
             <SisaAlam client:visible />
           </div>
+        </section>
+
+        <!-- TEMA · RUMAH TANGGA & KESEJAHTERAAN -->
+        <section class="bab" id="rumah-tangga">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>RUMAH TANGGA & KESEJAHTERAAN</span>
+            <p class="bab-dek">Angka yang ditanggung tiap rumah: garis kemiskinan yang dipakai negara, dan ongkos yang menyertai program terbesarnya.</p>
+          </div>
+
+          <div class="bab-lembar" data-rise>
+            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
+            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
+            <MbgKorban client:visible />
+          </div>
+
+          {duaGaris && (
+            <div class="bab-lembar bab-sub" data-rise>
+              <h3 class="bab-subjudul display">{duaGaris.judul}</h3>
+              <p class="bab-kalimat fig">{duaGaris.satuKalimat}</p>
+              <DuaGaris client:visible />
+            </div>
+          )}
         </section>
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
@@ -790,6 +813,12 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .dunia-row .dunia-label { font-size: clamp(14px, 1.8vw, 17px); color: var(--ink); flex: none; }
   .dunia-peer { font-size: 10px; letter-spacing: 0.04em; color: var(--muted); }
   .dunia-row .chip { align-self: center; }
+
+  /* ---- movement dividers (Act II spine: two GERAK) ---- */
+  .gerak { border-top: 2px solid var(--line); padding-top: 18px; }
+  .gerak-no { font-size: 10px; letter-spacing: 0.32em; color: var(--accent); display: block; }
+  .gerak-judul { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 5.6vw, 62px); line-height: 1; margin: 8px 0 10px; letter-spacing: -0.01em; }
+  .gerak-dek { font-size: clamp(14px, 1.7vw, 18px); color: var(--muted); max-width: 62ch; line-height: 1.5; }
 
   /* ---- BAB chapter headers (Act II) ---- */
   .bab { padding-top: 8px; }

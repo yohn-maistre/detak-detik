@@ -83,7 +83,7 @@ export const CABANG: Cabang[] = [
     slug: 'daerah',
     no: '05',
     nama: 'Daerah',
-    anchor: 'ekonomi',
+    anchor: 'daerah',
     ringkas: 'Jarak peluang lahir miskin antarprovinsi.',
     apa: '38 provinsi, ratusan pemda, plus otonomi khusus Aceh dan Papua.',
     big: '8×',

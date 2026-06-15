@@ -96,7 +96,7 @@
       { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
       { cmd: 'highlight', params: { ids: ['peta'] }, narasi: 'Peta Kabar: lapisan data langsung. Minta saya tunjukkan gempa, kebakaran, atau udara di satu pulau.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Wilayah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
-      { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: siapa yang memiliki republik ini, dan siapa yang menanggungnya.', tahan_ms: 4800 },
+      { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: presiden dan kabinet terbesar sejak 1966, dan seberapa terbuka pertanggungjawabannya.', tahan_ms: 4800 },
       { cmd: 'highlight', params: { ids: ['hukum'] }, narasi: 'Yudikatif: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['aparat'] }, narasi: 'Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 4800 },
       { cmd: 'highlight', params: { ids: ['hening'] }, narasi: 'Yang tidak dihitung: baris yang kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 4400 },
@@ -118,7 +118,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · sorot <bagian> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|dunia|hening|janji|nusantara> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · sorot <bagian> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|daerah|janji|hening|ekonomi|lingkungan|rumah-tangga|dunia|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }
@@ -198,7 +198,7 @@
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Wilayah</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Kuasa & Harta</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Eksekutif</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>↓ Yang tidak dihitung</button>
       </div>
     </div>
