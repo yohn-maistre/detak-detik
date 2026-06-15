@@ -4,21 +4,26 @@
       benar-benar beredar di publik (free float). Di sebelahnya, ambang free
       float minimum: IDX termasuk paling rendah di antara bursa besar. Angka
       contoh, dibentuk dari aturan dan kepemilikan terkini. */
-  import { gsap, reducedMotion } from '../lib/motion';
+  import { gsap, reducedMotion, EASE_PRESS, EASE_STAMP } from '../lib/motion';
   import { rngFrom } from '../lib/seed';
+  import { ramp } from '../lib/chart-kit';
 
   // 97 of 100 shares held by the controlling core; ~3 truly float
   const INTI = 97, PUBLIK = 3;
   const CW = 250, CH = 240;
+  const cx0 = CW / 2, cy0 = CH / 2;
   const rng = rngFrom('float-konsentrasi');
   const bell = () => (rng() + rng() + rng() - 1.5) / 1.5; // ~[-1,1], centre-weighted
-  const inti = Array.from({ length: INTI }, () => ({
-    x: CW / 2 + bell() * 64,
-    y: CH / 2 + bell() * 58,
-  }));
-  // the thin public float, drifting at the rim
+  const maxd = Math.hypot(50, 46);
+  // a dense ember clot: darkest at the gravitational centre, warmer at the rim
+  const inti = Array.from({ length: INTI }, () => {
+    const x = cx0 + bell() * 50, y = cy0 + bell() * 46;
+    const t = 1 - Math.min(1, Math.hypot(x - cx0, y - cy0) / maxd);
+    return { x, y, col: ramp(0.45 + 0.5 * t) };
+  });
+  // the thin public float, isolated at the rim, each tagged
   const publik = [
-    { x: 34, y: 40 }, { x: CW - 30, y: 64 }, { x: 40, y: CH - 38 },
+    { x: 30, y: 36 }, { x: CW - 26, y: 58 }, { x: 38, y: CH - 32 },
   ].slice(0, PUBLIK);
 
   // minimum free-float thresholds, by exchange (%). IDX is a raise: 7,5 → 15
@@ -36,16 +41,22 @@
   let root: HTMLElement | undefined = $state();
   $effect(() => {
     if (!root) return;
+    if (reducedMotion()) { root.classList.add('in'); return; }
     const io = new IntersectionObserver(([e]) => {
       if (e?.isIntersecting) {
-        if (!reducedMotion()) {
-          gsap.fromTo(root!.querySelectorAll('.fk-dot-inti'),
-            { scale: 0, transformOrigin: 'center' },
-            { scale: 1, duration: 0.5, ease: 'back.out(1.8)', stagger: 0.004 });
-          gsap.fromTo(root!.querySelectorAll('.fk-bar'),
-            { scaleX: 0, transformOrigin: 'left center' },
-            { scaleX: 1, duration: 0.8, ease: 'power3.out', stagger: 0.08, delay: 0.3 });
-        }
+        root!.classList.add('in');
+        gsap.fromTo(root!.querySelectorAll('.fk-dot-inti'),
+          { scale: 0, transformOrigin: 'center' },
+          { scale: 1, duration: 0.5, ease: EASE_STAMP, stagger: { each: 0.004, from: 'random' } });
+        // second beat: the core consolidates inward
+        gsap.fromTo(root!.querySelector('.fk-inti-g'),
+          { scale: 1.14, transformOrigin: 'center' },
+          { scale: 1, duration: 0.7, ease: EASE_PRESS, delay: 0.55 });
+        gsap.fromTo(root!.querySelectorAll('.fk-publik, .fk-publik-tag'),
+          { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 0.9, stagger: 0.1 });
+        gsap.fromTo(root!.querySelectorAll('.fk-bar'),
+          { scaleX: 0, transformOrigin: 'left center' },
+          { scaleX: 1, duration: 0.8, ease: 'power3.out', stagger: 0.08, delay: 0.3 });
         io.disconnect();
       }
     }, { threshold: 0.3 });
@@ -60,11 +71,15 @@
     <figure class="fk-con">
       <figcaption class="eyebrow">SATU EMITEN BESAR · 100 SAHAM, SIAPA YANG MEMEGANG</figcaption>
       <svg viewBox="0 0 {CW} {CH}" width="100%" role="img" aria-label="97 dari 100 saham dipegang segelintir pengendali, 3 beredar di publik, data contoh">
-        {#each inti as d, i (i)}
-          <circle class="fk-dot-inti" cx={d.x} cy={d.y} r="4.2" />
-        {/each}
+        <text class="fk-ghost" x={cx0} y={cy0 + 46} text-anchor="middle">97<tspan class="fk-ghost-sm">:3</tspan></text>
+        <g class="fk-inti-g">
+          {#each inti as d, i (i)}
+            <circle class="fk-dot-inti" style={`fill:${d.col}`} cx={d.x} cy={d.y} r="4" />
+          {/each}
+        </g>
         {#each publik as d, i (i)}
-          <circle class="fk-dot-publik" cx={d.x} cy={d.y} r="4.2" />
+          <circle class="fk-publik" cx={d.x} cy={d.y} r="4.2" />
+          <text class="fk-publik-tag" x={d.x + (d.x > cx0 ? -8 : 8)} y={d.y - 7} text-anchor={d.x > cx0 ? 'end' : 'start'}>publik</text>
         {/each}
       </svg>
       <p class="fk-con-key mono">
@@ -82,6 +97,7 @@
           <text class="fk-bursa" class:tandai={a.tandai} x="0" y={y + 4}>{a.bursa}</text>
           <line class="fk-track" x1="84" x2={BW - 12} y1={y} y2={y} />
           {#if a.dari}
+            <line class="fk-ghost-tick" x1={bx(a.dari)} x2={bx(a.dari)} y1={y - 6} y2={y + 6} />
             <rect class="fk-bar fk-bar-tandai" x={bx(a.dari)} y={y - 3} width={Math.max(2, bx(a.nilai) - bx(a.dari))} height="6" />
             <circle class="fk-pt tandai" cx={bx(a.nilai)} cy={y} r="4" />
             <text class="fk-val tandai" x={bx(a.nilai) + 8} y={y + 3.5}>7,5 → {a.nilai}%</text>
@@ -107,8 +123,13 @@
   @media (max-width: 820px) { .fk-grid { grid-template-columns: 1fr; } }
   figure { margin: 0; display: grid; gap: 10px; }
   svg { display: block; }
+  .fk-ghost { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 110px; fill: transparent; -webkit-text-stroke: 1.2px var(--line-soft); }
+  .fk-ghost-sm { font-size: 0.42em; -webkit-text-stroke: 0.8px var(--line-soft); }
   .fk-dot-inti { fill: var(--accent); }
-  .fk-dot-publik { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+  .fk-publik { fill: none; stroke: var(--ink); stroke-width: 1.4; opacity: 0; }
+  .fk.in .fk-publik { opacity: 1; }
+  .fk-publik-tag { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; fill: var(--muted); opacity: 0; }
+  .fk.in .fk-publik-tag { opacity: 1; }
   .fk-con-key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 9px; letter-spacing: 0.1em; color: var(--muted); }
   .fk-con-key span { display: inline-flex; align-items: center; gap: 6px; }
   .sw { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
@@ -116,8 +137,9 @@
   .sw.publik { border: 1.4px solid var(--ink); }
 
   .fk-track { stroke: var(--line-soft); stroke-width: 1; }
+  .fk-ghost-tick { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.7; }
   .fk-bar { stroke: var(--muted); stroke-width: 2.4; }
-  .fk-bar-tandai { fill: var(--accent); opacity: 0.85; }
+  .fk-bar-tandai { fill: var(--accent); opacity: 0.9; }
   .fk-pt { fill: var(--muted); }
   .fk-pt.tandai { fill: var(--accent); }
   svg text { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.04em; fill: var(--muted); }

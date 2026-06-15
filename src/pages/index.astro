@@ -30,6 +30,7 @@ import SisaAlam from '../islands/SisaAlam.svelte';
 import RupiahIHSG from '../islands/RupiahIHSG.svelte';
 import JciVsPeers from '../islands/JciVsPeers.svelte';
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
+import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
@@ -247,6 +248,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="eksekutif" client:visible />
+          <div class="bab-lembar" data-rise>
+            <h3 class="bab-subjudul display">Kabinet yang Membengkak</h3>
+            <p class="bab-kalimat fig">Empat puluh delapan menteri, lima puluh enam wakil, lima kepala badan: satu sel tiap pejabat, dan jam Danantara yang terus berjalan sementara laporan keuangannya tetap nol.</p>
+            <KabinetWaffle client:visible />
+          </div>
         </section>
 
         <!-- CABANG · LEGISLATIF -->
