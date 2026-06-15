@@ -13,6 +13,7 @@
   import { on, dispatch } from '../lib/commands/dispatcher';
   import { drawEngraving, ENGRAVE_DINAS } from '../lib/engrave';
   import { reducedMotion } from '../lib/motion';
+  import { pulseRef } from '../lib/motion-kit';
 
   let mapEl: HTMLDivElement;
   let engraveEl: HTMLCanvasElement;
@@ -311,6 +312,30 @@
   }
 
   let gempaData = gempaGeojson(GEMPA_CONTOH);
+  let updatedAt = $state('');
+
+  /* ── province dossier: what a click (or Aksara's set_lensa) surfaces on the
+     map — a small narrated readout, with a live tally drawn from this view ── */
+  const DOSSIER_PROV = (DAERAH as unknown as Record<string, string>[]).filter((d) => d.kode !== 'nasional');
+  const ipmUrut = [...DOSSIER_PROV].sort((a, b) => angkaDaerah(b.ipm) - angkaDaerah(a.ipm));
+  const ipmRankOf = (kode: string) => ipmUrut.findIndex((d) => d.kode === kode) + 1;
+  function gempaDalam(kode: string): number {
+    const bb = bboxProv(kode);
+    if (!bb) return 0;
+    const [[x0, y0], [x1, y1]] = bb;
+    return (gempaData.features as { geometry: { coordinates: [number, number] } }[])
+      .filter((f) => { const [x, y] = f.geometry.coordinates; return x >= x0 && x <= x1 && y >= y0 && y <= y1; }).length;
+  }
+  const dossier = $derived.by(() => {
+    if (lensaKode === 'nasional') return null;
+    const d = DOSSIER_PROV.find((x) => x.kode === lensaKode);
+    if (!d) return null;
+    return {
+      nama: d.nama, pulau: d.pulau, fakta: d.fakta,
+      ipm: d.ipm, ipmRank: ipmRankOf(d.kode), n: DOSSIER_PROV.length,
+      miskin: d.miskin, dokter: d.dokter, gempa: gempaDalam(d.kode),
+    };
+  });
 
   function addDataLayers() {
     if (!map) return;
@@ -409,6 +434,26 @@
     }
   }
 
+  const jamWIB = () => new Date(Date.now() + 7 * 3600_000).toISOString().slice(11, 16);
+  /* BMKG quakes, keyless; refreshed on a timer so the map keeps a live pulse */
+  async function refreshGempa() {
+    try {
+      const res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', { signal: AbortSignal.timeout(6000) });
+      const data = (await res.json()) as { Infogempa?: { gempa?: { Coordinates: string; Magnitude: string; Wilayah: string; Jam: string }[] } };
+      const rows = (data.Infogempa?.gempa ?? []).slice(0, 12).map((g) => {
+        const [lat, lon] = g.Coordinates.split(',').map(Number);
+        return { mag: Number(g.Magnitude), lon: lon!, lat: lat!, wilayah: g.Wilayah, jam: g.Jam };
+      }).filter((g) => Number.isFinite(g.lon) && Number.isFinite(g.lat));
+      if (rows.length) {
+        gempaData = gempaGeojson(rows);
+        gempaLive = true;
+        infoGempa = `M${rows[0]!.mag} · ${rows[0]!.wilayah} · ${rows[0]!.jam}`;
+        (map?.getSource('gempa') as { setData?: (d: unknown) => void } | undefined)?.setData?.(gempaData);
+      }
+    } catch { /* contoh layer stands in; the chip says so */ }
+    updatedAt = jamWIB();
+  }
+
   onMount(() => {
     let unsubs: (() => void)[] = [];
     let cancelled = false;
@@ -417,22 +462,10 @@
     const ro = new ResizeObserver(() => { if (!petaSiap) drawEngraving(engraveEl, ENGRAVE_DINAS); });
     ro.observe(engraveEl);
 
-    // live feeds: BMKG quakes + RainViewer timestamps, both best-effort
+    // live feeds: BMKG quakes (refreshed on a timer) + RainViewer, best-effort
+    void refreshGempa();
+    const gempaIv = setInterval(() => void refreshGempa(), 120_000);
     (async () => {
-      try {
-        const res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', { signal: AbortSignal.timeout(6000) });
-        const data = (await res.json()) as { Infogempa?: { gempa?: { Coordinates: string; Magnitude: string; Wilayah: string; Jam: string }[] } };
-        const rows = (data.Infogempa?.gempa ?? []).slice(0, 12).map((g) => {
-          const [lat, lon] = g.Coordinates.split(',').map(Number);
-          return { mag: Number(g.Magnitude), lon: lon!, lat: lat!, wilayah: g.Wilayah, jam: g.Jam };
-        }).filter((g) => Number.isFinite(g.lon) && Number.isFinite(g.lat));
-        if (rows.length) {
-          gempaData = gempaGeojson(rows);
-          gempaLive = true;
-          infoGempa = `M${rows[0]!.mag} · ${rows[0]!.wilayah} · ${rows[0]!.jam}`;
-          (map?.getSource('gempa') as { setData?: (d: unknown) => void } | undefined)?.setData?.(gempaData);
-        }
-      } catch { /* contoh layer stands in; the chip says so */ }
       try {
         const res = await fetch('https://api.rainviewer.com/public/weather-maps.json', { signal: AbortSignal.timeout(6000) });
         const data = (await res.json()) as { radar?: { past?: { time: number }[] } };
@@ -562,6 +595,7 @@
 
     return () => {
       cancelled = true;
+      clearInterval(gempaIv);
       unsubs.forEach((u) => u());
       ro.disconnect();
       map?.remove();
@@ -614,7 +648,25 @@
       {/if}
     </div>
 
-    <div class="kb-koordinat mono">{koordinat}</div>
+    <div class="kb-koordinat mono">{koordinat}{#if updatedAt} · <span class="kb-live">⟳ {updatedAt} WIB</span>{/if}</div>
+
+    {#if dossier}
+      <aside class="kb-dossier mono">
+        <button class="kb-dossier-x" onclick={() => dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } })} aria-label="Tutup dasar wilayah">✕</button>
+        <span class="kb-dossier-pulau">{dossier.pulau.toUpperCase()}</span>
+        <h3 class="kb-dossier-nama">{dossier.nama}</h3>
+        <div class="kb-dossier-rank">
+          <span class="kb-dossier-rank-n num">{dossier.ipmRank}</span><span class="kb-dossier-of">/{dossier.n} · IPM {dossier.ipm}</span>
+        </div>
+        <p class="kb-dossier-fakta">{dossier.fakta}</p>
+        <div class="kb-dossier-tally">
+          <span><b>{dossier.miskin}</b> miskin</span>
+          <span><b>{dossier.dokter}</b> dr/1k</span>
+          <span><b class="ember">{dossier.gempa}</b> gempa 24j</span>
+        </div>
+        <button class="kb-dossier-ask" onclick={() => pulseRef('dossier')}>baca dasar wilayah ↓</button>
+      </aside>
+    {/if}
 
     {#if choroLegend}
       <div class="kb-choro mono">
@@ -708,6 +760,32 @@
     background: color-mix(in oklab, var(--bg) 85%, transparent);
     border: 1px solid var(--line); padding: 4px 8px;
   }
+  .kb-live { color: var(--accent); }
+  .kb-live::before { content: ''; }
+
+  /* province dossier: the readout a click surfaces on the map (drill) */
+  .kb-dossier {
+    position: absolute; left: 12px; top: 12px; z-index: 5; width: min(260px, calc(100% - 24px));
+    background: color-mix(in oklab, var(--bg) 94%, transparent);
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.5);
+    padding: 12px 14px 14px; display: grid; gap: 4px;
+  }
+  @media (prefers-reduced-motion: no-preference) { .kb-dossier { animation: kb-doss 0.4s var(--ease-out); } }
+  @keyframes kb-doss { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: none; } }
+  .kb-dossier-x { position: absolute; top: 6px; right: 8px; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 12px; line-height: 1; }
+  .kb-dossier-x:hover { color: var(--accent); }
+  .kb-dossier-pulau { font-size: 8.5px; letter-spacing: 0.2em; color: var(--accent); }
+  .kb-dossier-nama { font-family: 'Fraunces Variable', serif; font-weight: 400; font-size: clamp(22px, 3vw, 30px); line-height: 0.95; color: var(--ink); margin: 1px 0 2px; }
+  .kb-dossier-rank { display: flex; align-items: baseline; gap: 6px; }
+  .kb-dossier-rank-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 28px; line-height: 1; color: var(--accent); }
+  .kb-dossier-of { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); }
+  .kb-dossier-fakta { font-family: var(--font-fig); font-style: italic; font-size: 12.5px; line-height: 1.4; color: var(--ink); margin: 4px 0; }
+  .kb-dossier-tally { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 9px; letter-spacing: 0.08em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 7px; }
+  .kb-dossier-tally b { color: var(--ink); font-weight: 600; }
+  .kb-dossier-tally b.ember { color: var(--accent); }
+  .kb-dossier-ask { margin-top: 8px; background: none; border: 1px solid var(--line); color: var(--ink); font: inherit; font-size: 9px; letter-spacing: 0.12em; padding: 6px 8px; cursor: pointer; text-align: left; transition: background 0.2s, padding-left 0.2s; }
+  .kb-dossier-ask:hover { background: color-mix(in oklab, var(--accent) 12%, transparent); padding-left: 12px; }
   .kb-choro {
     position: absolute; right: 12px; bottom: 12px; z-index: 5;
     display: flex; flex-direction: column; gap: 5px;
