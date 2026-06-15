@@ -238,19 +238,27 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>EKSEKUTIF · PRESIDEN & KABINET</span>
-            <p class="bab-dek">Presiden dan kabinet terbesar sejak 1966: seberapa luas kuasa eksekutif, dan seberapa terbuka pertanggungjawabannya.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">01</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>EKSEKUTIF</span>
+              <h2 class="bab-tajuk display">Presiden &amp; Kabinet</h2>
+              <p class="bab-dek">Presiden dan kabinet terbesar sejak 1966: seberapa luas kuasa eksekutif, dan seberapa terbuka pertanggungjawabannya.</p>
+            </div>
+          </header>
           <CabangBand cabang="eksekutif" client:visible />
         </section>
 
         <!-- CABANG · LEGISLATIF -->
         <section class="bab" id="pabrik">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>LEGISLATIF · WAKIL & UNDANG-UNDANG</span>
-            <p class="bab-dek">DPR 580 kursi menyusun undang-undang dan anggaran. Kecepatannya menyahkan sebuah RUU bercerita tentang prioritasnya.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">02</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>LEGISLATIF</span>
+              <h2 class="bab-tajuk display">Wakil &amp; Undang-Undang</h2>
+              <p class="bab-dek">DPR 580 kursi menyusun undang-undang dan anggaran. Kecepatannya menyahkan sebuah RUU menunjukkan prioritasnya.</p>
+            </div>
+          </header>
           <CabangBand cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
@@ -263,27 +271,39 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- CABANG · YUDIKATIF -->
         <section class="bab" id="hukum">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>YUDIKATIF · HUKUM & VONIS</span>
-            <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">03</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>YUDIKATIF</span>
+              <h2 class="bab-tajuk display">Hukum &amp; Vonis</h2>
+              <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
+            </div>
+          </header>
           <CabangBand cabang="yudikatif" client:visible />
-          <div class="hukum-grid">
-            <GradienKeadilan client:visible />
-            <div class="struk-rail">
-              <p class="figcap-dinas mono">SATU PUTUSAN, DIPERIKSA:</p>
-              {TEMUAN[0].chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
-              <span class="stamp" data-stamp-in>{TEMUAN[0].stamp}</span>
+          <div class="bab-lembar" data-rise>
+            <h3 class="bab-subjudul display">Hukuman yang Tak Sebanding</h3>
+            <p class="bab-kalimat fig">Besar kerugian negara terhadap lama vonis, satu titik per putusan; jaraknya yang melebar adalah temuannya.</p>
+            <div class="hukum-grid">
+              <GradienKeadilan client:visible />
+              <div class="struk-rail">
+                <p class="figcap-dinas mono">SATU PUTUSAN, DIPERIKSA:</p>
+                {TEMUAN[0].chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
+                <span class="stamp" data-stamp-in>{TEMUAN[0].stamp}</span>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- BAB III · APARAT -->
         <section class="bab" id="aparat">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>APARAT · ALAT PAKSA NEGARA</span>
-            <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">04</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>APARAT</span>
+              <h2 class="bab-tajuk display">Alat Paksa Negara</h2>
+              <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
+            </div>
+          </header>
           <CabangBand cabang="aparat" client:visible />
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
@@ -306,10 +326,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- CABANG · DAERAH -->
         <section class="bab" id="daerah">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>DAERAH · PEMERINTAHAN & ANGGARAN</span>
-            <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">05</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>DAERAH</span>
+              <h2 class="bab-tajuk display">Pemerintahan &amp; Anggaran</h2>
+              <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
+            </div>
+          </header>
           <CabangBand cabang="daerah" client:visible />
           <div class="hukum-grid">
             <div class="ekonomi-col" data-rise>
@@ -349,10 +373,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- BAB V · YANG TIDAK DIHITUNG -->
         <section class="bab hening-blok" id="hening">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>YANG TIDAK DIHITUNG</span>
-            <p class="bab-dek">Setiap statistik resmi punya baris dan sumbernya. Baris-baris di bawah tidak. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span></p>
-          </div>
+          <header class="bab-kepala bab-jeda">
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>JEDA</span>
+              <h2 class="bab-tajuk display">Yang Tidak Dihitung</h2>
+              <p class="bab-dek">Setiap statistik resmi punya baris dan sumbernya. Baris-baris di bawah tidak. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span></p>
+            </div>
+          </header>
           <div class="ledger hening-ledger">
             {KEHENINGAN.baris.map((b) => (
               <div>
@@ -378,10 +405,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- BAB VI · JANJI -->
         <section class="bab" id="janji">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>JANJI · BUKU BESAR YANG MENGINGAT</span>
-            <p class="bab-dek">Buku besar yang mengingat. Dinilai dengan aritmetika, bukan opini.</p>
-          </div>
+          <header class="bab-kepala bab-jeda">
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>JEDA</span>
+              <h2 class="bab-tajuk display">Janji</h2>
+              <p class="bab-dek">Buku besar yang mengingat. Dinilai dengan aritmetika, bukan opini.</p>
+            </div>
+          </header>
           <div class="janji-list">
             {JANJI.map((j) => (
               <article class="janji">
@@ -406,10 +436,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- TEMA · PASAR & EKONOMI -->
         <section class="bab" id="ekonomi">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>PASAR & EKONOMI</span>
-            <p class="bab-dek">Harga uang, pemusatan kepemilikan, dan bursa yang diukur dari luar. Dokumen berdampingan, pembaca menyimpulkan.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">06</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · PASAR</span>
+              <h2 class="bab-tajuk display">Pasar &amp; Ekonomi</h2>
+              <p class="bab-dek">Harga uang, pemusatan kepemilikan, dan bursa yang diukur dari luar. Dokumen berdampingan, pembaca menyimpulkan.</p>
+            </div>
+          </header>
 
           {oligarki && (
             <div class="bab-lembar" data-rise>
@@ -440,10 +474,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- UMUM · LINGKUNGAN & EKSTRAKSI -->
         <section class="bab" id="lingkungan">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>LINGKUNGAN & EKSTRAKSI</span>
-            <p class="bab-dek">Di luar cabang kekuasaan: tanah, udara, dan hayati yang menanggung pertumbuhan. Dokumen berdampingan, pembaca menyimpulkan.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · BUMI</span>
+              <h2 class="bab-tajuk display">Lingkungan &amp; Ekstraksi</h2>
+              <p class="bab-dek">Di luar cabang kekuasaan: tanah, udara, dan hayati yang menanggung pertumbuhan. Dokumen berdampingan, pembaca menyimpulkan.</p>
+            </div>
+          </header>
 
           <ObituariHutan />
 
@@ -494,10 +532,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- TEMA · RUMAH TANGGA & KESEJAHTERAAN -->
         <section class="bab" id="rumah-tangga">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>RUMAH TANGGA & KESEJAHTERAAN</span>
-            <p class="bab-dek">Angka yang ditanggung tiap rumah: garis kemiskinan yang dipakai negara, dan ongkos yang menyertai program terbesarnya.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · RUMAH TANGGA</span>
+              <h2 class="bab-tajuk display">Rumah Tangga &amp; Kesejahteraan</h2>
+              <p class="bab-dek">Angka yang ditanggung tiap rumah: garis kemiskinan yang dipakai negara, dan ongkos yang menyertai program terbesarnya.</p>
+            </div>
+          </header>
 
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
@@ -533,10 +575,14 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
         <!-- DUNIA: where the republic ranks, and the country that began beside it -->
         <section class="bab" id="dunia">
-          <div class="bab-head">
-            <span class="inkbar"><span class="dot">●</span>DUNIA · DARI LUAR</span>
-            <p class="bab-dek">Dua hal yang hanya tampak dari luar: di mana kita berdiri di antara bangsa lain, dan satu negara yang dulu berdiri sejajar.</p>
-          </div>
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
+              <h2 class="bab-tajuk display">Dunia</h2>
+              <p class="bab-dek">Dua hal yang hanya tampak dari luar: di mana kita berdiri di antara bangsa lain, dan satu negara yang dulu berdiri sejajar.</p>
+            </div>
+          </header>
 
           <div class="dunia-board">
             {DUNIA.map((d) => (
@@ -838,6 +884,15 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .bab { padding-top: 8px; }
   .bab-head { margin-bottom: 22px; }
   .bab-dek { font-size: clamp(15px, 1.9vw, 19px); color: var(--muted); margin-top: 12px; max-width: 60ch; line-height: 1.5; }
+
+  /* the chapter masthead: a stroked folio numeral + small kicker + big serif title */
+  .bab-kepala { display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 3vw, 40px); align-items: start; border-top: 2px solid var(--line); padding-top: 18px; margin-bottom: clamp(22px, 3.4vw, 34px); }
+  .bab-folio { font-size: clamp(38px, 5vw, 70px); line-height: 0.78; margin-top: -3px; }
+  .bab-kepala-teks { min-width: 0; }
+  .bab-tajuk { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(34px, 5.4vw, 68px); line-height: 0.98; letter-spacing: -0.012em; color: var(--ink); margin: 11px 0 0; }
+  .bab-kepala .inkbar { margin-bottom: 2px; }
+  .bab-jeda { grid-template-columns: 1fr; border-top-style: dashed; }
+  @media (max-width: 680px) { .bab-kepala { grid-template-columns: 1fr; gap: 0; } .bab-folio { display: none; } }
 
   /* the five-branch index strip (bands now live in their chapters) */
   .cabang-indeks { border-top: 1px solid var(--line); }
