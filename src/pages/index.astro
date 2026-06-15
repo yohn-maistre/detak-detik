@@ -28,6 +28,8 @@ import GarisStart from '../islands/GarisStart.svelte';
 import DuaGaris from '../islands/DuaGaris.svelte';
 import JanjiCair from '../islands/JanjiCair.svelte';
 import SisaAlam from '../islands/SisaAlam.svelte';
+import RupiahIHSG from '../islands/RupiahIHSG.svelte';
+import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
@@ -403,6 +405,26 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
                 <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
               </article>
             ))}
+          </div>
+        </section>
+
+        <!-- UMUM · NEGARA & RUMAH TANGGA -->
+        <section class="bab" id="rumah-tangga">
+          <div class="bab-head">
+            <span class="inkbar"><span class="dot">●</span>NEGARA & RUMAH TANGGA</span>
+            <p class="bab-dek">Angka yang ditanggung tiap rumah: nilai rupiah di kantong, dan ongkos yang menyertai program terbesar negara.</p>
+          </div>
+
+          <div class="bab-lembar" data-rise>
+            <h3 class="bab-subjudul display">Terburuk Sedunia</h3>
+            <p class="bab-kalimat fig">Rupiah dan bursa Jakarta, diukur dari luar, termasuk yang paling lemah di dunia pada 2026.</p>
+            <RupiahIHSG client:visible />
+          </div>
+
+          <div class="bab-lembar bab-sub" data-rise>
+            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
+            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
+            <MbgKorban client:visible />
           </div>
         </section>
 
