@@ -22,6 +22,7 @@ import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import KartuWilayah from '../islands/KartuWilayah.svelte';
+import RegionDossier from '../islands/RegionDossier.svelte';
 import CabangBand from '../islands/CabangBand.svelte';
 import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
@@ -141,6 +142,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="eyebrow">LAPISAN DATA LANGSUNG · SATU KOSAKATA PERINTAH</span>
           </div>
           <PetaKabar client:load />
+          <RegionDossier client:visible />
         </section>
 
         <KartuWilayah client:visible />

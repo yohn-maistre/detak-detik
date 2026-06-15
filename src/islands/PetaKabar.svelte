@@ -8,7 +8,8 @@
    * degrade to a Data Hilang note, never a broken page.
    */
   import { onMount } from 'svelte';
-  import { REGIONS } from '../lib/data/edisi';
+  import { REGIONS, PROV_GEO, DAERAH } from '../lib/data/edisi';
+  import { getLensa, onLensa } from '../lib/lensa';
   import { on, dispatch } from '../lib/commands/dispatcher';
   import { drawEngraving, ENGRAVE_DINAS } from '../lib/engrave';
   import { reducedMotion } from '../lib/motion';
@@ -117,6 +118,52 @@
     };
   }
 
+  /* the clickable province layer: 38 centroids; click sets the lensa, which
+     drives the dossier below and recentres the map */
+  const provinsiGeo = {
+    type: 'FeatureCollection' as const,
+    features: DAERAH.filter((d) => PROV_GEO[d.kode]).map((d, i) => ({
+      type: 'Feature' as const,
+      id: i,
+      geometry: { type: 'Point' as const, coordinates: PROV_GEO[d.kode]! },
+      properties: { kode: d.kode, nama: d.nama },
+    })),
+  };
+  let provinsiOn = $state(true);
+  let lensaKode = $state(getLensa());
+
+  function addProvinsi() {
+    if (!map) return;
+    if (!map.getSource('provinsi')) map.addSource('provinsi', { type: 'geojson', data: provinsiGeo });
+    const vis = provinsiOn ? 'visible' : 'none';
+    if (!map.getLayer('provinsi-dot')) {
+      map.addLayer({
+        id: 'provinsi-dot', type: 'circle', source: 'provinsi', layout: { visibility: vis },
+        paint: { 'circle-radius': 4, 'circle-color': plat === 'satelit' ? '#f2efe6' : '#15130e', 'circle-opacity': 0.5, 'circle-stroke-color': plat === 'satelit' ? '#15130e' : '#d6cbac', 'circle-stroke-width': 1.5 },
+      });
+    }
+    if (!map.getLayer('provinsi-sel')) {
+      map.addLayer({
+        id: 'provinsi-sel', type: 'circle', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
+        paint: { 'circle-radius': 8, 'circle-color': '#e44a06', 'circle-stroke-color': '#d6cbac', 'circle-stroke-width': 2 },
+      });
+    }
+    if (!map.getLayer('provinsi-lab')) {
+      map.addLayer({
+        id: 'provinsi-lab', type: 'symbol', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode],
+        layout: { visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'], 'text-size': 11.5, 'text-offset': [0, 1.5], 'text-anchor': 'top', 'text-transform': 'uppercase', 'text-letter-spacing': 0.1 },
+        paint: { 'text-color': plat === 'satelit' ? '#f2efe6' : '#15130e', 'text-halo-color': plat === 'satelit' ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 },
+      });
+    }
+  }
+
+  function toggleProvinsi(onState: boolean) {
+    provinsiOn = onState;
+    for (const id of ['provinsi-dot', 'provinsi-sel', 'provinsi-lab']) {
+      if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
+    }
+  }
+
   const DINAS_STYLE = {
     version: 8 as const,
     glyphs: 'https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf',
@@ -209,6 +256,7 @@
         });
       }
     }
+    addProvinsi();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
       map.addSource('radar', {
         type: 'raster',
@@ -329,6 +377,12 @@
         const p = e.features?.[0]?.properties as { mag?: number; wilayah?: string; jam?: string } | undefined;
         if (p) infoGempa = `M${p.mag} · ${p.wilayah} · ${p.jam}`;
       });
+      map.on('click', 'provinsi-dot', (e) => {
+        const k = e.features?.[0]?.properties?.kode as string | undefined;
+        if (k) dispatch({ cmd: 'set_lensa', params: { kode: k } });
+      });
+      map.on('mouseenter', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = 'pointer'; });
+      map.on('mouseleave', 'provinsi-dot', () => { if (map) map.getCanvas().style.cursor = ''; });
 
       if (!reducedMotion()) {
         let drift: number;
@@ -360,7 +414,16 @@
       }));
       unsubs.push(on('set_layer', ({ layer, on: onState }) => {
         if (layer === 'gempa') toggleGempa(onState);
+        else if (layer === 'provinsi') toggleProvinsi(onState);
         else if (LAYERS.some((l) => l.id === layer)) toggleLayer(layer, onState);
+      }));
+      unsubs.push(onLensa((k) => {
+        lensaKode = k;
+        if (map?.getLayer('provinsi-sel')) map.setFilter('provinsi-sel', ['==', ['get', 'kode'], k]);
+        if (map?.getLayer('provinsi-lab')) map.setFilter('provinsi-lab', ['==', ['get', 'kode'], k]);
+        const g = PROV_GEO[k];
+        if (g) map?.flyTo({ center: g, zoom: 6.4, speed: 0.85, curve: 1.5 });
+        else map?.flyTo({ center: [118, -2.6], zoom: 4.0, speed: 0.85 });
       }));
 
       void muatLapisan();
@@ -400,6 +463,11 @@
       {#if legendaBuka}
         <div class="kb-leg-rows">
           <label class="kb-leg-row">
+            <input type="checkbox" checked={provinsiOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'provinsi', on: e.currentTarget.checked } })} />
+            <span class="sym sym-prov">◆</span> PROVINSI · KLIK
+            <span class="src">38 + NASIONAL</span>
+          </label>
+          <label class="kb-leg-row">
             <input type="checkbox" checked={gempaOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'gempa', on: e.currentTarget.checked } })} />
             <span class="sym gempa">◉</span> GEMPA · 24 JAM
             <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'CONTOH'}</span>
@@ -437,7 +505,7 @@
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}
 
-  <p class="kb-tip mono">Geser, perbesar, atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
+  <p class="kb-tip mono">Klik provinsi untuk membuka dasar wilayah di bawah, atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
 </div>
 
 <style>
@@ -488,6 +556,7 @@
   .kb-leg-row input { accent-color: var(--accent); width: 11px; height: 11px; }
   .sym { width: 12px; text-align: center; }
   .sym.gempa { color: var(--accent); }
+  .sym-prov { color: var(--accent); }
   .sym-gunungapi { color: #e08a1e; }
   .sym-udara { color: #8a1b6a; }
   .sym-banjir { color: #3f6fa0; }

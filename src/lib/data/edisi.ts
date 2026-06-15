@@ -319,3 +319,18 @@ export const DAERAH = [
   { kode: '96', nama: 'Papua Tengah', pulau: 'Maluku & Papua', penduduk: '1,3 jt', ump: 'Rp 4,00 jt', miskin: '21,50%', dokter: '0,20', ipm: '58,0', pegawai: '48%', tpt: '3,80%', fakta: 'Mencakup Mimika dan Nabire: tambang besar, kemiskinan tinggi.' },
   { kode: '97', nama: 'Papua Pegunungan', pulau: 'Maluku & Papua', penduduk: '1,5 jt', ump: 'Rp 4,00 jt', miskin: '30,03%', dokter: '0,10', ipm: '49,0', pegawai: '52%', tpt: '3,50%', fakta: 'Kemiskinan tertinggi (30%) dan rasio dokter terendah nasional.' },
 ];
+
+/** Province centroids (lon, lat) for the clickable map markers and fly-to.
+    Approximate; the only purpose is to place a dot and recentre the map. */
+export const PROV_GEO: Record<string, [number, number]> = {
+  '11': [96.9, 4.7], '12': [99.0, 2.6], '13': [100.6, -0.7], '14': [101.7, 0.5],
+  '15': [102.9, -1.6], '16': [104.0, -3.2], '17': [102.3, -3.6], '18': [105.2, -4.8],
+  '19': [106.9, -2.7], '21': [104.5, 0.9], '31': [106.83, -6.2], '32': [107.6, -6.9],
+  '33': [110.0, -7.3], '34': [110.4, -7.9], '35': [112.7, -7.8], '36': [106.1, -6.4],
+  '51': [115.2, -8.4], '52': [117.4, -8.7], '53': [121.1, -8.7], '61': [111.5, 0.0],
+  '62': [113.4, -1.7], '63': [115.3, -3.1], '64': [116.5, 0.5], '65': [116.9, 3.1],
+  '71': [124.8, 0.8], '72': [121.4, -1.4], '73': [119.9, -3.7], '74': [122.2, -4.1],
+  '75': [122.4, 0.7], '76': [119.2, -2.0], '81': [129.5, -3.5], '82': [127.9, 1.0],
+  '91': [132.3, -1.3], '92': [131.3, -1.0], '94': [139.0, -4.2], '95': [139.7, -7.4],
+  '96': [136.3, -3.9], '97': [139.0, -4.0],
+};
