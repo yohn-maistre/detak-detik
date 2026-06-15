@@ -4,7 +4,6 @@ import Loader from '../components/Loader.astro';
 import PetaKabar from '../islands/PetaKabar.svelte';
 import PasarPagi from '../islands/PasarPagi.svelte';
 import PapanAngka from '../islands/PapanAngka.svelte';
-import IndeksPagi from '../islands/IndeksPagi.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
 import DitherNusantara from '../islands/DitherNusantara.svelte';
@@ -20,8 +19,7 @@ import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
-import KartuWilayah from '../islands/KartuWilayah.svelte';
-import RegionDossier from '../islands/RegionDossier.svelte';
+import LensaWilayah from '../islands/LensaWilayah.svelte';
 import CabangBand from '../islands/CabangBand.svelte';
 import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
@@ -140,10 +138,8 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="eyebrow">LAPISAN DATA LANGSUNG · SATU KOSAKATA PERINTAH</span>
           </div>
           <PetaKabar client:load />
-          <RegionDossier client:visible />
+          <LensaWilayah client:visible />
         </section>
-
-        <KartuWilayah client:visible />
 
         <PasarPagi client:visible />
 
@@ -151,11 +147,9 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <Gelombang client:visible />
         </section>
 
-        <IndeksPagi client:visible />
-
         <section class="sensus-blok" id="sensus" aria-label="Sensus diri">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>§6 · SENSUS DIRI</span>
+            <span class="inkbar"><span class="dot">●</span>§5 · SENSUS DIRI</span>
             <span class="eyebrow">MASUKKAN SATU ANGKA, LIHAT DIRIMU DI ANTARA YANG LAIN · TETAP DI PERANGKATMU</span>
           </div>
           <SensusDiri client:visible />

@@ -95,7 +95,7 @@
     langkah: [
       { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
       { cmd: 'highlight', params: { ids: ['peta'] }, narasi: 'Peta Kabar: lapisan data langsung. Minta saya tunjukkan gempa, kebakaran, atau udara di satu pulau.', tahan_ms: 4400 },
-      { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Daerah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
+      { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Wilayah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: siapa yang memiliki republik ini, dan siapa yang menanggungnya.', tahan_ms: 4800 },
       { cmd: 'highlight', params: { ids: ['hukum'] }, narasi: 'Yudikatif: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['aparat'] }, narasi: 'Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 4800 },
@@ -132,7 +132,7 @@
       const peta: Record<string, string> = { nasional: 'nasional', jakarta: '31', dki: '31', papua: '94', bali: '51', jabar: '32', sulsel: '73', aceh: '11' };
       const kode = peta[arg.toLowerCase()] ?? arg;
       const ok2 = dispatch({ cmd: 'set_lensa', params: { kode } });
-      tulis(ok2 ? `lensa daerah: ${arg || 'nasional'}` : `daerah tak dikenal: ${arg}. coba: jakarta, papua, bali, jabar, sulsel, aceh`, ok2 ? 'out' : 'err');
+      tulis(ok2 ? `lensa wilayah: ${arg || 'nasional'}` : `daerah tak dikenal: ${arg}. coba: jakarta, papua, bali, jabar, sulsel, aceh`, ok2 ? 'out' : 'err');
       return;
     }
     if (cmd === 'tanya') {
@@ -197,7 +197,7 @@
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Daerah</button>
+        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Wilayah</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Kuasa & Harta</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>↓ Yang tidak dihitung</button>
       </div>
