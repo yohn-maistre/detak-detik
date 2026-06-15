@@ -15,6 +15,7 @@
   import { dispatch } from '../lib/commands/dispatcher';
   import { reducedMotion } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
+  import { ramp } from '../lib/chart-kit';
 
   let kode = $state(getLensa());
   const d = $derived(getDaerah(kode));
@@ -144,10 +145,11 @@
   });
 </script>
 
-<section class="lw" data-no-stempel data-ref="dossier" id="lensa" bind:this={root}>
+<section class="lw" class:prov={!isNas} data-no-stempel data-ref="dossier" id="lensa" bind:this={root}>
   <div class="lw-head">
     <span class="inkbar"><span class="dot">●</span>§2 · LENSA WILAYAH</span>
-    <span class="eyebrow">{isNas ? 'ANGKA DASAR NASIONAL · CARI PROVINSIMU UNTUK MELIHAT DI MANA IA BERDIRI' : 'SATU PROVINSI, DIBACA TERHADAP ACUAN NASIONAL'}</span>
+    <span class="eyebrow lw-head-sub">{isNas ? 'ANGKA DASAR NASIONAL · CARI PROVINSIMU UNTUK MELIHAT DI MANA IA BERDIRI' : 'SATU PROVINSI, DIBACA TERHADAP ACUAN NASIONAL'}</span>
+    <span class="coordstamp lw-tele mono">{isNas ? 'LENS · NASIONAL' : `LENS · ${d.kode} · IPM ${ipmRank}/${N}`}</span>
   </div>
 
   <!-- search: the lens selector -->
@@ -241,7 +243,7 @@
 
   <!-- comparative spread: the constant below both faces -->
   <div class="ld-spread">
-    {#each sorot as s (s.m.k)}
+    {#each sorot as s, i (s.m.k)}
       <div class="ld-row">
         <div class="ld-row-l">
           <span class="ld-label">{s.m.label}</span>
@@ -258,7 +260,7 @@
         <div class="ld-track">
           <span class="ld-end mono kiri">TERBURUK</span>
           <span class="ld-end mono kanan">TERBAIK</span>
-          <span class="ld-fill" style={`--p:${s.p * 100}%`}></span>
+          <span class="ld-fill" style={`--p:${s.p * 100}%;--d:${(i * 0.08).toFixed(2)}s;background:${ramp(0.85 - s.p * 0.55)}`}></span>
           <span class="ld-nas" style={`left:${s.pn * 100}%`} title="rerata nasional"><i class="ld-nas-lab mono">NASIONAL</i></span>
           {#if !isNas}
             <span class="ld-mark" class:buruk={s.buruk} class:baik={s.baik} style={`left:${s.p * 100}%`}></span>
@@ -279,8 +281,13 @@
 </section>
 
 <style>
-  .lw { border: 1px solid var(--line); border-top: none; padding: clamp(16px, 2.4vw, 26px); background: var(--card); }
+  /* welded to the map above by a deliberate thick seam, with an instrument-bezel left spine */
+  .lw { border: 1px solid var(--line); border-top: 2px solid var(--ink); border-left: 3px solid var(--line); padding: clamp(16px, 2.4vw, 26px); background: var(--card); transition: border-left-color 0.4s; }
+  .lw.prov { border-left-color: var(--accent); }
   .lw-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .lw-head-sub { flex: 1 1 auto; }
+  .lw-tele { margin-left: auto; white-space: nowrap; }
+  .lw.prov .lw-tele { color: var(--accent); }
 
   /* the face crossfades on morph; instant under reduced motion */
   .lw-face { margin-bottom: 28px; }
@@ -346,6 +353,10 @@
   @media (max-width: 620px) { .ld-hero-rank { text-align: left; } }
   .ld-rank-k { font-size: 9px; letter-spacing: 0.18em; color: var(--muted); display: block; }
   .ld-rank-n { font-family: 'Fraunces Variable', serif; font-weight: 300; font-size: clamp(52px, 10vw, 104px); line-height: 0.86; color: var(--accent); }
+  @media (prefers-reduced-motion: no-preference) {
+    .ld-rank-n { animation: ld-stamp 0.55s cubic-bezier(0.2, 1.5, 0.4, 1) both; transform-origin: left bottom; }
+  }
+  @keyframes ld-stamp { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   .ld-rank-of { font-size: 0.36em; color: var(--muted); letter-spacing: 0; }
   .ld-rank-sub { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); display: block; margin-top: 2px; }
   .dossier-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(10px, 2vw, 22px); margin: 22px 0 0; }
@@ -360,7 +371,7 @@
   .ld-spread { display: grid; gap: 26px; border-top: 1px solid var(--line); padding-top: 24px; }
   .ld-row { display: grid; grid-template-columns: 1fr auto; column-gap: 16px; row-gap: 10px; align-items: baseline; }
   .ld-row-l { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-  .ld-label { font-size: 14px; color: var(--ink); }
+  .ld-label { font-family: var(--font-fig); font-style: italic; font-size: clamp(15px, 1.8vw, 19px); color: var(--ink); }
   .ld-rank-chip { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); border: 1px solid var(--line); padding: 2px 6px; }
   .ld-rank-chip.buruk { color: var(--accent); border-color: var(--accent); }
   .ld-rank-chip.baik { color: var(--accent2); border-color: var(--accent2); }
@@ -369,7 +380,7 @@
   .ld-val.buruk { color: var(--accent); }
   .ld-val.baik { color: var(--accent2); }
   .ld-delta { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); display: block; margin-top: 4px; }
-  .ld-track { grid-column: 1 / -1; position: relative; height: 4px; background: var(--line-soft); margin-top: 4px; }
+  .ld-track { grid-column: 1 / -1; position: relative; height: 6px; background: var(--line-soft); margin-top: 4px; box-shadow: inset 0 1px 0 color-mix(in oklab, var(--ink) 18%, transparent); }
   .ld-end { position: absolute; top: 9px; font-size: 7.5px; letter-spacing: 0.16em; color: var(--muted); opacity: 0.7; }
   .ld-end.kiri { left: 0; }
   .ld-end.kanan { right: 0; }
@@ -378,7 +389,7 @@
     background: color-mix(in oklab, var(--ink) 26%, transparent);
     transform: scaleX(0); transform-origin: left;
   }
-  .ld-spread.in .ld-fill { transform: scaleX(1); transition: transform 0.9s var(--ease-out); }
+  .ld-spread.in .ld-fill { transform: scaleX(1); transition: transform 0.85s var(--ease-out) var(--d); }
   .ld-nas { position: absolute; top: -5px; width: 1px; height: 14px; background: var(--muted); }
   .ld-nas-lab { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); font-size: 6.5px; letter-spacing: 0.1em; color: var(--muted); white-space: nowrap; font-style: normal; }
   .ld-mark {
