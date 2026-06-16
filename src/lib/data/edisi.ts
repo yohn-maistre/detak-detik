@@ -31,6 +31,14 @@ export const TICKER = [
   { src: 'JUBI', teks: 'Gereja laporkan kondisi layanan kesehatan di pegunungan tengah' },
 ];
 
+// what to watch today — an editorial rundown (curated; newsroom-fed later)
+export const AGENDA = [
+  { jam: '10.00', teks: 'Rapat paripurna DPR: pembahasan dua RUU prioritas', tag: 'LEGISLATIF' },
+  { jam: '11.00', teks: 'BPS rilis data neraca perdagangan bulanan', tag: 'EKONOMI' },
+  { jam: '13.30', teks: 'Sidang putusan tindak pidana korupsi di PN Jakarta Pusat', tag: 'HUKUM' },
+  { jam: '14.00', teks: 'Konferensi pers BMKG: prakiraan musim dan kualitas udara', tag: 'LINGKUNGAN' },
+];
+
 export const TEMUAN = [
   {
     id: 'tmn-041-01',

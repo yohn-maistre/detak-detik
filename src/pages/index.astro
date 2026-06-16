@@ -2,6 +2,7 @@
 import Paper from '../layouts/Paper.astro';
 import Loader from '../components/Loader.astro';
 import PetaKabar from '../islands/PetaKabar.svelte';
+import CuacaPagi from '../islands/CuacaPagi.svelte';
 import PasarPagi from '../islands/PasarPagi.svelte';
 import PapanAngka from '../islands/PapanAngka.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
@@ -37,7 +38,7 @@ import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI, AGENDA } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
@@ -136,6 +137,48 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
               ))}
             </div>
           </div>
+        </div>
+
+        <!-- ===== the morning front: lead story, headlines, weather, agenda ===== -->
+        <section class="pagi" aria-label="Kabar utama pagi">
+          <div class="pagi-utama">
+            <span class="inkbar"><span class="dot">●</span>KABAR UTAMA</span>
+            <h2 class="pagi-judul display">{TEMUAN[0].headline}</h2>
+            <p class="pagi-dek">Temuan utama edisi ini, diperiksa terhadap dokumen sumbernya sebelum naik cetak. <span class="mono">(data contoh)</span></p>
+            <div class="pagi-angka">
+              <span class="pagi-angka-n num">{ANGKA_EDISI.prefix} {fmtAngka}</span>
+              <span class="pagi-angka-lab">{ANGKA_EDISI.label}</span>
+            </div>
+          </div>
+          <aside class="pagi-ringkas" aria-label="Ringkas pagi">
+            <span class="inkbar"><span class="dot">●</span>RINGKAS PAGI</span>
+            <ol class="rp-list">
+              {TICKER.slice(0, 5).map((t) => (
+                <li class="rp-item">
+                  <span class="rp-src mono">{t.src}</span>
+                  <span class="rp-teks">{t.teks}</span>
+                </li>
+              ))}
+            </ol>
+            <span class="rp-foot mono">tautan keluar apa adanya · antara · tempo · bbc · mongabay</span>
+          </aside>
+        </section>
+
+        <div class="pagi-util">
+          <CuacaPagi client:visible />
+          <aside class="agenda" aria-label="Agenda hari ini">
+            <span class="ag-label mono">AGENDA HARI INI</span>
+            <ul class="ag-list">
+              {AGENDA.map((a) => (
+                <li class="ag-item">
+                  <span class="ag-jam mono num">{a.jam}</span>
+                  <span class="ag-teks">{a.teks}</span>
+                  <span class="ag-tag mono">{a.tag}</span>
+                </li>
+              ))}
+            </ul>
+            <span class="ag-foot mono">jadwal redaksi · (data contoh)</span>
+          </aside>
         </div>
 
         <!-- Peta Kabar: the living front photograph -->
@@ -862,6 +905,37 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .folio b { color: var(--accent); font-weight: 600; }
   .fajar-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-size: inherit; letter-spacing: inherit; padding: 0; transition: color 0.25s; }
   .fajar-btn:hover { color: var(--accent); }
+
+  /* ---- the morning front (Act I lead) ---- */
+  .pagi { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(24px, 5vw, 60px); padding-top: 24px; margin-top: 6px; align-items: start; }
+  @media (max-width: 820px) { .pagi { grid-template-columns: 1fr; gap: 28px; } }
+  .pagi-utama { display: grid; gap: 14px; }
+  .pagi-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(28px, 4.4vw, 56px); line-height: 1.0; letter-spacing: var(--disp-track); color: var(--ink); margin: 8px 0 0; max-width: 18ch; }
+  .pagi-dek { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); max-width: 52ch; line-height: 1.5; }
+  .pagi-angka { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 4px; }
+  .pagi-angka-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 4.6vw, 56px); line-height: 0.92; color: var(--accent); }
+  .pagi-angka-lab { font-size: 13px; color: var(--ink); max-width: 46ch; line-height: 1.45; }
+  .pagi-ringkas { display: grid; gap: 12px; align-content: start; border-left: 1px solid var(--line); padding-left: clamp(16px, 2.5vw, 30px); }
+  @media (max-width: 820px) { .pagi-ringkas { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
+  .rp-list { list-style: none; margin: 0; padding: 0; display: grid; }
+  .rp-item { display: grid; gap: 3px; padding: 11px 0; border-top: 1px solid var(--line-soft); }
+  .rp-item:first-child { border-top: none; }
+  .rp-src { font-size: 8.5px; letter-spacing: 0.14em; color: var(--accent); }
+  .rp-teks { font-size: 14px; line-height: 1.4; color: var(--ink); }
+  .rp-foot { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); margin-top: 2px; }
+
+  .pagi-util { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(20px, 4vw, 48px); margin-top: clamp(20px, 3.5vw, 36px); align-items: start; }
+  @media (max-width: 820px) { .pagi-util { grid-template-columns: 1fr; gap: 24px; } }
+  .agenda { display: grid; gap: 10px; align-content: start; border-top: 1px solid var(--line); padding-top: 14px; }
+  .ag-label { font-size: 10px; letter-spacing: 0.2em; color: var(--ink); }
+  .ag-list { list-style: none; margin: 0; padding: 0; display: grid; }
+  .ag-item { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: baseline; padding: 8px 0; border-top: 1px solid var(--line-soft); }
+  .ag-item:first-child { border-top: none; }
+  .ag-jam { font-size: 12px; color: var(--accent); letter-spacing: 0.04em; }
+  .ag-teks { font-size: 13px; line-height: 1.4; color: var(--ink); }
+  .ag-tag { font-size: 8px; letter-spacing: 0.12em; color: var(--muted); white-space: nowrap; }
+  @media (max-width: 480px) { .ag-tag { display: none; } .ag-item { grid-template-columns: auto 1fr; } }
+  .ag-foot { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); }
 
   .kabar-blok { padding-top: 22px; }
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
