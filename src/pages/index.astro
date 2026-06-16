@@ -17,6 +17,7 @@ import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
+import WajahNusantara from '../islands/WajahNusantara.svelte';
 import GunungApi from '../islands/GunungApi.svelte';
 import PetaRupa from '../islands/PetaRupa.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
@@ -643,7 +644,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
-        <!-- lead feature: the day's painting and the day's species -->
+        <!-- the Act III lead: a rotating portrait of one of the peoples -->
+        <WajahNusantara client:visible />
+
+        <!-- the day's painting and the day's species -->
         <GaleriNusantara client:visible />
 
         <!-- a composed spread: the land that breathes, beside the day's almanac -->
