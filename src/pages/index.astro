@@ -18,6 +18,8 @@ import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import GunungApi from '../islands/GunungApi.svelte';
+import PetaRupa from '../islands/PetaRupa.svelte';
+import Bahasa718 from '../islands/Bahasa718.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import LensaWilayah from '../islands/LensaWilayah.svelte';
@@ -648,6 +650,12 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <div class="atlas-grid">
           <GunungApi client:visible />
           <AlmanakSains client:visible />
+        </div>
+
+        <!-- rupa & bahasa: the line that splits the fauna, and the tongues -->
+        <div class="atlas-grid">
+          <PetaRupa client:visible />
+          <Bahasa718 client:visible />
         </div>
 
         <!-- the living understory: order out of chaos, the catharsis -->
