@@ -1,12 +1,41 @@
 <script lang="ts">
   /** 718 cara mengucapkan air: 718 living regional languages — second only to
       Papua New Guinea. One tally mark each; the faded marks are the ones a
-      decade quietly takes. Figures from the language mapping (sample/contoh). */
+      decade quietly takes. Each day surfaces the word for "air" in one of them,
+      chosen by the calendar (deterministic, law 5). Figures + glosses from the
+      language mapping / Wiktionary (sample/contoh). */
   import { onMount } from 'svelte';
   import { gsap, reducedMotion, EASE_STAMP } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
 
   const TOTAL = 718, SENYAP = 24; // illustrative: those falling out of use
+
+  // the word for "water" across the archipelago, rotated by the day
+  const KATA_AIR = [
+    { lang: 'Jawa', kata: 'banyu', wil: 'Jawa Tengah & Timur' },
+    { lang: 'Sunda', kata: 'cai', wil: 'Jawa Barat' },
+    { lang: 'Bali', kata: 'yéh', wil: 'Bali' },
+    { lang: 'Minangkabau', kata: 'aia', wil: 'Sumatra Barat' },
+    { lang: 'Aceh', kata: 'ie', wil: 'Aceh' },
+    { lang: 'Batak Toba', kata: 'aek', wil: 'Sumatra Utara' },
+    { lang: 'Bugis', kata: 'uwai', wil: 'Sulawesi Selatan' },
+    { lang: 'Makassar', kata: "je'ne'", wil: 'Sulawesi Selatan' },
+    { lang: 'Madura', kata: 'aéng', wil: 'Jawa Timur' },
+    { lang: 'Sasak', kata: 'aiq', wil: 'Lombok' },
+    { lang: 'Banjar', kata: 'banyu', wil: 'Kalimantan Selatan' },
+    { lang: 'Dayak Ngaju', kata: 'danum', wil: 'Kalimantan Tengah' },
+    { lang: 'Toraja', kata: 'uai', wil: 'Sulawesi Selatan' },
+    { lang: 'Bima', kata: 'oi', wil: 'Nusa Tenggara Barat' },
+    { lang: 'Manggarai', kata: 'waé', wil: 'Flores' },
+    { lang: 'Ambon', kata: 'aer', wil: 'Maluku' },
+    { lang: 'Biak', kata: 'war', wil: 'Papua' },
+    { lang: 'Nias', kata: 'idanö', wil: 'Sumatra Utara' },
+    { lang: 'Lampung', kata: 'way', wil: 'Lampung' },
+    { lang: 'Rejang', kata: 'bioa', wil: 'Bengkulu' },
+  ];
+  const HARI = Math.floor(Date.now() / 86_400_000);
+  const kata = KATA_AIR[HARI % KATA_AIR.length]!;
+
   let root: HTMLElement | undefined = $state();
   let heroEl: HTMLElement | undefined = $state();
   onMount(() => {
@@ -35,6 +64,13 @@
     </div>
   </header>
 
+  <!-- the day's word: one of the 718, surfaced -->
+  <div class="bh-kata">
+    <span class="bh-kata-lab mono">HARI INI · "AIR" DALAM BAHASA {kata.lang.toUpperCase()}</span>
+    <p class="bh-kata-word display">{kata.kata}</p>
+    <span class="bh-kata-wil mono">{kata.wil} · berganti tiap terbit</span>
+  </div>
+
   <div class="bh-field" role="img" aria-label={`${TOTAL} bahasa daerah, ${SENYAP} di antaranya kian jarang dituturkan`}>
     {#each Array(TOTAL) as _, i (i)}
       <i class="bh-tally" class:senyap={i >= TOTAL - SENYAP}></i>
@@ -43,7 +79,7 @@
 
   <div class="bh-foot">
     <p class="bh-note fig">Setiap dasawarsa, beberapa di antaranya berhenti dituturkan sama sekali — yang pucat di atas. Sebuah kata yang hilang membawa serta satu cara memandang dunia.</p>
-    <button class="chip"><span class="tick">⊙</span>badan bahasa · 718 bahasa · (data contoh)</button>
+    <button class="chip"><span class="tick">⊙</span>badan bahasa · wiktionary · (data contoh)</button>
   </div>
 </section>
 
@@ -51,9 +87,15 @@
   .bh { display: grid; gap: 16px; }
   .bh-head { display: grid; gap: 8px; }
   .bh-hero { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .bh-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(44px, 7vw, 80px); line-height: 0.85; color: var(--ink); }
+  .bh-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(40px, 6.4vw, 72px); line-height: 0.85; color: var(--ink); }
   .bh-lab { font-size: 13px; color: var(--muted); max-width: 34ch; }
   .bh-air { font-family: var(--font-fig); font-style: italic; color: var(--accent2); }
+
+  .bh-kata { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 0; display: grid; gap: 2px; justify-items: start; }
+  .bh-kata-lab { font-size: 9px; letter-spacing: 0.18em; color: var(--accent); }
+  .bh-kata-word { font-family: 'Fraunces Variable', serif; font-weight: 400; font-size: clamp(40px, 8vw, 88px); line-height: 0.9; color: var(--ink); font-style: italic; }
+  .bh-kata-wil { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); }
+
   .bh-field { display: flex; flex-wrap: wrap; gap: 5px 3px; align-content: start; }
   .bh-tally { width: 2px; height: 13px; background: var(--ink); flex: 0 0 auto; }
   .bh-tally.senyap { background: var(--line-soft); height: 9px; align-self: flex-end; }

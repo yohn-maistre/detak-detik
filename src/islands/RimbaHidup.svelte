@@ -143,8 +143,13 @@
 </section>
 
 <style>
-  .rimba { position: relative; height: clamp(300px, 46vh, 440px); overflow: hidden; border-top: 1px solid var(--line); background: #ece2cb; margin-top: 44px; }
-  .rimba canvas { position: absolute; inset: 0; display: block; }
+  .rimba { position: relative; height: clamp(300px, 46vh, 440px); overflow: hidden; background: #ece2cb; margin-top: 44px; }
+  /* feather every edge so the flock dissolves into the paper on all sides */
+  .rimba canvas {
+    position: absolute; inset: 0; display: block;
+    -webkit-mask: radial-gradient(118% 118% at 50% 48%, #000 60%, transparent 100%);
+    mask: radial-gradient(118% 118% at 50% 48%, #000 60%, transparent 100%);
+  }
   .rimba-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(18px, 3vw, 36px); background: linear-gradient(transparent, color-mix(in oklab, #ece2cb 82%, transparent)); }
   .rimba .eyebrow { color: var(--accent2); margin-bottom: 8px; display: block; }
   .rimba-fakta { font-size: clamp(18px, 2.6vw, 30px); max-width: 32ch; line-height: 1.22; color: var(--ink); animation: rimbaFade 0.8s var(--ease-out); }

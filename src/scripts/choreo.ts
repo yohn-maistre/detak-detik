@@ -230,7 +230,38 @@ function redPen() {
   });
 }
 
-/* ---------- 4 · the Angka Edisi odometer (+ scrub fidget) ---------- */
+/* ---------- 3c · Aksara's live pen ----------
+   Draw a hand-drawn mark on any data-ref / id on demand (and clear on off).
+   Shares rough-notation with the static red pen, so the agent's highlight
+   looks like the editor's. */
+const sorotAktif = new Map<Element, ReturnType<typeof annotate>>();
+function sorotRef(
+  ref: string,
+  type: 'underline' | 'circle' | 'box' | 'strike-through' | 'bracket' = 'underline',
+  color?: string,
+  off = false,
+) {
+  const el = document.querySelector<HTMLElement>(`[data-ref="${CSS.escape(ref)}"]`) ?? document.getElementById(ref);
+  if (!el) return;
+  const existing = sorotAktif.get(el);
+  if (existing) { existing.hide(); sorotAktif.delete(el); }
+  if (off) return;
+  const c = !color
+    ? getComputedStyle(el).getPropertyValue('--accent').trim() || '#e44a06'
+    : color.startsWith('#') ? color : getComputedStyle(el).getPropertyValue(`--${color}`).trim() || color;
+  el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'center' });
+  const a = annotate(el, {
+    type, color: c, strokeWidth: 2.4,
+    padding: type === 'circle' ? 9 : 5,
+    iterations: 2, multiline: true,
+    brackets: ['left', 'right'],
+    animationDuration: reducedMotion() ? 0 : 720,
+  });
+  a.show();
+  sorotAktif.set(el, a);
+}
+
+
 
 function odometer() {
   const el = document.querySelector<HTMLElement>('[data-odometer]');
@@ -644,6 +675,7 @@ function dispatchScrollHandler() {
     on('denominate', ({ unit }) => setDenom(unit));
     on('set_lensa', ({ kode }) => setLensa(kode));
     // the agent reaches into the page: ring what it cites, draw a connector
-    on('highlight', ({ ids }) => ids.forEach((id, k) => pulseRef(id, k === 0)));
+    on('highlight', ({ ids }) => ids.forEach((id, k) => { pulseRef(id, k === 0); if (k === 0) sorotRef(id, 'circle'); }));
+    on('sorot', ({ ref, type, color, off }) => sorotRef(ref, type, color, off));
   });
 }

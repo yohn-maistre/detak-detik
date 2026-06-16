@@ -143,7 +143,8 @@
     let ok = false;
     if (cmd === 'fly_to') ok = dispatch({ cmd, params: { kode: arg } });
     else if (cmd === 'scroll_to') ok = dispatch({ cmd, params: { anchor: arg } });
-    else if (cmd === 'sorot' || cmd === 'highlight') ok = dispatch({ cmd: 'highlight', params: { ids: arg.split(/[\s,]+/).filter(Boolean) } });
+    else if (cmd === 'sorot') ok = dispatch({ cmd: 'sorot', params: { ref: arg.split(/[\s,]+/).filter(Boolean)[0] ?? '', type: 'underline', off: false } });
+    else if (cmd === 'highlight') ok = dispatch({ cmd: 'highlight', params: { ids: arg.split(/[\s,]+/).filter(Boolean) } });
     else if (cmd === 'say') ok = dispatch({ cmd, params: { teks: arg, cited_ids: [], tahan_ms: 3500 } });
     else { tulis(`verba tidak dikenal: ${cmd}. perintah tak valid tidak pernah dieksekusi.`, 'err'); return; }
     tulis(ok ? 'ok · perintah lolos katalog' : 'ditolak · parameter tidak valid', ok ? 'out' : 'err');

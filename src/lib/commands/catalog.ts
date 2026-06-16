@@ -49,6 +49,12 @@ export const commandSchemas = {
   highlight: z.object({
     ids: z.array(z.string()).max(40),
   }),
+  sorot: z.object({
+    ref: z.string(),
+    type: z.enum(['underline', 'circle', 'box', 'strike-through', 'bracket']).default('underline'),
+    color: z.string().max(24).optional(),
+    off: z.boolean().default(false),
+  }),
   scroll_to: z.object({
     anchor: z.string(),
   }),
