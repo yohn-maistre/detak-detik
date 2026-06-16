@@ -618,6 +618,8 @@
   </div>
 
   <div class="kb-plate">
+    <i class="kb-reg tl" aria-hidden="true"></i><i class="kb-reg tr" aria-hidden="true"></i>
+    <i class="kb-reg bl" aria-hidden="true"></i><i class="kb-reg br" aria-hidden="true"></i>
     <div class="kb-peta" bind:this={mapEl}></div>
     <canvas class="kb-engrave" class:siap={petaSiap} bind:this={engraveEl} aria-hidden="true"></canvas>
 
@@ -701,12 +703,22 @@
 
 <style>
   .kb-wrap { position: relative; }
+  /* the front photograph: full-bleed, thin hairline top/bottom, crop marks */
   .kb-plate {
     position: relative;
-    border: 1px solid var(--line);
-    box-shadow: 0 0 0 1px var(--line), inset 0 0 0 1px color-mix(in oklab, var(--line) 30%, transparent);
+    width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
-  .kb-peta { width: 100%; height: clamp(360px, 56vh, 560px); filter: saturate(0.94); }
+  .kb-peta { width: 100%; height: clamp(420px, 64vh, 660px); filter: saturate(0.94); }
+  /* print registration / crop marks at the four corners */
+  .kb-reg { position: absolute; width: 13px; height: 13px; z-index: 4; pointer-events: none; color: var(--ink); opacity: 0.8; }
+  .kb-reg::before, .kb-reg::after { content: ''; position: absolute; background: currentColor; }
+  .kb-reg::before { width: 13px; height: 1.5px; top: 0; }
+  .kb-reg::after { width: 1.5px; height: 13px; left: 0; }
+  .kb-reg.tl { top: 10px; left: 10px; }
+  .kb-reg.tr { top: 10px; right: 10px; transform: scaleX(-1); }
+  .kb-reg.bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
+  .kb-reg.br { bottom: 10px; right: 10px; transform: scale(-1); }
   .kb-engrave {
     position: absolute; inset: 0; width: 100%; height: 100%;
     pointer-events: none; opacity: 1; transition: opacity 0.9s var(--ease-out); z-index: 2;

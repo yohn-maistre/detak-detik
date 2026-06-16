@@ -281,9 +281,8 @@
 </section>
 
 <style>
-  /* its own plate, framed to match the map above it (even weight, not clipped),
-     with a small gap so the two read as a pair rather than a doubled rule */
-  .lw { border: 1px solid var(--line); box-shadow: 0 0 0 1px var(--line), inset 0 0 0 1px color-mix(in oklab, var(--line) 30%, transparent); padding: clamp(16px, 2.4vw, 26px); background: var(--card); margin-top: 12px; }
+  /* deboxed: an open dossier under the map, separated by a single top rule */
+  .lw { border-top: 1px solid var(--line); padding: clamp(18px, 2.6vw, 30px) 0 0; background: none; margin-top: clamp(16px, 2.6vw, 28px); }
   .lw-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line-soft); transition: border-color 0.4s; }
   .lw.prov .lw-head { border-bottom-color: var(--accent); }
   .lw-head-sub { flex: 1 1 auto; }
