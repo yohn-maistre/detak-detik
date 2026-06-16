@@ -99,24 +99,24 @@
 <style>
   .pp { border-top: 1px solid var(--line); padding-top: 26px; margin-top: 8px; }
   .pp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+  /* an open priced-ledger, not a grid of boxes: each entry is a hairline row */
   .pp-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    border: 1px solid var(--line);
+    column-gap: clamp(16px, 2.6vw, 34px);
   }
   @media (max-width: 1020px) { .pp-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 560px) { .pp-grid { grid-template-columns: repeat(2, 1fr); } }
   .pp-card {
-    padding: 14px 15px 12px;
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    padding: 13px 0 14px;
+    border-top: 1px solid var(--line);
     display: flex; flex-direction: column; gap: 8px;
-    background: var(--card);
+    background: none;
   }
   .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 8.5px; letter-spacing: 0.13em; color: var(--muted); }
   .pp-live { font-size: 8px; white-space: nowrap; }
   .pp-live.on { color: var(--accent); }
-  .pp-val { font-size: clamp(16px, 1.7vw, 21px); font-weight: 700; line-height: 1; }
+  .pp-val { font-size: clamp(18px, 1.9vw, 24px); font-weight: 700; line-height: 1; }
   .pp-spark { display: flex; align-items: center; gap: 10px; }
   .pp-spark svg { flex: 1; height: 30px; }
   .pp-base { stroke: var(--line-soft); stroke-width: 0.6; stroke-dasharray: 2 3; }

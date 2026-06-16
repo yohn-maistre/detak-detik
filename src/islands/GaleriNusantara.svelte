@@ -113,23 +113,21 @@
 </div>
 
 <style>
-  .gn { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .gn { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 56px); }
   @media (max-width: 760px) { .gn { grid-template-columns: 1fr; } }
-  .gn-plat {
-    margin: 0; border: 1px solid var(--line); outline: 1px solid var(--line);
-    outline-offset: 5px; background: var(--card); overflow: hidden;
-  }
-  .gn-img { aspect-ratio: 4 / 3; background: #ece1c9; overflow: hidden; }
+  /* no double-frame box: the image carries a single hairline, the caption opens below */
+  .gn-plat { margin: 0; display: grid; gap: 0; }
+  .gn-img { aspect-ratio: 4 / 3; background: #ece1c9; overflow: hidden; border: 1px solid var(--line); }
   .gn-img img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.95); }
   .gn-kosong {
     width: 100%; height: 100%; display: grid; place-items: center;
     background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--line) 30%, transparent) 0 1px, transparent 1px 7px);
   }
   .gn-kosong span { font-size: 9px; letter-spacing: 0.24em; color: var(--muted); }
-  figcaption { padding: 16px 18px 18px; display: grid; gap: 7px; }
-  .gn-kicker { font-size: 8.5px; letter-spacing: 0.18em; color: var(--muted); }
-  .gn-judul { font-size: clamp(19px, 2.4vw, 26px); color: var(--ink); line-height: 1.1; }
+  figcaption { padding: 14px 0 0; display: grid; gap: 7px; }
+  .gn-kicker { font-size: 8.5px; letter-spacing: 0.18em; color: var(--accent); }
+  .gn-judul { font-size: clamp(22px, 3vw, 34px); color: var(--ink); line-height: 1.05; }
   .gn-meta { font-size: 10px; letter-spacing: 0.06em; color: var(--muted); }
-  .gn-blurb { font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+  .gn-blurb { font-size: 14px; color: var(--ink); line-height: 1.6; max-width: 46ch; }
   figcaption .chip { justify-self: start; cursor: default; margin-top: 4px; }
 </style>

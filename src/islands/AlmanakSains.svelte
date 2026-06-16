@@ -62,16 +62,15 @@
 </aside>
 
 <style>
+  /* open margin-note, not a boxed card: a single top rule, generous space */
   .alm {
-    border: 1px solid var(--line);
-    outline: 1px solid var(--line);
-    outline-offset: 5px;
-    padding: clamp(18px, 3vw, 28px);
-    background: var(--card);
+    border-top: 2px solid var(--line);
+    padding: 16px 0 0;
+    background: none;
     align-self: start;
   }
-  .alm-head { font-size: 9px; letter-spacing: 0.22em; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 9px; }
-  .alm-judul { font-size: clamp(20px, 2.4vw, 26px); margin: 14px 0 10px; color: var(--ink); }
+  .alm-head { font-size: 9px; letter-spacing: 0.22em; color: var(--accent); padding-bottom: 9px; }
+  .alm-judul { font-size: clamp(22px, 2.8vw, 32px); margin: 6px 0 12px; color: var(--ink); line-height: 1.05; }
   .alm-teks { font-size: 15px; line-height: 1.6; }
   .alm-rumus { font-size: 9px; letter-spacing: 0.14em; color: var(--accent2); margin-top: 12px; }
   .alm-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }

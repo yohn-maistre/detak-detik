@@ -143,7 +143,7 @@
 </section>
 
 <style>
-  .rimba { position: relative; height: clamp(300px, 46vh, 440px); overflow: hidden; border: 1px solid var(--line); background: #ece2cb; margin-top: 44px; }
+  .rimba { position: relative; height: clamp(300px, 46vh, 440px); overflow: hidden; border-top: 1px solid var(--line); background: #ece2cb; margin-top: 44px; }
   .rimba canvas { position: absolute; inset: 0; display: block; }
   .rimba-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(18px, 3vw, 36px); background: linear-gradient(transparent, color-mix(in oklab, #ece2cb 82%, transparent)); }
   .rimba .eyebrow { color: var(--accent2); margin-bottom: 8px; display: block; }
