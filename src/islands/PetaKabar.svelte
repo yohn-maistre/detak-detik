@@ -805,7 +805,7 @@
   .kb-info .src { margin-left: 6px; }
 
   .kb-rose {
-    position: absolute; left: 12px; top: 12px; z-index: 5;
+    position: absolute; right: 12px; bottom: 44px; z-index: 5;
     width: 50px; height: 50px; padding: 5px;
     background: color-mix(in oklab, var(--bg) 88%, transparent);
     border: 1px solid var(--line); color: var(--ink); cursor: pointer;

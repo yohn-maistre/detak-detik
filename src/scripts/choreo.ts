@@ -617,6 +617,23 @@ export function boot() {
   strukTear();
   fajarButton();
   actWhispers();
+
+  // Act II is long and full of client:visible islands that hydrate and change
+  // page height as you scroll. That leaves later ScrollTriggers — notably the
+  // second seam (Mesin -> Atlas) — measuring stale positions, so its flip only
+  // fires once you are already inside Act III. Recompute after load and
+  // whenever the document height settles so both seams behave the same.
+  if (!reducedMotion()) {
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener('load', refresh);
+    [400, 1200, 2400].forEach((t) => setTimeout(refresh, t));
+    let rt: number | undefined;
+    const ro = new ResizeObserver(() => {
+      if (rt) clearTimeout(rt);
+      rt = window.setTimeout(refresh, 200);
+    });
+    ro.observe(document.body);
+  }
 }
 
 function dispatchScrollHandler() {

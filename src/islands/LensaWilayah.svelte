@@ -281,10 +281,11 @@
 </section>
 
 <style>
-  /* welded to the map above by a deliberate thick seam, with an instrument-bezel left spine */
-  .lw { border: 1px solid var(--line); border-top: 2px solid var(--ink); border-left: 3px solid var(--line); padding: clamp(16px, 2.4vw, 26px); background: var(--card); transition: border-left-color 0.4s; }
-  .lw.prov { border-left-color: var(--accent); }
-  .lw-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  /* its own plate, framed to match the map above it (even weight, not clipped),
+     with a small gap so the two read as a pair rather than a doubled rule */
+  .lw { border: 1px solid var(--line); box-shadow: 0 0 0 1px var(--line), inset 0 0 0 1px color-mix(in oklab, var(--line) 30%, transparent); padding: clamp(16px, 2.4vw, 26px); background: var(--card); margin-top: 12px; }
+  .lw-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line-soft); transition: border-color 0.4s; }
+  .lw.prov .lw-head { border-bottom-color: var(--accent); }
   .lw-head-sub { flex: 1 1 auto; }
   .lw-tele { margin-left: auto; white-space: nowrap; }
   .lw.prov .lw-tele { color: var(--accent); }

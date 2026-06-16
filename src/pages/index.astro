@@ -885,10 +885,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .dunia-row .chip { align-self: center; }
 
   /* ---- movement dividers (Act II spine: two GERAK) ---- */
-  .gerak { border-top: 2px solid var(--line); padding-top: 18px; }
-  .gerak-no { font-size: 10px; letter-spacing: 0.32em; color: var(--accent); display: block; }
-  .gerak-judul { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 5.6vw, 62px); line-height: 1; margin: 8px 0 10px; letter-spacing: -0.01em; }
-  .gerak-dek { font-size: clamp(14px, 1.7vw, 18px); color: var(--muted); max-width: 62ch; line-height: 1.5; }
+  .gerak { border-top: 2px solid var(--line); padding-top: clamp(18px, 3.5vw, 36px); margin-top: clamp(18px, 4.5vw, 48px); }
+  .gerak-no { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.42em; color: var(--accent2); display: block; margin-bottom: 6px; }
+  .gerak-judul { font-family: 'Fraunces Variable', serif; font-weight: 300; font-size: clamp(56px, 13vw, 140px); line-height: 0.84; margin: 0 0 14px; letter-spacing: -0.02em; color: var(--accent2); }
+  .gerak-dek { font-size: clamp(15px, 1.9vw, 20px); color: var(--muted); max-width: 60ch; line-height: 1.5; }
 
   /* ---- BAB chapter headers (Act II) ---- */
   .bab { padding-top: 8px; }
@@ -899,7 +899,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .bab-kepala { display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 3vw, 40px); align-items: start; border-top: 2px solid var(--line); padding-top: 18px; margin-bottom: clamp(22px, 3.4vw, 34px); }
   .bab-folio { font-size: clamp(38px, 5vw, 70px); line-height: 0.78; margin-top: -3px; }
   .bab-kepala-teks { min-width: 0; }
-  .bab-tajuk { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(34px, 5.4vw, 68px); line-height: 0.98; letter-spacing: -0.012em; color: var(--ink); margin: 11px 0 0; }
+  .bab-tajuk { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 4.6vw, 56px); line-height: 1; letter-spacing: -0.012em; color: var(--ink); margin: 11px 0 0; }
   .bab-kepala .inkbar { margin-bottom: 2px; }
   .bab-jeda { grid-template-columns: 1fr; border-top-style: dashed; }
   @media (max-width: 680px) { .bab-kepala { grid-template-columns: 1fr; gap: 0; } .bab-folio { display: none; } }
