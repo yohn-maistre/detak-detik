@@ -234,7 +234,18 @@ function redPen() {
    Draw a hand-drawn mark on any data-ref / id on demand (and clear on off).
    Shares rough-notation with the static red pen, so the agent's highlight
    looks like the editor's. */
-const sorotAktif = new Map<Element, ReturnType<typeof annotate>>();
+type SorotEntry = { anno: ReturnType<typeof annotate>; svgs: SVGElement[]; timer: number };
+const sorotAktif = new Map<Element, SorotEntry>();
+const SOROT_MS = 30_000; // marks are an aside, not a permanent ink — they erase
+
+function eraseSorot(entry: SorotEntry) {
+  clearTimeout(entry.timer);
+  const done = () => entry.anno.hide();
+  if (reducedMotion() || !entry.svgs.length) { done(); return; }
+  // rough-notation has no animate-out; fade its injected SVG, then hide
+  gsap.to(entry.svgs, { opacity: 0, duration: 0.55, ease: 'power1.out', onComplete: done });
+}
+
 function sorotRef(
   ref: string,
   type: 'underline' | 'circle' | 'box' | 'strike-through' | 'bracket' = 'underline',
@@ -244,12 +255,14 @@ function sorotRef(
   const el = document.querySelector<HTMLElement>(`[data-ref="${CSS.escape(ref)}"]`) ?? document.getElementById(ref);
   if (!el) return;
   const existing = sorotAktif.get(el);
-  if (existing) { existing.hide(); sorotAktif.delete(el); }
+  if (existing) { eraseSorot(existing); sorotAktif.delete(el); }
   if (off) return;
   const c = !color
     ? getComputedStyle(el).getPropertyValue('--accent').trim() || '#e44a06'
     : color.startsWith('#') ? color : getComputedStyle(el).getPropertyValue(`--${color}`).trim() || color;
   el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'center' });
+  // snapshot existing rough-notation svgs so we can isolate (and later fade) the new one
+  const before = new Set(document.querySelectorAll('svg.rough-annotation'));
   const a = annotate(el, {
     type, color: c, strokeWidth: 2.4,
     padding: type === 'circle' ? 9 : 5,
@@ -258,7 +271,12 @@ function sorotRef(
     animationDuration: reducedMotion() ? 0 : 720,
   });
   a.show();
-  sorotAktif.set(el, a);
+  const svgs = ([...document.querySelectorAll('svg.rough-annotation')] as SVGElement[]).filter((s) => !before.has(s));
+  const entry: SorotEntry = { anno: a, svgs, timer: 0 };
+  entry.timer = window.setTimeout(() => {
+    if (sorotAktif.get(el) === entry) { eraseSorot(entry); sorotAktif.delete(el); }
+  }, SOROT_MS);
+  sorotAktif.set(el, entry);
 }
 
 
@@ -629,12 +647,8 @@ export function boot() {
   if (mast) splitGlyphs(mast);
 
   runLoader(() => {
-    const mastGlyphs = document.querySelectorAll<HTMLElement>('#masthead .glyph');
-    if (mastGlyphs.length && !reducedMotion()) {
-      gsap.fromTo(mastGlyphs,
-        { clipPath: 'inset(0 0 100% 0)', y: '0.1em' },
-        { clipPath: 'inset(0 0 -10% 0)', y: 0, duration: 0.7, ease: EASE_SETTLE, stagger: 0.04 });
-    }
+    // the masthead rests in place on load (no curtain reveal); the hover
+    // weight-ripple is the only masthead motion.
     mastheadRipple();
   });
 
@@ -675,7 +689,9 @@ function dispatchScrollHandler() {
     on('denominate', ({ unit }) => setDenom(unit));
     on('set_lensa', ({ kode }) => setLensa(kode));
     // the agent reaches into the page: ring what it cites, draw a connector
-    on('highlight', ({ ids }) => ids.forEach((id, k) => { pulseRef(id, k === 0); if (k === 0) sorotRef(id, 'circle'); }));
+    // highlight = bring into view only; it must NOT circle whole sections.
+    // A scribble is drawn only via the `sorot` verb, on a small target.
+    on('highlight', ({ ids }) => ids.forEach((id, k) => pulseRef(id, k === 0)));
     on('sorot', ({ ref, type, color, off }) => sorotRef(ref, type, color, off));
   });
 }
