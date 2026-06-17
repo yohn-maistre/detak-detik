@@ -26,6 +26,7 @@ import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import LensaWilayah from '../islands/LensaWilayah.svelte';
 import CabangBand from '../islands/CabangBand.svelte';
+import SkorCabang from '../islands/SkorCabang.svelte';
 import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
 import GarisStart from '../islands/GarisStart.svelte';
@@ -295,6 +296,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="eksekutif" client:visible />
+          <SkorCabang cabang="eksekutif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Kabinet yang Membengkak</h3>
             <p class="bab-kalimat fig">Empat puluh delapan menteri, lima puluh enam wakil, lima kepala badan: satu sel tiap pejabat, dan jam Danantara yang terus berjalan sementara laporan keuangannya tetap nol.</p>
@@ -313,6 +315,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="legislatif" client:visible />
+          <SkorCabang cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
               <h2 class="bab-judul display">{pabrik.judul}</h2>
@@ -333,6 +336,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="yudikatif" client:visible />
+          <SkorCabang cabang="yudikatif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Hukuman yang Tak Sebanding</h3>
             <p class="bab-kalimat fig">Besar kerugian negara terhadap lama vonis, satu titik per putusan; jaraknya yang melebar adalah temuannya.</p>
@@ -358,6 +362,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="aparat" client:visible />
+          <SkorCabang cabang="aparat" client:visible />
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
               <span class="eyebrow">ANGGARAN 2026</span>
@@ -388,6 +393,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             </div>
           </header>
           <CabangBand cabang="daerah" client:visible />
+          <SkorCabang cabang="daerah" client:visible />
           <div class="hukum-grid">
             <div class="ekonomi-col" data-rise>
               <div class="ekonomi-stat">

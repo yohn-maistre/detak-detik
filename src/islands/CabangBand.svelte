@@ -82,12 +82,10 @@
   .cb-big {
     font-family: 'Fraunces Variable', serif; font-weight: 300;
     font-size: clamp(56px, 11vw, 124px); line-height: 0.86; letter-spacing: -0.02em;
-    opacity: 0; transform: translateY(16px);
-    transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
   }
   .cb-big.accent { color: var(--accent); }
-  .in .cb-big { opacity: 1; transform: none; }
-  .cb-cap { font-size: 14.5px; color: var(--ink); max-width: 44ch; line-height: 1.5; }
+  /* the caption is the big number's label — pull it tight, never floating alone */
+  .cb-cap { font-size: 13px; color: var(--muted); max-width: 44ch; line-height: 1.5; margin-top: -6px; }
   .cb-side { font-size: 9px; letter-spacing: 0.16em; color: var(--muted); }
 
   /* isotype dots */
