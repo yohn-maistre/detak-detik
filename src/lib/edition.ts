@@ -8,14 +8,21 @@
  */
 
 export interface LiveTemuan { lens?: string; headline?: string; body?: string }
+export interface LiveTicker { src: string; teks: string; url?: string }
+export interface LiveAgenda { jam: string; teks: string; tag?: string }
+export interface LiveMakro { label: string; nilai: string; pre?: string; acuan?: string; chip?: string; nada?: string }
 export interface LiveEdisi {
   edisi?: number;
   terbit?: string;
   sesi?: 'pagi' | 'petang';
-  angka_edisi?: { nilai: number; label: string; cited_ids?: string[] };
+  angka_edisi?: { nilai: number; prefix?: string; label: string; cited_ids?: string[] };
   lead?: string;
-  ticker?: { src: string; teks: string; url?: string }[];
+  dek?: string;
+  ticker?: LiveTicker[];
   temuan?: LiveTemuan[];
+  agenda?: LiveAgenda[];
+  makro?: LiveMakro[];
+  harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }
 
@@ -47,3 +54,20 @@ export function onEdisi(fn: Sub): () => void {
 }
 
 export const getEdisi = (): LiveEdisi | null => live;
+
+/** The live RSS headlines (worker /ticker, hourly cron). Null when unset/unreachable
+ *  so callers keep their baked-in TICKER. */
+export async function fetchTicker(): Promise<LiveTicker[] | null> {
+  if (!AKSARA_URL) return null;
+  try {
+    const res = await fetch(`${AKSARA_URL}/ticker`, { signal: AbortSignal.timeout(6000) });
+    if (res.status !== 200) return null;
+    const d: unknown = await res.json();
+    const arr = Array.isArray(d) ? d : (d as { items?: unknown[] }).items;
+    if (!Array.isArray(arr) || !arr.length) return null;
+    return arr
+      .map((x) => x as Record<string, unknown>)
+      .filter((x) => typeof x.teks === 'string')
+      .map((x) => ({ src: String(x.src ?? ''), teks: String(x.teks), url: typeof x.url === 'string' ? x.url : undefined }));
+  } catch { return null; }
+}

@@ -4,6 +4,7 @@
       macro prints, each read against its own target. Detached from Lensa
       Wilayah (which now travels with the map). Figures are sample (contoh). */
   import { onMount } from 'svelte';
+  import { onEdisi, type LiveMakro } from '../lib/edition';
 
   const PENDUDUK_DASAR = 284_400_000;
   const PENDUDUK_EPOCH = Date.UTC(2026, 5, 30);
@@ -27,12 +28,16 @@
   const rp = (n: number) => `Rp ${fmt.format(Math.round(n))}`;
   const penduduk = $derived(Math.round(PENDUDUK_DASAR + ((now - PENDUDUK_EPOCH) / 1000) * PENDUDUK_PER_DETIK));
 
-  const CETAKAN = [
+  const CETAKAN: LiveMakro[] = [
     { label: 'INFLASI · TAHUNAN', nilai: '3,48%', pre: 'sasaran BI', acuan: '2,5±1%', chip: 'bps · ihk', nada: 'datar' },
     { label: 'PERTUMBUHAN PDB', nilai: '5,61%', pre: 'janji kampanye', acuan: '8%', chip: 'bps · pdb', nada: 'buruk' },
     { label: 'PENGANGGURAN TERBUKA', nilai: '4,68%', pre: '', acuan: 'feb 2026', chip: 'bps · sakernas', nada: 'datar' },
     { label: 'UPAH RATA-RATA', nilai: 'Rp 3,29 jt', pre: 'per bulan', acuan: 'feb 2026', chip: 'bps · sakernas', nada: 'datar' },
   ];
+  // the published edition's macro prints override the contoh when present
+  let liveMakro = $state<LiveMakro[] | null>(null);
+  onMount(() => onEdisi((e) => (liveMakro = e?.makro?.length ? e.makro : null)));
+  const vitals = $derived(liveMakro ?? CETAKAN);
 </script>
 
 <section class="np" data-no-stempel aria-label="Negara hari ini">
@@ -51,7 +56,7 @@
   </div>
 
   <div class="np-vitals">
-    {#each CETAKAN as c (c.label)}
+    {#each vitals as c (c.label)}
       <article class="np-vital">
         <span class="np-vital-k mono">{c.label}</span>
         <p class={`np-vital-n num ${c.nada}`}>{c.nilai}</p>

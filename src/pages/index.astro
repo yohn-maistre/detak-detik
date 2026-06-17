@@ -126,7 +126,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <div class="ticker" aria-label="Berita kilat dari media lain, tautan keluar apa adanya">
           <span class="ticker-tab"><i class="pulse-dot"></i>KILAS</span>
           <div class="ticker-belt">
-            <div class="ticker-track">
+            <div class="ticker-track" id="ticker-track">
               {TICKER.map((t) => (
                 <Fragment>
                   <span class="src">{t.src}</span> {t.teks} <span class="sep">●</span>
@@ -145,16 +145,16 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
         <section class="pagi" aria-label="Kabar utama pagi">
           <div class="pagi-utama">
             <span class="inkbar"><span class="dot">●</span>KABAR UTAMA</span>
-            <h2 class="pagi-judul display">{TEMUAN[0].headline}</h2>
-            <p class="pagi-dek">Temuan utama edisi ini, diperiksa terhadap dokumen sumbernya sebelum naik cetak. <span class="mono">(data contoh)</span></p>
+            <h2 class="pagi-judul display" id="ku-judul">{TEMUAN[0].headline}</h2>
+            <p class="pagi-dek" id="ku-dek">Temuan utama edisi ini, diperiksa terhadap dokumen sumbernya sebelum naik cetak. <span class="mono">(data contoh)</span></p>
             <div class="pagi-angka">
-              <span class="pagi-angka-n num">{ANGKA_EDISI.prefix} {fmtAngka}</span>
-              <span class="pagi-angka-lab">{ANGKA_EDISI.label}</span>
+              <span class="pagi-angka-n num" id="ku-angka-n">{ANGKA_EDISI.prefix} {fmtAngka}</span>
+              <span class="pagi-angka-lab" id="ku-angka-lab">{ANGKA_EDISI.label}</span>
             </div>
           </div>
           <aside class="pagi-ringkas" aria-label="Ringkas pagi">
             <span class="inkbar"><span class="dot">●</span>RINGKAS PAGI</span>
-            <ol class="rp-list">
+            <ol class="rp-list" id="rp-list">
               {TICKER.slice(0, 5).map((t) => (
                 <li class="rp-item">
                   <span class="rp-src mono">{t.src}</span>
@@ -170,7 +170,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           <CuacaPagi client:visible />
           <aside class="agenda" aria-label="Agenda hari ini">
             <span class="ag-label mono">AGENDA HARI INI</span>
-            <ul class="ag-list">
+            <ul class="ag-list" id="ag-list">
               {AGENDA.map((a) => (
                 <li class="ag-item">
                   <span class="ag-jam mono num">{a.jam}</span>
@@ -789,6 +789,7 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 
   <script>
     import { boot } from '../scripts/choreo';
+    import '../scripts/pagi-live';
     boot();
 
     // page-curl countdown to the next data refresh (17.00 WIB = 10.00 UTC)
