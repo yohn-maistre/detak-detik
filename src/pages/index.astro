@@ -2,6 +2,7 @@
 import Paper from '../layouts/Paper.astro';
 import Loader from '../components/Loader.astro';
 import PetaKabar from '../islands/PetaKabar.svelte';
+import NasionalPagi from '../islands/NasionalPagi.svelte';
 import CuacaPagi from '../islands/CuacaPagi.svelte';
 import PasarPagi from '../islands/PasarPagi.svelte';
 import PapanAngka from '../islands/PapanAngka.svelte';
@@ -182,14 +183,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
           </aside>
         </div>
 
-        <!-- Peta Kabar: the living front photograph -->
-        <section class="kabar-blok">
+        <!-- the state of the nation, right now -->
+        <section class="kabar-blok" id="negara">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>§1 · PETA KABAR</span>
-            <span class="eyebrow">LAPISAN DATA LANGSUNG · SATU KOSAKATA PERINTAH</span>
+            <span class="inkbar"><span class="dot">●</span>§1 · NEGARA HARI INI</span>
+            <span class="eyebrow">DUA PENGHITUNG LANGSUNG · ANGKA MAKRO TERHADAP TARGETNYA</span>
           </div>
-          <PetaKabar client:load />
-          <LensaWilayah client:visible />
+          <NasionalPagi client:visible />
         </section>
 
         <PasarPagi client:visible />
@@ -689,30 +689,34 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     <!-- ============ ACT III · NUSANTARA ============ -->
     <section class="act act-atlas" data-act="atlas" data-register="atlas" id="nusantara">
       <div class="tex tex-hatch" aria-hidden="true"></div>
+      <!-- the living understory opens the act, filling the seam's gap -->
+      <RimbaHidup client:visible />
+
       <div class="wrap">
         <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
-        <!-- the Act III lead: a rotating portrait of one of the peoples -->
+        <!-- the republic, mapped: the live layers and one province at a time -->
+        <div class="nus-sec"><span class="nus-sec-no mono">§</span><h3 class="nus-sec-judul display">Peta Kabar</h3><p class="nus-sec-dek fig">Lapisan data langsung. Klik sebuah provinsi, atau minta Aksara menelusurinya.</p></div>
+        <PetaKabar client:visible />
+        <LensaWilayah client:visible />
+
+        <!-- MANUSIA: the day's people + their tongues -->
+        <div class="nus-sec"><span class="nus-sec-no mono">I</span><h3 class="nus-sec-judul display">Manusia</h3><p class="nus-sec-dek fig">Satu dari ratusan suku kepulauan, berganti dua kali sehari, dan cara mereka berbicara.</p></div>
         <WajahNusantara client:visible />
+        <Bahasa718 client:visible />
 
-        <!-- the day's painting and the day's species -->
+        <!-- HAYATI & RUPA: the day's species, painting, and a wonder -->
+        <div class="nus-sec"><span class="nus-sec-no mono">II</span><h3 class="nus-sec-judul display">Hayati &amp; Rupa</h3><p class="nus-sec-dek fig">Yang tumbuh dan yang dilukis: spesies endemik, satu plat seni, dan catatan alam harian.</p></div>
         <GaleriNusantara client:visible />
+        <AlmanakSains client:visible />
 
-        <!-- a composed spread: the land that breathes, beside the day's almanac -->
+        <!-- TANAH: the land that breathes and the line that splits it -->
+        <div class="nus-sec"><span class="nus-sec-no mono">III</span><h3 class="nus-sec-judul display">Tanah</h3><p class="nus-sec-dek fig">Gunung yang bernapas, dan perbatasan fauna paling tajam di bumi.</p></div>
         <div class="atlas-grid">
           <GunungApi client:visible />
-          <AlmanakSains client:visible />
-        </div>
-
-        <!-- rupa & bahasa: the line that splits the fauna, and the tongues -->
-        <div class="atlas-grid">
           <PetaRupa client:visible />
-          <Bahasa718 client:visible />
         </div>
-
-        <!-- the living understory: order out of chaos, the catharsis -->
-        <RimbaHidup client:visible />
       </div>
     </section>
 
@@ -1278,6 +1282,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
     margin-bottom: 8px;
   }
   .atlas-sub { font-size: 15px; margin-bottom: 26px; }
+  /* Act III section dividers (atlas register) */
+  .nus-sec { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; align-items: baseline; border-top: 2px solid var(--line); padding-top: 16px; margin: clamp(40px, 7vw, 80px) 0 24px; }
+  .nus-sec-no { font-size: 11px; letter-spacing: 0.3em; color: var(--accent2); grid-row: 1 / span 2; }
+  .nus-sec-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(30px, 5vw, 58px); line-height: 0.95; color: var(--ink); }
+  .nus-sec-dek { grid-column: 2; font-size: clamp(14px, 1.7vw, 18px); color: var(--muted); max-width: 56ch; line-height: 1.5; }
   .atlas-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin-top: 46px; align-items: start; }
   @media (max-width: 940px) { .atlas-grid { grid-template-columns: 1fr; } }
 
