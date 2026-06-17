@@ -8,19 +8,33 @@
   import { onMount } from 'svelte';
   import { dispatch, playTour, stopTour } from '../lib/commands/dispatcher';
   import { ANGKA_EDISI, TEMUAN, KEHENINGAN, EDISI } from '../lib/data/edisi';
+  import { onEdisi, type LiveEdisi } from '../lib/edition';
 
   const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
 
+  // the live edition (newsroom-published) overrides the baked-in contoh when present
+  let liveEd = $state<LiveEdisi | null>(null);
+  onMount(() => onEdisi((e) => (liveEd = e)));
+
   // the edition is the model's whole world: facts in, citations out
-  const SISTEM = [
-    'Kamu adalah Aksara, suara harian koran sipil DETAK DETIK.',
-    'Jawab dalam bahasa Indonesia formal, maksimal tiga kalimat, tanpa opini.',
-    'Hanya gunakan fakta dari konteks edisi berikut; jika tidak ada di konteks, katakan datanya belum ada di edisi ini.',
-    `Edisi #${EDISI.nomor} (${EDISI.tanggal}). Angka edisi: ${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} — ${ANGKA_EDISI.label}`,
-    ...TEMUAN.map((t) => `Temuan ${t.lens}: ${t.headline}. ${t.body}`),
-    `Yang tidak dihitung (${KEHENINGAN.wilayah}): baris "${KEHENINGAN.absen[0]?.k ?? ''}" kosong di statistik resmi; pihak ketiga mencatat ${KEHENINGAN.laneC.teks} (${KEHENINGAN.laneC.chip}).`,
-    'Semua angka edisi ini berstatus data contoh.',
-  ].join('\n');
+  function sistem(): string {
+    const ed = liveEd;
+    const nomor = ed?.edisi ?? EDISI.nomor;
+    const angka = ed?.angka_edisi
+      ? `${ed.angka_edisi.nilai.toLocaleString('id-ID')} — ${ed.angka_edisi.label}`
+      : `${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} — ${ANGKA_EDISI.label}`;
+    const temuan = ((ed?.temuan?.length ? ed.temuan : TEMUAN) as { lens?: string; headline?: string; body?: string }[])
+      .map((t) => `Temuan ${t.lens}: ${t.headline}. ${t.body}`);
+    return [
+      'Kamu adalah Aksara, suara harian koran sipil DETAK DETIK.',
+      'Jawab dalam bahasa Indonesia formal, maksimal tiga kalimat, tanpa opini.',
+      'Hanya gunakan fakta dari konteks edisi berikut; jika tidak ada di konteks, katakan datanya belum ada di edisi ini.',
+      `Edisi #${nomor}. Angka edisi: ${angka}`,
+      ...temuan,
+      `Yang tidak dihitung (${KEHENINGAN.wilayah}): baris "${KEHENINGAN.absen[0]?.k ?? ''}" kosong di statistik resmi; pihak ketiga mencatat ${KEHENINGAN.laneC.teks} (${KEHENINGAN.laneC.chip}).`,
+      ed ? 'Edisi langsung dari ruang redaksi.' : 'Semua angka edisi ini berstatus data contoh.',
+    ].join('\n');
+  }
 
   let sibuk = $state(false);
   // the pill/terminal carry the register of whichever act sits behind them, so
@@ -40,7 +54,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: [
-            { role: 'system', content: SISTEM },
+            { role: 'system', content: sistem() },
             { role: 'user', content: q },
           ],
         }),

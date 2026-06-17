@@ -27,6 +27,7 @@ export interface Env {
   TURNSTILE_SECRET?: string;
   FIRMS_MAP_KEY?: string;
   WAQI_TOKEN?: string;
+  EDISI_TOKEN?: string;
   CACHE: KVNamespace;
   AI?: { run: (model: string, options: Record<string, unknown>) => Promise<{ response?: string }> };
   MODEL_PRIMARY?: string;
@@ -62,6 +63,8 @@ export default {
       if (url.pathname.startsWith('/geo/')) return geo(url.pathname.slice(5), env, ctx);
       if (url.pathname === '/ask' && req.method === 'POST') return ask(req, env, ctx);
       if (url.pathname === '/tour' && req.method === 'POST') return tour(req, env);
+      if (url.pathname === '/edisi' && req.method === 'GET') return edisiGet(env);
+      if (url.pathname === '/edisi' && req.method === 'POST') return edisiPost(req, env);
       return json({ galat: 'rute tidak dikenal' }, 404);
     } catch (e) {
       return json({ galat: String(e) }, 500);
@@ -78,6 +81,33 @@ function json(body: unknown, status = 200): Response {
     status,
     headers: { 'Content-Type': 'application/json', ...CORS },
   });
+}
+
+/* ---------- /edisi : the live edition payload ----------
+   GET serves the current edition JSON from KV (the site reads this at runtime
+   and falls back to its baked-in contoh when empty — no rebuild to publish).
+   POST is how the newsroom writes a new edition; guarded by EDISI_TOKEN so
+   only the pipeline can publish. The worker stays stateless and amnesiac. */
+
+async function edisiGet(env: Env): Promise<Response> {
+  const cur = await env.CACHE.get('edisi:current');
+  if (!cur) return new Response(null, { status: 204, headers: CORS });
+  return new Response(cur, {
+    status: 200,
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=120', ...CORS },
+  });
+}
+
+async function edisiPost(req: Request, env: Env): Promise<Response> {
+  if (!env.EDISI_TOKEN || req.headers.get('Authorization') !== `Bearer ${env.EDISI_TOKEN}`) {
+    return json({ galat: 'tidak berwenang' }, 401);
+  }
+  const teks = await req.text();
+  let parsed: { edisi?: number };
+  try { parsed = JSON.parse(teks) as { edisi?: number }; } catch { return json({ galat: 'json tidak valid' }, 400); }
+  await env.CACHE.put('edisi:current', teks);
+  if (typeof parsed.edisi === 'number') await env.CACHE.put(`edisi:${parsed.edisi}`, teks);
+  return json({ ok: true, edisi: parsed.edisi ?? null });
 }
 
 /* ---------- turnstile: the bot gate in front of the model lanes ----------
