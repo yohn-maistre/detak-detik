@@ -65,6 +65,7 @@ export default {
       if (url.pathname === '/tour' && req.method === 'POST') return tour(req, env);
       if (url.pathname === '/edisi' && req.method === 'GET') return edisiGet(env);
       if (url.pathname === '/edisi' && req.method === 'POST') return edisiPost(req, env);
+      if (url.pathname === '/pasar') return pasar(env, ctx);
       return json({ galat: 'rute tidak dikenal' }, 404);
     } catch (e) {
       return json({ galat: String(e) }, 500);
@@ -96,6 +97,39 @@ async function edisiGet(env: Env): Promise<Response> {
     status: 200,
     headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=120', ...CORS },
   });
+}
+
+/* ---------- /pasar : the morning market quotes ----------
+   USD/IDR keyless via Frankfurter; indices/commodities via the Yahoo chart
+   endpoint server-side (browser-like UA), cached 15 min. Any leg that fails
+   is simply omitted; the client keeps its contoh for that instrument. */
+
+async function pasar(env: Env, ctx: ExecutionContext): Promise<Response> {
+  const hit = await env.CACHE.get('pasar:v1');
+  if (hit) {
+    return new Response(hit, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+  }
+  const out: Record<string, { val: number; spark?: number[] }> = {};
+  try {
+    const r = await fetch('https://api.frankfurter.dev/v1/latest?base=USD&symbols=IDR', { signal: AbortSignal.timeout(6000) });
+    const d = (await r.json()) as { rates?: { IDR?: number } };
+    if (d.rates?.IDR) out.usd = { val: Math.round(d.rates.IDR) };
+  } catch { /* keep contoh */ }
+  const yh: Record<string, string> = { ihsg: '^JKSE', brent: 'BZ=F' };
+  for (const [k, sym] of Object.entries(yh)) {
+    try {
+      const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=1mo&interval=1d`, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; DetakDetik/1.0)' },
+        signal: AbortSignal.timeout(6000),
+      });
+      const d = (await r.json()) as { chart?: { result?: { indicators?: { quote?: { close?: (number | null)[] }[] } }[] } };
+      const closes = (d.chart?.result?.[0]?.indicators?.quote?.[0]?.close ?? []).filter((x): x is number => typeof x === 'number');
+      if (closes.length) out[k] = { val: closes[closes.length - 1]!, spark: closes.slice(-12) };
+    } catch { /* keep contoh */ }
+  }
+  const payload = JSON.stringify({ pada: new Date().toISOString(), data: out });
+  ctx.waitUntil(env.CACHE.put('pasar:v1', payload, { expirationTtl: 900 }));
+  return new Response(payload, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
 }
 
 async function edisiPost(req: Request, env: Env): Promise<Response> {

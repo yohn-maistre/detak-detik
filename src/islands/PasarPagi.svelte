@@ -29,8 +29,24 @@
       spark: [121, 121, 121, 124, 124, 124, 124, 124, 124, 124, 124, 124], src: 'mypertamina · jun', live: false },
   ]);
 
+  const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
   onMount(() => {
     (async () => {
+      // the worker aggregates USD/IDR (keyless) + IHSG/Brent (Yahoo, server-side)
+      if (AKSARA_URL) {
+        try {
+          const res = await fetch(`${AKSARA_URL}/pasar`, { signal: AbortSignal.timeout(6000) });
+          const { data } = (await res.json()) as { data?: Record<string, { val: number; spark?: number[] }> };
+          if (data && Object.keys(data).length) {
+            instrumen = instrumen.map((i) => {
+              const d = data[i.id];
+              if (!d) return i;
+              return { ...i, val: Math.round(d.val), spark: d.spark?.length ? d.spark : i.spark, src: `${i.src.split(' · ')[0]} · langsung`, live: true };
+            });
+            return;
+          }
+        } catch { /* fall through to the keyless rupiah */ }
+      }
       try {
         const res = await fetch('https://open.er-api.com/v6/latest/USD', { signal: AbortSignal.timeout(5000) });
         const data = (await res.json()) as { rates?: { IDR?: number } };
