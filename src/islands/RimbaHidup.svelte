@@ -11,16 +11,6 @@
   import { reducedMotion } from '../lib/motion';
   import { rngFrom } from '../lib/seed';
 
-  const FAKTA = [
-    'Lebah raksasa Apis dorsata menggetarkan sayap serentak, gelombang demi gelombang, untuk mengusir pemangsa.',
-    'Cendrawasih jantan menari sebelum fajar; sang betina memilih yang paling sabar.',
-    'Hutan Kalimantan menyimpan lebih banyak jenis pohon daripada seluruh benua Afrika.',
-    'Komodo betina bisa bertelur tanpa pejantan, lewat partenogenesis.',
-    'Ikan di Raja Ampat dilaporkan mengenali penyelam yang sama dari hari ke hari.',
-    'Rafflesia arnoldii mekar sekali, sebesar roda, lalu layu dalam sepekan.',
-  ];
-  let faktaIdx = $state(0);
-
   let canvas: HTMLCanvasElement;
   let wrap: HTMLElement;
 
@@ -126,9 +116,14 @@
       io.observe(wrap);
     }
 
-    const factIv = window.setInterval(() => (faktaIdx = (faktaIdx + 1) % FAKTA.length), 6500);
+    // once in a while, a random impulse scatters the flock before it re-coheres
+    const burstIv = window.setInterval(() => {
+      if (!running) return;
+      const kick = 2.2 + rng() * 1.4;
+      for (const b of flock) { b.vx += (rng() - 0.5) * kick; b.vy += (rng() - 0.5) * kick; }
+    }, 11_000);
 
-    return () => { stop(); ro.disconnect(); io?.disconnect(); clearInterval(factIv); };
+    return () => { stop(); ro.disconnect(); io?.disconnect(); clearInterval(burstIv); };
   });
 </script>
 
@@ -136,9 +131,6 @@
   <canvas bind:this={canvas} aria-hidden="true"></canvas>
   <div class="rimba-overlay">
     <span class="eyebrow">RIMBA HIDUP · YANG TETAP BERGERAK</span>
-    {#each [FAKTA[faktaIdx]] as f (faktaIdx)}
-      <p class="rimba-fakta fig">{f}</p>
-    {/each}
   </div>
 </section>
 
@@ -151,8 +143,5 @@
     mask: radial-gradient(118% 118% at 50% 48%, #000 60%, transparent 100%);
   }
   .rimba-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: clamp(18px, 3vw, 36px); background: linear-gradient(transparent, color-mix(in oklab, #ece2cb 82%, transparent)); }
-  .rimba .eyebrow { color: var(--accent2); margin-bottom: 8px; display: block; }
-  .rimba-fakta { font-size: clamp(18px, 2.6vw, 30px); max-width: 32ch; line-height: 1.22; color: var(--ink); animation: rimbaFade 0.8s var(--ease-out); }
-  @keyframes rimbaFade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  @media (prefers-reduced-motion: reduce) { .rimba-fakta { animation: none; } }
+  .rimba .eyebrow { color: var(--accent2); display: block; }
 </style>
