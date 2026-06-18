@@ -66,3 +66,13 @@ jobs:
           else
             echo "TURNSTILE_SECRET belum diisi, lewati."
           fi
+
+      - name: Push EDISI_TOKEN secret
+        env:
+          EDISI_TOKEN: ${{ secrets.EDISI_TOKEN }}
+        run: |
+          if [ -n "$EDISI_TOKEN" ]; then
+            echo "$EDISI_TOKEN" | npx wrangler@4 secret put EDISI_TOKEN --config worker/wrangler.toml
+          else
+            echo "EDISI_TOKEN belum diisi, lewati."
+          fi
