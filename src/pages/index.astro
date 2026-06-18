@@ -147,12 +147,13 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             <span class="inkbar"><span class="dot">●</span>KABAR UTAMA</span>
             <h2 class="pagi-judul display" id="ku-judul">{TEMUAN[0].headline}</h2>
             <p class="pagi-dek" id="ku-dek">Temuan utama edisi ini, diperiksa terhadap dokumen sumbernya sebelum naik cetak. <span class="mono">(data contoh)</span></p>
+          </div>
+          <aside class="pagi-ringkas" aria-label="Ringkas pagi">
             <div class="pagi-angka">
+              <span class="inkbar"><span class="dot">●</span>ANGKA EDISI</span>
               <span class="pagi-angka-n num" id="ku-angka-n">{ANGKA_EDISI.prefix} {fmtAngka}</span>
               <span class="pagi-angka-lab" id="ku-angka-lab">{ANGKA_EDISI.label}</span>
             </div>
-          </div>
-          <aside class="pagi-ringkas" aria-label="Ringkas pagi">
             <span class="inkbar"><span class="dot">●</span>RINGKAS PAGI</span>
             <ol class="rp-list" id="rp-list">
               {TICKER.slice(0, 5).map((t) => (
@@ -925,9 +926,10 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
   .pagi-utama { display: grid; gap: 14px; }
   .pagi-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(28px, 4.4vw, 56px); line-height: 1.0; letter-spacing: var(--disp-track); color: var(--ink); margin: 8px 0 0; max-width: 18ch; }
   .pagi-dek { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); max-width: 52ch; line-height: 1.5; }
-  .pagi-angka { display: grid; gap: 4px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 4px; }
-  .pagi-angka-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 4.6vw, 56px); line-height: 0.92; color: var(--accent); }
-  .pagi-angka-lab { font-size: 13px; color: var(--ink); max-width: 46ch; line-height: 1.45; }
+  .pagi-angka { display: grid; gap: 5px; padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--line); }
+  .pagi-angka .inkbar { justify-self: start; margin-bottom: 2px; }
+  .pagi-angka-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(26px, 3.2vw, 42px); line-height: 0.92; color: var(--accent); }
+  .pagi-angka-lab { font-size: 12.5px; color: var(--ink); line-height: 1.45; }
   .pagi-ringkas { display: grid; gap: 12px; align-content: start; border-left: 1px solid var(--line); padding-left: clamp(16px, 2.5vw, 30px); }
   @media (max-width: 820px) { .pagi-ringkas { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
   .rp-list { list-style: none; margin: 0; padding: 0; display: grid; }

@@ -8,8 +8,12 @@
   let kota = $state<Kota[]>([
     { nama: 'Jakarta', lat: -6.21, lon: 106.85, t: 31, code: 2 },
     { nama: 'Bandung', lat: -6.92, lon: 107.61, t: 26, code: 61 },
+    { nama: 'Semarang', lat: -6.97, lon: 110.42, t: 32, code: 2 },
+    { nama: 'Yogyakarta', lat: -7.80, lon: 110.36, t: 30, code: 1 },
     { nama: 'Surabaya', lat: -7.26, lon: 112.75, t: 33, code: 1 },
+    { nama: 'Denpasar', lat: -8.65, lon: 115.22, t: 31, code: 2 },
     { nama: 'Medan', lat: 3.59, lon: 98.67, t: 30, code: 80 },
+    { nama: 'Palembang', lat: -2.98, lon: 104.76, t: 32, code: 3 },
     { nama: 'Makassar', lat: -5.14, lon: 119.42, t: 32, code: 3 },
     { nama: 'Jayapura', lat: -2.53, lon: 140.72, t: 29, code: 95 },
   ]);
@@ -71,9 +75,7 @@
   .cp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 12px; }
   .cp-label { font-size: 10px; letter-spacing: 0.2em; color: var(--ink); }
   .cp-src { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); }
-  .cp-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(10px, 2vw, 24px); }
-  @media (max-width: 760px) { .cp-row { grid-template-columns: repeat(3, 1fr); row-gap: 16px; } }
-  @media (max-width: 420px) { .cp-row { grid-template-columns: repeat(2, 1fr); } }
+  .cp-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); gap: clamp(12px, 1.8vw, 22px) clamp(10px, 2vw, 20px); }
   .cp-kota { display: grid; gap: 2px; }
   .cp-nama { font-size: 9px; letter-spacing: 0.12em; color: var(--muted); }
   .cp-t { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(26px, 3.4vw, 38px); line-height: 1; color: var(--ink); }
