@@ -23,12 +23,12 @@ export const ANGKA_EDISI = {
 };
 
 export const TICKER = [
-  { src: 'BMKG', teks: 'Gempa M4,8 tercatat 38 km tenggara Halmahera Barat, 03.12 WIT' },
-  { src: 'ANTARA', teks: 'DPR jadwalkan rapat paripurna pembahasan RUU hari ini' },
-  { src: 'TEMPO', teks: 'Harga cabai rawit di Manado naik 41% dalam sepekan' },
-  { src: 'BBC INDONESIA', teks: 'Laporan baru soroti tata kelola tambang nikel' },
-  { src: 'GFW', teks: '214 peringatan deforestasi terdeteksi kemarin' },
-  { src: 'JUBI', teks: 'Gereja laporkan kondisi layanan kesehatan di pegunungan tengah' },
+  { src: 'BMKG', teks: 'Gempa M4,8 tercatat 38 km tenggara Halmahera Barat, 03.12 WIT', url: 'https://www.bmkg.go.id' },
+  { src: 'ANTARA', teks: 'DPR jadwalkan rapat paripurna pembahasan RUU hari ini', url: 'https://www.antaranews.com' },
+  { src: 'TEMPO', teks: 'Harga cabai rawit di Manado naik 41% dalam sepekan', url: 'https://www.tempo.co' },
+  { src: 'BBC INDONESIA', teks: 'Laporan baru soroti tata kelola tambang nikel', url: 'https://www.bbc.com/indonesia' },
+  { src: 'GFW', teks: '214 peringatan deforestasi terdeteksi kemarin', url: 'https://www.globalforestwatch.org' },
+  { src: 'JUBI', teks: 'Gereja laporkan kondisi layanan kesehatan di pegunungan tengah', url: 'https://jubi.id' },
 ];
 
 // what to watch today — an editorial rundown (curated; newsroom-fed later)

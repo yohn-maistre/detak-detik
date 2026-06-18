@@ -13,10 +13,15 @@ const esc = (s: unknown) =>
 
 type Item = { src?: string; teks?: string; url?: string };
 
+const link = (url: string | undefined, inner: string, cls: string) =>
+  url ? `<a class="${cls}" href="${esc(url)}" target="_blank" rel="noopener">${inner}</a>` : inner;
+
 function renderTicker(items: Item[]) {
   const tr = document.getElementById('ticker-track');
   if (!tr) return;
-  const one = items.map((t) => `<span class="src">${esc(t.src ?? '')}</span> ${esc(t.teks)} <span class="sep">●</span>`).join(' ');
+  const one = items
+    .map((t) => `${link(t.url, `<span class="src">${esc(t.src ?? '')}</span> ${esc(t.teks)}`, 'ticker-link')} <span class="sep">●</span>`)
+    .join(' ');
   tr.innerHTML = one + ' ' + one; // duplicate track for the seamless marquee
 }
 
@@ -25,7 +30,7 @@ function renderRingkas(items: Item[]) {
   if (!ol) return;
   ol.innerHTML = items
     .slice(0, 5)
-    .map((t) => `<li class="rp-item"><span class="rp-src mono">${esc(t.src ?? '')}</span><span class="rp-teks">${esc(t.teks)}</span></li>`)
+    .map((t) => `<li class="rp-item">${link(t.url, `<span class="rp-src mono">${esc(t.src ?? '')}</span><span class="rp-teks">${esc(t.teks)}</span>`, 'rp-link')}</li>`)
     .join('');
 }
 

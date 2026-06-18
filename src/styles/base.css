@@ -314,6 +314,8 @@ a { color: inherit; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker .src { color: var(--accent); font-weight: 600; }
 .ticker .sep { opacity: 0.45; margin: 0 14px; }
+.ticker-link { color: inherit; text-decoration: none; }
+.ticker-link:hover { text-decoration: underline; text-underline-offset: 2px; }
 @keyframes tick { to { transform: translateX(-100%); } }
 
 /* ---- headline glyph reveal (performs once, then stands still) ---- */
