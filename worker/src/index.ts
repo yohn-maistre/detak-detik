@@ -330,8 +330,10 @@ async function ticker(env: Env): Promise<Response> {
 }
 
 async function refreshTicker(env: Env): Promise<void> {
-  const items: { src: string; teks: string; url: string; pada: string }[] = [];
+  type Item = { src: string; teks: string; url: string; pada: string };
+  const byFeed: Item[][] = [];
   for (const feed of RSS_FEEDS) {
+    const got: Item[] = [];
     try {
       const res = await fetch(feed.url, {
         headers: {
@@ -348,13 +350,18 @@ async function refreshTicker(env: Env): Promise<void> {
         const title = item.match(/<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/)?.[1];
         const link = item.match(/<link>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/link>/)?.[1];
         const date = item.match(/<pubDate>(.*?)<\/pubDate>/)?.[1];
-        if (title && link) items.push({ src: feed.src, teks: title.trim(), url: link.trim(), pada: date ?? '' });
-        if (items.filter((i) => i.src === feed.src).length >= 5) break;
+        if (title && link) got.push({ src: feed.src, teks: title.trim(), url: link.trim(), pada: date ?? '' });
+        if (got.length >= 4) break;
       }
     } catch {
       // a dark source is a Data Hilang note, never a crash
     }
+    if (got.length) byFeed.push(got);
   }
+  // round-robin across feeds so the ticker + Ringkas Pagi show a mix of outlets,
+  // not five in a row from whichever feed loaded first
+  const items: Item[] = [];
+  for (let i = 0; i < 4; i++) for (const feed of byFeed) if (feed[i]) items.push(feed[i]!);
   await env.CACHE.put('ticker:v1', JSON.stringify(items), { expirationTtl: 7200 });
 }
 
