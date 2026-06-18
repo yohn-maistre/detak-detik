@@ -63,6 +63,11 @@ const DUNIA = [
 const fmtAngka = new Intl.NumberFormat('id-ID').format(ANGKA_EDISI.nilai);
 const sparkMax = Math.max(...PUTUSAN_HARIAN);
 const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
+
+// build-time live-lane check: is PUBLIC_AKSARA_URL baked into this build?
+const AKSARA_BUILD = import.meta.env.PUBLIC_AKSARA_URL as string | undefined;
+let lajurHost: string | null = null;
+if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { lajurHost = AKSARA_BUILD; } }
 ---
 
 <Paper>
@@ -771,7 +776,11 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
             Astro 6 · Svelte 5 · MapLibre<br />
             Peta: OpenFreeMap · OSM<br />
             Aksara: Fraunces · Archivo · Geist Mono<br />
-            Semua angka halaman ini: <b>data contoh</b><br />
+            {lajurHost ? (
+              <Fragment>Lajur langsung: <b>{lajurHost}</b><br /></Fragment>
+            ) : (
+              <Fragment>Lajur: <b>mode contoh</b> · AKSARA_URL belum masuk build<br /></Fragment>
+            )}
             <a class="ink-link" href="https://github.com/yohn-maistre/detak-detik">github.com/yohn-maistre/detak-detik</a>
           </div>
         </div>
