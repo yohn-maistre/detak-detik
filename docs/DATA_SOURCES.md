@@ -101,3 +101,41 @@ kelayakan (paling mudah dulu):
 Tunda: Gini ratio (cakupan kabupaten tak lengkap) dan rasio dokter
 (SISDMK, hanya PDF/portal). Sandbox memblokir sebagian fetch primer;
 verifikasi ukuran GeoJSON dan teks dokumentasi WebAPI sebelum implementasi.
+
+---
+
+## Lampiran R4 — Sumber independen (riset, Jun 2026)
+
+Prinsip redaksi: **jangan biarkan negara sekaligus *menghasilkan* dan
+*menarasikan* angka.** Sumber negara (BPS, BMKG, DJPK, BPK, KPK, MA) dipakai
+sebagai *baseline*, tapi framing dirutekan lewat pemantau independen. Outlet
+milik negara (ANTARA) tidak dipakai sebagai suara utama.
+
+### Berita (ticker + Ringkas Pagi) — set RSS yang dipakai
+ANTARA (kantor berita negara) DICORET. Set independen:
+- Tempo `https://rss.tempo.co/nasional` (+/politik,/ekonomi) — investigatif, IFCN
+- BBC News Indonesia `https://feeds.bbci.co.uk/indonesia/rss.xml`
+- Project Multatuli `https://projectmultatuli.org/feed/` — kepentingan publik, CC
+- Jubi `https://jubi.id/feed/` — suara independen Papua
+- KBR `https://kbr.id/feed` — kantor berita radio independen
+- Mongabay Indonesia `https://news.mongabay.com/feed/?lang=id` — lingkungan
+Opsional: The Conversation ID (CC, Atom `/id/articles.atom`), Tirto (lewat RSS-bridge),
+Katadata (ekonomi), Narasi. Kompas/CNN dipakai untuk keluasan TAPI ditandai
+konglomerasi. Catatan worker: kirim User-Agent mirip-peramban (situs mem-403 agen
+datacenter); probe tiap /feed/ + /wp-json/ sekali dari worker.
+
+### Data independen per kanal (lapisan cek-silang)
+| Kanal | Independen (utama) | Baseline negara (dicek-silang) |
+|---|---|---|
+| hukum/korupsi | ICW (tren penindakan), TII (CPI, tahunan) | KPK, MA |
+| anggaran/fiskal | CELIOS, INDEF | BPS (key), DJPK, BPK |
+| hutan/lingkungan | GFW/WRI (API, key), Auriga (STADI), Walhi, Greenpeace ID | KLHK |
+| aparat/HAM | KontraS, YLBHI, LBH Jakarta, Imparsial, Lokataru | pernyataan resmi |
+| daerah | jejaring LBH, Jubi (Papua) | DJPK, BPS daerah |
+| harga/ekonomi | CELIOS, INDEF, Katadata (databoks) | BPS (CPI) |
+| tambang/energi | JATAM, Trend Asia | ESDM |
+| bencana | — | BMKG (keyless; quakes/cuaca) |
+
+API sejati (sisanya RSS/wp-json atau scrape PDF): **BMKG** (keyless), **BPS WebAPI**
+(key gratis), **GFW Data API** (key gratis). Angka NGO umumnya di dalam PDF naratif:
+RSS untuk notifikasi → ekstraksi angka (LLM/manual) → fact-gate.

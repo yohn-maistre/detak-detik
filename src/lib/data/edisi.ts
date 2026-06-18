@@ -24,7 +24,7 @@ export const ANGKA_EDISI = {
 
 export const TICKER = [
   { src: 'BMKG', teks: 'Gempa M4,8 tercatat 38 km tenggara Halmahera Barat, 03.12 WIT', url: 'https://www.bmkg.go.id' },
-  { src: 'ANTARA', teks: 'DPR jadwalkan rapat paripurna pembahasan RUU hari ini', url: 'https://www.antaranews.com' },
+  { src: 'PROJECT MULTATULI', teks: 'Liputan publik soroti dampak proyek pada warga terdampak', url: 'https://projectmultatuli.org' },
   { src: 'TEMPO', teks: 'Harga cabai rawit di Manado naik 41% dalam sepekan', url: 'https://www.tempo.co' },
   { src: 'BBC INDONESIA', teks: 'Laporan baru soroti tata kelola tambang nikel', url: 'https://www.bbc.com/indonesia' },
   { src: 'GFW', teks: '214 peringatan deforestasi terdeteksi kemarin', url: 'https://www.globalforestwatch.org' },

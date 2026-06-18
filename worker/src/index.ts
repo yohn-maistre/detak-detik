@@ -42,9 +42,12 @@ const DEFAULT_FALLBACK = 'nvidia/nemotron-3-ultra-550b-a55b';
 const DEFAULT_LOCAL = '@cf/aisingapore/gemma-sea-lion-v4-27b-it';
 
 const RSS_FEEDS: { src: string; url: string }[] = [
-  { src: 'ANTARA', url: 'https://www.antaranews.com/rss/terkini.xml' },
+  // independent / non-state outlets only — ANTARA (state agency) dropped on purpose
   { src: 'TEMPO', url: 'https://rss.tempo.co/nasional' },
   { src: 'BBC INDONESIA', url: 'https://feeds.bbci.co.uk/indonesia/rss.xml' },
+  { src: 'PROJECT MULTATULI', url: 'https://projectmultatuli.org/feed/' },
+  { src: 'JUBI', url: 'https://jubi.id/feed/' },
+  { src: 'KBR', url: 'https://kbr.id/feed' },
   { src: 'MONGABAY', url: 'https://news.mongabay.com/feed/?lang=id' },
 ];
 
@@ -330,7 +333,15 @@ async function refreshTicker(env: Env): Promise<void> {
   const items: { src: string; teks: string; url: string; pada: string }[] = [];
   for (const feed of RSS_FEEDS) {
     try {
-      const res = await fetch(feed.url, { headers: { 'User-Agent': 'DetakDetik/0.1 (+https://github.com/yohn-maistre/detak-detik)' } });
+      const res = await fetch(feed.url, {
+        headers: {
+          // a realistic browser UA — these outlets' WAF/CDN 403s datacenter agents
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
+          'Accept-Language': 'id,en;q=0.8',
+        },
+        signal: AbortSignal.timeout(8000),
+      });
       const xml = await res.text();
       for (const m of xml.matchAll(/<item>([\s\S]*?)<\/item>/g)) {
         const item = m[1] ?? '';
