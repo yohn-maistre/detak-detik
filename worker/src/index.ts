@@ -314,7 +314,13 @@ async function tour(req: Request, env: Env): Promise<Response> {
 /* ---------- ticker: Lane A, pass-through only ---------- */
 
 async function ticker(env: Env): Promise<Response> {
-  const cached = await env.CACHE.get('ticker:v1');
+  let cached = await env.CACHE.get('ticker:v1');
+  if (!cached) {
+    // empty KV (e.g. just deployed, before the first hourly cron tick) —
+    // populate now so the headlines are live immediately, not after an hour.
+    await refreshTicker(env);
+    cached = await env.CACHE.get('ticker:v1');
+  }
   return new Response(cached ?? '[]', {
     headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS },
   });
