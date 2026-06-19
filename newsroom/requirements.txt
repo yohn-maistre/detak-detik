@@ -1,0 +1,6 @@
+# The newsroom batch job (GitHub Actions). Python 3.11+.
+# Pydantic AI: typed agents + output validators (ModelRetry = retry-with-feedback).
+# LiteLLM: the unified, OpenAI-shaped gateway across NIM/Groq/OpenRouter/Gemini.
+pydantic-ai-slim[openai]>=1.0,<2
+litellm>=1.40
+httpx>=0.27

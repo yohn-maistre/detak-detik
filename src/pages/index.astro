@@ -192,13 +192,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <span class="inkbar"><span class="dot">●</span>§1 · NEGARA HARI INI</span>
             <span class="eyebrow">DUA PENGHITUNG LANGSUNG · ANGKA MAKRO TERHADAP TARGETNYA</span>
           </div>
-          <div class="angka-edisi-band">
-            <span class="ae-label mono">ANGKA EDISI</span>
-            <div class="ae-body">
-              <span class="ae-n num" id="ku-angka-n">{ANGKA_EDISI.prefix} {fmtAngka}</span>
-              <span class="ae-lab" id="ku-angka-lab">{ANGKA_EDISI.label}</span>
-            </div>
-          </div>
           <NasionalPagi client:visible />
         </section>
 
@@ -237,11 +230,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <section class="angka-blok" aria-labelledby="angka-label">
           <div class="angka-kiri">
             <span class="inkbar"><span class="dot">●</span>BUKTI №1 · ANGKA EDISI</span>
-            <p class="angka num display" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
+            <p class="angka num display" id="angka-odometer" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
               {ANGKA_EDISI.prefix} {fmtAngka}
             </p>
             <p class="angka-label" id="angka-label">
-              {ANGKA_EDISI.label} <span class="mono">(data contoh)</span>
+              <span id="angka-label-teks">{ANGKA_EDISI.label}</span> <span class="mono" id="angka-label-src">(data contoh)</span>
             </p>
             <div class="angka-denom mono" role="group" aria-label="Setarakan kerugian dengan satuan lain">
               <span class="angka-denom-label">SETARA DENGAN</span>
@@ -937,12 +930,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .pagi-utama { display: grid; gap: 14px; }
   .pagi-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(28px, 4.4vw, 56px); line-height: 1.0; letter-spacing: var(--disp-track); color: var(--ink); margin: 8px 0 0; max-width: 18ch; }
   .pagi-dek { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); max-width: 52ch; line-height: 1.5; }
-  /* Angka Edisi — now a band inside Negara Hari Ini, with the other numbers */
-  .angka-edisi-band { display: grid; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 26px; }
-  .ae-label { font-size: 9px; letter-spacing: 0.2em; color: var(--accent); }
-  .ae-body { display: flex; align-items: baseline; gap: clamp(12px, 2vw, 22px); flex-wrap: wrap; }
-  .ae-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(34px, 5.5vw, 64px); line-height: 0.9; color: var(--accent); }
-  .ae-lab { font-size: 13.5px; color: var(--muted); max-width: 42ch; line-height: 1.45; }
   .pagi-ringkas { display: grid; gap: 12px; align-content: start; border-left: 1px solid var(--line); padding-left: clamp(16px, 2.5vw, 30px); }
   @media (max-width: 820px) { .pagi-ringkas { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
   .rp-list { list-style: none; margin: 0; padding: 0; display: grid; }

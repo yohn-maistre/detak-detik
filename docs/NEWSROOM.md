@@ -7,19 +7,31 @@
 
 ---
 
-## 0. Framework choice
+## 0. Framework choice (settled: Python + Pydantic AI + LiteLLM)
 
-Plain TypeScript first. The newsroom is a fixed nightly DAG with deterministic gates,
-not an open-ended agent: desks run in parallel, outputs flow through the fact
-resolver, lawyer, editor, layout. No human-in-the-loop suspension, no long-lived
-state, no runtime serving. That is roughly 300 lines: a thin LLM client, Zod schemas,
-`Promise.all` for the desks, ordinary functions for the gates.
+The newsroom is **Python**, in the `newsroom/` package, run as a headless batch in
+GitHub Actions. Two libraries carry it:
 
-Mastra is the legitimate upgrade path, not a starting point. It is TypeScript-native
-with a graph workflow engine, built-in evals, and tracing. Migrate the clean DAG into
-Mastra workflows if and when desks, retries, and eval suites make the orchestration
-pain real rather than anticipated. Do not adopt a framework because a model call has
-tools.
+- **Pydantic AI** for typed agents. Each desk is an `Agent(output_type=Temuan)`; the
+  deterministic fact-gate runs as an `@output_validator` that raises
+  `ModelRetry(reason)` on a bad number, so the model re-drafts with that exact reason.
+  Retry-with-feedback (loop 2) is native, not hand-rolled.
+- **LiteLLM** as the unified, OpenAI-shaped gateway across providers. The model is a
+  Pydantic AI `FallbackModel` over `OpenAIChatModel`s routed through `LiteLLMProvider`:
+  NIM (main) -> Groq -> OpenRouter -> Gemini, all free tiers, advancing on API error.
+
+Detection stays deterministic (the rules below); the model only narrates. The whole
+run is a bounded twice-daily batch of a few model calls, inside free tier.
+
+**Why not Mastra** (the prior "upgrade path"): assessed June 2026 and rejected for
+this job. Its only schema-failure modes are `strict`/`warn`/`fallback`, with no
+retry-with-feedback equivalent to `ModelRetry`, so the fact-gate loop would be
+hand-built; and its real value (server, Studio, workflows) targets a running service,
+not a short headless cron. **Why not Cloudflare for the job:** a free Worker caps CPU
+at ~10 ms/invocation, too little for a multi-call LLM batch; the Worker stays the
+*serving* layer only and the Python job POSTs the edition to it. **Why GitHub
+Actions:** full Python runtime, 6-hour ceiling, ~2,000 free private minutes/mo (we use
+~300), first-class secrets. Cron is scheduled off the hour to dodge GitHub's jitter.
 
 pi is the wrong shape here (it is an interactive TUI harness; this is unattended
 batch CI), but we already stole its best idea, JSONL event logs, for both reader

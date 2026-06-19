@@ -6,3 +6,9 @@ dist/
 .env
 .env.*
 .wrangler/
+
+# newsroom run artifacts + local venv
+newsroom/logs/
+.venv-newsroom/
+__pycache__/
+*.pyc

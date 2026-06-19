@@ -1,0 +1,92 @@
+"""
+The newsroom, run by .github/workflows/newsroom.yml twice a day (Edisi Pagi /
+Edisi Petang). A bounded batch mapped to the four loops:
+
+  loop 3 (event)        : the cron triggers this; it POSTs the edition to KV.
+  loop 1 (agent)        : the HUKUM desk surfaces a verdict, the model phrases it.
+  loop 2 (verification) : every drafted finding passes the fact-gate (cited ids
+                          exist + numbers match); a failure re-prompts the model
+                          with the reason (Pydantic AI ModelRetry).
+  loop 4 (hill-climbing): every run logs its drafts + verdicts as JSONL.
+
+Scope: backbone + the HUKUM desk. Other beats clone the desk shape next.
+Run: `python -m newsroom.main` (from the repo root).
+"""
+
+from __future__ import annotations
+
+import asyncio
+import os
+from datetime import date, datetime, timedelta, timezone
+
+from .desks.hukum import desk_hukum
+from .editor import assemble
+from .gate import fact_gate
+from .lawyer import redaktur_hukum
+from .llm import configured_providers, model_available
+from .log import Log
+from .publish import publish_edisi
+from .sources.hukum import gather_hukum
+from .sources.pulse import gather_pulse
+
+# deterministic edition number: #41 = pagi, 11 Jun 2026; two sessions a day
+_NOW_WIB = datetime.now(timezone.utc) + timedelta(hours=7)
+SESI = "pagi" if _NOW_WIB.hour < 12 else "petang"
+_EPOCH = date(2026, 6, 11)
+_HARI = (date(_NOW_WIB.year, _NOW_WIB.month, _NOW_WIB.day) - _EPOCH).days
+EDISI_NO = 41 + max(0, _HARI) * 2 + (1 if SESI == "petang" else 0)
+TERBIT = datetime.now(timezone.utc).isoformat()
+
+
+async def run() -> int:
+    aksara = os.environ.get("AKSARA_URL") or os.environ.get("PUBLIC_AKSARA_URL")
+    log = Log(EDISI_NO)
+    log.event("mulai", edisi=EDISI_NO, sesi=SESI, model=model_available(),
+              lajur=configured_providers())
+
+    pulse_rows, headlines = await gather_pulse(aksara)
+    hukum_rows, putusan = await gather_hukum()
+    corpus = pulse_rows + hukum_rows
+    corpus_map = {r.id: r for r in corpus}
+    log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines),
+              putusan=len(putusan))
+
+    lead = await desk_hukum(putusan, corpus, EDISI_NO)
+    drafts = [lead] if lead else []
+    for d in drafts:
+        log.event("draf", temuan_id=d.temuan_id, lens=d.lens, headline=d.headline)
+
+    lolos, gugur = fact_gate(drafts, corpus_map)
+    for t, alasan in gugur:
+        log.event("gugur_gate", temuan_id=t.temuan_id, alasan=alasan)
+
+    survivors = []
+    for t in lolos:
+        reviewed = await redaktur_hukum(t, corpus_map)
+        if reviewed is None:
+            log.event("gugur_redaktur", temuan_id=t.temuan_id)
+        else:
+            if reviewed.headline != t.headline:
+                log.event("ditulis_ulang", temuan_id=t.temuan_id, headline=reviewed.headline)
+            survivors.append(reviewed)
+
+    edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines)
+    if edisi is None:
+        log.event("kosong", catatan="tak ada temuan layak terbit; edisi lama dibiarkan, tidak ditimpa")
+        log.close()
+        return 0
+
+    log.event("terbit", edisi=edisi.edisi, lead=edisi.lead,
+              angka_edisi=edisi.angka_edisi.nilai, temuan=len(edisi.temuan))
+    ok = publish_edisi(edisi)
+    log.event("publish", terkirim=ok)
+    log.close()
+    return 0
+
+
+def main() -> None:
+    raise SystemExit(asyncio.run(run()))
+
+
+if __name__ == "__main__":
+    main()

@@ -284,13 +284,25 @@ function sorotRef(
 function odometer() {
   const el = document.querySelector<HTMLElement>('[data-odometer]');
   if (!el) return;
-  const target = Number(el.dataset.odometer ?? 0);
+  let target = Number(el.dataset.odometer ?? 0);
+  let settled = false;
   const render = (n: number) => { el.textContent = formatUang(n, getDenom()); };
   onDenom(() => render(target));
-  if (reducedMotion()) { render(target); return; }
+
+  // the live edition (newsroom) can replace the Angka Edisi after publish;
+  // pagi-live calls this once /edisi arrives. Re-render in place, mark langsung.
+  (window as Window & { setAngkaEdisi?: (nilai: number, label?: string) => void }).setAngkaEdisi = (nilai, label) => {
+    target = nilai;
+    el.dataset.odometer = String(nilai);
+    if (settled || reducedMotion()) render(target);
+    if (label) { const t = document.getElementById('angka-label-teks'); if (t) t.textContent = label; }
+    const src = document.getElementById('angka-label-src');
+    if (src) src.textContent = 'langsung';
+  };
+
+  if (reducedMotion()) { render(target); settled = true; return; }
   render(0);
   const proxy = { n: 0 };
-  let settled = false;
   ScrollTrigger.create({
     trigger: el, start: 'top 85%', once: true,
     onEnter() {

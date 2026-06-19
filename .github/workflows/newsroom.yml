@@ -1,33 +1,43 @@
 name: Newsroom
 
-# Two print runs a day, like newspapers ran them.
-# 04.30 WIB = 21.30 UTC (previous day) · 16.30 WIB = 09.30 UTC
+# Two print runs a day, like newspapers ran them. Scheduled a few minutes off the
+# hour and away from 00:00 UTC to dodge GitHub's cron jitter (peak-hour delays).
+# 04.32 WIB = 21.32 UTC (previous day) · 16.32 WIB = 09.32 UTC
 on:
   schedule:
-    - cron: '30 21 * * *'
-    - cron: '30 9 * * *'
+    - cron: '32 21 * * *'
+    - cron: '32 9 * * *'
   workflow_dispatch:
 
 jobs:
   edisi:
     runs-on: ubuntu-latest
-    # flip to true once NIM_API_KEY secret + artifact storage exist
+    # flip the NEWSROOM_ENABLED repo Variable to 'true' once the secrets are set
     if: ${{ vars.NEWSROOM_ENABLED == 'true' }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-python@v5
         with:
-          version: 10
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r newsroom/requirements.txt
       - name: Run the pipeline
         env:
+          # main model + free-tier fallbacks (keys in repo Secrets)
           NIM_API_KEY: ${{ secrets.NIM_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # publish target (Secret) + non-secret config (repo Variables)
+          EDISI_TOKEN: ${{ secrets.EDISI_TOKEN }}
           MODEL_PRIMARY: ${{ vars.MODEL_PRIMARY }}
           NIM_BASE_URL: ${{ vars.NIM_BASE_URL }}
           AKSARA_URL: ${{ vars.AKSARA_URL }}
-          EDISI_TOKEN: ${{ secrets.EDISI_TOKEN }}
-        run: pnpm dlx tsx newsroom/index.ts
+        run: python -m newsroom.main
+      - name: Simpan log redaksi
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsroom-log-${{ github.run_id }}
+          path: newsroom/logs/*.jsonl
+          if-no-files-found: ignore

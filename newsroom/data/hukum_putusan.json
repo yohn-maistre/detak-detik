@@ -1,0 +1,69 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja HUKUM. Disusun bergaya dokumen, netral, tanpa menyebut terdakwa. Sumber acuan: Direktori Putusan Mahkamah Agung (putusan3.mahkamahagung.go.id) dan rekap Indonesia Corruption Watch (antikorupsi.org). Ganti dengan tarikan langsung saat scraper MA/ICW aktif. Angka dan tanggal di sini adalah contoh, bukan putusan nyata.",
+  "_sumber": [
+    "https://putusan3.mahkamahagung.go.id/direktori/index/kategori/tindak-pidana-korupsi.html",
+    "https://antikorupsi.org/id/tren-penindakan-kasus-korupsi"
+  ],
+  "putusan": [
+    {
+      "id": "putusan:2026-tipikor-0412",
+      "perkara": "Perkara tindak pidana korupsi pengadaan infrastruktur jalan tingkat provinsi",
+      "kerugian_negara": 184500000000,
+      "vonis_bulan": 96,
+      "tanggal": "2026-06-03",
+      "pengadilan": "Pengadilan Tipikor Jakarta Pusat",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0412.html"
+    },
+    {
+      "id": "putusan:2026-tipikor-0418",
+      "perkara": "Perkara tindak pidana korupsi pengelolaan dana hibah daerah",
+      "kerugian_negara": 41200000000,
+      "vonis_bulan": 60,
+      "tanggal": "2026-06-05",
+      "pengadilan": "Pengadilan Tipikor Surabaya",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0418.html"
+    },
+    {
+      "id": "putusan:2026-tipikor-0423",
+      "perkara": "Perkara tindak pidana korupsi pengadaan alat kesehatan",
+      "kerugian_negara": 27800000000,
+      "vonis_bulan": 18,
+      "tanggal": "2026-06-09",
+      "pengadilan": "Pengadilan Tipikor Medan",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0423.html"
+    },
+    {
+      "id": "putusan:2026-tipikor-0431",
+      "perkara": "Perkara tindak pidana korupsi penyalahgunaan dana desa",
+      "kerugian_negara": 3650000000,
+      "vonis_bulan": 30,
+      "tanggal": "2026-06-11",
+      "pengadilan": "Pengadilan Tipikor Makassar",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0431.html"
+    },
+    {
+      "id": "putusan:2026-tipikor-0440",
+      "perkara": "Perkara tindak pidana korupsi pengadaan sistem teknologi informasi pemerintah",
+      "kerugian_negara": 72300000000,
+      "vonis_bulan": 84,
+      "tanggal": "2026-06-13",
+      "pengadilan": "Pengadilan Tipikor Bandung",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0440.html"
+    },
+    {
+      "id": "putusan:2026-tipikor-0447",
+      "perkara": "Perkara tindak pidana korupsi tata niaga komoditas pangan",
+      "kerugian_negara": 58900000000,
+      "vonis_bulan": 72,
+      "tanggal": "2026-06-16",
+      "pengadilan": "Pengadilan Tipikor Jakarta Pusat",
+      "status": "berkekuatan hukum tetap",
+      "source_url": "https://putusan3.mahkamahagung.go.id/direktori/putusan/zaeXAMPLE0447.html"
+    }
+  ]
+}

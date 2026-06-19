@@ -48,9 +48,11 @@ function applyEdisi(ed: Edisi | null) {
   const setText = (id: string, v?: string) => { const el = document.getElementById(id); if (el && v) el.textContent = v; };
   if (lead?.headline) setText('ku-judul', lead.headline);
   if (ed.dek) setText('ku-dek', ed.dek);
+  // the Angka Edisi lives once, as the Act II odometer; choreo exposes a hook so
+  // the live number re-rolls in place (and re-prices through the denom buttons).
   if (ed.angka_edisi?.nilai != null) {
-    setText('ku-angka-n', `${ed.angka_edisi.prefix ?? 'Rp'} ${ed.angka_edisi.nilai.toLocaleString('id-ID')}`);
-    if (ed.angka_edisi.label) setText('ku-angka-lab', ed.angka_edisi.label);
+    const setAngka = (window as Window & { setAngkaEdisi?: (n: number, label?: string) => void }).setAngkaEdisi;
+    if (setAngka) setAngka(ed.angka_edisi.nilai, ed.angka_edisi.label);
   }
   const ag = document.getElementById('ag-list');
   if (ag && ed.agenda?.length) {

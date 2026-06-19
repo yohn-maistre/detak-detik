@@ -208,15 +208,26 @@ Danantara DHE / under-invoicing. Re-run the two queued research agents (econ dat
 6–8. Expand the house chart kit (`chart-kit.ts`) to many shapes (slope, dumbbell,
 beeswarm, waffle, range-band, choropleth, candlestick, small-multiples…).
 
-### E. Daily automation — DECISION: full multi-agent newsroom now
-Build the full newsroom in `newsroom/`, run twice daily via GitHub Actions: per-
-beat desks (markets, harga, hukum, lingkungan, pengadaan, daerah, dunia) each
-fetch + verify + draft; a **fact gate**; a **lawyer pass** (documents-speak); an
-**editor**; a **layout/manifest** step writing `public/data/edisi.json`. Model
-calls go through the Worker/NIM. Migrate components from `edisi.ts` constants to
-reading `edisi.json` (data + auto-written summaries), so each refresh restates
-the summaries and extends the counting series. Scaffold the orchestrator + one
-desk end to end first, then fan out. See `docs/NEWSROOM.md`.
+### E. Daily automation — multi-agent newsroom (STACK SETTLED; backbone + HUKUM shipped)
+The newsroom is **Python** in `newsroom/`, run twice daily by GitHub Actions
+(`.github/workflows/newsroom.yml`), publishing by `POST /edisi` to the worker (KV
+runtime, no rebuild; the site reads it via `src/lib/edition.ts`). Stack:
+**Pydantic AI** (typed desks; the deterministic fact-gate is an `@output_validator`
+raising `ModelRetry` = retry-with-feedback) + **LiteLLM** (`FallbackModel`: NIM main
+-> Groq -> OpenRouter -> Gemini, all free tiers). Host = Actions, not Cloudflare (a
+free Worker's ~10 ms CPU cap can't run an LLM batch). Mastra was assessed and rejected
+(no native retry-with-feedback). Keys live in **repo Secrets**; non-secret config in
+**repo Variables**; the `NEWSROOM_ENABLED` Variable gates the run. See `docs/NEWSROOM.md`.
+
+Shipped this round: the **backbone** (orchestrator, LLM lane + fallback, fact-gate,
+Redaktur Hukum lawyer pass, editor, publish, JSONL log) + the first real beat, the
+**HUKUM desk** (corruption-verdict corpus from MA Direktori Putusan + ICW; seed
+dataset now, live-fetch seam left). The HUKUM desk produces the **Angka Edisi**, which
+was de-duplicated on the front: the Act I band is removed, the Act II odometer
+(`#angka-odometer`) is the sole, live-fed number (choreo exposes `window.setAngkaEdisi`,
+called by `pagi-live.ts`). Next: clone the desk shape for the other beats
+(anggaran, hutan, janji, harga, daerah, dunia, papua), then the layout/puzzle/opinion
+desks.
 
 ### F. Aksara chart renderer, then RAG (last)
 Wire `render_chart` / `show_table` into the playground (the panel under the map);
