@@ -243,6 +243,7 @@ returning `{jawaban, cited_ids}` + page commands, wired to live data + NIM.
 | `COMMAND_CATALOG.md` | The command bus: every verb, Zod schemas, tour format. |
 | `DATA_CONTRACTS.md` | The rows: region table, schemas, the graph ontology, the lens socket, edisi.json shape. |
 | `NEWSROOM.md`, `AMD-NEWSROOM.md` | The nightly multi-agent pipeline: desks, fact gate, lawyer, editor, schedule. |
+| `MAP_STAGE.md` | The map main-stage: verified free data layers (browser-direct vs worker-proxied), the BPS code-bridge, the phased plan. |
 | `DATA_SOURCES.md` | Verified public sources, per beat + the kabupaten-feasibility findings. |
 | `EDITORIAL_GUIDELINES.md`, `AMD-EDITORIAL.md` | Voice, headline rules, the never-publish list. |
 | `CLOUDFLARE.md`, `STACK_2026.md`, `PRD-00_CHASSIS.md` | Infrastructure: Worker, free-tier limits, deploy, secrets. |
