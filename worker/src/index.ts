@@ -460,6 +460,7 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
             if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
             seen.add(hex);
             planes.push(feat(lo, la, {
+              hex,
               track: Number(a.track ?? a.true_heading ?? 0) || 0,
               flight: String(a.flight ?? '').trim(),
               alt: Number(a.alt_baro ?? 0) || 0,

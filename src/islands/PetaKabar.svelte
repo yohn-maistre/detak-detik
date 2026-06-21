@@ -83,50 +83,24 @@
       { lon: 98.7, lat: 3.6, track: 180, flight: 'SJ 014' },
     ],
     kapal: [
-      { lon: 104.0, lat: -5.9, nama: 'kapal contoh', kecepatan: 12 },
-      { lon: 117.0, lat: -4.0, nama: 'kapal contoh', kecepatan: 9 },
-      { lon: 112.7, lat: -6.1, nama: 'kapal contoh', kecepatan: 14 },
+      { lon: 104.0, lat: -5.9, nama: 'kapal contoh', kecepatan: 12, track: 40 },
+      { lon: 117.0, lat: -4.0, nama: 'kapal contoh', kecepatan: 9, track: 200 },
+      { lon: 112.7, lat: -6.1, nama: 'kapal contoh', kecepatan: 14, track: 310 },
     ],
   };
 
-  const LAYERS: { id: string; nama: string; sym: string; sumber: string; paint: Record<string, unknown> }[] = [
-    {
-      id: 'gunungapi', nama: 'GUNUNG API', sym: '▲', sumber: 'magma/pvmbg',
-      paint: {
-        'circle-radius': ['interpolate', ['linear'], ['get', 'level'], 1, 4, 4, 12],
-        'circle-color': ['step', ['get', 'level'], '#5a8f6a', 2, '#cdb47a', 3, '#e08a1e', 4, '#e44a06'],
-      },
-    },
-    {
-      id: 'udara', nama: 'UDARA · PM2.5', sym: '◍', sumber: 'waqi',
-      paint: {
-        'circle-radius': 6,
-        'circle-color': ['step', ['get', 'aqi'], '#5a8f6a', 51, '#cdb47a', 101, '#e08a1e', 151, '#e44a06', 201, '#8a1b6a'],
-      },
-    },
-    {
-      id: 'banjir', nama: 'BANJIR · LAPORAN', sym: '✚', sumber: 'petabencana',
-      paint: {
-        'circle-radius': ['interpolate', ['linear'], ['get', 'state'], 1, 4, 3, 11],
-        'circle-color': ['step', ['get', 'state'], '#7fa8c9', 2, '#3f6fa0', 3, '#1d3f66'],
-      },
-    },
-    {
-      id: 'kebakaran', nama: 'TITIK API', sym: '▒', sumber: 'firms/viirs',
-      paint: {
-        'circle-radius': ['interpolate', ['linear'], ['get', 'frp'], 20, 3, 80, 10],
-        'circle-color': ['interpolate', ['linear'], ['get', 'frp'], 20, '#e08a1e', 80, '#e44a06'],
-        'circle-opacity': 0.72,
-      },
-    },
-    {
-      id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol',
-      paint: { 'circle-radius': 3.2, 'circle-color': '#2f6f9f', 'circle-opacity': 0.85 },
-    },
-    {
-      id: 'kapal', nama: 'KAPAL', sym: '⚓', sumber: 'aisstream',
-      paint: { 'circle-radius': 2.8, 'circle-color': '#2f8f78', 'circle-opacity': 0.8 },
-    },
+  type LayerDef = { id: string; nama: string; sym: string; sumber: string; shape: string; color: string; size: number | unknown[]; rotate?: boolean; trail?: boolean };
+  const LAYERS: LayerDef[] = [
+    { id: 'gunungapi', nama: 'GUNUNG API', sym: '▲', sumber: 'magma/pvmbg', shape: 'triangle', color: '#e08a1e',
+      size: ['interpolate', ['linear'], ['get', 'level'], 1, 0.6, 4, 1.3] },
+    { id: 'udara', nama: 'UDARA · PM2.5', sym: '◆', sumber: 'waqi', shape: 'square', color: '#8a5cc0',
+      size: ['interpolate', ['linear'], ['get', 'aqi'], 50, 0.6, 200, 1.25] },
+    { id: 'banjir', nama: 'BANJIR · LAPORAN', sym: '✚', sumber: 'petabencana', shape: 'plus', color: '#3f6fa0',
+      size: ['interpolate', ['linear'], ['get', 'state'], 1, 0.6, 3, 1.2] },
+    { id: 'kebakaran', nama: 'TITIK API', sym: '✦', sumber: 'firms/viirs', shape: 'spark', color: '#e44a06',
+      size: ['interpolate', ['linear'], ['get', 'frp'], 20, 0.55, 80, 1.25] },
+    { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
+    { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
   ];
 
   let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
@@ -356,40 +330,95 @@
     };
   });
 
+  /* Each layer gets its own canvas-drawn marker (so shapes are robust regardless
+     of map fonts): a seismic ring, a volcano triangle, an air square, a flood
+     plus, a fire spark, a plane, a ship — planes/ships rotate by heading. */
+  function iconData(shape: string, color: string): ImageData {
+    const s = 44, m = s / 2;
+    const cv = document.createElement('canvas'); cv.width = s; cv.height = s;
+    const x = cv.getContext('2d')!;
+    x.lineJoin = 'round'; x.lineCap = 'round'; x.fillStyle = color; x.strokeStyle = color;
+    const edge = () => { x.lineWidth = 2.4; x.strokeStyle = 'rgba(255,255,255,0.92)'; x.stroke(); };
+    if (shape === 'ring') {
+      x.beginPath(); x.arc(m, m, s * 0.30, 0, Math.PI * 2);
+      x.globalAlpha = 0.22; x.fill(); x.globalAlpha = 1; x.lineWidth = s * 0.10; x.stroke();
+    } else if (shape === 'triangle') {
+      const r = s * 0.34; x.beginPath(); x.moveTo(m, m - r); x.lineTo(m + r * 0.92, m + r * 0.72); x.lineTo(m - r * 0.92, m + r * 0.72); x.closePath(); x.fill(); edge();
+    } else if (shape === 'square') {
+      const r = s * 0.25; x.beginPath(); x.rect(m - r, m - r, r * 2, r * 2); x.fill(); edge();
+    } else if (shape === 'plus') {
+      const a = s * 0.10, b = s * 0.30; x.beginPath(); x.rect(m - a, m - b, a * 2, b * 2); x.rect(m - b, m - a, b * 2, a * 2); x.fill(); edge();
+    } else if (shape === 'spark') {
+      const R = s * 0.33, r = s * 0.14; x.beginPath();
+      for (let i = 0; i < 8; i++) { const ang = (Math.PI / 4) * i - Math.PI / 2, rad = i % 2 ? r : R; const px = m + Math.cos(ang) * rad, py = m + Math.sin(ang) * rad; i ? x.lineTo(px, py) : x.moveTo(px, py); }
+      x.closePath(); x.fill(); edge();
+    } else if (shape === 'plane') {
+      x.beginPath();
+      x.moveTo(m, m - s * 0.34); x.lineTo(m + s * 0.07, m - s * 0.02); x.lineTo(m + s * 0.30, m + s * 0.10);
+      x.lineTo(m + s * 0.07, m + s * 0.12); x.lineTo(m + s * 0.09, m + s * 0.30); x.lineTo(m, m + s * 0.22);
+      x.lineTo(m - s * 0.09, m + s * 0.30); x.lineTo(m - s * 0.07, m + s * 0.12); x.lineTo(m - s * 0.30, m + s * 0.10);
+      x.lineTo(m - s * 0.07, m - s * 0.02); x.closePath(); x.fill(); edge();
+    } else if (shape === 'ship') {
+      x.beginPath(); x.moveTo(m, m - s * 0.32); x.lineTo(m + s * 0.18, m + s * 0.26); x.lineTo(m, m + s * 0.14); x.lineTo(m - s * 0.18, m + s * 0.26); x.closePath(); x.fill(); edge();
+    }
+    return x.getImageData(0, 0, s, s);
+  }
+  function ensureIcons() {
+    if (!map) return;
+    const specs = [{ id: 'gempa', shape: 'ring', color: '#e44a06' }, ...LAYERS.map((l) => ({ id: l.id, shape: l.shape, color: l.color }))];
+    for (const sp of specs) if (!map.hasImage(`ic-${sp.id}`)) map.addImage(`ic-${sp.id}`, iconData(sp.shape, sp.color), { pixelRatio: 2 });
+  }
+
+  /* ghost trails: the last few positions of each moving object, as fading lines */
+  const histPesawat = new Map<string, [number, number][]>();
+  const histKapal = new Map<string, [number, number][]>();
+  function pushHist(hist: Map<string, [number, number][]>, id: string, lon: number, lat: number, cap = 6) {
+    if (!id) return;
+    const arr = hist.get(id) ?? []; arr.push([lon, lat]); if (arr.length > cap) arr.shift(); hist.set(id, arr);
+    if (hist.size > 1200) { const k = hist.keys().next().value; if (k) hist.delete(k); }
+  }
+  function trailFC(hist: Map<string, [number, number][]>) {
+    const features: unknown[] = [];
+    for (const path of hist.values()) if (path.length >= 2) features.push({ type: 'Feature', geometry: { type: 'LineString', coordinates: path }, properties: {} });
+    return { type: 'FeatureCollection', features };
+  }
+  const setSrc = (id: string, data: unknown) => (map?.getSource(id) as { setData?: (d: unknown) => void } | undefined)?.setData?.(data);
+
   function addDataLayers() {
     if (!map) return;
-    if (!map.getSource('gempa')) {
-      map.addSource('gempa', { type: 'geojson', data: gempaData });
-    }
+    ensureIcons();
+    if (!map.getSource('gempa')) map.addSource('gempa', { type: 'geojson', data: gempaData });
     if (!map.getLayer('gempa-dot')) {
       map.addLayer({
-        id: 'gempa-dot',
-        type: 'circle',
-        source: 'gempa',
-        layout: { visibility: gempaOn ? 'visible' : 'none' },
-        paint: {
-          'circle-radius': ['interpolate', ['linear'], ['get', 'mag'], 3, 4, 7, 16],
-          'circle-color': '#e44a06',
-          'circle-opacity': 0.55,
-          'circle-stroke-color': plat === 'satelit' ? '#f2efe6' : '#15130e',
-          'circle-stroke-width': 1.2,
+        id: 'gempa-dot', type: 'symbol', source: 'gempa',
+        layout: {
+          visibility: gempaOn ? 'visible' : 'none',
+          'icon-image': 'ic-gempa', 'icon-allow-overlap': true, 'icon-ignore-placement': true,
+          'icon-size': ['interpolate', ['linear'], ['get', 'mag'], 3, 0.5, 7, 1.7],
         },
+        paint: { 'icon-opacity': 0.9 },
       });
     }
     for (const L of LAYERS) {
       if (!map.getSource(L.id)) map.addSource(L.id, { type: 'geojson', data: ptsGeo(LAYER_CONTOH[L.id] ?? []) });
+      if (L.trail && !map.getSource(`${L.id}-trail`)) {
+        map.addSource(`${L.id}-trail`, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } as never });
+        map.addLayer({
+          id: `${L.id}-trail-line`, type: 'line', source: `${L.id}-trail`,
+          layout: { visibility: layerOn[L.id] ? 'visible' : 'none', 'line-cap': 'round', 'line-join': 'round' },
+          paint: { 'line-color': L.color, 'line-width': 1.1, 'line-opacity': 0.32 },
+        });
+      }
       if (!map.getLayer(`${L.id}-dot`)) {
         map.addLayer({
-          id: `${L.id}-dot`,
-          type: 'circle',
-          source: L.id,
-          layout: { visibility: layerOn[L.id] ? 'visible' : 'none' },
-          paint: {
-            'circle-opacity': 0.8,
-            'circle-stroke-color': plat === 'satelit' ? '#f2efe6' : '#15130e',
-            'circle-stroke-width': 0.8,
-            ...(L.paint as Record<string, never>),
-          },
+          id: `${L.id}-dot`, type: 'symbol', source: L.id,
+          layout: {
+            visibility: layerOn[L.id] ? 'visible' : 'none',
+            'icon-image': `ic-${L.id}`, 'icon-allow-overlap': true, 'icon-ignore-placement': true,
+            'icon-size': L.size as never,
+            ...(L.rotate ? { 'icon-rotate': ['get', 'track'], 'icon-rotation-alignment': 'map' } : {}),
+          } as never,
+          paint: { 'icon-opacity': 0.95 },
         });
       }
     }
@@ -421,7 +450,9 @@
 
   function toggleLayer(id: string, onState: boolean) {
     layerOn[id] = onState;
-    if (map?.getLayer(`${id}-dot`)) map.setLayoutProperty(`${id}-dot`, 'visibility', onState ? 'visible' : 'none');
+    const v = onState ? 'visible' : 'none';
+    if (map?.getLayer(`${id}-dot`)) map.setLayoutProperty(`${id}-dot`, 'visibility', v);
+    if (map?.getLayer(`${id}-trail-line`)) map.setLayoutProperty(`${id}-trail-line`, 'visibility', v);
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -502,7 +533,11 @@
       const pts = (data.features ?? [])
         .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
         .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
-      if (pts.length) { (map.getSource('pesawat') as { setData?: (d: unknown) => void }).setData?.(ptsGeo(pts as GeoPt[])); layerLive.pesawat = true; }
+      if (pts.length) {
+        setSrc('pesawat', ptsGeo(pts as GeoPt[])); layerLive.pesawat = true;
+        for (const p of pts) pushHist(histPesawat, String((p as Record<string, unknown>).hex ?? ''), Number(p.lon), Number(p.lat));
+        setSrc('pesawat-trail', trailFC(histPesawat));
+      }
     } catch { /* keep last positions */ }
   }
 
@@ -528,14 +563,16 @@
           if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
           const id = String(meta.MMSI ?? '');
           if (kapal.size > 1200 && !kapal.has(id)) { const k = kapal.keys().next().value; if (k) kapal.delete(k); }
-          kapal.set(id, { lon, lat, nama: String(meta.ShipName ?? '').trim(), kecepatan: Number(pr.Sog ?? 0) || 0 });
+          kapal.set(id, { lon, lat, nama: String(meta.ShipName ?? '').trim(), kecepatan: Number(pr.Sog ?? 0) || 0, track: Number(pr.Cog ?? pr.TrueHeading ?? 0) || 0 });
+          pushHist(histKapal, id, lon, lat);
         } catch { /* ignore one message */ }
       };
       ws.onclose = () => { if (aisWS === ws) aisWS = undefined; };
       ws.onerror = () => { try { ws.close(); } catch { /* noop */ } };
       aisFlush = setInterval(() => {
         if (!map?.getSource('kapal') || !kapal.size) return;
-        (map.getSource('kapal') as { setData?: (d: unknown) => void }).setData?.(ptsGeo([...kapal.values()]));
+        setSrc('kapal', ptsGeo([...kapal.values()]));
+        setSrc('kapal-trail', trailFC(histKapal));
         layerLive.kapal = true;
       }, 3000);
     } catch { /* no ships layer */ }
