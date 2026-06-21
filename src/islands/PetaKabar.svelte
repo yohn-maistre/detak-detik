@@ -435,22 +435,41 @@
   }
 
   const jamWIB = () => new Date(Date.now() + 7 * 3600_000).toISOString().slice(11, 16);
-  /* BMKG quakes, keyless; refreshed on a timer so the map keeps a live pulse */
+  /* Quakes, keyless + browser-direct, refreshed on a timer: BMKG for Indonesian
+     detail, merged with USGS (M2.5+, 24h, clipped to the archipelago) for the
+     regional picture, deduped by proximity. Each event keeps its true lat/lon. */
+  type Gempa = { mag: number; lon: number; lat: number; wilayah: string; jam: string };
   async function refreshGempa() {
+    const merged: Gempa[] = [];
     try {
       const res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', { signal: AbortSignal.timeout(6000) });
       const data = (await res.json()) as { Infogempa?: { gempa?: { Coordinates: string; Magnitude: string; Wilayah: string; Jam: string }[] } };
-      const rows = (data.Infogempa?.gempa ?? []).slice(0, 12).map((g) => {
+      for (const g of data.Infogempa?.gempa ?? []) {
         const [lat, lon] = g.Coordinates.split(',').map(Number);
-        return { mag: Number(g.Magnitude), lon: lon!, lat: lat!, wilayah: g.Wilayah, jam: g.Jam };
-      }).filter((g) => Number.isFinite(g.lon) && Number.isFinite(g.lat));
-      if (rows.length) {
-        gempaData = gempaGeojson(rows);
-        gempaLive = true;
-        infoGempa = `M${rows[0]!.mag} · ${rows[0]!.wilayah} · ${rows[0]!.jam}`;
-        (map?.getSource('gempa') as { setData?: (d: unknown) => void } | undefined)?.setData?.(gempaData);
+        if (Number.isFinite(lon) && Number.isFinite(lat)) merged.push({ mag: Number(g.Magnitude), lon: lon!, lat: lat!, wilayah: g.Wilayah, jam: g.Jam });
       }
-    } catch { /* contoh layer stands in; the chip says so */ }
+    } catch { /* USGS may still fill in */ }
+    const bmkgN = merged.length;
+    if (bmkgN) { gempaLive = true; infoGempa = `M${merged[0]!.mag} · ${merged[0]!.wilayah} · ${merged[0]!.jam}`; }
+    try {
+      const [[x0, y0], [x1, y1]] = IDN_BOUNDS;
+      const res = await fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson', { signal: AbortSignal.timeout(6000) });
+      const data = (await res.json()) as { features?: { properties?: { mag?: number; place?: string; time?: number }; geometry?: { coordinates?: number[] } }[] };
+      for (const f of data.features ?? []) {
+        const c = f.geometry?.coordinates; if (!c) continue;
+        const lon = c[0]!, lat = c[1]!;
+        if (lon < x0 || lon > x1 || lat < y0 || lat > y1) continue;
+        if (merged.some((m) => Math.abs(m.lon - lon) < 0.3 && Math.abs(m.lat - lat) < 0.3)) continue;
+        const t = f.properties?.time ? new Date(f.properties.time + 7 * 3600_000).toISOString().slice(11, 16).replace(':', '.') + ' WIB' : '';
+        merged.push({ mag: Math.round((f.properties?.mag ?? 0) * 10) / 10, lon, lat, wilayah: f.properties?.place ?? 'USGS', jam: t });
+      }
+      if (merged.length) gempaLive = true;
+      if (!bmkgN && merged.length) infoGempa = `M${merged[0]!.mag} · ${merged[0]!.wilayah}`;
+    } catch { /* BMKG result, if any, stands */ }
+    if (merged.length) {
+      gempaData = gempaGeojson(merged.slice(0, 50));
+      (map?.getSource('gempa') as { setData?: (d: unknown) => void } | undefined)?.setData?.(gempaData);
+    }
     updatedAt = jamWIB();
   }
 
