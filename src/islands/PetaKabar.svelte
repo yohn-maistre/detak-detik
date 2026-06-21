@@ -20,7 +20,6 @@
   let koordinat = $state('2.60°LS · 118.00°BT');
   let petaSiap = $state(false);
   let plat = $state<'atlas' | 'satelit' | 'cuaca'>('atlas');
-  let cuacaSiap = $state<boolean | null>(null);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -156,7 +155,7 @@
     if (!map) return;
     void provDataReady.then(() => {
       if (!map || !provData) return;
-      const sat = plat === 'satelit';
+      const sat = plat === 'satelit' || plat === 'cuaca';
       const vis = provinsiOn ? 'visible' : 'none';
       const ink = sat ? '#f2efe6' : '#15130e';
       // keep the polygons beneath the hazard dots so dots stay legible and clickable
@@ -245,7 +244,7 @@
   let pins: PinFeat[] = [];
   function ensurePins() {
     if (!map) return;
-    const sat = plat === 'satelit';
+    const sat = plat === 'satelit' || plat === 'cuaca';
     if (!map.getSource('pins')) map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: pins } as never });
     if (!map.getLayer('pins-dot')) map.addLayer({ id: 'pins-dot', type: 'circle', source: 'pins', paint: { 'circle-radius': 4, 'circle-color': '#e44a06', 'circle-stroke-color': sat ? '#15130e' : '#f2efe6', 'circle-stroke-width': 1.5 } });
     if (!map.getLayer('pins-lab')) map.addLayer({ id: 'pins-lab', type: 'symbol', source: 'pins', layout: { 'text-field': ['get', 'teks'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-anchor': 'top', 'text-letter-spacing': 0.04 }, paint: { 'text-color': sat ? '#f2efe6' : '#15130e', 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 } });
@@ -287,6 +286,27 @@
       },
     },
     layers: [{ id: 'sat', type: 'raster' as const, source: 'esri' }],
+  };
+
+  /* CUACA: NASA GIBS true-color, the previous day's global mosaic (today's may not
+     be processed yet) — vivid daily clouds, haze, and fire smoke over the
+     archipelago. The RainViewer radar (where it has coverage) overlays on top. */
+  const GIBS_DATE = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
+  const GIBS_STYLE = {
+    version: 8 as const,
+    sources: {
+      gibs: {
+        type: 'raster' as const,
+        tiles: [`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/${GIBS_DATE}/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg`],
+        tileSize: 256,
+        maxzoom: 8,
+        attribution: 'Citra: NASA EOSDIS GIBS / Worldview',
+      },
+    },
+    layers: [
+      { id: 'bg', type: 'background' as const, paint: { 'background-color': '#0a1622' } },
+      { id: 'gibs', type: 'raster' as const, source: 'gibs' },
+    ],
   };
 
   let map: import('maplibre-gl').Map | undefined;
@@ -437,7 +457,7 @@
   function applyBasemap(p: typeof plat) {
     plat = p;
     if (!map) return;
-    map.setStyle((p === 'satelit' ? SATELIT_STYLE : DINAS_STYLE) as never);
+    map.setStyle((p === 'satelit' ? SATELIT_STYLE : p === 'cuaca' ? GIBS_STYLE : DINAS_STYLE) as never);
     map.once('styledata', () => addDataLayers());
   }
 
@@ -600,8 +620,7 @@
         const res = await fetch('https://api.rainviewer.com/public/weather-maps.json', { signal: AbortSignal.timeout(6000) });
         const data = (await res.json()) as { radar?: { past?: { time: number }[] } };
         radarTs = data.radar?.past?.at(-1)?.time ?? null;
-        cuacaSiap = radarTs != null;
-      } catch { cuacaSiap = false; }
+      } catch { /* radar is an optional overlay; GIBS is the CUACA base */ }
     })();
 
     (async () => {
@@ -665,10 +684,7 @@
         marker!.setLngLat([lon, lat]).addTo(map);
         map.flyTo({ center: [lon, lat], zoom: target?.zoom ?? p.zoom ?? 8, speed: 0.9, curve: 1.6 });
       }));
-      unsubs.push(on('set_basemap', ({ plat: p }) => {
-        if (p === 'cuaca' && !radarTs) return;
-        applyBasemap(p);
-      }));
+      unsubs.push(on('set_basemap', ({ plat: p }) => applyBasemap(p)));
       unsubs.push(on('set_layer', ({ layer, on: onState }) => {
         if (layer === 'gempa') toggleGempa(onState);
         else if (layer === 'provinsi') toggleProvinsi(onState);
@@ -699,7 +715,7 @@
         if (!map?.getLayer('provinsi-fill')) return;
         if (metric === 'mati') {
           choroExpr = null; choroLegend = null;
-          map.setPaintProperty('provinsi-fill', 'fill-color', plat === 'satelit' ? '#f2efe6' : '#15130e');
+          map.setPaintProperty('provinsi-fill', 'fill-color', (plat === 'satelit' || plat === 'cuaca') ? '#f2efe6' : '#15130e');
           map.setPaintProperty('provinsi-fill', 'fill-opacity', ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04] as never);
           return;
         }
@@ -748,9 +764,7 @@
     <span class="kb-tabs-label">PLAT</span>
     <button class="kb-tab" class:aktif={plat === 'atlas'} onclick={() => pilihPlat('atlas')}>ATLAS</button>
     <button class="kb-tab" class:aktif={plat === 'satelit'} onclick={() => pilihPlat('satelit')}>SATELIT</button>
-    <button class="kb-tab" class:aktif={plat === 'cuaca'} disabled={cuacaSiap === false} onclick={() => pilihPlat('cuaca')}>
-      CUACA{cuacaSiap === false ? ' ✕' : ''}
-    </button>
+    <button class="kb-tab" class:aktif={plat === 'cuaca'} onclick={() => pilihPlat('cuaca')}>CUACA</button>
   </div>
 
   <div class="kb-plate">
@@ -828,7 +842,7 @@
   </div>
 
   {#if plat === 'cuaca'}
-    <div class="kb-info mono">▦ RADAR HUJAN 10 MENIT TERAKHIR · RAINVIEWER — BILA TIDAK ADA HUJAN, PLAT TAMPAK BERSIH</div>
+    <div class="kb-info mono">▦ CITRA SATELIT HARIAN · NASA GIBS ({GIBS_DATE}) + RADAR HUJAN RAINVIEWER BILA TERSEDIA</div>
   {/if}
   {#if infoGempa}
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
@@ -868,7 +882,8 @@
     font-size: 9.5px; letter-spacing: 0.14em;
     margin-bottom: 10px;
   }
-  .kb-tabs-label { padding: 6px 9px; background: var(--ink); color: var(--bg); border-right: 1px solid var(--line); display: flex; align-items: center; letter-spacing: 0.16em; }
+  /* a caption, not a toggle: muted + un-filled so it never reads as the active tab */
+  .kb-tabs-label { padding: 6px 9px; background: transparent; color: var(--muted); border-right: 1px solid var(--line); display: flex; align-items: center; letter-spacing: 0.16em; font-style: italic; }
   .kb-tab {
     background: none; border: none; border-right: 1px solid var(--line);
     padding: 6px 10px; font: inherit; letter-spacing: inherit; color: var(--ink); cursor: pointer;

@@ -1103,7 +1103,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .angka-label { max-width: 44ch; color: var(--muted); font-size: 15px; }
   .cite-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
   .angka-denom { display: inline-flex; flex-wrap: wrap; align-items: stretch; border: 1px solid var(--line); margin-top: 16px; font-size: 9px; letter-spacing: 0.1em; }
-  .angka-denom-label { padding: 6px 9px; background: var(--ink); color: var(--bg); display: flex; align-items: center; }
+  /* a caption, not a toggle: muted + un-filled so it never reads as a button */
+  .angka-denom-label { padding: 6px 9px; background: transparent; color: var(--muted); font-style: italic; display: flex; align-items: center; }
   .angka-denom-btn { background: none; border: none; border-left: 1px solid var(--line); padding: 6px 10px; font: inherit; letter-spacing: inherit; color: var(--ink); cursor: pointer; transition: background 0.2s, color 0.2s; }
   .angka-denom-btn.aktif { background: var(--accent); color: var(--bg); }
 
