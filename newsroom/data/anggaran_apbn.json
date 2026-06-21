@@ -1,0 +1,17 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja ANGGARAN. Agregat belanja negara tingkat nasional, dibingkai netral (dokumen yang berbicara). Ganti dengan tarikan langsung dari Nota Keuangan / portal DJPK saat tersedia. Angka di sini contoh.",
+  "_sumber": [
+    "https://www.kemenkeu.go.id/",
+    "https://djpk.kemenkeu.go.id/"
+  ],
+  "pos": [
+    {
+      "id": "anggaran:belanja-pegawai",
+      "uraian": "belanja pegawai dalam APBN tahun berjalan",
+      "belanja_pegawai": 552000000000000,
+      "total_belanja": 3600000000000000,
+      "rasio_persen": 15.3,
+      "sumber": "Nota Keuangan, Kementerian Keuangan"
+    }
+  ]
+}

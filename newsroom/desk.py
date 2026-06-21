@@ -35,6 +35,13 @@ class CorpusDeps:
     rows: dict[str, CorpusRow]
 
 
+def fmt_id(n: float) -> str:
+    """id-ID integer grouping (dots as thousands): 184500000000 -> '184.500.000.000'.
+    Every desk formats numbers through this so the fact-gate, which re-parses
+    id-ID numbers, always finds the cited value."""
+    return f"{int(round(n)):,}".replace(",", ".")
+
+
 def _draft_prompt(candidate: Temuan, corpus_map: dict[str, CorpusRow]) -> str:
     cited = [corpus_map[c].model_dump() for c in candidate.cited_ids if c in corpus_map]
     return (

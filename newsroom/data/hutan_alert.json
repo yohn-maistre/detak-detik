@@ -1,0 +1,13 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja HUTAN. Kehilangan tutupan hutan per wilayah pulau, dengan penanda tumpang tindih izin konsesi. Ganti dengan tarikan langsung dari Global Forest Watch / SIMONTANA KLHK saat scraper aktif. Angka di sini contoh.",
+  "_sumber": [
+    "https://www.globalforestwatch.org/",
+    "https://nfms.menlhk.go.id/"
+  ],
+  "alert": [
+    { "id": "hutan:kalimantan", "wilayah": "Kalimantan", "hektar": 3120, "dalam_konsesi": 1, "sumber": "Pemantauan tutupan hutan, Global Forest Watch" },
+    { "id": "hutan:sumatra", "wilayah": "Sumatra", "hektar": 1840, "dalam_konsesi": 1, "sumber": "Pemantauan tutupan hutan, Global Forest Watch" },
+    { "id": "hutan:tanah-papua", "wilayah": "Tanah Papua", "hektar": 960, "dalam_konsesi": 0, "sumber": "Pemantauan tutupan hutan, Global Forest Watch" },
+    { "id": "hutan:sulawesi", "wilayah": "Sulawesi", "hektar": 540, "dalam_konsesi": 1, "sumber": "Pemantauan tutupan hutan, Global Forest Watch" }
+  ]
+}

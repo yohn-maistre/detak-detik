@@ -3,13 +3,15 @@ The newsroom, run by .github/workflows/newsroom.yml twice a day (Edisi Pagi /
 Edisi Petang). A bounded batch mapped to the four loops:
 
   loop 3 (event)        : the cron triggers this; it POSTs the edition to KV.
-  loop 1 (agent)        : the HUKUM desk surfaces a verdict, the model phrases it.
+  loop 1 (agent)        : each desk surfaces a finding, the model phrases it.
   loop 2 (verification) : every drafted finding passes the fact-gate (cited ids
                           exist + numbers match); a failure re-prompts the model
                           with the reason (Pydantic AI ModelRetry).
   loop 4 (hill-climbing): every run logs its drafts + verdicts as JSONL.
 
-Scope: backbone + the HUKUM desk. Other beats clone the desk shape next.
+Desks fan out in parallel (hukum, harga, anggaran, hutan); the editor ranks the
+survivors, picks the lead, and sets the Angka Edisi. New beats clone the desk
+shape (a detector + a prompt + a one-line desk calling narrate()).
 Run: `python -m newsroom.main` (from the repo root).
 """
 
@@ -19,14 +21,20 @@ import asyncio
 import os
 from datetime import date, datetime, timedelta, timezone
 
+from .desks.anggaran import desk_anggaran
+from .desks.harga import desk_harga
 from .desks.hukum import desk_hukum
+from .desks.hutan import desk_hutan
 from .editor import assemble
 from .gate import fact_gate
 from .lawyer import redaktur_hukum
 from .llm import configured_providers, model_available
 from .log import Log
 from .publish import publish_edisi
+from .sources.anggaran import gather_anggaran
+from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
+from .sources.hutan import gather_hutan
 from .sources.pulse import gather_pulse
 
 # deterministic edition number: #41 = pagi, 11 Jun 2026; two sessions a day
@@ -44,15 +52,24 @@ async def run() -> int:
     log.event("mulai", edisi=EDISI_NO, sesi=SESI, model=model_available(),
               lajur=configured_providers())
 
+    # gather every desk's corpus (each beat resilient to a dark source)
     pulse_rows, headlines = await gather_pulse(aksara)
     hukum_rows, putusan = await gather_hukum()
-    corpus = pulse_rows + hukum_rows
+    harga_rows, komoditas = await gather_harga()
+    anggaran_rows, pos = await gather_anggaran()
+    hutan_rows, alert = await gather_hutan()
+    corpus = pulse_rows + hukum_rows + harga_rows + anggaran_rows + hutan_rows
     corpus_map = {r.id: r for r in corpus}
-    log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines),
-              putusan=len(putusan))
+    log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
 
-    lead = await desk_hukum(putusan, corpus, EDISI_NO)
-    drafts = [lead] if lead else []
+    # desks run in parallel; each gates against the full corpus
+    drafted = await asyncio.gather(
+        desk_hukum(putusan, corpus, EDISI_NO),
+        desk_harga(komoditas, corpus, EDISI_NO),
+        desk_anggaran(pos, corpus, EDISI_NO),
+        desk_hutan(alert, corpus, EDISI_NO),
+    )
+    drafts = [t for t in drafted if t is not None]
     for d in drafts:
         log.event("draf", temuan_id=d.temuan_id, lens=d.lens, headline=d.headline)
 

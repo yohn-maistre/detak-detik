@@ -1,0 +1,15 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja HARGA. Harga rata-rata nasional komoditas pangan strategis. Ganti dengan tarikan langsung dari Panel Harga Badan Pangan Nasional saat scraper aktif. Angka di sini contoh, bukan kutipan resmi.",
+  "_sumber": [
+    "https://panelharga.badanpangan.go.id/",
+    "https://www.badanpangan.go.id/"
+  ],
+  "komoditas": [
+    { "id": "harga:cabai-rawit-merah", "nama": "cabai rawit merah", "harga": 78500, "delta_pct": 24.6, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" },
+    { "id": "harga:bawang-merah", "nama": "bawang merah", "harga": 42600, "delta_pct": 12.3, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" },
+    { "id": "harga:telur-ayam", "nama": "telur ayam ras", "harga": 31200, "delta_pct": 5.4, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" },
+    { "id": "harga:daging-ayam", "nama": "daging ayam ras", "harga": 38900, "delta_pct": 3.2, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" },
+    { "id": "harga:beras-medium", "nama": "beras medium", "harga": 14200, "delta_pct": 1.8, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" },
+    { "id": "harga:minyak-goreng", "nama": "minyak goreng curah", "harga": 17300, "delta_pct": -2.1, "satuan": "per kilogram", "sumber": "Panel Harga Badan Pangan Nasional" }
+  ]
+}

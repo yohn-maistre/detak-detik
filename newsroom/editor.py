@@ -1,9 +1,12 @@
 """
 The editor: ranks survivors by skor, picks the lead, fills the Angka Edisi (the
 day's single most striking cited number), and assembles the Edisi the worker will
-store. The ticker is carried through verbatim (Lane A, no model). With one desk
-the lead is the hukum finding; the Angka Edisi is the month's documented total
-state loss, cited to the hukum:kerugian_bulan row.
+store. The ticker is carried through verbatim (Lane A, no model).
+
+The Angka Edisi is the corruption-loss total when the HUKUM desk runs (the Act II
+odometer + its rupiah denominators are built around a loss figure); if HUKUM is
+dark, it falls back to the largest cited number among survivors so the edition
+still publishes.
 """
 
 from __future__ import annotations
@@ -11,7 +14,7 @@ from __future__ import annotations
 from .models import AngkaEdisi, CorpusRow, Edisi, LiveTemuan, TickerItem, Temuan
 
 
-def pick_angka(corpus_rows: list[CorpusRow]) -> AngkaEdisi | None:
+def pick_angka(corpus_rows: list[CorpusRow], lead: Temuan | None) -> AngkaEdisi | None:
     rows = {r.id: r for r in corpus_rows}
     bulan = rows.get("hukum:kerugian_bulan")
     if bulan and isinstance(bulan.nilai.get("total"), (int, float)):
@@ -21,6 +24,20 @@ def pick_angka(corpus_rows: list[CorpusRow]) -> AngkaEdisi | None:
             label="Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
             cited_ids=["hukum:kerugian_bulan"],
         )
+    # fallback: the largest number the lead actually cites, with a neutral label
+    if lead is not None:
+        best = 0.0
+        for cid in lead.cited_ids:
+            for v in rows.get(cid, CorpusRow(id="", nilai={})).nilai.values():
+                if isinstance(v, (int, float)) and not isinstance(v, bool):
+                    best = max(best, float(v))
+        if best > 0:
+            return AngkaEdisi(
+                nilai=best,
+                prefix="Rp",
+                label="Angka paling menonjol dalam edisi ini.",
+                cited_ids=list(lead.cited_ids),
+            )
     return None
 
 
@@ -32,19 +49,21 @@ def assemble(
     corpus_rows: list[CorpusRow],
     ticker: list[TickerItem],
 ) -> Edisi | None:
-    angka = pick_angka(corpus_rows)
-    if not survivors or angka is None:
+    if not survivors:
         return None
-
     ranked = sorted(survivors, key=lambda t: t.skor, reverse=True)
     lead = ranked[0]
+    angka = pick_angka(corpus_rows, lead)
+    if angka is None:
+        return None
+
     return Edisi(
         edisi=edisi_no,
         terbit=terbit,
         sesi=sesi,  # type: ignore[arg-type]
         angka_edisi=angka,
         lead=lead.temuan_id,
-        dek="Bukti paling menonjol dari putusan korupsi yang berkekuatan hukum tetap, diperiksa terhadap sumbernya.",
+        dek="Temuan paling menonjol edisi ini, diperiksa terhadap sumbernya sebelum naik cetak.",
         temuan=[LiveTemuan(lens=t.lens, headline=t.headline, body=t.body) for t in ranked],
         ticker=ticker,
     )

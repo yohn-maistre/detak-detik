@@ -11,7 +11,7 @@ SYSTEM prompt, then a one-line `desk_x()` that calls `narrate(...)`.
 
 from __future__ import annotations
 
-from ..desk import narrate
+from ..desk import fmt_id, narrate
 from ..models import CorpusRow, Temuan
 
 SYSTEM = (
@@ -22,11 +22,6 @@ SYSTEM = (
     "karakter) dan body (maks 900 karakter); jangan ubah temuan_id, edisi, lens, "
     "kode, skor, signature_viz, cited_ids."
 )
-
-
-def _fmt(n: float) -> str:
-    # id-ID grouping: dots as thousands separators
-    return f"{int(round(n)):,}".replace(",", ".")
 
 
 def detect(putusan: list[dict], edisi_no: int) -> Temuan | None:
@@ -43,10 +38,10 @@ def detect(putusan: list[dict], edisi_no: int) -> Temuan | None:
         edisi=edisi_no,
         lens="hukum",
         kode="nasional",
-        headline=f"{pengadilan} memutus perkara korupsi dengan kerugian negara Rp {_fmt(kn)}",
+        headline=f"{pengadilan} memutus perkara korupsi dengan kerugian negara Rp {fmt_id(kn)}",
         body=(
             f"Dalam putusan yang telah berkekuatan hukum tetap, {pengadilan} mencatat "
-            f"kerugian negara sebesar Rp {_fmt(kn)} pada {lead.get('perkara', 'perkara korupsi')}, "
+            f"kerugian negara sebesar Rp {fmt_id(kn)} pada {lead.get('perkara', 'perkara korupsi')}, "
             f"dengan pidana penjara {vonis} bulan. Angka dirujuk dari Direktori Putusan "
             f"Mahkamah Agung; pembaca menarik kesimpulannya sendiri dari dokumen."
         ),
