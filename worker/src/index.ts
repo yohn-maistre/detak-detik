@@ -385,8 +385,9 @@ const feat = (lon: number, lat: number, props: Record<string, unknown>) => ({
 
 async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Response> {
   const cacheKey = `geo:${id}`;
+  const ttl = id === 'pesawat' ? 20 : 300;
   const cached = await env.CACHE.get(cacheKey);
-  if (cached) return new Response(cached, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+  if (cached) return new Response(cached, { headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${ttl}`, ...CORS } });
 
   let features: unknown[] = [];
   try {
@@ -439,14 +440,42 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
           .map((v) => feat(v.lon, v.lat, { level: v.level, nama: v.nama }));
         if (features.length) break;
       }
+    } else if (id === 'pesawat') {
+      // adsb.lol point+radius (max 250 NM): a grid of circles covers the
+      // populated core. Keyless; dedupe by hex. Short cache keeps it lively.
+      const circles: [number, number][] = [
+        [2, 99], [-4, 104], [-7.5, 112], [0, 114], [-2, 121], [-3, 132], [-4, 139],
+      ];
+      const seen = new Set<string>();
+      const planes: unknown[] = [];
+      for (const [lat, lon] of circles) {
+        try {
+          const r = await fetch(`https://api.adsb.lol/v2/lat/${lat}/lon/${lon}/dist/250`, { headers: { Accept: 'application/json' } });
+          if (!r.ok) continue;
+          const d = (await r.json()) as { ac?: Record<string, unknown>[] };
+          for (const a of d.ac ?? []) {
+            const hex = String(a.hex ?? '');
+            if (!hex || seen.has(hex)) continue;
+            const lo = Number(a.lon), la = Number(a.lat);
+            if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
+            seen.add(hex);
+            planes.push(feat(lo, la, {
+              track: Number(a.track ?? a.true_heading ?? 0) || 0,
+              flight: String(a.flight ?? '').trim(),
+              alt: Number(a.alt_baro ?? 0) || 0,
+            }));
+          }
+        } catch { /* skip this circle */ }
+      }
+      features = planes;
     }
   } catch {
     features = [];
   }
 
   const out = JSON.stringify({ type: 'FeatureCollection', features });
-  if (features.length) ctx.waitUntil(env.CACHE.put(cacheKey, out, { expirationTtl: 300 }));
-  return new Response(out, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+  if (features.length) ctx.waitUntil(env.CACHE.put(cacheKey, out, { expirationTtl: ttl }));
+  return new Response(out, { headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${ttl}`, ...CORS } });
 }
 
 async function sha256(s: string): Promise<string> {

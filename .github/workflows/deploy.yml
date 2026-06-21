@@ -36,6 +36,10 @@ jobs:
           # repo Variable (Settings -> Secrets and variables -> Actions -> Variables):
           # AKSARA_URL = the worker URL, e.g. https://detak-detik-worker.<subdomain>.workers.dev
           PUBLIC_AKSARA_URL: ${{ vars.AKSARA_URL }}
+          # repo Secret AISSTREAM_KEY -> exposed to the client for the ships layer
+          # (browser WebSocket; the key is necessarily visible in the bundle, so
+          # use a free best-effort AISStream key).
+          PUBLIC_AISSTREAM_KEY: ${{ secrets.AISSTREAM_KEY }}
 
       # idempotent: creates the project on first run, no-ops after
       - name: Ensure Pages project exists

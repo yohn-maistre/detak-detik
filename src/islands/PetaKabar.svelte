@@ -76,6 +76,17 @@
       { lon: 113.5, lat: -2.2, frp: 75, nama: 'Kalteng' },
       { lon: 103.0, lat: -1.6, frp: 30, nama: 'Jambi' },
     ],
+    pesawat: [
+      { lon: 106.9, lat: -6.3, track: 90, flight: 'GIA 312' },
+      { lon: 112.7, lat: -7.4, track: 250, flight: 'JT 631' },
+      { lon: 115.2, lat: -8.7, track: 70, flight: 'QZ 102' },
+      { lon: 98.7, lat: 3.6, track: 180, flight: 'SJ 014' },
+    ],
+    kapal: [
+      { lon: 104.0, lat: -5.9, nama: 'kapal contoh', kecepatan: 12 },
+      { lon: 117.0, lat: -4.0, nama: 'kapal contoh', kecepatan: 9 },
+      { lon: 112.7, lat: -6.1, nama: 'kapal contoh', kecepatan: 14 },
+    ],
   };
 
   const LAYERS: { id: string; nama: string; sym: string; sumber: string; paint: Record<string, unknown> }[] = [
@@ -108,10 +119,18 @@
         'circle-opacity': 0.72,
       },
     },
+    {
+      id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol',
+      paint: { 'circle-radius': 3.2, 'circle-color': '#2f6f9f', 'circle-opacity': 0.85 },
+    },
+    {
+      id: 'kapal', nama: 'KAPAL', sym: '⚓', sumber: 'aisstream',
+      paint: { 'circle-radius': 2.8, 'circle-color': '#2f8f78', 'circle-opacity': 0.8 },
+    },
   ];
 
-  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false });
-  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false });
+  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
+  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
 
   function ptsGeo(pts: GeoPt[]) {
     return {
@@ -422,7 +441,7 @@
       set('banjir', pts as GeoPt[]);
     } catch { /* contoh stays */ }
     if (!AKSARA_URL) return;
-    for (const id of ['gunungapi', 'udara', 'kebakaran']) {
+    for (const id of ['gunungapi', 'udara', 'kebakaran', 'pesawat']) {
       try {
         const res = await fetch(`${AKSARA_URL}/geo/${id}`, { signal: AbortSignal.timeout(6000) });
         const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
@@ -473,6 +492,60 @@
     updatedAt = jamWIB();
   }
 
+  /* Planes: adsb.lol through the worker proxy, refreshed on a short timer so they
+     move. Keeps the last positions if a refresh fails. */
+  async function refreshPesawat() {
+    if (!AKSARA_URL || !map?.getSource('pesawat')) return;
+    try {
+      const res = await fetch(`${AKSARA_URL}/geo/pesawat`, { signal: AbortSignal.timeout(8000) });
+      const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
+      const pts = (data.features ?? [])
+        .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
+        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
+      if (pts.length) { (map.getSource('pesawat') as { setData?: (d: unknown) => void }).setData?.(ptsGeo(pts as GeoPt[])); layerLive.pesawat = true; }
+    } catch { /* keep last positions */ }
+  }
+
+  /* Ships: AISStream over a browser WebSocket (key is PUBLIC_, best-effort),
+     accumulating positions into the kapal layer; connected only while toggled on. */
+  const AIS_KEY = import.meta.env.PUBLIC_AISSTREAM_KEY as string | undefined;
+  let aisWS: WebSocket | undefined;
+  let aisFlush: ReturnType<typeof setInterval> | undefined;
+  const kapal = new Map<string, GeoPt>();
+  function connectAIS() {
+    if (aisWS || !AIS_KEY) return;
+    try {
+      const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
+      aisWS = ws;
+      ws.onopen = () => ws.send(JSON.stringify({ APIKey: AIS_KEY, BoundingBoxes: [[[-11, 95], [6, 141]]], FilterMessageTypes: ['PositionReport'] }));
+      ws.onmessage = (ev) => {
+        try {
+          const m = JSON.parse(String(ev.data)) as { MetaData?: Record<string, unknown>; Message?: { PositionReport?: Record<string, unknown> } };
+          const meta = m.MetaData; const pr = m.Message?.PositionReport;
+          if (!meta || !pr) return;
+          const lat = Number(meta.latitude ?? pr.Latitude);
+          const lon = Number(meta.longitude ?? pr.Longitude);
+          if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+          const id = String(meta.MMSI ?? '');
+          if (kapal.size > 1200 && !kapal.has(id)) { const k = kapal.keys().next().value; if (k) kapal.delete(k); }
+          kapal.set(id, { lon, lat, nama: String(meta.ShipName ?? '').trim(), kecepatan: Number(pr.Sog ?? 0) || 0 });
+        } catch { /* ignore one message */ }
+      };
+      ws.onclose = () => { if (aisWS === ws) aisWS = undefined; };
+      ws.onerror = () => { try { ws.close(); } catch { /* noop */ } };
+      aisFlush = setInterval(() => {
+        if (!map?.getSource('kapal') || !kapal.size) return;
+        (map.getSource('kapal') as { setData?: (d: unknown) => void }).setData?.(ptsGeo([...kapal.values()]));
+        layerLive.kapal = true;
+      }, 3000);
+    } catch { /* no ships layer */ }
+  }
+  function disconnectAIS() {
+    if (aisFlush) { clearInterval(aisFlush); aisFlush = undefined; }
+    try { aisWS?.close(); } catch { /* noop */ }
+    aisWS = undefined;
+  }
+
   onMount(() => {
     let unsubs: (() => void)[] = [];
     let cancelled = false;
@@ -484,6 +557,7 @@
     // live feeds: BMKG quakes (refreshed on a timer) + RainViewer, best-effort
     void refreshGempa();
     const gempaIv = setInterval(() => void refreshGempa(), 120_000);
+    const pesawatIv = setInterval(() => void refreshPesawat(), 20_000);
     (async () => {
       try {
         const res = await fetch('https://api.rainviewer.com/public/weather-maps.json', { signal: AbortSignal.timeout(6000) });
@@ -561,7 +635,11 @@
       unsubs.push(on('set_layer', ({ layer, on: onState }) => {
         if (layer === 'gempa') toggleGempa(onState);
         else if (layer === 'provinsi') toggleProvinsi(onState);
-        else if (LAYERS.some((l) => l.id === layer)) toggleLayer(layer, onState);
+        else if (LAYERS.some((l) => l.id === layer)) {
+          toggleLayer(layer, onState);
+          if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
+          if (layer === 'pesawat' && onState) void refreshPesawat();
+        }
       }));
       unsubs.push(onLensa((k) => {
         lensaKode = k;
@@ -615,6 +693,8 @@
     return () => {
       cancelled = true;
       clearInterval(gempaIv);
+      clearInterval(pesawatIv);
+      disconnectAIS();
       unsubs.forEach((u) => u());
       ro.disconnect();
       map?.remove();
