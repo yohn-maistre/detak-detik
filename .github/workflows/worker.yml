@@ -76,3 +76,23 @@ jobs:
           else
             echo "EDISI_TOKEN belum diisi, lewati."
           fi
+
+      - name: Push FIRMS_MAP_KEY secret
+        env:
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+        run: |
+          if [ -n "$FIRMS_MAP_KEY" ]; then
+            echo "$FIRMS_MAP_KEY" | npx wrangler@4 secret put FIRMS_MAP_KEY --config worker/wrangler.toml
+          else
+            echo "FIRMS_MAP_KEY belum diisi, lewati."
+          fi
+
+      - name: Push WAQI_TOKEN secret
+        env:
+          WAQI_TOKEN: ${{ secrets.WAQI_TOKEN }}
+        run: |
+          if [ -n "$WAQI_TOKEN" ]; then
+            echo "$WAQI_TOKEN" | npx wrangler@4 secret put WAQI_TOKEN --config worker/wrangler.toml
+          else
+            echo "WAQI_TOKEN belum diisi, lewati."
+          fi
