@@ -20,7 +20,7 @@ from dataclasses import dataclass
 # NIM first = main; the rest are free-tier fallbacks, tried in order.
 _PROVIDERS = [
     ("nim", "NIM_API_KEY", "NIM_BASE_URL", "https://integrate.api.nvidia.com/v1",
-     "MODEL_PRIMARY", "qwen/qwen3.5-397b-a17b"),
+     "MODEL_PRIMARY", "deepseek-ai/deepseek-v4-pro"),
     ("groq", "GROQ_API_KEY", "GROQ_BASE_URL", "https://api.groq.com/openai/v1",
      "MODEL_GROQ", "llama-3.3-70b-versatile"),
     ("openrouter", "OPENROUTER_API_KEY", "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1",
