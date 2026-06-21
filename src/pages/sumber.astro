@@ -29,7 +29,19 @@ const SUMBER: Baris[] = [
   { nama: 'OECD PISA', url: 'https://www.oecd.org/pisa', dipakai: 'Garis Start Sama', metode: 'skor resmi 2003–2022; pembaruan 8 Sep 2026', status: 'CONTOH' },
   { nama: 'RSF · indeks kebebasan pers', url: 'https://rsf.org', dipakai: 'Dunia Memandang', metode: 'peringkat tahunan disalin dari tabel resmi', status: 'CONTOH' },
   { nama: 'Wikimedia Feed API', url: 'https://api.wikimedia.org', dipakai: 'Hari Ini dalam Sejarah (menyusul)', metode: 'JSON resmi onthisday + featured, di-cache worker saat cetak', status: 'SEGERA' },
-  { nama: 'NVIDIA NIM / Workers AI', url: 'https://build.nvidia.com', dipakai: 'Aksara (tanya, tur)', metode: 'model tidak pernah menghasilkan angka: prosa di atas lembar fakta, gerbang fakta menolak angka tak berdokumen', status: 'SEGERA' },
+  { nama: 'NVIDIA NIM / Workers AI', url: 'https://build.nvidia.com', dipakai: 'Aksara (tanya, tur) · Newsroom (narator)', metode: 'model tidak pernah menghasilkan angka: prosa di atas lembar fakta, gerbang fakta menolak angka tak berdokumen', status: 'SEGERA' },
+
+  // Newsroom: pipa redaksi Python (Pydantic AI + LiteLLM), dua kali sehari via GitHub Actions.
+  // Deteksi deterministik, narasi model, gerbang fakta, lalu terbit ke /edisi.
+  { nama: 'USGS · gempa 24 jam', url: 'https://earthquake.usgs.gov', dipakai: 'Newsroom · sinyal pulsa + Peta GEMPA', metode: 'GeoJSON tanpa kunci, disaring ke kotak Indonesia; jadi baris korpus yang diperiksa gerbang fakta', status: 'LANGSUNG' },
+  { nama: 'Frankfurter · USD/IDR', url: 'https://frankfurter.dev', dipakai: 'Newsroom · sinyal pulsa', metode: 'kurs harian tanpa kunci, baris korpus untuk gerbang fakta', status: 'LANGSUNG' },
+  { nama: 'Meja Data Hilang (meta)', url: 'https://github.com/yohn-maistre/detak-detik', dipakai: 'Newsroom · meja DATA HILANG', metode: 'mencatat sumber langsung yang gelap saat edisi disusun; ketiadaan dicetak, bukan disembunyikan', status: 'LANGSUNG' },
+  { nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Newsroom · meja HUKUM (Angka Edisi)', metode: 'deteksi kerugian negara terbesar pada vonis tipikor inkracht; korpus benih, seam tarik langsung', status: 'CONTOH' },
+  { nama: 'Panel Harga Bapanas', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Newsroom · meja HARGA', metode: 'komoditas pangan dengan pergerakan harga terbesar; korpus benih, seam tarik langsung', status: 'CONTOH' },
+  { nama: 'Kemenkeu · Nota Keuangan APBN', url: 'https://www.kemenkeu.go.id', dipakai: 'Newsroom · meja ANGGARAN', metode: 'belanja pegawai terhadap total belanja, agregat nasional netral; korpus benih', status: 'CONTOH' },
+  { nama: 'Global Forest Watch', url: 'https://www.globalforestwatch.org', dipakai: 'Newsroom · meja HUTAN', metode: 'kehilangan tutupan hutan terbesar yang tumpang tindih konsesi; korpus benih, seam tarik langsung', status: 'CONTOH' },
+  { nama: 'RPJMN / Kementerian PU', url: 'https://www.pu.go.id', dipakai: 'Newsroom · meja JANJI', metode: 'target program resmi terhadap realisasi (selisih terbesar); korpus benih', status: 'CONTOH' },
+  { nama: 'BPS & Kemenkeu · Tanah Papua', url: 'https://papua.bps.go.id', dipakai: 'Newsroom · meja PAPUA', metode: 'alokasi dana otsus dan tingkat kemiskinan, bersumber resmi; korpus benih', status: 'CONTOH' },
 ];
 const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', SEGERA: 'off' };
 ---

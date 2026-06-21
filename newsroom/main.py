@@ -22,9 +22,12 @@ import os
 from datetime import date, datetime, timedelta, timezone
 
 from .desks.anggaran import desk_anggaran
+from .desks.data_hilang import desk_data_hilang
 from .desks.harga import desk_harga
 from .desks.hukum import desk_hukum
 from .desks.hutan import desk_hutan
+from .desks.janji import desk_janji
+from .desks.papua import desk_papua
 from .editor import assemble
 from .gate import fact_gate
 from .lawyer import redaktur_hukum
@@ -35,6 +38,8 @@ from .sources.anggaran import gather_anggaran
 from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
 from .sources.hutan import gather_hutan
+from .sources.janji import gather_janji
+from .sources.papua import gather_papua
 from .sources.pulse import gather_pulse
 
 # deterministic edition number: #41 = pagi, 11 Jun 2026; two sessions a day
@@ -58,7 +63,10 @@ async def run() -> int:
     harga_rows, komoditas = await gather_harga()
     anggaran_rows, pos = await gather_anggaran()
     hutan_rows, alert = await gather_hutan()
-    corpus = pulse_rows + hukum_rows + harga_rows + anggaran_rows + hutan_rows
+    janji_rows, janji = await gather_janji()
+    papua_rows, papua = await gather_papua()
+    corpus = (pulse_rows + hukum_rows + harga_rows + anggaran_rows
+              + hutan_rows + janji_rows + papua_rows)
     corpus_map = {r.id: r for r in corpus}
     log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
 
@@ -68,8 +76,19 @@ async def run() -> int:
         desk_harga(komoditas, corpus, EDISI_NO),
         desk_anggaran(pos, corpus, EDISI_NO),
         desk_hutan(alert, corpus, EDISI_NO),
+        desk_janji(janji, corpus, EDISI_NO),
+        desk_papua(papua, corpus, EDISI_NO),
     )
     drafts = [t for t in drafted if t is not None]
+
+    # data hilang is meta: it watches for dark feeds and folds the rows it cites
+    # into the shared corpus so the global gate + editor stay consistent
+    dh_temuan, dh_rows = await desk_data_hilang(corpus, EDISI_NO)
+    if dh_rows:
+        corpus += dh_rows
+        corpus_map.update({r.id: r for r in dh_rows})
+    if dh_temuan is not None:
+        drafts.append(dh_temuan)
     for d in drafts:
         log.event("draf", temuan_id=d.temuan_id, lens=d.lens, headline=d.headline)
 

@@ -1,0 +1,12 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja JANJI. Target program resmi terhadap realisasi, dibingkai netral (dokumen yang berbicara, bukan tuduhan). Ganti dengan tarikan langsung dari RPJMN / laporan kementerian saat tersedia. Angka di sini contoh.",
+  "_sumber": [
+    "https://www.bappenas.go.id/",
+    "https://www.pu.go.id/"
+  ],
+  "janji": [
+    { "id": "janji:jalan-tol", "program": "pembangunan ruas jalan tol nasional", "target": 2700, "realisasi": 2040, "satuan": "kilometer", "sumber": "RPJMN / Kementerian Pekerjaan Umum" },
+    { "id": "janji:akses-air-minum", "program": "akses air minum layak", "target": 100, "realisasi": 91, "satuan": "persen rumah tangga", "sumber": "RPJMN / BPS" },
+    { "id": "janji:elektrifikasi", "program": "rasio elektrifikasi nasional", "target": 100, "realisasi": 99, "satuan": "persen", "sumber": "Kementerian ESDM" }
+  ]
+}

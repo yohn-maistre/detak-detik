@@ -1,0 +1,11 @@
+{
+  "_catatan": "Korpus benih (data contoh) untuk meja PAPUA. Indikator pembangunan Tanah Papua, dibingkai netral dan bersumber resmi. Ganti dengan tarikan langsung dari BPS / Kementerian Keuangan saat tersedia. Angka di sini contoh.",
+  "_sumber": [
+    "https://papua.bps.go.id/",
+    "https://www.kemenkeu.go.id/"
+  ],
+  "papua": [
+    { "id": "papua:otsus", "uraian": "dana otonomi khusus untuk Tanah Papua", "nilai": 8700000000000, "sumber": "Kementerian Keuangan" },
+    { "id": "papua:kemiskinan", "uraian": "tingkat kemiskinan di Tanah Papua", "nilai_persen": 26.0, "nasional_persen": 9.0, "sumber": "Badan Pusat Statistik" }
+  ]
+}
