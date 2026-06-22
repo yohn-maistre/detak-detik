@@ -154,6 +154,12 @@
       if (!sibuk) void tanya(arg);
       return;
     }
+    if (cmd === 'lapor') {
+      const [la, lo] = arg.split(/[\s,]+/).map(Number);
+      const ok2 = Number.isFinite(la) && Number.isFinite(lo) && dispatch({ cmd: 'lapor_lokasi', params: { lat: la!, lon: lo! } });
+      tulis(ok2 ? `laporan titik: ${la}, ${lo}` : 'lapor butuh koordinat: lapor <lintang> <bujur>, mis. lapor -6.2 106.8', ok2 ? 'out' : 'err');
+      return;
+    }
     let ok = false;
     if (cmd === 'fly_to') ok = dispatch({ cmd, params: { kode: arg } });
     else if (cmd === 'scroll_to') ok = dispatch({ cmd, params: { anchor: arg } });

@@ -14,6 +14,7 @@
   import { drawEngraving, ENGRAVE_DINAS } from '../lib/engrave';
   import { reducedMotion } from '../lib/motion';
   import { pulseRef } from '../lib/motion-kit';
+  import LaporanLokasi from './LaporanLokasi.svelte';
 
   let mapEl: HTMLDivElement;
   let engraveEl: HTMLCanvasElement;
@@ -25,6 +26,12 @@
   let gempaLive = $state(false);
   let infoGempa = $state('');
   let bearing = $state(0);
+  /* the click-anywhere location report: armed by a toolbar toggle (or driven by
+     Aksara's lapor_lokasi verb); the next map click drops the panel on a point */
+  let titikMode = $state(false);
+  let titik = $state<{ lon: number; lat: number } | null>(null);
+  let titikProv = $state('Wilayah Indonesia');
+  let titikBahaya = $state('');
 
   /* sample fallback, marked contoh, so the layer always demonstrates */
   const GEMPA_CONTOH = [
@@ -350,6 +357,60 @@
     };
   });
 
+  /* ── the location report: which province a point falls in (ray-casting over
+     the bundled ADM1 polygons), and what hazards sit near it (live quakes +
+     the nearest monitored volcano) — the panel's "bahaya" line ── */
+  function inRing(lon: number, lat: number, ring: number[][]): boolean {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i]![0]!, yi = ring[i]![1]!, xj = ring[j]![0]!, yj = ring[j]![1]!;
+      if ((yi > lat) !== (yj > lat) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) inside = !inside;
+    }
+    return inside;
+  }
+  function provAt(lon: number, lat: number): string {
+    if (!provData) return 'Wilayah Indonesia';
+    for (const f of provData.features) {
+      const g = f.geometry;
+      const polys = g.type === 'Polygon' ? [g.coordinates as number[][][]] : (g.coordinates as number[][][][]);
+      for (const poly of polys) if (poly[0] && inRing(lon, lat, poly[0])) return f.properties.nama;
+    }
+    return 'Perairan / lepas pantai';
+  }
+  function distKm(aLon: number, aLat: number, bLon: number, bLat: number): number {
+    const R = 6371, toR = Math.PI / 180;
+    const dLat = (bLat - aLat) * toR, dLon = (bLon - aLon) * toR;
+    const s = Math.sin(dLat / 2) ** 2 + Math.cos(aLat * toR) * Math.cos(bLat * toR) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(s));
+  }
+  /* the latest volcano set (live via the proxy if it landed, else contoh) */
+  let volPts: GeoPt[] = LAYER_CONTOH.gunungapi ?? [];
+  function ringkasBahaya(lon: number, lat: number): string {
+    const out: string[] = [];
+    const near = (gempaData.features as { geometry: { coordinates: [number, number] }; properties: { mag?: number } }[])
+      .map((f) => ({ d: distKm(lon, lat, f.geometry.coordinates[0], f.geometry.coordinates[1]), mag: f.properties.mag ?? 0 }))
+      .filter((q) => q.d <= 300)
+      .sort((a, b) => a.d - b.d);
+    if (near.length) out.push(`${near.length} gempa (24 jam) dalam 300 km; terdekat M${near[0]!.mag}, ${Math.round(near[0]!.d)} km.`);
+    let bestV: GeoPt | null = null, bd = Infinity;
+    for (const v of volPts) { const d = distKm(lon, lat, Number(v.lon), Number(v.lat)); if (d < bd) { bd = d; bestV = v; } }
+    if (bestV && bd < 400) out.push(`Gunung api terdekat: ${bestV.nama} (${Math.round(bd)} km).`);
+    return out.join(' ');
+  }
+  const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
+  function bukaTitik(lon: number, lat: number) {
+    const x = clamp(lon, 95, 141), y = clamp(lat, -11, 6);
+    titikProv = provAt(x, y);
+    titikBahaya = ringkasBahaya(x, y);
+    titik = { lon: x, lat: y };
+    if (lensaKode !== 'nasional') dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } });
+  }
+  function tutupTitik() { titik = null; titikMode = false; if (map) map.getCanvas().style.cursor = ''; }
+  function setTitikMode(onState: boolean) {
+    titikMode = onState;
+    if (map) map.getCanvas().style.cursor = onState ? 'crosshair' : '';
+  }
+
   /* Each layer gets its own canvas-drawn marker (so shapes are robust regardless
      of map fonts): a seismic ring, a volcano triangle, an air square, a flood
      plus, a fire spark, a plane, a ship — planes/ships rotate by heading. */
@@ -482,6 +543,7 @@
       if (!pts.length) return;
       (map?.getSource(id) as { setData?: (d: unknown) => void } | undefined)?.setData?.(ptsGeo(pts));
       layerLive[id] = true;
+      if (id === 'gunungapi') volPts = pts;
     };
     try {
       const res = await fetch('https://data.petabencana.id/reports?timeperiod=43200', { signal: AbortSignal.timeout(6000) });
@@ -653,8 +715,15 @@
         if (p) infoGempa = `M${p.mag} · ${p.wilayah} · ${p.jam}`;
       });
       map.on('click', 'provinsi-fill', (e) => {
+        if (titikMode) return; // armed for a point report: let the map click handle it
         const k = e.features?.[0]?.properties?.kode as string | undefined;
-        if (k) dispatch({ cmd: 'set_lensa', params: { kode: k } });
+        if (k) { titik = null; dispatch({ cmd: 'set_lensa', params: { kode: k } }); }
+      });
+      // armed location report: any click drops the panel on that exact point
+      map.on('click', (e) => {
+        if (!titikMode) return;
+        bukaTitik(e.lngLat.lng, e.lngLat.lat);
+        setTitikMode(false);
       });
       map.on('mousemove', 'provinsi-fill', (e) => {
         const k = e.features?.[0]?.properties?.kode as string | undefined;
@@ -726,6 +795,12 @@
         choroLegend = { judul: judul || meta.judul, satuan: meta.satuan, lo, hi };
         map.setPaintProperty('provinsi-fill', 'fill-color', expr as never);
         map.setPaintProperty('provinsi-fill', 'fill-opacity', 0.72);
+      }));
+      unsubs.push(on('lapor_lokasi', ({ lat, lon }) => {
+        if (!map) return;
+        setTitikMode(false);
+        bukaTitik(lon, lat);
+        map.flyTo({ center: [lon, lat], zoom: Math.max(map.getZoom(), 6), speed: 0.9, curve: 1.6 });
       }));
       unsubs.push(on('map_label', ({ kode, lat, lon, teks, sub }) => {
         if (!map) return;
@@ -802,6 +877,15 @@
 
     <div class="kb-koordinat mono">{koordinat}{#if updatedAt} · <span class="kb-live">⟳ {updatedAt} WIB</span>{/if}</div>
 
+    <button class="kb-titik mono" class:aktif={titikMode} onclick={() => setTitikMode(!titikMode)}
+            aria-pressed={titikMode} title="Laporan titik: klik satu tempat di peta">
+      ◎ {titikMode ? 'PILIH TITIK…' : 'LAPOR TITIK'}
+    </button>
+
+    {#if titik}
+      <LaporanLokasi lon={titik.lon} lat={titik.lat} provinsi={titikProv} bahaya={titikBahaya} tutup={tutupTitik} />
+    {/if}
+
     {#if dossier}
       <aside class="kb-dossier mono">
         <button class="kb-dossier-x" onclick={() => dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } })} aria-label="Tutup dasar wilayah">✕</button>
@@ -848,7 +932,7 @@
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}
 
-  <p class="kb-tip mono">Klik provinsi untuk membuka dasar wilayah di bawah, atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
+  <p class="kb-tip mono">Klik provinsi untuk dasar wilayah, atau ◎ LAPOR TITIK lalu klik satu tempat untuk cuaca, udara, dan iklim setahun. Atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
 </div>
 
 <style>
@@ -925,6 +1009,17 @@
   }
   .kb-live { color: var(--accent); }
   .kb-live::before { content: ''; }
+
+  /* arm the location report: a quiet toggle bottom-left, above the coordinate */
+  .kb-titik {
+    position: absolute; left: 12px; bottom: 42px; z-index: 5;
+    font-size: 9.5px; letter-spacing: 0.14em; color: var(--ink); cursor: pointer;
+    background: color-mix(in oklab, var(--bg) 85%, transparent);
+    border: 1px solid var(--line); padding: 5px 9px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .kb-titik:hover { border-color: var(--accent); }
+  .kb-titik.aktif { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
   /* province dossier: the readout a click surfaces on the map (drill) */
   .kb-dossier {

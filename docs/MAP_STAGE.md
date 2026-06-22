@@ -60,9 +60,17 @@ contoh fallback** because the live feeds below are not wired, not a geometry bug
 3. **Moving objects**: adsb.lol planes (worker-proxied, grid of ≤250NM circles, ~1s,
    dedupe by `hex`, animate) + AISStream ships (direct browser WebSocket, Indonesia bbox).
    The "wow" trio = planes + ships + live volcanoes.
-4. **Click-anywhere location report** (the settl. vision): click any point → panel with
-   Open-Meteo climate normals + a wind rose + the month×hour thermal matrix, OSM Overpass
-   nearest services (hospital/school/market), WAQI air + hazard-risk synthesis; Aksara narrates.
+4. **Click-anywhere location report** (the settl. vision): **DONE.** `LaporanLokasi.svelte`,
+   armed by the bottom-left "◎ LAPOR TITIK" toggle (or Aksara's `lapor_lokasi` verb / `lapor
+   <lintang> <bujur>`); the next map click drops a panel for that exact point. It carries:
+   the province (ray-cast point-in-polygon over the bundled ADM1 set, "perairan" off-shore);
+   the weather now + a wind rose (Open-Meteo forecast, current + a week of hourly wind, browser-
+   direct, CC-BY); the air index now (Open-Meteo air-quality); a **month×hour thermal matrix**
+   (a year of hourly temperature from the archive API, folded to 12×24 means — the PetaPiksel
+   grammar on one coordinate); and a "bahaya" line synthesising nearby live quakes + the nearest
+   monitored volcano (haversine over the loaded layers). Aksara narrates the place via `say`.
+   Every leg degrades to a labelled `(data contoh)` so the panel never breaks. STILL OPEN:
+   OSM Overpass nearest services (hospital/school/market) — deferred (extra host, rate limits).
 
 ## Architecture
 One Cloudflare Worker `/geo/{layer}` fronts the proxy-required sources (MAGMA, FIRMS, BMKG,

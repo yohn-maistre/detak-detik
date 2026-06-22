@@ -46,6 +46,10 @@ export const commandSchemas = {
     metric: z.enum(['miskin', 'ipm', 'dokter', 'ump', 'pegawai', 'tpt', 'mati']),
     judul: z.string().max(40).optional(),
   }),
+  lapor_lokasi: z.object({
+    lat: z.number().min(-11).max(6),
+    lon: z.number().min(95).max(141),
+  }),
   highlight: z.object({
     ids: z.array(z.string()).max(40),
   }),
