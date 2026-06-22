@@ -201,9 +201,19 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <Gelombang client:visible />
         </section>
 
+        <!-- the republic, mapped: live layers + one province at a time — the bridge into the machine -->
+        <section class="peta-blok" id="peta-blok" aria-label="Peta Kabar">
+          <div class="kabar-head">
+            <span class="inkbar"><span class="dot">●</span>§5 · PETA KABAR</span>
+            <span class="eyebrow">LAPISAN DATA LANGSUNG · KLIK SEBUAH PROVINSI ATAU TITIK, ATAU MINTA AKSARA MENELUSURINYA</span>
+          </div>
+          <PetaKabar client:visible />
+          <LensaWilayah client:visible />
+        </section>
+
         <section class="sensus-blok" id="sensus" aria-label="Sensus diri">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>§5 · SENSUS DIRI</span>
+            <span class="inkbar"><span class="dot">●</span>§6 · SENSUS DIRI</span>
             <span class="eyebrow">MASUKKAN SATU ANGKA, LIHAT DIRIMU DI ANTARA YANG LAIN · TETAP DI PERANGKATMU</span>
           </div>
           <SensusDiri client:visible />
@@ -699,11 +709,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
-        <!-- the republic, mapped: the live layers and one province at a time -->
-        <div class="nus-sec"><span class="nus-sec-no mono">§</span><h3 class="nus-sec-judul display">Peta Kabar</h3><p class="nus-sec-dek fig">Lapisan data langsung. Klik sebuah provinsi, atau minta Aksara menelusurinya.</p></div>
-        <PetaKabar client:visible />
-        <LensaWilayah client:visible />
-
         <!-- MANUSIA: the day's people + their tongues -->
         <div class="nus-sec"><span class="nus-sec-no mono">I</span><h3 class="nus-sec-judul display">Manusia</h3><p class="nus-sec-dek fig">Satu dari ratusan suku kepulauan, berganti dua kali sehari, dan cara mereka berbicara.</p></div>
         <WajahNusantara client:visible />
@@ -968,6 +973,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .dunia-nilai.buruk { color: var(--accent); }
   .dunia-label { font-size: 13px; color: var(--muted); flex: 1; }
   .dunia-tile .chip { align-self: flex-start; }
+
+  /* §5 Peta Kabar — the Act I → Act II bridge (live national layers + dossier) */
+  .peta-blok { margin-top: 34px; }
 
   /* §6 Sensus Diri in Act I */
   .sensus-blok { margin-top: 40px; }

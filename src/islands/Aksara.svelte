@@ -289,8 +289,10 @@
     background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--t-ink) 5%, transparent) 0 1px, transparent 1px 4px);
     box-shadow: 0 22px 50px -28px rgba(0, 0, 0, 0.7);
   }
+  /* over the dark machine act the terminal matches the pill exactly: the
+     mesin --ink (#f2efe6), so both read as the same clean white panel. */
   .term.light {
-    --t-bg: #ece2cb; --t-ink: #211b13; --t-muted: #756956; --t-accent: #ad5038; --t-accent2: #8a6a2e; --t-line: rgba(33, 27, 19, 0.16);
+    --t-bg: #f2efe6; --t-ink: #211b13; --t-muted: #756956; --t-accent: #ad5038; --t-accent2: #8a6a2e; --t-line: rgba(33, 27, 19, 0.16);
   }
   .term-log p { color: var(--t-ink); }
   .term-head {
