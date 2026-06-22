@@ -20,7 +20,8 @@
   let engraveEl: HTMLCanvasElement;
   let koordinat = $state('2.60°LS · 118.00°BT');
   let petaSiap = $state(false);
-  let plat = $state<'atlas' | 'satelit' | 'cuaca'>('atlas');
+  let plat = $state<'atlas' | 'satelit' | 'cuaca' | 'malam'>('atlas');
+  let jalanOn = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -32,6 +33,39 @@
   let titik = $state<{ lon: number; lat: number } | null>(null);
   let titikProv = $state('Wilayah Indonesia');
   let titikBahaya = $state('');
+
+  /* one small info card at a time: click any marker (quake, volcano, air, flood,
+     fire, plane, ship) and a compact readout anchors at that point. Re-projected on
+     every map move; a click on bare map (or ✕) closes it. */
+  let fitur = $state<{ kind: string; lon: number; lat: number; props: GeoPt; x: number; y: number } | null>(null);
+  const ruteCache = new Map<string, string>();
+  function projFitur() {
+    if (!fitur || !map) return;
+    const p = map.project([fitur.lon, fitur.lat]);
+    fitur.x = p.x; fitur.y = p.y;
+  }
+  function bukaFitur(kind: string, lon: number, lat: number, props: GeoPt) {
+    if (!map) return;
+    const p = map.project([lon, lat]);
+    fitur = { kind, lon, lat, props, x: p.x, y: p.y };
+    if (kind === 'pesawat') void enrichRute(String(props.flight ?? '').trim());
+  }
+  /* planes: adsbdb.com is keyless and maps a callsign to its route (origin → dest
+     airports). Best-effort; the popup shows the raw callsign until/unless it lands. */
+  async function enrichRute(flight: string) {
+    if (!flight) return;
+    if (ruteCache.has(flight)) { if (fitur) fitur.props = { ...fitur.props, rute: ruteCache.get(flight)! }; return; }
+    try {
+      const res = await fetch(`https://api.adsbdb.com/v1/callsign/${encodeURIComponent(flight)}`, { signal: AbortSignal.timeout(6000) });
+      const d = (await res.json()) as { response?: { flightroute?: { origin?: { iata_code?: string; municipality?: string }; destination?: { iata_code?: string; municipality?: string } } } };
+      const fr = d.response?.flightroute;
+      if (fr?.origin && fr?.destination) {
+        const rute = `${fr.origin.iata_code ?? '?'} ${fr.origin.municipality ?? ''} → ${fr.destination.iata_code ?? '?'} ${fr.destination.municipality ?? ''}`.replace(/\s+/g, ' ').trim();
+        ruteCache.set(flight, rute);
+        if (fitur && String(fitur.props.flight ?? '').trim() === flight) fitur.props = { ...fitur.props, rute };
+      }
+    } catch { /* callsign route is a bonus, never required */ }
+  }
 
   /* sample fallback, marked contoh, so the layer always demonstrates */
   const GEMPA_CONTOH = [
@@ -111,6 +145,19 @@
 
   let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
   let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
+  /* a layer fetched live but came back empty (no active fires/floods today) — shown
+     honestly as NIHIL, never silently backfilled with contoh */
+  let layerKosong = $state<Record<string, boolean>>({});
+
+  /* the volcano board is a real registry (PVMBG-monitored volcanoes, true summits),
+     bundled so all ~120 always render; MAGMA only supplies today's alert LEVELS,
+     merged by name when the proxy has them. gunungLive = the levels are live. */
+  let gunungLive = $state(false);
+  let gunungBase: GeoPt[] = [];
+  const gunungReady = fetch(`${import.meta.env.BASE_URL}data/gunungapi-id.json`)
+    .then((r) => r.json())
+    .then((d: GeoPt[]) => { if (Array.isArray(d) && d.length) gunungBase = d; })
+    .catch(() => null);
 
   function ptsGeo(pts: GeoPt[]) {
     return {
@@ -162,7 +209,7 @@
     if (!map) return;
     void provDataReady.then(() => {
       if (!map || !provData) return;
-      const sat = plat === 'satelit' || plat === 'cuaca';
+      const sat = plat === 'satelit' || plat === 'cuaca' || plat === 'malam';
       const vis = provinsiOn ? 'visible' : 'none';
       const ink = sat ? '#f2efe6' : '#15130e';
       // keep the polygons beneath the hazard dots so dots stay legible and clickable
@@ -251,7 +298,7 @@
   let pins: PinFeat[] = [];
   function ensurePins() {
     if (!map) return;
-    const sat = plat === 'satelit' || plat === 'cuaca';
+    const sat = plat === 'satelit' || plat === 'cuaca' || plat === 'malam';
     if (!map.getSource('pins')) map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: pins } as never });
     if (!map.getLayer('pins-dot')) map.addLayer({ id: 'pins-dot', type: 'circle', source: 'pins', paint: { 'circle-radius': 4, 'circle-color': '#e44a06', 'circle-stroke-color': sat ? '#15130e' : '#f2efe6', 'circle-stroke-width': 1.5 } });
     if (!map.getLayer('pins-lab')) map.addLayer({ id: 'pins-lab', type: 'symbol', source: 'pins', layout: { 'text-field': ['get', 'teks'], 'text-font': ['Noto Sans Regular'], 'text-size': 11, 'text-offset': [0, 1.1], 'text-anchor': 'top', 'text-letter-spacing': 0.04 }, paint: { 'text-color': sat ? '#f2efe6' : '#15130e', 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 } });
@@ -316,6 +363,26 @@
     ],
   };
 
+  /* MALAM: VIIRS night lights (NASA GIBS Black Marble) — the republic's settlements
+     drawn by their own lamps. Lit blooms are the cities; the dark is the forest, the
+     sea, and the unelectrified. A still composite, so no date needed; capped z8. */
+  const MALAM_STYLE = {
+    version: 8 as const,
+    sources: {
+      lights: {
+        type: 'raster' as const,
+        tiles: ['https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/2016-01-01/GoogleMapsCompatible_Level8/{z}/{y}/{x}.png'],
+        tileSize: 256,
+        maxzoom: 8,
+        attribution: 'Citra: NASA Earth Observatory · VIIRS Black Marble',
+      },
+    },
+    layers: [
+      { id: 'bg', type: 'background' as const, paint: { 'background-color': '#05060a' } },
+      { id: 'lights', type: 'raster' as const, source: 'lights' },
+    ],
+  };
+
   let map: import('maplibre-gl').Map | undefined;
   let marker: import('maplibre-gl').Marker | undefined;
   let radarTs: number | null = null;
@@ -356,6 +423,38 @@
       miskin: d.miskin, dokter: d.dokter, gempa: gempaDalam(d.kode),
     };
   });
+
+  /* the single info card's contents, derived from the clicked feature's props */
+  const VOL_LEVEL = ['', 'Normal · Level I', 'Waspada · Level II', 'Siaga · Level III', 'Awas · Level IV'];
+  function aqiBand(a: number): string {
+    if (a <= 50) return 'Baik';
+    if (a <= 100) return 'Sedang';
+    if (a <= 150) return 'Tidak sehat (kelompok sensitif)';
+    if (a <= 200) return 'Tidak sehat';
+    if (a <= 300) return 'Sangat tidak sehat';
+    return 'Berbahaya';
+  }
+  const N = (v: unknown) => Number(v);
+  const fiturView = $derived.by((): { judul: string; src: string; baris: [string, string][]; catatan: string } | null => {
+    const f = fitur; if (!f) return null;
+    const p = f.props;
+    if (f.kind === 'gempa') return { judul: `Gempa · M${p.mag}`, src: gempaLive ? 'BMKG / USGS · langsung' : 'data contoh', baris: [['Wilayah', String(p.wilayah ?? '-')], ['Waktu', String(p.jam ?? '-')]], catatan: '' };
+    if (f.kind === 'gunungapi') { const lv = N(p.level) || 1; return { judul: String(p.nama ?? 'Gunung api'), src: gunungLive ? 'PVMBG / MAGMA · langsung' : 'registri PVMBG · status menyusul', baris: [['Status', VOL_LEVEL[lv] ?? `Level ${lv}`]], catatan: lv >= 3 ? 'Status tinggi — ikuti arahan & radius bahaya PVMBG.' : '' }; }
+    if (f.kind === 'udara') { const a = N(p.aqi); return { judul: `Udara · AQI ${a}`, src: 'WAQI · langsung', baris: [['Stasiun', String(p.nama ?? '-')], ['Kategori', aqiBand(a)]], catatan: a > 150 ? 'Kurangi aktivitas luar ruangan.' : '' }; }
+    if (f.kind === 'banjir') { const s = N(p.state); return { judul: 'Laporan banjir', src: 'PetaBencana · langsung', baris: [['Lokasi', String(p.nama ?? '-')], ['Siaga', s >= 3 ? 'tinggi' : s >= 2 ? 'sedang' : 'rendah']], catatan: '' }; }
+    if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
+    if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'adsb.lol · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
+    if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
+    return null;
+  });
+
+  /* the legend's honest status word per layer */
+  function srcLabel(id: string, sumber: string): string {
+    const src = sumber.split('/')[0].toUpperCase();
+    if (id === 'gunungapi') return gunungLive ? `${src} · LANGSUNG` : `${src} · DAFTAR`;
+    if (layerLive[id]) return layerKosong[id] ? `${src} · NIHIL` : `${src} · LANGSUNG`;
+    return 'CONTOH';
+  }
 
   /* ── the location report: which province a point falls in (ray-casting over
      the bundled ADM1 polygons), and what hazards sit near it (live quakes +
@@ -504,6 +603,7 @@
       }
     }
     addProvinsi();
+    addJalan();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
       map.addSource('radar', {
         type: 'raster',
@@ -518,7 +618,8 @@
   function applyBasemap(p: typeof plat) {
     plat = p;
     if (!map) return;
-    map.setStyle((p === 'satelit' ? SATELIT_STYLE : p === 'cuaca' ? GIBS_STYLE : DINAS_STYLE) as never);
+    const style = p === 'satelit' ? SATELIT_STYLE : p === 'cuaca' ? GIBS_STYLE : p === 'malam' ? MALAM_STYLE : DINAS_STYLE;
+    map.setStyle(style as never);
     map.once('styledata', () => addDataLayers());
   }
 
@@ -536,34 +637,85 @@
     if (map?.getLayer(`${id}-trail-line`)) map.setLayoutProperty(`${id}-trail-line`, 'visibility', v);
   }
 
+  /* streets on demand: OpenFreeMap's road vectors (OpenMapTiles schema), overlaid on
+     ANY plate — so you can zoom into a satellite or night-lights tile and still read
+     the street names. Off by default; only paints from z9 (labels z12) to stay clean. */
+  function addJalan() {
+    if (!map) return;
+    const dark = plat === 'satelit' || plat === 'cuaca' || plat === 'malam';
+    const ink = dark ? '#f2efe6' : '#15130e';
+    const vis = jalanOn ? 'visible' : 'none';
+    if (!map.getSource('ofm')) map.addSource('ofm', { type: 'vector', url: 'https://tiles.openfreemap.org/planet' });
+    if (!map.getLayer('jalan')) {
+      map.addLayer({
+        id: 'jalan', type: 'line', source: 'ofm', 'source-layer': 'transportation', minzoom: 9,
+        layout: { visibility: vis, 'line-join': 'round', 'line-cap': 'round' },
+        paint: { 'line-color': ink, 'line-opacity': dark ? 0.55 : 0.45, 'line-width': ['interpolate', ['linear'], ['zoom'], 9, 0.3, 16, 2.4] },
+      } as never);
+    }
+    if (!map.getLayer('jalan-label')) {
+      map.addLayer({
+        id: 'jalan-label', type: 'symbol', source: 'ofm', 'source-layer': 'transportation_name', minzoom: 12,
+        layout: { visibility: vis, 'symbol-placement': 'line', 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 10, 'text-letter-spacing': 0.04 },
+        paint: { 'text-color': ink, 'text-halo-color': dark ? '#05060a' : '#d6cbac', 'text-halo-width': 1.2 },
+      } as never);
+    }
+  }
+  function toggleJalan(onState: boolean) {
+    jalanOn = onState;
+    const v = onState ? 'visible' : 'none';
+    for (const id of ['jalan', 'jalan-label']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+  }
+
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
      Worker /geo proxy when PUBLIC_AKSARA_URL is set. Any failure keeps contoh. */
   async function muatLapisan() {
-    const set = (id: string, pts: GeoPt[]) => {
-      if (!pts.length) return;
-      (map?.getSource(id) as { setData?: (d: unknown) => void } | undefined)?.setData?.(ptsGeo(pts));
+    // a feed that answers (even with zero points) is LIVE; only a thrown fetch keeps contoh
+    const setLayer = (id: string, pts: GeoPt[]) => {
+      setSrc(id, ptsGeo(pts));
       layerLive[id] = true;
-      if (id === 'gunungapi') volPts = pts;
+      layerKosong[id] = pts.length === 0;
     };
+    // volcanoes: start from the bundled registry so the full board always shows
+    await gunungReady;
+    let vol = (gunungBase.length ? gunungBase : (LAYER_CONTOH.gunungapi ?? [])).map((v) => ({ ...v }));
+
     try {
       const res = await fetch('https://data.petabencana.id/reports?timeperiod=43200', { signal: AbortSignal.timeout(6000) });
       const data = (await res.json()) as { result?: { features?: { geometry?: { coordinates?: number[] }; properties?: Record<string, unknown> }[] } };
       const pts = (data.result?.features ?? [])
         .map((f) => ({ lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN, state: Number(f.properties?.state ?? 1), nama: String(f.properties?.title ?? 'laporan') }))
         .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
-      set('banjir', pts as GeoPt[]);
+      setLayer('banjir', pts as GeoPt[]);
     } catch { /* contoh stays */ }
-    if (!AKSARA_URL) return;
-    for (const id of ['gunungapi', 'udara', 'kebakaran', 'pesawat']) {
-      try {
-        const res = await fetch(`${AKSARA_URL}/geo/${id}`, { signal: AbortSignal.timeout(6000) });
-        const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
-        const pts = (data.features ?? [])
-          .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
-          .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
-        set(id, pts as GeoPt[]);
-      } catch { /* contoh stays */ }
+
+    if (AKSARA_URL) {
+      for (const id of ['gunungapi', 'udara', 'kebakaran', 'pesawat']) {
+        try {
+          const res = await fetch(`${AKSARA_URL}/geo/${id}`, { signal: AbortSignal.timeout(6000) });
+          const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
+          const pts = (data.features ?? [])
+            .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
+            .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
+          if (id === 'gunungapi') {
+            // merge today's PVMBG alert levels onto the registry, by name
+            if (pts.length) {
+              const byName = new Map(pts.map((p) => [String(p.nama).toLowerCase(), p]));
+              vol = vol.map((v) => { const m = byName.get(String(v.nama).toLowerCase()); return m ? { ...v, level: m.level ?? v.level } : v; });
+              for (const p of pts) if (!vol.some((v) => String(v.nama).toLowerCase() === String(p.nama).toLowerCase())) vol.push(p as GeoPt);
+              gunungLive = true;
+            }
+          } else {
+            setLayer(id, pts as GeoPt[]);
+          }
+        } catch { /* contoh stays */ }
+      }
     }
+
+    // commit the volcano board (real coordinates regardless of whether levels are live)
+    setSrc('gunungapi', ptsGeo(vol));
+    volPts = vol;
+    layerLive.gunungapi = true;
   }
 
   const jamWIB = () => new Date(Date.now() + 7 * 3600_000).toISOString().slice(11, 16);
@@ -629,23 +781,49 @@
   let aisWS: WebSocket | undefined;
   let aisFlush: ReturnType<typeof setInterval> | undefined;
   const kapal = new Map<string, GeoPt>();
+  /* a vessel's destination + type arrive in slower ShipStaticData messages, keyed by
+     MMSI; we cache and merge them onto the live position so the popup can read them */
+  const kapalStatic = new Map<string, { tujuan?: string; jenis?: string }>();
+  function jenisKapal(t: number): string {
+    if (t >= 80 && t <= 89) return 'tanker';
+    if (t >= 70 && t <= 79) return 'kargo';
+    if (t >= 60 && t <= 69) return 'penumpang';
+    if (t >= 50 && t <= 59) return 'tunda/khusus';
+    if (t >= 40 && t <= 49) return 'kapal cepat';
+    if (t >= 30 && t <= 39) return 'nelayan/khusus';
+    return '';
+  }
   function connectAIS() {
     if (aisWS || !AIS_KEY) return;
     try {
       const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
       aisWS = ws;
-      ws.onopen = () => ws.send(JSON.stringify({ APIKey: AIS_KEY, BoundingBoxes: [[[-11, 95], [6, 141]]], FilterMessageTypes: ['PositionReport'] }));
+      ws.onopen = () => ws.send(JSON.stringify({ APIKey: AIS_KEY, BoundingBoxes: [[[-11, 95], [6, 141]]], FilterMessageTypes: ['PositionReport', 'ShipStaticData'] }));
       ws.onmessage = (ev) => {
         try {
-          const m = JSON.parse(String(ev.data)) as { MetaData?: Record<string, unknown>; Message?: { PositionReport?: Record<string, unknown> } };
-          const meta = m.MetaData; const pr = m.Message?.PositionReport;
-          if (!meta || !pr) return;
+          const m = JSON.parse(String(ev.data)) as { MetaData?: Record<string, unknown>; Message?: { PositionReport?: Record<string, unknown>; ShipStaticData?: Record<string, unknown> } };
+          const meta = m.MetaData;
+          if (!meta) return;
+          const id = String(meta.MMSI ?? '');
+          if (!id) return;
+          const ssd = m.Message?.ShipStaticData;
+          if (ssd) {
+            const tujuan = String(ssd.Destination ?? '').trim();
+            const jenis = jenisKapal(Number(ssd.Type ?? ssd.ShipType ?? 0) || 0);
+            const prev = kapalStatic.get(id) ?? {};
+            kapalStatic.set(id, { tujuan: tujuan || prev.tujuan, jenis: jenis || prev.jenis });
+            const cur = kapal.get(id);
+            if (cur) kapal.set(id, { ...cur, ...(tujuan ? { tujuan } : {}), ...(jenis ? { jenis } : {}) });
+            return;
+          }
+          const pr = m.Message?.PositionReport;
+          if (!pr) return;
           const lat = Number(meta.latitude ?? pr.Latitude);
           const lon = Number(meta.longitude ?? pr.Longitude);
           if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
-          const id = String(meta.MMSI ?? '');
           if (kapal.size > 1200 && !kapal.has(id)) { const k = kapal.keys().next().value; if (k) kapal.delete(k); }
-          kapal.set(id, { lon, lat, nama: String(meta.ShipName ?? '').trim(), kecepatan: Number(pr.Sog ?? 0) || 0, track: Number(pr.Cog ?? pr.TrueHeading ?? 0) || 0 });
+          const st = kapalStatic.get(id) ?? {};
+          kapal.set(id, { lon, lat, nama: String(meta.ShipName ?? '').trim(), kecepatan: Number(pr.Sog ?? 0) || 0, track: Number(pr.Cog ?? pr.TrueHeading ?? 0) || 0, ...(st.tujuan ? { tujuan: st.tujuan } : {}), ...(st.jenis ? { jenis: st.jenis } : {}) });
           pushHist(histKapal, id, lon, lat);
         } catch { /* ignore one message */ }
       };
@@ -709,21 +887,34 @@
         const c = map!.getCenter();
         koordinat = `${Math.abs(c.lat).toFixed(2)}°${c.lat < 0 ? 'LS' : 'LU'} · ${c.lng.toFixed(2)}°BT`;
         bearing = map!.getBearing();
+        projFitur();
       });
       map.on('click', 'gempa-dot', (e) => {
-        const p = e.features?.[0]?.properties as { mag?: number; wilayah?: string; jam?: string } | undefined;
-        if (p) infoGempa = `M${p.mag} · ${p.wilayah} · ${p.jam}`;
+        const f = e.features?.[0];
+        const p = f?.properties as { mag?: number; wilayah?: string; jam?: string } | undefined;
+        if (p) { infoGempa = `M${p.mag} · ${p.wilayah} · ${p.jam}`; bukaFitur('gempa', e.lngLat.lng, e.lngLat.lat, p as GeoPt); }
       });
+      // every hazard marker opens the same single info card
+      for (const L of LAYERS) {
+        map.on('click', `${L.id}-dot`, (e) => {
+          const f = e.features?.[0];
+          if (f) bukaFitur(L.id, e.lngLat.lng, e.lngLat.lat, f.properties as GeoPt);
+        });
+        map.on('mouseenter', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = ''; });
+      }
       map.on('click', 'provinsi-fill', (e) => {
         if (titikMode) return; // armed for a point report: let the map click handle it
         const k = e.features?.[0]?.properties?.kode as string | undefined;
         if (k) { titik = null; dispatch({ cmd: 'set_lensa', params: { kode: k } }); }
       });
-      // armed location report: any click drops the panel on that exact point
+      // a bare-map click: drop the location panel if armed, else close the info card
+      const DOT_LAYERS = ['gempa-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
       map.on('click', (e) => {
-        if (!titikMode) return;
-        bukaTitik(e.lngLat.lng, e.lngLat.lat);
-        setTitikMode(false);
+        if (titikMode) { bukaTitik(e.lngLat.lng, e.lngLat.lat); setTitikMode(false); return; }
+        const live = DOT_LAYERS.filter((id) => map!.getLayer(id));
+        const hit = live.length ? map!.queryRenderedFeatures(e.point, { layers: live }) : [];
+        if (!hit.length) fitur = null;
       });
       map.on('mousemove', 'provinsi-fill', (e) => {
         const k = e.features?.[0]?.properties?.kode as string | undefined;
@@ -757,6 +948,7 @@
       unsubs.push(on('set_layer', ({ layer, on: onState }) => {
         if (layer === 'gempa') toggleGempa(onState);
         else if (layer === 'provinsi') toggleProvinsi(onState);
+        else if (layer === 'jalan') toggleJalan(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
           toggleLayer(layer, onState);
           if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
@@ -784,7 +976,7 @@
         if (!map?.getLayer('provinsi-fill')) return;
         if (metric === 'mati') {
           choroExpr = null; choroLegend = null;
-          map.setPaintProperty('provinsi-fill', 'fill-color', (plat === 'satelit' || plat === 'cuaca') ? '#f2efe6' : '#15130e');
+          map.setPaintProperty('provinsi-fill', 'fill-color', (plat === 'satelit' || plat === 'cuaca' || plat === 'malam') ? '#f2efe6' : '#15130e');
           map.setPaintProperty('provinsi-fill', 'fill-opacity', ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04] as never);
           return;
         }
@@ -840,6 +1032,7 @@
     <button class="kb-tab" class:aktif={plat === 'atlas'} onclick={() => pilihPlat('atlas')}>ATLAS</button>
     <button class="kb-tab" class:aktif={plat === 'satelit'} onclick={() => pilihPlat('satelit')}>SATELIT</button>
     <button class="kb-tab" class:aktif={plat === 'cuaca'} onclick={() => pilihPlat('cuaca')}>CUACA</button>
+    <button class="kb-tab" class:aktif={plat === 'malam'} onclick={() => pilihPlat('malam')}>MALAM</button>
   </div>
 
   <div class="kb-plate">
@@ -868,9 +1061,14 @@
             <label class="kb-leg-row">
               <input type="checkbox" checked={layerOn[L.id]} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: L.id, on: e.currentTarget.checked } })} />
               <span class={`sym sym-${L.id}`}>{L.sym}</span> {L.nama}
-              <span class="src">{layerLive[L.id] ? `${L.sumber.split('/')[0].toUpperCase()} · LANGSUNG` : 'CONTOH'}</span>
+              <span class="src">{srcLabel(L.id, L.sumber)}</span>
             </label>
           {/each}
+          <label class="kb-leg-row kb-leg-jalan">
+            <input type="checkbox" checked={jalanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'jalan', on: e.currentTarget.checked } })} />
+            <span class="sym sym-jalan">╫</span> JALAN · NAMA
+            <span class="src">OSM · ZOOM</span>
+          </label>
         </div>
       {/if}
     </div>
@@ -884,6 +1082,20 @@
 
     {#if titik}
       <LaporanLokasi lon={titik.lon} lat={titik.lat} provinsi={titikProv} bahaya={titikBahaya} tutup={tutupTitik} />
+    {/if}
+
+    {#if fitur && fiturView}
+      <div class="kb-fitur mono" style={`left:${fitur.x}px; top:${fitur.y}px`}>
+        <button class="kb-fitur-x" onclick={() => (fitur = null)} aria-label="Tutup">✕</button>
+        <span class="kb-fitur-judul">{fiturView.judul}</span>
+        <div class="kb-fitur-baris">
+          {#each fiturView.baris as b}
+            <div class="kb-fitur-row"><span>{b[0]}</span><b>{b[1]}</b></div>
+          {/each}
+        </div>
+        {#if fiturView.catatan}<p class="kb-fitur-note">{fiturView.catatan}</p>{/if}
+        <span class="kb-fitur-src">{fiturView.src}</span>
+      </div>
     {/if}
 
     {#if dossier}
@@ -1074,6 +1286,31 @@
   .kb-tip { margin-top: 12px; font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
   .kb-tip-cmd { color: var(--accent); }
   .chip.aktif { border-color: var(--accent); color: var(--accent); }
+  .sym-pesawat { color: #2f6f9f; }
+  .sym-kapal { color: #2f8f78; }
+  .sym-jalan { color: var(--muted); }
+  .kb-leg-jalan { border-top: 1px solid var(--line-soft); padding-top: 7px; margin-top: 1px; }
+
+  /* the single hazard info card, anchored above the clicked marker */
+  .kb-fitur {
+    position: absolute; z-index: 6; width: max-content; max-width: 232px;
+    transform: translate(-50%, calc(-100% - 14px));
+    background: color-mix(in oklab, var(--bg) 95%, transparent);
+    border: 1px solid var(--line); border-bottom: 3px solid var(--accent);
+    box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.55);
+    padding: 9px 11px 8px; display: grid; gap: 5px; pointer-events: auto;
+  }
+  .kb-fitur::after { content: ''; position: absolute; left: 50%; top: 100%; transform: translateX(-50%); border: 6px solid transparent; border-top-color: var(--accent); }
+  .kb-fitur-x { position: absolute; top: 4px; right: 6px; background: none; border: none; color: var(--muted); cursor: pointer; font-size: 11px; line-height: 1; }
+  .kb-fitur-x:hover { color: var(--accent); }
+  .kb-fitur-judul { font-size: 11px; letter-spacing: 0.08em; color: var(--ink); font-weight: 600; padding-right: 14px; }
+  .kb-fitur-baris { display: grid; gap: 2px; }
+  .kb-fitur-row { display: flex; justify-content: space-between; gap: 14px; font-size: 9.5px; letter-spacing: 0.04em; }
+  .kb-fitur-row span { color: var(--muted); }
+  .kb-fitur-row b { color: var(--ink); font-weight: 600; text-align: right; }
+  .kb-fitur-note { font-size: 9px; line-height: 1.35; color: var(--accent); letter-spacing: 0.02em; }
+  .kb-fitur-src { font-size: 8px; letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; }
+
   :global(.kabar-seal) {
     width: 20px; height: 20px; border: 2px solid #e44a06; border-radius: 50%;
     box-shadow: inset 0 0 0 3px rgba(214, 203, 172, 0.9), inset 0 0 0 5px #e44a06;

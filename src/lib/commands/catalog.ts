@@ -27,7 +27,7 @@ export const commandSchemas = {
     on: z.boolean(),
   }),
   set_basemap: z.object({
-    plat: z.enum(['atlas', 'satelit', 'cuaca']),
+    plat: z.enum(['atlas', 'satelit', 'cuaca', 'malam']),
   }),
   denominate: z.object({
     unit: z.enum(['rp', 'nasi', 'mbg', 'umphari']),

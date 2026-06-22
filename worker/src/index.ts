@@ -445,6 +445,7 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
       // populated core. Keyless; dedupe by hex. Short cache keeps it lively.
       const circles: [number, number][] = [
         [2, 99], [-4, 104], [-7.5, 112], [0, 114], [-2, 121], [-3, 132], [-4, 139],
+        [-8.6, 116], [-9.5, 123.5], [1.5, 125], [3.5, 108],
       ];
       const seen = new Set<string>();
       const planes: unknown[] = [];
@@ -464,6 +465,9 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
               track: Number(a.track ?? a.true_heading ?? 0) || 0,
               flight: String(a.flight ?? '').trim(),
               alt: Number(a.alt_baro ?? 0) || 0,
+              gs: Number(a.gs ?? 0) || 0,
+              squawk: String(a.squawk ?? '').trim(),
+              kategori: String(a.category ?? '').trim(),
             }));
           }
         } catch { /* skip this circle */ }

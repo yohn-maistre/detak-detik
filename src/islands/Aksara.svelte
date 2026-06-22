@@ -81,7 +81,7 @@
   let buka = $state(false);
   let input = $state('');
   let riwayat = $state<{ teks: string; jenis: 'in' | 'out' | 'err' }[]>([
-    { teks: 'AKSARA v0.1 · terminal perintah. Ketik "bantu" untuk daftar verba.', jenis: 'out' },
+    { teks: 'AKSARA v0.1 · tanya apa saja tentang edisi ini. Ketik "bantu" untuk daftar perintah.', jenis: 'out' },
   ]);
   let logEl: HTMLElement | undefined = $state();
   let histori: string[] = [];
@@ -166,7 +166,9 @@
     else if (cmd === 'sorot') ok = dispatch({ cmd: 'sorot', params: { ref: arg.split(/[\s,]+/).filter(Boolean)[0] ?? '', type: 'underline', off: false } });
     else if (cmd === 'highlight') ok = dispatch({ cmd: 'highlight', params: { ids: arg.split(/[\s,]+/).filter(Boolean) } });
     else if (cmd === 'say') ok = dispatch({ cmd, params: { teks: arg, cited_ids: [], tahan_ms: 3500 } });
-    else { tulis(`verba tidak dikenal: ${cmd}. perintah tak valid tidak pernah dieksekusi.`, 'err'); return; }
+    // not a verb → it's a question. free text goes straight to the model (law 4
+    // stays intact: verbs still dispatch; plain language is just an implicit `tanya`).
+    else { if (!sibuk) void tanya(baris); return; }
     tulis(ok ? 'ok · perintah lolos katalog' : 'ditolak · parameter tidak valid', ok ? 'out' : 'err');
   }
 
@@ -214,7 +216,7 @@
       </div>
       <form class="term-in" onsubmit={(e) => { e.preventDefault(); jalankan(); }}>
         <span class="mono term-prompt">&gt;</span>
-        <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tanya … · tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
+        <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tanya apa saja … atau: tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
       </form>
       <div class="term-quick">
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
