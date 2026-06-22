@@ -40,7 +40,7 @@ import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI, AGENDA } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
@@ -68,6 +68,33 @@ const sparkTotal = PUTUSAN_HARIAN.reduce((a, b) => a + b, 0);
 const AKSARA_BUILD = import.meta.env.PUBLIC_AKSARA_URL as string | undefined;
 let lajurHost: string | null = null;
 if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { lajurHost = AKSARA_BUILD; } }
+
+// Act I magazine rails: the day's findings + Lane A headlines, bucketed into four
+// broad desks (news by category). Grassroots / independent sourcing only; each
+// source and lens maps to exactly one rail, so nothing double-counts. Rails render
+// even when thin and fill richer as the newsroom fans the desks out.
+const SRC_RAIL: Record<string, string> = {
+  BMKG: 'nasional', TEMPO: 'nasional', KBR: 'nasional',
+  'PROJECT MULTATULI': 'daerah', JUBI: 'daerah',
+  MONGABAY: 'alam', GFW: 'alam',
+  'BBC INDONESIA': 'dunia',
+};
+const LENS_RAIL: Record<string, string> = {
+  HUKUM: 'nasional', ANGGARAN: 'nasional', JANJI: 'nasional', APARAT: 'nasional', HARGA: 'nasional',
+  PAPUA: 'daerah', DAERAH: 'daerah',
+  HUTAN: 'alam', LINGKUNGAN: 'alam',
+  DUNIA: 'dunia',
+};
+const RAILS = [
+  { id: 'nasional', judul: 'Nasional', dek: 'Kuasa, hukum, anggaran, janji, harga' },
+  { id: 'daerah', judul: 'Daerah', dek: 'Akar rumput — Papua di depan, lewat Jubi' },
+  { id: 'alam', judul: 'Alam', dek: 'Hutan, api, ekstraksi, konservasi' },
+  { id: 'dunia', judul: 'Dunia', dek: 'Indonesia di mata dunia & geopolitik' },
+] as const;
+type RailItem = { teks: string; src: string; url?: string; temuan?: boolean };
+const railItems: Record<string, RailItem[]> = { nasional: [], daerah: [], alam: [], dunia: [] };
+for (const t of TEMUAN) { const r = LENS_RAIL[t.lens]; if (r) railItems[r]!.push({ teks: t.headline, src: t.lens, temuan: true }); }
+for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({ teks: t.teks, src: t.src, url: t.url }); }
 ---
 
 <Paper>
@@ -169,21 +196,47 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </aside>
         </section>
 
+        <!-- ===== the day's news, by desk: a magazine front, text-led ===== -->
+        <section class="rubrik" aria-label="Kabar menurut meja">
+          <div class="kabar-head">
+            <span class="inkbar"><span class="dot">●</span>RUBRIK · KABAR MENURUT MEJA</span>
+            <span class="eyebrow">EMPAT MEJA · TEMUAN REDAKSI + KABAR LANGSUNG DARI MEDIA INDEPENDEN</span>
+          </div>
+          <div class="rubrik-grid">
+            {RAILS.map((rail) => (
+              <section class="rubrik-rail" data-rise>
+                <header class="rr-head">
+                  <h3 class="rr-judul display">{rail.judul}</h3>
+                  <p class="rr-dek">{rail.dek}</p>
+                </header>
+                {railItems[rail.id]!.length ? (
+                  <ol class="rr-list">
+                    {railItems[rail.id]!.map((it) => (
+                      <li class="rr-item">
+                        {it.url ? (
+                          <a class="rr-link" href={it.url} target="_blank" rel="noopener">
+                            <span class="rr-src mono">{it.src}</span>
+                            <span class="rr-teks">{it.teks}</span>
+                          </a>
+                        ) : (
+                          <div class="rr-link rr-temuan">
+                            <span class="rr-src mono">{it.src}{it.temuan ? ' · TEMUAN' : ''}</span>
+                            <span class="rr-teks">{it.teks}</span>
+                          </div>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                ) : (
+                  <p class="rr-kosong mono">belum ada kabar meja ini hari ini</p>
+                )}
+              </section>
+            ))}
+          </div>
+        </section>
+
         <div class="pagi-util">
           <CuacaPagi client:visible />
-          <aside class="agenda" aria-label="Agenda hari ini">
-            <span class="ag-label mono">AGENDA HARI INI</span>
-            <ul class="ag-list" id="ag-list">
-              {AGENDA.map((a) => (
-                <li class="ag-item">
-                  <span class="ag-jam mono num">{a.jam}</span>
-                  <span class="ag-teks">{a.teks}</span>
-                  <span class="ag-tag mono">{a.tag}</span>
-                </li>
-              ))}
-            </ul>
-            <span class="ag-foot mono">jadwal redaksi · (data contoh)</span>
-          </aside>
         </div>
 
         <!-- the state of the nation, right now -->
@@ -979,6 +1032,25 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
   /* §6 Sensus Diri in Act I */
   .sensus-blok { margin-top: 40px; }
+
+  /* RUBRIK — the magazine front: four desks, ruled rows, text-led (no photos) */
+  .rubrik { margin-top: 30px; }
+  .rubrik-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); margin-top: 14px; }
+  @media (max-width: 720px) { .rubrik-grid { grid-template-columns: 1fr; } }
+  .rubrik-rail { padding: 16px clamp(14px, 2.4vw, 26px) 20px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
+  .rubrik-rail:nth-child(2n) { border-right: none; }
+  @media (max-width: 720px) { .rubrik-rail { border-right: none; } }
+  .rr-head { margin-bottom: 10px; }
+  .rr-judul { font-family: 'Fraunces Variable', serif; font-weight: 440; font-size: clamp(24px, 3.4vw, 38px); line-height: 1; letter-spacing: -0.01em; color: var(--ink); }
+  .rr-dek { font-size: 11px; letter-spacing: 0.02em; color: var(--muted); margin-top: 3px; }
+  .rr-list { list-style: none; padding: 0; margin: 0; }
+  .rr-item { border-top: 1px solid var(--line-soft); }
+  .rr-item:first-child { border-top: none; }
+  .rr-link { display: grid; gap: 3px; padding: 9px 0; text-decoration: none; color: inherit; }
+  a.rr-link:hover .rr-teks { text-decoration: underline; text-underline-offset: 2px; }
+  .rr-src { font-size: 8.5px; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; }
+  .rr-teks { font-size: 14px; line-height: 1.36; color: var(--ink); }
+  .rr-kosong { font-size: 10px; letter-spacing: 0.06em; color: var(--muted); padding: 6px 0; font-style: italic; }
 
   /* inlined perspektif sub-piece inside a chapter */
   .bab-sub { margin-top: 42px; border-top: 1px solid var(--line); padding-top: 28px; }
