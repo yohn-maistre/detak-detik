@@ -184,6 +184,9 @@
   /* ADM1 province polygons, fetched as a static asset; codes patched to join
      DAERAH (see scripts/patch-prov-geojson.mjs). MapLibre fetches the URL. */
   const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson`;
+  const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson`;
+  const PROVLINES_URL = `${import.meta.env.BASE_URL}data/idn-prov-lines.geojson`;
+  let kabPopup: import('maplibre-gl').Popup | undefined;
   type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
   type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
   let provData: { features: ProvFeature[] } | null = null;
@@ -233,10 +236,23 @@
           },
         }, below);
       }
-      if (!map.getLayer('provinsi-line')) {
+      // kabupaten boundaries (thin) + a transparent clickable kab surface (BIG ADM2)
+      if (!map.getSource('kab')) map.addSource('kab', { type: 'geojson', data: KAB_URL });
+      if (!map.getLayer('kab-fill')) {
+        map.addLayer({ id: 'kab-fill', type: 'fill', source: 'kab', layout: { visibility: vis }, paint: { 'fill-color': '#000', 'fill-opacity': 0 } }, below);
+      }
+      if (!map.getLayer('kab-line')) {
         map.addLayer({
-          id: 'provinsi-line', type: 'line', source: 'provinsi', layout: { visibility: vis },
-          paint: { 'line-color': ink, 'line-width': 0.7, 'line-opacity': 0.4 },
+          id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.22, 8, 0.7], 'line-opacity': 0.3 },
+        }, below);
+      }
+      // bold province outlines: BIG's dissolved boundary lines (no internal kab edges)
+      if (!map.getSource('provlines')) map.addSource('provlines', { type: 'geojson', data: PROVLINES_URL });
+      if (!map.getLayer('prov-line')) {
+        map.addLayer({
+          id: 'prov-line', type: 'line', source: 'provlines', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.9, 8, 2.4], 'line-opacity': 0.65 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel-fill')) {
@@ -263,7 +279,7 @@
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-fill', 'provinsi-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'prov-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
   }
@@ -961,10 +977,18 @@
         map.on('mouseenter', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = 'pointer'; });
         map.on('mouseleave', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = ''; });
       }
-      map.on('click', 'provinsi-fill', (e) => {
+      // click a kabupaten: identify it (popup) and set its province as the lensa
+      map.on('click', 'kab-fill', (e) => {
         if (titikMode) return; // armed for a point report: let the map click handle it
-        const k = e.features?.[0]?.properties?.kode as string | undefined;
-        if (k) { titik = null; dispatch({ cmd: 'set_lensa', params: { kode: k } }); }
+        const p = e.features?.[0]?.properties as { nama?: string; prov?: string } | undefined;
+        if (!p) return;
+        titik = null;
+        if (p.prov) dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
+        if (p.nama && map) {
+          kabPopup?.remove();
+          kabPopup = new maplibregl.Popup({ closeButton: true, offset: 10, className: 'kb-pop' })
+            .setLngLat(e.lngLat).setText(p.nama).addTo(map);
+        }
       });
       // a bare-map click: drop the location panel if armed, else close the info card
       const DOT_LAYERS = ['gempa-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
