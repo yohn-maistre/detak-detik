@@ -96,3 +96,15 @@ jobs:
           else
             echo "WAQI_TOKEN belum diisi, lewati."
           fi
+
+      - name: Push OpenSky credentials
+        env:
+          OPENSKY_CLIENT_ID: ${{ secrets.OPENSKY_CLIENT_ID }}
+          OPENSKY_CLIENT_SECRET: ${{ secrets.OPENSKY_CLIENT_SECRET }}
+        run: |
+          if [ -n "$OPENSKY_CLIENT_ID" ] && [ -n "$OPENSKY_CLIENT_SECRET" ]; then
+            echo "$OPENSKY_CLIENT_ID" | npx wrangler@4 secret put OPENSKY_CLIENT_ID --config worker/wrangler.toml
+            echo "$OPENSKY_CLIENT_SECRET" | npx wrangler@4 secret put OPENSKY_CLIENT_SECRET --config worker/wrangler.toml
+          else
+            echo "OPENSKY creds belum diisi (pesawat pakai fallback adsb.lol), lewati."
+          fi

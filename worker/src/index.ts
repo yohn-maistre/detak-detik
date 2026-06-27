@@ -28,6 +28,8 @@ export interface Env {
   FIRMS_MAP_KEY?: string;
   WAQI_TOKEN?: string;
   EDISI_TOKEN?: string;
+  OPENSKY_CLIENT_ID?: string;
+  OPENSKY_CLIENT_SECRET?: string;
   CACHE: KVNamespace;
   AI?: { run: (model: string, options: Record<string, unknown>) => Promise<{ response?: string }> };
   MODEL_PRIMARY?: string;
@@ -383,6 +385,86 @@ const feat = (lon: number, lat: number, props: Record<string, unknown>) => ({
   properties: props,
 });
 
+/* Planes: OpenSky returns the whole Indonesia bbox in ONE call (no 250 NM grid).
+   Its CORS is origin-locked, so it runs here, not in the browser. Anonymous
+   credits are per-IP (our shared CF IP burns them fast), so a free OpenSky API
+   client (OAuth2 client_credentials) makes it reliable; the token is cached. */
+async function openSkyToken(env: Env): Promise<string | null> {
+  if (!env.OPENSKY_CLIENT_ID || !env.OPENSKY_CLIENT_SECRET) return null;
+  const hit = await env.CACHE.get('osky:tok');
+  if (hit) return hit;
+  try {
+    const r = await fetch('https://auth.opensky-network.org/auth/realms/opensky-network/protocol/openid-connect/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `grant_type=client_credentials&client_id=${encodeURIComponent(env.OPENSKY_CLIENT_ID)}&client_secret=${encodeURIComponent(env.OPENSKY_CLIENT_SECRET)}`,
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!r.ok) return null;
+    const d = (await r.json()) as { access_token?: string; expires_in?: number };
+    if (!d.access_token) return null;
+    await env.CACHE.put('osky:tok', d.access_token, { expirationTtl: Math.max(60, (d.expires_in ?? 1800) - 120) });
+    return d.access_token;
+  } catch { return null; }
+}
+async function planesOpenSky(env: Env): Promise<unknown[]> {
+  const token = await openSkyToken(env);
+  const headers: Record<string, string> = { Accept: 'application/json' };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  try {
+    const r = await fetch('https://opensky-network.org/api/states/all?lamin=-11&lomin=95&lamax=6&lomax=141', { headers, signal: AbortSignal.timeout(9000) });
+    if (!r.ok) return [];
+    const d = (await r.json()) as { states?: (string | number | boolean | null)[][] };
+    return (d.states ?? [])
+      .filter((a) => a[5] != null && a[6] != null && a[8] !== true)
+      .map((a) => feat(Number(a[5]), Number(a[6]), {
+        hex: String(a[0] ?? ''),
+        flight: String(a[1] ?? '').trim(),
+        track: Math.round(Number(a[10]) || 0),
+        alt: Math.round((Number(a[7]) || 0) * 3.281),   // metres -> feet
+        gs: Math.round((Number(a[9]) || 0) * 1.944),     // m/s -> knots
+      }));
+  } catch { return []; }
+}
+async function planesAdsbGrid(): Promise<unknown[]> {
+  // adsb.lol caps the radius at 250 NM, so a grid is needed; it also throttles
+  // our datacenter IP hard (often ~1 plane) — only the no-OpenSky-creds fallback.
+  const circles: [number, number][] = [
+    [5.4, 96], [2, 99], [-1, 101], [-4, 104.5], [-6.3, 106.8], [-8, 112.5],
+    [-8.8, 118], [-9.3, 123.5], [0.8, 109.5], [1.8, 117], [-2.6, 115], [-2, 121],
+    [1.6, 125], [-4.5, 122.5], [-3, 129.5], [-1.5, 134], [-4, 138], [-7, 140],
+  ];
+  const seen = new Set<string>();
+  const planes: unknown[] = [];
+  for (let i = 0; i < circles.length; i += 5) {
+    const results = await Promise.allSettled(
+      circles.slice(i, i + 5).map(([lat, lon]) =>
+        fetch(`https://api.adsb.lol/v2/lat/${lat}/lon/${lon}/dist/250`, {
+          headers: { Accept: 'application/json' },
+          signal: AbortSignal.timeout(7000),
+        }).then((r) => (r.ok ? r.json() : { ac: [] })) as Promise<{ ac?: Record<string, unknown>[] }>,
+      ),
+    );
+    for (const res of results) {
+      if (res.status !== 'fulfilled') continue;
+      for (const a of res.value.ac ?? []) {
+        const hex = String(a.hex ?? '');
+        if (!hex || seen.has(hex)) continue;
+        const lo = Number(a.lon), la = Number(a.lat);
+        if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
+        seen.add(hex);
+        planes.push(feat(lo, la, {
+          hex, track: Number(a.track ?? a.true_heading ?? 0) || 0,
+          flight: String(a.flight ?? '').trim(), alt: Number(a.alt_baro ?? 0) || 0,
+          gs: Number(a.gs ?? 0) || 0, squawk: String(a.squawk ?? '').trim(),
+          kategori: String(a.category ?? '').trim(),
+        }));
+      }
+    }
+  }
+  return planes;
+}
+
 async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Response> {
   const cacheKey = `geo:${id}`;
   const ttl = id === 'pesawat' ? 30 : 300;
@@ -441,50 +523,10 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
         if (features.length) break;
       }
     } else if (id === 'pesawat') {
-      // adsb.lol point+radius: the API caps the radius at 250 NM (~463 km) and
-      // Indonesia spans ~5000 km, so one circle can't cover it — hence a grid.
-      // adsb.lol throttles ~6 concurrent before 429, so we fetch in BATCHES of 5
-      // (whole grid lands in ~6-8s, full coverage, few drops). adsb.lol is the
-      // only host that speaks this endpoint (airplanes.live/adsb.fi 404/400 it).
-      // Keyless; dedupe by hex; cached 30s so the grid rarely re-runs.
-      const circles: [number, number][] = [
-        [5.4, 96], [2, 99], [-1, 101], [-4, 104.5], [-6.3, 106.8], [-8, 112.5],
-        [-8.8, 118], [-9.3, 123.5], [0.8, 109.5], [1.8, 117], [-2.6, 115], [-2, 121],
-        [1.6, 125], [-4.5, 122.5], [-3, 129.5], [-1.5, 134], [-4, 138], [-7, 140],
-      ];
-      const seen = new Set<string>();
-      const planes: unknown[] = [];
-      const BATCH = 5;
-      for (let i = 0; i < circles.length; i += BATCH) {
-        const results = await Promise.allSettled(
-          circles.slice(i, i + BATCH).map(([lat, lon]) =>
-            fetch(`https://api.adsb.lol/v2/lat/${lat}/lon/${lon}/dist/250`, {
-              headers: { Accept: 'application/json' },
-              signal: AbortSignal.timeout(7000),
-            }).then((r) => (r.ok ? r.json() : { ac: [] })) as Promise<{ ac?: Record<string, unknown>[] }>,
-          ),
-        );
-        for (const res of results) {
-          if (res.status !== 'fulfilled') continue;
-          for (const a of res.value.ac ?? []) {
-            const hex = String(a.hex ?? '');
-            if (!hex || seen.has(hex)) continue;
-            const lo = Number(a.lon), la = Number(a.lat);
-            if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
-            seen.add(hex);
-            planes.push(feat(lo, la, {
-              hex,
-              track: Number(a.track ?? a.true_heading ?? 0) || 0,
-              flight: String(a.flight ?? '').trim(),
-              alt: Number(a.alt_baro ?? 0) || 0,
-              gs: Number(a.gs ?? 0) || 0,
-              squawk: String(a.squawk ?? '').trim(),
-              kategori: String(a.category ?? '').trim(),
-            }));
-          }
-        }
-      }
-      features = planes;
+      // one OpenSky bbox call covers the whole archipelago; adsb.lol grid is the
+      // fallback when OpenSky has no creds / is down (it throttles our IP to ~1).
+      features = await planesOpenSky(env);
+      if (!features.length) features = await planesAdsbGrid();
     }
   } catch {
     features = [];
