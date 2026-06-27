@@ -854,7 +854,7 @@
   async function refreshPesawat() {
     if (!AKSARA_URL || !map?.getSource('pesawat')) return;
     try {
-      const res = await fetch(`${AKSARA_URL}/geo/pesawat`, { signal: AbortSignal.timeout(8000) });
+      const res = await fetch(`${AKSARA_URL}/geo/pesawat`, { signal: AbortSignal.timeout(15000) });
       const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
       const pts = (data.features ?? [])
         .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
@@ -872,6 +872,8 @@
   const AIS_KEY = import.meta.env.PUBLIC_AISSTREAM_KEY as string | undefined;
   let aisWS: WebSocket | undefined;
   let aisFlush: ReturnType<typeof setInterval> | undefined;
+  let aisWant = false;
+  let aisRetry: ReturnType<typeof setTimeout> | undefined;
   const kapal = new Map<string, GeoPt>();
   /* a vessel's destination + type arrive in slower ShipStaticData messages, keyed by
      MMSI; we cache and merge them onto the live position so the popup can read them */
@@ -886,7 +888,9 @@
     return '';
   }
   function connectAIS() {
-    if (aisWS || !AIS_KEY) return;
+    if (!AIS_KEY) return;
+    aisWant = true;
+    if (aisWS) return;
     try {
       const ws = new WebSocket('wss://stream.aisstream.io/v0/stream');
       aisWS = ws;
@@ -919,7 +923,12 @@
           pushHist(histKapal, id, lon, lat);
         } catch { /* ignore one message */ }
       };
-      ws.onclose = () => { if (aisWS === ws) aisWS = undefined; };
+      ws.onclose = () => {
+        if (aisWS === ws) aisWS = undefined;
+        // AISStream free keys drop often (shared public key + connection caps);
+        // reconnect with a short backoff while the layer is still wanted.
+        if (aisWant && !aisRetry) aisRetry = setTimeout(() => { aisRetry = undefined; connectAIS(); }, 4000);
+      };
       ws.onerror = () => { try { ws.close(); } catch { /* noop */ } };
       aisFlush = setInterval(() => {
         if (!map?.getSource('kapal') || !kapal.size) return;
@@ -930,6 +939,8 @@
     } catch { /* no ships layer */ }
   }
   function disconnectAIS() {
+    aisWant = false;
+    if (aisRetry) { clearTimeout(aisRetry); aisRetry = undefined; }
     if (aisFlush) { clearInterval(aisFlush); aisFlush = undefined; }
     try { aisWS?.close(); } catch { /* noop */ }
     aisWS = undefined;

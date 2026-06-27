@@ -441,36 +441,46 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
         if (features.length) break;
       }
     } else if (id === 'pesawat') {
-      // adsb.lol point+radius (max 250 NM): a grid of circles covers the
-      // populated core. Keyless; dedupe by hex. Short cache keeps it lively.
+      // adsb.lol-family point+radius (max 250 NM): a grid of circles covers the
+      // archipelago. Fetched in PARALLEL and round-robined across mirror hosts
+      // (same /v2 shape) so the whole grid returns in ~2-3s instead of ~13s and
+      // dodges the ~1 req/s per-host throttle that was dropping most circles.
+      // Keyless; dedupe by hex.
       const circles: [number, number][] = [
-        [2, 99], [-4, 104], [-7.5, 112], [0, 114], [-2, 121], [-3, 132], [-4, 139],
-        [-8.6, 116], [-9.5, 123.5], [1.5, 125], [3.5, 108],
+        [5.2, 97], [1.5, 99], [-1, 101], [-4, 104], [3, 108], [-6.2, 106.8],
+        [-7.6, 111], [-8.4, 115], [0.5, 109], [-2.5, 114], [1.8, 117], [-2, 121],
+        [1.5, 125], [-4.5, 122.5], [-9.3, 123], [-8.5, 119], [-3, 129], [-1.5, 134],
+        [-4, 138], [-7, 140],
       ];
+      const HOSTS = ['https://api.adsb.lol', 'https://api.airplanes.live', 'https://opendata.adsb.fi'];
       const seen = new Set<string>();
       const planes: unknown[] = [];
-      for (const [lat, lon] of circles) {
-        try {
-          const r = await fetch(`https://api.adsb.lol/v2/lat/${lat}/lon/${lon}/dist/250`, { headers: { Accept: 'application/json' } });
-          if (!r.ok) continue;
-          const d = (await r.json()) as { ac?: Record<string, unknown>[] };
-          for (const a of d.ac ?? []) {
-            const hex = String(a.hex ?? '');
-            if (!hex || seen.has(hex)) continue;
-            const lo = Number(a.lon), la = Number(a.lat);
-            if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
-            seen.add(hex);
-            planes.push(feat(lo, la, {
-              hex,
-              track: Number(a.track ?? a.true_heading ?? 0) || 0,
-              flight: String(a.flight ?? '').trim(),
-              alt: Number(a.alt_baro ?? 0) || 0,
-              gs: Number(a.gs ?? 0) || 0,
-              squawk: String(a.squawk ?? '').trim(),
-              kategori: String(a.category ?? '').trim(),
-            }));
-          }
-        } catch { /* skip this circle */ }
+      const results = await Promise.allSettled(
+        circles.map(([lat, lon], i) =>
+          fetch(`${HOSTS[i % HOSTS.length]}/v2/lat/${lat}/lon/${lon}/dist/250`, {
+            headers: { Accept: 'application/json' },
+            signal: AbortSignal.timeout(6000),
+          }).then((r) => (r.ok ? r.json() : { ac: [] })) as Promise<{ ac?: Record<string, unknown>[] }>,
+        ),
+      );
+      for (const res of results) {
+        if (res.status !== 'fulfilled') continue;
+        for (const a of res.value.ac ?? []) {
+          const hex = String(a.hex ?? '');
+          if (!hex || seen.has(hex)) continue;
+          const lo = Number(a.lon), la = Number(a.lat);
+          if (!Number.isFinite(lo) || !Number.isFinite(la)) continue;
+          seen.add(hex);
+          planes.push(feat(lo, la, {
+            hex,
+            track: Number(a.track ?? a.true_heading ?? 0) || 0,
+            flight: String(a.flight ?? '').trim(),
+            alt: Number(a.alt_baro ?? 0) || 0,
+            gs: Number(a.gs ?? 0) || 0,
+            squawk: String(a.squawk ?? '').trim(),
+            kategori: String(a.category ?? '').trim(),
+          }));
+        }
       }
       features = planes;
     }
