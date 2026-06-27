@@ -12,3 +12,6 @@ newsroom/logs/
 .venv-newsroom/
 __pycache__/
 *.pyc
+
+# local screenshot dropzone (Yose drops these for visual context; never pushed)
+docs/screenshots/

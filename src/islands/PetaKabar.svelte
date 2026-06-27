@@ -142,7 +142,7 @@
 
   type LayerDef = { id: string; nama: string; sym: string; sumber: string; shape: string; color: string; size: number | unknown[]; rotate?: boolean; trail?: boolean };
   const LAYERS: LayerDef[] = [
-    { id: 'gunungapi', nama: 'GUNUNG API', sym: '▲', sumber: 'magma/pvmbg', shape: 'triangle', color: '#e08a1e',
+    { id: 'gunungapi', nama: 'GUNUNG API', sym: '▲', sumber: 'gvp/magma', shape: 'triangle', color: '#e08a1e',
       size: ['interpolate', ['linear'], ['get', 'level'], 1, 0.6, 4, 1.3] },
     { id: 'udara', nama: 'UDARA · PM2.5', sym: '◆', sumber: 'waqi', shape: 'square', color: '#8a5cc0',
       size: ['interpolate', ['linear'], ['get', 'aqi'], 50, 0.6, 200, 1.25] },
@@ -150,12 +150,29 @@
       size: ['interpolate', ['linear'], ['get', 'state'], 1, 0.6, 3, 1.2] },
     { id: 'kebakaran', nama: 'TITIK API', sym: '✦', sumber: 'firms/viirs', shape: 'spark', color: '#e44a06',
       size: ['interpolate', ['linear'], ['get', 'frp'], 20, 0.55, 80, 1.25] },
-    { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
+    { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'opensky', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
     { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
     { id: 'karbon', nama: 'EMISI CO₂', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
       size: ['interpolate', ['linear'], ['get', 'co2'], 0.5, 0.5, 20, 1.6] },
     { id: 'batubara', nama: 'PLTU BATU BARA', sym: '◼', sumber: 'gem', shape: 'square', color: '#2b2b2b',
       size: ['interpolate', ['linear'], ['get', 'mw'], 100, 0.5, 6000, 1.7] },
+  ];
+
+  /* the standing source credits printed under the map — every layer carries its
+     provider + licence, linked for verifiability (an iron law of the paper). */
+  const KREDIT: { nama: string; src: string; url: string; lisensi: string }[] = [
+    { nama: 'Peta dasar', src: 'OpenFreeMap · OSM', url: 'https://openfreemap.org', lisensi: 'ODbL' },
+    { nama: 'Wilayah', src: 'BIG Rupabumi', url: 'https://www.big.go.id', lisensi: 'One-Map' },
+    { nama: 'Gunung api', src: 'Smithsonian GVP + PVMBG', url: 'https://volcano.si.edu', lisensi: 'GVP' },
+    { nama: 'Gempa', src: 'BMKG + USGS', url: 'https://www.bmkg.go.id', lisensi: 'publik' },
+    { nama: 'Udara', src: 'WAQI', url: 'https://waqi.info', lisensi: 'atribusi' },
+    { nama: 'Banjir', src: 'PetaBencana', url: 'https://petabencana.id', lisensi: 'CC-BY' },
+    { nama: 'Titik api', src: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', lisensi: 'publik' },
+    { nama: 'Pesawat', src: 'OpenSky Network', url: 'https://opensky-network.org', lisensi: 'CC-BY-NC' },
+    { nama: 'Kapal', src: 'AISStream', url: 'https://aisstream.io', lisensi: 'atribusi' },
+    { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY' },
+    { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY' },
+    { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik' },
   ];
 
   let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false, batubara: false });
@@ -222,6 +239,29 @@
     return [[minX, minY], [maxX, maxY]];
   }
 
+  /** one representative point per province — the centroid of its LARGEST ring, so
+   *  archipelagic provinces (Papua's 6-part MultiPolygon) get a single label on the
+   *  main landmass instead of one repeated over every island part. */
+  function provLabelPoints(features: ProvFeature[]) {
+    const ringCentroid = (ring: number[][]) => {
+      let x = 0, y = 0; for (const p of ring) { x += p[0]!; y += p[1]!; }
+      return { c: [x / ring.length, y / ring.length] as [number, number], n: ring.length };
+    };
+    return {
+      type: 'FeatureCollection' as const,
+      features: features.map((f) => {
+        const g = f.geometry;
+        const rings = g.type === 'Polygon'
+          ? [(g.coordinates as number[][][])[0]!]
+          : (g.coordinates as number[][][][]).map((poly) => poly[0]!);
+        // largest ring by vertex count ≈ biggest landmass — good enough for a label anchor
+        let best = ringCentroid(rings[0]!);
+        for (const r of rings.slice(1)) { const cc = ringCentroid(r); if (cc.n > best.n) best = cc; }
+        return { type: 'Feature' as const, geometry: { type: 'Point' as const, coordinates: best.c }, properties: f.properties };
+      }),
+    };
+  }
+
   function addProvinsi() {
     if (!map) return;
     void provDataReady.then(() => {
@@ -249,7 +289,7 @@
       if (!map.getLayer('kab-line')) {
         map.addLayer({
           id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.22, 8, 0.7], 'line-opacity': 0.3 },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.15, 8, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.12, 8, 0.22] },
         }, below);
       }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
@@ -257,16 +297,16 @@
       // label, never the province repeated). Subtler than the bold province label.
       if (!map.getLayer('kab-lab')) {
         map.addLayer({
-          id: 'kab-lab', type: 'symbol', source: 'kab', minzoom: 6.5,
+          id: 'kab-lab', type: 'symbol', source: 'kab', minzoom: 5.8,
           layout: {
             visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'],
-            'text-size': ['interpolate', ['linear'], ['zoom'], 6.5, 9, 10, 12.5],
+            'text-size': ['interpolate', ['linear'], ['zoom'], 6, 9.5, 10, 13],
             'text-letter-spacing': 0.02, 'text-padding': 3, 'text-max-width': 7,
           },
           paint: {
             'text-color': sat ? '#e9e2cf' : '#3a3326',
             'text-halo-color': sat ? '#15130e' : '#e8dec0', 'text-halo-width': 1.3,
-            'text-opacity': ['interpolate', ['linear'], ['zoom'], 6.5, 0, 7.2, 0.92],
+            'text-opacity': ['interpolate', ['linear'], ['zoom'], 6, 0, 6.9, 0.95],
           },
         }, below);
       }
@@ -275,7 +315,7 @@
       if (!map.getLayer('prov-line')) {
         map.addLayer({
           id: 'prov-line', type: 'line', source: 'provlines', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.9, 8, 2.4], 'line-opacity': 0.65 },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.3, 8, 3.4], 'line-opacity': 0.82 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel-fill')) {
@@ -290,11 +330,22 @@
           paint: { 'line-color': '#e44a06', 'line-width': 2.2 },
         }, below);
       }
+      // province name: a single bold label at the province's representative point
+      // (not the polygon — that repeats once per MultiPolygon part). Fades OUT as you
+      // zoom past the province into kabupaten detail, where kab-lab takes over.
+      if (!map.getSource('provlabels')) map.addSource('provlabels', { type: 'geojson', data: provLabelPoints(provData.features) as never });
       if (!map.getLayer('provinsi-lab')) {
         map.addLayer({
-          id: 'provinsi-lab', type: 'symbol', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode],
-          layout: { visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'], 'text-size': 11.5, 'text-transform': 'uppercase', 'text-letter-spacing': 0.1 },
-          paint: { 'text-color': ink, 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.4 },
+          id: 'provinsi-lab', type: 'symbol', source: 'provlabels', filter: ['==', ['get', 'kode'], lensaKode],
+          layout: {
+            visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'],
+            'text-size': ['interpolate', ['linear'], ['zoom'], 4, 11, 7, 14], 'text-transform': 'uppercase',
+            'text-letter-spacing': 0.1, 'text-allow-overlap': true,
+          },
+          paint: {
+            'text-color': ink, 'text-halo-color': sat ? '#15130e' : '#d6cbac', 'text-halo-width': 1.6,
+            'text-opacity': ['interpolate', ['linear'], ['zoom'], 7, 1, 8.2, 0],
+          },
         });
       }
     });
@@ -509,7 +560,7 @@
     if (f.kind === 'udara') { const a = N(p.aqi); return { judul: `Udara · AQI ${a}`, src: 'WAQI · langsung', baris: [['Stasiun', String(p.nama ?? '-')], ['Kategori', aqiBand(a)]], catatan: a > 150 ? 'Kurangi aktivitas luar ruangan.' : '' }; }
     if (f.kind === 'banjir') { const s = N(p.state); return { judul: 'Laporan banjir', src: 'PetaBencana · langsung', baris: [['Lokasi', String(p.nama ?? '-')], ['Siaga', s >= 3 ? 'tinggi' : s >= 2 ? 'sedang' : 'rendah']], catatan: '' }; }
     if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
-    if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'adsb.lol · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
+    if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'OpenSky Network · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'karbon') return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris: [['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`], ['Jenis', String(p.jenis ?? '-')], ['Kapasitas', p.kapasitas ? `${N(p.kapasitas).toLocaleString('id-ID')} MW` : '-'], ['Pemilik', String(p.pemilik ?? '-')]], catatan: 'Estimasi independen berbasis satelit.' };
     if (f.kind === 'batubara') { const st = String(p.status); const label = st === 'beroperasi' ? 'Beroperasi' : st === 'konstruksi' ? 'Dalam konstruksi' : 'Direncanakan'; return { judul: String(p.plant ?? 'PLTU'), src: 'Global Energy Monitor · GCPT Jan 2026 · CC-BY', baris: [['Status', label], ['Kapasitas', `${N(p.mw).toLocaleString('id-ID')} MW`], ['Unit', String(p.units ?? '-')], ['Pemilik', String(p.owner ?? '-')]], catatan: st !== 'beroperasi' ? 'Bagian dari pipeline batu bara yang masih berlanjut.' : '' }; }
@@ -1296,6 +1347,11 @@
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}
 
+  <p class="kb-sumber mono">
+    <span class="kb-sumber-lab">SUMBER</span>
+    {#each KREDIT as k, i}<a class="kb-sumber-item" href={k.url} target="_blank" rel="noopener noreferrer" title={`${k.nama} · ${k.lisensi}`}>{k.src}<span class="kb-sumber-lic">{k.lisensi}</span></a>{#if i < KREDIT.length - 1}<span class="kb-sumber-sep">·</span>{/if}{/each}
+  </p>
+
   <p class="kb-tip mono">Klik provinsi untuk dasar wilayah, atau ◎ LAPOR TITIK lalu klik satu tempat untuk cuaca, udara, dan iklim setahun. Atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
 </div>
 
@@ -1437,6 +1493,17 @@
   .kb-rose:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
   .kb-tip { margin-top: 12px; font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
   .kb-tip-cmd { color: var(--accent); }
+  /* standing source credits: every layer's provider + licence, linked, under the map */
+  .kb-sumber {
+    margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--line);
+    font-size: 9px; line-height: 1.7; letter-spacing: 0.06em; color: var(--muted);
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 5px;
+  }
+  .kb-sumber-lab { color: var(--ink); font-style: italic; letter-spacing: 0.16em; opacity: 0.75; }
+  .kb-sumber-item { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; transition: color 0.2s, border-color 0.2s; }
+  .kb-sumber-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .kb-sumber-lic { margin-left: 3px; font-size: 7.5px; letter-spacing: 0.04em; color: var(--ink); opacity: 0.4; vertical-align: super; }
+  .kb-sumber-sep { color: var(--line); }
   .chip.aktif { border-color: var(--accent); color: var(--accent); }
   .sym-pesawat { color: #2f6f9f; }
   .sym-kapal { color: #2f8f78; }
