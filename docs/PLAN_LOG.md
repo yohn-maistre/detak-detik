@@ -221,7 +221,22 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
   deforestation (free API, CC-BY) or OSM `boundary=protected_area`.
 - [x] **IMERG rainfall** overlay — DONE (commit 1fc14a2). Toggleable GIBS raster (legend),
   `GoogleMapsCompatible_Level6`, ~3-day-lag date; better over Indonesia than the radar.
-- [ ] Later: GFW deforestation alerts, WorldPop/Kontur.
+- [~] **Planes (pesawat)** — adsb.lol throttles our CF/datacenter proxy to ~1-2 planes *and*
+  has no CORS (dead client-side too). Rewired to **OpenSky** `/states/all?bbox` (one whole-Indonesia
+  call, ~33 aircraft) in the worker; needs `OPENSKY_CLIENT_ID`/`SECRET` (free OAuth2 client) — anon
+  is per-IP and dead from the shared CF IP. adsb.lol grid kept as no-creds fallback. **ACTION:
+  add the OpenSky secrets in GitHub → planes go live whole-archipelago.**
+- [x] **Vessels (kapal)** — AISStream WS now **auto-reconnects** (4s backoff); was freezing on any
+  drop. Key is `PUBLIC_` (shared in the bundle, free-tier connection caps) — known limitation.
+- [ ] **Dot-accuracy diagnostics** — volcano feed shows ~5 not ~127 (MAGMA proxy / bundled
+  registry not loading fully); FIRMS fire (and any centroid-placed points) must sit on true lat/lon.
+- [ ] **Pivots (open replacements, picked 2026-06-27)**: OSM Overpass hospitals (health), GFW
+  deforestation (conservation, replaces WDPA), upgrade the PetaBencana `banjir` layer to honest
+  multi-hazard (flood/quake/fire/wind/haze).
+- [ ] Later: WorldPop/Kontur. **Big creative open-data brainstorm pending** — a data-scout agent
+  (cap ≤5 sub-agents) for synthesizeable civic data: heatmaps, governance/branch-of-power indices,
+  justice gradient (vonis over time — note `GradienKeadilan` exists), PISA, sanitation, energy,
+  internet, culture proxies (Spotify/film), history. Parse into map-layer vs act-viz buckets.
 
 ### Track 2 · Act I revamp — brief: `docs/research/act1-revamp-brief.md`
 Act I reads scattered/amateurish; the four RSS desks feel redundant + may be unwired.
@@ -306,3 +321,11 @@ current as each item lands.
   (ADM2) drill-down** (BIG KabKota name-joined + BIG layer-8 dissolved lines; thin kab +
   bold province, click a kab → name popup + province lensa). Scrubbed a device-model
   mention from `LEMBARAN_DESIGN.md`. Six new map data surfaces shipped this session.
+- **2026-06-27 (cont. 2)** — Shipped **GEM coal** (PLTU fleet + pipeline, CC-BY, 28KB);
+  reassessed BIG-health / BNPB / WDPA as unfit (§4.5). Replaced the kab-click **popup with
+  zoom-reveal `kab-lab` labels** (atlas-style, map font; the lens click itself was already
+  wired). **Live-data reliability**: planes rewired to **OpenSky bbox** (one call, needs
+  `OPENSKY_*` creds; adsb.lol fallback — adsb.lol throttles our CF IP + no CORS), **AIS
+  auto-reconnect**. Consolidated `AGENTS.md` → `CLAUDE.md` §11 (commands, deploy, conventions,
+  map gotchas). Deploys are GH Actions (`deploy.yml` / `worker.yml`, `workflow_dispatch`);
+  commits now terse one-liners under `josejr2498@gmail.com`.

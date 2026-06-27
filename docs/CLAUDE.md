@@ -313,3 +313,26 @@ the dead `agenda`/`makro` wires), then **C (SIRUP)** or **D (markets)** — re-r
 the two queued research agents for the markets data and the ADM1 GeoJSON before
 building D — with **F (Aksara chart renderer + RAG)** last. The page is real and
 deployed; build, screenshot, commit, push.
+
+## 11. Operations, commands & live-map learnings (keep current)
+
+Absorbs the old `AGENTS.md` (now a short stub pointing here). Keep this section,
+`PLAN_LOG.md`, and `DATA_SOURCES.md` current as work lands.
+
+**Build / test / run**
+- `pnpm install` · `pnpm dev` (localhost:4321) · `pnpm check` (astro/svelte/ts) · `pnpm build` (→ `dist/`).
+- Worker lives in `worker/` (one stateless Worker). Newsroom: `python3 -m newsroom.main` (dry-run without `AKSARA_URL` + `EDISI_TOKEN`).
+- Min verification before push: `pnpm build` clean (+ `pnpm check` when types are touched). Two-space indent in Svelte/Astro/TS, four-space in Python; Indonesian domain names; PascalCase islands, kebab/lowercase shared TS.
+
+**Deploy (GitHub Actions, on push to `main`)**
+- `deploy.yml` → Cloudflare Pages (every push). `worker.yml` → Worker (only when `worker/**` changes; it resolves the KV id, deploys, then pushes each secret). Both also have `workflow_dispatch`.
+- Secrets live in **GitHub repo Secrets**: `CLOUDFLARE_API_TOKEN`/`ACCOUNT_ID`, `NIM_API_KEY`, `WAQI_TOKEN`, `FIRMS_MAP_KEY`, `EDISI_TOKEN`, `TURNSTILE_SECRET`, `OPENSKY_CLIENT_ID`/`SECRET`. `PUBLIC_*` (`AKSARA_URL`, `AISSTREAM_KEY`) are build-time, inlined into the client bundle (so the AIS key is public by design).
+- No local wrangler / CF token on the dev box → trigger deploys with `gh workflow run worker.yml` (or `deploy.yml`); check with `gh run list`. Worker URL: `detak-detik-worker.giyaibo.workers.dev`.
+
+**Working agreements**: commit with terse one-line messages, author Yose `<josejr2498@gmail.com>`. Cap parallel subagents at ~5 (more has OOM-crashed the dev host). Fat artifacts (GeoJSON etc.) go to `public/data`, never the bundle.
+
+**Live-map data gotchas (learned 2026-06)**
+- **Planes**: adsb.lol point+radius caps at **250 NM** (one circle can't span Indonesia) *and* throttles our datacenter/CF IP to ~1 plane *and* sends no CORS — dead both ways for us. Fixed with **OpenSky** `/states/all?bbox` (one whole-archipelago call, ~33 aircraft, 0.9s) from the Worker; its CORS is origin-locked so it can't be client-side, and anonymous credits are per-IP (shared CF IP) so it needs a **free OpenSky API client** → `OPENSKY_CLIENT_ID`/`SECRET` (OAuth2 client_credentials, token cached). adsb.lol grid kept as no-creds fallback.
+- **Ships**: AISStream is a browser WebSocket with one whole-archipelago bbox; key is `PUBLIC_` (inlined, shared → free-tier connection caps), socket now **auto-reconnects** (4s backoff) — it used to freeze on any drop.
+- **Sources**: GEM coal wired (CC-BY). BIG `BANGUNANDANFASUM` health is fragmented per-sheet (incomplete national — don't ship). BNPB `dibi` is now a Superset dashboard (no clean GeoJSON; PetaBencana already covers live hazards). WDPA license forbids redistribution (prefer open GFW/OSM). See `DATA_SOURCES.md`.
+- **Open diagnostics (next)**: volcano feed shows ~5 vs ~127 (MAGMA proxy / bundled registry not loading fully); FIRMS fire dots and others must sit on true lat/lon, not polygon centroids. Pivots queued: OSM hospitals, GFW deforestation, multi-hazard PetaBencana. Note `GradienKeadilan` (justice-gradient viz) already exists — dedupe against it.
