@@ -476,6 +476,15 @@
 
   /* the single info card's contents, derived from the clicked feature's props */
   const VOL_LEVEL = ['', 'Normal · Level I', 'Waspada · Level II', 'Siaga · Level III', 'Awas · Level IV'];
+  /* GVP primary-type → Indonesian label for the dossier */
+  const VOL_TIPE: Record<string, string> = {
+    Stratovolcano: 'Stratovolcano (kerucut)', 'Stratovolcano(es)': 'Stratovolcano (kerucut)',
+    Complex: 'Kompleks', 'Complex(es)': 'Kompleks', Caldera: 'Kaldera', 'Caldera(s)': 'Kaldera',
+    Shield: 'Perisai', 'Shield(s)': 'Perisai', 'Pyroclastic cone': 'Kerucut piroklastik',
+    'Pyroclastic cone(s)': 'Kerucut piroklastik', 'Volcanic field': 'Medan vulkanik',
+    'Lava dome': 'Kubah lava', 'Lava dome(s)': 'Kubah lava', 'Submarine': 'Bawah laut',
+    Maar: 'Maar', 'Maar(s)': 'Maar', Fissure: 'Rekahan', 'Compound': 'Majemuk',
+  };
   function aqiBand(a: number): string {
     if (a <= 50) return 'Baik';
     if (a <= 100) return 'Sedang';
@@ -489,7 +498,14 @@
     const f = fitur; if (!f) return null;
     const p = f.props;
     if (f.kind === 'gempa') return { judul: `Gempa · M${p.mag}`, src: gempaLive ? 'BMKG / USGS · langsung' : 'data contoh', baris: [['Wilayah', String(p.wilayah ?? '-')], ['Waktu', String(p.jam ?? '-')]], catatan: '' };
-    if (f.kind === 'gunungapi') { const lv = N(p.level) || 1; return { judul: String(p.nama ?? 'Gunung api'), src: gunungLive ? 'PVMBG / MAGMA · langsung' : 'registri PVMBG · status menyusul', baris: [['Status', VOL_LEVEL[lv] ?? `Level ${lv}`]], catatan: lv >= 3 ? 'Status tinggi — ikuti arahan & radius bahaya PVMBG.' : '' }; }
+    if (f.kind === 'gunungapi') {
+      const lv = N(p.level) || 1;
+      const baris: [string, string][] = [['Status', VOL_LEVEL[lv] ?? `Level ${lv}`]];
+      if (p.elev != null) baris.push(['Ketinggian', `${N(p.elev).toLocaleString('id-ID')} mdpl`]);
+      if (p.jenis) baris.push(['Tipe', VOL_TIPE[String(p.jenis)] ?? String(p.jenis)]);
+      if (N(p.letus) > 0) baris.push(['Letusan terakhir', String(p.letus)]);
+      return { judul: String(p.nama ?? 'Gunung api'), src: gunungLive ? 'PVMBG / MAGMA · langsung' : 'registri GVP · status PVMBG menyusul', baris, catatan: lv >= 3 ? 'Status tinggi — ikuti arahan & radius bahaya PVMBG.' : '' };
+    }
     if (f.kind === 'udara') { const a = N(p.aqi); return { judul: `Udara · AQI ${a}`, src: 'WAQI · langsung', baris: [['Stasiun', String(p.nama ?? '-')], ['Kategori', aqiBand(a)]], catatan: a > 150 ? 'Kurangi aktivitas luar ruangan.' : '' }; }
     if (f.kind === 'banjir') { const s = N(p.state); return { judul: 'Laporan banjir', src: 'PetaBencana · langsung', baris: [['Lokasi', String(p.nama ?? '-')], ['Siaga', s >= 3 ? 'tinggi' : s >= 2 ? 'sedang' : 'rendah']], catatan: '' }; }
     if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
@@ -807,12 +823,18 @@
             .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
             .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
           if (id === 'gunungapi') {
-            // merge today's PVMBG alert levels onto the registry, by name
+            // merge today's PVMBG alert levels onto the bundled registry, by name.
+            // Names differ between sources (MAGMA "Anak Krakatau" vs GVP "Krakatau",
+            // "Gunung X" prefixes), so match on a stripped key. The registry owns the
+            // coordinates — unmatched MAGMA rows are NEVER pushed (their coords may be
+            // absent/0,0), they'd otherwise drop a dot in the ocean.
+            const key = (s: unknown) => String(s ?? '').toLowerCase()
+              .replace(/\b(gunung|anak|komplek|kompleks|kaldera|g\.)\b/g, '').replace(/[^a-z]/g, '');
             if (pts.length) {
-              const byName = new Map(pts.map((p) => [String(p.nama).toLowerCase(), p]));
-              vol = vol.map((v) => { const m = byName.get(String(v.nama).toLowerCase()); return m ? { ...v, level: m.level ?? v.level } : v; });
-              for (const p of pts) if (!vol.some((v) => String(v.nama).toLowerCase() === String(p.nama).toLowerCase())) vol.push(p as GeoPt);
-              gunungLive = true;
+              const byName = new Map(pts.map((p) => [key(p.nama), p]));
+              let merged = 0;
+              vol = vol.map((v) => { const m = byName.get(key(v.nama)); if (m) merged++; return m ? { ...v, level: m.level ?? v.level } : v; });
+              if (merged) gunungLive = true;
             }
           } else {
             setLayer(id, pts as GeoPt[]);

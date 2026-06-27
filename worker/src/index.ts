@@ -30,6 +30,7 @@ export interface Env {
   EDISI_TOKEN?: string;
   OPENSKY_CLIENT_ID?: string;
   OPENSKY_CLIENT_SECRET?: string;
+  MAGMA_TOKEN?: string;
   CACHE: KVNamespace;
   AI?: { run: (model: string, options: Record<string, unknown>) => Promise<{ response?: string }> };
   MODEL_PRIMARY?: string;
@@ -491,36 +492,43 @@ async function geo(id: string, env: Env, ctx: ExecutionContext): Promise<Respons
         .map((c) => feat(Number(c[iLon]), Number(c[iLat]), { frp: Number(c[iFrp]) || 10 }))
         .filter((f) => Number.isFinite((f.geometry.coordinates as number[])[0]));
     } else if (id === 'gunungapi') {
-      // MAGMA activity levels: every monitored volcano with a precise summit
-      // coordinate + alert level (I Normal .. IV Awas). Field names vary across
-      // MAGMA versions, so parse defensively; an empty result keeps the contoh.
+      // Today's PVMBG alert levels by volcano name (I Normal .. IV Awas). The client
+      // already bundles every summit coordinate (public/data/gunungapi-id.json, from
+      // Smithsonian GVP) and merges these levels onto it by name — so we only need
+      // name + level here. MAGMA's JSON API is token-gated: without MAGMA_TOKEN we
+      // return [] and the client shows the registry honestly as "DAFTAR · status
+      // menyusul" rather than faking a calm Normal everywhere.
       const LEVELS: Record<string, number> = { normal: 1, waspada: 2, siaga: 3, awas: 4 };
       const pick = (o: Record<string, unknown>, keys: string[]): unknown => {
         for (const k of keys) if (o[k] != null) return o[k];
         return undefined;
       };
-      for (const u of [
-        'https://magma.esdm.go.id/v1/gunung-api/tingkat-aktivitas',
-        'https://magma.esdm.go.id/api/v1/magma-var-latest',
-      ]) {
-        const r = await fetch(u, { headers: { Accept: 'application/json', 'User-Agent': 'Mozilla/5.0 DetakDetik/1.0' } });
-        if (!r.ok) continue;
-        const d = (await r.json()) as unknown;
-        const arr = Array.isArray(d)
-          ? d
-          : Array.isArray((d as { data?: unknown[] }).data) ? (d as { data: unknown[] }).data : [];
-        features = (arr as Record<string, unknown>[])
-          .map((v) => {
-            const lon = Number(pick(v, ['longitude', 'lon', 'bujur', 'lng']));
-            const lat = Number(pick(v, ['latitude', 'lat', 'lintang']));
-            const lvl = pick(v, ['level', 'tingkat', 'tingkat_aktivitas', 'status']);
-            const level = typeof lvl === 'number' ? lvl : LEVELS[String(lvl).toLowerCase()] ?? 1;
-            const nama = String(pick(v, ['name', 'nama', 'gunung', 'ga_name']) ?? '');
-            return { lon, lat, level, nama };
-          })
-          .filter((v) => Number.isFinite(v.lon) && Number.isFinite(v.lat))
-          .map((v) => feat(v.lon, v.lat, { level: v.level, nama: v.nama }));
-        if (features.length) break;
+      if (env.MAGMA_TOKEN) {
+        const r = await fetch('https://magma.esdm.go.id/api/v1/magma-var', {
+          headers: { Accept: 'application/json', Authorization: `Bearer ${env.MAGMA_TOKEN}` },
+          signal: AbortSignal.timeout(9000),
+        });
+        // Guard: an expired token or maintenance page answers 200 text/html. Parsing
+        // that as JSON is exactly the silent failure that left levels dead before — so
+        // only proceed when the body is genuinely JSON.
+        const isJson = (r.headers.get('content-type') ?? '').includes('json');
+        if (r.ok && isJson) {
+          const d = (await r.json()) as unknown;
+          const arr = Array.isArray(d)
+            ? d
+            : Array.isArray((d as { data?: unknown[] }).data) ? (d as { data: unknown[] }).data : [];
+          features = (arr as Record<string, unknown>[])
+            .map((v) => {
+              const lon = Number(pick(v, ['longitude', 'lon', 'bujur', 'lng']));
+              const lat = Number(pick(v, ['latitude', 'lat', 'lintang']));
+              const lvl = pick(v, ['level', 'tingkat', 'tingkat_aktivitas', 'status', 'var_level']);
+              const level = typeof lvl === 'number' ? lvl : LEVELS[String(lvl).toLowerCase()] ?? 1;
+              const nama = String(pick(v, ['name', 'nama', 'gunung', 'ga_name', 'volcano_name']) ?? '');
+              // levels merge by name on the client; coords are best-effort (0,0 if absent)
+              return feat(Number.isFinite(lon) ? lon : 0, Number.isFinite(lat) ? lat : 0, { level, nama });
+            })
+            .filter((f) => String((f.properties as { nama?: string }).nama ?? '').length > 0);
+        }
       }
     } else if (id === 'pesawat') {
       // one OpenSky bbox call covers the whole archipelago; adsb.lol grid is the
