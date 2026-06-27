@@ -152,7 +152,7 @@ lens morphs.
 
 - **Native CSS scroll-driven animation** (`animation-timeline: scroll()`/`view()`)
   for ambient reveals and scroll-linked motion. It runs on the compositor thread, so
-  it stays smooth on a Galaxy A12 where JS scroll handlers would chug.
+  it stays smooth on a budget Android phone where JS scroll handlers would chug.
 - **GSAP** (full free plugin suite: ScrollTrigger, SplitText, Flip, MorphSVG) reserved
   for orchestrated work: tour choreography, the signature motions, headline reveals.
 - One motion engine for the orchestrated layer, one easing vocabulary, consistent
