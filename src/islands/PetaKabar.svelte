@@ -192,7 +192,6 @@
   const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson`;
   const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson`;
   const PROVLINES_URL = `${import.meta.env.BASE_URL}data/idn-prov-lines.geojson`;
-  let kabPopup: import('maplibre-gl').Popup | undefined;
   type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
   type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
   let provData: { features: ProvFeature[] } | null = null;
@@ -253,6 +252,24 @@
           paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.22, 8, 0.7], 'line-opacity': 0.3 },
         }, below);
       }
+      // kabupaten names: fade in as you zoom past a province, decluttered, in the
+      // map's own font — replaces the default-box popup (one real kab name per
+      // label, never the province repeated). Subtler than the bold province label.
+      if (!map.getLayer('kab-lab')) {
+        map.addLayer({
+          id: 'kab-lab', type: 'symbol', source: 'kab', minzoom: 6.5,
+          layout: {
+            visibility: vis, 'text-field': ['get', 'nama'], 'text-font': ['Noto Sans Regular'],
+            'text-size': ['interpolate', ['linear'], ['zoom'], 6.5, 9, 10, 12.5],
+            'text-letter-spacing': 0.02, 'text-padding': 3, 'text-max-width': 7,
+          },
+          paint: {
+            'text-color': sat ? '#e9e2cf' : '#3a3326',
+            'text-halo-color': sat ? '#15130e' : '#e8dec0', 'text-halo-width': 1.3,
+            'text-opacity': ['interpolate', ['linear'], ['zoom'], 6.5, 0, 7.2, 0.92],
+          },
+        }, below);
+      }
       // bold province outlines: BIG's dissolved boundary lines (no internal kab edges)
       if (!map.getSource('provlines')) map.addSource('provlines', { type: 'geojson', data: PROVLINES_URL });
       if (!map.getLayer('prov-line')) {
@@ -285,7 +302,7 @@
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'prov-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'kab-lab', 'prov-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
   }
@@ -1006,18 +1023,14 @@
         map.on('mouseenter', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = 'pointer'; });
         map.on('mouseleave', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = ''; });
       }
-      // click a kabupaten: identify it (popup) and set its province as the lensa
+      // click a kabupaten: set its province as the lensa. Its name reads off the
+      // zoomed-in map labels (kab-lab), not a popup — keeps the no-default-box rule.
       map.on('click', 'kab-fill', (e) => {
         if (titikMode) return; // armed for a point report: let the map click handle it
-        const p = e.features?.[0]?.properties as { nama?: string; prov?: string } | undefined;
-        if (!p) return;
+        const p = e.features?.[0]?.properties as { prov?: string } | undefined;
+        if (!p?.prov) return;
         titik = null;
-        if (p.prov) dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
-        if (p.nama && map) {
-          kabPopup?.remove();
-          kabPopup = new maplibregl.Popup({ closeButton: true, offset: 10, className: 'kb-pop' })
-            .setLngLat(e.lngLat).setText(p.nama).addTo(map);
-        }
+        dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
       });
       // a bare-map click: drop the location panel if armed, else close the info card
       const DOT_LAYERS = ['gempa-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
