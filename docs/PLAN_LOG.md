@@ -185,9 +185,25 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
   layer 12), grouped by name → joined on the existing 2-digit BPS `kode` (all 38 match,
   the 6 Papua provinces now correctly placed). Hand-rolled Douglas-Peucker + tiny-island
   filter → 156K, no new dep. Generator kept at `gen-prov.js` (re-runnable).
-- [ ] **Kabupaten (ADM2) drill-down** — now unblocked: BIG layer 13 (kab polygons) has
-  the same schema (`KDBBPS`/`KDPKAB` 4-digit + `WADMKK` name); reuse the group/simplify
-  recipe → a clickable kabupaten layer + the BPS↔Kemendagri bridge.
+- [ ] **Kabupaten (ADM2) drill-down** — fully scoped, ready to build. Decided UX (with
+  owner): click a kab → show the kab + set its province lensa; thin kab borders, bold
+  province borders. **SNAG:** BIG's code fields (`KDBBPS`/`KDPBPS`) are **blank** in the
+  public RBI features (only names populated) → join by NAME. RECIPE:
+  1. Fetch `BATASWILAYAH/Administrasi_AR_KabKota_50K/MapServer/0/query?where=1=1&
+     outFields=WADMKK,WADMPR&f=geojson&maxAllowableOffset=0.01&geometryPrecision=4&outSR=4326`
+     (548 features, ~2.5M raw, slow). `WADMKK`=kab name, `WADMPR`=prov name.
+  2. Generate `public/data/idn-kab.geojson`: group parts by (prov, `WADMKK`) → kab
+     MultiPolygons; `prov` = 2-digit `kode` via the WADMPR→kode map (from the current
+     idn-prov.geojson — all 38 match); `nama` = WADMKK. Reuse `gen-prov.js` (Douglas-Peucker
+     + tiny-island filter, POLY_MIN ~0.03) → target <~500K. (No kab BPS code until kab-level
+     metrics exist; then add a WADMKK→4-digit-BPS table.)
+  3. Bold province outlines: fetch `BATAS_WILAYAH/MapServer/8` (polyline, dissolved province
+     borders) → `public/data/idn-prov-lines.geojson` (simplify; small).
+  4. Wire (Option X-lite, low risk — keeps the choropleth/lensa logic intact): keep
+     `provinsi-fill` (choropleth) + `provinsi-sel`; **drop `provinsi-line`** (the
+     internal-kab-line culprit); add `prov-line` (bold, from idn-prov-lines) + a `kab`
+     source → `kab-line` (thin) + `kab-fill` (transparent, clickable). Click a kab →
+     `set_lensa(prov)` + a `map_label` of the kab `nama`.
 - [ ] **SPPG / MBG kitchens** (`Hosted/SPPGJuli2025/FeatureServer/0`, BGN, ~9,407
   units @ 2025-09). FeatureServer query came back empty on probe (token/CORS?) → needs
   a worker-side probe; likely a `/geo/sppg` proxy + clustering. Ties to Act II MBG.
