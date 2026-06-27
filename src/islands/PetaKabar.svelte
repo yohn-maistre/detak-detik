@@ -127,6 +127,12 @@
       { lon: 117.0, lat: -4.0, nama: 'kapal contoh', kecepatan: 9, track: 200 },
       { lon: 112.7, lat: -6.1, nama: 'kapal contoh', kecepatan: 14, track: 310 },
     ],
+    karbon: [
+      { lon: 113.585, lat: -7.715, co2: 19.5, nama: 'PLTU Paiton', jenis: 'coal' },
+      { lon: 106.05, lat: -5.9, co2: 17.2, nama: 'PLTU Suralaya', jenis: 'coal' },
+      { lon: 111.49, lat: -6.46, co2: 9.1, nama: 'PLTU Tanjung Jati B', jenis: 'coal' },
+      { lon: 106.74, lat: -6.1, co2: 4.6, nama: 'PLTGU Muara Karang', jenis: 'gas' },
+    ],
   };
 
   type LayerDef = { id: string; nama: string; sym: string; sumber: string; shape: string; color: string; size: number | unknown[]; rotate?: boolean; trail?: boolean };
@@ -141,10 +147,12 @@
       size: ['interpolate', ['linear'], ['get', 'frp'], 20, 0.55, 80, 1.25] },
     { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
     { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
+    { id: 'karbon', nama: 'EMISI CO₂', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
+      size: ['interpolate', ['linear'], ['get', 'co2'], 0.5, 0.5, 20, 1.6] },
   ];
 
-  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
-  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false });
+  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false });
+  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false });
   /* a layer fetched live but came back empty (no active fires/floods today) — shown
      honestly as NIHIL, never silently backfilled with contoh */
   let layerKosong = $state<Record<string, boolean>>({});
@@ -445,6 +453,7 @@
     if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
     if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'adsb.lol · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
+    if (f.kind === 'karbon') return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris: [['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`], ['Jenis', String(p.jenis ?? '-')], ['Kapasitas', p.kapasitas ? `${N(p.kapasitas).toLocaleString('id-ID')} MW` : '-'], ['Pemilik', String(p.pemilik ?? '-')]], catatan: 'Estimasi independen berbasis satelit.' };
     return null;
   });
 
@@ -540,6 +549,8 @@
       x.lineTo(m - s * 0.07, m - s * 0.02); x.closePath(); x.fill(); edge();
     } else if (shape === 'ship') {
       x.beginPath(); x.moveTo(m, m - s * 0.32); x.lineTo(m + s * 0.18, m + s * 0.26); x.lineTo(m, m + s * 0.14); x.lineTo(m - s * 0.18, m + s * 0.26); x.closePath(); x.fill(); edge();
+    } else if (shape === 'disc') {
+      x.beginPath(); x.arc(m, m, s * 0.26, 0, Math.PI * 2); x.fill(); edge();
     }
     return x.getImageData(0, 0, s, s);
   }
@@ -687,6 +698,26 @@
         .map((f) => ({ lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN, state: Number(f.properties?.state ?? 1), nama: String(f.properties?.title ?? 'laporan') }))
         .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
       setLayer('banjir', pts as GeoPt[]);
+    } catch { /* contoh stays */ }
+
+    // Climate TRACE: Indonesia's largest power-sector CO2 emitters (independent,
+    // satellite-derived), placed by asset, sized by annual tonnage. Keyless, CC-BY.
+    try {
+      const res = await fetch('https://api.climatetrace.org/v6/assets?countries=IDN&sectors=power&limit=400', { signal: AbortSignal.timeout(8000) });
+      const data = (await res.json()) as { assets?: { Name?: string; AssetType?: string; bbox?: number[]; EmissionsSummary?: { EmissionsQuantity?: number; Capacity?: number }[]; Owners?: { CompanyName?: string }[] }[] };
+      const pts = (data.assets ?? [])
+        .map((a) => {
+          const bb = a.bbox ?? [];
+          const es = a.EmissionsSummary?.[0];
+          return {
+            lon: (Number(bb[0]) + Number(bb[2])) / 2, lat: (Number(bb[1]) + Number(bb[3])) / 2,
+            co2: (es?.EmissionsQuantity ?? 0) / 1e6, kapasitas: es?.Capacity ?? 0,
+            nama: a.Name ?? 'aset', jenis: a.AssetType ?? '', pemilik: a.Owners?.[0]?.CompanyName ?? '',
+          };
+        })
+        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat) && p.co2 > 0)
+        .sort((a, b) => b.co2 - a.co2);
+      if (pts.length) setLayer('karbon', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
     if (AKSARA_URL) {
