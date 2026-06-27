@@ -180,10 +180,14 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
 - [x] **Climate TRACE CO₂ emitters** (`karbon`; v6/assets, browser-direct, CC-BY,
   sized by Mt/yr). DONE. *Future:* cached `/geo/karbon` worker route to respect the
   beta API; add sectors (oil-and-gas, coal-mining, cement).
-- [ ] **BIG BATASWILAYAH → replace `public/data/idn-prov.geojson`** (PRIORITY: our
-  bundled province polygons are inaccurate, esp. Papua). BIG = authoritative One-Map,
-  confirmed browser-direct (`geoservices.big.go.id/rbi`, CORS reflects origin). Also
-  unlocks accurate **kabupaten (ADM2)** drill-down. Supersedes the geoBoundaries plan.
+- [x] **BIG BATASWILAYAH → `public/data/idn-prov.geojson`** — DONE (commit 13a0e98).
+  Province polygons swapped for BIG's authoritative One-Map boundaries (BATAS_WILAYAH
+  layer 12), grouped by name → joined on the existing 2-digit BPS `kode` (all 38 match,
+  the 6 Papua provinces now correctly placed). Hand-rolled Douglas-Peucker + tiny-island
+  filter → 156K, no new dep. Generator kept at `gen-prov.js` (re-runnable).
+- [ ] **Kabupaten (ADM2) drill-down** — now unblocked: BIG layer 13 (kab polygons) has
+  the same schema (`KDBBPS`/`KDPKAB` 4-digit + `WADMKK` name); reuse the group/simplify
+  recipe → a clickable kabupaten layer + the BPS↔Kemendagri bridge.
 - [ ] **SPPG / MBG kitchens** (`Hosted/SPPGJuli2025/FeatureServer/0`, BGN, ~9,407
   units @ 2025-09). FeatureServer query came back empty on probe (token/CORS?) → needs
   a worker-side probe; likely a `/geo/sppg` proxy + clustering. Ties to Act II MBG.
@@ -268,5 +272,6 @@ current as each item lands.
   **Migrated Astro 6 → 7** (Rust compiler + Vite 8/Rolldown; build 2m27s → ~50s;
   `.node-version` 22.23.1 pins CF Pages; both deploys green). Shipped two map
   features: **Open-Meteo flood + marine** in the click-report, and the **Climate
-  TRACE CO₂ emitters** layer. Added research notes under `docs/research/` (map
+  TRACE CO₂ emitters** layer, and **replaced the province polygons with BIG Rupabumi**
+  (accurate, BPS-coded, Papua fixed). Added research notes under `docs/research/` (map
   candidates, Act III data, Astro 7, + Act I/III revamp briefs). Backlog → §4.5.
