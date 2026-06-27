@@ -4,8 +4,11 @@
 > mid-June 2026) and `docs/ROADMAP.md` (kept for history), this file tracks the
 > **actual built state** read off the code, and the **next concrete moves**.
 > The codebase is ground truth; where the older docs disagree, the code wins.
-> Update the "Status" table and "Next steps" as work lands. Append to the
-> changelog at the bottom each session.
+> **STANDING RULE — keep this alive.** This is the single source of truth for the
+> current built state + active plans. Every session: update the Status table (§3),
+> the §4.5 workstream checklist, and the changelog as work lands; if anything here
+> is stale, fix it first. Keep `DATA_SOURCES.md` (new endpoints + recency),
+> `CLAUDE.md` §4, and `AGENTS.md` current alongside it.
 >
 > Last full read: 2026-06-26. **2026-06-27:** local env now live (Node 22 via
 > tarball, pnpm 9 via corepack, deps installed); **migrated to Astro 7** (build
@@ -185,31 +188,20 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
   layer 12), grouped by name → joined on the existing 2-digit BPS `kode` (all 38 match,
   the 6 Papua provinces now correctly placed). Hand-rolled Douglas-Peucker + tiny-island
   filter → 156K, no new dep. Generator kept at `gen-prov.js` (re-runnable).
-- [ ] **Kabupaten (ADM2) drill-down** — fully scoped, ready to build. Decided UX (with
-  owner): click a kab → show the kab + set its province lensa; thin kab borders, bold
-  province borders. **SNAG:** BIG's code fields (`KDBBPS`/`KDPBPS`) are **blank** in the
-  public RBI features (only names populated) → join by NAME. RECIPE:
-  1. Fetch `BATASWILAYAH/Administrasi_AR_KabKota_50K/MapServer/0/query?where=1=1&
-     outFields=WADMKK,WADMPR&f=geojson&maxAllowableOffset=0.01&geometryPrecision=4&outSR=4326`
-     (548 features, ~2.5M raw, slow). `WADMKK`=kab name, `WADMPR`=prov name.
-  2. Generate `public/data/idn-kab.geojson`: group parts by (prov, `WADMKK`) → kab
-     MultiPolygons; `prov` = 2-digit `kode` via the WADMPR→kode map (from the current
-     idn-prov.geojson — all 38 match); `nama` = WADMKK. Reuse `gen-prov.js` (Douglas-Peucker
-     + tiny-island filter, POLY_MIN ~0.03) → target <~500K. (No kab BPS code until kab-level
-     metrics exist; then add a WADMKK→4-digit-BPS table.)
-  3. Bold province outlines: fetch `BATAS_WILAYAH/MapServer/8` (polyline, dissolved province
-     borders) → `public/data/idn-prov-lines.geojson` (simplify; small).
-  4. Wire (Option X-lite, low risk — keeps the choropleth/lensa logic intact): keep
-     `provinsi-fill` (choropleth) + `provinsi-sel`; **drop `provinsi-line`** (the
-     internal-kab-line culprit); add `prov-line` (bold, from idn-prov-lines) + a `kab`
-     source → `kab-line` (thin) + `kab-fill` (transparent, clickable). Click a kab →
-     `set_lensa(prov)` + a `map_label` of the kab `nama`.
+- [x] **Kabupaten (ADM2) drill-down** — DONE (commit 58c9a5d). `idn-kab.geojson` (515
+  kabupaten, BIG KabKota joined to the province `kode` **by NAME** — BIG's code fields come
+  back blank) + `idn-prov-lines.geojson` (1334 dissolved province-boundary segments, BIG
+  layer 8). PetaKabar: dropped `provinsi-line`; added thin `kab-line`, bold `prov-line`, and
+  a transparent clickable `kab-fill` → click a kab and its name pops + its province becomes
+  the lensa. Choropleth/selection unchanged. (Future: kab-level metrics need a WADMKK→4-digit
+  -BPS table. Generators `gen-kab.js`/`gen-lines.js`/`gen-prov.js` live in session scratch.)
 - [ ] **SPPG / MBG kitchens** (`Hosted/SPPGJuli2025/FeatureServer/0`, BGN, ~9,407
   units @ 2025-09). FeatureServer query came back empty on probe (token/CORS?) → needs
   a worker-side probe; likely a `/geo/sppg` proxy + clustering. Ties to Act II MBG.
 - [ ] **BIG health points** (layer 732, browser-direct GeoJSON) — supersedes
   healthsites.io. Paginate (`exceededTransferLimit`, 1000/page).
-- [ ] **IMERG rainfall** raster overlay (NASA GIBS, drop-in like the CUACA radar).
+- [x] **IMERG rainfall** overlay — DONE (commit 1fc14a2). Toggleable GIBS raster (legend),
+  `GoogleMapsCompatible_Level6`, ~3-day-lag date; better over Indonesia than the radar.
 - [ ] Later: WDPA protected areas, GFW deforestation alerts, GEM coal, WorldPop/Kontur.
 
 ### Track 2 · Act I revamp — brief: `docs/research/act1-revamp-brief.md`
@@ -291,3 +283,7 @@ current as each item lands.
   TRACE CO₂ emitters** layer, and **replaced the province polygons with BIG Rupabumi**
   (accurate, BPS-coded, Papua fixed). Added research notes under `docs/research/` (map
   candidates, Act III data, Astro 7, + Act I/III revamp briefs). Backlog → §4.5.
+- **2026-06-27 (cont.)** — Shipped the **IMERG rainfall** overlay and the **kabupaten
+  (ADM2) drill-down** (BIG KabKota name-joined + BIG layer-8 dissolved lines; thin kab +
+  bold province, click a kab → name popup + province lensa). Scrubbed a device-model
+  mention from `LEMBARAN_DESIGN.md`. Six new map data surfaces shipped this session.

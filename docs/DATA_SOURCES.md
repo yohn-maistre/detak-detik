@@ -9,6 +9,21 @@ fetches from the Cloudflare Worker cron (edge IPs fare better) and treat
 every dark source as a Data Hilang note, never a crash. Stable exceptions:
 BMKG, data.go.id CKAN, DJPK.
 
+## Wired & live (2026-06-27) — keep this list current
+
+New map / click-report sources wired this session. Browser-direct unless noted;
+each layer carries its source + license per the iron laws.
+
+- **Open-Meteo Flood** (GloFAS river discharge) — `flood-api.open-meteo.com/v1/flood`, keyless, CC-BY. Click-report (river only where modelled).
+- **Open-Meteo Marine** (wave height/period/direction) — `marine-api.open-meteo.com/v1/marine`, keyless, CC-BY. Click-report (coastal).
+- **Climate TRACE v6** (asset-level CO₂e) — `api.climatetrace.org/v6/assets?countries=IDN&sectors=power`, keyless, CC-BY. v5.8.0, data through Apr 2026. "EMISI CO₂" layer (sized by tonnage). NOTE: it is **v6**, not v7; assets carry `bbox` (centroid) + `EmissionsSummary[0].EmissionsQuantity`.
+- **NASA GIBS IMERG** (rainfall) — `gibs.earthdata.nasa.gov/wmts/epsg3857/best/IMERG_Precipitation_Rate/default/{date}/GoogleMapsCompatible_Level6/{z}/{y}/{x}.png`, keyless. ~3-day lag (request a past date). "HUJAN" overlay.
+- **BIG Rupabumi** (`geoservices.big.go.id/rbi`) — authoritative One-Map, **browser-direct** (CORS reflects origin), `f=geojson`. Used: province polygons (`BATAS_WILAYAH` layer 12), kabupaten (`Administrasi_AR_KabKota_50K`), province boundary lines (layer 8). **GOTCHA:** the BPS code fields (`KDPBPS`/`KDBBPS`) come back **blank** → join by NAME (`WADMPR`/`WADMKK`). Replaced the inaccurate bundled province polygons + powers the kabupaten drill-down.
+
+Researched, not yet wired (see `docs/research/2026-06-27-*.md` + PLAN_LOG §4.5):
+SPPG/MBG kitchens (BGN — national FeatureServer needs a worker probe), BIG health
+points (RBI layer 732), WDPA protected areas, GFW deforestation, GEM coal.
+
 ## TRIVIAL — wire these first
 
 | Metric | Endpoint | Auth | Cadence |

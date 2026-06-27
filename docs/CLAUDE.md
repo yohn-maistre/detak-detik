@@ -6,6 +6,10 @@
 > reference for deeper detail. The page itself is the deliverable, and it is
 > already substantially built — this document tells future-you where things are
 > and where we are going.
+>
+> **Living docs (keep alive):** this file is the constitution — laws, design,
+> decisions. The *current built state + active plans* live in `docs/PLAN_LOG.md`;
+> keep it, this §4, `docs/DATA_SOURCES.md`, and `AGENTS.md` updated every session.
 
 ---
 
@@ -89,17 +93,19 @@ Full detail: `docs/LEMBARAN_DESIGN.md`, `docs/AMD-DESIGN.md`,
 ## 4. Current state (what is built, mid-June 2026)
 
 The three-act front page is built and deployed (Cloudflare Pages), all sample
-data marked `(data contoh)`. Highlights of the current session's work:
+data marked `(data contoh)`. This section is the mid-June snapshot; for the
+always-current built-state read off the code (and the live newsroom→page gap
+analysis), see `docs/PLAN_LOG.md`. Highlights of the current session's work:
 
 - **Act I:** the live MapLibre map (`PetaKabar.svelte`) with five real,
   toggleable, color-coded layers (provinces-clickable, quakes, volcanoes, air,
   floods, fire) wired to a Worker `/geo` proxy with contoh fallbacks; a clickable
-  province layer driving the **lensa** store; the **Lensa Daerah** region lens
-  (`KartuWilayah.svelte`, 38 provinces + search + comparative spread); a region
-  **dossier** (`RegionDossier.svelte`) beneath the map; **Pasar Pagi**, the
-  data-dense **Harga Pangan** wave (`Gelombang.svelte`), the vital-signs
-  **Indeks Pagi**, and **Sensus Diri**. The masthead has a ticking clockwork
-  second-ring.
+  province layer driving the **lensa** store; the **morphing region lens**
+  (`LensaWilayah.svelte`, 38 provinces + search + comparative spread; shows the
+  national base and morphs to a clicked province; it replaced `KartuWilayah`,
+  `RegionDossier`, and `IndeksPagi`); **Pasar Pagi**, the data-dense
+  **Harga Pangan** wave (`Gelombang.svelte`), and **Sensus Diri**. The masthead
+  has a ticking clockwork second-ring.
 - **Act II:** the five branches each open their own chapter via `CabangBand`
   (executive→Kuasa, legislative→Pabrik UU, judiciary→Hukum, Aparat,
   regions→Ekonomi), led by a slim "Lima Cabang" index; the Angka Edisi odometer
@@ -156,7 +162,10 @@ Sequencing chosen with the user: **fixes + Act I consolidation → SIRUP page �
 markets/economy → multi-agent newsroom → Aksara chart renderer → RAG + wire
 everything (last).**
 
-### A. Immediate fixes
+### A. Immediate fixes — DONE
+(Landed: crosshair and map breathe-drift removed, the corner countdown reframed
+to "PEMBARUAN BERIKUTNYA", the header tagline demoted, the Act III pull-quote and
+`IngatanHero` removed. List kept below as the record.)
 1. Remove the cursor crosshair coordinate readout (`choreo.ts` `crosshair()` +
    `[data-crosshair]`); keep the map's own center-coordinate chip.
 2. Remove the perpetual "earth rotating" map drift (`PetaKabar.svelte`
@@ -171,7 +180,7 @@ everything (last).**
    remove the redundant `IngatanHero` (its Diponegoro painting duplicates Galeri).
 7. Footer + README refresh (README now done; footer pending).
 
-### B. Act I as Aksara's playground (the consolidation) — DECISION: one component
+### B. Act I as Aksara's playground (the consolidation) — SHIPPED (`LensaWilayah.svelte`)
 - **One morphing region component** (`LensaWilayah.svelte`) replaces
   `RegionDossier` + `KartuWilayah` and absorbs the **Indeks Pagi** national role.
   It shows the national base ("Angka Dasar Nasional") by default and **morphs to
@@ -208,7 +217,7 @@ Danantara DHE / under-invoicing. Re-run the two queued research agents (econ dat
 6–8. Expand the house chart kit (`chart-kit.ts`) to many shapes (slope, dumbbell,
 beeswarm, waffle, range-band, choropleth, candlestick, small-multiples…).
 
-### E. Daily automation — multi-agent newsroom (STACK SETTLED; backbone + HUKUM shipped)
+### E. Daily automation — multi-agent newsroom (STACK SETTLED; backbone + 7 desks shipped)
 The newsroom is **Python** in `newsroom/`, run twice daily by GitHub Actions
 (`.github/workflows/newsroom.yml`), publishing by `POST /edisi` to the worker (KV
 runtime, no rebuild; the site reads it via `src/lib/edition.ts`). Stack:
@@ -219,15 +228,17 @@ free Worker's ~10 ms CPU cap can't run an LLM batch). Mastra was assessed and re
 (no native retry-with-feedback). Keys live in **repo Secrets**; non-secret config in
 **repo Variables**; the `NEWSROOM_ENABLED` Variable gates the run. See `docs/NEWSROOM.md`.
 
-Shipped this round: the **backbone** (orchestrator, LLM lane + fallback, fact-gate,
-Redaktur Hukum lawyer pass, editor, publish, JSONL log) + the first real beat, the
-**HUKUM desk** (corruption-verdict corpus from MA Direktori Putusan + ICW; seed
-dataset now, live-fetch seam left). The HUKUM desk produces the **Angka Edisi**, which
-was de-duplicated on the front: the Act I band is removed, the Act II odometer
-(`#angka-odometer`) is the sole, live-fed number (choreo exposes `window.setAngkaEdisi`,
-called by `pagi-live.ts`). Next: clone the desk shape for the other beats
-(anggaran, hutan, janji, harga, daerah, dunia, papua), then the layout/puzzle/opinion
-desks.
+Shipped: the **backbone** (orchestrator, LLM lane + fallback, fact-gate,
+Redaktur Hukum lawyer pass, editor, publish, JSONL log) + **seven beats now live
+as desks** (`newsroom/desks/`: hukum, anggaran, harga, hutan, janji, papua,
+data_hilang), each on a seed corpus with the live-fetch seam left. The HUKUM desk
+produces the **Angka Edisi**, which was de-duplicated on the front: the Act I band
+is removed, the Act II odometer (`#angka-odometer`) is the sole, live-fed number
+(choreo exposes `window.setAngkaEdisi`, called by `pagi-live.ts`). Next: **wire the
+published output onto the page** — the editor emits ranked `temuan[]` with bodies
+that the front does not yet render (see `docs/PLAN_LOG.md` priority #1, the
+newsroom→page loop, plus the dead `agenda`/`makro` wires), then the
+layout/puzzle/opinion desks.
 
 ### F. Aksara chart renderer, then RAG (last)
 Wire `render_chart` / `show_table` into the playground (the panel under the map);
@@ -239,6 +250,7 @@ returning `{jawaban, cited_ids}` + page commands, wired to live data + NIM.
 | Doc | Owns |
 |-----|------|
 | **`CLAUDE.md`** (this) | The master: laws, design standard, current state, decisions, roadmap, session log. |
+| `PLAN_LOG.md` | The live built-state read off the code + the gap analysis + next concrete moves; updated each session. |
 | `LEMBARAN_DESIGN.md`, `AMD-DESIGN.md` | The look: tokens, type, registers, signature motions, share-cards. |
 | `COMMAND_CATALOG.md` | The command bus: every verb, Zod schemas, tour format. |
 | `DATA_CONTRACTS.md` | The rows: region table, schemas, the graph ontology, the lens socket, edisi.json shape. |
@@ -294,8 +306,10 @@ as the way it "points"; SIRUP must stay strictly neutral (no "absurd" verdict).
 
 ## 10. Where to pick up
 
-Start at section 6 (the roadmap). The next concrete work is **A (immediate
-fixes)** and **B (the one morphing region component + clickable province
-polygons)**. Re-run the two queued research agents for the markets data and the
-ADM1 GeoJSON before building D. The page is real and deployed; build, screenshot,
-commit, push.
+Start at `docs/PLAN_LOG.md` (the live built-state + gap analysis), then section 6
+here. **A and B are done.** The next concrete work is **closing the newsroom→page
+loop** (PLAN_LOG priority #1: render the published `temuan[]` onto Act I/II, fix
+the dead `agenda`/`makro` wires), then **C (SIRUP)** or **D (markets)** — re-run
+the two queued research agents for the markets data and the ADM1 GeoJSON before
+building D — with **F (Aksara chart renderer + RAG)** last. The page is real and
+deployed; build, screenshot, commit, push.
