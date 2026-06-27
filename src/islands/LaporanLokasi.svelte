@@ -44,11 +44,15 @@
     suhu: number; lembap: number; kode: number; angin: number; arah: number; hujan: number;
   } | null;
   type Udara = { pm25: number; aqi: number } | null;
+  type Banjir = { debit: number; rerata: number; tren: number[] } | null;
+  type Laut = { tinggi: number; periode: number; arah: number } | null;
 
   let memuat = $state(true);
   let langsung = $state(false);
   let sekarang = $state<Sekarang>(null);
   let udara = $state<Udara>(null);
+  let banjir = $state<Banjir>(null);
+  let laut = $state<Laut>(null);
   /** 8 wind-rose sectors, summed hourly speed per compass octant */
   let mawar = $state<number[]>([]);
   /** month (0..11) × hour (0..23) mean temperature, the thermal matrix */
@@ -142,7 +146,7 @@
 
   async function muat() {
     memuat = true; langsung = false;
-    sekarang = null; udara = null; matriks = null; mawar = [];
+    sekarang = null; udara = null; banjir = null; laut = null; matriks = null; mawar = [];
     const q = `latitude=${lat.toFixed(3)}&longitude=${lon.toFixed(3)}`;
 
     // current weather + a week of hourly wind for the rose
@@ -187,6 +191,34 @@
       }
     } catch { /* contoh stays */ }
 
+    // river discharge (Open-Meteo Flood / GloFAS) — a "rivers in flood" signal,
+    // only meaningful where the cell sits on a modelled river (null/0 inland)
+    try {
+      const r = await fetch(
+        `https://flood-api.open-meteo.com/v1/flood?${q}&daily=river_discharge,river_discharge_mean&forecast_days=3`,
+        { signal: AbortSignal.timeout(7000) },
+      );
+      const d = (await r.json()) as { daily?: { river_discharge?: (number | null)[]; river_discharge_mean?: (number | null)[] } };
+      const rd = (d.daily?.river_discharge ?? []).filter((x): x is number => x != null);
+      if (rd.length && rd[0]! > 0) {
+        banjir = { debit: rd[0]!, rerata: d.daily?.river_discharge_mean?.[0] ?? rd[0]!, tren: rd };
+        langsung = true;
+      }
+    } catch { /* contoh stays */ }
+
+    // wave / sea state (Open-Meteo Marine) — meaningful on or near the coast
+    try {
+      const r = await fetch(
+        `https://marine-api.open-meteo.com/v1/marine?${q}&current=wave_height,wave_period,wave_direction&timezone=auto`,
+        { signal: AbortSignal.timeout(7000) },
+      );
+      const d = (await r.json()) as { current?: { wave_height?: number; wave_period?: number; wave_direction?: number } };
+      if (d.current && d.current.wave_height != null) {
+        laut = { tinggi: d.current.wave_height, periode: d.current.wave_period ?? NaN, arah: d.current.wave_direction ?? NaN };
+        langsung = true;
+      }
+    } catch { /* contoh stays */ }
+
     // the thermal matrix: a year of hourly temperature, folded to month×hour means
     try {
       const end = new Date(Date.now() - 6 * 86_400_000); // archive lags ~5 days
@@ -225,6 +257,8 @@
     const parts: string[] = [`Laporan untuk ${provinsi}, ${koord}.`];
     if (sekarang) parts.push(`Saat ini ${fmt1(sekarang.suhu)}°C, ${wmoTeks(sekarang.kode)}, angin dari ${arahMata(sekarang.arah)}.`);
     if (udara) parts.push(`Indeks udara ${Math.round(udara.aqi)} (${aqiBand(udara.aqi).teks}).`);
+    if (banjir) parts.push(`Debit sungai ${fmt1(banjir.debit)} m³/s.`);
+    if (laut) parts.push(`Gelombang laut ${fmt1(laut.tinggi)} m.`);
     if (bahaya) parts.push(bahaya);
     dispatch({ cmd: 'say', params: { teks: parts.join(' ').slice(0, 270), cited_ids: [], tahan_ms: 8000 } });
   }
@@ -279,6 +313,12 @@
       {#if udara}
         <span class="ll-aqi"><b style={`color:${aqiBand(udara.aqi).warna}`}>{Math.round(udara.aqi)}</b> udara · {aqiBand(udara.aqi).teks}</span>
       {/if}
+      {#if banjir}
+        <span class="ll-sungai"><b>{fmt1(banjir.debit)}</b> m³/s debit sungai</span>
+      {/if}
+      {#if laut}
+        <span class="ll-laut"><b>{fmt1(laut.tinggi)}</b> m gelombang{#if Number.isFinite(laut.periode)} · {fmt1(laut.periode)}s{/if}{#if Number.isFinite(laut.arah)} · {arahMata(laut.arah)}{/if}</span>
+      {/if}
     </div>
 
     <div class="ll-mat">
@@ -294,7 +334,7 @@
 
     <footer class="ll-foot">
       <span class="ll-tag" class:live={langsung}>{langsung ? 'OPEN-METEO · LANGSUNG' : 'DATA CONTOH'}</span>
-      <span class="ll-src">cuaca &amp; udara: Open-Meteo (CC-BY)</span>
+      <span class="ll-src">cuaca, udara, sungai &amp; laut: Open-Meteo (CC-BY)</span>
     </footer>
   {/if}
 </aside>
@@ -332,7 +372,7 @@
 
   .ll-stats { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 9px; letter-spacing: 0.05em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 8px; }
   .ll-stats b { color: var(--ink); font-weight: 600; font-size: 11px; }
-  .ll-aqi { flex-basis: 100%; }
+  .ll-aqi, .ll-sungai, .ll-laut { flex-basis: 100%; }
 
   .ll-mat { display: grid; gap: 4px; }
   .ll-mat-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 8px; letter-spacing: 0.12em; color: var(--ink); }
