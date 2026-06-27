@@ -22,6 +22,7 @@
   let petaSiap = $state(false);
   let plat = $state<'atlas' | 'satelit' | 'cuaca' | 'malam'>('atlas');
   let jalanOn = $state(false);
+  let hujanOn = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -354,6 +355,8 @@
      be processed yet) — vivid daily clouds, haze, and fire smoke over the
      archipelago. The RainViewer radar (where it has coverage) overlays on top. */
   const GIBS_DATE = new Date(Date.now() - 86_400_000).toISOString().slice(0, 10);
+  /* IMERG precipitation lags ~2-3 days in GIBS; request a safely-past date */
+  const IMERG_DATE = new Date(Date.now() - 3 * 86_400_000).toISOString().slice(0, 10);
   const GIBS_STYLE = {
     version: 8 as const,
     sources: {
@@ -615,6 +618,7 @@
     }
     addProvinsi();
     addJalan();
+    addHujan();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
       map.addSource('radar', {
         type: 'raster',
@@ -676,6 +680,29 @@
     jalanOn = onState;
     const v = onState ? 'visible' : 'none';
     for (const id of ['jalan', 'jalan-label']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+  }
+
+  /* IMERG rainfall: NASA GIBS satellite precipitation (better over Indonesia than
+     the radar) as a translucent raster overlay beneath the markers. Off by default;
+     paints on any plate. */
+  function addHujan() {
+    if (!map) return;
+    if (!map.getSource('hujan')) {
+      map.addSource('hujan', {
+        type: 'raster',
+        tiles: [`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/IMERG_Precipitation_Rate/default/${IMERG_DATE}/GoogleMapsCompatible_Level6/{z}/{y}/{x}.png`],
+        tileSize: 256, maxzoom: 6,
+        attribution: 'Hujan: NASA EOSDIS GIBS / GPM IMERG',
+      });
+    }
+    if (!map.getLayer('hujan')) {
+      const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+      map.addLayer({ id: 'hujan', type: 'raster', source: 'hujan', layout: { visibility: hujanOn ? 'visible' : 'none' }, paint: { 'raster-opacity': 0.55 } }, below);
+    }
+  }
+  function toggleHujan(onState: boolean) {
+    hujanOn = onState;
+    if (map?.getLayer('hujan')) map.setLayoutProperty('hujan', 'visibility', onState ? 'visible' : 'none');
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -980,6 +1007,7 @@
         if (layer === 'gempa') toggleGempa(onState);
         else if (layer === 'provinsi') toggleProvinsi(onState);
         else if (layer === 'jalan') toggleJalan(onState);
+        else if (layer === 'hujan') toggleHujan(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
           toggleLayer(layer, onState);
           if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
@@ -1099,6 +1127,11 @@
             <input type="checkbox" checked={jalanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'jalan', on: e.currentTarget.checked } })} />
             <span class="sym sym-jalan">╫</span> JALAN · NAMA
             <span class="src">OSM · ZOOM</span>
+          </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={hujanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'hujan', on: e.currentTarget.checked } })} />
+            <span class="sym sym-hujan">☂</span> HUJAN · IMERG
+            <span class="src">GIBS · {IMERG_DATE.slice(5)}</span>
           </label>
         </div>
       {/if}
