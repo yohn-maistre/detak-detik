@@ -97,9 +97,10 @@ data marked `(data contoh)`. This section is the mid-June snapshot; for the
 always-current built-state read off the code (and the live newsroom→page gap
 analysis), see `docs/PLAN_LOG.md`. Highlights of the current session's work:
 
-- **Act I:** the live MapLibre map (`PetaKabar.svelte`) with five real,
-  toggleable, color-coded layers (provinces-clickable, quakes, volcanoes, air,
-  floods, fire) wired to a Worker `/geo` proxy with contoh fallbacks; a clickable
+- **Act I:** the live MapLibre map (`PetaKabar.svelte`) with eight real,
+  toggleable, color-coded data layers (volcanoes, air, floods, fire, planes,
+  ships, CO₂ emitters, coal PLTU) + quakes + provinces/kabupaten drill-down,
+  wired to a Worker `/geo` proxy with contoh fallbacks; a clickable
   province layer driving the **lensa** store; the **morphing region lens**
   (`LensaWilayah.svelte`, 38 provinces + search + comparative spread; shows the
   national base and morphs to a clicked province; it replaced `KartuWilayah`,
@@ -326,7 +327,7 @@ Absorbs the old `AGENTS.md` (now a short stub pointing here). Keep this section,
 
 **Deploy (GitHub Actions, on push to `main`)**
 - `deploy.yml` → Cloudflare Pages (every push). `worker.yml` → Worker (only when `worker/**` changes; it resolves the KV id, deploys, then pushes each secret). Both also have `workflow_dispatch`.
-- Secrets live in **GitHub repo Secrets**: `CLOUDFLARE_API_TOKEN`/`ACCOUNT_ID`, `NIM_API_KEY`, `WAQI_TOKEN`, `FIRMS_MAP_KEY`, `EDISI_TOKEN`, `TURNSTILE_SECRET`, `OPENSKY_CLIENT_ID`/`SECRET`. `PUBLIC_*` (`AKSARA_URL`, `AISSTREAM_KEY`) are build-time, inlined into the client bundle (so the AIS key is public by design).
+- Secrets live in **GitHub repo Secrets**: `CLOUDFLARE_API_TOKEN`/`ACCOUNT_ID`, `NIM_API_KEY`, `WAQI_TOKEN`, `FIRMS_MAP_KEY`, `EDISI_TOKEN`, `TURNSTILE_SECRET`, `OPENSKY_CLIENT_ID`/`SECRET`, `MAGMA_TOKEN` (optional → live volcano alert levels). `PUBLIC_*` (`AKSARA_URL`, `AISSTREAM_KEY`) are build-time, inlined into the client bundle (so the AIS key is public by design).
 - No local wrangler / CF token on the dev box → trigger deploys with `gh workflow run worker.yml` (or `deploy.yml`); check with `gh run list`. Worker URL: `detak-detik-worker.giyaibo.workers.dev`.
 
 **Working agreements**: commit with terse one-line messages, author Yose `<josejr2498@gmail.com>`. Cap parallel subagents at ~5 (more has OOM-crashed the dev host). Fat artifacts (GeoJSON etc.) go to `public/data`, never the bundle.
@@ -335,4 +336,6 @@ Absorbs the old `AGENTS.md` (now a short stub pointing here). Keep this section,
 - **Planes**: adsb.lol point+radius caps at **250 NM** (one circle can't span Indonesia) *and* throttles our datacenter/CF IP to ~1 plane *and* sends no CORS — dead both ways for us. Fixed with **OpenSky** `/states/all?bbox` (one whole-archipelago call, ~33 aircraft, 0.9s) from the Worker; its CORS is origin-locked so it can't be client-side, and anonymous credits are per-IP (shared CF IP) so it needs a **free OpenSky API client** → `OPENSKY_CLIENT_ID`/`SECRET` (OAuth2 client_credentials, token cached). adsb.lol grid kept as no-creds fallback.
 - **Ships**: AISStream is a browser WebSocket with one whole-archipelago bbox; key is `PUBLIC_` (inlined, shared → free-tier connection caps), socket now **auto-reconnects** (4s backoff) — it used to freeze on any drop.
 - **Sources**: GEM coal wired (CC-BY). BIG `BANGUNANDANFASUM` health is fragmented per-sheet (incomplete national — don't ship). BNPB `dibi` is now a Superset dashboard (no clean GeoJSON; PetaBencana already covers live hazards). WDPA license forbids redistribution (prefer open GFW/OSM). See `DATA_SOURCES.md`.
-- **Open diagnostics (next)**: volcano feed shows ~5 vs ~127 (MAGMA proxy / bundled registry not loading fully); FIRMS fire dots and others must sit on true lat/lon, not polygon centroids. Pivots queued: OSM hospitals, GFW deforestation, multi-hazard PetaBencana. Note `GradienKeadilan` (justice-gradient viz) already exists — dedupe against it.
+- **Volcanoes**: registry is bundled (`public/data/gunungapi-id.json`, **Smithsonian GVP** → 101 accurate summits + elev/type/last-eruption, regen via `scripts/build-gunungapi.mjs`); symbols use `allow-overlap:true` so none declutter (the old "~5" was the pre-deploy contoh, not decluttering). **MAGMA levels** only flow with a token: its public `/v1/gunung-api/*` URLs return **HTML 200 / 404** (parsing them as JSON was the silent failure), the real `/api/v1/magma-var` is **Bearer-gated** → optional `MAGMA_TOKEN` secret; worker content-type-guards and merges levels onto the registry **by name**.
+- **Fire**: NASA FIRMS already returns **true VIIRS lat/lon** (~310 live hotspots), not centroids — the centroid dots were the labelled `contoh` fallback (pre-load / thrown-fetch). Live-but-empty (wet season) shows NIHIL honestly.
+- **Pivots still queued**: OSM Overpass hospitals, GFW deforestation, multi-hazard PetaBencana, `/geo/sppg` kitchens. And the **newsroom→page wiring gaps** (agenda/makro/harga emitted nowhere, dead verbs) — see PLAN_LOG Track 4. Note `GradienKeadilan` (justice-gradient viz) already exists — dedupe against it.

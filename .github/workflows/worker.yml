@@ -108,3 +108,13 @@ jobs:
           else
             echo "OPENSKY creds belum diisi (pesawat pakai fallback adsb.lol), lewati."
           fi
+
+      - name: Push MAGMA_TOKEN secret
+        env:
+          MAGMA_TOKEN: ${{ secrets.MAGMA_TOKEN }}
+        run: |
+          if [ -n "$MAGMA_TOKEN" ]; then
+            echo "$MAGMA_TOKEN" | npx wrangler@4 secret put MAGMA_TOKEN --config worker/wrangler.toml
+          else
+            echo "MAGMA_TOKEN belum diisi (level gunung pakai registri GVP), lewati."
+          fi

@@ -228,8 +228,18 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
   add the OpenSky secrets in GitHub → planes go live whole-archipelago.**
 - [x] **Vessels (kapal)** — AISStream WS now **auto-reconnects** (4s backoff); was freezing on any
   drop. Key is `PUBLIC_` (shared in the bundle, free-tier connection caps) — known limitation.
-- [ ] **Dot-accuracy diagnostics** — volcano feed shows ~5 not ~127 (MAGMA proxy / bundled
-  registry not loading fully); FIRMS fire (and any centroid-placed points) must sit on true lat/lon.
+- [x] **Dot-accuracy diagnostics** — DONE (commit 913a09a).
+  - **Volcanoes:** registry rebuilt from **Smithsonian GVP** (Holocene Indonesia, WFS) →
+    **101 accurate summits** (was 83), with elevation / type / last-eruption baked in
+    (`scripts/build-gunungapi.mjs`, regenerable). Dossier now shows mdpl + tipe + letusan
+    terakhir. The "~5" was the pre-deploy contoh; `allow-overlap:true` means none declutter.
+  - **MAGMA levels** were never live: the worker's two URLs return **HTML 200 / 404** (not JSON),
+    so `r.json()` threw silently. The real API (`/api/v1/magma-var`) is **token-gated**. Worker now
+    (a) only parses when `content-type` is JSON, (b) uses `Bearer env.MAGMA_TOKEN` if present.
+    **Optional ACTION:** add `MAGMA_TOKEN` secret → alert levels go live (merged by name; coords
+    stay from the registry). Until then levels honestly read "registri GVP · status menyusul".
+  - **Fire:** already true VIIRS lat/lon — live `/geo/kebakaran` = ~310 hotspots at real coords;
+    province-centroid dots were the labelled `contoh` (pre-load / thrown-fetch only). Verified honest.
 - [ ] **Pivots (open replacements, picked 2026-06-27)**: OSM Overpass hospitals (health), GFW
   deforestation (conservation, replaces WDPA), upgrade the PetaBencana `banjir` layer to honest
   multi-hazard (flood/quake/fire/wind/haze).
@@ -247,6 +257,27 @@ Read-only design pass first, then implement.
 Complete redesign into a signposted magazine (like Act II): peoples/indigenous tribes
 (real Wikipedia writing, not a paragraph), art, musical genres, history, biodiversity.
 Build on `docs/research/2026-06-27-act-iii-data-and-components.md`.
+
+### Track 4 · Carried-over technical wirings (doc audit 2026-06-27)
+A read-only audit (docs ↔ code) surfaced wires that exist on one side but not the other.
+Recorded so they're not lost; **paper/editorial direction is deliberately NOT in scope here**
+(we deliberate that separately). Triage before building:
+- **Newsroom → page loop is half-open (highest leverage).** `src/lib/edition.ts` accepts
+  `agenda`, `makro`, `harga` and the front-end consumes them (`pagi-live.ts` `#ag-list`,
+  `NasionalPagi.svelte` `e.makro`), but the newsroom `Edisi` model (`newsroom/models.py`) never
+  emits them and `editor.assemble` never populates them → those surfaces always fall back to
+  contoh. Closing this (add fields + populate) would make Act I feel like a live newsroom.
+- **Live rubrik feed unwired.** `index.astro` desks render static `TEMUAN`/`TICKER` from
+  `edisi.ts`, never the published edition's live `temuan[]`. Orphaned `.temuan-*` CSS confirms a
+  ready slot. Needs an `onEdisi` upgrade hook.
+- **Dead/declared-only command verbs.** `open_temuan` defined in `catalog.ts` with no handler;
+  `render_chart` / `show_table` documented (CLAUDE §5/§6 F) but absent from the catalog. The tour
+  system in `worker/src/index.ts` only whitelists `fly_to|scroll_to|set_lens|highlight|say` —
+  narrower than the 18-verb catalog, so valid verbs get dropped from generated tours.
+- **Map source pivots still open:** `/geo/sppg` (BGN MBG kitchens) never added; OSM Overpass
+  hospitals (health) + GFW deforestation pivots not implemented; `banjir` still single-hazard.
+- **Stale doc phrasing:** CLAUDE §4 / MAP_STAGE say "five layers" — there are now **8**
+  (`LAYERS` in `PetaKabar.svelte`). Roadmap A/B immediate-fixes verified done; can be marked off.
 
 ### Doc upkeep (standing)
 Keep this file, `DATA_SOURCES.md` (new endpoints + recency), and `CLAUDE.md` §4
@@ -329,3 +360,11 @@ current as each item lands.
   auto-reconnect**. Consolidated `AGENTS.md` → `CLAUDE.md` §11 (commands, deploy, conventions,
   map gotchas). Deploys are GH Actions (`deploy.yml` / `worker.yml`, `workflow_dispatch`);
   commits now terse one-liners under `josejr2498@gmail.com`.
+- **2026-06-27 (cont. 3)** — **Dot-accuracy pass** (commit 913a09a). Volcano registry rebuilt
+  from **Smithsonian GVP** → **101 accurate summits** (was 83) + elevation/type/last-eruption
+  (`scripts/build-gunungapi.mjs`); dossier enriched (mdpl, tipe, letusan). Diagnosed why MAGMA
+  levels were dead (HTML 200 / 404 → silent `r.json()` throw); worker now **content-type-guards**
+  and uses **`Bearer MAGMA_TOKEN`** if set (optional secret → live levels merged by name).
+  Confirmed **fire is already true VIIRS lat/lon** (~310 live); centroid dots were labelled contoh.
+  `astro check` green (0/0/0). Ran a **read-only doc audit** → carried-over wirings logged as
+  Track 4 (newsroom→page loop, dead verbs, source pivots) — not yet built, queued for triage.
