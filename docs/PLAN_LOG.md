@@ -198,11 +198,30 @@ where CORS allows, else a `/geo/{id}` worker route). Verified endpoints/licenses
 - [ ] **SPPG / MBG kitchens** (`Hosted/SPPGJuli2025/FeatureServer/0`, BGN, ~9,407
   units @ 2025-09). FeatureServer query came back empty on probe (token/CORS?) → needs
   a worker-side probe; likely a `/geo/sppg` proxy + clustering. Ties to Act II MBG.
-- [ ] **BIG health points** (layer 732, browser-direct GeoJSON) — supersedes
-  healthsites.io. Paginate (`exceededTransferLimit`, 1000/page).
+- [x] **GEM coal — PLTU fleet + pipeline** — DONE (this session). Global Energy Monitor
+  Global Coal Plant Tracker (Jan 2026 release, CC-BY), vendored to `public/data/idn-batubara.geojson`
+  (28KB): 502 IDN unit-rows aggregated to **111 plants** by status (96 beroperasi / 12
+  konstruksi / 3 rencana), sized by MW. Layer `batubara`. Complements the Climate TRACE CO₂
+  layer (emissions-now vs. build-pipeline). Source `raw.githubusercontent.com/GreenInfo-Network/
+  coal-tracker-client` (CORS `*`); vendored, not hot-linked. Re-vendor on GEM's ~biannual
+  (Jan/Jul) release. Generator `gen-coal.js` in session scratch.
+- [ ] **BIG health points** — REASSESSED: BIG `BANGUNANDANFASUM` is fragmented per-sheet
+  25K tiles with **incomplete national coverage** (only some provinces) → a layer would
+  mislead ("no sheet" reads as "no hospital"). Pivot to **OSM Overpass** (amenity=hospital/
+  clinic, ODbL, complete) — first probe returned 406 (UA/format); retry from the worker or
+  with a plain UA, or defer.
+- [ ] **BNPB disaster** — REASSESSED: `gis.bnpb.go.id` ArcGIS is down ("Application Error");
+  `dibi.bnpb.go.id` is now a **Superset BI dashboard** (no clean GeoJSON API). Live
+  multi-hazard events are already covered by **PetaBencana** (the `banjir` layer fetches all
+  report types). BNPB DIBI history suits a chart, not a live map layer → defer.
+- [ ] **WDPA protected areas** — REASSESSED, likely DROP: UNEP-WCMC license **forbids
+  redistribution** + no commercial use without written permission (display-only allowed), and
+  the IDN download is 34–64MB shapefile (needs heavy simplify). Conflicts with the open-data
+  ethos + device limits. For a conservation/forest layer, prefer an **open** source: GFW
+  deforestation (free API, CC-BY) or OSM `boundary=protected_area`.
 - [x] **IMERG rainfall** overlay — DONE (commit 1fc14a2). Toggleable GIBS raster (legend),
   `GoogleMapsCompatible_Level6`, ~3-day-lag date; better over Indonesia than the radar.
-- [ ] Later: WDPA protected areas, GFW deforestation alerts, GEM coal, WorldPop/Kontur.
+- [ ] Later: GFW deforestation alerts, WorldPop/Kontur.
 
 ### Track 2 · Act I revamp — brief: `docs/research/act1-revamp-brief.md`
 Act I reads scattered/amateurish; the four RSS desks feel redundant + may be unwired.

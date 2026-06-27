@@ -134,6 +134,10 @@
       { lon: 111.49, lat: -6.46, co2: 9.1, nama: 'PLTU Tanjung Jati B', jenis: 'coal' },
       { lon: 106.74, lat: -6.1, co2: 4.6, nama: 'PLTGU Muara Karang', jenis: 'gas' },
     ],
+    batubara: [
+      { lon: 106.05, lat: -5.89, plant: 'PLTU Suralaya', mw: 6025, status: 'beroperasi', units: 8, owner: 'PLN' },
+      { lon: 111.49, lat: -6.46, plant: 'PLTU Tanjung Jati B', mw: 3320, status: 'beroperasi', units: 4, owner: 'PLN' },
+    ],
   };
 
   type LayerDef = { id: string; nama: string; sym: string; sumber: string; shape: string; color: string; size: number | unknown[]; rotate?: boolean; trail?: boolean };
@@ -150,10 +154,12 @@
     { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
     { id: 'karbon', nama: 'EMISI CO₂', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
       size: ['interpolate', ['linear'], ['get', 'co2'], 0.5, 0.5, 20, 1.6] },
+    { id: 'batubara', nama: 'PLTU BATU BARA', sym: '◼', sumber: 'gem', shape: 'square', color: '#2b2b2b',
+      size: ['interpolate', ['linear'], ['get', 'mw'], 100, 0.5, 6000, 1.7] },
   ];
 
-  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false });
-  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false });
+  let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false, batubara: false });
+  let layerLive = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false, batubara: false });
   /* a layer fetched live but came back empty (no active fires/floods today) — shown
      honestly as NIHIL, never silently backfilled with contoh */
   let layerKosong = $state<Record<string, boolean>>({});
@@ -473,6 +479,7 @@
     if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'adsb.lol · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'karbon') return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris: [['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`], ['Jenis', String(p.jenis ?? '-')], ['Kapasitas', p.kapasitas ? `${N(p.kapasitas).toLocaleString('id-ID')} MW` : '-'], ['Pemilik', String(p.pemilik ?? '-')]], catatan: 'Estimasi independen berbasis satelit.' };
+    if (f.kind === 'batubara') { const st = String(p.status); const label = st === 'beroperasi' ? 'Beroperasi' : st === 'konstruksi' ? 'Dalam konstruksi' : 'Direncanakan'; return { judul: String(p.plant ?? 'PLTU'), src: 'Global Energy Monitor · GCPT Jan 2026 · CC-BY', baris: [['Status', label], ['Kapasitas', `${N(p.mw).toLocaleString('id-ID')} MW`], ['Unit', String(p.units ?? '-')], ['Pemilik', String(p.owner ?? '-')]], catatan: st !== 'beroperasi' ? 'Bagian dari pipeline batu bara yang masih berlanjut.' : '' }; }
     return null;
   });
 
@@ -761,6 +768,17 @@
         .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat) && p.co2 > 0)
         .sort((a, b) => b.co2 - a.co2);
       if (pts.length) setLayer('karbon', pts as GeoPt[]);
+    } catch { /* contoh stays */ }
+
+    // Coal fleet + pipeline: GEM Global Coal Plant Tracker (Jan 2026, CC-BY),
+    // vendored to a 28KB static asset — 111 plants by status (beroperasi/konstruksi/rencana).
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}data/idn-batubara.geojson`, { signal: AbortSignal.timeout(8000) });
+      const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
+      const pts = (data.features ?? [])
+        .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
+        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
+      if (pts.length) setLayer('batubara', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
     if (AKSARA_URL) {
