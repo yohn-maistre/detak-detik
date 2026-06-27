@@ -24,6 +24,14 @@ each layer carries its source + license per the iron laws.
 - **MAGMA ESDM / PVMBG** (alert levels) — `magma.esdm.go.id/api/v1/magma-var`, **token-gated** (`Authorization: Bearer`). Worker `/geo/gunungapi` uses `env.MAGMA_TOKEN` if set, **content-type-guarded** (the public `/v1/gunung-api/*` URLs return HTML 200 / 404 — never JSON, so they silently failed before). Levels merge onto the GVP registry **by name**; without a token the UI honestly shows "registri GVP · status menyusul".
 - **NASA FIRMS** (fire/hotspots) — `firms.modaps.eosdis.nasa.gov/api/area/csv/{key}/VIIRS_NOAA20_NRT/{bbox}/1`, worker `/geo/kebakaran`. **True VIIRS lat/lon** per pixel (~310 hotspots live, verified) — NOT centroids. Empty in the wet season → layer shows NIHIL honestly. "TITIK API" layer sized by FRP.
 
+**Verified candidates — extraction · forest · regency/province stats (2026-06-27):**
+a full probed catalog lives in `docs/research/2026-06-27-civic-data-sources.md`.
+Headlines (all live-tested): ESDM Geoportal `gis1` mining concessions (4,797 polygons,
+open + CORS, browser-direct), ESDM power fleet (3,588) & oil-gas blocks (215); BIG
+SatuPeta peatland (open + CORS); GFW concession downloads (key-free CSV w/ geometry);
+BPS WebAPI (free email key, **kabupaten** granularity, WAF-guarded); `cahyadsn/wilayah`
+(keyless `nama→code` join for all 515 kab); Wikidata SPARQL (keyless ibukota/pop/area).
+
 Researched, reassessed — NOT wiring as-is (see PLAN_LOG §4.5 for the why):
 SPPG/MBG kitchens (BGN FeatureServer empty on probe → needs worker proxy); BIG health
 (`BANGUNANDANFASUM` is fragmented per-sheet, incomplete national → pivot to OSM Overpass);
