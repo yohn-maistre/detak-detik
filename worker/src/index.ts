@@ -409,8 +409,8 @@ async function openSkyToken(env: Env): Promise<string | null> {
 }
 async function planesOpenSky(env: Env): Promise<unknown[]> {
   const token = await openSkyToken(env);
-  const headers: Record<string, string> = { Accept: 'application/json' };
-  if (token) headers.Authorization = `Bearer ${token}`;
+  if (!token) return []; // anonymous is per-IP and dead from our shared CF IP — skip to fallback
+  const headers: Record<string, string> = { Accept: 'application/json', Authorization: `Bearer ${token}` };
   try {
     const r = await fetch('https://opensky-network.org/api/states/all?lamin=-11&lomin=95&lamax=6&lomax=141', { headers, signal: AbortSignal.timeout(9000) });
     if (!r.ok) return [];
