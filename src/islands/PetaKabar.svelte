@@ -24,6 +24,8 @@
   let jalanOn = $state(false);
   let hujanOn = $state(false);
   let tambangOn = $state(false);
+  let satwaOn = $state(false);
+  let satwaLive = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -176,6 +178,7 @@
     { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY', key: 'karbon' },
     { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY', key: 'batubara' },
     { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta', key: 'tambang' },
+    { nama: 'Satwa terancam', src: 'Mandum Rimba · GBIF + IUCN', url: 'https://mandumrimba.org', lisensi: 'derivatif CC-BY', key: 'satwa' },
     { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik', key: 'hujan' },
   ];
 
@@ -189,7 +192,7 @@
      info box stays a true caption of what the reader is looking at, not a wall of all
      sources at once. 'base' (plate + wilayah) is always present. */
   const sumberAktif = $derived.by(() => {
-    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, hujan: hujanOn, ...layerOn };
+    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, satwa: satwaOn, hujan: hujanOn, ...layerOn };
     return KREDIT.filter((k) => aktif[k.key]);
   });
 
@@ -629,6 +632,21 @@
         catatan: p.cnc ? `Clean & Clear: ${String(p.cnc)} — izin pertambangan (IUP).` : 'Izin Usaha Pertambangan (IUP).',
       };
     }
+    if (f.kind === 'satwa') {
+      const KELAS: Record<string, string> = { mammalia: 'Mamalia', aves: 'Burung', reptilia: 'Reptil', amphibia: 'Amfibi' };
+      // MapLibre stringifies array/object props on read — parse back defensively
+      let sp: [string, string][] = [];
+      try { sp = (typeof p.species === 'string' ? JSON.parse(p.species) : (p.species as unknown)) as [string, string][] ?? []; } catch { sp = []; }
+      const cr = sp.filter((s) => s[1] === 'CR').length, en = sp.filter((s) => s[1] === 'EN').length;
+      const top = sp.slice(0, 3).map((s) => `${s[0]} (${s[1]})`).join(', ');
+      const baris: [string, string][] = [
+        ['Kelas', KELAS[String(p.class)] ?? String(p.class || '-')],
+        ['Spesies terancam', String(sp.length)],
+      ];
+      if (cr) baris.push(['Kritis · CR', String(cr)]);
+      if (en) baris.push(['Genting · EN', String(en)]);
+      return { judul: 'Satwa terancam', src: `Mandum Rimba · GBIF + IUCN${p.date ? ` · ${String(p.date)}` : ''}`, baris, catatan: top ? `Antara lain: ${top}.` : 'Sebaran perkiraan dari okurensi GBIF + status IUCN.' };
+    }
     return null;
   });
 
@@ -794,6 +812,7 @@
     }
     addProvinsi();
     addTambang();
+    addSatwa();
     addJalan();
     addHujan();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
@@ -914,6 +933,59 @@
     if (!map?.getSource('tambang')) addTambang();
     const v = onState ? 'visible' : 'none';
     for (const id of ['tambang-fill', 'tambang-line']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+  }
+
+  /* SATWA TERANCAM: threatened-species range polygons (151), compiled by the open
+     observatory Mandum Rimba from GBIF occurrences + IUCN Red List + ESA WorldCover.
+     Browser-direct (CORS *, keyless), coloured by taxonomic class; click for the
+     species in that range and their IUCN status. Off by default; loads only on first
+     toggle, and degrades to a small illustrative contoh set if the source is dark. */
+  const SATWA_FILL = ['match', ['get', 'class'],
+    'mammalia', '#9c6b3f', 'aves', '#3f7d9a', 'reptilia', '#5f8a3f', 'amphibia', '#7a5ca8',
+    /* lain */ '#6a7b8a'] as unknown;
+  const SATWA_CONTOH = {
+    type: 'FeatureCollection' as const,
+    features: [
+      { type: 'Feature' as const, properties: { class: 'mammalia', level: 1, species: [['Pongo abelii', 'CR'], ['Panthera tigris sumatrae', 'CR']], date: '1990–2026' }, geometry: { type: 'Polygon' as const, coordinates: [[[98.5, 1.5], [100.6, 1.5], [100.6, 3.6], [98.5, 3.6], [98.5, 1.5]]] } },
+      { type: 'Feature' as const, properties: { class: 'aves', level: 1, species: [['Cacatua sulphurea', 'CR']], date: '1990–2026' }, geometry: { type: 'Polygon' as const, coordinates: [[[113, -3.5], [116, -3.5], [116, -0.6], [113, -0.6], [113, -3.5]]] } },
+      { type: 'Feature' as const, properties: { class: 'mammalia', level: 1, species: [['Zaglossus bruijnii', 'CR']], date: '1990–2026' }, geometry: { type: 'Polygon' as const, coordinates: [[[136, -4.6], [139, -4.6], [139, -2.4], [136, -2.4], [136, -4.6]]] } },
+    ],
+  };
+  function addSatwa() {
+    if (!map) return;
+    const vis = satwaOn ? 'visible' : 'none';
+    const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+    if (!map.getSource('satwa')) map.addSource('satwa', { type: 'geojson', data: SATWA_CONTOH as never });
+    if (!map.getLayer('satwa-fill')) {
+      map.addLayer({
+        id: 'satwa-fill', type: 'fill', source: 'satwa', minzoom: 3.5,
+        layout: { visibility: vis },
+        paint: { 'fill-color': SATWA_FILL as never, 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4, 0.18, 8, 0.32] },
+      } as never, below);
+    }
+    if (!map.getLayer('satwa-line')) {
+      map.addLayer({
+        id: 'satwa-line', type: 'line', source: 'satwa', minzoom: 3.5,
+        layout: { visibility: vis },
+        paint: { 'line-color': SATWA_FILL as never, 'line-width': 0.6, 'line-opacity': 0.5 },
+      } as never, below);
+    }
+  }
+  /* fetch the real range set once, browser-direct; keep contoh on any failure */
+  async function muatSatwa() {
+    if (satwaLive || !map?.getSource('satwa')) return;
+    try {
+      const res = await fetch('https://www.mandumrimba.org/data/species-distribution.geojson', { signal: AbortSignal.timeout(8000) });
+      const data = (await res.json()) as { features?: unknown[] };
+      if (data?.features?.length) { setSrc('satwa', data); satwaLive = true; }
+    } catch { /* contoh stays */ }
+  }
+  function toggleSatwa(onState: boolean) {
+    satwaOn = onState;
+    if (!map?.getSource('satwa')) addSatwa();
+    const v = onState ? 'visible' : 'none';
+    for (const id of ['satwa-fill', 'satwa-line']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+    if (onState) void muatSatwa();
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -1208,6 +1280,12 @@
         const p = e.features?.[0]?.properties as GeoPt | undefined;
         if (p) bukaFitur('tambang', e.lngLat.lng, e.lngLat.lat, p);
       });
+      // click a species range: open its dossier (class, count, IUCN status)
+      map.on('click', 'satwa-fill', (e) => {
+        if (titikMode || !satwaOn) return;
+        const p = e.features?.[0]?.properties as GeoPt | undefined;
+        if (p) bukaFitur('satwa', e.lngLat.lng, e.lngLat.lat, p);
+      });
       // click a kabupaten: set its province as the lensa. Its name reads off the
       // zoomed-in map labels (kab-lab), not a popup — keeps the no-default-box rule.
       map.on('click', 'kab-fill', (e) => {
@@ -1220,7 +1298,7 @@
         lensaKab = String(p.nama ?? '') || null;
       });
       // a bare-map click: drop the location panel if armed, else close the info card
-      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', ...LAYERS.map((l) => `${l.id}-dot`)];
+      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'satwa-fill', ...LAYERS.map((l) => `${l.id}-dot`)];
       map.on('click', (e) => {
         if (titikMode) { bukaTitik(e.lngLat.lng, e.lngLat.lat); setTitikMode(false); return; }
         const live = DOT_LAYERS.filter((id) => map!.getLayer(id));
@@ -1262,6 +1340,7 @@
         else if (layer === 'jalan') toggleJalan(onState);
         else if (layer === 'hujan') toggleHujan(onState);
         else if (layer === 'tambang') toggleTambang(onState);
+        else if (layer === 'satwa') toggleSatwa(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
           toggleLayer(layer, onState);
           if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
@@ -1394,6 +1473,11 @@
             <input type="checkbox" checked={tambangOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'tambang', on: e.currentTarget.checked } })} />
             <span class="sym sym-tambang">▰</span> TAMBANG · IUP
             <span class="src">ESDM · 4.797</span>
+          </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={satwaOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'satwa', on: e.currentTarget.checked } })} />
+            <span class="sym sym-satwa">▱</span> SATWA TERANCAM
+            <span class="src">{satwaLive ? 'MANDUM · LANGSUNG' : 'CONTOH'}</span>
           </label>
         </div>
       {/if}
@@ -1652,6 +1736,7 @@
   .sym-kapal { color: #2f8f78; }
   .sym-jalan { color: var(--muted); }
   .sym-tambang { color: #6a7b8a; }
+  .sym-satwa { color: #5f8a3f; }
   /* legend group captions: PETA DASAR (base plate) up top, DATA LANGSUNG below */
   .kb-leg-group { font-size: 8px; letter-spacing: 0.2em; color: var(--muted); opacity: 0.7; font-style: italic; }
   .kb-leg-group-2 { border-top: 1px solid var(--line-soft); padding-top: 8px; margin-top: 3px; }
