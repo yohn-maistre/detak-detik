@@ -23,6 +23,7 @@
   let plat = $state<'atlas' | 'satelit' | 'cuaca' | 'malam'>('atlas');
   let jalanOn = $state(false);
   let hujanOn = $state(false);
+  let tambangOn = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -172,6 +173,7 @@
     { nama: 'Kapal', src: 'AISStream', url: 'https://aisstream.io', lisensi: 'atribusi' },
     { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY' },
     { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY' },
+    { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta' },
     { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik' },
   ];
 
@@ -564,6 +566,21 @@
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'karbon') return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris: [['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`], ['Jenis', String(p.jenis ?? '-')], ['Kapasitas', p.kapasitas ? `${N(p.kapasitas).toLocaleString('id-ID')} MW` : '-'], ['Pemilik', String(p.pemilik ?? '-')]], catatan: 'Estimasi independen berbasis satelit.' };
     if (f.kind === 'batubara') { const st = String(p.status); const label = st === 'beroperasi' ? 'Beroperasi' : st === 'konstruksi' ? 'Dalam konstruksi' : 'Direncanakan'; return { judul: String(p.plant ?? 'PLTU'), src: 'Global Energy Monitor · GCPT Jan 2026 · CC-BY', baris: [['Status', label], ['Kapasitas', `${N(p.mw).toLocaleString('id-ID')} MW`], ['Unit', String(p.units ?? '-')], ['Pemilik', String(p.owner ?? '-')]], catatan: st !== 'beroperasi' ? 'Bagian dari pipeline batu bara yang masih berlanjut.' : '' }; }
+    if (f.kind === 'tambang') {
+      const keg = String(p.kegiatan || '');
+      const status = keg ? keg.charAt(0).toUpperCase() + keg.slice(1).toLowerCase() : '-';
+      return {
+        judul: String(p.usaha || 'Konsesi tambang'),
+        src: 'ESDM · Ditjen Minerba · Satu Peta',
+        baris: [
+          ['Komoditas', String(p.komoditas || '-')],
+          ['Status izin', status],
+          ['Luas', p.luas ? `${N(p.luas).toLocaleString('id-ID')} ha` : '-'],
+          ['Wilayah', [p.kab, p.prov].filter(Boolean).join(', ') || '-'],
+        ],
+        catatan: p.cnc ? `Clean & Clear: ${String(p.cnc)} — izin pertambangan (IUP).` : 'Izin Usaha Pertambangan (IUP).',
+      };
+    }
     return null;
   });
 
@@ -724,6 +741,7 @@
       }
     }
     addProvinsi();
+    addTambang();
     addJalan();
     addHujan();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
@@ -810,6 +828,40 @@
   function toggleHujan(onState: boolean) {
     hujanOn = onState;
     if (map?.getLayer('hujan')) map.setLayoutProperty('hujan', 'visibility', onState ? 'visible' : 'none');
+  }
+
+  /* TAMBANG: Indonesia's mining concessions (IUP/WIUP) — vendored from the open
+     ESDM Geoportal to a generalised static asset (public/data/idn-tambang.geojson,
+     4,797 permits). Translucent polygons coloured by commodity group; click for the
+     company, permit activity, area, and Clean-&-Clear status. Off by default. */
+  const TAMBANG_FILL = ['match', ['get', 'grup'],
+    'batubara', '#2b2b2b', 'nikel', '#2f8f78', 'emas', '#c79a3a',
+    'tembaga', '#b5651d', 'logam', '#6a7b8a', /* lain */ '#9a8f6f'] as unknown;
+  function addTambang() {
+    if (!map) return;
+    const vis = tambangOn ? 'visible' : 'none';
+    const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+    if (!map.getSource('tambang')) map.addSource('tambang', { type: 'geojson', data: `${import.meta.env.BASE_URL}data/idn-tambang.geojson` });
+    if (!map.getLayer('tambang-fill')) {
+      map.addLayer({
+        id: 'tambang-fill', type: 'fill', source: 'tambang', minzoom: 4.2,
+        layout: { visibility: vis },
+        paint: { 'fill-color': TAMBANG_FILL as never, 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.3, 9, 0.5] },
+      } as never, below);
+    }
+    if (!map.getLayer('tambang-line')) {
+      map.addLayer({
+        id: 'tambang-line', type: 'line', source: 'tambang', minzoom: 6,
+        layout: { visibility: vis },
+        paint: { 'line-color': TAMBANG_FILL as never, 'line-width': 0.5, 'line-opacity': 0.55 },
+      } as never, below);
+    }
+  }
+  function toggleTambang(onState: boolean) {
+    tambangOn = onState;
+    if (!map?.getSource('tambang')) addTambang();
+    const v = onState ? 'visible' : 'none';
+    for (const id of ['tambang-fill', 'tambang-line']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -1096,6 +1148,13 @@
         map.on('mouseenter', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = 'pointer'; });
         map.on('mouseleave', `${L.id}-dot`, () => { if (map && !titikMode) map.getCanvas().style.cursor = ''; });
       }
+      // click a mining concession: open its dossier card (company, commodity, area,
+      // permit status). Registered before kab-fill so it reads on top when shown.
+      map.on('click', 'tambang-fill', (e) => {
+        if (titikMode || !tambangOn) return;
+        const p = e.features?.[0]?.properties as GeoPt | undefined;
+        if (p) bukaFitur('tambang', e.lngLat.lng, e.lngLat.lat, p);
+      });
       // click a kabupaten: set its province as the lensa. Its name reads off the
       // zoomed-in map labels (kab-lab), not a popup — keeps the no-default-box rule.
       map.on('click', 'kab-fill', (e) => {
@@ -1106,7 +1165,7 @@
         dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
       });
       // a bare-map click: drop the location panel if armed, else close the info card
-      const DOT_LAYERS = ['gempa-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
+      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', ...LAYERS.map((l) => `${l.id}-dot`)];
       map.on('click', (e) => {
         if (titikMode) { bukaTitik(e.lngLat.lng, e.lngLat.lat); setTitikMode(false); return; }
         const live = DOT_LAYERS.filter((id) => map!.getLayer(id));
@@ -1147,6 +1206,7 @@
         else if (layer === 'provinsi') toggleProvinsi(onState);
         else if (layer === 'jalan') toggleJalan(onState);
         else if (layer === 'hujan') toggleHujan(onState);
+        else if (layer === 'tambang') toggleTambang(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
           toggleLayer(layer, onState);
           if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
@@ -1263,6 +1323,11 @@
             </label>
           {/each}
           <label class="kb-leg-row kb-leg-jalan">
+            <input type="checkbox" checked={tambangOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'tambang', on: e.currentTarget.checked } })} />
+            <span class="sym sym-tambang">▰</span> TAMBANG · IUP
+            <span class="src">ESDM · 4.797</span>
+          </label>
+          <label class="kb-leg-row">
             <input type="checkbox" checked={jalanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'jalan', on: e.currentTarget.checked } })} />
             <span class="sym sym-jalan">╫</span> JALAN · NAMA
             <span class="src">OSM · ZOOM</span>
@@ -1508,6 +1573,7 @@
   .sym-pesawat { color: #2f6f9f; }
   .sym-kapal { color: #2f8f78; }
   .sym-jalan { color: var(--muted); }
+  .sym-tambang { color: #6a7b8a; }
   .kb-leg-jalan { border-top: 1px solid var(--line-soft); padding-top: 7px; margin-top: 1px; }
 
   /* the single hazard info card, anchored above the clicked marker */
