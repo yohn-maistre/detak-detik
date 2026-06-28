@@ -130,10 +130,10 @@
       { lon: 112.7, lat: -6.1, nama: 'kapal contoh', kecepatan: 14, track: 310 },
     ],
     karbon: [
-      { lon: 113.585, lat: -7.715, co2: 19.5, nama: 'PLTU Paiton', jenis: 'coal' },
-      { lon: 106.05, lat: -5.9, co2: 17.2, nama: 'PLTU Suralaya', jenis: 'coal' },
-      { lon: 111.49, lat: -6.46, co2: 9.1, nama: 'PLTU Tanjung Jati B', jenis: 'coal' },
-      { lon: 106.74, lat: -6.1, co2: 4.6, nama: 'PLTGU Muara Karang', jenis: 'gas' },
+      { lon: 101.33, lat: 0.659, co2: 15.78, nama: 'Central Sumatra · Conventional onshore', jenis: 'migas', sektor: 'fossil-fuel-operations' },
+      { lon: 122.159, lat: -2.832, co2: 11.75, nama: 'Dexin Steel Morowali plant', jenis: 'BF/BOF', sektor: 'manufacturing' },
+      { lon: 103.962, lat: -2.521, co2: 11.38, nama: 'South Sumatra · Conventional onshore', jenis: 'migas', sektor: 'fossil-fuel-operations' },
+      { lon: 133.16, lat: -2.333, co2: 8.7, nama: 'Bintuni · LNG', jenis: 'migas', sektor: 'fossil-fuel-operations' },
     ],
     batubara: [
       { lon: 106.05, lat: -5.89, plant: 'PLTU Suralaya', mw: 6025, status: 'beroperasi', units: 8, owner: 'PLN' },
@@ -153,7 +153,7 @@
       size: ['interpolate', ['linear'], ['get', 'frp'], 20, 0.55, 80, 1.25] },
     { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'opensky', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
     { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
-    { id: 'karbon', nama: 'EMISI CO₂', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
+    { id: 'karbon', nama: 'EMISI CO₂ · INDUSTRI', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
       size: ['interpolate', ['linear'], ['get', 'co2'], 0.5, 0.5, 20, 1.6] },
     { id: 'batubara', nama: 'PLTU BATU BARA', sym: '◼', sumber: 'gem', shape: 'square', color: '#2b2b2b',
       size: ['interpolate', ['linear'], ['get', 'mw'], 100, 0.5, 6000, 1.7] },
@@ -766,7 +766,11 @@
       });
     }
     for (const L of LAYERS) {
-      if (!map.getSource(L.id)) map.addSource(L.id, { type: 'geojson', data: ptsGeo(LAYER_CONTOH[L.id] ?? []) });
+      // seed the volcano board from the loaded registry (volPts) so all ~101 summits
+      // survive a basemap switch — which re-runs addDataLayers and would otherwise reset
+      // the source to the 6-item contoh. Other layers seed from contoh until live.
+      const seed = L.id === 'gunungapi' ? volPts : (LAYER_CONTOH[L.id] ?? []);
+      if (!map.getSource(L.id)) map.addSource(L.id, { type: 'geojson', data: ptsGeo(seed) });
       if (L.trail && !map.getSource(`${L.id}-trail`)) {
         map.addSource(`${L.id}-trail`, { type: 'geojson', data: { type: 'FeatureCollection', features: [] } as never });
         map.addLayer({
@@ -921,9 +925,15 @@
       layerLive[id] = true;
       layerKosong[id] = pts.length === 0;
     };
-    // volcanoes: start from the bundled registry so the full board always shows
+    // volcanoes: start from the bundled registry so the full board always shows, and
+    // COMMIT IT IMMEDIATELY — independent of the slower hazard feeds below. Previously
+    // this commit sat at the end of the function, behind petabencana + emisi + four
+    // sequential AKSARA fetches, so a slow/hung feed left only the ~6 contoh summits.
     await gunungReady;
     let vol = (gunungBase.length ? gunungBase : (LAYER_CONTOH.gunungapi ?? [])).map((v) => ({ ...v }));
+    volPts = vol;
+    setSrc('gunungapi', ptsGeo(vol));
+    layerLive.gunungapi = true;
 
     try {
       const res = await fetch('https://data.petabencana.id/reports?timeperiod=43200', { signal: AbortSignal.timeout(6000) });
@@ -934,30 +944,17 @@
       setLayer('banjir', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
-    // Climate TRACE: Indonesia's largest INDUSTRIAL CO2 emitters across sectors —
-    // power, manufacturing (cement/steel), mineral extraction, and fossil-fuel
-    // operations — not just coal plants. Independent + satellite-derived, placed by
-    // asset centroid, sized by annual tonnage, top 250 by emissions. Keyless, CC-BY.
-    type CTAsset = { Name?: string; AssetType?: string; Sector?: string; Centroid?: { Geometry?: number[] }; EmissionsSummary?: { EmissionsQuantity?: number; Capacity?: number }[]; Owners?: { CompanyName?: string }[] };
+    // Emisi CO₂ — Indonesia's largest NON-power heavy industry: steel/cement
+    // (manufacturing), mineral extraction, and oil & gas operations. POWER is
+    // deliberately excluded — those are the coal plants already in the batubara layer,
+    // so including them made CO₂ dots overlap the coal dots (same story twice). Vendored
+    // from Climate TRACE v6 to a static asset (scripts/build-emisi.mjs). Keyless, CC-BY.
     try {
-      const sektor = ['power', 'manufacturing', 'mineral-extraction', 'fossil-fuel-operations'];
-      const batches = await Promise.all(sektor.map((s) =>
-        fetch(`https://api.climatetrace.org/v6/assets?countries=IDN&sectors=${s}&limit=200`, { signal: AbortSignal.timeout(9000) })
-          .then((r) => r.json() as Promise<{ assets?: CTAsset[] }>).catch(() => ({ assets: [] as CTAsset[] }))));
-      const pts = batches
-        .flatMap((data) => (data.assets ?? []).map((a) => {
-          const g = a.Centroid?.Geometry ?? [];
-          const es = a.EmissionsSummary?.[0];
-          return {
-            lon: Number(g[0]), lat: Number(g[1]),
-            co2: (es?.EmissionsQuantity ?? 0) / 1e6, kapasitas: es?.Capacity ?? 0,
-            nama: a.Name ?? 'aset', jenis: a.AssetType ?? '', sektor: a.Sector ?? '',
-            pemilik: a.Owners?.[0]?.CompanyName ?? '',
-          };
-        }))
-        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat) && p.co2 > 0)
-        .sort((a, b) => b.co2 - a.co2)
-        .slice(0, 250);
+      const res = await fetch(`${import.meta.env.BASE_URL}data/idn-emisi.geojson`, { signal: AbortSignal.timeout(8000) });
+      const data = (await res.json()) as { features?: { geometry?: { coordinates?: number[] }; properties?: GeoPt }[] };
+      const pts = (data.features ?? [])
+        .map((f) => ({ ...(f.properties ?? {}), lon: f.geometry?.coordinates?.[0] ?? NaN, lat: f.geometry?.coordinates?.[1] ?? NaN }))
+        .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat));
       if (pts.length) setLayer('karbon', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
@@ -1001,7 +998,8 @@
       }
     }
 
-    // commit the volcano board (real coordinates regardless of whether levels are live)
+    // re-commit the board to apply any live PVMBG alert levels merged above (the full
+    // set of summits is already on the map from the early commit at the top)
     setSrc('gunungapi', ptsGeo(vol));
     volPts = vol;
     layerLive.gunungapi = true;
