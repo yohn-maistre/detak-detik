@@ -281,7 +281,11 @@ Recorded so they're not lost; **paper/editorial direction is deliberately NOT in
 
 ### Doc upkeep (standing)
 Keep this file, `DATA_SOURCES.md` (new endpoints + recency), and `CLAUDE.md` §4
-current as each item lands.
+current as each item lands. **Also keep the PUBLIC source ledger
+`src/pages/sumber.astro` in sync** — it shows readers each source's
+LANGSUNG/CONTOH/SEGERA status; a wired layer or a CONTOH→LANGSUNG flip must be
+reflected there (it is currently behind the shipped map layers). Two ledgers:
+internal `DATA_SOURCES.md` + public `sumber.astro`.
 
 ---
 

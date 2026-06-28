@@ -9,6 +9,17 @@ fetches from the Cloudflare Worker cron (edge IPs fare better) and treat
 every dark source as a Data Hilang note, never a crash. Stable exceptions:
 BMKG, data.go.id CKAN, DJPK.
 
+> **TWO source ledgers — keep BOTH in sync.** This file is the *internal*
+> catalog. **`src/pages/sumber.astro`** is the *public* "receipts drawer"
+> readers see (the `SUMBER` array: nama/url/dipakai/metode + a
+> **LANGSUNG/CONTOH/SEGERA** status). Every time a source is added or flips
+> CONTOH→LANGSUNG, update `sumber.astro` too — a stale status there mislabels
+> the paper's own honesty. It is currently **behind** (missing ESDM mining,
+> GVP volcanoes, cross-sector Climate TRACE, OpenSky, AISStream, GEM coal,
+> cahyadsn wilayah; some CONTOH rows are now live). Full 2026-06-28 hunt
+> (health/OSM, BIG SatuPeta 368-layer inventory, independent RSS roster,
+> proxies) → `docs/research/2026-06-28-data-and-rss-sources.md`.
+
 ## Wired & live (2026-06-27) — keep this list current
 
 New map / click-report sources wired this session. Browser-direct unless noted;

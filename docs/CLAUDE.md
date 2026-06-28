@@ -320,6 +320,15 @@ deployed; build, screenshot, commit, push.
 Absorbs the old `AGENTS.md` (now a short stub pointing here). Keep this section,
 `PLAN_LOG.md`, and `DATA_SOURCES.md` current as work lands.
 
+**Two source ledgers — sync both.** `docs/DATA_SOURCES.md` is the internal catalog;
+**`src/pages/sumber.astro` is the PUBLIC "receipts drawer"** readers see, with each
+source's `LANGSUNG/CONTOH/SEGERA` status ("if a row says CONTOH the pipeline hasn't
+replaced the sample yet — printed, never hidden"). Wiring a source, or flipping
+CONTOH→LANGSUNG, MUST update `sumber.astro` — a stale status there mislabels the
+paper's own honesty. It is currently behind the shipped map layers (ESDM mining, GVP
+volcanoes, cross-sector Climate TRACE, OpenSky, AISStream, GEM coal, cahyadsn wilayah)
+— bring it current during Phase 0/3. Verified-source hunts: `docs/research/2026-06-2*`.
+
 **Build / test / run**
 - `pnpm install` · `pnpm dev` (localhost:4321) · `pnpm check` (astro/svelte/ts) · `pnpm build` (→ `dist/`).
 - Worker lives in `worker/` (one stateless Worker). Newsroom: `python3 -m newsroom.main` (dry-run without `AKSARA_URL` + `EDISI_TOKEN`).
