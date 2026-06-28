@@ -193,6 +193,22 @@
     .then((d: GeoPt[]) => { if (Array.isArray(d) && d.length) gunungBase = d; })
     .catch(() => null);
 
+  /* per-kabupaten reference data (capital, population, area) for the drill-in
+     dossier — keyless, from cahyadsn/Kemendagri 2025, joined to our 514 kab by
+     name. Keyed `${prov}|${stripped nama}`. BPS indicators (IPM, poverty, PDRB)
+     layer on later when the key lands. */
+  type WilRow = { kode?: string; ibukota?: string; pop?: number; luas?: number };
+  const normKab = (s: unknown) => String(s ?? '').toLowerCase().replace(/[^a-z]/g, '');
+  let wilayahIdx = $state<Record<string, WilRow>>({});
+  fetch(`${import.meta.env.BASE_URL}data/idn-wilayah.json`)
+    .then((r) => r.json())
+    .then((d: (WilRow & { nama: string; prov: string })[]) => {
+      const m: Record<string, WilRow> = {};
+      for (const r of d) m[`${r.prov}|${normKab(r.nama)}`] = r;
+      wilayahIdx = m;
+    })
+    .catch(() => null);
+
   function ptsGeo(pts: GeoPt[]) {
     return {
       type: 'FeatureCollection' as const,
@@ -218,6 +234,7 @@
 
   let provinsiOn = $state(true);
   let lensaKode = $state(getLensa());
+  let lensaKab = $state<string | null>(null); // clicked kabupaten name within the lensa province
   let hoverKode: string | null = null;
   /** choropleth fill expression, set by the map_choropleth verb; null = plain */
   let choroExpr: unknown = null;
@@ -525,6 +542,14 @@
       ipm: d.ipm, ipmRank: ipmRankOf(d.kode), n: DOSSIER_PROV.length,
       miskin: d.miskin, dokter: d.dokter, gempa: gempaDalam(d.kode),
     };
+  });
+
+  /* the kabupaten sub-section that expands the province card in place when you
+     click a regency — real capital/population/area, keyless. null until clicked. */
+  const dossierKab = $derived.by(() => {
+    if (!lensaKab || lensaKode === 'nasional') return null;
+    const r = wilayahIdx[`${lensaKode}|${normKab(lensaKab)}`] ?? {};
+    return { nama: lensaKab, ibukota: r.ibukota, pop: r.pop, luas: r.luas };
   });
 
   /* the single info card's contents, derived from the clicked feature's props */
@@ -1159,10 +1184,12 @@
       // zoomed-in map labels (kab-lab), not a popup — keeps the no-default-box rule.
       map.on('click', 'kab-fill', (e) => {
         if (titikMode) return; // armed for a point report: let the map click handle it
-        const p = e.features?.[0]?.properties as { prov?: string } | undefined;
+        const p = e.features?.[0]?.properties as { prov?: string; nama?: string } | undefined;
         if (!p?.prov) return;
         titik = null;
         dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
+        // set AFTER dispatch — onLensa clears lensaKab, then we record the clicked kab
+        lensaKab = String(p.nama ?? '') || null;
       });
       // a bare-map click: drop the location panel if armed, else close the info card
       const DOT_LAYERS = ['gempa-dot', 'tambang-fill', ...LAYERS.map((l) => `${l.id}-dot`)];
@@ -1215,6 +1242,7 @@
       }));
       unsubs.push(onLensa((k) => {
         lensaKode = k;
+        lensaKab = null; // a province (re)selection clears any drilled-in kabupaten
         for (const id of ['provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
           if (map?.getLayer(id)) map.setFilter(id, ['==', ['get', 'kode'], k]);
         }
@@ -1380,6 +1408,18 @@
           <span><b>{dossier.dokter}</b> dr/1k</span>
           <span><b class="ember">{dossier.gempa}</b> gempa 24j</span>
         </div>
+        {#if dossierKab}
+          <div class="kb-dossier-kab">
+            <button class="kb-dossier-kab-x" onclick={() => (lensaKab = null)} aria-label="Tutup kabupaten">✕</button>
+            <span class="kb-dossier-kab-lab">KABUPATEN</span>
+            <strong class="kb-dossier-kab-nama">{dossierKab.nama}</strong>
+            <div class="kb-dossier-kab-rows">
+              {#if dossierKab.ibukota}<span>ibukota · <b>{dossierKab.ibukota}</b></span>{/if}
+              {#if dossierKab.pop}<span><b>{dossierKab.pop.toLocaleString('id-ID')}</b> jiwa</span>{/if}
+              {#if dossierKab.luas}<span><b>{Math.round(dossierKab.luas).toLocaleString('id-ID')}</b> km²</span>{/if}
+            </div>
+          </div>
+        {/if}
         <button class="kb-dossier-ask" onclick={() => pulseRef('dossier')}>baca dasar wilayah ↓</button>
       </aside>
     {/if}
@@ -1527,6 +1567,14 @@
   .kb-dossier-tally { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 9px; letter-spacing: 0.08em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 7px; }
   .kb-dossier-tally b { color: var(--ink); font-weight: 600; }
   .kb-dossier-tally b.ember { color: var(--accent); }
+  /* expand-in-place kabupaten sub-section: the province card grows this when a regency is clicked */
+  .kb-dossier-kab { position: relative; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); }
+  .kb-dossier-kab-x { position: absolute; top: 6px; right: 0; background: none; border: none; color: var(--muted); font-size: 10px; cursor: pointer; padding: 2px; line-height: 1; }
+  .kb-dossier-kab-x:hover { color: var(--accent); }
+  .kb-dossier-kab-lab { font-size: 8px; letter-spacing: 0.18em; color: var(--muted); }
+  .kb-dossier-kab-nama { display: block; font-family: var(--font-fig); font-size: 15px; line-height: 1.1; color: var(--ink); margin: 1px 0 4px; }
+  .kb-dossier-kab-rows { display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: 9px; letter-spacing: 0.06em; color: var(--muted); }
+  .kb-dossier-kab-rows b { color: var(--ink); font-weight: 600; }
   .kb-dossier-ask { margin-top: 8px; background: none; border: 1px solid var(--line); color: var(--ink); font: inherit; font-size: 9px; letter-spacing: 0.12em; padding: 6px 8px; cursor: pointer; text-align: left; transition: background 0.2s, padding-left 0.2s; }
   .kb-dossier-ask:hover { background: color-mix(in oklab, var(--accent) 12%, transparent); padding-left: 12px; }
   .kb-choro {
