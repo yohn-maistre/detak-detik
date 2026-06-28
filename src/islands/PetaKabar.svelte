@@ -589,7 +589,17 @@
     if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
     if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'OpenSky Network · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
-    if (f.kind === 'karbon') return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris: [['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`], ['Jenis', String(p.jenis ?? '-')], ['Kapasitas', p.kapasitas ? `${N(p.kapasitas).toLocaleString('id-ID')} MW` : '-'], ['Pemilik', String(p.pemilik ?? '-')]], catatan: 'Estimasi independen berbasis satelit.' };
+    if (f.kind === 'karbon') {
+      const SEKTOR: Record<string, string> = { power: 'Pembangkit listrik', manufacturing: 'Manufaktur', 'mineral-extraction': 'Tambang mineral', 'fossil-fuel-operations': 'Operasi migas/batu bara' };
+      const baris: [string, string][] = [
+        ['Emisi CO₂e', `${N(p.co2).toFixed(1)} juta ton/th`],
+        ['Sektor', SEKTOR[String(p.sektor)] ?? String(p.sektor || '-')],
+        ['Jenis', String(p.jenis || '-')],
+      ];
+      if (N(p.kapasitas) > 0) baris.push(['Kapasitas', `${N(p.kapasitas).toLocaleString('id-ID')} MW`]);
+      if (p.pemilik) baris.push(['Pemilik', String(p.pemilik)]);
+      return { judul: String(p.nama ?? 'Aset emisi'), src: 'Climate TRACE v6 · CC-BY', baris, catatan: 'Estimasi independen berbasis satelit.' };
+    }
     if (f.kind === 'batubara') { const st = String(p.status); const label = st === 'beroperasi' ? 'Beroperasi' : st === 'konstruksi' ? 'Dalam konstruksi' : 'Direncanakan'; return { judul: String(p.plant ?? 'PLTU'), src: 'Global Energy Monitor · GCPT Jan 2026 · CC-BY', baris: [['Status', label], ['Kapasitas', `${N(p.mw).toLocaleString('id-ID')} MW`], ['Unit', String(p.units ?? '-')], ['Pemilik', String(p.owner ?? '-')]], catatan: st !== 'beroperasi' ? 'Bagian dari pipeline batu bara yang masih berlanjut.' : '' }; }
     if (f.kind === 'tambang') {
       const keg = String(p.kegiatan || '');
@@ -911,23 +921,30 @@
       setLayer('banjir', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
-    // Climate TRACE: Indonesia's largest power-sector CO2 emitters (independent,
-    // satellite-derived), placed by asset, sized by annual tonnage. Keyless, CC-BY.
+    // Climate TRACE: Indonesia's largest INDUSTRIAL CO2 emitters across sectors —
+    // power, manufacturing (cement/steel), mineral extraction, and fossil-fuel
+    // operations — not just coal plants. Independent + satellite-derived, placed by
+    // asset centroid, sized by annual tonnage, top 250 by emissions. Keyless, CC-BY.
+    type CTAsset = { Name?: string; AssetType?: string; Sector?: string; Centroid?: { Geometry?: number[] }; EmissionsSummary?: { EmissionsQuantity?: number; Capacity?: number }[]; Owners?: { CompanyName?: string }[] };
     try {
-      const res = await fetch('https://api.climatetrace.org/v6/assets?countries=IDN&sectors=power&limit=400', { signal: AbortSignal.timeout(8000) });
-      const data = (await res.json()) as { assets?: { Name?: string; AssetType?: string; bbox?: number[]; EmissionsSummary?: { EmissionsQuantity?: number; Capacity?: number }[]; Owners?: { CompanyName?: string }[] }[] };
-      const pts = (data.assets ?? [])
-        .map((a) => {
-          const bb = a.bbox ?? [];
+      const sektor = ['power', 'manufacturing', 'mineral-extraction', 'fossil-fuel-operations'];
+      const batches = await Promise.all(sektor.map((s) =>
+        fetch(`https://api.climatetrace.org/v6/assets?countries=IDN&sectors=${s}&limit=200`, { signal: AbortSignal.timeout(9000) })
+          .then((r) => r.json() as Promise<{ assets?: CTAsset[] }>).catch(() => ({ assets: [] as CTAsset[] }))));
+      const pts = batches
+        .flatMap((data) => (data.assets ?? []).map((a) => {
+          const g = a.Centroid?.Geometry ?? [];
           const es = a.EmissionsSummary?.[0];
           return {
-            lon: (Number(bb[0]) + Number(bb[2])) / 2, lat: (Number(bb[1]) + Number(bb[3])) / 2,
+            lon: Number(g[0]), lat: Number(g[1]),
             co2: (es?.EmissionsQuantity ?? 0) / 1e6, kapasitas: es?.Capacity ?? 0,
-            nama: a.Name ?? 'aset', jenis: a.AssetType ?? '', pemilik: a.Owners?.[0]?.CompanyName ?? '',
+            nama: a.Name ?? 'aset', jenis: a.AssetType ?? '', sektor: a.Sector ?? '',
+            pemilik: a.Owners?.[0]?.CompanyName ?? '',
           };
-        })
+        }))
         .filter((p) => Number.isFinite(p.lon) && Number.isFinite(p.lat) && p.co2 > 0)
-        .sort((a, b) => b.co2 - a.co2);
+        .sort((a, b) => b.co2 - a.co2)
+        .slice(0, 250);
       if (pts.length) setLayer('karbon', pts as GeoPt[]);
     } catch { /* contoh stays */ }
 
