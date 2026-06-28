@@ -82,3 +82,41 @@ Whenever a data source is added, changed, or flips CONTOH→LANGSUNG:
    as part of Phase 0/3.
 2. **`docs/DATA_SOURCES.md`** — the internal catalog (endpoints, licenses, gotchas).
 3. This research note + `docs/PLAN_LOG.md` changelog.
+
+---
+
+## G · Mandum Rimba + SPPG (scout round 2, verified 2026-06-28)
+
+### Mandum Rimba — `mandumrimba.org`
+Independent non-profit **deforestation & environmental-accountability observatory** for Indonesia
+(Next.js/Vercel, id/en; AGPL-3.0; Aceh-origin — "mandum rimba" ≈ "all the wilderness"; contact
+Threads `@r.rasyidi`). Repo **not yet public** ("tautan repositori akan muncul begitu siap"), so we
+can't read their build — but their **`/sumber-data` page is a vetted primary-source manifest** we can
+shop from.
+- **★ WIRE NOW (clean, browser-direct):** `https://www.mandumrimba.org/data/species-distribution.geojson`
+  — keyless, **CORS `*`**, **227 KB**, **151 polygons** of IUCN-classified threatened-species ranges
+  (classes aves/mammalia/reptilia/amphibia; each feature carries `[species, IUCN-code]` lists + a date
+  range). Drop-in MapLibre `geojson` source, **no proxy**. Credit Mandum Rimba + GBIF/IUCN/ESA.
+- **Shopping list from `/sumber-data` (fetch from the PRIMARY source, not via Mandum):**
+  - **GFW concessions** — sawit (1,855) / HTI-pulp (295) / logging (259), **CC BY 4.0**, Greenpeace-
+    derived via GFW Open Data Portal / ArcGIS Hub. *The prize: a clean keyless concessions polygon set.*
+  - **Maus et al. 2022 global mining footprints** — **CC BY 4.0**, PANGAEA `doi.org/10.1594/PANGAEA.942325`,
+    static redistributable download → vendor a clipped IDN subset.
+  - GADM 4.1 admin boundaries — **non-commercial** license (watch-out; we already have BIG boundaries).
+  - Walled / skip browser-direct: WDPA Protected Planet (registration), KLHK PIPPIB/MOMI, IUCN polygon
+    ranges, GFW near-real-time alerts (keyed/tiled).
+- **Their export API** `api.mandumrimba.org/v1/export?dataset={alerts|disasters|forest-loss}` — **no CORS**;
+  `alerts`/`forest-loss` return empty placeholders; `disasters` is a real 3.5 MB BNPB/DesInventar CSV but
+  go upstream to **UNDRR DesInventar** (`desinventar.net/.../idn`) instead. `species/concessions/mining`
+  are NOT exposed via the API (400) — only the static species geojson above is hostable by us directly.
+
+### SPPG — Makan Bergizi Gratis kitchens (Badan Gizi Nasional)
+**SPPG = Satuan Pelayanan Pemenuhan Gizi**, the kitchen units of the MBG free-meal program.
+- **WIRE via thin worker-proxy:** `sismonbgn.com` — a third-party Leaflet monitor embedding **~5,600 SPPG
+  points** as an inline `var rawData=[…]` array (`id_sppg`, `status_pengajuan`, full `alamat`,
+  `latitude`, `longitude`) + a per-province totals array at `/statistik`. **Keyless but NO CORS** (data
+  is inline HTML, not an API) → worker fetches the page, parses `rawData`, emits GeoJSON.
+- Official **BGN** sources (`operasional-sppg`, `gina.bgn.go.id`) are **WAF/login-walled and coordinate-less**.
+- **HONESTY CAVEAT (Iron Law #1):** it's an **early-2025 snapshot** — only ~28 marked "Beroperasi" vs
+  BGN's current ~26k claim. Label these **terdaftar/diajukan (registered/proposed)**, dated, NOT a live
+  operating census. A transparency paper must not imply 5,600 operating kitchens.
