@@ -368,3 +368,26 @@ current as each item lands.
   Confirmed **fire is already true VIIRS lat/lon** (~310 live); centroid dots were labelled contoh.
   `astro check` green (0/0/0). Ran a **read-only doc audit** → carried-over wirings logged as
   Track 4 (newsroom→page loop, dead verbs, source pivots) — not yet built, queued for triage.
+- **2026-06-28 — Transparency-data round (R1+R2).** Three verified data-scout runs →
+  `docs/research/2026-06-27-civic-data-sources.md`. Then, **me + one background build-agent on
+  disjoint files, verify-green per round** (the agent's host died on idle once but its files
+  were already written + verified — no rerun needed):
+  - **R1 · Mining concessions** (commit 4c407a5): vendored **4,797 ESDM IUP** permits to
+    `public/data/idn-tambang.geojson` (`scripts/build-tambang.mjs`, generalised → 1.9 MB / 274 KB
+    gz). "TAMBANG · IUP" polygon layer coloured by commodity (1,235 coal · 534 nickel · …), click →
+    company/commodity/status/area/Clean-&-Clear. Browser-direct (ESDM CORS).
+  - **R1 · Dossier data** (commit 3f0b00c): `scripts/build-wilayah.mjs` → `idn-wilayah.json`,
+    **514 kab** with ibukota/penduduk/luas/lat-lon (cahyadsn Kemendagri 2025, keyless), joined 1:1
+    to our geojson. **Fixed a base-data defect**: dropped a corrupt 4-vertex sliver feature
+    (`Minahasa Selatan/Bolaang Mongondwo Timur`) → 515→**514** kab (correct national count).
+  - **R2 · Kabupaten dossier** (commit f2c3244): **expand-in-place** sub-section on the province
+    card — real ibukota/penduduk/luas now (keyless); BPS indicators (IPM/poverty/PDRB) layer on
+    once the free key lands.
+  - **R2 · CO₂ layer fixed + broadened** (commit e7e4e49): root-caused the "just 3 PLTU" — Climate
+    TRACE v6 **moved coords `bbox`→`Centroid.Geometry`**, so the live feed silently fell back to 4
+    contoh. Now reads Centroid + pulls **4 sectors** (power/manufacturing/extraction/fossil-ops),
+    top 250 by tonnage → steel (Morowali), mines (Grasberg), migas, not just coal. CORS `*`.
+  - All four `astro check` 0/0/0, deployed green. **Source-credits strip** added under the map
+    earlier (every layer's provider + licence, linked).
+  - **Pending:** R3 forest layers (BIG peatland + GFW concessions); BPS free key (Yose) → live
+    IPM/poverty/PDRB in both dossiers; optional ESDM power-fleet (3,588) energy-mix layer.
