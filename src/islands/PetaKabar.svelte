@@ -161,20 +161,22 @@
 
   /* the standing source credits printed under the map — every layer carries its
      provider + licence, linked for verifiability (an iron law of the paper). */
-  const KREDIT: { nama: string; src: string; url: string; lisensi: string }[] = [
-    { nama: 'Peta dasar', src: 'OpenFreeMap · OSM', url: 'https://openfreemap.org', lisensi: 'ODbL' },
-    { nama: 'Wilayah', src: 'BIG Rupabumi', url: 'https://www.big.go.id', lisensi: 'One-Map' },
-    { nama: 'Gunung api', src: 'Smithsonian GVP + PVMBG', url: 'https://volcano.si.edu', lisensi: 'GVP' },
-    { nama: 'Gempa', src: 'BMKG + USGS', url: 'https://www.bmkg.go.id', lisensi: 'publik' },
-    { nama: 'Udara', src: 'WAQI', url: 'https://waqi.info', lisensi: 'atribusi' },
-    { nama: 'Banjir', src: 'PetaBencana', url: 'https://petabencana.id', lisensi: 'CC-BY' },
-    { nama: 'Titik api', src: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', lisensi: 'publik' },
-    { nama: 'Pesawat', src: 'OpenSky Network', url: 'https://opensky-network.org', lisensi: 'CC-BY-NC' },
-    { nama: 'Kapal', src: 'AISStream', url: 'https://aisstream.io', lisensi: 'atribusi' },
-    { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY' },
-    { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY' },
-    { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta' },
-    { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik' },
+  /* keyed to a layer toggle so the printed credits track only what's ON the map
+     right now ('base' = always shown: the plate + the wilayah boundaries). */
+  const KREDIT: { nama: string; src: string; url: string; lisensi: string; key: string }[] = [
+    { nama: 'Peta dasar', src: 'OpenFreeMap · OSM', url: 'https://openfreemap.org', lisensi: 'ODbL', key: 'base' },
+    { nama: 'Wilayah', src: 'BIG Rupabumi', url: 'https://www.big.go.id', lisensi: 'One-Map', key: 'base' },
+    { nama: 'Gunung api', src: 'Smithsonian GVP + PVMBG', url: 'https://volcano.si.edu', lisensi: 'GVP', key: 'gunungapi' },
+    { nama: 'Gempa', src: 'BMKG + USGS', url: 'https://www.bmkg.go.id', lisensi: 'publik', key: 'gempa' },
+    { nama: 'Udara', src: 'WAQI', url: 'https://waqi.info', lisensi: 'atribusi', key: 'udara' },
+    { nama: 'Banjir', src: 'PetaBencana', url: 'https://petabencana.id', lisensi: 'CC-BY', key: 'banjir' },
+    { nama: 'Titik api', src: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', lisensi: 'publik', key: 'kebakaran' },
+    { nama: 'Pesawat', src: 'OpenSky Network', url: 'https://opensky-network.org', lisensi: 'CC-BY-NC', key: 'pesawat' },
+    { nama: 'Kapal', src: 'AISStream', url: 'https://aisstream.io', lisensi: 'atribusi', key: 'kapal' },
+    { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY', key: 'karbon' },
+    { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY', key: 'batubara' },
+    { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta', key: 'tambang' },
+    { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik', key: 'hujan' },
   ];
 
   let layerOn = $state<Record<string, boolean>>({ gunungapi: false, udara: false, banjir: false, kebakaran: false, pesawat: false, kapal: false, karbon: false, batubara: false });
@@ -182,6 +184,14 @@
   /* a layer fetched live but came back empty (no active fires/floods today) — shown
      honestly as NIHIL, never silently backfilled with contoh */
   let layerKosong = $state<Record<string, boolean>>({});
+
+  /* the credits printed under the map track only the layers currently ON — the white
+     info box stays a true caption of what the reader is looking at, not a wall of all
+     sources at once. 'base' (plate + wilayah) is always present. */
+  const sumberAktif = $derived.by(() => {
+    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, hujan: hujanOn, ...layerOn };
+    return KREDIT.filter((k) => aktif[k.key]);
+  });
 
   /* the volcano board is a real registry (PVMBG-monitored volcanoes, true summits),
      bundled so all ~120 always render; MAGMA only supplies today's alert LEVELS,
@@ -308,7 +318,10 @@
       if (!map.getLayer('kab-line')) {
         map.addLayer({
           id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.15, 8, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.12, 8, 0.22] },
+          // faint, and INVISIBLE at the national view: the dense regency mesh would
+          // otherwise read bolder than the single province outline. Fades in only as
+          // you drill into a province (where kab-lab labels also appear).
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.25, 9, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0, 6.2, 0.1, 9, 0.18] },
         }, below);
       }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
@@ -334,13 +347,13 @@
       if (!map.getLayer('prov-line')) {
         map.addLayer({
           id: 'prov-line', type: 'line', source: 'provlines', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.3, 8, 3.4], 'line-opacity': 0.82 },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 2.0, 8, 4.6], 'line-opacity': 0.9 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel-fill')) {
         map.addLayer({
           id: 'provinsi-sel-fill', type: 'fill', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
-          paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.12 },
+          paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.06 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel')) {
@@ -1350,11 +1363,23 @@
       </button>
       {#if legendaBuka}
         <div class="kb-leg-rows">
+          <span class="kb-leg-group">PETA DASAR</span>
           <label class="kb-leg-row">
             <input type="checkbox" checked={provinsiOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'provinsi', on: e.currentTarget.checked } })} />
             <span class="sym sym-prov">◆</span> PROVINSI · KLIK
             <span class="src">38 + NASIONAL</span>
           </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={jalanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'jalan', on: e.currentTarget.checked } })} />
+            <span class="sym sym-jalan">╫</span> JALAN · NAMA
+            <span class="src">OSM · ZOOM</span>
+          </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={hujanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'hujan', on: e.currentTarget.checked } })} />
+            <span class="sym sym-hujan">☂</span> HUJAN · IMERG
+            <span class="src">GIBS · {IMERG_DATE.slice(5)}</span>
+          </label>
+          <span class="kb-leg-group kb-leg-group-2">DATA LANGSUNG</span>
           <label class="kb-leg-row">
             <input type="checkbox" checked={gempaOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'gempa', on: e.currentTarget.checked } })} />
             <span class="sym gempa">◉</span> GEMPA · 24 JAM
@@ -1367,20 +1392,10 @@
               <span class="src">{srcLabel(L.id, L.sumber)}</span>
             </label>
           {/each}
-          <label class="kb-leg-row kb-leg-jalan">
+          <label class="kb-leg-row">
             <input type="checkbox" checked={tambangOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'tambang', on: e.currentTarget.checked } })} />
             <span class="sym sym-tambang">▰</span> TAMBANG · IUP
             <span class="src">ESDM · 4.797</span>
-          </label>
-          <label class="kb-leg-row">
-            <input type="checkbox" checked={jalanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'jalan', on: e.currentTarget.checked } })} />
-            <span class="sym sym-jalan">╫</span> JALAN · NAMA
-            <span class="src">OSM · ZOOM</span>
-          </label>
-          <label class="kb-leg-row">
-            <input type="checkbox" checked={hujanOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'hujan', on: e.currentTarget.checked } })} />
-            <span class="sym sym-hujan">☂</span> HUJAN · IMERG
-            <span class="src">GIBS · {IMERG_DATE.slice(5)}</span>
           </label>
         </div>
       {/if}
@@ -1469,10 +1484,10 @@
     <div class="kb-info mono"><span class="dot">◉</span> {infoGempa} <span class="src">{gempaLive ? 'BMKG · LANGSUNG' : 'DATA CONTOH'}</span></div>
   {/if}
 
-  <p class="kb-sumber mono">
-    <span class="kb-sumber-lab">SUMBER</span>
-    {#each KREDIT as k, i}<a class="kb-sumber-item" href={k.url} target="_blank" rel="noopener noreferrer" title={`${k.nama} · ${k.lisensi}`}>{k.src}<span class="kb-sumber-lic">{k.lisensi}</span></a>{#if i < KREDIT.length - 1}<span class="kb-sumber-sep">·</span>{/if}{/each}
-  </p>
+  <div class="kb-info kb-sumber mono">
+    <span class="kb-sumber-lab">SUMBER AKTIF</span>
+    {#each sumberAktif as k, i (k.nama)}<a class="kb-sumber-item" href={k.url} target="_blank" rel="noopener noreferrer" title={`${k.nama} · ${k.lisensi}`}>{k.src}<span class="kb-sumber-lic">{k.lisensi}</span></a>{#if i < sumberAktif.length - 1}<span class="kb-sumber-sep">·</span>{/if}{/each}
+  </div>
 
   <p class="kb-tip mono">Klik provinsi untuk dasar wilayah, atau ◎ LAPOR TITIK lalu klik satu tempat untuk cuaca, udara, dan iklim setahun. Atau minta Aksara: <span class="kb-tip-cmd">“tunjukkan gempa di Sulawesi”</span></p>
 </div>
@@ -1623,13 +1638,13 @@
   .kb-rose:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
   .kb-tip { margin-top: 12px; font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
   .kb-tip-cmd { color: var(--accent); }
-  /* standing source credits: every layer's provider + licence, linked, under the map */
+  /* active-source caption, inside the white info box under the map: only the layers
+     currently shown, each linked to its provider + licence */
   .kb-sumber {
-    margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--line);
     font-size: 9px; line-height: 1.7; letter-spacing: 0.06em; color: var(--muted);
-    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 5px;
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px;
   }
-  .kb-sumber-lab { color: var(--ink); font-style: italic; letter-spacing: 0.16em; opacity: 0.75; }
+  .kb-sumber-lab { color: var(--ink); font-style: italic; letter-spacing: 0.16em; opacity: 0.75; margin-right: 2px; }
   .kb-sumber-item { color: var(--muted); text-decoration: none; border-bottom: 1px dotted transparent; transition: color 0.2s, border-color 0.2s; }
   .kb-sumber-item:hover { color: var(--accent); border-bottom-color: var(--accent); }
   .kb-sumber-lic { margin-left: 3px; font-size: 7.5px; letter-spacing: 0.04em; color: var(--ink); opacity: 0.4; vertical-align: super; }
@@ -1639,7 +1654,9 @@
   .sym-kapal { color: #2f8f78; }
   .sym-jalan { color: var(--muted); }
   .sym-tambang { color: #6a7b8a; }
-  .kb-leg-jalan { border-top: 1px solid var(--line-soft); padding-top: 7px; margin-top: 1px; }
+  /* legend group captions: PETA DASAR (base plate) up top, DATA LANGSUNG below */
+  .kb-leg-group { font-size: 8px; letter-spacing: 0.2em; color: var(--muted); opacity: 0.7; font-style: italic; }
+  .kb-leg-group-2 { border-top: 1px solid var(--line-soft); padding-top: 8px; margin-top: 3px; }
 
   /* the single hazard info card, anchored above the clicked marker */
   .kb-fitur {
