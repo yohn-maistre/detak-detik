@@ -324,7 +324,7 @@
           // faint, and INVISIBLE at the national view: the dense regency mesh would
           // otherwise read bolder than the single province outline. Fades in only as
           // you drill into a province (where kab-lab labels also appear).
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.25, 9, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0, 6.2, 0.1, 9, 0.18] },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.08, 9, 0.3, 13, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0, 6.5, 0.07, 11, 0.12] },
         }, below);
       }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
