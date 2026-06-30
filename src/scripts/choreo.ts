@@ -9,6 +9,7 @@ import { annotate } from 'rough-notation';
 import { gsap, ScrollTrigger, EASE_PRESS, EASE_SETTLE, EASE_STAMP, reducedMotion } from '../lib/motion';
 import { setDenom, onDenom, getDenom, formatUang } from '../lib/denominasi';
 import { setLensa } from '../lib/lensa';
+import { setLensaKab } from '../lib/lensa-kab';
 import { pulseRef } from '../lib/motion-kit';
 
 let lenis: Lenis | null = null;
@@ -689,6 +690,7 @@ function dispatchScrollHandler() {
     on('say', ({ teks, tahan_ms }) => say(teks, tahan_ms));
     on('denominate', ({ unit }) => setDenom(unit));
     on('set_lensa', ({ kode }) => setLensa(kode));
+    on('set_lensa_kab', (p) => setLensaKab(p));
     // the agent reaches into the page: ring what it cites, draw a connector
     // highlight = bring into view only; it must NOT circle whole sections.
     // A scribble is drawn only via the `sorot` verb, on a small target.

@@ -12,15 +12,22 @@
   import { onMount } from 'svelte';
   import { DAERAH } from '../lib/data/edisi';
   import { getLensa, getDaerah, onLensa } from '../lib/lensa';
+  import { getLensaKab, onLensaKab, setLensaKab, type LensaKab } from '../lib/lensa-kab';
   import { dispatch } from '../lib/commands/dispatcher';
   import { reducedMotion } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
   import { ramp } from '../lib/chart-kit';
 
   let kode = $state(getLensa());
+  let kab = $state<LensaKab | null>(getLensaKab());
   const d = $derived(getDaerah(kode));
   const isNas = $derived(d.kode === 'nasional');
-  onMount(() => onLensa((k) => (kode = k)));
+  onMount(() => {
+    // a province (re)selection clears any drilled-in regency; the map sets it back
+    const offLensa = onLensa((k) => { kode = k; kab = null; });
+    const offKab = onLensaKab((k) => { kab = k; });
+    return () => { offLensa(); offKab(); };
+  });
 
   let query = $state('');
   let buka = $state(false);
@@ -80,6 +87,32 @@
     })
   );
   const ipmRank = $derived(isNas ? 0 : peringkat(METRIK[1]!, d));
+
+  /* ── the regency filing (P0.4): a clicked kabupaten, read inside its province.
+     Figures + province aggregates arrive via set_lensa_kab; shares + density are
+     derived from real data — nothing here is mocked. ── */
+  const fmtN = (n: number, dec = 0) => new Intl.NumberFormat('id-ID', { maximumFractionDigits: dec }).format(n);
+  // BPS kode: 4 digits → prov.kab (e.g. "3501" → "35.01")
+  const fmtKode = (k?: string) => (k && k.length >= 3 ? `${k.slice(0, 2)}.${k.slice(2)}` : (k ?? '—'));
+  const koord = (lat?: number, lon?: number) =>
+    lat != null && lon != null ? `${Math.abs(lat).toFixed(2)}°${lat < 0 ? 'LS' : 'LU'} · ${Math.abs(lon).toFixed(2)}°BT` : '';
+  const kabView = $derived.by(() => {
+    const k = kab;
+    if (!k || isNas) return null;
+    return {
+      k,
+      popShare: k.pop && k.provPop ? (k.pop / k.provPop) * 100 : null,
+      luasShare: k.luas && k.provLuas ? (k.luas / k.provLuas) * 100 : null,
+      kepadatan: k.pop && k.luas ? k.pop / k.luas : null,
+      stamp: koord(k.lat, k.lon),
+    };
+  });
+  /* the share meters self-draw when the band appears; instant under reduced motion */
+  function reveal(node: HTMLElement) {
+    if (reducedMotion()) { node.classList.add('in'); return; }
+    const id = requestAnimationFrame(() => requestAnimationFrame(() => node.classList.add('in')));
+    return { destroy() { cancelAnimationFrame(id); } };
+  }
 
   const hasil = $derived.by(() => {
     const q = query.trim().toLowerCase();
@@ -186,6 +219,47 @@
     </div>
   {/key}
 
+  <!-- the regency filing: a clicked kabupaten, nested inside its province's view -->
+  {#if kabView}
+    {#key kabView.k.kode}
+      <aside class="lw-kab" use:reveal>
+        <div class="lw-kab-head">
+          <span class="lw-kab-crumb mono">INDONESIA › {d.nama.toUpperCase()} › KABUPATEN</span>
+          <button class="lw-kab-x mono" onclick={() => setLensaKab(null)} aria-label="Tutup kabupaten">TUTUP ✕</button>
+        </div>
+        <div class="lw-kab-id">
+          <h4 class="lw-kab-nama display">{kabView.k.nama}</h4>
+          <span class="lw-kab-stamp mono">KODE {fmtKode(kabView.k.kode)}{#if kabView.stamp} · {kabView.stamp}{/if}</span>
+        </div>
+        {#if kabView.k.ibukota}<p class="lw-kab-ibukota mono">ibukota · <b>{kabView.k.ibukota}</b></p>{/if}
+
+        <div class="lw-kab-meters">
+          {#if kabView.popShare != null}
+            <div class="lw-kab-meter">
+              <span class="lw-kab-m-k mono">PENDUDUK</span>
+              <span class="lw-kab-m-v num">{fmtN(kabView.k.pop!)} jiwa</span>
+              <div class="lw-kab-track"><span class="lw-kab-fill" style={`--p:${kabView.popShare.toFixed(1)}%`}></span></div>
+              <span class="lw-kab-m-share mono">{fmtN(kabView.popShare, 1)}% penduduk provinsi{#if kabView.k.rankPop} · terbanyak ke-{kabView.k.rankPop} dari {kabView.k.nKab}{/if}</span>
+            </div>
+          {/if}
+          {#if kabView.luasShare != null}
+            <div class="lw-kab-meter">
+              <span class="lw-kab-m-k mono">LUAS</span>
+              <span class="lw-kab-m-v num">{fmtN(kabView.k.luas!)} km²</span>
+              <div class="lw-kab-track"><span class="lw-kab-fill luas" style={`--p:${kabView.luasShare.toFixed(1)}%`}></span></div>
+              <span class="lw-kab-m-share mono">{fmtN(kabView.luasShare, 1)}% wilayah provinsi</span>
+            </div>
+          {/if}
+        </div>
+
+        {#if kabView.kepadatan != null}
+          <p class="lw-kab-foot mono">kepadatan <b>{fmtN(kabView.kepadatan)}</b> jiwa/km²{#if kabView.k.rankPad} · terpadat ke-{kabView.k.rankPad} dari {kabView.k.nKab} kabupaten{/if}</p>
+        {/if}
+        <p class="lw-kab-note mono">Angka BPS lanjutan (IPM, kemiskinan, PDRB) menyusul saat kunci terpasang.</p>
+      </aside>
+    {/key}
+  {/if}
+
   <!-- comparative spread: the constant below both faces -->
   <div class="ld-spread">
     {#each sorot as s, i (s.m.k)}
@@ -240,6 +314,33 @@
     .lw-face { animation: lwIn 0.5s var(--ease-out); }
   }
   @keyframes lwIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+  /* ── the regency filing (P0.4): the clicked kabupaten, nested in its province ──
+     subordinate to the province hero by type scale; the share meters are the signature */
+  .lw-kab { margin: 0 0 30px; padding: 14px 0 16px 16px; border-left: 2px solid var(--accent); border-top: 1px solid var(--line-soft); position: relative; }
+  @media (prefers-reduced-motion: no-preference) { .lw-kab { animation: lwIn 0.45s var(--ease-out); } }
+  .lw-kab-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .lw-kab-crumb { font-size: 8.5px; letter-spacing: 0.18em; color: var(--accent); }
+  .lw-kab-x { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 8.5px; letter-spacing: 0.14em; padding: 0; white-space: nowrap; }
+  .lw-kab-x:hover { color: var(--accent); }
+  .lw-kab-id { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 6px 0 1px; }
+  .lw-kab-nama { font-family: 'Fraunces Variable', serif; font-weight: 380; font-size: clamp(24px, 3.4vw, 40px); line-height: 1; letter-spacing: -0.01em; }
+  .lw-kab-stamp { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); white-space: nowrap; }
+  .lw-kab-ibukota { font-size: 10px; letter-spacing: 0.04em; color: var(--muted); margin: 2px 0 16px; }
+  .lw-kab-ibukota b { color: var(--ink); }
+  .lw-kab-meters { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 28px; max-width: 620px; }
+  @media (max-width: 560px) { .lw-kab-meters { grid-template-columns: 1fr; } }
+  .lw-kab-meter { display: grid; gap: 4px; align-content: start; }
+  .lw-kab-m-k { font-size: 8px; letter-spacing: 0.16em; color: var(--muted); }
+  .lw-kab-m-v { font-family: 'Fraunces Variable', serif; font-weight: 400; font-size: clamp(19px, 2.4vw, 26px); line-height: 1; }
+  .lw-kab-track { position: relative; height: 5px; background: var(--line-soft); margin-top: 4px; overflow: hidden; box-shadow: inset 0 1px 0 color-mix(in oklab, var(--ink) 14%, transparent); }
+  .lw-kab-fill { position: absolute; left: 0; top: 0; bottom: 0; width: var(--p); background: var(--accent); transform: scaleX(0); transform-origin: left; }
+  .lw-kab-fill.luas { background: color-mix(in oklab, var(--accent) 52%, var(--ink)); }
+  .lw-kab.in .lw-kab-fill { transform: scaleX(1); transition: transform 0.7s var(--ease-out); }
+  .lw-kab-m-share { font-size: 8.5px; letter-spacing: 0.06em; color: var(--muted); }
+  .lw-kab-foot { font-size: 9.5px; letter-spacing: 0.06em; color: var(--muted); margin-top: 14px; border-top: 1px solid var(--line-soft); padding-top: 9px; }
+  .lw-kab-foot b { color: var(--ink); font-weight: 600; }
+  .lw-kab-note { font-size: 8.5px; letter-spacing: 0.04em; color: var(--muted); opacity: 0.7; font-style: italic; margin-top: 5px; }
 
   /* search */
   .lw-find { position: relative; margin-bottom: 26px; max-width: 620px; }

@@ -35,6 +35,21 @@ export const commandSchemas = {
   set_lensa: z.object({
     kode: z.string(),
   }),
+  set_lensa_kab: z.object({
+    kode: z.string(),
+    nama: z.string(),
+    prov: z.string(),
+    ibukota: z.string().optional(),
+    pop: z.number().optional(),
+    luas: z.number().optional(),
+    lat: z.number().optional(),
+    lon: z.number().optional(),
+    provPop: z.number().optional(),
+    provLuas: z.number().optional(),
+    nKab: z.number().optional(),
+    rankPop: z.number().optional(),
+    rankPad: z.number().optional(),
+  }),
   map_label: z.object({
     kode: z.string().optional(),
     lat: z.number().min(-11).max(6).optional(),
