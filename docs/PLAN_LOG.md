@@ -395,3 +395,24 @@ internal `DATA_SOURCES.md` + public `sumber.astro`.
     earlier (every layer's provider + licence, linked).
   - **Pending:** R3 forest layers (BIG peatland + GFW concessions); BPS free key (Yose) → live
     IPM/poverty/PDRB in both dossiers; optional ESDM power-fleet (3,588) energy-mix layer.
+- **2026-06-30 — Phase 0 map finish + Satwa + P0.4.** Resumed after two Termux crashes (recovered
+  uncommitted work intact). All `astro check` 0/0/0, deployed green:
+  - **P0.1 borders** (9c867f0): province bold (4.6px), kab faint + invisible until z6.2; a later pass
+    (19fcd18) cut kab even thinner (Yose: still read reversed at province zoom — density illusion).
+  - **P0.2 legend + sources** (9c867f0): legend split PETA DASAR / DATA LANGSUNG; source credits keyed
+    to layer toggles → only **active** layers' sources print, inside the white info box.
+  - **P0.3 CO₂ non-power** (be96fac): excluded the power sector (= the coal plants, hence the overlap);
+    vendored top-200 NON-power emitters (steel/cement/migas) to `idn-emisi.geojson` via
+    `scripts/build-emisi.mjs`. + volcano-board hardening (commit registry immediately, seed on basemap
+    switch). "EMISI CO₂ · INDUSTRI".
+  - **Satwa Terancam** (c85e9a2): **Mandum Rimba** 151 IUCN species-range polygons, browser-direct
+    (CORS `*`, keyless, lazy-load + contoh fallback); click → class/count/CR-EN tally/top species.
+  - **Public ledger brought current** (4212a8e): `sumber.astro` + `DATA_SOURCES.md` now list all 12
+    shipped map layers (was behind); captured Mandum + **SPPG** (`sismonbgn.com`, ~5,600 pts, worker-
+    proxy, label *terdaftar* not operating) scouts → research note G.
+  - **P0.4 kab → Lensa Wilayah** (1311c66): dense in-map sub-card retired; a clicked regency files into
+    the panel below via new `lensa-kab.ts` store + `set_lensa_kab` verb — breadcrumb, official kode +
+    coord stamp, and **"bagian dari provinsi" share meters** (penduduk/luas, self-draw) + density/rank,
+    all derived from real wilayah data. Map keeps a quiet breadcrumb pointer.
+  - **Pending:** P0c open-data give-back; SPPG + GFW concession/PANGAEA mining layers; Phase 1 Temuan
+    Redaksi findings board (surface Lane B); OpenSky secrets (Yose) → live planes.
