@@ -85,6 +85,33 @@ Whenever a data source is added, changed, or flips CONTOH→LANGSUNG:
 
 ---
 
+## H · GFW Indonesia concessions — tested recipe + LICENSE BLOCKER (scout, 2026-07-01)
+Base `https://data-api.globalforestwatch.org`. **Key-free path = `/download/csv?sql=...` ONLY**
+(`/query/json` + `/download/geojson` now require an API key). `SELECT gfw_geojson` returns a
+`MultiPolygon` string (EPSG:4326, `JSON.parse`-able). All three IDN counts match Mandum exactly.
+- **Sawit** `gfw_oil_palm` **v2025** (pin the version — `/latest` is empty) — **1855** IDN, ~100 MB raw.
+- **HTI/pulp** `gfw_wood_fiber` **v2025** — **295** IDN, ~16 MB. (NOT `idn_wood_fiber` = view-only, 531.)
+- **Logging** `gfw_managed_forests` **v2025** — **259** IDN, ~14 MB. (NOT `gfw_logging` = 0 IDN features.)
+- Shared schema: `gfw_fid,iso3,conc_type,conc_name,company,comp_group,conc_stat,…,gfw_area__ha,gfw_geojson`.
+  Use `conc_name` (company/PT; `company`/`comp_group` mostly empty for IDN). Filter `WHERE iso3='IDN'`.
+- **MUST batch:** full-IDN geometry query → HTTP 500 (payload too large). `LIMIT 50 OFFSET n` loop
+  (~49 requests). CSV is RFC-4180 quoted (`gfw_geojson` has commas) → use a real CSV parser.
+- **Generalize:** raw ~130 MB across 3 layers → needs mapshaper/turf simplify (a NEW dep) + heavy local
+  processing (this phone has ~500 MB RAM / 7 GB disk — risky).
+- **⚠️ LICENSE BLOCKER:** dataset license is **"CC BY 4.0 (EXCLUDING Indonesia)"** — the IDN features
+  are **carved out of the CC-BY grant**; source is Ministry of Environment & Forestry via Greenpeace/WRI.
+  GFW does not assert CC-BY over the Indonesian polygons; `idn_wood_fiber` is flagged "View Only, Not
+  Downloadable." Mandum's "CC BY 4.0" claim does **not** cleanly cover the IDN slice. **For a paper built
+  on Iron Law #1, don't vendor+publish the GFW-direct IDN concessions without clean reuse rights.**
+- **Cleaner path (recommended):** get the same concessions from the **government original via BIG SatuPeta**
+  (`KEHUTANAN` 15 layers / `PERIZINAN_DAN_PERTANAHAN` 61) or ESDM — open Satu Peta, **server-side
+  generalizable** (`maxAllowableOffset`+`geometryPrecision`, like `build-tambang.mjs`), no local 130 MB
+  processing, no new dep, provenance-clean. Verify the exact layer ids before building.
+- Attribution if ever used: "Oil palm/Wood fiber/Logging concessions, accessed via Global Forest Watch,
+  [date], globalforestwatch.org" + Greenpeace (2011) + WRI (2012) + Ministry of Environment & Forestry.
+
+---
+
 ## G · Mandum Rimba + SPPG (scout round 2, verified 2026-06-28)
 
 ### Mandum Rimba — `mandumrimba.org`
