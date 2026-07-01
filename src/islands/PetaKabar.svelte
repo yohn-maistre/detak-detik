@@ -240,7 +240,6 @@
      DAERAH (see scripts/patch-prov-geojson.mjs). MapLibre fetches the URL. */
   const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson`;
   const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson`;
-  const PROVLINES_URL = `${import.meta.env.BASE_URL}data/idn-prov-lines.geojson`;
   type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
   type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
   let provData: { features: ProvFeature[] } | null = null;
@@ -322,10 +321,11 @@
       if (!map.getLayer('kab-line')) {
         map.addLayer({
           id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
-          // faint, and INVISIBLE at the national view: the dense regency mesh would
-          // otherwise read bolder than the single province outline. Fades in only as
-          // you drill into a province (where kab-lab labels also appear).
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.08, 9, 0.3, 13, 0.5], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0, 6.5, 0.07, 11, 0.12] },
+          // the INNER regency edges: a thin, even hairline — like the map's own island
+          // coastlines, never a bold mesh. Faint at the national view (avoids clutter),
+          // a clean hairline once you drill into a province. The heavier PROVINCE
+          // perimeter is a separate layer (prov-line) drawn on top.
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.3, 9, 0.55], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.12, 7, 0.32, 11, 0.42] },
         }, below);
       }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
@@ -346,12 +346,14 @@
           },
         }, below);
       }
-      // bold province outlines: BIG's dissolved boundary lines (no internal kab edges)
-      if (!map.getSource('provlines')) map.addSource('provlines', { type: 'geojson', data: PROVLINES_URL });
+      // the OUTER province perimeter (incl. coastlines) drawn from the province polygons
+      // themselves — a clean, moderate outline on TOP of the thin kab hairlines. This
+      // replaces the old idn-prov-lines.geojson, which actually held kabupaten-level
+      // edges (drawing them bold made the regency mesh masquerade as the province border).
       if (!map.getLayer('prov-line')) {
         map.addLayer({
-          id: 'prov-line', type: 'line', source: 'provlines', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 2.0, 8, 4.6], 'line-opacity': 0.9 },
+          id: 'prov-line', type: 'line', source: 'provinsi', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.9, 8, 1.8], 'line-opacity': 0.85 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel-fill')) {
