@@ -29,6 +29,8 @@
   let satwaLive = $state(false);
   let sppgOn = $state(false);
   let sppgLive = $state(false);
+  let konsesiOn = $state(false);
+  let konsesiLive = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -181,6 +183,7 @@
     { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY', key: 'karbon' },
     { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY', key: 'batubara' },
     { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta', key: 'tambang' },
+    { nama: 'Konsesi hutan/sawit', src: 'KLHK · BIG SatuPeta', url: 'https://kspservices.big.go.id', lisensi: 'Satu Peta', key: 'konsesi' },
     { nama: 'Satwa terancam', src: 'Mandum Rimba · GBIF + IUCN', url: 'https://mandumrimba.org', lisensi: 'derivatif CC-BY', key: 'satwa' },
     { nama: 'SPPG · MBG', src: 'sismonbgn (terdaftar)', url: 'https://sismonbgn.com', lisensi: 'publik', key: 'sppg' },
     { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik', key: 'hujan' },
@@ -196,7 +199,7 @@
      info box stays a true caption of what the reader is looking at, not a wall of all
      sources at once. 'base' (plate + wilayah) is always present. */
   const sumberAktif = $derived.by(() => {
-    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, satwa: satwaOn, sppg: sppgOn, hujan: hujanOn, ...layerOn };
+    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, konsesi: konsesiOn, satwa: satwaOn, sppg: sppgOn, hujan: hujanOn, ...layerOn };
     return KREDIT.filter((k) => aktif[k.key]);
   });
 
@@ -651,6 +654,26 @@
         catatan: p.cnc ? `Clean & Clear: ${String(p.cnc)} — izin pertambangan (IUP).` : 'Izin Usaha Pertambangan (IUP).',
       };
     }
+    if (f.kind === 'konsesi') {
+      const JENIS: Record<string, string> = { sawit: 'Perkebunan sawit', hti: 'Hutan tanaman industri', logging: 'Hutan alam · IUPHHK-HA' };
+      const jenis = String(p.jenis ?? '');
+      const baris: [string, string][] = [['Jenis', (JENIS[jenis] ?? jenis) || '-']];
+      if (p.izin) baris.push(['Izin', p.izin === 'usaha' ? 'Izin usaha' : 'Izin lokasi']);
+      if (N(p.luas) > 0) baris.push(['Luas', `${N(p.luas).toLocaleString('id-ID')} ha`]);
+      if (p.status) baris.push(['Status', String(p.status)]);
+      if (p.grup) baris.push(['Grup', String(p.grup)]);
+      if (p.sk) baris.push(['Nomor SK', String(p.sk)]);
+      if (N(p.tahun) > 0) baris.push(['Terbit', String(p.tahun)]);
+      const nama = String(p.nama || p.grup || '');
+      return {
+        judul: nama || `Konsesi ${JENIS[jenis] ?? jenis}`,
+        src: 'KLHK · BIG Satu Peta',
+        baris,
+        catatan: p.izin === 'lokasi'
+          ? 'Izin lokasi: tahap awal penyediaan lahan, belum tentu beroperasi.'
+          : (jenis === 'sawit' ? 'Cakupan sawit sebagian (per kabupaten).' : 'Izin konsesi kehutanan.'),
+      };
+    }
     if (f.kind === 'satwa') {
       const KELAS: Record<string, string> = { mammalia: 'Mamalia', aves: 'Burung', reptilia: 'Reptil', amphibia: 'Amfibi' };
       // MapLibre stringifies array/object props on read — parse back defensively
@@ -841,6 +864,7 @@
     }
     addProvinsi();
     addTambang();
+    addKonsesi();
     addSatwa();
     addSppg();
     addJalan();
@@ -1068,6 +1092,50 @@
     if (!map?.getSource('sppg')) addSppg();
     if (map?.getLayer('sppg-dot')) map.setLayoutProperty('sppg-dot', 'visibility', onState ? 'visible' : 'none');
     if (onState) void muatSppg();
+  }
+
+  /* KONSESI: forest & plantation concessions from the government original (KLHK) via
+     BIG SatuPeta — logging (IUPHHK-HA) + industrial timber (IUPHHK-HT) nationwide, and
+     oil-palm permits (izin usaha/lokasi) where the open data has them. Vendored +
+     server-side generalised (scripts/build-konsesi.mjs), CC-clean Satu Peta. Polygons
+     coloured by jenis; pairs with the mining (TAMBANG) layer. Off by default. */
+  const KONSESI_FILL = ['match', ['get', 'jenis'],
+    'sawit', '#d19a3a', 'hti', '#9c6b4f', 'logging', '#6f8a4a',
+    /* lain */ '#9a8f6f'] as unknown;
+  function addKonsesi() {
+    if (!map) return;
+    const vis = konsesiOn ? 'visible' : 'none';
+    const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+    if (!map.getSource('konsesi')) map.addSource('konsesi', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } as never });
+    if (!map.getLayer('konsesi-fill')) {
+      map.addLayer({
+        id: 'konsesi-fill', type: 'fill', source: 'konsesi', minzoom: 4.2,
+        layout: { visibility: vis },
+        paint: { 'fill-color': KONSESI_FILL as never, 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.28, 9, 0.45] },
+      } as never, below);
+    }
+    if (!map.getLayer('konsesi-line')) {
+      map.addLayer({
+        id: 'konsesi-line', type: 'line', source: 'konsesi', minzoom: 6,
+        layout: { visibility: vis },
+        paint: { 'line-color': KONSESI_FILL as never, 'line-width': 0.5, 'line-opacity': 0.5 },
+      } as never, below);
+    }
+  }
+  async function muatKonsesi() {
+    if (konsesiLive || !map?.getSource('konsesi')) return;
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}data/idn-konsesi.geojson`, { signal: AbortSignal.timeout(12000) });
+      const data = (await res.json()) as { features?: unknown[] };
+      if (data?.features?.length) { setSrc('konsesi', data); konsesiLive = true; }
+    } catch { /* stays empty */ }
+  }
+  function toggleKonsesi(onState: boolean) {
+    konsesiOn = onState;
+    if (!map?.getSource('konsesi')) addKonsesi();
+    const v = onState ? 'visible' : 'none';
+    for (const id of ['konsesi-fill', 'konsesi-line']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
+    if (onState) void muatKonsesi();
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -1362,6 +1430,12 @@
         const p = e.features?.[0]?.properties as GeoPt | undefined;
         if (p) bukaFitur('tambang', e.lngLat.lng, e.lngLat.lat, p);
       });
+      // click a concession polygon: company / area / permit dossier
+      map.on('click', 'konsesi-fill', (e) => {
+        if (titikMode || !konsesiOn) return;
+        const p = e.features?.[0]?.properties as GeoPt | undefined;
+        if (p) bukaFitur('konsesi', e.lngLat.lng, e.lngLat.lat, p);
+      });
       // click a species range: open its dossier (class, count, IUCN status)
       map.on('click', 'satwa-fill', (e) => {
         if (titikMode || !satwaOn) return;
@@ -1389,7 +1463,7 @@
         if (payload) dispatch({ cmd: 'set_lensa_kab', params: payload });
       });
       // a bare-map click: drop the location panel if armed, else close the info card
-      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'satwa-fill', 'sppg-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
+      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'konsesi-fill', 'satwa-fill', 'sppg-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
       map.on('click', (e) => {
         if (titikMode) { bukaTitik(e.lngLat.lng, e.lngLat.lat); setTitikMode(false); return; }
         const live = DOT_LAYERS.filter((id) => map!.getLayer(id));
@@ -1431,6 +1505,7 @@
         else if (layer === 'jalan') toggleJalan(onState);
         else if (layer === 'hujan') toggleHujan(onState);
         else if (layer === 'tambang') toggleTambang(onState);
+        else if (layer === 'konsesi') toggleKonsesi(onState);
         else if (layer === 'satwa') toggleSatwa(onState);
         else if (layer === 'sppg') toggleSppg(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
@@ -1567,6 +1642,11 @@
             <input type="checkbox" checked={tambangOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'tambang', on: e.currentTarget.checked } })} />
             <span class="sym sym-tambang">▰</span> TAMBANG · IUP
             <span class="src">ESDM · 4.797</span>
+          </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={konsesiOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'konsesi', on: e.currentTarget.checked } })} />
+            <span class="sym sym-konsesi">▰</span> KONSESI · HTI/HA/SAWIT
+            <span class="src">{konsesiLive ? 'SATUPETA · 1.040' : 'KLHK'}</span>
           </label>
           <label class="kb-leg-row">
             <input type="checkbox" checked={satwaOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'satwa', on: e.currentTarget.checked } })} />
@@ -1822,6 +1902,7 @@
   .sym-kapal { color: #2f8f78; }
   .sym-jalan { color: var(--muted); }
   .sym-tambang { color: #6a7b8a; }
+  .sym-konsesi { color: #9c6b4f; }
   .sym-satwa { color: #5f8a3f; }
   .sym-sppg { color: #2f8f4e; }
   /* legend group captions: PETA DASAR (base plate) up top, DATA LANGSUNG below */
