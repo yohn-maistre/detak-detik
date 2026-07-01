@@ -27,6 +27,8 @@
   let tambangOn = $state(false);
   let satwaOn = $state(false);
   let satwaLive = $state(false);
+  let sppgOn = $state(false);
+  let sppgLive = $state(false);
   let legendaBuka = $state(false);
   let gempaOn = $state(true);
   let gempaLive = $state(false);
@@ -180,6 +182,7 @@
     { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY', key: 'batubara' },
     { nama: 'Tambang · IUP', src: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', lisensi: 'Satu Peta', key: 'tambang' },
     { nama: 'Satwa terancam', src: 'Mandum Rimba · GBIF + IUCN', url: 'https://mandumrimba.org', lisensi: 'derivatif CC-BY', key: 'satwa' },
+    { nama: 'SPPG · MBG', src: 'sismonbgn (terdaftar)', url: 'https://sismonbgn.com', lisensi: 'publik', key: 'sppg' },
     { nama: 'Hujan', src: 'NASA GIBS · IMERG', url: 'https://gibs.earthdata.nasa.gov', lisensi: 'publik', key: 'hujan' },
   ];
 
@@ -193,7 +196,7 @@
      info box stays a true caption of what the reader is looking at, not a wall of all
      sources at once. 'base' (plate + wilayah) is always present. */
   const sumberAktif = $derived.by(() => {
-    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, satwa: satwaOn, hujan: hujanOn, ...layerOn };
+    const aktif: Record<string, boolean> = { base: true, gempa: gempaOn, tambang: tambangOn, satwa: satwaOn, sppg: sppgOn, hujan: hujanOn, ...layerOn };
     return KREDIT.filter((k) => aktif[k.key]);
   });
 
@@ -663,6 +666,16 @@
       if (en) baris.push(['Genting · EN', String(en)]);
       return { judul: 'Satwa terancam', src: `Mandum Rimba · GBIF + IUCN${p.date ? ` · ${String(p.date)}` : ''}`, baris, catatan: top ? `Antara lain: ${top}.` : 'Sebaran perkiraan dari okurensi GBIF + status IUCN.' };
     }
+    if (f.kind === 'sppg') {
+      const ST: Record<string, string> = { 'Beroperasi': 'Beroperasi', 'Belum Beroperasi': 'Belum beroperasi', 'Penentuan KA SPPG': 'Penentuan lokasi (KA)' };
+      const st = String(p.status ?? '');
+      return {
+        judul: `SPPG · ${String(p.id ?? '')}`.trim(),
+        src: 'sismonbgn · status terdaftar, bukan sensus operasi',
+        baris: [['Status', ST[st] ?? st || '-'], ['Program', 'Makan Bergizi Gratis']],
+        catatan: String(p.alamat ?? '') || 'Titik terdaftar/diajukan.',
+      };
+    }
     return null;
   });
 
@@ -829,6 +842,7 @@
     addProvinsi();
     addTambang();
     addSatwa();
+    addSppg();
     addJalan();
     addHujan();
     if (plat === 'cuaca' && radarTs && !map.getLayer('radar')) {
@@ -1002,6 +1016,58 @@
     const v = onState ? 'visible' : 'none';
     for (const id of ['satwa-fill', 'satwa-line']) if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', v);
     if (onState) void muatSatwa();
+  }
+
+  /* SPPG · MBG: the kitchen units of the Makan Bergizi Gratis free-meal program,
+     vendored from the open monitor sismonbgn.com (scripts/build-sppg.mjs). Coloured by
+     status so the honest gap shows on the map — at capture only ~28 of ~5,600 are
+     "Beroperasi"; the rest are proposed/not-yet. Labelled terdaftar, never an operating
+     census (Iron Law #1). Off by default; lazy-loads the 1.5 MB set on first toggle. */
+  const SPPG_COLOR = ['match', ['get', 'status'],
+    'Beroperasi', '#2f8f4e',        // operating — the few, in green
+    'Belum Beroperasi', '#c98a3a',  // not yet operating — amber
+    'Penentuan KA SPPG', '#9a8f6f', // earliest stage — faint
+    /* lain */ '#9a8f6f'] as unknown;
+  const SPPG_CONTOH = {
+    type: 'FeatureCollection' as const,
+    features: [
+      { type: 'Feature' as const, properties: { id: 'contoh-1', status: 'Beroperasi', alamat: 'contoh · Kota Bandung, Jawa Barat' }, geometry: { type: 'Point' as const, coordinates: [107.6, -6.92] } },
+      { type: 'Feature' as const, properties: { id: 'contoh-2', status: 'Belum Beroperasi', alamat: 'contoh · Kab. Sukoharjo, Jawa Tengah' }, geometry: { type: 'Point' as const, coordinates: [110.78, -7.57] } },
+      { type: 'Feature' as const, properties: { id: 'contoh-3', status: 'Penentuan KA SPPG', alamat: 'contoh · Kab. Bantul, DIY' }, geometry: { type: 'Point' as const, coordinates: [110.33, -7.9] } },
+    ],
+  };
+  function addSppg() {
+    if (!map) return;
+    const vis = sppgOn ? 'visible' : 'none';
+    const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
+    if (!map.getSource('sppg')) map.addSource('sppg', { type: 'geojson', data: SPPG_CONTOH as never });
+    if (!map.getLayer('sppg-dot')) {
+      map.addLayer({
+        id: 'sppg-dot', type: 'circle', source: 'sppg',
+        layout: { visibility: vis },
+        paint: {
+          'circle-radius': ['interpolate', ['linear'], ['zoom'], 4, 1.4, 9, 4],
+          'circle-color': SPPG_COLOR as never,
+          'circle-opacity': 0.82,
+          'circle-stroke-width': ['interpolate', ['linear'], ['zoom'], 6, 0, 8, 0.6],
+          'circle-stroke-color': 'rgba(255,255,255,0.85)',
+        },
+      } as never, below);
+    }
+  }
+  async function muatSppg() {
+    if (sppgLive || !map?.getSource('sppg')) return;
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}data/idn-sppg.geojson`, { signal: AbortSignal.timeout(10000) });
+      const data = (await res.json()) as { features?: unknown[] };
+      if (data?.features?.length) { setSrc('sppg', data); sppgLive = true; }
+    } catch { /* contoh stays */ }
+  }
+  function toggleSppg(onState: boolean) {
+    sppgOn = onState;
+    if (!map?.getSource('sppg')) addSppg();
+    if (map?.getLayer('sppg-dot')) map.setLayoutProperty('sppg-dot', 'visibility', onState ? 'visible' : 'none');
+    if (onState) void muatSppg();
   }
 
   /* best-effort live data: PetaBencana is keyless/CORS; the rest go through the
@@ -1302,6 +1368,12 @@
         const p = e.features?.[0]?.properties as GeoPt | undefined;
         if (p) bukaFitur('satwa', e.lngLat.lng, e.lngLat.lat, p);
       });
+      // click an SPPG kitchen point: status + address dossier
+      map.on('click', 'sppg-dot', (e) => {
+        if (titikMode || !sppgOn) return;
+        const p = e.features?.[0]?.properties as GeoPt | undefined;
+        if (p) bukaFitur('sppg', e.lngLat.lng, e.lngLat.lat, p);
+      });
       // click a kabupaten: set its province as the lensa AND hand its filing to Lensa
       // Wilayah (set_lensa_kab). Its name reads off the zoomed-in map labels (kab-lab),
       // never a popup. The dispatches fire province-first, regency-second.
@@ -1317,7 +1389,7 @@
         if (payload) dispatch({ cmd: 'set_lensa_kab', params: payload });
       });
       // a bare-map click: drop the location panel if armed, else close the info card
-      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'satwa-fill', ...LAYERS.map((l) => `${l.id}-dot`)];
+      const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'satwa-fill', 'sppg-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
       map.on('click', (e) => {
         if (titikMode) { bukaTitik(e.lngLat.lng, e.lngLat.lat); setTitikMode(false); return; }
         const live = DOT_LAYERS.filter((id) => map!.getLayer(id));
@@ -1360,6 +1432,7 @@
         else if (layer === 'hujan') toggleHujan(onState);
         else if (layer === 'tambang') toggleTambang(onState);
         else if (layer === 'satwa') toggleSatwa(onState);
+        else if (layer === 'sppg') toggleSppg(onState);
         else if (LAYERS.some((l) => l.id === layer)) {
           toggleLayer(layer, onState);
           if (layer === 'kapal') (onState ? connectAIS() : disconnectAIS());
@@ -1499,6 +1572,11 @@
             <input type="checkbox" checked={satwaOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'satwa', on: e.currentTarget.checked } })} />
             <span class="sym sym-satwa">▱</span> SATWA TERANCAM
             <span class="src">{satwaLive ? 'MANDUM · LANGSUNG' : 'CONTOH'}</span>
+          </label>
+          <label class="kb-leg-row">
+            <input type="checkbox" checked={sppgOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'sppg', on: e.currentTarget.checked } })} />
+            <span class="sym sym-sppg">◍</span> SPPG · MBG
+            <span class="src">{sppgLive ? '28 OPERASI / 5.598' : 'TERDAFTAR'}</span>
           </label>
         </div>
       {/if}
@@ -1745,6 +1823,7 @@
   .sym-jalan { color: var(--muted); }
   .sym-tambang { color: #6a7b8a; }
   .sym-satwa { color: #5f8a3f; }
+  .sym-sppg { color: #2f8f4e; }
   /* legend group captions: PETA DASAR (base plate) up top, DATA LANGSUNG below */
   .kb-leg-group { font-size: 8px; letter-spacing: 0.2em; color: var(--muted); opacity: 0.7; font-style: italic; }
   .kb-leg-group-2 { border-top: 1px solid var(--line-soft); padding-top: 8px; margin-top: 3px; }
