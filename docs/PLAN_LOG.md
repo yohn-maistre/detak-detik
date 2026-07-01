@@ -416,3 +416,22 @@ internal `DATA_SOURCES.md` + public `sumber.astro`.
     all derived from real wilayah data. Map keeps a quiet breadcrumb pointer.
   - **Pending:** P0c open-data give-back; SPPG + GFW concession/PANGAEA mining layers; Phase 1 Temuan
     Redaksi findings board (surface Lane B); OpenSky secrets (Yose) → live planes.
+- **2026-07-01 — border root-cause + SPPG + concessions.** All local `astro build` clean, deployed green
+  (learned: `astro check` misses `??`/`||` mixing that `astro build` catches — one failed deploy, now run
+  build for Svelte edits):
+  - **Border bug ROOT-CAUSED** (ead0bea): `idn-prov-lines.geojson` held **kabupaten-level** edges (68 in
+    Kalbar alone, empty props) — drawn bold as `prov-line` it made the regency mesh masquerade as the
+    province border. Now `prov-line` draws from the 38 real province polygons (`provinsi` source, incl.
+    coastlines); `kab-line` = thin even hairline. Deleted the mislabeled file. (Several prior tuning
+    passes 9c867f0/19fcd18 didn't fix it because the data itself was wrong.)
+  - **SPPG · MBG** (2b943d0): ~5,598 Makan Bergizi Gratis kitchens vendored from `sismonbgn.com`
+    (`build-sppg.mjs`, no-CORS parsed at build). Circle layer by status; **honest gap** — only ~28
+    "Beroperasi" of ~5,598, legend prints "28 OPERASI / 5.598", labelled terdaftar not operating.
+  - **KONSESI** (5c46c94): forest+plantation concessions from the **government original (KLHK) via BIG
+    SatuPeta** — chosen over GFW because GFW licenses "CC BY 4.0 **excluding Indonesia**". `build-konsesi.mjs`
+    → 1,040 polys (255 logging IUPHHK-HA + 292 HTI nationwide + 493 sawit izin usaha/lokasi, partial),
+    server-side generalized. Pairs with TAMBANG. GFW-direct recipe + license blocker captured in research H.
+  - **Ledgers** (`sumber.astro` + `DATA_SOURCES.md`) current for SPPG + konsesi.
+  - **Pending:** P0c open-data give-back; PANGAEA mining footprints (optional); Phase 1 **Temuan Redaksi**
+    findings board (surface Lane B — highest leverage); Phase 2 newsstand; Phase 3 real numbers. OpenSky
+    secrets (Yose) → live planes; BPS key → live dossier indicators.
