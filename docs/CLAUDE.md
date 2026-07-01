@@ -332,7 +332,7 @@ volcanoes, cross-sector Climate TRACE, OpenSky, AISStream, GEM coal, cahyadsn wi
 **Build / test / run**
 - `pnpm install` · `pnpm dev` (localhost:4321) · `pnpm check` (astro/svelte/ts) · `pnpm build` (→ `dist/`).
 - Worker lives in `worker/` (one stateless Worker). Newsroom: `python3 -m newsroom.main` (dry-run without `AKSARA_URL` + `EDISI_TOKEN`).
-- Min verification before push: `pnpm build` clean (+ `pnpm check` when types are touched). Two-space indent in Svelte/Astro/TS, four-space in Python; Indonesian domain names; PascalCase islands, kebab/lowercase shared TS.
+- Min verification before push: `pnpm build` clean (+ `pnpm check` when types are touched). **`astro check` is NOT enough for Svelte template/script edits** — it runs the lenient TS/svelte language service and passed `A ?? B || C` (mixing `??`/`||`), which the actual Svelte compiler in `astro build` rejects (`js_parse_error`) → a failed deploy. Run `pnpm build` (or accept the CI build as the gate) after touching `.svelte`. Two-space indent in Svelte/Astro/TS, four-space in Python; Indonesian domain names; PascalCase islands, kebab/lowercase shared TS.
 
 **Deploy (GitHub Actions, on push to `main`)**
 - `deploy.yml` → Cloudflare Pages (every push). `worker.yml` → Worker (only when `worker/**` changes; it resolves the KV id, deploys, then pushes each secret). Both also have `workflow_dispatch`.
