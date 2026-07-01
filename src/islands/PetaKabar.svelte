@@ -672,7 +672,7 @@
       return {
         judul: `SPPG · ${String(p.id ?? '')}`.trim(),
         src: 'sismonbgn · status terdaftar, bukan sensus operasi',
-        baris: [['Status', ST[st] ?? st || '-'], ['Program', 'Makan Bergizi Gratis']],
+        baris: [['Status', (ST[st] ?? st) || '-'], ['Program', 'Makan Bergizi Gratis']],
         catatan: String(p.alamat ?? '') || 'Titik terdaftar/diajukan.',
       };
     }
