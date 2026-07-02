@@ -812,6 +812,63 @@ the standard gate, size-guarded before KV publish.
   never boxed) is the approved recipe. Candidate spots, pending veil verdict:
   seam slats during the flip, the fajar dawn canvas, atlas paper grain.
 
+### 13.8 Wave-5 revision (Yose review of waves 3–4, 2026-07-02)
+
+**Decisions**
+- **Map moves to the top of Act I**: feed → PETA KABAR (+cuaca) → PASAR.
+  The country the news happens in, right under the news.
+- **One label for the Act II opening instrument**: BUKTI №1/№2 dies (it read
+  as "this is proof of…"). The odometer + vitals + meter bank open Act II as
+  one block titled **PAPAN ANGKA**; then GERAK I (branches, each with its
+  functions + own scoreboard), then the themes. Descriptive, not forensic.
+- **PasarPagi restyles to the meter-plate family** (borders + corner
+  crosshairs, the Act II bank's grammar) — one instrument family, two
+  registers.
+- **ObituariHutan closes Act II** (Yose: "perfect for closing act 2") —
+  moved out of the lingkungan chapter to after hening; real-data wiring
+  queued (GFW alerts or Auriga annual, worker-proxied).
+- **Udara dedupe (perception)**: the map owns *today's* air; the pixel
+  calendar owns the *history* and its title must say so.
+
+**Map: dossier decoupling (planned, own sub-wave)**
+- The map's own dossier (Act I) carries geographic + live data at province
+  AND kabupaten level in place (weather, quakes, alerts, population,
+  ibukota, IPM) — no forced scroll to Act II.
+- **LensaWilayah v2 = the accountability lens** (Act II · Daerah): per
+  province/kabupaten metrics that fit the engine — belanja pegawai ratio,
+  belanja modal, APBD per kapita (DJPK csv_apbd, keyless, top quick win),
+  poverty/IPM (BPS once the key lands). The KARTOTEK card-catalog concept
+  applies here. Map click still files into it via the bus, but as a quiet
+  option, not a teleport.
+- **idn-kab.geojson is corrupt** (vertex-soup rings around Kutai
+  Kartanegara + repeated features; see docs/screenshots/peta-kabar-*).
+  Fix: deterministic ring-repair script (dedupe consecutive points, drop
+  degenerate/spanning rings, verify 514 features) — delegated to an agent;
+  PetaKabar code untouched.
+
+**Feed lead art (Yose idea, staged)**
+- v1 (ships now): `VeilMuka` — Paper Shaders dither field behind the №01
+  lead, pooled into the right whitespace via mask; params seeded
+  deterministically from the lead headline hash (scale/px/speed within
+  tasteful bounds) so every edition prints a different plate, zero cost.
+- v2 (planned): the newsroom emits a tiny bounded "seni" spec (enum shape/
+  density/motion, validated like the chart specs — model picks the mood,
+  code clamps the values). Pure decoration, no gate needed, labeled nothing.
+
+**Kliping clustering over-merge** (Icha/Tifa case): the ≥3-shared-tokens
+rule now needs a Jaccard floor, and hyper-generic news tokens (kasus,
+dugaan, diduga, terkait, video, viral…) join the stopword list. BUTIR/LEDE
+are automated verbatim extraction (not manual); SARI waits only on a live
+LLM key.
+
+**Act II structure pass (top→bottom target order)**: PAPAN ANGKA → TEMUAN
+REDAKSI → SembilanPuluh → GERAK I (5 cabang, each: band → skor → sheet) →
+GERAK II themes (Pasar/Ekonomi → Bumi → Janji → Layar Ganda → Dunia) →
+hening (closing register) → ObituariHutan (the act's last note) → arsip.
+Remaining known items: struk rotates its region per edition (DJPK), SkorCabang
+"(data contoh)" flips as sources wire, CabangBand ruler-tick unification
+(wave 6).
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots

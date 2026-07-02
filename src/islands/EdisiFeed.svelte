@@ -10,6 +10,7 @@
       outlet rows link out. Deep links: #/kliping/{id}. */
   import { onMount } from 'svelte';
   import { onEdisi, type LiveKliping, type LiveKlipingItem, type LiveKlipingMeta } from '../lib/edition';
+  import VeilMuka from './VeilMuka.svelte';
 
   type LeadContoh = { headline: string; dek: string; chips: string[]; stamp: string; serial: string };
   let { lead }: { lead: LeadContoh } = $props();
@@ -108,8 +109,10 @@
     <span class="eyebrow">SATU PERISTIWA, SEMUA LIPUTANNYA · JUDUL VERBATIM, DIKELOMPOKKAN OTOMATIS TIAP TERBIT</span>
   </div>
 
-  <!-- №01 · the paper's own lead, first entry of the same feed -->
+  <!-- №01 · the paper's own lead, first entry of the same feed; behind it,
+       the edition's plate — dither art seeded from this very headline -->
   <article class="feed-lead">
+    <VeilMuka seed={judul} />
     <p class="feed-lead-tag mono"><span class="feed-lead-no num">№ 01</span> DARI MEJA REDAKSI</p>
     <h2 class="feed-judul display">{judul}</h2>
     {#if dek}<p class="feed-dek">{dek}</p>{/if}
@@ -250,8 +253,9 @@
   .feed { margin-top: 26px; border-top: 2px solid var(--line); padding-top: 16px; }
   .feed-head { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items: baseline; }
 
-  /* №01 — the paper's own lead */
-  .feed-lead { padding: 18px 0 22px; }
+  /* №01 — the paper's own lead; type rides above the edition's plate */
+  .feed-lead { position: relative; padding: 18px 0 22px; }
+  .feed-lead-tag, .feed-judul, .feed-dek, .feed-resi { position: relative; z-index: 1; }
   .feed-lead-tag { font-size: 10px; letter-spacing: 0.18em; color: var(--accent); }
   .feed-lead-no { margin-right: 10px; color: var(--muted); }
   .feed-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(30px, 5vw, 64px); line-height: 0.98; letter-spacing: var(--disp-track); color: var(--ink); margin: 12px 0 0; max-width: 22ch; }

@@ -43,6 +43,7 @@ _HEADERS = {
 
 # clustering thresholds (deterministic, calibrated on live feeds 2026-07-02)
 _JACCARD_MIN = 0.32
+_JACCARD_LANTAI = 0.16
 _TOKEN_PANJANG_MIN = 4
 _TOKEN_SAMA_MIN = 3
 
@@ -50,13 +51,17 @@ _TOKEN_SAMA_MIN = 3
 _RINGKAS_MAKS = 280
 _BUTIR_MAKS = 4
 
-# Indonesian function words stripped before comparing titles
+# Indonesian function words stripped before comparing titles; the second set
+# is hyper-generic news vocabulary that joins unrelated stories when shared
+# (the Icha/Tifa over-merge: two different doctors chained on generic tokens)
 _STOPWORDS = frozenset({
     "yang", "di", "ke", "dari", "untuk", "dan", "dengan", "pada", "ini", "itu",
     "akan", "dalam", "soal", "usai", "jadi", "tak", "tidak", "bukan", "ada",
     "saat", "karena", "telah", "sudah", "bakal", "kata", "sebut", "hingga",
     "agar", "bagi", "oleh", "para", "atas", "antara", "masih", "saja", "juga",
     "bisa", "dapat", "kini", "lagi", "buat", "usung", "punya", "adalah",
+    "kasus", "dugaan", "diduga", "terkait", "video", "viral", "resmi", "foto",
+    "warga", "ungkap", "update", "berita", "terbaru", "penjelasan",
 })
 
 
@@ -194,16 +199,20 @@ def _tokens(judul: str) -> frozenset[str]:
 
 
 def _serumpun(a: frozenset[str], b: frozenset[str]) -> bool:
-    """Deterministic join rule: token Jaccard >= 0.32 OR >= 3 shared significant
-    tokens (length >= 4)."""
+    """Deterministic join rule: token Jaccard >= 0.32, OR >= 3 shared
+    significant tokens (length >= 4) with a Jaccard floor — the floor stops
+    long unrelated titles from chaining on a few common tokens (single-link
+    clustering amplifies every bad join into a merged cluster)."""
     if not a or not b:
         return False
     irisan = a & b
     if not irisan:
         return False
-    if len(irisan) / len(a | b) >= _JACCARD_MIN:
+    jaccard = len(irisan) / len(a | b)
+    if jaccard >= _JACCARD_MIN:
         return True
-    return sum(1 for t in irisan if len(t) >= _TOKEN_PANJANG_MIN) >= _TOKEN_SAMA_MIN
+    return (jaccard >= _JACCARD_LANTAI
+            and sum(1 for t in irisan if len(t) >= _TOKEN_PANJANG_MIN) >= _TOKEN_SAMA_MIN)
 
 
 class _UnionFind:

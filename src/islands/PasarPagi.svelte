@@ -115,23 +115,24 @@
 <style>
   .pp { border-top: 1px solid var(--line); padding-top: 26px; margin-top: 8px; }
   .pp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
-  /* an open priced-ledger, not a grid of boxes: each entry is a hairline row */
+  /* meter plates, the Act II bank's grammar: one instrument family, two registers */
   .pp-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap: clamp(16px, 2.6vw, 34px);
+    gap: 16px clamp(12px, 1.8vw, 22px);
   }
   @media (max-width: 1020px) { .pp-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 560px) { .pp-grid { grid-template-columns: repeat(2, 1fr); } }
   .pp-card {
     position: relative;
-    padding: 13px 0 14px 14px;
-    border-top: 1px solid var(--line);
+    padding: 12px 13px 11px;
+    border: 1px solid var(--line);
     display: flex; flex-direction: column; gap: 8px;
     background: none;
   }
-  /* the same left hairline the gauge board uses — one instrument family */
-  .pp-card::before { content: ''; position: absolute; left: 0; top: 15px; bottom: 4px; width: 1px; background: var(--line-soft); }
+  .pp-card::before, .pp-card::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
+  .pp-card::before { top: -6px; left: -4px; }
+  .pp-card::after { bottom: -6px; right: -4px; }
   .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 8.5px; letter-spacing: 0.13em; color: var(--muted); }
   .pp-live { font-size: 8px; white-space: nowrap; }
   .pp-live.on { color: var(--accent); }

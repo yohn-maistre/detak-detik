@@ -177,15 +177,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           }}
         />
 
-        <!-- PASAR: the macro board, then the kitchen-table series — one section -->
-        <section class="pasar-blok" aria-label="Pasar">
-          <PasarPagi client:visible />
-          <div class="gelombang-blok" data-rise>
-            <Gelombang client:visible />
-          </div>
-        </section>
-
-        <!-- the republic, mapped: live layers + one province at a time — the bridge into the machine -->
+        <!-- the republic, mapped: right under the news, the country it
+             happens in. Live layers + one province at a time. -->
         <section class="peta-blok" id="peta-blok" aria-label="Peta Kabar">
           <div class="kabar-head">
             <span class="inkbar"><span class="dot">●</span>PETA KABAR</span>
@@ -196,6 +189,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
           <PetaKabar client:visible />
         </section>
+
+        <!-- PASAR: the macro board, then the kitchen-table series — one section -->
+        <section class="pasar-blok" aria-label="Pasar">
+          <PasarPagi client:visible />
+          <div class="gelombang-blok" data-rise>
+            <Gelombang client:visible />
+          </div>
+        </section>
+
       </div>
     </section>
 
@@ -216,7 +218,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <section class="angka-blok" aria-labelledby="angka-label">
           <VeilMesin client:visible />
           <div class="angka-kiri">
-            <span class="inkbar"><span class="dot">●</span>BUKTI №1 · ANGKA EDISI</span>
+            <span class="inkbar"><span class="dot">●</span>PAPAN ANGKA · ANGKA EDISI</span>
             <p class="angka num display" id="angka-odometer" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
               {ANGKA_EDISI.prefix} {fmtAngka}
             </p>
@@ -252,7 +254,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              prints right after the loss counter (moved from Act I). -->
         <section class="negara-blok" id="negara">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>BUKTI №2 · NEGARA HARI INI</span>
+            <span class="inkbar"><span class="dot">●</span>NEGARA HARI INI</span>
             <span class="eyebrow">PENGHITUNG LANGSUNG · ANGKA MAKRO TERHADAP SASARANNYA · METER HARIAN</span>
           </div>
           <NasionalPagi client:visible />
@@ -525,8 +527,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
 
-          <ObituariHutan />
-
           <div class="lingk-sub bab-sub" id="hutan">
             <PetaPiksel
               client:visible
@@ -546,8 +546,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="lingk-sub bab-sub" id="udara">
             <PetaPiksel
               client:visible
-              judul="Udara Jakarta"
-              dek="Satu piksel per hari. PM2,5 harian dibanding ambang WHO (5 µg/m³); musim kemarau menyala tiap tahun. Garis emas: hari ini."
+              judul="Riwayat Udara Jakarta"
+              dek="Satu piksel per hari sejak 2018; udara hari ini terbaca di Peta Kabar. PM2,5 harian dibanding ambang WHO (5 µg/m³); musim kemarau menyala tiap tahun. Garis emas: hari ini."
               satuan="µg/m³"
               sumber="waqi/iqair · (data contoh)"
               tahunMulai={2018}
@@ -692,6 +692,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
           <p class="hening-foot mono">SATU WILAYAH ATAU TEMA DISOROT TIAP EDISI · USULKAN BARIS KOSONG LAIN DI GITHUB</p>
         </section>
+
+        <!-- the act's last note: what the machine's numbers cost, in memoriam -->
+        <ObituariHutan />
 
         <section class="arsip-teaser" aria-label="Arsip perspektif">
           <div class="arsip-head">
