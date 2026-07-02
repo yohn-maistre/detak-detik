@@ -52,13 +52,21 @@
 
 <style>
   .veil {
+    /* full-bleed past the wrap, masked to an ellipse that dies well inside the
+       canvas — the dither reads as an aura pooling around the figures, never a
+       rectangle against the black paper. transparent at 72% of a 52vw radius
+       keeps every canvas edge at zero alpha on any viewport. */
     position: absolute;
-    inset: 0;
+    top: -14%;
+    bottom: -14%;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
     z-index: 0;
     pointer-events: none;
-    opacity: 0.5;
-    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
-    mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 78%, transparent 100%);
+    opacity: 0.55;
+    -webkit-mask-image: radial-gradient(52% 66% at 50% 52%, #000 0%, rgba(0, 0, 0, 0.85) 32%, transparent 72%);
+    mask-image: radial-gradient(52% 66% at 50% 52%, #000 0%, rgba(0, 0, 0, 0.85) 32%, transparent 72%);
   }
   .veil :global(canvas) { width: 100%; height: 100%; display: block; }
 </style>

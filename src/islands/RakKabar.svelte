@@ -38,6 +38,19 @@
     const g = k.n_grup ?? 1;
     return `${m} MEDIA · ${g} GRUP KEPEMILIKAN`;
   }
+
+  /** Lembar Kliping: headlines open the tear-off sheet — the full coverage
+      list with ownership labels. Only the outlet rows inside link out. */
+  let buka = $state<LiveKliping | null>(null);
+  let tutupEl: HTMLButtonElement | undefined = $state();
+  const lembarIsi = $derived(buka ? (buka.liputan?.length ? buka.liputan : [buka.utama]) : []);
+  $effect(() => {
+    if (!buka) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    tutupEl?.focus();
+    return () => { document.body.style.overflow = prev; };
+  });
 </script>
 
 {#if utamaDulu}
@@ -71,11 +84,7 @@
         {/if}
       </div>
       <h3 class="rak-judul display">
-        {#if utamaDulu.utama.url}
-          <a class="rak-link" href={utamaDulu.utama.url} target="_blank" rel="noopener">{utamaDulu.utama.judul}</a>
-        {:else}
-          {utamaDulu.utama.judul}
-        {/if}
+        <button class="rak-buka" onclick={() => (buka = utamaDulu)}>{utamaDulu.utama.judul}</button>
       </h3>
       {#if utamaDulu.liputan?.length}
         <ol class="rak-liputan">
@@ -99,11 +108,7 @@
         {#each sisa as k, i (k.id ?? i)}
           <li class="rak-baris" data-rise>
             <span class="rak-no ghost-num num" aria-hidden="true">{String(i + 2).padStart(2, '0')}</span>
-            {#if k.utama.url}
-              <a class="rak-b-judul" href={k.utama.url} target="_blank" rel="noopener">{k.utama.judul}</a>
-            {:else}
-              <span class="rak-b-judul">{k.utama.judul}</span>
-            {/if}
+            <button class="rak-buka rak-b-judul" onclick={() => (buka = k)}>{k.utama.judul}</button>
             <span class="rak-b-meta mono">
               {metaBaris(k)}
               {#if k.titik_buta}<span class="rak-buta-kecil">· TITIK BUTA</span>{/if}
@@ -115,7 +120,43 @@
 
     <p class="rak-kaki mono">■ MEDIA INDEPENDEN · □ MEDIA GRUP KONGLOMERASI · KEPEMILIKAN ADALAH FAKTA TERDOKUMENTASI, BUKAN PENILAIAN</p>
   </section>
+
+  <!-- Lembar Kliping: the tear-off sheet for one cluster -->
+  {#if buka}
+    <button class="lk-latar" aria-label="Tutup lembar kliping" onclick={() => (buka = null)}></button>
+    <aside class="lk" role="dialog" aria-modal="true" aria-label="Lembar kliping">
+      <header class="lk-kepala">
+        <span class="lk-tag mono">LEMBAR KLIPING · MEJA {(buka.meja ?? 'nasional').toUpperCase()}</span>
+        <button class="lk-tutup mono" bind:this={tutupEl} onclick={() => (buka = null)}>TUTUP ✕</button>
+      </header>
+      <div class="lk-meta mono">
+        <span>{metaBaris(buka)}</span>
+        <span class="rak-sq" role="img" aria-label={metaBaris(buka)}>
+          {#each lembarIsi as l}<i class:penuh={l.independen} title={l.media}></i>{/each}
+        </span>
+        {#if buka.titik_buta}<span class="stamp rak-buta">TITIK BUTA · SATU GRUP</span>{/if}
+      </div>
+      <h3 class="lk-judul display">{buka.utama.judul}</h3>
+      <p class="lk-cat mono">JUDUL APA ADANYA DARI TIAP MEDIA · TAUTAN MEMBUKA SITUS MEDIA ASLINYA</p>
+      <ol class="lk-liputan">
+        {#each lembarIsi as l}
+          <li>
+            <span class="lk-media mono">{l.media}</span>
+            <span class="lk-grup mono">{l.independen ? 'INDEPENDEN' : (l.grup ?? '')}</span>
+            {#if l.url}
+              <a class="lk-l-judul" href={l.url} target="_blank" rel="noopener">{l.judul} <span class="lk-luar" aria-hidden="true">↗</span></a>
+            {:else}
+              <span class="lk-l-judul">{l.judul}</span>
+            {/if}
+          </li>
+        {/each}
+      </ol>
+      <p class="lk-kaki mono">■ MEDIA INDEPENDEN · □ MEDIA GRUP KONGLOMERASI · KEPEMILIKAN ADALAH FAKTA TERDOKUMENTASI, BUKAN PENILAIAN</p>
+    </aside>
+  {/if}
 {/if}
+
+<svelte:window onkeydown={(e) => { if (e.key === 'Escape') buka = null; }} />
 
 <style>
   .rak { margin-top: 34px; border-top: 2px solid var(--line); padding-top: 16px; }
@@ -147,8 +188,9 @@
     padding: 2px 7px 1px;
   }
   .rak-judul { font-size: var(--fs-4); line-height: 1.05; margin: 10px 0 14px; max-width: 26ch; }
-  .rak-link { text-decoration: none; }
-  .rak-link:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  /* headlines are buttons: they open the Lembar Kliping, not an external site */
+  .rak-buka { background: none; border: none; padding: 0; margin: 0; font: inherit; color: inherit; letter-spacing: inherit; line-height: inherit; text-align: left; cursor: pointer; }
+  .rak-buka:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
   .rak-liputan { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
   .rak-liputan li {
@@ -177,9 +219,50 @@
     border-bottom: 1px dashed var(--line-soft);
   }
   .rak-b-judul { font-size: 15px; line-height: 1.3; color: var(--ink); text-decoration: none; max-width: 62ch; }
-  a.rak-b-judul:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .rak-buka.rak-b-judul:hover { text-decoration-thickness: 1px; text-underline-offset: 3px; }
   .rak-b-meta { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); white-space: nowrap; }
   .rak-buta-kecil { color: var(--accent); }
 
   .rak-kaki { margin-top: 12px; font-size: 9px; letter-spacing: 0.13em; color: var(--muted); }
+
+  /* ---- Lembar Kliping: the tear-off sheet ---- */
+  .lk-latar { position: fixed; inset: 0; z-index: 158; background: rgba(12, 10, 8, 0.46); border: none; padding: 0; margin: 0; cursor: pointer; }
+  .lk {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 159;
+    width: min(760px, 96vw);
+    max-height: 84dvh;
+    overflow-y: auto;
+    background: var(--bg);
+    color: var(--ink);
+    padding: 30px clamp(16px, 4vw, 36px) 34px;
+    box-shadow: 0 -16px 60px rgba(0, 0, 0, 0.4);
+    /* the torn top edge: the sheet is pulled off the newsstand */
+    clip-path: polygon(0 12px, 4% 5px, 9% 11px, 14% 3px, 19% 10px, 25% 4px, 31% 12px, 37% 6px, 43% 11px, 50% 3px, 57% 10px, 63% 5px, 69% 12px, 75% 4px, 81% 10px, 87% 3px, 93% 9px, 100% 5px, 100% 100%, 0 100%);
+    animation: lk-naik 0.4s var(--ease-out);
+  }
+  @keyframes lk-naik {
+    from { transform: translate(-50%, 26px); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) { .lk { animation: none; } }
+  .lk-kepala { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; border-bottom: 2px solid var(--line); padding-bottom: 10px; margin-bottom: 12px; }
+  .lk-tag { font-size: 9px; letter-spacing: 0.18em; color: var(--accent); }
+  .lk-tutup { background: none; border: 1px solid var(--line); padding: 4px 9px 3px; font-size: 9px; letter-spacing: 0.14em; color: var(--ink); cursor: pointer; }
+  .lk-tutup:hover { border-color: var(--accent); color: var(--accent); }
+  .lk-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); }
+  .lk-judul { font-size: clamp(20px, 3.2vw, 30px); line-height: 1.1; margin: 10px 0 6px; max-width: 30ch; }
+  .lk-cat { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 4px; }
+  .lk-liputan { list-style: none; margin: 8px 0 0; padding: 0; }
+  .lk-liputan li { display: grid; grid-template-columns: 110px 130px 1fr; gap: 12px; align-items: baseline; padding: 9px 0; border-top: 1px dashed var(--line-soft); font-size: 13.5px; }
+  @media (max-width: 640px) { .lk-liputan li { grid-template-columns: 92px 1fr; } .lk-grup { display: none; } }
+  .lk-media { font-size: 10px; letter-spacing: 0.12em; }
+  .lk-grup { font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); }
+  .lk-l-judul { color: var(--ink); text-decoration: none; }
+  a.lk-l-judul:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .lk-luar { color: var(--accent); font-size: 11px; }
+  .lk-kaki { margin-top: 14px; font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); }
 </style>

@@ -1,8 +1,12 @@
 <script lang="ts">
-  /** Negara Hari Ini: the live national snapshot for the morning front — two
-      counters that tick (population now, state spending so far today) and the
-      macro prints, each read against its own target. Detached from Lensa
-      Wilayah (which now travels with the map). Figures are sample (contoh). */
+  /** Negara Hari Ini: the machine room's instrument panel. Two live counters
+      tick like meters (population, state spending since midnight WIB); four
+      macro vitals print as tick-ruler gauges — needle at the measured value,
+      the stated target drawn as a shaded band (BI's inflation corridor) or a
+      dashed promise line (the 8% growth pledge). The gap between needle and
+      target is the finding; no adjective is printed. Scales are keyed by
+      label: an unrecognized live vital degrades to a plain plate rather than
+      risk a wrong needle. Figures are sample (contoh) until the edition. */
   import { onMount } from 'svelte';
   import { onEdisi, type LiveMakro } from '../lib/edition';
 
@@ -25,6 +29,7 @@
   });
 
   const fmt = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
+  const fmt1 = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const rp = (n: number) => `Rp ${fmt.format(Math.round(n))}`;
   const penduduk = $derived(Math.round(PENDUDUK_DASAR + ((now - PENDUDUK_EPOCH) / 1000) * PENDUDUK_PER_DETIK));
 
@@ -38,9 +43,68 @@
   let liveMakro = $state<LiveMakro[] | null>(null);
   onMount(() => onEdisi((e) => (liveMakro = e?.makro?.length ? e.makro : null)));
   const vitals = $derived(liveMakro ?? CETAKAN);
+
+  /** ruler scales, keyed by label prefix — the drawn target states its source */
+  type Skala = { kunci: string; min: number; max: number; satuan: string; pita?: [number, number]; pitaLabel?: string; sasar?: number; sasarLabel?: string };
+  const SKALA: Skala[] = [
+    { kunci: 'INFLASI', min: 0, max: 6, satuan: '%', pita: [1.5, 3.5], pitaLabel: 'PITA SASARAN BI · 2,5±1' },
+    { kunci: 'PERTUMBUHAN PDB', min: 0, max: 9, satuan: '%', sasar: 8, sasarLabel: 'JANJI 8%' },
+    { kunci: 'PENGANGGURAN', min: 0, max: 8, satuan: '%' },
+    { kunci: 'UPAH', min: 0, max: 5, satuan: ' jt' },
+  ];
+
+  function angkaDari(nilai: string): number | null {
+    const m = nilai.replace(/\.(?=\d{3})/g, '').match(/(\d+(?:,\d+)?)/);
+    return m?.[1] ? Number(m[1].replace(',', '.')) : null;
+  }
+
+  // ruler geometry: 300-wide viewBox, baseline at y=28
+  const X0 = 4, X1 = 296, BASE = 28;
+  const clampN = (v: number, a: number, b: number) => Math.min(b, Math.max(a, v));
+  const sx = (s: Skala, v: number) => X0 + ((clampN(v, s.min, s.max) - s.min) / (s.max - s.min)) * (X1 - X0);
+
+  const gauges = $derived(vitals.map((c) => {
+    const s = SKALA.find((k) => c.label.toUpperCase().startsWith(k.kunci)) ?? null;
+    const v = angkaDari(c.nilai);
+    if (!s || v == null) {
+      return { c, s: null, v: null, sub: `${c.pre ? `${c.pre} ` : ''}${c.acuan}`.toUpperCase() };
+    }
+    const ticks = Array.from({ length: s.max - s.min + 1 }, (_, k) => s.min + k);
+    const xv = sx(s, v);
+    if (s.pita) {
+      const dalam = v >= s.pita[0] && v <= s.pita[1];
+      return {
+        c, s, v, xv, ticks,
+        pitaX: [sx(s, s.pita[0]), sx(s, s.pita[1])] as [number, number],
+        sub: dalam ? 'DI DALAM PITA SASARAN' : 'DI LUAR PITA SASARAN',
+        aria: `${c.label} ${c.nilai}, pita sasaran ${s.pita[0]}–${s.pita[1]}${s.satuan}`,
+      };
+    }
+    if (s.sasar != null) {
+      const d = v - s.sasar;
+      return {
+        c, s, v, xv, ticks, sasarX: sx(s, s.sasar),
+        sub: `JARAK KE JANJI · ${d < 0 ? '−' : '+'}${fmt1.format(Math.abs(d))} PP`,
+        aria: `${c.label} ${c.nilai}, janji ${s.sasar}${s.satuan}`,
+      };
+    }
+    return { c, s, v, xv, ticks, sub: `${c.pre ? `${c.pre} ` : ''}${c.acuan}`.toUpperCase(), aria: `${c.label} ${c.nilai}` };
+  }));
+
+  // the needles sweep in from zero once the panel scrolls into view
+  let root: HTMLElement | undefined = $state();
+  let sweep = $state(false);
+  $effect(() => {
+    if (!root) return;
+    const io = new IntersectionObserver(([e]) => {
+      if (e?.isIntersecting) { sweep = true; io.disconnect(); }
+    }, { threshold: 0.3 });
+    io.observe(root);
+    return () => io.disconnect();
+  });
 </script>
 
-<section class="np" data-no-stempel aria-label="Negara hari ini">
+<section class="np" data-no-stempel aria-label="Negara hari ini" bind:this={root}>
   <div class="np-live">
     <div class="np-live-card">
       <span class="eyebrow">PENDUDUK REPUBLIK SAAT INI</span>
@@ -55,36 +119,80 @@
     </div>
   </div>
 
-  <div class="np-vitals">
-    {#each vitals as c (c.label)}
-      <article class="np-vital">
-        <span class="np-vital-k mono">{c.label}</span>
-        <p class={`np-vital-n num ${c.nada}`}>{c.nilai}</p>
-        <p class="np-vital-sub mono">
-          {#if c.pre}{c.pre} <span class="np-acuan">{c.acuan}</span>{:else}<span class="np-acuan flat">{c.acuan}</span>{/if}
-        </p>
-        <span class="np-chip mono">⊙ {c.chip}</span>
+  <div class="np-gauges">
+    {#each gauges as g, i (g.c.label)}
+      <article class="np-g">
+        <span class="np-g-k mono">{g.c.label}</span>
+        <p class={`np-g-n num ${g.c.nada}`}>{g.c.nilai}</p>
+        {#if g.s && g.v != null}
+          <svg viewBox="0 0 300 42" role="img" aria-label={g.aria}>
+            <line class="np-dasar" x1={X0} x2={X1} y1={BASE} y2={BASE} />
+            {#each g.ticks ?? [] as t}
+              <line class="np-tick" x1={sx(g.s, t)} x2={sx(g.s, t)} y1={BASE} y2={BASE + 4} />
+              <text class="np-tick-lab" x={sx(g.s, t)} y="40" text-anchor="middle">{t === g.s.max ? `${t}${g.s.satuan}` : t}</text>
+            {/each}
+            {#if g.pitaX}
+              <rect class="np-pita" x={g.pitaX[0]} y="16" width={g.pitaX[1] - g.pitaX[0]} height={BASE - 16} />
+              <line class="np-pita-tepi" x1={g.pitaX[0]} x2={g.pitaX[0]} y1="14" y2={BASE} />
+              <line class="np-pita-tepi" x1={g.pitaX[1]} x2={g.pitaX[1]} y1="14" y2={BASE} />
+              <text class="np-pita-lab" x={(g.pitaX[0] + g.pitaX[1]) / 2} y="11" text-anchor="middle">{g.s.pitaLabel}</text>
+            {/if}
+            {#if g.sasarX != null}
+              <line class="np-sasar" x1={g.sasarX} x2={g.sasarX} y1="12" y2={BASE} />
+              <text class="np-sasar-lab" x={g.sasarX - 5} y="10" text-anchor="end">{g.s.sasarLabel}</text>
+              <line class="np-jarak" class:tampak={sweep} x1={g.xv} x2={g.sasarX} y1="8" y2="8" />
+              <line class="np-jarak" class:tampak={sweep} x1={g.sasarX} x2={g.sasarX} y1="6" y2="10" />
+            {/if}
+            <g class="np-jarum" style={`transform: translateX(${sweep ? g.xv : X0}px); transition-delay: ${i * 130}ms`}>
+              <polygon points="-4,4 4,4 0,12" />
+              <line x1="0" x2="0" y1="12" y2={BASE} />
+            </g>
+          </svg>
+        {/if}
+        <p class="np-g-sub mono">{g.sub}</p>
+        <span class="np-chip mono">⊙ {g.c.chip}</span>
       </article>
     {/each}
   </div>
 </section>
 
 <style>
-  .np { display: grid; gap: 0; }
-  .np-live { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(18px, 4vw, 48px); align-items: end; margin-bottom: 26px; }
+  .np { display: grid; gap: 24px; position: relative; z-index: 1; }
+
+  /* two live meters, plated like bench instruments */
+  .np-live { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(16px, 3vw, 36px); align-items: stretch; }
   @media (max-width: 720px) { .np-live { grid-template-columns: 1fr; } .np-live-sela { display: none; } }
-  .np-live-sela { background: var(--line); align-self: stretch; }
-  .np-live-card { display: grid; gap: 8px; }
-  .np-live-n { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(34px, 5.6vw, 62px); line-height: 0.96; letter-spacing: -0.01em; font-variant-numeric: tabular-nums lining-nums; }
-  .np-vitals { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2.6vw, 30px); border-top: 1px solid var(--line); padding-top: 20px; }
-  @media (max-width: 720px) { .np-vitals { grid-template-columns: 1fr 1fr; gap: 22px; } }
-  .np-vital { display: grid; gap: 6px; align-content: start; position: relative; padding-left: 16px; }
-  .np-vital::before { content: ''; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background: var(--line-soft); }
-  .np-vital-k { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
-  .np-vital-n { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(28px, 3.6vw, 44px); line-height: 1; }
-  .np-vital-n.buruk { color: var(--accent); }
-  .np-vital-sub { font-size: 9.5px; letter-spacing: 0.04em; color: var(--muted); }
-  .np-acuan { color: var(--ink); border-bottom: 1.5px solid var(--accent); padding-bottom: 1px; }
-  .np-acuan.flat { color: var(--muted); border-bottom-color: var(--line-soft); }
-  .np-chip { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); margin-top: 2px; }
+  .np-live-sela { background: var(--line); }
+  .np-live-card { position: relative; border: 1px solid var(--line); padding: 15px 17px 13px; display: grid; gap: 9px; align-content: start; }
+  .np-live-card::before, .np-live-card::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
+  .np-live-card::before { top: -6px; left: -4px; }
+  .np-live-card::after { bottom: -6px; right: -4px; }
+  .np-live-n { font-family: var(--font-mono); font-weight: 500; font-size: clamp(22px, 4vw, 42px); line-height: 1; letter-spacing: 0.01em; color: var(--ink); font-variant-numeric: tabular-nums lining-nums; }
+
+  /* four gauges on one rail */
+  .np-gauges { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.6vw, 34px); border-top: 1px solid var(--line); padding-top: 20px; }
+  @media (max-width: 900px) { .np-gauges { grid-template-columns: 1fr 1fr; row-gap: 28px; } }
+  @media (max-width: 560px) { .np-gauges { grid-template-columns: 1fr; } }
+  .np-g { display: grid; gap: 7px; align-content: start; }
+  .np-g-k { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
+  .np-g-n { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(28px, 3.6vw, 42px); line-height: 1; color: var(--ink); }
+  .np-g-n.buruk { color: var(--accent); }
+  .np-g-n.baik { color: var(--accent2); }
+
+  svg { display: block; width: 100%; margin-top: 2px; }
+  .np-dasar, .np-tick { stroke: var(--line); stroke-width: 1; }
+  .np-tick-lab { font-family: var(--font-mono); font-size: 7px; letter-spacing: 0.05em; fill: var(--muted); }
+  .np-pita { fill: var(--accent2); opacity: 0.16; }
+  .np-pita-tepi { stroke: var(--accent2); stroke-width: 0.8; opacity: 0.6; }
+  .np-pita-lab, .np-sasar-lab { font-family: var(--font-mono); font-size: 7px; letter-spacing: 0.1em; fill: var(--accent2); }
+  .np-sasar { stroke: var(--accent2); stroke-width: 1; stroke-dasharray: 3 3; }
+  .np-jarak { stroke: var(--accent2); stroke-width: 1; opacity: 0; transition: opacity 0.6s ease 1.5s; }
+  .np-jarak.tampak { opacity: 0.75; }
+  .np-jarum { transition: transform 1.5s cubic-bezier(0.22, 0.9, 0.24, 1.03); will-change: transform; }
+  @media (prefers-reduced-motion: reduce) { .np-jarum { transition: none; } .np-jarak { transition: none; } }
+  .np-jarum line { stroke: var(--accent); stroke-width: 2; }
+  .np-jarum polygon { fill: var(--accent); }
+
+  .np-g-sub { font-size: 9px; letter-spacing: 0.09em; color: var(--ink); }
+  .np-chip { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); }
 </style>

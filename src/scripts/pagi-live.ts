@@ -60,6 +60,15 @@ function applyEdisi(ed: Edisi | null) {
   const setText = (id: string, v?: string) => { const el = document.getElementById(id); if (el && v) el.textContent = v; };
   if (lead?.headline) setText('ku-judul', lead.headline);
   if (ed.dek) setText('ku-dek', ed.dek);
+  // the receipt rail follows the lead: live headline, live receipts — the
+  // contoh chips must never sit beside a live claim.
+  if (lead?.headline) {
+    const chips = document.getElementById('ku-chips');
+    if (chips && lead.temuan_id) chips.innerHTML = `<button class="chip"><span class="tick">⊙</span>${esc(lead.temuan_id)}</button>`;
+    setText('ku-stamp', 'LOLOS PERIKSA FAKTA');
+    if (ed.edisi != null) setText('ku-serial', `EDISI #${ed.edisi}`);
+    setText('ku-src', 'LANGSUNG · RUANG REDAKSI');
+  }
   // the Angka Edisi lives once, as the Act II odometer; choreo exposes a hook so
   // the live number re-rolls in place (and re-prices through the denom buttons).
   if (ed.angka_edisi?.nilai != null) {

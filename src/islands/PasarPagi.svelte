@@ -86,7 +86,7 @@
 
 <section class="pp" aria-label="Pasar pagi: kurs, komoditas, sumber daya" data-no-stempel>
   <div class="pp-head">
-    <span class="inkbar"><span class="dot">●</span>§2 · PASAR PAGI</span>
+    <span class="inkbar"><span class="dot">●</span>PASAR PAGI</span>
     <span class="eyebrow">HARGA YANG DITANGGUNG SEMUA · WARNA MENANDAI BAIK ATAU BURUK</span>
   </div>
 
