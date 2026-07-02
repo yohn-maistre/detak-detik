@@ -1,149 +1,225 @@
 <script lang="ts">
   /**
-   * Plat Arsip: the permanent engraved plate of the archive act. No live
-   * tiles here anymore — the living map works upstairs in Act I; this one
-   * is the version that stays true in fifty years. Pure canvas engraving
-   * with the edition's noted regions sealed in madder; the compass rose
-   * fidget keeps its spring. Region chips hand the reader to the living
-   * map through the same command bus as everyone else.
+   * Peta Atlas: the Act III opening plate. The archipelago rendered as an
+   * engraved dot-grid from the real BIG Rupabumi province polygons
+   * (public/data/idn-prov.geojson), so the coastline is accurate, not
+   * decorative. Each dot knows its province: hover names it, a tap files it
+   * into the Lensa Wilayah through the same command bus every click speaks.
+   * Rasterization trick: provinces are filled to an offscreen canvas with
+   * their index encoded in the red channel, then pixels are sampled into
+   * dots. No point-in-polygon math, cheap enough for a budget phone.
    */
   import { onMount } from 'svelte';
-  import { REGIONS } from '../lib/data/edisi';
   import { dispatch } from '../lib/commands/dispatcher';
-  import { drawEngraving, ENGRAVE_ATLAS, lonLatToGrid } from '../lib/engrave';
-  import { GRID_COLS, GRID_ROWS } from '../lib/nusantara';
-  import { gsap, reducedMotion } from '../lib/motion';
+  import { onLensa, getDaerah } from '../lib/lensa';
+  import { drawEngraving, ENGRAVE_ATLAS } from '../lib/engrave';
 
-  let plateEl: HTMLCanvasElement;
-  let roseEl: SVGSVGElement;
+  const LON0 = 94.5, LON1 = 141.5, LAT0 = 6.5, LAT1 = -11.5;
+  const COLS = 188, ROWS = 72;
 
-  function draw() {
-    drawEngraving(plateEl, { ...ENGRAVE_ATLAS, caption: 'PLAT 094 · NUSANTARA · CATATAN EDISI DISEGEL MADDER' });
-    // seal the edition's regions in madder rings
-    const ctx = plateEl.getContext('2d')!;
-    const w = plateEl.clientWidth;
-    const h = plateEl.clientHeight;
-    const scale = Math.min((w * 0.92) / GRID_COLS, (h * 0.92) / GRID_ROWS);
-    const ox = (w - GRID_COLS * scale) / 2;
-    const oy = (h - GRID_ROWS * scale) / 2;
-    ctx.strokeStyle = '#b4543c';
-    ctx.fillStyle = '#b4543c';
-    ctx.font = '9px Geist Mono, monospace';
-    for (const r of REGIONS) {
-      const [gx, gy] = lonLatToGrid(r.lon, r.lat);
-      const px = ox + gx * scale;
-      const py = oy + gy * scale;
-      ctx.lineWidth = 1.4;
-      ctx.beginPath(); ctx.arc(px, py, 7, 0, Math.PI * 2); ctx.stroke();
-      ctx.lineWidth = 0.7;
-      ctx.beginPath(); ctx.arc(px, py, 11, 0, Math.PI * 2); ctx.stroke();
-      ctx.fillText(r.nama.replace('Kab. ', '').replace('Kota ', '').toUpperCase(), px + 15, py + 3);
-    }
-  }
+  let cv: HTMLCanvasElement | undefined = $state();
+  let wrapEl: HTMLElement | undefined = $state();
+  let kaki = $state('ketuk sebuah provinsi untuk membukanya di Lensa Wilayah');
+  let diLaut = $state(true);
+
+  type Prov = { kode: string; nama: string };
 
   onMount(() => {
-    draw();
-    const ro = new ResizeObserver(draw);
-    ro.observe(plateEl);
-    return () => ro.disconnect();
+    if (!cv || !wrapEl) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const ctx = cv.getContext('2d');
+    if (!ctx) return;
+
+    let provs: Prov[] = [];
+    let grid: Uint8Array | null = null; // cell -> province index + 1, 0 = sea
+    let hover = 0;
+    let aktif = 0;
+    let sweep = reduced ? 1 : 0;
+    let raf = 0;
+    let dead = false;
+
+    const css = getComputedStyle(wrapEl);
+    const ink = css.getPropertyValue('--ink').trim();
+    const accent = css.getPropertyValue('--accent').trim();
+    const accent2 = css.getPropertyValue('--accent2').trim();
+    const soft = css.getPropertyValue('--line-soft').trim();
+
+    function ukur() {
+      const w = wrapEl!.clientWidth;
+      const h = Math.round((w * (ROWS + 6)) / COLS);
+      const dpr = Math.min(window.devicePixelRatio ?? 1, 1.75);
+      cv!.width = Math.round(w * dpr);
+      cv!.height = Math.round(h * dpr);
+      cv!.style.height = `${h}px`;
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+      return { w, h };
+    }
+
+    function gambar() {
+      if (dead || !grid) return;
+      const dpr = Math.min(window.devicePixelRatio ?? 1, 1.75);
+      const w = cv!.width / dpr;
+      const h = cv!.height / dpr;
+      const pit = w / COLS;
+      const padY = 3 * pit;
+      ctx!.clearRect(0, 0, w, h);
+
+      // graticule: a hairline every 5 degrees, the atlas furniture
+      ctx!.strokeStyle = soft;
+      ctx!.lineWidth = 0.5;
+      for (let lon = 95; lon <= 140; lon += 5) {
+        const x = ((lon - LON0) / (LON1 - LON0)) * w;
+        ctx!.beginPath(); ctx!.moveTo(x, padY * 0.4); ctx!.lineTo(x, h - padY * 0.4); ctx!.stroke();
+      }
+      for (let lat = 5; lat >= -10; lat -= 5) {
+        const y = padY + ((LAT0 - lat) / (LAT0 - LAT1)) * (h - 2 * padY);
+        ctx!.beginPath(); ctx!.moveTo(0, y); ctx!.lineTo(w, y); ctx!.stroke();
+      }
+
+      // the land, one engraved dot per cell that touches a province
+      const dot = Math.max(1.1, pit * 0.34);
+      const maxCol = Math.ceil(COLS * sweep);
+      for (let gy = 0; gy < ROWS; gy++) {
+        for (let gx = 0; gx < maxCol; gx++) {
+          const p = grid[gy * COLS + gx]!;
+          if (!p) continue;
+          const x = gx * pit + pit / 2;
+          const y = padY + (gy / ROWS) * (h - 2 * padY);
+          if (p === hover) { ctx!.fillStyle = accent; ctx!.globalAlpha = 0.95; }
+          else if (p === aktif) { ctx!.fillStyle = accent2; ctx!.globalAlpha = 0.95; }
+          else { ctx!.fillStyle = ink; ctx!.globalAlpha = 0.5; }
+          ctx!.fillRect(x - dot / 2, y - dot / 2, dot, dot);
+        }
+      }
+      ctx!.globalAlpha = 1;
+    }
+
+    function sapu() {
+      if (dead) return;
+      sweep = Math.min(1, sweep + 0.045);
+      gambar();
+      if (sweep < 1) raf = requestAnimationFrame(sapu);
+    }
+
+    function selCell(e: PointerEvent | MouseEvent): number {
+      const r = cv!.getBoundingClientRect();
+      const pit = r.width / COLS;
+      const padY = 3 * pit;
+      const gx = Math.floor(((e.clientX - r.left) / r.width) * COLS);
+      const gy = Math.floor(((e.clientY - r.top - padY) / (r.height - 2 * padY)) * ROWS);
+      if (!grid || gx < 0 || gy < 0 || gx >= COLS || gy >= ROWS) return 0;
+      return grid[gy * COLS + gx] ?? 0;
+    }
+
+    cv.addEventListener('pointermove', (e) => {
+      const p = selCell(e);
+      if (p !== hover) {
+        hover = p;
+        diLaut = p === 0;
+        kaki = p
+          ? `${provs[p - 1]!.nama} · kode ${provs[p - 1]!.kode} · ketuk untuk membuka lensa`
+          : 'ketuk sebuah provinsi untuk membukanya di Lensa Wilayah';
+        gambar();
+      }
+    });
+    cv.addEventListener('pointerleave', () => {
+      hover = 0; diLaut = true;
+      kaki = 'ketuk sebuah provinsi untuk membukanya di Lensa Wilayah';
+      gambar();
+    });
+    cv.addEventListener('click', (e) => {
+      const p = selCell(e);
+      if (!p) return;
+      const d = provs[p - 1]!;
+      dispatch({ cmd: 'set_lensa', params: { kode: d.kode } });
+      kaki = `${d.nama} terpasang di Lensa Wilayah (bagian Pagi)`;
+    });
+
+    const lepasLensa = onLensa((kode) => {
+      const i = provs.findIndex((d) => d.kode === kode);
+      aktif = i >= 0 ? i + 1 : 0;
+      gambar();
+    });
+
+    const ro = new ResizeObserver(() => { ukur(); gambar(); });
+    ro.observe(wrapEl);
+
+    void (async () => {
+      try {
+        const res = await fetch('/data/idn-prov.geojson', { signal: AbortSignal.timeout(12000) });
+        if (!res.ok) throw new Error(String(res.status));
+        const gj = (await res.json()) as {
+          features: { properties: Prov; geometry: { type: string; coordinates: unknown } }[];
+        };
+        provs = gj.features.map((f) => f.properties);
+
+        // rasterize: province index in the red channel of an offscreen grid
+        const off = document.createElement('canvas');
+        off.width = COLS; off.height = ROWS;
+        const octx = off.getContext('2d', { willReadFrequently: true });
+        if (!octx) throw new Error('ctx');
+        gj.features.forEach((f, i) => {
+          octx.fillStyle = `rgb(${i + 1},0,0)`;
+          const polys = (f.geometry.type === 'Polygon'
+            ? [f.geometry.coordinates]
+            : f.geometry.coordinates) as number[][][][];
+          octx.beginPath();
+          for (const poly of polys) {
+            for (const ring of poly) {
+              ring.forEach((pt, k) => {
+                const x = ((pt[0]! - LON0) / (LON1 - LON0)) * COLS;
+                const y = ((LAT0 - pt[1]!) / (LAT0 - LAT1)) * ROWS;
+                if (k === 0) octx.moveTo(x, y); else octx.lineTo(x, y);
+              });
+              octx.closePath();
+            }
+          }
+          octx.fill('evenodd');
+        });
+        const px = octx.getImageData(0, 0, COLS, ROWS).data;
+        grid = new Uint8Array(COLS * ROWS);
+        for (let i = 0; i < grid.length; i++) grid[i] = px[i * 4 + 3]! > 0 ? px[i * 4]! : 0;
+
+        const d = getDaerah();
+        if (d && d.kode !== 'nasional') {
+          const i = provs.findIndex((p) => p.kode === d.kode);
+          aktif = i >= 0 ? i + 1 : 0;
+        }
+        ukur();
+        if (reduced) { sweep = 1; gambar(); } else { raf = requestAnimationFrame(sapu); }
+      } catch {
+        // the honest fallback: the engraved plate, labelled
+        ukur();
+        drawEngraving(cv!, ENGRAVE_ATLAS);
+        kaki = 'plat cadangan tergambar · data peta belum termuat di jaringan ini';
+      }
+    })();
+
+    return () => { dead = true; cancelAnimationFrame(raf); ro.disconnect(); lepasLensa(); };
   });
-
-  /* compass rose fidget */
-  let roseAngle = 0;
-  function roseDown(e: PointerEvent) {
-    const rect = roseEl.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
-    const start = Math.atan2(e.clientY - cy, e.clientX - cx);
-    const base = roseAngle;
-    const move = (ev: PointerEvent) => {
-      const a = Math.atan2(ev.clientY - cy, ev.clientX - cx);
-      roseAngle = base + ((a - start) * 180) / Math.PI;
-      roseEl.style.setProperty('--bearing', `${roseAngle}deg`);
-    };
-    const up = () => {
-      window.removeEventListener('pointermove', move);
-      const proxy = { a: roseAngle };
-      gsap.to(proxy, {
-        a: 0,
-        duration: reducedMotion() ? 0 : 1.4,
-        ease: 'elastic.out(1, 0.32)',
-        onUpdate() {
-          roseAngle = proxy.a;
-          roseEl.style.setProperty('--bearing', `${roseAngle}deg`);
-        },
-      });
-    };
-    window.addEventListener('pointermove', move);
-    window.addEventListener('pointerup', up, { once: true });
-  }
-
-  function lihat(kode: string) {
-    dispatch({ cmd: 'fly_to', params: { kode } });
-    dispatch({ cmd: 'scroll_to', params: { anchor: 'peta' } });
-  }
 </script>
 
-<div class="pa-wrap" data-no-stempel>
-  <div class="plate">
-    <span class="plate-deg mono nw">6°LU</span>
-    <span class="plate-deg mono ne">141°BT</span>
-    <span class="plate-deg mono sw">95°BT</span>
-    <span class="plate-deg mono se">11°LS</span>
-    <canvas class="pa-plate" bind:this={plateEl} aria-label="Plat ukiran Nusantara dengan segel wilayah edisi"></canvas>
-
-    <svg bind:this={roseEl} class="rose" viewBox="0 0 100 100" onpointerdown={roseDown} role="img" aria-label="Mawar kompas, bisa diputar">
-      <g class="rose-spin">
-        <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" stroke-width="0.8" />
-        <circle cx="50" cy="50" r="34" fill="none" stroke="currentColor" stroke-width="0.4" />
-        {#each Array.from({ length: 16 }) as _, i}
-          <line x1="50" y1={i % 4 === 0 ? 10 : 13.5} x2="50" y2="17.5" stroke="currentColor" stroke-width={i % 4 === 0 ? 1.2 : 0.5} transform="rotate({i * 22.5} 50 50)" />
-        {/each}
-        <path d="M50 12 L53.5 50 L50 88 L46.5 50 Z" fill="currentColor" opacity="0.85" />
-        <path d="M12 50 L50 46.5 L88 50 L50 53.5 Z" fill="currentColor" opacity="0.5" />
-        <path d="M50 12 L52.5 47 L50 50 L47.5 47 Z" fill="#b4543c" />
-        <text x="50" y="8" text-anchor="middle" font-size="9">U</text>
-      </g>
-    </svg>
+<figure class="pa" bind:this={wrapEl} data-no-stempel>
+  <div class="pa-head">
+    <span class="eyebrow">PLAT UTAMA · ATLAS NUSANTARA · 38 PROVINSI</span>
+    <span class="eyebrow pa-sumber">⊙ BIG RUPABUMI · PROYEKSI LURUS</span>
   </div>
-
-  <div class="pa-chips">
-    {#each REGIONS.slice(0, 4) as r (r.kode)}
-      <button class="chip" onclick={() => lihat(r.kode)}>⌖ {r.nama} → peta</button>
-    {/each}
-  </div>
-</div>
+  <canvas bind:this={cv} class:tunjuk={!diLaut} role="img" aria-label="Peta kepulauan Indonesia sebagai plat titik ukir; setiap provinsi dapat diketuk untuk membuka Lensa Wilayah"></canvas>
+  <figcaption class="pa-kaki mono">{kaki}</figcaption>
+</figure>
 
 <style>
-  .pa-wrap { position: relative; }
-  .plate {
-    position: relative;
-    outline: 1px solid var(--line);
-    outline-offset: 6px;
-    border: 1px solid var(--line);
-    padding: 10px;
-    background:
-      repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 24px) 10px 0 / calc(100% - 20px) 10px no-repeat,
-      repeating-linear-gradient(90deg, var(--line) 0 1px, transparent 1px 24px) 10px 100% / calc(100% - 20px) 10px no-repeat,
-      repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 24px) 0 10px / 10px calc(100% - 20px) no-repeat,
-      repeating-linear-gradient(0deg, var(--line) 0 1px, transparent 1px 24px) 100% 10px / 10px calc(100% - 20px) no-repeat;
+  .pa { margin: 26px 0 34px; }
+  .pa-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+  .pa-sumber { color: var(--muted); }
+  canvas { display: block; width: 100%; touch-action: pan-y; }
+  canvas.tunjuk { cursor: pointer; }
+  .pa-kaki {
+    margin-top: 8px;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    border-top: 1px solid var(--line-soft);
+    padding-top: 7px;
   }
-  .plate-deg {
-    position: absolute; font-size: 8.5px; letter-spacing: 0.12em;
-    color: var(--muted); background: var(--bg); padding: 1px 5px; z-index: 3;
-  }
-  .plate-deg.nw { top: -7px; left: 18px; }
-  .plate-deg.ne { top: -7px; right: 18px; }
-  .plate-deg.sw { bottom: -7px; left: 18px; }
-  .plate-deg.se { bottom: -7px; right: 18px; }
-  .pa-plate { width: 100%; height: clamp(320px, 46vh, 480px); display: block; }
-  .rose {
-    position: absolute; top: 24px; right: 24px;
-    width: clamp(64px, 9vw, 96px);
-    color: var(--ink); cursor: grab; touch-action: none; opacity: 0.88; z-index: 4;
-  }
-  .rose:active { cursor: grabbing; }
-  .rose-spin { transform: rotate(var(--bearing, 0deg)); transform-origin: 50% 50%; }
-  .rose text { font-family: var(--font-fig); font-style: italic; fill: currentColor; }
-  .pa-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 </style>

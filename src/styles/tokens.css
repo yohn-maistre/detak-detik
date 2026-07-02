@@ -60,6 +60,19 @@
   --dur: 0.32s;
   --radius: 0px;
   --hairline: 1px solid var(--line);
+
+  /* one modular type scale for the whole paper (fluid, ratio ~1.33 at desktop).
+     components consume these instead of ad-hoc clamps; the numbered steps are
+     the hierarchy: 6 nameplates, 5 act titles, 4 chapter titles, 3 piece titles,
+     2 sub-block titles, 1 lead body, 0 body, -1 agate/mono furniture. */
+  --fs--1: 11px;
+  --fs-0: 1rem;
+  --fs-1: clamp(17px, 15px + 0.5vw, 20px);
+  --fs-2: clamp(20px, 17px + 1vw, 26px);
+  --fs-3: clamp(24px, 19px + 1.7vw, 34px);
+  --fs-4: clamp(28px, 21px + 2.8vw, 44px);
+  --fs-5: clamp(34px, 23px + 4.2vw, 58px);
+  --fs-6: clamp(44px, 26px + 6.4vw, 82px);
 }
 
 [data-register='dinas'] {

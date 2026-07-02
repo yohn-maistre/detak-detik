@@ -54,10 +54,10 @@
   }
 </script>
 
-<div class="td card" bind:this={gridEl} data-no-stempel>
+<div class="td" bind:this={gridEl} data-no-stempel>
   <div class="td-head">
     <span class="eyebrow">PERMAINAN · TEBAK DAERAH №41</span>
-    <button class="chip" onclick={ulang}>↻ Ulangi</button>
+    <button class="td-act mono" onclick={ulang}>↻ Ulangi</button>
   </div>
   <h3 class="display td-title">Kabupaten apa ini?</h3>
 
@@ -73,7 +73,7 @@
   <div class="td-pilihan">
     {#each TEBAK.pilihan as nama (nama)}
       <button
-        class="chip td-opt"
+        class="td-opt mono"
         class:salah={tebakan.includes(nama) && nama !== TEBAK.jawaban}
         class:benar={selesai && nama === TEBAK.jawaban && menang}
         disabled={selesai || tebakan.includes(nama)}
@@ -90,25 +90,80 @@
         <span class="stamp td-verdict gagal">JAWABAN: {TEBAK.jawaban}</span>
       {/if}
       <span class="mono td-share">DETAK DETIK №41 · {tebakan.map(kotak).join(' ')}</span>
-      <button class="chip" onclick={bagikan}>{tersalin ? '✓ Tersalin' : '⧉ Bagikan'}</button>
+      <button class="td-utama mono" onclick={bagikan}>{tersalin ? '✓ Tersalin' : '⧉ Bagikan'}</button>
     </div>
   {/if}
   <p class="td-foot mono">SETIAP PEMBACA MENDAPAT TEKA-TEKI YANG SAMA. (DATA CONTOH)</p>
 </div>
 
 <style>
-  .td-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-  .td-title { font-size: clamp(22px, 3vw, 32px); margin: 10px 0 14px; }
-  .td-clues { list-style: none; display: grid; gap: 9px; margin-bottom: 18px; }
-  .td-clues li { font-size: 14.5px; border-left: 3px solid var(--accent); padding-left: 12px; }
-  .td-num { display: block; font-size: 9.5px; letter-spacing: 0.18em; color: var(--muted); }
-  .td-locked { color: var(--muted); font-size: 10px; letter-spacing: 0.14em; border-left-style: dashed; }
-  .td-pilihan { display: flex; flex-wrap: wrap; gap: 8px; }
+  /* de-boxed: hairline top rule, kicker, content set on the paper */
+  .td { border-top: var(--hairline); padding-top: 0.75rem; }
+  .td-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; }
+  .td-title { font-size: clamp(22px, 3vw, 32px); margin: 0.75rem 0 1rem; }
+
+  /* clues as a ruled ledger: soft hairline per entry, no side bars */
+  .td-clues { list-style: none; margin: 0 0 1.5rem; }
+  .td-clues li { font-size: 14.5px; padding: 0.5rem 0; border-top: 1px solid var(--line-soft); }
+  .td-num { display: block; font-size: 9.5px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 0.125rem; }
+  .td-locked { color: var(--muted); font-size: 10px; letter-spacing: 0.14em; border-top-style: dashed; }
+
+  /* candidates as typographic entries: drawn underline, thickens on hover */
+  .td-pilihan { display: flex; flex-wrap: wrap; column-gap: 1.25rem; row-gap: 0.75rem; }
+  .td-opt {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding: 0 1px 4px;
+    color: var(--ink);
+    cursor: pointer;
+    transition: color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  }
+  .td-opt:hover:not(:disabled) { color: var(--accent); border-color: var(--accent); border-bottom-width: 2px; padding-bottom: 3px; }
   .td-opt:disabled { cursor: default; }
-  .td-opt.salah { opacity: 0.35; text-decoration: line-through; }
-  .td-opt.benar { background: var(--accent); color: var(--bg); border-color: var(--accent); }
-  .td-hasil { display: flex; align-items: center; gap: 16px; margin-top: 18px; flex-wrap: wrap; }
+  .td-opt.salah { opacity: 0.35; text-decoration: line-through; border-bottom-color: transparent; }
+  .td-opt.benar { color: var(--accent); border-color: var(--accent); border-bottom-width: 2px; padding-bottom: 3px; }
+
+  /* secondary action: mono text on a hairline that thickens */
+  .td-act {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding: 0 1px 3px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  }
+  .td-act:hover { color: var(--ink); border-color: var(--ink); border-bottom-width: 2px; padding-bottom: 2px; }
+
+  /* primary action: ink-filled, paper text, square corners */
+  .td-utama {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1;
+    background: var(--ink);
+    color: var(--bg);
+    border: 0;
+    border-radius: 0;
+    padding: 0.5rem 0.875rem;
+    cursor: pointer;
+    transition: opacity 0.25s var(--ease-out);
+  }
+  .td-utama:hover { opacity: 0.82; }
+  .td-utama:active { transform: translateY(1px); }
+
+  .td-hasil { display: flex; align-items: center; gap: 1rem; margin-top: 1.25rem; flex-wrap: wrap; }
   .td-verdict.gagal { color: var(--muted); border-color: var(--muted); }
   .td-share { font-size: 11px; color: var(--muted); }
-  .td-foot { margin-top: 14px; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
+  .td-foot { margin-top: 1rem; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
 </style>

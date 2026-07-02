@@ -38,6 +38,7 @@ import RupiahIHSG from '../islands/RupiahIHSG.svelte';
 import JciVsPeers from '../islands/JciVsPeers.svelte';
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
+import PetaAtlas from '../islands/PetaAtlas.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
@@ -204,7 +205,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           </div>
           <div class="rubrik-grid">
             {RAILS.map((rail) => (
-              <section class="rubrik-rail" data-rise>
+              <section class="rubrik-rail" data-rise data-rail={rail.id}>
                 <header class="rr-head">
                   <h3 class="rr-judul display">{rail.judul}</h3>
                   <p class="rr-dek">{rail.dek}</p>
@@ -257,7 +258,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
         <!-- the republic, mapped: live layers + one province at a time — the bridge into the machine -->
         <section class="peta-blok" id="peta-blok" aria-label="Peta Kabar">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>§5 · PETA KABAR</span>
+            <span class="inkbar"><span class="dot">●</span>§4 · PETA KABAR</span>
             <span class="eyebrow">LAPISAN DATA LANGSUNG · KLIK SEBUAH PROVINSI ATAU TITIK, ATAU MINTA AKSARA MENELUSURINYA</span>
           </div>
           <PetaKabar client:visible />
@@ -266,7 +267,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
 
         <section class="sensus-blok" id="sensus" aria-label="Sensus diri">
           <div class="kabar-head">
-            <span class="inkbar"><span class="dot">●</span>§6 · SENSUS DIRI</span>
+            <span class="inkbar"><span class="dot">●</span>§5 · SENSUS DIRI</span>
             <span class="eyebrow">MASUKKAN SATU ANGKA, LIHAT DIRIMU DI ANTARA YANG LAIN · TETAP DI PERANGKATMU</span>
           </div>
           <SensusDiri client:visible />
@@ -320,6 +321,26 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
               ))}
             </div>
             <p class="spark-foot mono"><b class="num">{sparkTotal}</b> PUTUSAN BERKEKUATAN TETAP · <span class="spark-max num">PUNCAK {sparkMax}/HARI</span></p>
+          </div>
+        </section>
+
+        <!-- Temuan Redaksi: the ranked findings board. SSR renders the contoh
+             set; pagi-live rebuilds it from the published edition when live. -->
+        <section class="temuan-blok" aria-label="Temuan redaksi edisi ini" data-rise>
+          <div class="temuan-head-row">
+            <span class="inkbar"><span class="dot">●</span>TEMUAN REDAKSI</span>
+            <span class="eyebrow">DERET TEMUAN LOLOS PERIKSA FAKTA · <span id="temuan-src" class="mono">DATA CONTOH</span></span>
+          </div>
+          <div class="temuan-grid" id="temuan-grid">
+            {TEMUAN.slice(0, 3).map((t, i) => (
+              <article class="temuan">
+                <span class="ghost-num num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                <div class="temuan-head"><span class="temuan-lens mono">{t.lens}</span><span class="mono">{t.serial}</span></div>
+                <h3 class="temuan-headline display">{t.headline}</h3>
+                <p class="temuan-body">{t.body}</p>
+                <div class="temuan-foot"><div class="cite-chips"><button class="chip"><span class="tick">⊙</span>{t.id}</button></div></div>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -384,7 +405,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           <SkorCabang cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
-              <h2 class="bab-judul display">{pabrik.judul}</h2>
+              <h3 class="bab-judul display">{pabrik.judul}</h3>
               <p class="bab-kalimat fig">{pabrik.satuKalimat}</p>
               <PabrikUU client:visible />
             </div>
@@ -572,7 +593,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
 
           {oligarki && (
             <div class="bab-lembar" data-rise>
-              <h2 class="bab-judul display">{oligarki.judul}</h2>
+              <h3 class="bab-judul display">{oligarki.judul}</h3>
               <p class="bab-kalimat fig">{oligarki.satuKalimat}</p>
               <RepublikOligarki client:visible />
             </div>
@@ -762,6 +783,9 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
         <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
+        <!-- the atlas plate: the archipelago itself, engraved from real polygons -->
+        <PetaAtlas client:visible />
+
         <!-- MANUSIA: the day's people + their tongues -->
         <div class="nus-sec"><span class="nus-sec-no mono">I</span><h3 class="nus-sec-judul display">Manusia</h3><p class="nus-sec-dek fig">Satu dari ratusan suku kepulauan, berganti dua kali sehari, dan cara mereka berbicara.</p></div>
         <WajahNusantara client:visible />
@@ -807,13 +831,12 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
             <p class="kolofon-tag fig">Koran sipil yang dicetak mesin, diperiksa hukum, dan menyimpan ingatan.</p>
           </div>
           <div class="agate">
-            <b>HUKUM BESI</b><br />
-            1 · Kutipan atau diam.<br />
-            2 · Dua lajur, tak pernah bersilang.<br />
-            3 · Dokumen bicara, tak ada yang menuduh.<br />
-            4 · Satu kosakata perintah.<br />
-            5 · Edisi bersama untuk semua.<br />
-            6 · Lokal dulu, tanpa pengawasan.
+            <b>PEDOMAN REDAKSI</b><br />
+            Setiap klaim ditautkan ke sumber primernya, atau tidak diterbitkan.
+            Berita luar disajikan apa adanya; sintesis mesin selalu ditandai.
+            Redaksi menyajikan dokumen, bukan tuduhan. Konten terbuka tanpa akun,
+            dan data pembaca tidak pernah meninggalkan perangkat.<br />
+            <a class="ink-link" href="/pedoman">Pedoman selengkapnya →</a>
           </div>
           <div class="agate">
             <b>IRAMA DATA</b><br />
@@ -826,7 +849,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           </div>
           <div class="agate">
             <b>KOLOFON</b><br />
-            Astro 6 · Svelte 5 · MapLibre<br />
+            Astro 7 · Svelte 5 · MapLibre<br />
             Peta: OpenFreeMap · OSM<br />
             Aksara: Fraunces · Archivo · Geist Mono<br />
             {lajurHost ? (
@@ -1157,7 +1180,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
   .main-rule { height: 1px; background: var(--line); margin: 8px 0 0; }
   .rak-eyebrow { display: block; margin-top: 40px; }
-  .main-rak { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; align-items: start; }
+  .main-rak { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(22px, 4vw, 48px); margin-top: 22px; align-items: start; }
   @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
 
   .angka-blok {
@@ -1265,14 +1288,14 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
   /* ---------- SEAMS: the compact ribbon flip ---------- */
   .seam {
     position: relative;
-    height: 56vh;
-    height: 56svh;
+    height: 38vh;
+    height: 38svh;
     display: grid;
     place-items: center;
     perspective: 1400px;
     background: var(--to);
   }
-  @media (max-width: 760px) { .seam { height: 42vh; height: 42svh; } }
+  @media (max-width: 760px) { .seam { height: 30vh; height: 30svh; } }
   .seam.is-static { height: clamp(120px, 20vh, 220px); background: linear-gradient(var(--from), var(--to)); }
   .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
   .slat { position: relative; transform-style: preserve-3d; will-change: transform; }

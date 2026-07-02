@@ -108,12 +108,26 @@ async function edisiGet(env: Env): Promise<Response> {
 /* ---------- /pasar : the morning market quotes ----------
    USD/IDR keyless via Frankfurter; indices/commodities via the Yahoo chart
    endpoint server-side (browser-like UA), cached 15 min. Any leg that fails
-   is simply omitted; the client keeps its contoh for that instrument. */
+   is simply omitted; the client keeps its contoh for that instrument.
+   Alongside the spot quotes, `seri` carries 6 months of daily closes
+   (USD/IDR, IHSG, peer indices) in its own 6-hour KV key, so the cheap
+   15-min spot cache never pays for five Yahoo range calls. */
+
+type Spot = { pada: string; data: Record<string, { val: number; spark?: number[] }> };
+type SeriPasar = { tanggal: string[]; usdidr: number[]; jkse: number[]; peers: Record<string, number[]> };
 
 async function pasar(env: Env, ctx: ExecutionContext): Promise<Response> {
+  const [spot, seri] = await Promise.all([pasarSpot(env, ctx), pasarSeri(env, ctx)]);
+  const body: Spot & { seri?: SeriPasar } = seri ? { ...spot, seri } : spot;
+  return new Response(JSON.stringify(body), {
+    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS },
+  });
+}
+
+async function pasarSpot(env: Env, ctx: ExecutionContext): Promise<Spot> {
   const hit = await env.CACHE.get('pasar:v1');
   if (hit) {
-    return new Response(hit, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+    try { return JSON.parse(hit) as Spot; } catch { /* stale shape, rebuild below */ }
   }
   const out: Record<string, { val: number; spark?: number[] }> = {};
   try {
@@ -133,9 +147,93 @@ async function pasar(env: Env, ctx: ExecutionContext): Promise<Response> {
       if (closes.length) out[k] = { val: closes[closes.length - 1]!, spark: closes.slice(-12) };
     } catch { /* keep contoh */ }
   }
-  const payload = JSON.stringify({ pada: new Date().toISOString(), data: out });
-  ctx.waitUntil(env.CACHE.put('pasar:v1', payload, { expirationTtl: 900 }));
-  return new Response(payload, { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=300', ...CORS } });
+  const spot: Spot = { pada: new Date().toISOString(), data: out };
+  ctx.waitUntil(env.CACHE.put('pasar:v1', JSON.stringify(spot), { expirationTtl: 900 }));
+  return spot;
+}
+
+/* Six months of daily closes, aligned on the dates where BOTH USD/IDR and
+   ^JKSE traded. Peer indices ride along when they answer; different holiday
+   calendars are bridged by carrying the last close forward, and a peer that
+   covers less than 60% of the window is dropped rather than faked. Failures
+   are negative-cached for 10 min so a dark Yahoo is not hammered per request. */
+
+const SERI_KEY = 'pasar:seri:v1';
+const SERI_PEERS = ['^KLSE', '^STI', 'PSEI.PS'];
+const bulat2 = (n: number) => Math.round(n * 100) / 100;
+
+async function yahooHarian(sym: string): Promise<Map<string, number> | null> {
+  try {
+    const r = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}?range=6mo&interval=1d`, {
+      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; DetakDetik/1.0)' },
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!r.ok) return null;
+    const d = (await r.json()) as { chart?: { result?: { timestamp?: number[]; indicators?: { quote?: { close?: (number | null)[] }[] } }[] } };
+    const res = d.chart?.result?.[0];
+    const ts = res?.timestamp ?? [];
+    const closes = res?.indicators?.quote?.[0]?.close ?? [];
+    const n = Math.min(ts.length, closes.length);
+    const peta = new Map<string, number>();
+    for (let i = 0; i < n; i++) {
+      const c = closes[i];
+      const t = ts[i];
+      if (typeof c === 'number' && Number.isFinite(c) && typeof t === 'number') {
+        peta.set(new Date(t * 1000).toISOString().slice(0, 10), c);
+      }
+    }
+    return peta.size >= 20 ? peta : null;
+  } catch { return null; }
+}
+
+function sejajarkan(peta: Map<string, number> | null, tanggal: string[]): number[] | null {
+  if (!peta || !tanggal.length) return null;
+  let cocok = 0;
+  for (const t of tanggal) if (peta.has(t)) cocok++;
+  if (cocok < Math.ceil(tanggal.length * 0.6)) return null;
+  const kunci = [...peta.keys()].sort();
+  let akhir = peta.get(kunci[0]!)!;
+  const out: number[] = [];
+  for (const t of tanggal) {
+    const v = peta.get(t);
+    if (v != null) akhir = v;
+    out.push(bulat2(akhir));
+  }
+  return out;
+}
+
+async function pasarSeri(env: Env, ctx: ExecutionContext): Promise<SeriPasar | null> {
+  try {
+    const hit = await env.CACHE.get(SERI_KEY);
+    if (hit) {
+      const parsed = JSON.parse(hit) as Partial<SeriPasar>;
+      if (Array.isArray(parsed.tanggal) && parsed.tanggal.length && Array.isArray(parsed.usdidr) && Array.isArray(parsed.jkse)) {
+        return parsed as SeriPasar;
+      }
+      return null; // negative-cache hit
+    }
+    const gagal = () => {
+      ctx.waitUntil(env.CACHE.put(SERI_KEY, JSON.stringify({ galat: true }), { expirationTtl: 600 }));
+      return null;
+    };
+    const [usd, jkse] = await Promise.all([yahooHarian('IDR=X'), yahooHarian('^JKSE')]);
+    if (!usd || !jkse) return gagal();
+    const tanggal = [...usd.keys()].filter((t) => jkse.has(t)).sort();
+    if (tanggal.length < 20) return gagal();
+    const seri: SeriPasar = {
+      tanggal,
+      usdidr: tanggal.map((t) => bulat2(usd.get(t)!)),
+      jkse: tanggal.map((t) => bulat2(jkse.get(t)!)),
+      peers: {},
+    };
+    const peerMaps = await Promise.all(SERI_PEERS.map((s) => yahooHarian(s)));
+    SERI_PEERS.forEach((sym, i) => {
+      const isi = sejajarkan(peerMaps[i] ?? null, tanggal);
+      if (isi) seri.peers[sym] = isi;
+    });
+    ctx.waitUntil(env.CACHE.put(SERI_KEY, JSON.stringify(seri), { expirationTtl: 21600 }));
+    return seri;
+  } catch { return null; }
 }
 
 async function edisiPost(req: Request, env: Env): Promise<Response> {

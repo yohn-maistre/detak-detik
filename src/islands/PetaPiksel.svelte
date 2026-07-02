@@ -98,6 +98,17 @@
     ctx.globalAlpha = 0.7;
     ctx.beginPath(); ctx.moveTo(tx, padT); ctx.lineTo(tx, padT + shownRows * (cellH + 2)); ctx.stroke();
     ctx.globalAlpha = 1;
+    // diagonal ghost watermark: this panel is a shape sample, not a feed yet
+    ctx.save();
+    ctx.translate(padL + (w - padL) / 2, padT + (rows * (cellH + 2)) / 2);
+    ctx.rotate(-Math.atan2(rows * (cellH + 2), w - padL));
+    ctx.font = `600 ${Math.max(14, Math.min(36, (w - padL) / 16))}px 'Geist Mono', monospace`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.globalAlpha = 0.12;
+    ctx.fillStyle = '#8f897c';
+    ctx.fillText('D A T A   C O N T O H', 0, 0);
+    ctx.restore();
   }
 
   function onMove(e: PointerEvent) {
@@ -132,11 +143,12 @@
     <span class="pp-total mono">{fmt.format(totalTahunIni)} {satuan} tahun ini</span>
   </div>
   <p class="pp-dek">{dek}</p>
+  <p class="pp-jujur fig">Menunggu umpan data harian; piksel di bawah adalah contoh bentuk, bukan data.</p>
   <canvas bind:this={canvas} onpointermove={onMove} onpointerleave={() => (hover = null)} aria-label={judul}></canvas>
   <div class="pp-foot mono">
     <div class="pp-ramp" aria-hidden="true"></div>
     <span>RENDAH → TINGGI · GARIS EMAS: HARI INI</span>
-    <button class="chip"><span class="tick">⊙</span>{sumber}</button>
+    <button class="chip"><span class="tick">⊙</span>{sumber} · menunggu sumber langsung</button>
   </div>
 </section>
 
@@ -152,6 +164,7 @@
   .pp-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(22px, 3vw, 34px); }
   .pp-total { font-size: 11px; letter-spacing: 0.1em; color: var(--accent); }
   .pp-dek { font-size: 14.5px; color: var(--muted); max-width: 60ch; line-height: 1.55; }
+  .pp-jujur { font-size: 12.5px; max-width: 60ch; }
   canvas { width: 100%; display: block; cursor: crosshair; }
   .pp-foot { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
   .pp-ramp { width: 120px; height: 8px; background: linear-gradient(90deg, #1a1815, #78603c, #cd7828, #e44a06, #961c0a); }

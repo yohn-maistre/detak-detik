@@ -3,7 +3,7 @@
    * Tugu Rakyat: a shared low-res canvas, seeded with the archipelago. Pick
    * a colour from the paper palette, place a cell. This build persists your
    * marks locally (the communal, cross-reader version runs on a Cloudflare
-   * Durable Object — same grid, one cell per visitor per cooldown). No free
+   * Durable Object: same grid, one cell per visitor per cooldown). No free
    * text, fixed palette: a civic mural that cannot spell a slur.
    */
   import { onMount } from 'svelte';
@@ -19,7 +19,7 @@
   let grid = new Uint8Array(COLS * ROWS);
 
   function seed() {
-    // faint archipelago in ink, sea as paper — the communal starting plate
+    // faint archipelago in ink, sea as paper: the communal starting plate
     for (let r = 0; r < ROWS; r++) {
       for (let c = 0; c < COLS; c++) {
         const gx = (c / COLS) * GRID_COLS;
@@ -84,12 +84,12 @@
   });
 </script>
 
-<section class="tr card" data-no-stempel>
+<section class="tr" data-no-stempel>
   <div class="tr-head">
     <span class="eyebrow">TUGU RAKYAT · KANVAS BERSAMA</span>
     <span class="tr-status mono">{sel} PETAK DITARUH · VERSI LOKAL</span>
   </div>
-  <p class="tr-intro">Pilih warna, taruh satu petak. Palet tetap, tanpa teks bebas — mural sipil yang menetap di perangkatmu. Kanvas bersama lintas pembaca menyusul.</p>
+  <p class="tr-intro">Pilih warna, taruh satu petak. Palet tetap, tanpa teks bebas: mural sipil yang menetap di perangkatmu. Kanvas bersama lintas pembaca menyusul.</p>
 
   <div class="tr-palet" role="group" aria-label="Palet warna">
     {#each PALET as p, i}
@@ -115,19 +115,68 @@
 
   <div class="tr-foot mono">
     <span>BENIH: GARIS PANTAI NUSANTARA</span>
-    <button class="chip" onclick={reset}>↻ Setel ulang</button>
+    <button class="tr-act mono" onclick={reset}>↻ Setel ulang</button>
   </div>
 </section>
 
 <style>
-  .tr { display: grid; gap: 12px; }
-  .tr-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  /* de-boxed: hairline top rule, kicker, the plate set on the paper */
+  .tr { display: grid; gap: 0.75rem; border-top: var(--hairline); padding-top: 0.75rem; }
+  .tr-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; }
   .tr-status { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
   .tr-intro { font-size: 13px; color: var(--muted); max-width: 60ch; line-height: 1.55; }
-  .tr-palet { display: flex; gap: 7px; flex-wrap: wrap; }
-  .tr-swatch { width: 26px; height: 26px; border: 1px solid var(--line); cursor: pointer; padding: 0; transition: transform 0.15s; }
+
+  /* palette: bare colour cells, inset hairline so paper reads on paper */
+  .tr-palet { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .tr-swatch {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius);
+    box-shadow: inset 0 0 0 1px var(--line-soft);
+    cursor: pointer;
+    transition: transform 0.15s var(--ease-out);
+  }
   .tr-swatch:hover { transform: translateY(-2px); }
-  .tr-swatch.aktif { outline: 2px solid var(--accent); outline-offset: 2px; }
-  canvas { width: 100%; display: block; border: 1px solid var(--line); cursor: crosshair; touch-action: none; image-rendering: pixelated; }
-  .tr-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
+  .tr-swatch.aktif { outline: 1px solid var(--ink); outline-offset: 3px; }
+
+  /* the plate itself: hairline frame, no heavy border */
+  canvas {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--line-soft);
+    cursor: crosshair;
+    touch-action: none;
+    image-rendering: pixelated;
+  }
+
+  /* caption row under the plate, ruled like a figure legend */
+  .tr-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    border-top: 1px solid var(--line-soft);
+    padding-top: 0.5rem;
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+  }
+
+  /* secondary action: mono text on a hairline that thickens */
+  .tr-act {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding: 0 1px 3px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  }
+  .tr-act:hover { color: var(--ink); border-color: var(--ink); border-bottom-width: 2px; padding-bottom: 2px; }
 </style>

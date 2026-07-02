@@ -41,12 +41,17 @@ const {
     <script is:inline>
       // every citation chip (a chip carrying a ⊙ tick) is a receipt: clicking
       // opens Sumber & Metode, or its own data-src. Site-wide, delegated.
+      // data-sumber="bmkg-gempa" (or a bare slug in data-src) lands on the
+      // exact highlighted ledger row at /sumber#<slug>; a URL-ish data-src
+      // keeps its own destination; a plain chip still opens /sumber.
       document.addEventListener('click', function (e) {
         var chip = e.target.closest && e.target.closest('.chip');
         if (!chip || chip.dataset.noLink !== undefined) return;
         if (!chip.querySelector('.tick')) return;
         e.preventDefault();
-        window.location.assign(chip.dataset.src || '/sumber');
+        var src = chip.dataset.src || '';
+        var slug = chip.dataset.sumber || (src && !/[/:#?]/.test(src) ? src : '');
+        window.location.assign(slug ? '/sumber#' + slug : src || '/sumber');
       });
     </script>
   </body>

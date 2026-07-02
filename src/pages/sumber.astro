@@ -2,72 +2,108 @@
 /**
  * The receipts drawer: every data source the paper touches, where it is
  * used, how it is processed, and the formula when a number is derived.
- * If a row says CONTOH, the pipeline has not replaced the sample yet —
+ * If a row says CONTOH, the pipeline has not replaced the sample yet;
  * that status is printed, never hidden.
+ *
+ * Every row carries a stable id (kebab slug). Citation chips elsewhere can
+ * point at /sumber#<slug> and the row lights up (:target / .disorot).
  */
 import Paper from '../layouts/Paper.astro';
 
-type Baris = { nama: string; url: string; dipakai: string; metode: string; status: 'LANGSUNG' | 'CONTOH' | 'SEGERA' };
-const SUMBER: Baris[] = [
-  { nama: 'BMKG · gempa terkini', url: 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', dipakai: 'Peta Kabar · lapisan GEMPA', metode: 'JSON publik tanpa kunci, dibaca langsung di peramban; gagal → sampel berlabel', status: 'LANGSUNG' },
-  { nama: 'ER-API · kurs USD/IDR', url: 'https://open.er-api.com/v6/latest/USD', dipakai: 'Pasar Pagi', metode: 'kurs harian, dibaca langsung; gagal → sampel berlabel', status: 'LANGSUNG' },
-  { nama: 'CoinGecko · Bitcoin', url: 'https://api.coingecko.com/api/v3/simple/price', dipakai: 'Pasar Pagi', metode: 'harga spot IDR, dibaca langsung', status: 'LANGSUNG' },
-  { nama: 'RainViewer · radar hujan', url: 'https://api.rainviewer.com/public/weather-maps.json', dipakai: 'Peta Kabar · plat CUACA', metode: 'ubin radar 10 menit terakhir di atas plat atlas', status: 'LANGSUNG' },
-  { nama: 'OpenFreeMap / OSM', url: 'https://openfreemap.org', dipakai: 'Peta Kabar · plat ATLAS', metode: 'ubin vektor tanpa kunci', status: 'LANGSUNG' },
-  { nama: 'Esri World Imagery', url: 'https://www.arcgis.com', dipakai: 'Peta Kabar · plat SATELIT', metode: 'ubin raster citra, atribusi tercetak di peta', status: 'LANGSUNG' },
-  { nama: 'Smithsonian GVP + PVMBG', url: 'https://volcano.si.edu', dipakai: 'Peta Kabar · lapisan GUNUNG API', metode: 'registri 101 puncak GVP (bundel, akurat); level siaga MAGMA bergabung per nama bila token ada', status: 'LANGSUNG' },
-  { nama: 'WAQI · kualitas udara', url: 'https://waqi.info', dipakai: 'Peta Kabar · lapisan UDARA', metode: 'PM2.5 stasiun lewat proxy worker /geo; gagal → sampel berlabel', status: 'LANGSUNG' },
-  { nama: 'PetaBencana', url: 'https://petabencana.id', dipakai: 'Peta Kabar · lapisan BANJIR', metode: 'laporan terverifikasi tanpa kunci, dibaca langsung; kosong → NIHIL jujur', status: 'LANGSUNG' },
-  { nama: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', dipakai: 'Peta Kabar · lapisan TITIK API', metode: 'titik panas satelit asli (lat/lon, bukan centroid) lewat proxy worker; musim hujan → NIHIL', status: 'LANGSUNG' },
-  { nama: 'OpenSky Network', url: 'https://opensky-network.org', dipakai: 'Peta Kabar · lapisan PESAWAT', metode: 'bbox seluruh nusantara lewat worker (OAuth2 klien gratis); jejak memudar, segar 20 dtk', status: 'LANGSUNG' },
-  { nama: 'AISStream', url: 'https://aisstream.io', dipakai: 'Peta Kabar · lapisan KAPAL', metode: 'WebSocket peramban (kunci publik bersama), sambung-ulang otomatis 4 dtk', status: 'LANGSUNG' },
-  { nama: 'Climate TRACE v6', url: 'https://climatetrace.org', dipakai: 'Peta Kabar · lapisan EMISI CO₂ · INDUSTRI', metode: '200 emitor terbesar NON-listrik (baja/semen/tambang/migas) divendor statis; listrik sengaja dikecualikan agar tak tumpang dengan lapisan batu bara', status: 'LANGSUNG' },
-  { nama: 'Global Energy Monitor · GCPT', url: 'https://globalenergymonitor.org', dipakai: 'Peta Kabar · lapisan PLTU BATU BARA', metode: '111 PLTU + pipeline per status (beroperasi/konstruksi/rencana) divendor statis (Jan 2026)', status: 'LANGSUNG' },
-  { nama: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', dipakai: 'Peta Kabar · lapisan TAMBANG · IUP', metode: '4.797 izin tambang (IUP/WIUP) divendor statis; poligon per komoditas, klik → perusahaan/luas/Clean&Clear', status: 'LANGSUNG' },
-  { nama: 'KLHK · BIG SatuPeta (konsesi)', url: 'https://kspservices.big.go.id', dipakai: 'Peta Kabar · lapisan KONSESI · HTI/HA/SAWIT', metode: '1.040 konsesi kehutanan+sawit dari sumber pemerintah (KLHK) via BIG SatuPeta, disederhanakan sisi-server: 255 logging IUPHHK-HA + 292 HTI (nasional) + 493 izin sawit (usaha/lokasi, cakupan sebagian per kabupaten). Lisensi Satu Peta; GFW mengecualikan Indonesia dari CC-BY-nya', status: 'LANGSUNG' },
-  { nama: 'Mandum Rimba · GBIF + IUCN', url: 'https://mandumrimba.org', dipakai: 'Peta Kabar · lapisan SATWA TERANCAM', metode: '151 sebaran satwa terancam (GBIF + IUCN Red List + ESA) dibaca langsung (CORS); klik → spesies + status IUCN', status: 'LANGSUNG' },
-  { nama: 'sismonbgn · SPPG (MBG)', url: 'https://sismonbgn.com', dipakai: 'Peta Kabar · lapisan SPPG · MBG', metode: '~5.598 dapur Makan Bergizi Gratis (id/status/alamat/koordinat) divendor dari monitor pihak ketiga. Status TERDAFTAR/diajukan — hanya ~28 "Beroperasi" saat cuplikan, bukan sensus dapur beroperasi. Sumber resmi BGN terkunci WAF/login', status: 'LANGSUNG' },
-  { nama: 'NASA GIBS · GPM IMERG', url: 'https://gibs.earthdata.nasa.gov', dipakai: 'Peta Kabar · lapisan HUJAN', metode: 'ubin raster presipitasi satelit (jeda 2-3 hari), di atas plat mana pun', status: 'LANGSUNG' },
-  { nama: 'cahyadsn/Kemendagri · wilayah', url: 'https://github.com/cahyadsn/wilayah', dipakai: 'Peta Kabar · dasar wilayah kabupaten', metode: '514 kabupaten (ibukota/penduduk/luas) divendor statis, gabung per nama; IPM/kemiskinan BPS menyusul', status: 'LANGSUNG' },
-  { nama: 'BPS · IHK, PDB, Sakernas', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi', metode: 'rilis resmi terakhir disalin manual; pipa WebAPI menyusul', status: 'CONTOH' },
-  { nama: 'Proyeksi penduduk BPS', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi · jam penduduk', metode: 'interpolasi linear: 284,4 jt (medio 2026) + 2,1 jt/tahun ÷ 31,5 jt detik', status: 'CONTOH' },
-  { nama: 'APBN 2026 (pagu)', url: 'https://www.kemenkeu.go.id', dipakai: 'Indeks Pagi · belanja negara', metode: 'laju rata-rata: Rp 3.786 T ÷ 31,5 jt detik ≈ Rp 120 jt/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
-  { nama: 'Panel Harga Bapanas', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Harga Pangan (7 komoditas)', metode: 'seri 30 hari per komoditas; sementara deret deterministik berlabel contoh', status: 'CONTOH' },
-  { nama: 'Kemnaker Satudata · PHK', url: 'https://satudata.kemnaker.go.id', dipakai: 'Papan Angka', metode: 'angka bulanan disalin dari rilis; hanya pekerja ter-JKP', status: 'CONTOH' },
-  { nama: 'GFW/UMD · kehilangan hutan', url: 'https://www.globalforestwatch.org', dipakai: 'Papan Angka · Obituari Hutan', metode: '296.000 ha (2025) ÷ 8.760 jam ≈ 33,8 ha/jam; obituari memakai peringatan GLAD/RADD harian', status: 'CONTOH' },
-  { nama: 'IQAir · PM2.5 Jakarta', url: 'https://www.iqair.com/indonesia/jakarta', dipakai: 'Papan Angka · Sehari Bernapas', metode: 'rata-rata tahunan 41,7 µg/m³ ÷ 22 µg ≈ 1,9 batang rokok (rumus Berkeley Earth)', status: 'CONTOH' },
-  { nama: 'Kemenkes · defisit BPJS', url: 'https://www.kemkes.go.id', dipakai: 'Papan Angka', metode: 'proyeksi Rp 24 T/2026 ÷ 31,5 jt detik ≈ Rp 761 rb/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
-  { nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Angka Edisi · Gradien Keadilan', metode: 'ekstraksi terstruktur per putusan (perkara, kerugian, vonis, pasal) → sebar log', status: 'SEGERA' },
-  { nama: 'DJPK Kemenkeu · APBD', url: 'https://djpk.kemenkeu.go.id', dipakai: 'Struk Belanja Negara · Temuan', metode: 'rasio belanja per fungsi dihitung dari tabel APBD', status: 'CONTOH' },
-  { nama: 'World Bank API', url: 'https://api.worldbank.org', dipakai: 'Garis Start Sama · Dunia Memandang', metode: 'CSV indikator (manufaktur %PDB, FDI %PDB) seri disederhanakan', status: 'CONTOH' },
-  { nama: 'OECD PISA', url: 'https://www.oecd.org/pisa', dipakai: 'Garis Start Sama', metode: 'skor resmi 2003–2022; pembaruan 8 Sep 2026', status: 'CONTOH' },
-  { nama: 'RSF · indeks kebebasan pers', url: 'https://rsf.org', dipakai: 'Dunia Memandang', metode: 'peringkat tahunan disalin dari tabel resmi', status: 'CONTOH' },
-  { nama: 'Wikimedia Feed API', url: 'https://api.wikimedia.org', dipakai: 'Hari Ini dalam Sejarah (menyusul)', metode: 'JSON resmi onthisday + featured, di-cache worker saat cetak', status: 'SEGERA' },
-  { nama: 'NVIDIA NIM / Workers AI', url: 'https://build.nvidia.com', dipakai: 'Aksara (tanya, tur) · Newsroom (narator)', metode: 'model tidak pernah menghasilkan angka: prosa di atas lembar fakta, gerbang fakta menolak angka tak berdokumen', status: 'SEGERA' },
+type Status = 'LANGSUNG' | 'CONTOH' | 'SEGERA';
+type Baris = { id: string; nama: string; url: string; dipakai: string; metode: string; status: Status };
+type Grup = { kicker: string; catatan: string; baris: Baris[] };
 
-  // Newsroom: pipa redaksi Python (Pydantic AI + LiteLLM), dua kali sehari via GitHub Actions.
-  // Deteksi deterministik, narasi model, gerbang fakta, lalu terbit ke /edisi.
-  { nama: 'USGS · gempa 24 jam', url: 'https://earthquake.usgs.gov', dipakai: 'Newsroom · sinyal pulsa + Peta GEMPA', metode: 'GeoJSON tanpa kunci, disaring ke kotak Indonesia; jadi baris korpus yang diperiksa gerbang fakta', status: 'LANGSUNG' },
-  { nama: 'Frankfurter · USD/IDR', url: 'https://frankfurter.dev', dipakai: 'Newsroom · sinyal pulsa', metode: 'kurs harian tanpa kunci, baris korpus untuk gerbang fakta', status: 'LANGSUNG' },
-  { nama: 'Meja Data Hilang (meta)', url: 'https://github.com/yohn-maistre/detak-detik', dipakai: 'Newsroom · meja DATA HILANG', metode: 'mencatat sumber langsung yang gelap saat edisi disusun; ketiadaan dicetak, bukan disembunyikan', status: 'LANGSUNG' },
-  { nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Newsroom · meja HUKUM (Angka Edisi)', metode: 'deteksi kerugian negara terbesar pada vonis tipikor inkracht; korpus benih, seam tarik langsung', status: 'CONTOH' },
-  { nama: 'Panel Harga Bapanas', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Newsroom · meja HARGA', metode: 'komoditas pangan dengan pergerakan harga terbesar; korpus benih, seam tarik langsung', status: 'CONTOH' },
-  { nama: 'Kemenkeu · Nota Keuangan APBN', url: 'https://www.kemenkeu.go.id', dipakai: 'Newsroom · meja ANGGARAN', metode: 'belanja pegawai terhadap total belanja, agregat nasional netral; korpus benih', status: 'CONTOH' },
-  { nama: 'Global Forest Watch', url: 'https://www.globalforestwatch.org', dipakai: 'Newsroom · meja HUTAN', metode: 'kehilangan tutupan hutan terbesar yang tumpang tindih konsesi; korpus benih, seam tarik langsung', status: 'CONTOH' },
-  { nama: 'RPJMN / Kementerian PU', url: 'https://www.pu.go.id', dipakai: 'Newsroom · meja JANJI', metode: 'target program resmi terhadap realisasi (selisih terbesar); korpus benih', status: 'CONTOH' },
-  { nama: 'BPS & Kemenkeu · Tanah Papua', url: 'https://papua.bps.go.id', dipakai: 'Newsroom · meja PAPUA', metode: 'alokasi dana otsus dan tingkat kemiskinan, bersumber resmi; korpus benih', status: 'CONTOH' },
+const GRUP: Grup[] = [
+  {
+    kicker: 'PETA DASAR',
+    catatan: 'Plat dan batas wilayah yang menopang Peta Kabar.',
+    baris: [
+      { id: 'openfreemap', nama: 'OpenFreeMap / OSM', url: 'https://openfreemap.org', dipakai: 'Peta Kabar · plat ATLAS', metode: 'ubin vektor tanpa kunci, gaya diracik sendiri di atas data OpenStreetMap', status: 'LANGSUNG' },
+      { id: 'esri-satelit', nama: 'Esri World Imagery', url: 'https://www.arcgis.com', dipakai: 'Peta Kabar · plat SATELIT', metode: 'ubin raster citra, atribusi tercetak di peta', status: 'LANGSUNG' },
+      { id: 'big-rupabumi', nama: 'BIG Rupabumi · batas wilayah', url: 'https://geoservices.big.go.id', dipakai: 'Peta Kabar · poligon provinsi + kabupaten', metode: 'GeoJSON resmi Satu Peta dibaca langsung (CORS); kode BPS datang kosong dari server, jadi gabung per nama', status: 'LANGSUNG' },
+      { id: 'cahyadsn-wilayah', nama: 'cahyadsn/Kemendagri · wilayah', url: 'https://github.com/cahyadsn/wilayah', dipakai: 'Peta Kabar · dasar 514 kabupaten · Lensa Wilayah', metode: '514 kabupaten (ibukota/penduduk/luas) divendor statis, gabung per nama; IPM/kemiskinan BPS menyusul', status: 'LANGSUNG' },
+    ],
+  },
+  {
+    kicker: 'DATA LANGSUNG',
+    catatan: 'Lapisan peta dan angka yang ditarik langsung dari sumbernya. Gagal → sampel berlabel; kosong → NIHIL jujur.',
+    baris: [
+      { id: 'bmkg-gempa', nama: 'BMKG · gempa terkini', url: 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json', dipakai: 'Peta Kabar · lapisan GEMPA', metode: 'JSON publik tanpa kunci, dibaca langsung di peramban; digabung dengan katalog USGS; gagal → sampel berlabel', status: 'LANGSUNG' },
+      { id: 'usgs-gempa', nama: 'USGS · gempa 24 jam', url: 'https://earthquake.usgs.gov', dipakai: 'Peta Kabar · lapisan GEMPA · Newsroom · sinyal pulsa', metode: 'GeoJSON M2,5+ tanpa kunci, disaring ke kotak Indonesia; melengkapi detail BMKG dan menjadi baris korpus yang diperiksa gerbang fakta', status: 'LANGSUNG' },
+      { id: 'petabencana-banjir', nama: 'PetaBencana', url: 'https://petabencana.id', dipakai: 'Peta Kabar · lapisan BANJIR', metode: 'laporan terverifikasi tanpa kunci, dibaca langsung; kosong → NIHIL jujur', status: 'LANGSUNG' },
+      { id: 'open-meteo', nama: 'Open-Meteo · cuaca, sungai, laut', url: 'https://open-meteo.com', dipakai: 'Cuaca Pagi · Laporan Lokasi (klik peta)', metode: 'prakiraan cuaca, debit sungai (GloFAS), dan gelombang laut tanpa kunci (CC-BY), dibaca langsung di peramban; gagal → sampel berlabel', status: 'LANGSUNG' },
+      { id: 'waqi-udara', nama: 'WAQI · kualitas udara', url: 'https://waqi.info', dipakai: 'Peta Kabar · lapisan UDARA', metode: 'PM2.5 stasiun lewat proxy worker /geo (token di sisi server); gagal → sampel berlabel', status: 'LANGSUNG' },
+      { id: 'nasa-firms', nama: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', dipakai: 'Peta Kabar · lapisan TITIK API', metode: 'titik panas satelit asli (lat/lon per piksel, bukan centroid) lewat proxy worker; musim hujan → NIHIL', status: 'LANGSUNG' },
+      { id: 'gvp-gunungapi', nama: 'Smithsonian GVP · registri gunung api', url: 'https://volcano.si.edu', dipakai: 'Peta Kabar · lapisan GUNUNG API', metode: 'registri 101 puncak Holosen (koordinat/elevasi/erupsi terakhir) divendor statis dari WFS resmi; puncak tidak berpindah, jadi dibundel', status: 'LANGSUNG' },
+      { id: 'magma-esdm', nama: 'MAGMA ESDM / PVMBG · level siaga', url: 'https://magma.esdm.go.id', dipakai: 'Peta Kabar · lapisan GUNUNG API · status', metode: 'API level aktivitas butuh token; worker sudah siap, token sedang diurus. Tanpa token peta jujur menulis "registri GVP · status menyusul"', status: 'SEGERA' },
+      { id: 'opensky-pesawat', nama: 'OpenSky Network', url: 'https://opensky-network.org', dipakai: 'Peta Kabar · lapisan PESAWAT', metode: 'satu panggilan bbox seluruh nusantara lewat worker (OAuth2 klien gratis); kredensial belum terpasang di server', status: 'SEGERA' },
+      { id: 'adsb-lol', nama: 'adsb.lol · ADS-B', url: 'https://adsb.lol', dipakai: 'Peta Kabar · lapisan PESAWAT (cadangan)', metode: 'grid radius 250 NM tanpa kunci sebagai cadangan; IP pusat data kami dibatasi ketat sehingga sering hanya 1 pesawat, dicetak apa adanya', status: 'LANGSUNG' },
+      { id: 'aisstream-kapal', nama: 'AISStream', url: 'https://aisstream.io', dipakai: 'Peta Kabar · lapisan KAPAL', metode: 'WebSocket peramban (kunci publik bersama), sambung-ulang otomatis 4 dtk', status: 'LANGSUNG' },
+      { id: 'climate-trace-emisi', nama: 'Climate TRACE v6', url: 'https://climatetrace.org', dipakai: 'Peta Kabar · lapisan EMISI CO₂ · INDUSTRI', metode: '200 emitor terbesar NON-listrik (baja/semen/tambang/migas) divendor statis; sektor listrik sengaja dikecualikan agar tidak tumpang dengan lapisan batu bara', status: 'LANGSUNG' },
+      { id: 'gem-batubara', nama: 'Global Energy Monitor · GCPT', url: 'https://globalenergymonitor.org', dipakai: 'Peta Kabar · lapisan PLTU BATU BARA', metode: '111 PLTU + pipeline per status (beroperasi/konstruksi/rencana) divendor statis (rilis Jan 2026)', status: 'LANGSUNG' },
+      { id: 'esdm-tambang', nama: 'ESDM Geoportal · Minerba', url: 'https://geoportal.esdm.go.id', dipakai: 'Peta Kabar · lapisan TAMBANG · IUP', metode: '4.797 izin tambang (IUP/WIUP) divendor statis; poligon per komoditas, klik → perusahaan/luas/Clean & Clear', status: 'LANGSUNG' },
+      { id: 'klhk-konsesi', nama: 'KLHK · BIG SatuPeta (konsesi)', url: 'https://kspservices.big.go.id', dipakai: 'Peta Kabar · lapisan KONSESI · HTI/HA/SAWIT', metode: '1.040 konsesi kehutanan+sawit dari sumber pemerintah (KLHK) via BIG SatuPeta, disederhanakan sisi-server: 255 logging IUPHHK-HA + 292 HTI (nasional) + 493 izin sawit (usaha/lokasi, cakupan sebagian per kabupaten). Lisensi Satu Peta; GFW mengecualikan Indonesia dari CC-BY-nya', status: 'LANGSUNG' },
+      { id: 'sppg-mbg', nama: 'sismonbgn · SPPG (MBG)', url: 'https://sismonbgn.com', dipakai: 'Peta Kabar · lapisan SPPG · MBG', metode: 'cuplikan bertanggal ~5.598 dapur Makan Bergizi Gratis (id/status/alamat/koordinat) divendor dari monitor pihak ketiga. Status TERDAFTAR/diajukan; hanya ~28 "Beroperasi" saat cuplikan, bukan sensus dapur beroperasi. Sumber resmi BGN terkunci WAF/login', status: 'LANGSUNG' },
+      { id: 'mandum-satwa', nama: 'Mandum Rimba · GBIF + IUCN', url: 'https://mandumrimba.org', dipakai: 'Peta Kabar · lapisan SATWA TERANCAM', metode: '151 sebaran satwa terancam (GBIF + IUCN Red List + ESA) dibaca langsung dari sumbernya (CORS terbuka); klik → spesies + status IUCN', status: 'LANGSUNG' },
+      { id: 'gibs-hujan', nama: 'NASA GIBS · GPM IMERG', url: 'https://gibs.earthdata.nasa.gov', dipakai: 'Peta Kabar · lapisan HUJAN', metode: 'ubin raster presipitasi satelit (jeda 2-3 hari), di atas plat mana pun', status: 'LANGSUNG' },
+      { id: 'rainviewer-radar', nama: 'RainViewer · radar hujan', url: 'https://api.rainviewer.com/public/weather-maps.json', dipakai: 'Peta Kabar · plat CUACA', metode: 'ubin radar 10 menit terakhir di atas plat atlas', status: 'LANGSUNG' },
+      { id: 'frankfurter-kurs', nama: 'Frankfurter · kurs USD/IDR', url: 'https://frankfurter.dev', dipakai: 'Pasar Pagi (worker /pasar) · Newsroom · sinyal pulsa', metode: 'kurs harian tanpa kunci, diagregasi worker; cadangan ER-API langsung di peramban bila worker gelap; juga baris korpus gerbang fakta', status: 'LANGSUNG' },
+      { id: 'yahoo-ihsg', nama: 'Yahoo Finance · IHSG + Brent', url: 'https://finance.yahoo.com', dipakai: 'Pasar Pagi (worker /pasar)', metode: 'grafik ^JKSE dan minyak Brent ditarik sisi server oleh worker; situs IDX sendiri berada di balik Cloudflare', status: 'LANGSUNG' },
+      { id: 'rss-ticker', nama: 'Ticker RSS · 6 media independen', url: 'https://github.com/yohn-maistre/detak-detik', dipakai: 'Ticker + Ringkas Pagi', metode: 'Tempo, BBC Indonesia, Project Multatuli, Jubi, KBR, Mongabay; judul verbatim + tautan saja (tanpa tulis-ulang), diambil cron worker, digilir antar-media; ANTARA (kantor berita negara) sengaja tidak disertakan', status: 'LANGSUNG' },
+      { id: 'bapanas-panel-harga', nama: 'Panel Harga Badan Pangan', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Harga Pangan (7 komoditas)', metode: 'endpoint lama api-panelhargav2 kini menjawab 401; pendaftaran Web API resmi NFA sedang diproses. Sementara itu halaman memakai deret deterministik berlabel contoh', status: 'SEGERA' },
+      { id: 'bps-webapi', nama: 'BPS · WebAPI', url: 'https://webapi.bps.go.id', dipakai: 'Indeks Pagi · Lensa Wilayah (IPM, kemiskinan)', metode: 'kunci gratis lewat pendaftaran surel sedang diproses; sampai terpasang, rilis resmi disalin manual dan diberi label', status: 'SEGERA' },
+    ],
+  },
+  {
+    kicker: 'LEDGER REDAKSI',
+    catatan: 'Angka turunan, meja Newsroom, dan aturan yang menjaganya. Baris CONTOH berarti pipa belum menggantikan sampel.',
+    baris: [
+      { id: 'bps-indeks', nama: 'BPS · IHK, PDB, Sakernas', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi', metode: 'rilis resmi terakhir disalin manual; pipa WebAPI menyusul (lihat baris BPS WebAPI)', status: 'CONTOH' },
+      { id: 'bps-penduduk', nama: 'Proyeksi penduduk BPS', url: 'https://www.bps.go.id', dipakai: 'Indeks Pagi · jam penduduk', metode: 'interpolasi linear: 284,4 jt (medio 2026) + 2,1 jt/tahun ÷ 31,5 jt detik', status: 'CONTOH' },
+      { id: 'apbn-pagu', nama: 'APBN 2026 (pagu)', url: 'https://www.kemenkeu.go.id', dipakai: 'Indeks Pagi · belanja negara', metode: 'laju rata-rata: Rp 3.786 T ÷ 31,5 jt detik ≈ Rp 120 jt/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
+      { id: 'kemnaker-phk', nama: 'Kemnaker Satudata · PHK', url: 'https://satudata.kemnaker.go.id', dipakai: 'Papan Angka', metode: 'angka bulanan disalin dari rilis; hanya pekerja ter-JKP', status: 'CONTOH' },
+      { id: 'gfw-hutan', nama: 'GFW/UMD · kehilangan hutan', url: 'https://www.globalforestwatch.org', dipakai: 'Papan Angka · Obituari Hutan', metode: '296.000 ha (2025) ÷ 8.760 jam ≈ 33,8 ha/jam; obituari memakai peringatan GLAD/RADD harian', status: 'CONTOH' },
+      { id: 'iqair-jakarta', nama: 'IQAir · PM2.5 Jakarta', url: 'https://www.iqair.com/indonesia/jakarta', dipakai: 'Papan Angka · Sehari Bernapas', metode: 'rata-rata tahunan 41,7 µg/m³ ÷ 22 µg ≈ 1,9 batang rokok (rumus Berkeley Earth)', status: 'CONTOH' },
+      { id: 'kemenkes-bpjs', nama: 'Kemenkes · defisit BPJS', url: 'https://www.kemkes.go.id', dipakai: 'Papan Angka', metode: 'proyeksi Rp 24 T/2026 ÷ 31,5 jt detik ≈ Rp 761 rb/detik × detik sejak 00.00 WIB', status: 'CONTOH' },
+      { id: 'ma-putusan', nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Angka Edisi · Gradien Keadilan', metode: 'ekstraksi terstruktur per putusan (perkara, kerugian, vonis, pasal) → sebar log', status: 'SEGERA' },
+      { id: 'djpk-apbd', nama: 'DJPK Kemenkeu · APBD', url: 'https://djpk.kemenkeu.go.id', dipakai: 'Struk Belanja Negara · Temuan', metode: 'rasio belanja per fungsi dihitung dari tabel APBD', status: 'CONTOH' },
+      { id: 'nim-model', nama: 'NVIDIA NIM / Workers AI', url: 'https://build.nvidia.com', dipakai: 'Aksara (tanya, tur) · Newsroom (narator)', metode: 'model tidak pernah menghasilkan angka: prosa di atas lembar fakta, gerbang fakta menolak angka tak berdokumen', status: 'SEGERA' },
+      { id: 'meja-data-hilang', nama: 'Meja Data Hilang (meta)', url: 'https://github.com/yohn-maistre/detak-detik', dipakai: 'Newsroom · meja DATA HILANG', metode: 'mencatat sumber langsung yang gelap saat edisi disusun; ketiadaan dicetak, bukan disembunyikan', status: 'LANGSUNG' },
+      { id: 'newsroom-hukum', nama: 'Direktori Putusan MA', url: 'https://putusan3.mahkamahagung.go.id', dipakai: 'Newsroom · meja HUKUM (Angka Edisi)', metode: 'deteksi kerugian negara terbesar pada vonis tipikor inkracht; korpus benih, seam tarik langsung', status: 'CONTOH' },
+      { id: 'newsroom-harga', nama: 'Panel Harga Bapanas', url: 'https://panelharga.badanpangan.go.id', dipakai: 'Newsroom · meja HARGA', metode: 'komoditas pangan dengan pergerakan harga terbesar; korpus benih, seam tarik langsung setelah kunci Web API NFA terbit', status: 'CONTOH' },
+      { id: 'newsroom-anggaran', nama: 'Kemenkeu · Nota Keuangan APBN', url: 'https://www.kemenkeu.go.id', dipakai: 'Newsroom · meja ANGGARAN', metode: 'belanja pegawai terhadap total belanja, agregat nasional netral; korpus benih', status: 'CONTOH' },
+      { id: 'newsroom-hutan', nama: 'Global Forest Watch', url: 'https://www.globalforestwatch.org', dipakai: 'Newsroom · meja HUTAN', metode: 'kehilangan tutupan hutan terbesar yang tumpang tindih konsesi; korpus benih, seam tarik langsung', status: 'CONTOH' },
+      { id: 'newsroom-janji', nama: 'RPJMN / Kementerian PU', url: 'https://www.pu.go.id', dipakai: 'Newsroom · meja JANJI', metode: 'target program resmi terhadap realisasi (selisih terbesar); korpus benih', status: 'CONTOH' },
+      { id: 'newsroom-papua', nama: 'BPS & Kemenkeu · Tanah Papua', url: 'https://papua.bps.go.id', dipakai: 'Newsroom · meja PAPUA', metode: 'alokasi dana otsus dan tingkat kemiskinan, bersumber resmi; korpus benih', status: 'CONTOH' },
+    ],
+  },
+  {
+    kicker: 'ARSIP & PUSTAKA',
+    catatan: 'Pustaka terbuka untuk lembar Nusantara dan pembanding dunia.',
+    baris: [
+      { id: 'wikipedia', nama: 'Wikipedia / Wikidata', url: 'https://id.wikipedia.org', dipakai: 'Nusantara · Wajah Nusantara, Almanak', metode: 'ringkasan REST bahasa Indonesia tanpa kunci (CORS terbuka), dibaca langsung; gagal → kurasi berlabel', status: 'LANGSUNG' },
+      { id: 'wikimedia-commons', nama: 'Wikimedia Commons', url: 'https://commons.wikimedia.org', dipakai: 'Nusantara · Galeri (RUPA)', metode: 'API kategori + imageinfo tanpa kunci; lisensi tiap karya dicetak di bawah gambar', status: 'LANGSUNG' },
+      { id: 'gbif', nama: 'GBIF · keanekaragaman hayati', url: 'https://www.gbif.org', dipakai: 'Nusantara · Galeri (HAYATI)', metode: 'foto okurensi CC0/CC-BY tanpa kunci, dibaca langsung; juga hulu data satwa Mandum Rimba', status: 'LANGSUNG' },
+      { id: 'wikimedia-feed', nama: 'Wikimedia Feed API', url: 'https://api.wikimedia.org', dipakai: 'Hari Ini dalam Sejarah (menyusul)', metode: 'JSON resmi onthisday + featured, di-cache worker saat cetak', status: 'SEGERA' },
+      { id: 'world-bank', nama: 'World Bank API', url: 'https://api.worldbank.org', dipakai: 'Garis Start Sama · Dunia Memandang', metode: 'CSV indikator (manufaktur %PDB, FDI %PDB) seri disederhanakan', status: 'CONTOH' },
+      { id: 'oecd-pisa', nama: 'OECD PISA', url: 'https://www.oecd.org/pisa', dipakai: 'Garis Start Sama', metode: 'skor resmi 2003–2022; pembaruan 8 Sep 2026', status: 'CONTOH' },
+      { id: 'rsf-pers', nama: 'RSF · indeks kebebasan pers', url: 'https://rsf.org', dipakai: 'Dunia Memandang', metode: 'peringkat tahunan disalin dari tabel resmi', status: 'CONTOH' },
+    ],
+  },
 ];
-const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', SEGERA: 'off' };
+const KELAS: Record<Status, string> = { LANGSUNG: 'on', CONTOH: 'mid', SEGERA: 'off' };
 ---
 
-<Paper title="Sumber & Metode — DETAK DETIK" description="Setiap sumber data Detak Detik: tautan, tempat dipakai, cara diolah, dan rumusnya.">
+<Paper title="Sumber & Metode · DETAK DETIK" description="Setiap sumber data Detak Detik: tautan, tempat dipakai, cara diolah, dan rumusnya.">
   <main class="src-hal" data-register="dinas" data-stempel-pad>
     <div class="wrap">
       <a class="src-back mono ink-link" href="/">← DETAK DETIK · EDISI #41</a>
       <h1 class="src-judul display">Sumber & Metode</h1>
       <p class="src-sub">
-        Laci kuitansi. Setiap angka di koran ini berasal dari salah satu baris di bawah —
+        Laci kuitansi. Setiap angka di koran ini berasal dari salah satu baris di bawah,
         lengkap dengan tautan, tempat ia dipakai, dan rumus bila ia diturunkan.
+        Klik cap kutipan ⊙ di halaman mana pun dan Anda mendarat di baris yang tepat di sini.
         Baris berstatus <b>CONTOH</b> berarti pipa datanya belum menggantikan sampel; status itu dicetak, tidak disembunyikan.
       </p>
 
@@ -75,22 +111,48 @@ const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', 
         <div class="src-row head" role="row">
           <span>SUMBER</span><span>DIPAKAI DI</span><span>METODE / RUMUS</span><span>STATUS</span>
         </div>
-        {SUMBER.map((s) => (
-          <div class="src-row" role="row">
-            <span><a class="ink-link" href={s.url} rel="noopener">{s.nama}</a></span>
-            <span>{s.dipakai}</span>
-            <span class="metode">{s.metode}</span>
-            <span class={`status ${KELAS[s.status]}`}>{s.status}</span>
-          </div>
+        {GRUP.map((g) => (
+          <Fragment>
+            <div class="src-grup">
+              <span class="grup-kicker">{g.kicker}</span>
+              <span class="grup-catatan">{g.catatan}</span>
+            </div>
+            {g.baris.map((s) => (
+              <div class="src-row" role="row" id={s.id}>
+                <span><a class="ink-link" href={s.url} rel="noopener">{s.nama}</a></span>
+                <span>{s.dipakai}</span>
+                <span class="metode">{s.metode}</span>
+                <span class={`status ${KELAS[s.status]}`}>{s.status}</span>
+              </div>
+            ))}
+          </Fragment>
         ))}
       </div>
 
       <p class="src-kaki mono">
-        HUKUM BESI №1 · KUTIPAN ATAU DIAM — MODEL BAHASA TIDAK PERNAH MENGHASILKAN ANGKA; PIPA DATA YANG MENGHITUNG, MODEL HANYA MERANGKAI KALIMAT DI ATAS LEMBAR FAKTA, DAN GERBANG FAKTA MENOLAK KALIMAT YANG ANGKANYA TIDAK BERDOKUMEN.
+        HUKUM BESI №1 · KUTIPAN ATAU DIAM · MODEL BAHASA TIDAK PERNAH MENGHASILKAN ANGKA; PIPA DATA YANG MENGHITUNG, MODEL HANYA MERANGKAI KALIMAT DI ATAS LEMBAR FAKTA, DAN GERBANG FAKTA MENOLAK KALIMAT YANG ANGKANYA TIDAK BERDOKUMEN.
+        SELENGKAPNYA DI <a class="ink-link" href="/pedoman">PEDOMAN REDAKSI</a>.
       </p>
     </div>
   </main>
 </Paper>
+
+<script is:inline>
+  // Land-and-highlight: :target covers arrival from another page; this keeps
+  // the highlight in sync when the hash changes while already on /sumber.
+  (function () {
+    var aktif = null;
+    function sorot() {
+      var id = location.hash.slice(1);
+      if (aktif) aktif.classList.remove('disorot');
+      aktif = id ? document.getElementById(id) : null;
+      if (aktif && aktif.classList.contains('src-row')) aktif.classList.add('disorot');
+      else aktif = null;
+    }
+    window.addEventListener('hashchange', sorot);
+    sorot();
+  })();
+</script>
 
 <style>
   .src-hal { min-height: 100vh; background: var(--bg); color: var(--ink); padding: 30px 0 80px; }
@@ -99,16 +161,47 @@ const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', 
   .src-sub { font-size: 15.5px; max-width: 62ch; margin: 12px 0 32px; }
   .src-sub b { color: var(--accent); }
   .src-tabel { border: 1px solid var(--line); font-size: 11px; }
+  .src-grup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    padding: 18px 14px 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .src-grup .grup-kicker { font-size: 9.5px; font-weight: 700; letter-spacing: 0.24em; color: var(--accent); }
+  .src-grup .grup-catatan { font-size: 9px; letter-spacing: 0.06em; color: var(--muted); }
   .src-row {
+    position: relative;
     display: grid;
     grid-template-columns: 1.1fr 1fr 1.6fr 90px;
     gap: 14px;
     padding: 10px 14px;
     border-bottom: 1px solid var(--line);
     align-items: start;
+    scroll-margin-top: 90px;
+    transition: background-color 0.6s ease;
   }
   .src-row:last-child { border-bottom: none; }
   .src-row.head { background: var(--ink); color: var(--bg); font-size: 9px; letter-spacing: 0.18em; }
+  /* the receipt lands here: an accent bar unrolls and the row holds a faint tint */
+  .src-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: transform 0.35s var(--ease-out, ease-out);
+  }
+  .src-row.head::before { content: none; }
+  .src-row:target,
+  .src-row.disorot { background-color: color-mix(in oklab, var(--accent) 9%, transparent); }
+  .src-row:target::before,
+  .src-row.disorot::before { transform: scaleY(1); }
   .metode { color: var(--muted); }
   .status { font-size: 9px; letter-spacing: 0.14em; }
   .status.on { color: var(--accent); }
@@ -118,6 +211,9 @@ const KELAS: Record<Baris['status'], string> = { LANGSUNG: 'on', CONTOH: 'mid', 
     .src-row { grid-template-columns: 1fr 80px; }
     .src-row span:nth-child(2) { display: none; }
     .src-row.head span:nth-child(2) { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .src-row, .src-row::before { transition: none; }
   }
   .src-kaki { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); margin-top: 24px; max-width: 90ch; line-height: 1.8; }
 </style>

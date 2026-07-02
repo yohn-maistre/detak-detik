@@ -1,0 +1,122 @@
+---
+/**
+ * The editorial policy page: the six commitments of the paper, written out
+ * as enforceable policy rather than manifesto shorthand. Each section closes
+ * with the line of code or procedure that enforces it; a promise that is not
+ * enforced anywhere is not printed here.
+ */
+import Paper from '../layouts/Paper.astro';
+
+type Bab = { no: string; judul: string; isi: string; penegakan: string };
+const BAB: Bab[] = [
+  {
+    no: '01',
+    judul: 'Kutipan atau diam',
+    isi: 'Setiap klaim yang dicetak koran ini ditautkan ke sumber primer, atau tidak diterbitkan sama sekali. Angka tidak pernah lahir dari model bahasa; angka lahir dari pipa data yang membaca sumber resmi, dan setiap baris sumber itu tercatat terbuka. Bila sumbernya gelap, ketiadaannya yang dicetak, bukan tebakan penggantinya.',
+    penegakan: 'GERBANG FAKTA DETERMINISTIK · KALIMAT YANG ANGKANYA TIDAK BERDOKUMEN DI LEMBAR FAKTA DITOLAK SEBELUM NAIK CETAK; SUMBER YANG GELAP DICATAT MEJA DATA HILANG.',
+  },
+  {
+    no: '02',
+    judul: 'Data dan opini berjalan di lajur terpisah',
+    isi: 'Data dan opini tidak pernah dilebur menjadi satu narasi. Kutipan berita dicetak verbatim beserta nama medianya; sintesis yang dirangkai mesin selalu membawa label sintesis, tidak menyaru sebagai kutipan. Pembaca berhak tahu kalimat mana yang milik sumber dan kalimat mana yang rangkaian redaksi.',
+    penegakan: 'PEMISAHAN LAJUR DALAM PIPA · LAJUR KUTIPAN HANYA MENERUSKAN JUDUL + TAUTAN ASLI; LAJUR SINTESIS MESIN DIBERI LABEL TERCETAK, TIDAK PERNAH BERCAMPUR DALAM SATU KOLOM.',
+  },
+  {
+    no: '03',
+    judul: 'Dokumen disajikan, tuduhan ditinjau manusia',
+    isi: 'Redaksi menyajikan dokumen dan angka resmi apa adanya. Namun setiap klaim yang menyangkut tindakan seseorang, bukan lembaga atau agregat, tidak boleh terbit dari mesin sendirian: ia memerlukan tinjauan editorial manusia sebelum naik cetak. Otomasi boleh cepat; nama baik orang tidak ikut dipertaruhkan demi kecepatan itu.',
+    penegakan: 'BENDERA NEEDS_HUMAN_REVIEW · KLAIM ATAS INDIVIDU DITAHAN PIPA SAMPAI EDITOR MANUSIA MENINJAU DAN MELEPASNYA SECARA EKSPLISIT.',
+  },
+  {
+    no: '04',
+    judul: 'Satu langkah verifikasi sebelum terbit otomatis',
+    isi: 'Koran ini dicetak otomatis dua kali sehari, tetapi otomatis tidak berarti tanpa rem. Setiap edisi melewati satu proses verifikasi sebelum publikasi berjalan: korpus diperiksa gerbang fakta, dan edisi yang gagal diperiksa tidak terbit. Lebih baik edisi terlambat daripada edisi yang salah.',
+    penegakan: 'GERBANG VERIFIKASI DI PIPA TERBIT · PUBLIKASI OTOMATIS HANYA BERJALAN SETELAH SATU LANGKAH PEMERIKSAAN LOLOS; GAGAL PERIKSA = TIDAK TERBIT.',
+  },
+  {
+    no: '05',
+    judul: 'Terbuka tanpa akun, tanpa bayar',
+    isi: 'Konten inti koran ini dapat diakses tanpa akun, tanpa login, dan tanpa pembayaran. Data yang dipakai adalah data publik; hasil olahannya kembali menjadi milik publik. Tidak ada dinding berlangganan, tidak ada gerbang pendaftaran, tidak ada versi premium.',
+    penegakan: 'TIDAK ADA SISTEM AKUN DI SITUS INI · SELURUH HALAMAN STATIS DAN TERBUKA; TIDAK ADA ENDPOINT LOGIN ATAU PAYWALL DALAM KODE.',
+  },
+  {
+    no: '06',
+    judul: 'Data pembaca tinggal di perangkat pembaca',
+    isi: 'Apa yang pembaca lakukan di halaman ini bukan urusan redaksi. Data pembaca diproses secara lokal di perangkat: alat seperti sensus-diri menghitung di peramban dan tidak mengirim apa pun ke server. Tidak ada pelacak pihak ketiga, tidak ada analitik iklan, tidak ada profil pembaca.',
+    penegakan: 'PEMROSESAN LOKAL SAJA · TIDAK ADA SKRIP PELACAK PIHAK KETIGA DI HALAMAN; ISIAN PEMBACA TIDAK PERNAH MENINGGALKAN PERAMBAN.',
+  },
+  {
+    no: '07',
+    judul: 'Koreksi',
+    isi: 'Koran yang jujur salah dengan cara yang jujur pula. Bila sebuah angka atau kalimat terbukti keliru, koreksinya dicetak terbuka: baris yang salah ditandai, versi benarnya dimuat beserta tanggal koreksi, dan riwayatnya tetap dapat dilihat di arsip. Kesalahan tidak disunting diam-diam. Pembaca yang menemukan kekeliruan dipersilakan membuka isu di repositori publik redaksi.',
+    penegakan: 'KOREKSI TERCETAK, BUKAN SUNTINGAN SENYAP · SETIAP PERUBAHAN TERCATAT DI RIWAYAT REPOSITORI PUBLIK YANG DAPAT DIPERIKSA SIAPA PUN.',
+  },
+];
+---
+
+<Paper title="Pedoman Redaksi · DETAK DETIK" description="Enam komitmen editorial Detak Detik beserta cara penegakannya dalam kode: kutipan atau diam, lajur terpisah, tinjauan manusia, verifikasi sebelum terbit, akses terbuka, dan data pembaca yang tinggal di perangkat.">
+  <main class="ped-hal" data-register="dinas" data-stempel-pad>
+    <div class="wrap">
+      <a class="ped-back mono ink-link" href="/">← DETAK DETIK · EDISI #41</a>
+      <h1 class="ped-judul display">Pedoman Redaksi</h1>
+      <p class="ped-sub">
+        Enam komitmen yang menjalankan koran ini, ditulis sebagai kebijakan yang dapat ditagih,
+        bukan semboyan. Setiap pasal ditutup dengan cara penegakannya dalam kode;
+        janji yang tidak ditegakkan di mana pun tidak dicetak di sini.
+      </p>
+
+      <div class="ped-daftar">
+        {BAB.map((b) => (
+          <section class="ped-bab">
+            <span class="ped-no mono num">§ {b.no}</span>
+            <div>
+              <h2 class="ped-bab-judul">{b.judul}</h2>
+              <p class="ped-bab-isi">{b.isi}</p>
+              <p class="ped-bab-tegak mono">{b.penegakan}</p>
+            </div>
+          </section>
+        ))}
+
+        <section class="ped-bab">
+          <span class="ped-no mono num">§ 08</span>
+          <div>
+            <h2 class="ped-bab-judul">Periksa sendiri</h2>
+            <p class="ped-bab-isi">
+              Pedoman ini hanya berarti bila dapat diperiksa. Seluruh sumber data koran ini,
+              lengkap dengan tautan, tempat pemakaian, metode pengolahan, dan status pipanya,
+              tercetak terbuka di halaman <a class="ink-link" href="/sumber">Sumber &amp; Metode</a>.
+              Pembaca dipersilakan menagih setiap baris di sana.
+            </p>
+            <p class="ped-bab-tegak mono">LACI KUITANSI TERBUKA · SETIAP CAP KUTIPAN ⊙ DI KORAN MENGANTAR KE BARIS SUMBERNYA.</p>
+          </div>
+        </section>
+      </div>
+
+      <p class="ped-kaki mono">PEDOMAN INI IKUT TERCATAT DI RIWAYAT REPOSITORI PUBLIK · PERUBAHANNYA PUN DAPAT DIPERIKSA.</p>
+    </div>
+  </main>
+</Paper>
+
+<style>
+  .ped-hal { min-height: 100vh; background: var(--bg); color: var(--ink); padding: 30px 0 80px; }
+  .ped-back { display: inline-block; font-size: 10px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 26px; }
+  .ped-judul { font-size: clamp(36px, 7vw, 88px); }
+  .ped-sub { font-size: 15.5px; max-width: 62ch; margin: 12px 0 36px; }
+  .ped-daftar { border-top: 1px solid var(--line); }
+  .ped-bab {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding: 22px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .ped-no { font-size: 12px; color: var(--accent2); padding-top: 6px; }
+  .ped-bab-judul { font-family: 'Fraunces Variable', serif; font-weight: 460; font-size: clamp(20px, 2.6vw, 28px); }
+  .ped-bab-isi { font-size: 14.5px; line-height: 1.75; color: var(--ink); margin-top: 8px; max-width: 68ch; }
+  .ped-bab-tegak { font-size: 9px; letter-spacing: 0.14em; line-height: 1.8; color: var(--muted); margin-top: 12px; max-width: 80ch; }
+  @media (max-width: 560px) {
+    .ped-bab { grid-template-columns: 1fr; gap: 8px; }
+    .ped-no { padding-top: 0; }
+  }
+  .ped-kaki { font-size: 9px; letter-spacing: 0.16em; color: var(--muted); margin-top: 30px; }
+</style>

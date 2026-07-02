@@ -43,6 +43,9 @@
   const W = 520;
   const H = 250;
   const PAD = { l: 16, r: 66, t: 24, b: 26 };
+  // the honest-state watermark sits in the middle of the plot area
+  const WM_X = (PAD.l + W - PAD.r) / 2;
+  const WM_Y = (PAD.t + H - PAD.b) / 2;
 
   let pilihan = $state(ROSTER[0]!);
   const data = $derived(SEMUA.find((d) => d.k.id === pilihan.id)!.s);
@@ -98,9 +101,11 @@
 <div class="gw" data-no-stempel>
   <div class="gw-head">
     <div>
-      <span class="inkbar gw-bar"><span class="dot">●</span>§4 · HARGA PANGAN</span>
+      <span class="inkbar gw-bar"><span class="dot">●</span>§3 · HARGA PANGAN</span>
       <h3 class="display">Harga Pangan</h3>
-      <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS · (DATA CONTOH)</span>
+      <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS</span>
+      <p class="gw-jujur fig">Menunggu kunci API Badan Pangan; kurva di bawah adalah contoh bentuk, bukan data.</p>
+      <button class="chip"><span class="tick">⊙</span>data contoh · menunggu sumber langsung</button>
     </div>
     <span class={`gw-status mono ${statusNada}`}>{pilihan.nama} · {status}</span>
   </div>
@@ -127,6 +132,7 @@
         <text class="band-label" x={PAD.l + 4} y={py(bandHi) - 4}>KISARAN WAJAR</text>
         <path class="area" d={area} />
         <path bind:this={pathEl} class="wave" d={path} />
+        <text class="gw-wm" x={WM_X} y={WM_Y} text-anchor="middle" transform={`rotate(-12 ${WM_X} ${WM_Y})`}>DATA CONTOH</text>
         <circle class="pulse" cx={px(29)} cy={py(data[29]!)} r="4" />
         <text class="end-val num" x={px(29) + 8} y={py(data[29]!) + 4}>Rp {fmt.format(data[29]!)}</text>
         <text class="end-sub" x={px(29) + 8} y={py(data[29]!) + 16}>{ubah >= 0 ? '▲+' : '▼'}{ubah}%/{pilihan.satuan}</text>
@@ -178,6 +184,9 @@
   .gw-status { font-size: 9px; letter-spacing: 0.14em; padding: 4px 8px; border: 1px solid currentColor; white-space: nowrap; }
   .gw-status.buruk { color: var(--accent); }
   .gw-status.datar { color: var(--muted); }
+  .gw-jujur { font-size: 12.5px; margin: 6px 0 10px; max-width: 52ch; }
+  .gw-head .chip { align-self: flex-start; }
+  .gw-wm { font-family: var(--font-mono); font-size: 30px; letter-spacing: 0.3em; fill: var(--ink); opacity: 0.08; pointer-events: none; }
 
   .gw-body { display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(20px, 4vw, 44px); align-items: start; }
   @media (max-width: 820px) { .gw-body { grid-template-columns: 1fr; } }

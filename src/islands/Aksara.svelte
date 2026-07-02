@@ -103,11 +103,11 @@
   }
 
   const TUR_PEMBUKA = {
-    tour_id: 'pembuka-041',
-    judul: 'Edisi #41 dalam 30 detik',
+    tour_id: 'pembuka',
+    judul: 'Edisi ini dalam 30 detik',
     asal: 'newsroom' as const,
     langkah: [
-      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi #41. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
+      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi ini. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
       { cmd: 'highlight', params: { ids: ['peta'] }, narasi: 'Peta Kabar: lapisan data langsung. Minta saya tunjukkan gempa, kebakaran, atau udara di satu pulau.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Wilayah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: presiden dan kabinet terbesar sejak 1966, dan seberapa terbuka pertanggungjawabannya.', tahan_ms: 4800 },
