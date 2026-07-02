@@ -7,11 +7,12 @@
  * the newsroom can publish by writing KV with no rebuild.
  */
 
-export interface LiveTemuan { lens?: string; headline?: string; body?: string }
+export interface LiveTemuan { lens?: string; headline?: string; body?: string; temuan_id?: string }
 export interface LiveTicker { src: string; teks: string; url?: string }
 export interface LiveAgenda { jam: string; teks: string; tag?: string }
 export interface LiveMakro { label: string; nilai: string; pre?: string; acuan?: string; chip?: string; nada?: string }
-export interface LiveKlipingItem { judul: string; url?: string; media: string; grup?: string; independen?: boolean }
+export interface LiveKlipingItem { judul: string; url?: string; media: string; grup?: string; independen?: boolean; ringkas?: string }
+export interface LiveButir { teks: string; media?: string }
 export interface LiveKliping {
   id?: string;
   utama: LiveKlipingItem;
@@ -21,6 +22,10 @@ export interface LiveKliping {
   skor?: number;
   titik_buta?: boolean;
   meja?: string;
+  /** Lane C machine overview, fact-gated in the newsroom; absent = silence */
+  sari?: string;
+  /** gated key points, each crediting the clip that supports it */
+  butir?: LiveButir[];
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 export interface LiveEdisi {

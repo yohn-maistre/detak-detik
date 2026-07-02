@@ -64,6 +64,17 @@ class KlipingItem(BaseModel):
     media: str
     grup: str
     independen: bool = False
+    # verbatim lede (the feed's own description text, cleaned of markup) —
+    # Lane A; published only on the cluster's representative item
+    ringkas: str | None = None
+
+
+class Butir(BaseModel):
+    """One key point on the lembar, Lane A verbatim: the first sentence of an
+    outlet's lede, credited to that outlet. No model text, ever."""
+
+    teks: str
+    media: str | None = None
 
 
 class Kliping(BaseModel):
@@ -83,6 +94,12 @@ class Kliping(BaseModel):
     titik_buta: bool
     tumbuh: bool = False
     meja: str = "nasional"
+    # Lane C machine overview, written only from the cluster's own verbatim
+    # evidence and accepted only when its every number appears in that
+    # evidence (see sari.py); None = silence, the lembar prints nothing
+    sari: str | None = None
+    # Lane A key points (see Butir); None/empty = the section is absent
+    butir: list[Butir] | None = None
 
 
 class KlipingMeta(BaseModel):
@@ -98,11 +115,14 @@ class KlipingMeta(BaseModel):
 
 
 class LiveTemuan(BaseModel):
-    """The lighter shape the site renders (edition.ts `LiveTemuan`)."""
+    """The lighter shape the site renders (edition.ts `LiveTemuan`).
+    `temuan_id` rides along so the front feed can print the finding's receipt
+    chip next to the live headline."""
 
     lens: str
     headline: str
     body: str
+    temuan_id: str | None = None
 
 
 class Edisi(BaseModel):

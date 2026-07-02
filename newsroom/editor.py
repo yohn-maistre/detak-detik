@@ -78,7 +78,8 @@ def assemble(
         angka_edisi=angka,
         lead=lead.temuan_id,
         dek="Temuan paling menonjol edisi ini, diperiksa terhadap sumbernya sebelum naik cetak.",
-        temuan=[LiveTemuan(lens=t.lens, headline=t.headline, body=t.body) for t in ranked],
+        temuan=[LiveTemuan(lens=t.lens, headline=t.headline, body=t.body,
+                           temuan_id=t.temuan_id) for t in ranked],
         ticker=ticker,
         # kliping is Lane A pass-through (verbatim headlines, no model text), so
         # it skips the fact-gate and the lawyer by design

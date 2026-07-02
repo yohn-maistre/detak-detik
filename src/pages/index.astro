@@ -39,7 +39,7 @@ import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import VeilMesin from '../islands/VeilMesin.svelte';
-import RakKabar from '../islands/RakKabar.svelte';
+import EdisiFeed from '../islands/EdisiFeed.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
@@ -149,32 +149,19 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </div>
 
-        <!-- ===== HALAMAN MUKA: the paper's own lead, then the nation's press.
-             One news surface: the Rak below absorbs the old Ringkas Pagi and
-             the four rubrik desks (their taxonomy returns as filter chips). -->
-        <section class="pagi" aria-label="Halaman muka">
-          <div class="pagi-utama">
-            <div class="pagi-lead">
-              <span class="inkbar"><span class="dot">●</span>TEMUAN UTAMA</span>
-              <h2 class="pagi-judul display" id="ku-judul">{TEMUAN[0].headline}</h2>
-              <p class="pagi-dek" id="ku-dek">Temuan utama edisi ini, diperiksa terhadap dokumen sumbernya sebelum naik cetak.</p>
-            </div>
-            <!-- the receipt rail: the lead printed beside its evidence -->
-            <aside class="pagi-resi" aria-label="Pemeriksaan temuan utama">
-              <span class="eyebrow">DIPERIKSA SEBELUM NAIK CETAK</span>
-              <p class="pagi-resi-teks">Setiap klaim pada temuan ini tertaut ke dokumen sumbernya. Tanpa dokumen, tidak naik cetak.</p>
-              <div class="cite-chips" id="ku-chips">
-                {TEMUAN[0].chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
-              </div>
-              <span class="stamp pagi-stamp" data-stamp-in id="ku-stamp">{TEMUAN[0].stamp}</span>
-              <p class="pagi-resi-meta mono"><span id="ku-serial">{TEMUAN[0].serial}</span> · <span id="ku-src">DATA CONTOH</span></p>
-            </aside>
-          </div>
-        </section>
-
-        <!-- the clustered newsstand: renders only when a live edition carries
-             kliping[]; hydrates on idle because it starts at zero height -->
-        <RakKabar client:idle />
+        <!-- ===== HALAMAN MUKA: one feed. Entry №01 is the paper's own lead
+             (SSR'd contoh, swapped live by the island); the day's press
+             follows as ranked kliping rows. Headlines open the Lembar. -->
+        <EdisiFeed
+          client:idle
+          lead={{
+            headline: TEMUAN[0].headline,
+            dek: TEMUAN[0].body,
+            chips: TEMUAN[0].chips,
+            stamp: TEMUAN[0].stamp,
+            serial: TEMUAN[0].serial,
+          }}
+        />
 
         <PasarPagi client:visible />
 
@@ -954,20 +941,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .fajar-btn { background: none; border: none; color: var(--muted); cursor: pointer; font-size: inherit; letter-spacing: inherit; padding: 0; transition: color 0.25s; }
   .fajar-btn:hover { color: var(--accent); }
 
-  /* ---- the morning front (Act I lead): broadsheet headline + receipt rail ---- */
-  .pagi { padding-top: 26px; margin-top: 6px; }
   .peta-cuaca { border-bottom: 1px solid var(--line-soft); margin-bottom: 14px; }
-  .pagi-utama { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(22px, 4vw, 56px); align-items: end; }
-  @media (max-width: 860px) { .pagi-utama { grid-template-columns: 1fr; } }
-  .pagi-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(30px, 5vw, 66px); line-height: 0.98; letter-spacing: var(--disp-track); color: var(--ink); margin: 10px 0 0; max-width: 17ch; }
-  .pagi-dek { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); max-width: 52ch; line-height: 1.5; margin-top: 12px; }
-  /* the receipt rail sits on the lead's baseline, like a signature block */
-  .pagi-resi { display: grid; gap: 12px; justify-items: start; align-content: end; border-left: 1px solid var(--line); padding: 4px 0 6px clamp(16px, 2.5vw, 30px); }
-  @media (max-width: 860px) { .pagi-resi { border-left: none; padding: 16px 0 0; border-top: 1px solid var(--line-soft); } }
-  .pagi-resi-teks { font-size: 12.5px; color: var(--muted); line-height: 1.55; max-width: 34ch; }
-  .pagi-resi .cite-chips { margin-top: 0; }
-  .pagi-stamp { font-size: 9px; }
-  .pagi-resi-meta { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
 
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
   .gelombang-blok { margin-top: 34px; margin-bottom: 40px; }

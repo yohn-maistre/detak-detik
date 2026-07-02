@@ -34,6 +34,7 @@ from .lawyer import redaktur_hukum
 from .llm import configured_providers, model_available
 from .log import Log
 from .publish import publish_edisi
+from .sari import tulis_sari
 from .sources.anggaran import gather_anggaran
 from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
@@ -74,10 +75,17 @@ async def run() -> int:
     # the kliping desk is Lane A pass-through (verbatim headlines, no model
     # text), so it never enters the fact-gate or the lawyer; dark feeds are
     # logged here (the roster records them honestly either way)
-    kliping, kliping_gelap, kliping_feeds, kliping_meta = await gather_kliping(EDISI_NO)
+    kliping, kliping_gelap, kliping_feeds, kliping_meta, kliping_bukti = \
+        await gather_kliping(EDISI_NO)
     log.event("kliping", klaster=len(kliping), per_feed=kliping_feeds,
               gelap=kliping_gelap, judul=kliping_meta.judul,
               disusun=kliping_meta.disusun)
+
+    # SARI (Lane C): gated overviews for the top clusters — written only from
+    # each cluster's own verbatim evidence, dropped unless every number in the
+    # summary appears in that evidence. Butir/lede are Lane A, built upstream.
+    sari_n = await tulis_sari(kliping, kliping_bukti)
+    log.event("sari", ditulis=sari_n)
 
     # desks run in parallel; each gates against the full corpus
     drafted = await asyncio.gather(

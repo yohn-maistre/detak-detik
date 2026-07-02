@@ -4,9 +4,11 @@
  * RSS headlines (worker /ticker) and the published edition (worker /edisi)
  * and updates the SSR DOM in place. Nothing fetched / unreachable → the
  * baked-in markup stays, so first paint and offline are intact.
- * Surfaces fed here: the KILAS ticker, the Temuan Utama lead, the Act II
- * Temuan Redaksi board, and the Angka Edisi odometer (via choreo's hook).
- * The Rak Kabar island feeds itself through lib/edition (onEdisi).
+ * Surfaces fed here: the KILAS ticker, the Act II Temuan Redaksi board, and
+ * the Angka Edisi odometer (via choreo's hook). The front feed (lead №01 +
+ * kliping rows) is the EdisiFeed island, which feeds itself through
+ * lib/edition (onEdisi) — never touch its DOM from here: mutating text the
+ * island later hydrates would silently revert live content to contoh.
  */
 const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
 
@@ -56,19 +58,7 @@ function renderTemuanBoard(temuan: Temuan[]) {
 
 function applyEdisi(ed: Edisi | null) {
   if (!ed) return;
-  const lead = ed.temuan?.[0]; // editor ranks the lead first
   const setText = (id: string, v?: string) => { const el = document.getElementById(id); if (el && v) el.textContent = v; };
-  if (lead?.headline) setText('ku-judul', lead.headline);
-  if (ed.dek) setText('ku-dek', ed.dek);
-  // the receipt rail follows the lead: live headline, live receipts — the
-  // contoh chips must never sit beside a live claim.
-  if (lead?.headline) {
-    const chips = document.getElementById('ku-chips');
-    if (chips && lead.temuan_id) chips.innerHTML = `<button class="chip"><span class="tick">⊙</span>${esc(lead.temuan_id)}</button>`;
-    setText('ku-stamp', 'LOLOS PERIKSA FAKTA');
-    if (ed.edisi != null) setText('ku-serial', `EDISI #${ed.edisi}`);
-    setText('ku-src', 'LANGSUNG · RUANG REDAKSI');
-  }
   // the Angka Edisi lives once, as the Act II odometer; choreo exposes a hook so
   // the live number re-rolls in place (and re-prices through the denom buttons).
   if (ed.angka_edisi?.nilai != null) {

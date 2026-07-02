@@ -26,7 +26,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from ..models import Kliping, KlipingItem, KlipingMeta
+from ..models import Butir, Kliping, KlipingItem, KlipingMeta
 
 _ROSTER = Path(__file__).resolve().parent.parent / "data" / "media_roster.json"
 _TIMEOUT = 10
@@ -45,6 +45,10 @@ _HEADERS = {
 _JACCARD_MIN = 0.32
 _TOKEN_PANJANG_MIN = 4
 _TOKEN_SAMA_MIN = 3
+
+# lembar dossier bounds: lede length and how many verbatim key points print
+_RINGKAS_MAKS = 280
+_BUTIR_MAKS = 4
 
 # Indonesian function words stripped before comparing titles
 _STOPWORDS = frozenset({
@@ -122,18 +126,35 @@ def _bersih_teks(teks: str) -> str:
     return html.unescape(teks).strip()
 
 
-def _parse_items(xml_text: str) -> list[tuple[str, str, str]]:
-    """(judul, url, pubdate) per item. xml.etree first; several Indonesian feeds
-    ship malformed XML, so fall back to the regex pass worker/src/index.ts uses."""
-    items: list[tuple[str, str, str]] = []
+_TAG = re.compile(r"<[^>]+>")
+
+
+def _bersih_ringkas(teks: str) -> str:
+    """RSS descriptions arrive with markup, entities, and tracker cruft; keep
+    only the verbatim lede text, whitespace-collapsed, bounded at a word."""
+    t = _bersih_teks(teks)
+    t = html.unescape(_TAG.sub(" ", t))
+    t = " ".join(t.split())
+    if len(t) > _RINGKAS_MAKS:
+        t = t[:_RINGKAS_MAKS].rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+    return t
+
+
+def _parse_items(xml_text: str) -> list[tuple[str, str, str, str]]:
+    """(judul, url, pubdate, ringkas) per item. xml.etree first; several
+    Indonesian feeds ship malformed XML, so fall back to the regex pass
+    worker/src/index.ts uses. `ringkas` is the feed's own description text
+    (verbatim lede, markup stripped), empty when the feed carries none."""
+    items: list[tuple[str, str, str, str]] = []
     try:
         root = ET.fromstring(xml_text)
         for it in root.iter("item"):
             judul = _bersih_teks(it.findtext("title") or "")
             url = _bersih_teks(it.findtext("link") or "")
             pub = (it.findtext("pubDate") or "").strip()
+            ringkas = _bersih_ringkas(it.findtext("description") or "")
             if judul and url:
-                items.append((judul, url, pub))
+                items.append((judul, url, pub, ringkas))
     except ET.ParseError:
         pass
     if items:
@@ -143,11 +164,13 @@ def _parse_items(xml_text: str) -> list[tuple[str, str, str]]:
         judul = re.search(r"<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?</title>", blok)
         url = re.search(r"<link>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?</link>", blok)
         pub = re.search(r"<pubDate>([\s\S]*?)</pubDate>", blok)
+        desc = re.search(r"<description>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?</description>", blok)
         if judul and url:
             j = html.unescape(judul.group(1)).strip()
             u = html.unescape(url.group(1)).strip()
             if j and u:
-                items.append((j, u, pub.group(1).strip() if pub else ""))
+                items.append((j, u, pub.group(1).strip() if pub else "",
+                              _bersih_ringkas(desc.group(1)) if desc else ""))
     return items
 
 
@@ -210,7 +233,7 @@ def _ambil_feed(outlet: dict, batas: datetime) -> list[dict]:
         raise ValueError("umpan tidak berisi item")
     items = []
     terlihat: set[str] = set()
-    for judul, url, pub in parsed:
+    for judul, url, pub, ringkas in parsed:
         if url in terlihat or not _dalam_jendela(pub, batas):
             continue
         terlihat.add(url)
@@ -220,6 +243,7 @@ def _ambil_feed(outlet: dict, batas: datetime) -> list[dict]:
             "independen": bool(outlet.get("independen")),
             "judul": judul,
             "url": url,
+            "ringkas": ringkas,
             "tokens": _tokens(judul),
         })
     return items
@@ -236,6 +260,40 @@ def _klaster(items: list[dict]) -> list[list[dict]]:
     for i, it in enumerate(items):
         kelompok.setdefault(uf.cari(i), []).append(it)
     return list(kelompok.values())
+
+
+_KALIMAT = re.compile(r"(?<=[.!?…])\s+")
+
+
+def _butir_dari(wakil: list[dict], utama: dict) -> list[Butir]:
+    """Key points, Lane A verbatim: the first sentence of each outlet's lede,
+    preferring one lede per ownership group, near-duplicates (and the lead
+    outlet's own lede, which prints separately) dropped. No model text."""
+    keluar: list[Butir] = []
+    dipakai: list[frozenset[str]] = []
+    grup_terpakai: set[str] = set()
+    lede_utama = (utama.get("ringkas") or "").strip()
+    if lede_utama:
+        dipakai.append(_tokens(_KALIMAT.split(lede_utama)[0]))
+    for hanya_grup_baru in (True, False):
+        for w in wakil:
+            if len(keluar) >= _BUTIR_MAKS:
+                return keluar
+            r = (w.get("ringkas") or "").strip()
+            if not r or (hanya_grup_baru and w["grup"] in grup_terpakai):
+                continue
+            kalimat = _KALIMAT.split(r)[0].strip()
+            if len(kalimat) < 40:
+                continue
+            if len(kalimat) > 220:
+                kalimat = kalimat[:220].rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+            tok = _tokens(kalimat)
+            if any(_serumpun(tok, t) for t in dipakai):
+                continue
+            dipakai.append(tok)
+            grup_terpakai.add(w["grup"])
+            keluar.append(Butir(teks=kalimat, media=w["media"]))
+    return keluar
 
 
 def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
@@ -257,14 +315,19 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
     )
     n_media = len(per_media)
     n_grup = len({w["grup"] for w in per_media.values()})
+    butir = _butir_dari(wakil, utama)
     return Kliping(
         id=f"klp-{edisi_no}-{urut:02d}",
+        # the lede rides only on the representative item to keep the payload
+        # lean; the full per-outlet evidence stays in-memory for sari/butir
         utama=KlipingItem(judul=utama["judul"], url=utama["url"],
                           media=utama["media"], grup=utama["grup"],
-                          independen=utama["independen"]),
+                          independen=utama["independen"],
+                          ringkas=utama.get("ringkas") or None),
         liputan=[KlipingItem(judul=w["judul"], url=w["url"],
                              media=w["media"], grup=w["grup"],
                              independen=w["independen"]) for w in liputan],
+        butir=butir if len(butir) >= 2 else None,
         n_media=n_media,
         n_grup=n_grup,
         skor=n_grup * 2 + n_media,  # corroboration by ownership diversity, not volume
@@ -276,10 +339,12 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
 
 async def gather_kliping(
     edisi_no: int,
-) -> tuple[list[Kliping], list[str], dict[str, int], KlipingMeta]:
+) -> tuple[list[Kliping], list[str], dict[str, int], KlipingMeta, dict[str, list[str]]]:
     """Fetch every live roster feed, cluster the 48h window, score by ownership
     diversity. Returns (clusters sorted by skor desc, dark feed names, items per
-    feed, pipeline meta). Only clusters seen by at least two outlets surface; a
+    feed, pipeline meta, bukti). `bukti` maps cluster id -> the cluster's
+    verbatim evidence lines (outlet: title — lede), the only text sari.py may
+    write from. Only clusters seen by at least two outlets surface; a
     single-outlet headline is a ticker item, not a corroborated story. The
     meta's `klaster` counts what the desk emitted; the editor overwrites it
     after applying the front-page cap."""
@@ -303,22 +368,28 @@ async def gather_kliping(
             per_feed[outlet["nama"]] = len(got)
 
     kliping: list[Kliping] = []
+    bukti: dict[str, list[str]] = {}
     kandidat = [c for c in _klaster(items) if len({x["media"] for x in c}) >= 2]
     kandidat.sort(key=lambda c: (-len({x["grup"] for x in c}) * 2 - len({x["media"] for x in c}),
                                  min(x["url"] for x in c)))
     for urut, anggota in enumerate(kandidat, start=1):
-        kliping.append(_susun_kliping(anggota, edisi_no, urut))
+        k = _susun_kliping(anggota, edisi_no, urut)
+        kliping.append(k)
+        bukti[k.id] = [
+            f"{it['media']}: {it['judul']}" + (f" — {it['ringkas']}" if it.get("ringkas") else "")
+            for it in anggota[:10]
+        ]
     meta = KlipingMeta(
         judul=len(items),  # every headline that made it inside the window
         klaster=len(kliping),
         gelap=len(gelap),
         disusun=datetime.now(_WIB).strftime("%H.%M"),
     )
-    return kliping, gelap, per_feed, meta
+    return kliping, gelap, per_feed, meta, bukti
 
 
 def _cetak_laporan() -> None:
-    kliping, gelap, per_feed, meta = asyncio.run(gather_kliping(0))
+    kliping, gelap, per_feed, meta, bukti = asyncio.run(gather_kliping(0))
     print("== item per feed ==")
     for nama, n in per_feed.items():
         print(f"  {nama}: {n}")
@@ -334,9 +405,12 @@ def _cetak_laporan() -> None:
     print(f"== klaster (>= 2 media): {len(kliping)}")
     for k in kliping[:5]:
         print(f"  [{k.skor}] meja={k.meja} media={k.n_media} grup={k.n_grup} "
-              f"titik_buta={k.titik_buta} :: {k.utama.judul} ({k.utama.media})")
+              f"titik_buta={k.titik_buta} butir={len(k.butir or [])} "
+              f"lede={'ya' if k.utama.ringkas else '-'} :: {k.utama.judul} ({k.utama.media})")
         for l in k.liputan:
             print(f"      - {l.media} ({l.grup}): {l.judul[:80]}")
+        for b in k.butir or []:
+            print(f"      * BUTIR ({b.media}): {b.teks[:90]}")
 
 
 if __name__ == "__main__":

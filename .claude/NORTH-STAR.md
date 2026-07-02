@@ -826,6 +826,25 @@ the standard gate, size-guarded before KV publish.
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-02 · wave 3 — the front feed
+- **EdisiFeed** replaces RakKabar + the standalone TEMUAN UTAMA block: one
+  surface; №01 = the paper's lead (SSR contoh via prop, live via onEdisi —
+  the island owns its lead updates; pagi-live must never touch its DOM, that
+  was a hydration-revert race), №02… = Digg-grammar cluster rows (rank left,
+  squares + counts + meja in the meta line, inline liputan cut).
+- **Lembar v2 dossier**: LEDE (verbatim, credited) → SARI (Lane C slot) →
+  BUTIR (credited key points) → SUARA (client-derived: one verbatim headline
+  per ownership group — zero synthesis) → full LIPUTAN → methodology link.
+  Hash routing `#/kliping/{id}`; deep links open once the edition loads.
+- **Newsroom**: RSS descriptions harvested (`ringkas`, 280-char, markup
+  stripped; published on utama only); BUTIR deterministic (first sentence
+  per outlet's lede, group-diverse, deduped via _serumpun, ≥2 or absent);
+  `sari.py` — Lane C overview for top 6 clusters, deterministic acceptance
+  (bounded, link-free, every number token must appear in the evidence);
+  LiveTemuan now carries temuan_id for the feed's live receipt chip.
+  Live dry-run: 493 judul → 33 klaster; butir extraction verified.
+- pagi-live slimmed to ticker + temuan board + angka.
+
 ### 2026-07-02 · grand redesign planned (§13)
 - Yose review of wave 2: gauge board = the bar ("this is what we want with
   the others"); lembar nice but lead-row source list duplicates it; TEMUAN
