@@ -5,6 +5,7 @@
       a day by the calendar (law 5); a curated plate stands when the network is
       dark, so the absence is documented, never a broken page. */
   import { onMount } from 'svelte';
+  import { drawEngraving, ENGRAVE_ATLAS } from '../lib/engrave';
   import SukuLokasi from './SukuLokasi.svelte';
 
   type Suku = { title: string; nama: string; wilayah: string; rumpun: string; lat: number; lon: number; blurb: string };
@@ -32,6 +33,19 @@
   let img = $state('');
   let live = $state(false);
   let href = $state(`https://id.wikipedia.org/wiki/${encodeURIComponent(base.title)}`);
+
+  /* plat pengganti: kanvas gravir rumah untuk bingkai yang fotonya belum ada.
+     Efek berjalan tiap kanvas cabang fallback terpasang; bingkai tak pernah kosong. */
+  let plat: HTMLCanvasElement | undefined = $state();
+  $effect(() => {
+    const el = plat;
+    if (!el) return;
+    const gambar = () => drawEngraving(el, { ...ENGRAVE_ATLAS, caption: `PLAT · ${nama.toUpperCase()}` });
+    gambar();
+    const ro = new ResizeObserver(gambar);
+    ro.observe(el);
+    return () => ro.disconnect();
+  });
 
   onMount(() => {
     (async () => {
@@ -64,7 +78,10 @@
         {#if img}
           <img src={img} alt={nama} loading="lazy" onerror={() => (img = '')} />
         {:else}
-          <div class="wn-kosong"><span class="mono">PLAT · {nama.toUpperCase()}</span></div>
+          <div class="wn-plat">
+            <canvas bind:this={plat} aria-label={`Plat gravir pengganti foto ${nama}`}></canvas>
+            <span class="wn-plat-cap mono">PLAT PENGGANTI · FOTO BELUM TERSEDIA DI ARSIP TERBUKA</span>
+          </div>
         {/if}
       </figure>
       <SukuLokasi lat={base.lat} lon={base.lon} nama={base.nama} />
@@ -86,7 +103,8 @@
   .wn-img { margin: 0; aspect-ratio: 4 / 5; overflow: hidden; border: 1px solid var(--line); background: #ece1c9; }
   @media (max-width: 760px) { .wn-img { aspect-ratio: 16 / 10; } }
   .wn-img img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.95); }
-  .wn-kosong { width: 100%; height: 100%; display: grid; place-items: center;
-    background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--line) 28%, transparent) 0 1px, transparent 1px 8px); }
-  .wn-kosong span { font-size: 10px; letter-spacing: 0.24em; color: var(--muted); }
+  .wn-plat { width: 100%; height: 100%; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+  .wn-plat canvas { width: 100%; height: 100%; min-height: 0; display: block; }
+  .wn-plat-cap { font-size: 8.5px; letter-spacing: 0.18em; color: var(--muted);
+    padding: 6px 10px; border-top: 1px solid var(--line); }
 </style>

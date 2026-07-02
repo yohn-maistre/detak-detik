@@ -39,10 +39,12 @@
   let root: HTMLElement | undefined = $state();
   let heroEl: HTMLElement | undefined = $state();
   onMount(() => {
+    /* angka besar sudah terisi TOTAL sejak render pertama; animasi 0 ke N hanya
+       berjalan saat elemen benar-benar terlihat dan reduced-motion tidak aktif. */
     const io = new IntersectionObserver(([e]) => {
       if (e?.isIntersecting) {
-        if (heroEl) countUp(heroEl, TOTAL, (n) => String(Math.round(n)));
         if (!reducedMotion() && root) {
+          if (heroEl) countUp(heroEl, TOTAL, (n) => String(Math.round(n)));
           gsap.fromTo(root.querySelectorAll('.bh-tally'),
             { scaleY: 0, transformOrigin: 'bottom' },
             { scaleY: 1, duration: 0.4, ease: EASE_STAMP, stagger: { each: 0.002, from: 'start' } });
@@ -59,7 +61,7 @@
   <header class="bh-head">
     <span class="eyebrow">BAHASA DAERAH HIDUP · KEDUA TERBANYAK DI DUNIA</span>
     <div class="bh-hero">
-      <span class="bh-n display num" bind:this={heroEl}>0</span>
+      <span class="bh-n display num" bind:this={heroEl}>{TOTAL}</span>
       <span class="bh-lab">cara mengucapkan <span class="bh-air">air</span>; sebagian dituturkan kurang dari seratus orang</span>
     </div>
   </header>

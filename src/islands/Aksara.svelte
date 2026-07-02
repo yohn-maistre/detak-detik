@@ -132,7 +132,7 @@
     input = '';
 
     if (baris === 'bantu') {
-      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · sorot <bagian> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|daerah|janji|hening|ekonomi|lingkungan|rumah-tangga|dunia|nusantara> · say <teks> · tur · stop · bersih');
+      tulis('verba: tanya <pertanyaan> · lensa <jakarta|papua|bali|jabar|sulsel|aceh|…> · sorot <bagian> · fly_to <kode> · scroll_to <depan|peta|lensa|sensus|kuasa|pabrik|hukum|aparat|daerah|hening|ekonomi|lingkungan|janji|dunia|nusantara> · say <teks> · tur · stop · bersih');
       tulis(`contoh: tanya berapa kerugian bulan ini · fly_to 9412${AKSARA_URL ? '' : ' · (tanya: lajur belum terpasang)'}`);
       return;
     }

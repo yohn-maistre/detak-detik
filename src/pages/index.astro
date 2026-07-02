@@ -8,7 +8,6 @@ import PasarPagi from '../islands/PasarPagi.svelte';
 import PapanAngka from '../islands/PapanAngka.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
-import DitherNusantara from '../islands/DitherNusantara.svelte';
 import SensusDiri from '../islands/SensusDiri.svelte';
 import TebakDaerah from '../islands/TebakDaerah.svelte';
 import BenarSalah from '../islands/BenarSalah.svelte';
@@ -288,8 +287,6 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
     <!-- ============ ACT II · MESIN ============ -->
     <section class="act act-mesin" data-act="mesin" data-register="mesin" id="mesin">
       <div class="wrap">
-        <DitherNusantara client:visible />
-
         <!-- Angka Edisi -->
         <section class="angka-blok" aria-labelledby="angka-label">
           <div class="angka-kiri">
@@ -517,62 +514,6 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
 
         </section>
 
-        <!-- BAB V · YANG TIDAK DIHITUNG -->
-        <section class="bab hening-blok" id="hening">
-          <header class="bab-kepala bab-jeda">
-            <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>JEDA</span>
-              <h2 class="bab-tajuk display">Yang Tidak Dihitung</h2>
-              <p class="bab-dek">Setiap statistik resmi punya baris dan sumbernya. Baris-baris di bawah tidak. <span data-annotate="underline" data-annotate-color="accent2">Ketiadaan itu juga dokumen.</span></p>
-            </div>
-          </header>
-          <div class="ledger hening-ledger">
-            {KEHENINGAN.baris.map((b) => (
-              <div>
-                <span>{b.k} <span class="hening-sumber mono">{b.sumber}</span></span>
-                <span class="v num">{b.v}</span>
-              </div>
-            ))}
-            {KEHENINGAN.absen.map((a, i) => (
-              <div class="hening-absen">
-                <span>{a.k} <span class="hening-sumber mono">{a.catatan}</span></span>
-                {i === 0
-                  ? <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{a.v}</span>
-                  : <span class="v num">{a.v}</span>}
-              </div>
-            ))}
-            <div class="hening-lanec">
-              <span>{KEHENINGAN.laneC.teks}</span>
-              <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
-            </div>
-          </div>
-          <p class="hening-foot mono">SATU WILAYAH ATAU TEMA DISOROT TIAP EDISI · USULKAN BARIS KOSONG LAIN DI GITHUB</p>
-        </section>
-
-        <!-- BAB VI · JANJI -->
-        <section class="bab" id="janji">
-          <header class="bab-kepala bab-jeda">
-            <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>JEDA</span>
-              <h2 class="bab-tajuk display">Janji</h2>
-              <p class="bab-dek">Buku besar yang mengingat. Dinilai dengan aritmetika, bukan opini.</p>
-            </div>
-          </header>
-          <div class="janji-list">
-            {JANJI.map((j) => (
-              <article class="janji">
-                <p class="janji-teks">{j.teks}</p>
-                <p class="janji-meta mono">{j.sumber}</p>
-                <div class="janji-baris mono">
-                  <span>TARGET · {j.target}</span>
-                  <span>TERUKUR · {j.realisasi}</span>
-                </div>
-                <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
         <div class="gerak" data-rise>
           <span class="gerak-no mono">GERAK II</span>
@@ -616,6 +557,14 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
             <p class="bab-kalimat fig">Rupiah dan bursa Jakarta, diukur dari luar, termasuk yang paling lemah di dunia pada 2026.</p>
             <RupiahIHSG client:visible />
           </div>
+
+          {duaGaris && (
+            <div class="bab-lembar bab-sub" data-rise>
+              <h3 class="bab-subjudul display">{duaGaris.judul}</h3>
+              <p class="bab-kalimat fig">{duaGaris.satuKalimat}</p>
+              <DuaGaris client:visible />
+            </div>
+          )}
         </section>
 
         <!-- UMUM · LINGKUNGAN & EKSTRAKSI -->
@@ -676,30 +625,38 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           </div>
         </section>
 
-        <!-- TEMA · RUMAH TANGGA & KESEJAHTERAAN -->
-        <section class="bab" id="rumah-tangga">
+        <!-- TEMA · JANJI & PROGRAM: the ledger that remembers, and the programs
+             it grades. The old standalone Janji jeda and the Rumah Tangga bab
+             were folded here: one chapter, promise next to outcome. -->
+        <section class="bab" id="janji">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">08</span>
             <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>TEMA · RUMAH TANGGA</span>
-              <h2 class="bab-tajuk display">Rumah Tangga &amp; Kesejahteraan</h2>
-              <p class="bab-dek">Angka yang ditanggung tiap rumah: garis kemiskinan yang dipakai negara, dan ongkos yang menyertai program terbesarnya.</p>
+              <span class="inkbar"><span class="dot">●</span>TEMA · JANJI</span>
+              <h2 class="bab-tajuk display">Janji &amp; Program</h2>
+              <p class="bab-dek">Buku besar yang mengingat: target yang diucapkan, angka yang terukur, dan ongkos program terbesarnya. Dinilai dengan aritmetika, bukan opini.</p>
             </div>
           </header>
 
-          <div class="bab-lembar" data-rise>
+          <div class="janji-list">
+            {JANJI.map((j) => (
+              <article class="janji">
+                <p class="janji-teks">{j.teks}</p>
+                <p class="janji-meta mono">{j.sumber}</p>
+                <div class="janji-baris mono">
+                  <span>TARGET · {j.target}</span>
+                  <span>TERUKUR · {j.realisasi}</span>
+                </div>
+                <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
+              </article>
+            ))}
+          </div>
+
+          <div class="bab-lembar bab-sub" data-rise>
             <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
             <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
             <MbgKorban client:visible />
           </div>
-
-          {duaGaris && (
-            <div class="bab-lembar bab-sub" data-rise>
-              <h3 class="bab-subjudul display">{duaGaris.judul}</h3>
-              <p class="bab-kalimat fig">{duaGaris.satuKalimat}</p>
-              <DuaGaris client:visible />
-            </div>
-          )}
         </section>
 
         <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
@@ -753,6 +710,33 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
         </section>
 
         <!-- archive: the perspektif permalinks live on; the shelf is one link away -->
+        <!-- the closing register, not a chapter: rows official statistics do
+             not carry. Per-chapter absences print in place (see Danantara). -->
+        <section class="hening-blok" id="hening" aria-label="Yang tidak dihitung">
+          <span class="eyebrow ganda-eyebrow">CATATAN · YANG TIDAK DIHITUNG · BARIS TANPA STATISTIK RESMI, DITAGIH TIAP EDISI</span>
+          <div class="ledger hening-ledger">
+            {KEHENINGAN.baris.map((b) => (
+              <div>
+                <span>{b.k} <span class="hening-sumber mono">{b.sumber}</span></span>
+                <span class="v num">{b.v}</span>
+              </div>
+            ))}
+            {KEHENINGAN.absen.map((a, i) => (
+              <div class="hening-absen">
+                <span>{a.k} <span class="hening-sumber mono">{a.catatan}</span></span>
+                {i === 0
+                  ? <span class="v num" data-annotate="circle" data-annotate-color="#c96a5a">{a.v}</span>
+                  : <span class="v num">{a.v}</span>}
+              </div>
+            ))}
+            <div class="hening-lanec">
+              <span>{KEHENINGAN.laneC.teks}</span>
+              <button class="chip lane-c">{KEHENINGAN.laneC.chip}</button>
+            </div>
+          </div>
+          <p class="hening-foot mono">SATU WILAYAH ATAU TEMA DISOROT TIAP EDISI · USULKAN BARIS KOSONG LAIN DI GITHUB</p>
+        </section>
+
         <section class="arsip-teaser" aria-label="Arsip perspektif">
           <div class="arsip-head">
             <span class="inkbar"><span class="dot">●</span>ARSIP PERSPEKTIF</span>
@@ -776,9 +760,6 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
     <!-- ============ ACT III · NUSANTARA ============ -->
     <section class="act act-atlas" data-act="atlas" data-register="atlas" id="nusantara">
       <div class="tex tex-hatch" aria-hidden="true"></div>
-      <!-- the living understory opens the act, filling the seam's gap -->
-      <RimbaHidup client:visible />
-
       <div class="wrap">
         <h2 class="sect-title-atlas display reveal-glyphs">Nusantara</h2>
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
@@ -803,6 +784,9 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           <PetaRupa client:visible />
         </div>
       </div>
+
+      <!-- the living understory closes the act: after the record, what stays moving -->
+      <RimbaHidup client:visible />
     </section>
 
     <!-- ============ RUANG MAIN ============ -->
@@ -1100,16 +1084,18 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
   /* ---- BAB chapter headers (Act II) ---- */
   .bab { padding-top: 8px; }
   .bab-head { margin-bottom: 22px; }
-  .bab-dek { font-size: clamp(15px, 1.9vw, 19px); color: var(--muted); margin-top: 12px; max-width: 60ch; line-height: 1.5; }
+  .bab-dek { font-size: clamp(14px, 1.4vw, 16px); color: var(--muted); margin-top: 12px; max-width: 58ch; line-height: 1.55; }
 
   /* the chapter masthead: a stroked folio numeral + small kicker + big serif title */
-  .bab-kepala { display: grid; grid-template-columns: auto 1fr; gap: clamp(16px, 3vw, 40px); align-items: start; border-top: 2px solid var(--line); padding-top: 18px; margin-bottom: clamp(22px, 3.4vw, 34px); }
-  .bab-folio { font-size: clamp(38px, 5vw, 70px); line-height: 0.78; margin-top: -3px; }
+  /* one chapter-header anatomy, everywhere: kicker, title, dek, all flush
+     left; the folio number is quiet page furniture at the top right. */
+  .bab-kepala { position: relative; display: block; border-top: 2px solid var(--line); padding-top: 18px; margin-bottom: clamp(22px, 3.4vw, 34px); }
+  .bab-folio { position: absolute; top: 16px; right: 0; font-size: clamp(22px, 2.4vw, 30px); line-height: 1; margin: 0; }
   .bab-kepala-teks { min-width: 0; }
-  .bab-tajuk { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(30px, 4.6vw, 56px); line-height: 1; letter-spacing: -0.012em; color: var(--ink); margin: 11px 0 0; }
+  .bab-tajuk { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: var(--fs-5); line-height: 1; letter-spacing: -0.012em; color: var(--ink); margin: 11px 0 0; }
   .bab-kepala .inkbar { margin-bottom: 2px; }
   .bab-jeda { grid-template-columns: 1fr; border-top-style: dashed; }
-  @media (max-width: 680px) { .bab-kepala { grid-template-columns: 1fr; gap: 0; } .bab-folio { display: none; } }
+  @media (max-width: 680px) { .bab-folio { top: 20px; font-size: 18px; } }
 
   /* the five-branch index strip (bands now live in their chapters) */
   .cabang-indeks { border-top: 1px solid var(--line); }
@@ -1245,33 +1231,40 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
   .spark-max { color: var(--accent); }
 
   .wrap > :global(.pp), .wrap > :global(.wall) { margin-top: 34px; }
-  .temuan-blok { padding: 26px 0 30px; border-top: 1px solid var(--line); margin-top: 34px; }
+  /* the findings board reads like a front page: one lead, then ruled rows.
+     hierarchy is the ranking made visible, not six equal boxes. */
+  .temuan-blok { padding: 32px 0 36px; border-top: 1px solid var(--line); margin-top: 40px; }
   .temuan-head-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-  .temuan-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; }
+  .temuan-grid { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: clamp(24px, 3.5vw, 52px); margin-top: 8px; }
   @media (max-width: 900px) { .temuan-grid { grid-template-columns: 1fr; } }
   .temuan {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 8px clamp(14px, 2vw, 26px) 4px;
-    border-left: 1px solid var(--line);
+    padding: 22px 0 24px;
+    border-top: 1px dashed var(--line-soft);
   }
-  .temuan:first-child { border-left: none; padding-left: 0; }
-  @media (max-width: 900px) {
-    .temuan { border-left: none; padding: 18px 0; border-top: 1px dashed var(--line-soft); }
-    .temuan:first-child { border-top: none; }
+  .temuan:first-child {
+    grid-column: 1 / -1;
+    border-top: none;
+    padding: 24px 0 30px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 2px;
   }
-  .temuan .ghost-num { position: absolute; top: 2px; right: clamp(8px, 1.4vw, 18px); }
-  .temuan-head { display: flex; justify-content: space-between; gap: 8px; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); padding-right: 64px; }
+  .temuan:first-child .temuan-headline { font-size: var(--fs-4); max-width: 28ch; }
+  .temuan:first-child .temuan-body { font-size: 15px; max-width: 64ch; }
+  .temuan .ghost-num { position: absolute; top: 20px; right: 0; font-size: 40px; opacity: 0.55; pointer-events: none; }
+  .temuan:first-child .ghost-num { font-size: 64px; top: 22px; }
+  .temuan-head { display: flex; gap: 12px; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); padding-right: 64px; }
   .temuan-lens {
     color: var(--bg);
     background: var(--accent);
     font-weight: 700;
     padding: 2px 7px 1px;
   }
-  .temuan-headline { font-size: clamp(18px, 2vw, 22px); line-height: 1.16; }
-  .temuan-body { font-size: 13.5px; color: var(--muted); flex: 1; }
+  .temuan-headline { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.18; padding-right: 52px; }
+  .temuan-body { font-size: 13.5px; line-height: 1.55; color: var(--muted); flex: 1; max-width: 58ch; }
   .temuan-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
   .temuan-foot .cite-chips { margin: 0; }
 
@@ -1324,6 +1317,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
     letter-spacing: -0.005em;
   }
   .hening-sub { max-width: 52ch; color: var(--muted); margin: 14px 0 26px; font-size: 15px; }
+  .hening-blok { margin: clamp(36px, 6vw, 64px) 0 8px; }
   .hening-ledger > div { padding: 9px 0; }
   .hening-sumber { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); margin-left: 10px; text-transform: uppercase; }
   .hening-absen {

@@ -80,17 +80,6 @@
     </article>
 
     <article class="wall-card">
-      <span class="eyebrow">SEHARI BERNAPAS DI JAKARTA</span>
-      <p class="wall-val num">≈ {fmt1.format(ROKOK)} batang rokok</p>
-      <div class="wall-rokok" aria-hidden="true">
-        {#each Array.from({ length: Math.ceil(ROKOK) }) as _, i}
-          <i class="rokok" style={`--isi:${Math.min(1, ROKOK - i) * 100}%`}></i>
-        {/each}
-      </div>
-      <span class="wall-chip mono">⊙ pm2.5 41,7 µg/m³ · iqair 2024 · 22 µg ≈ 1 batang</span>
-    </article>
-
-    <article class="wall-card">
       <span class="eyebrow">SEMBAKO vs UPAH HARIAN</span>
       <p class="wall-val num">{Math.round((SEMBAKO.basket / SEMBAKO.upahHarian) * 100)}%</p>
       <div class="wall-bullet" role="img" aria-label="Keranjang sembako sebagai persen upah harian">
@@ -120,6 +109,8 @@
   }
   @media (max-width: 920px) { .wall-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .wall-grid { grid-template-columns: 1fr; } }
+  /* the waiting row earns the widest cell: absence displayed at scale */
+  @media (min-width: 921px) { .wall-card.lapor { grid-column: span 2; } }
   .wall-card {
     padding: 16px 18px 14px;
     border-right: 1px solid var(--line);

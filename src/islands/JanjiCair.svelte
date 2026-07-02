@@ -12,16 +12,19 @@
   const cair = 3.3; // US$ miliar cair
   const pct = Math.round((cair / pledge) * 100);
 
+  /* Statis dahulu: isi batang terlihat penuh tanpa JavaScript. Bila motion
+     diizinkan, `siap` menyembunyikan isi lalu `masuk` menggambarnya saat
+     terlihat. Kelas lewat class: agar selektor tidak dipangkas kompiler. */
   let root: HTMLElement;
+  let siap = $state(false);
+  let masuk = $state(false);
   onMount(() => {
-    if (reducedMotion()) {
-      root.classList.add('in');
-      return;
-    }
+    if (reducedMotion()) return;
+    siap = true;
     const io = new IntersectionObserver(
       ([e]) => {
         if (e?.isIntersecting) {
-          root.classList.add('in');
+          masuk = true;
           io.disconnect();
         }
       },
@@ -32,11 +35,11 @@
   });
 </script>
 
-<div class="jc" data-no-stempel bind:this={root}>
+<div class="jc" class:siap class:masuk data-no-stempel bind:this={root}>
   <div class="jc-main">
     <span class="jc-k mono">JETP · KEMITRAAN TRANSISI ENERGI BERKEADILAN</span>
-    <div class="jc-bar">
-      <i class="jc-fill" style={`--p:${pct}%`}></i>
+    <div class="jc-bar" style={`--p:${pct}%`}>
+      <i class="jc-fill"></i>
       <span class="jc-pledge mono">DIJANJIKAN · US$ 21,6 MILIAR</span>
       <span class="jc-cair mono">CAIR ± US$ 3,3 M · {pct}%</span>
     </div>
@@ -64,15 +67,16 @@
   @media (max-width: 800px) { .jc { grid-template-columns: 1fr; } }
   .jc-k { font-size: 9px; letter-spacing: 0.18em; color: var(--muted); display: block; margin-bottom: 14px; }
 
-  .jc-bar { position: relative; height: 64px; border: 1px solid var(--line); }
+  .jc-bar { position: relative; height: 64px; border: 1px solid var(--line);
+    background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--line) 30%, transparent) 0 1px, transparent 1px 8px); }
   .jc-fill {
-    position: absolute; left: 0; top: 0; bottom: 0; width: var(--p);
-    background: var(--accent2);
-    transform: scaleX(0); transform-origin: left;
+    position: absolute; left: 0; top: 0; bottom: 0; width: var(--p, 15%);
+    background: var(--accent2); transform-origin: left;
   }
-  .in .jc-fill { transition: transform 1.2s var(--ease-out); transform: scaleX(1); }
+  .jc.siap .jc-fill { transform: scaleX(0); }
+  .jc.masuk .jc-fill { transform: scaleX(1); transition: transform 1.2s var(--ease-out); }
   .jc-pledge { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 10px; letter-spacing: 0.12em; color: var(--muted); }
-  .jc-cair { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 10px; letter-spacing: 0.1em; color: var(--bg); z-index: 2; }
+  .jc-cair { position: absolute; left: calc(var(--p, 15%) + 10px); top: 50%; transform: translateY(-50%); font-size: 10px; letter-spacing: 0.1em; color: var(--accent2); z-index: 2; }
 
   .jc-kalimat { font-size: clamp(15px, 1.9vw, 18px); margin: 18px 0 14px; max-width: 56ch; }
   .jc :global(.chip) { align-self: flex-start; }
