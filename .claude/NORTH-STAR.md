@@ -615,3 +615,35 @@ scraping stack does not port and should not.
 
 Verdict: GO now on phase 1 only; NO-GO on migrating the batch today.
 Re-assess at 1.0 stable; pin 1.0.0-beta.x exactly wherever adopted.
+
+## 13. Session log (running, newest first)
+
+### 2026-07-02 · wave 2 (`5279a8f`)
+- NEGARA HARI INI moved Act I → Act II as **BUKTI №2** (after the loss
+  odometer). NasionalPagi rebuilt as a bespoke **instrument panel**: two
+  live counters as plated meters (mono tabular, corner-crosshair plates)
+  + four macro vitals as SVG tick-ruler gauges — needle at the value,
+  BI's inflation corridor as a shaded band, the 8% growth pledge as a
+  dashed line with a distance bracket ("JARAK KE JANJI · −2,4 PP").
+  Scales keyed by label prefix; unmatched live vitals degrade to plain
+  plates (never a wrong needle).
+- TEMUAN UTAMA is now a broadsheet lead: headline 1.6fr left, **receipt
+  rail** right (chips ⊙, stamp, serial, source flag; ids ku-chips/
+  ku-stamp/ku-serial/ku-src). pagi-live swaps rail content when live so
+  contoh receipts never sit beside a live claim.
+- **Lembar Kliping v1**: Rak headlines open a fixed tear-off sheet
+  (torn clip-path top, slide-up, Escape/backdrop close, scroll lock)
+  with the full coverage list + ownership labels; only outlet rows link
+  out. Fixes "linking directly". No route needed — clusters are
+  live-data only, so the sheet rides RakKabar state.
+- VeilMesin: canvas now full-bleed (100vw) with an elliptical mask that
+  dies at 72% of a 52vw radius — aura, not box.
+- Dedup: second LensaWilayah mount removed (crash artifact).
+  `.bab-lembar` given a rhythm rule (it had none — the messy padding).
+  Act I § numbers dropped (numbering is Act II's language). Dead CSS
+  purged: rubrik/rp-*/ag-*/pagi-util/pagi-ringkas/dunia-tiles/
+  sensus-blok/hukum-blok/sect-title(-mesin)/mesin-duo/nusantara-grid/
+  arsip-strip/arsip-grid/hening-sub (~120 lines).
+- Await Yose review: gauge board legibility on phone, veil intensity,
+  lead/rail balance, sheet feel. Next wave candidates: Act III magazine
+  typography pipeline, KARTOTEK lensa v2, shader spots 2–3.
