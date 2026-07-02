@@ -826,6 +826,17 @@ the standard gate, size-guarded before KV publish.
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-02 · wave 3 addendum — LLM lane is DEAD (needs Yose)
+- Every sari call fails `ModelAPIError: Connection error` on the only
+  configured lane (NIM). So the temuan desks have been publishing their
+  deterministic drafts all along (no ditulis_ulang events) — degradation
+  worked as designed, but no machine phrasing anywhere until fixed.
+- **Fix from Yose**: check/replace `NIM_API_KEY` (or the default model
+  `deepseek-ai/deepseek-v4-pro` may be retired — override via
+  `MODEL_PRIMARY`), and/or add `GROQ_API_KEY` / `OPENROUTER_API_KEY` /
+  `GEMINI_API_KEY` repo secrets so the fallback chain has members.
+  Once any lane is live, SARI prints automatically on the next edition.
+
 ### 2026-07-02 · wave 3 — the front feed
 - **EdisiFeed** replaces RakKabar + the standalone TEMUAN UTAMA block: one
   surface; №01 = the paper's lead (SSR contoh via prop, live via onEdisi —
