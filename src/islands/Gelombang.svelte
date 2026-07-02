@@ -101,7 +101,6 @@
 <div class="gw" data-no-stempel>
   <div class="gw-head">
     <div>
-      <span class="inkbar gw-bar"><span class="dot">●</span>HARGA PANGAN</span>
       <h3 class="display">Harga Pangan</h3>
       <span class="eyebrow">30 HARI · PANEL HARGA BAPANAS</span>
       <p class="gw-jujur fig">Menunggu kunci API Badan Pangan; kurva di bawah adalah contoh bentuk, bukan data.</p>

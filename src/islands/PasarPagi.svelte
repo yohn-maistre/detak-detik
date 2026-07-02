@@ -86,8 +86,8 @@
 
 <section class="pp" aria-label="Pasar pagi: kurs, komoditas, sumber daya" data-no-stempel>
   <div class="pp-head">
-    <span class="inkbar"><span class="dot">●</span>PASAR PAGI</span>
-    <span class="eyebrow">HARGA YANG DITANGGUNG SEMUA · WARNA MENANDAI BAIK ATAU BURUK</span>
+    <span class="inkbar"><span class="dot">●</span>PASAR</span>
+    <span class="eyebrow">KURS, KOMODITAS, ENERGI · PERUBAHAN 30 HARI</span>
   </div>
 
   <div class="pp-grid">
@@ -124,15 +124,18 @@
   @media (max-width: 1020px) { .pp-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 560px) { .pp-grid { grid-template-columns: repeat(2, 1fr); } }
   .pp-card {
-    padding: 13px 0 14px;
+    position: relative;
+    padding: 13px 0 14px 14px;
     border-top: 1px solid var(--line);
     display: flex; flex-direction: column; gap: 8px;
     background: none;
   }
+  /* the same left hairline the gauge board uses — one instrument family */
+  .pp-card::before { content: ''; position: absolute; left: 0; top: 15px; bottom: 4px; width: 1px; background: var(--line-soft); }
   .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 8.5px; letter-spacing: 0.13em; color: var(--muted); }
   .pp-live { font-size: 8px; white-space: nowrap; }
   .pp-live.on { color: var(--accent); }
-  .pp-val { font-size: clamp(18px, 1.9vw, 24px); font-weight: 700; line-height: 1; }
+  .pp-val { font-family: 'Fraunces Variable', serif; font-weight: 380; font-size: clamp(20px, 2.1vw, 27px); line-height: 1; }
   .pp-spark { display: flex; align-items: center; gap: 10px; }
   .pp-spark svg { flex: 1; height: 30px; }
   .pp-base { stroke: var(--line-soft); stroke-width: 0.6; stroke-dasharray: 2 3; }

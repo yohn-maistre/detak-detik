@@ -5,7 +5,6 @@ import PetaKabar from '../islands/PetaKabar.svelte';
 import NasionalPagi from '../islands/NasionalPagi.svelte';
 import CuacaPagi from '../islands/CuacaPagi.svelte';
 import PasarPagi from '../islands/PasarPagi.svelte';
-import PapanAngka from '../islands/PapanAngka.svelte';
 import GradienKeadilan from '../islands/GradienKeadilan.svelte';
 import Gelombang from '../islands/Gelombang.svelte';
 import SensusDiri from '../islands/SensusDiri.svelte';
@@ -46,6 +45,21 @@ import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JAN
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
+
+// janji dumbbell: parse the first id-ID figure in target/realisasi; a full
+// pair draws a track (target tick vs measured dot), a missing figure draws
+// the absence itself (hatched track), never a fabricated position
+const angkaId = (s: string): number | null => {
+  const m = s.replace(/\.(?=\d{3})/g, '').match(/(\d+(?:,\d+)?)/);
+  return m?.[1] ? Number(m[1].replace(',', '.')) : null;
+};
+const JANJI_TRACK = JANJI.map((j) => {
+  const t = angkaId(j.target);
+  const r = angkaId(j.realisasi);
+  if (t == null || r == null) return null;
+  const maks = Math.max(t, r, 0.0001) * 1.25;
+  return { t: (t / maks) * 100, r: (r / maks) * 100 };
+});
 const oligarki = PIECES.find((p) => p.slug === 'republik-oligarki');
 const pabrik = PIECES.find((p) => p.slug === 'pabrik-undang-undang');
 const vietnam = PIECES.find((p) => p.slug === 'garis-start-sama');
@@ -163,10 +177,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           }}
         />
 
-        <PasarPagi client:visible />
-
-        <section class="gelombang-blok card" data-rise>
-          <Gelombang client:visible />
+        <!-- PASAR: the macro board, then the kitchen-table series — one section -->
+        <section class="pasar-blok" aria-label="Pasar">
+          <PasarPagi client:visible />
+          <div class="gelombang-blok" data-rise>
+            <Gelombang client:visible />
+          </div>
         </section>
 
         <!-- the republic, mapped: live layers + one province at a time — the bridge into the machine -->
@@ -237,7 +253,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <section class="negara-blok" id="negara">
           <div class="kabar-head">
             <span class="inkbar"><span class="dot">●</span>BUKTI №2 · NEGARA HARI INI</span>
-            <span class="eyebrow">DUA PENGHITUNG LANGSUNG · ANGKA MAKRO TERHADAP SASARANNYA</span>
+            <span class="eyebrow">PENGHITUNG LANGSUNG · ANGKA MAKRO TERHADAP SASARANNYA · METER HARIAN</span>
           </div>
           <NasionalPagi client:visible />
         </section>
@@ -261,8 +277,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </div>
         </section>
-
-        <PapanAngka client:visible />
 
         <SembilanPuluh client:visible />
 
@@ -377,10 +391,13 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <p class="aparat-note">Dua pos terbesar dalam APBN.</p>
               <button class="chip"><span class="tick">⊙</span>apbn 2026</button>
             </div>
+            <!-- the 602 total is the chapter's signature figure (band above);
+                 this column holds the breakdown it alone carries -->
             <div class="aparat-col besar" data-rise>
-              <span class="eyebrow">KEKERASAN POLISI · {APARAT.kekerasan.periode}</span>
-              <p class="aparat-angka display num accent">{APARAT.kekerasan.jumlah}</p>
-              <p class="aparat-note">insiden tercatat — {APARAT.kekerasan.tembak} dengan tembakan, {APARAT.kekerasan.tewas} korban tewas. <span data-annotate="underline" data-annotate-color="#e44a06">{fmtRp.format(APARAT.perwiraSipil)} perwira aktif menduduki jabatan sipil.</span></p>
+              <span class="eyebrow">KEKERASAN POLISI · {APARAT.kekerasan.periode} · RINCIAN</span>
+              <div class="aparat-row mono"><span>Insiden dengan tembakan</span><b class="num">{APARAT.kekerasan.tembak}</b></div>
+              <div class="aparat-row mono"><span>Korban tewas</span><b class="num">{APARAT.kekerasan.tewas}</b></div>
+              <div class="aparat-row mono"><span data-annotate="underline" data-annotate-color="#e44a06">Perwira aktif di jabatan sipil</span><b class="num">{fmtRp.format(APARAT.perwiraSipil)}</b></div>
               <p class="aparat-impun">{APARAT.impunitas}</p>
               <button class="chip"><span class="tick">⊙</span>{APARAT.kekerasan.sumber} · imparsial</button>
             </div>
@@ -569,7 +586,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </header>
 
           <div class="janji-list">
-            {JANJI.map((j) => (
+            {JANJI.map((j, ji) => (
               <article class="janji">
                 <p class="janji-teks">{j.teks}</p>
                 <p class="janji-meta mono">{j.sumber}</p>
@@ -577,6 +594,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
                   <span>TARGET · {j.target}</span>
                   <span>TERUKUR · {j.realisasi}</span>
                 </div>
+                {JANJI_TRACK[ji] ? (
+                  <div class={`janji-track ${j.status === 'TIDAK TERCAPAI' ? 'gagal' : ''}`} role="img" aria-label={`Target ${j.target}, terukur ${j.realisasi}`}>
+                    <i class="jt-target" style={`left:${JANJI_TRACK[ji].t}%`}></i>
+                    <i class="jt-bar" style={`left:${Math.min(JANJI_TRACK[ji].t, JANJI_TRACK[ji].r)}%;width:${Math.abs(JANJI_TRACK[ji].t - JANJI_TRACK[ji].r)}%`}></i>
+                    <i class="jt-real" style={`left:${JANJI_TRACK[ji].r}%`}></i>
+                  </div>
+                ) : (
+                  <div class="janji-track kosong" role="img" aria-label="Realisasi tidak tersedia"></div>
+                )}
                 <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
               </article>
             ))}
@@ -944,7 +970,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .peta-cuaca { border-bottom: 1px solid var(--line-soft); margin-bottom: 14px; }
 
   .kabar-head { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
-  .gelombang-blok { margin-top: 34px; margin-bottom: 40px; }
+  /* the kitchen-table series continues the PASAR section as an open movement */
+  .gelombang-blok { border-top: 1px solid var(--line-soft); padding-top: 24px; margin-top: 30px; margin-bottom: 40px; }
 
   /* Peta Kabar — the Act I → Act II bridge (live national layers + dossier) */
   .peta-blok { margin-top: 34px; }
@@ -1007,11 +1034,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .bab-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.04; }
   .bab-kalimat { font-size: clamp(15px, 1.8vw, 18px); margin: 8px 0 22px; max-width: 56ch; }
 
-  /* ---- Aparat ---- */
-  .aparat-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 22px; align-items: start; }
+  /* ---- Aparat: open ledger columns — boxes are for artifacts ---- */
+  .aparat-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: clamp(22px, 4vw, 48px); align-items: start; }
   @media (max-width: 800px) { .aparat-grid { grid-template-columns: 1fr; } }
-  .aparat-col { border: 1px solid var(--line); padding: 18px; background: var(--card); display: flex; flex-direction: column; gap: 10px; }
-  .aparat-row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding: 6px 0; font-size: 13px; }
+  .aparat-col { border-top: 2px solid var(--line); padding-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .aparat-row { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line-soft); padding: 7px 0; font-size: 13px; }
   .aparat-row b { color: var(--accent); }
   .aparat-angka { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(40px, 6vw, 72px); line-height: 1; }
   .aparat-angka.accent { color: var(--accent); }
@@ -1119,7 +1146,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .spark-foot b { color: var(--ink); font-size: 12px; }
   .spark-max { color: var(--accent); }
 
-  .wrap > :global(.pp), .wrap > :global(.wall) { margin-top: 34px; }
+  .pasar-blok { margin-top: 34px; }
   /* the findings board reads like a front page: one lead, then ruled rows.
      hierarchy is the ranking made visible, not six equal boxes. */
   .temuan-blok { padding: 32px 0 36px; border-top: 1px solid var(--line); margin-top: 40px; }
@@ -1273,6 +1300,16 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   }
 
   .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+  /* the grade, drawn: target tick vs measured dot on one track (SkorCabang's
+     dumbbell vocabulary); a hatched track is a missing measurement */
+  .janji-track { position: relative; height: 12px; margin-top: 10px; }
+  .janji-track::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line-soft); }
+  .jt-target { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--accent2); transform: translateX(-50%); }
+  .jt-bar { position: absolute; top: 50%; height: 2px; transform: translateY(-50%); background: var(--muted); }
+  .jt-real { position: absolute; top: 50%; width: 9px; height: 9px; border-radius: 50%; transform: translate(-50%, -50%); background: var(--ink); }
+  .janji-track.gagal .jt-real { background: var(--accent); }
+  .janji-track.gagal .jt-bar { background: var(--accent); opacity: 0.6; }
+  .janji-track.kosong::before { background: repeating-linear-gradient(90deg, var(--line) 0 5px, transparent 5px 10px); }
   .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; }
   .janji-meta { font-size: 10px; letter-spacing: 0.12em; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; }
   .janji-baris { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 11px; color: var(--muted); }

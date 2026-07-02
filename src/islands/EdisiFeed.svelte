@@ -105,7 +105,7 @@
 <section class="feed" aria-label="Halaman muka: temuan redaksi dan liputan terkumpul">
   <div class="feed-head">
     <span class="inkbar"><span class="dot">●</span>HALAMAN MUKA</span>
-    <span class="eyebrow">SATU PERISTIWA, SEMUA LIPUTANNYA · JUDUL APA ADANYA, DIKELOMPOKKAN TIAP TERBIT</span>
+    <span class="eyebrow">SATU PERISTIWA, SEMUA LIPUTANNYA · JUDUL VERBATIM, DIKELOMPOKKAN OTOMATIS TIAP TERBIT</span>
   </div>
 
   <!-- №01 · the paper's own lead, first entry of the same feed -->
@@ -151,7 +151,7 @@
         </li>
       {/each}
     </ol>
-    <p class="feed-kaki mono">■ MEDIA INDEPENDEN · □ MEDIA GRUP KONGLOMERASI · KEPEMILIKAN ADALAH FAKTA TERDOKUMENTASI, BUKAN PENILAIAN · JUDUL MEMBUKA LEMBAR KLIPING</p>
+    <p class="feed-kaki mono">■ INDEPENDEN · □ GRUP KONGLOMERASI · JUDUL MEMBUKA LEMBAR KLIPING</p>
   {:else}
     <p class="feed-tunggu mono">RAK MENUNGGU EDISI BERIKUTNYA · KLIPING DISUSUN OTOMATIS TIAP TERBIT, 2× SEHARI</p>
   {/if}
@@ -173,26 +173,26 @@
       {#if buka.titik_buta}<span class="stamp lk-buta">TITIK BUTA · SATU GRUP</span>{/if}
     </div>
     <h3 class="lk-judul display">{buka.utama.judul}</h3>
-    <p class="lk-kredit mono">JUDUL APA ADANYA · {buka.utama.media.toUpperCase()}</p>
+    <p class="lk-kredit mono">JUDUL VERBATIM · {buka.utama.media.toUpperCase()}</p>
 
     {#if buka.utama.ringkas}
       <blockquote class="lk-lede">
         {buka.utama.ringkas}
-        <cite class="mono">LEDE · {buka.utama.media.toUpperCase()}</cite>
+        <cite class="mono">— {buka.utama.media.toUpperCase()}</cite>
       </blockquote>
     {/if}
 
     {#if buka.sari}
       <div class="lk-sec">
-        <span class="lk-sec-k mono">SARI · RINGKASAN MESIN</span>
+        <span class="lk-sec-k mono">RINGKASAN · DISUSUN MESIN</span>
         <p class="lk-sari">{buka.sari}</p>
-        <button class="chip lane-c">SARI · LANE C · DIPERIKSA TERHADAP KLIPING</button>
+        <button class="chip lane-c">LANE C · DIPERIKSA TERHADAP KLIPING</button>
       </div>
     {/if}
 
     {#if buka.butir?.length}
       <div class="lk-sec">
-        <span class="lk-sec-k mono">BUTIR · YANG DIKETAHUI</span>
+        <span class="lk-sec-k mono">POIN UTAMA · KUTIPAN VERBATIM</span>
         <ol class="lk-butir">
           {#each buka.butir as b, i (i)}
             <li>
@@ -206,7 +206,7 @@
 
     {#if suara.length >= 2}
       <div class="lk-sec">
-        <span class="lk-sec-k mono">SUARA · BAGAIMANA TIAP GRUP MENULISKANNYA</span>
+        <span class="lk-sec-k mono">JUDUL PER GRUP KEPEMILIKAN</span>
         <ol class="lk-suara">
           {#each suara as s (s.grup)}
             <li>
@@ -224,7 +224,7 @@
     {/if}
 
     <div class="lk-sec">
-      <span class="lk-sec-k mono">LIPUTAN · SEMUA JUDUL · TAUTAN MEMBUKA SITUS MEDIA ASLINYA</span>
+      <span class="lk-sec-k mono">KUMPULAN SUMBER · TAUTAN MEMBUKA SITUS ASLINYA</span>
       <ol class="lk-liputan">
         {#each lembarIsi as l}
           <li>
@@ -240,7 +240,7 @@
       </ol>
     </div>
 
-    <p class="lk-kaki mono">■ MEDIA INDEPENDEN · □ MEDIA GRUP KONGLOMERASI · KEPEMILIKAN ADALAH FAKTA TERDOKUMENTASI, BUKAN PENILAIAN · <a class="ink-link" href="/sumber#kliping">METODE →</a></p>
+    <p class="lk-kaki mono">■ INDEPENDEN · □ GRUP KONGLOMERASI · KEPEMILIKAN DICATAT DARI DOKUMEN PUBLIK · <a class="ink-link" href="/sumber#kliping">METODE →</a></p>
   </aside>
 {/if}
 

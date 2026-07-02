@@ -32,7 +32,7 @@ export const SKOR: Record<string, Skor> = {
     tiles: [
       { tipe: 'stat', besar: 'Rp 1,2 T', label: 'Belanja perjalanan dinas kepresidenan 2026', sumber: 'setpres · apbn', nada: 'buruk', sub: 'naik dari ±Rp 0,9 T (2025)' },
       { tipe: 'stat', besar: '247', label: 'Perpres & PP diterbitkan tahun ini', sumber: 'peraturan.go.id', nada: 'datar' },
-      { tipe: 'stat', besar: '0', label: 'Laporan keuangan Danantara terbit', sumber: 'jakarta post', nada: 'buruk', sub: '477 hari sejak peluncuran' },
+      { tipe: 'stat', besar: '0', label: 'Laporan keuangan Danantara terbit', sumber: 'jakarta post', nada: 'buruk', sub: 'sejak peluncuran 24 feb 2025 · penghitung hari: Bukti №2' },
     ],
   },
   legislatif: {

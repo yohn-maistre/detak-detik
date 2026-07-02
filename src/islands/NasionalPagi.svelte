@@ -15,6 +15,17 @@
   const PENDUDUK_PER_DETIK = 2_100_000 / (365 * 24 * 3600);
   const APBN_PER_DETIK = 3_786e12 / (365 * 24 * 3600);
 
+  // the daily meters (absorbed from the old Papan Angka — every ticking state
+  // meter lives on this one panel). Documented average rates, labeled as such.
+  const BPJS_PER_DETIK = 24e12 / (365 * 24 * 3600); // ~Rp 24 T projected 2026 deficit
+  const HUTAN_HA_PER_JAM = 433_751 / (365 * 24); // Auriga: total loss 2025
+  const DANANTARA_EPOCH = Date.UTC(2025, 1, 24); // launched, no financial report since
+  const PHK_BULANAN = [
+    { b: 'JAN', v: 5730 }, { b: 'FEB', v: 7443 }, { b: 'MAR', v: 5729 }, { b: 'APR', v: 3739 }, { b: 'MEI', v: 829 },
+  ];
+  const phkMax = Math.max(...PHK_BULANAN.map((p) => p.v));
+  const phkTotal = PHK_BULANAN.reduce((a, p) => a + p.v, 0);
+
   let now = $state(Date.now());
   let detikHariIni = $state(0);
   onMount(() => {
@@ -32,6 +43,7 @@
   const fmt1 = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const rp = (n: number) => `Rp ${fmt.format(Math.round(n))}`;
   const penduduk = $derived(Math.round(PENDUDUK_DASAR + ((now - PENDUDUK_EPOCH) / 1000) * PENDUDUK_PER_DETIK));
+  const danantaraHari = $derived(Math.floor((now - DANANTARA_EPOCH) / 86_400_000));
 
   const CETAKAN: LiveMakro[] = [
     { label: 'INFLASI · TAHUNAN', nilai: '3,48%', pre: 'sasaran BI', acuan: '2,5±1%', chip: 'bps · ihk', nada: 'datar' },
@@ -119,6 +131,42 @@
     </div>
   </div>
 
+  <!-- the daily meters: state costs ticking at documented average rates,
+       and one absence counted in days -->
+  <div class="np-meters">
+    <div class="np-live-card">
+      <span class="eyebrow">DEFISIT BPJS HARI INI</span>
+      <p class="np-live-n num kecil">{rp(BPJS_PER_DETIK * detikHariIni)}</p>
+      <span class="np-chip mono">⊙ proyeksi rp 24 t/2026 · menkes, mei 2026 · laju rata-rata</span>
+    </div>
+    <div class="np-live-card">
+      <span class="eyebrow">HUTAN PRIMER HILANG HARI INI</span>
+      <p class="np-live-n num kecil">{fmt1.format((HUTAN_HA_PER_JAM * detikHariIni) / 3600)} ha</p>
+      <span class="np-chip mono">⊙ auriga · 433.751 ha (2025) · laju rata-rata · sejak 00.00 wib</span>
+    </div>
+    <div class="np-live-card">
+      <span class="eyebrow">PHK TERCATAT 2026</span>
+      <p class="np-live-n num kecil">{fmt.format(phkTotal)}</p>
+      <div class="np-phk" role="img" aria-label={`PHK per bulan Januari sampai Mei 2026, total ${fmt.format(phkTotal)}`}>
+        {#each PHK_BULANAN as p (p.b)}
+          <div class="np-phk-col">
+            <i style={`--h:${Math.round((p.v / phkMax) * 100)}%`}></i>
+            <span class="mono">{p.b}</span>
+          </div>
+        {/each}
+      </div>
+      <span class="np-chip mono">⊙ kemnaker satudata · jan–mei · hanya pekerja ter-jkp</span>
+    </div>
+    <div class="np-live-card absen">
+      <div class="np-absen-teks">
+        <span class="eyebrow">HARI TANPA LAPORAN KEUANGAN DANANTARA</span>
+        <p class="np-absen-note">dana kelolaan ± US$900 miliar · belum ada laporan terbit sejak berdiri 24 feb 2025</p>
+        <span class="np-chip mono">⊙ jakarta post · 19 mei 2026 · baris ini menunggu</span>
+      </div>
+      <p class="np-live-n num np-absen-n">{fmt.format(danantaraHari)}</p>
+    </div>
+  </div>
+
   <div class="np-gauges">
     {#each gauges as g, i (g.c.label)}
       <article class="np-g">
@@ -168,6 +216,29 @@
   .np-live-card::before { top: -6px; left: -4px; }
   .np-live-card::after { bottom: -6px; right: -4px; }
   .np-live-n { font-family: var(--font-mono); font-weight: 500; font-size: clamp(22px, 4vw, 42px); line-height: 1; letter-spacing: 0.01em; color: var(--ink); font-variant-numeric: tabular-nums lining-nums; }
+  .np-live-n.kecil { font-size: clamp(18px, 2.6vw, 28px); }
+
+  /* the daily meter bank (absorbed Papan Angka): three meters + one absence */
+  .np-meters { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2.4vw, 28px); }
+  @media (max-width: 900px) { .np-meters { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .np-meters { grid-template-columns: 1fr; } }
+  .np-phk { display: flex; gap: 7px; align-items: flex-end; height: 44px; margin-top: 2px; }
+  .np-phk-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 3px; height: 100%; }
+  .np-phk-col i { display: block; height: var(--h); background: var(--ink); }
+  .np-phk-col span { font-size: 7px; letter-spacing: 0.1em; color: var(--muted); text-align: center; }
+  /* the absence meter: the missing report counted in days, full width, madder */
+  .np-live-card.absen {
+    grid-column: 1 / -1;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 8px 26px;
+    border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+  }
+  .np-live-card.absen::before, .np-live-card.absen::after { color: var(--accent); }
+  .np-absen-teks { display: grid; gap: 7px; }
+  .np-absen-n { color: var(--accent); font-size: clamp(34px, 6vw, 58px); }
+  .np-absen-note { font-size: 12.5px; color: var(--muted); line-height: 1.5; max-width: 52ch; }
+  @media (max-width: 560px) { .np-live-card.absen { grid-template-columns: 1fr; } .np-absen-n { order: -1; } }
 
   /* four gauges on one rail */
   .np-gauges { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.6vw, 34px); border-top: 1px solid var(--line); padding-top: 20px; }

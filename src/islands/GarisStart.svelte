@@ -107,7 +107,8 @@
   .sw.vnm { background: var(--accent2); }
   .gs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
   @media (max-width: 760px) { .gs-grid { grid-template-columns: 1fr; } }
-  .gs-panel { border: 1px solid var(--line); padding: 14px 14px 12px; background: var(--card); }
+  /* open panels on ruled tops — the box was template furniture */
+  .gs-panel { border-top: 1px solid var(--line); padding: 12px 0 0; margin: 0; }
   figcaption { font-size: 9.5px; letter-spacing: 0.18em; color: var(--muted); margin-bottom: 6px; }
   svg { width: 100%; height: auto; }
   .garis { fill: none; stroke-width: 2; }
