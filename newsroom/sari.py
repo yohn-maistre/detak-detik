@@ -47,10 +47,13 @@ def _gate_sari(sari: str, bukti: str) -> str | None:
     return s
 
 
-async def tulis_sari(kliping: list[Kliping], bukti: dict[str, list[str]]) -> int:
+async def tulis_sari(kliping: list[Kliping], bukti: dict[str, list[str]],
+                     catat=None) -> int:
     """Write gated overviews onto the top clusters in place. Returns how many
     survived. No model lane, thin evidence, or a failed gate all mean the same
-    thing: `sari` stays None and the lembar prints nothing."""
+    thing for the reader: `sari` stays None and the lembar prints nothing —
+    but each drop is logged with its reason (`catat` = Log.event) so a dead
+    provider key is diagnosable from the run log, not invisible."""
     model = build_model()
     if model is None or not kliping:
         return 0
@@ -64,12 +67,18 @@ async def tulis_sari(kliping: list[Kliping], bukti: dict[str, list[str]]) -> int
         if len(baris) < 2:
             continue  # one clip is a headline, not a story to summarize
         teks_bukti = "\n".join(baris)
+        alasan: str | None = None
         try:
             hasil = await agent.run(f"BUKTI:\n{teks_bukti}")
             lolos = _gate_sari(str(hasil.output), teks_bukti)
-        except Exception:
-            lolos = None  # the lane failed; silence is the honest output
+            if lolos is None:
+                alasan = "gate: angka/panjang/tautan"
+        except Exception as exc:  # the lane failed; silence is the honest output
+            lolos = None
+            alasan = f"lane: {type(exc).__name__}: {str(exc)[:160]}"
         if lolos:
             k.sari = lolos
             ditulis += 1
+        elif catat:
+            catat("sari_gugur", id=k.id, alasan=alasan)
     return ditulis

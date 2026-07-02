@@ -84,7 +84,7 @@ async def run() -> int:
     # SARI (Lane C): gated overviews for the top clusters — written only from
     # each cluster's own verbatim evidence, dropped unless every number in the
     # summary appears in that evidence. Butir/lede are Lane A, built upstream.
-    sari_n = await tulis_sari(kliping, kliping_bukti)
+    sari_n = await tulis_sari(kliping, kliping_bukti, log.event)
     log.event("sari", ditulis=sari_n)
 
     # desks run in parallel; each gates against the full corpus
