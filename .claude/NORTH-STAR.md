@@ -883,6 +883,27 @@ Remaining known items: struk rotates its region per edition (DJPK), SkorCabang
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-02 · wave 5a — front reorder, plates, seeded art, map repair
+- Act I order is now feed → PETA KABAR → PASAR. Act II opens as PAPAN
+  ANGKA (BUKTI № labels dropped). PasarPagi wears the meter-plate grammar.
+  ObituariHutan closes Act II (real-data wiring still queued). Udara
+  calendar retitled "Riwayat Udara Jakarta" (map owns today).
+- VeilMuka shipped: dither plate behind the №01 lead, params seeded from
+  the lead headline hash (shape/scale/px/speed bounded; 1-in-4 madder).
+  v2 = newsroom "seni" spec, planned §13.8.
+- Kliping over-merge fixed: _JACCARD_LANTAI 0.16 on the shared-token rule
+  + generic-news stopwords. Verified live: Icha and Tifa are separate,
+  clean clusters. Datacenter run: 56 klaster.
+- idn-kab.geojson repaired (agent + hand-verified): dupes/slivers/vertex
+  soup dropped, 514 features intact, 0 unclosed rings; the 4 remaining
+  >1° segments are the real PNG border at 141°E (Merauke, Boven Digoel,
+  Keerom, Peg. Bintang). Cleaner: scripts/clean-kab-geojson.mjs
+  (idempotent). If any artifact survives on device, next step is the OFM
+  tile boundary layer (admin_level 5/6) for the visual lines.
+- Still open from Yose review: map dossier decoupling + LensaWilayah v2
+  accountability lens (§13.8 sub-wave), obituari + struk real data, SARI
+  waiting on the NIM key.
+
 ### 2026-07-02 · wave 4 — instrument room + roster expansion
 - Papan Angka dissolved into BUKTI №2 as a meter bank (BPJS/day, hutan/day,
   PHK bar strip, Danantara days-without-report as a full-width madder
