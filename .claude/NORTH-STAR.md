@@ -826,6 +826,31 @@ the standard gate, size-guarded before KV publish.
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-02 · wave 4 — instrument room + roster expansion
+- Papan Angka dissolved into BUKTI №2 as a meter bank (BPJS/day, hutan/day,
+  PHK bar strip, Danantara days-without-report as a full-width madder
+  absence meter). Aparat de-boxed to open ledgers; 602 now single-owner
+  (CabangBand signature figure; the column holds only the breakdown). Janji
+  gets target-tick vs measured-dot tracks (missing realisasi = hatched
+  track). PASAR unified (PasarPagi "PASAR" + Fraunces values + gauge-family
+  hairlines; Gelombang de-boxed under it, duplicate title dropped).
+  GarisStart de-boxed. Tone sweep per Yose: JUDUL VERBATIM, POIN UTAMA ·
+  KUTIPAN VERBATIM, RINGKASAN · DISUSUN MESIN, JUDUL PER GRUP KEPEMILIKAN,
+  KUMPULAN SUMBER; eyebrows descriptive not poetic.
+- Media roster 14 → 36 (agent-researched, feeds curl-verified from device):
+  +16 working feeds (ANTARA, Liputan6, Merdeka, Kumparan, Okezone, CNBC
+  Indonesia, Republika, JPNN, Katadata, VOI, Alinea, The Conversation ID,
+  Konde, Betahita, Floresa, Suara Papua), +6 majors recorded feedless
+  (Suara.com, Tirto, IDN Times, Bisnis.com, BeritaSatu, Narasi). 31 distinct
+  ownership groups. Datacenter-IP risk flagged: kumparan lapi endpoint,
+  Merdeka (Akamai/gzip), Okezone+Republika UA-sensitive.
+- **Ownership calls for Yose to double-check** (agent's flags): Kumparan
+  82% GDP Venture (reported, unconfirmed close); Katadata marked
+  independen:false (VC-backed, no Djarum link found); Suara.com
+  independen:false (listed Tbk, judgment call); JPNN deliberately not
+  clustered under Jawa Pos Group; Betahita–Auriga tie informal; Tirto
+  ownership undisclosed since 2021.
+
 ### 2026-07-02 · wave 3 addendum — LLM lane is DEAD (needs Yose)
 - Every sari call fails `ModelAPIError: Connection error` on the only
   configured lane (NIM). So the temuan desks have been publishing their

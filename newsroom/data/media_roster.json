@@ -111,6 +111,182 @@
             "grup": "Jawa Pos Group",
             "catatan": "Dimiliki Jawa Pos Group, jaringan media dengan jejak kuat di daerah.",
             "independen": false
+        },
+        {
+            "id": "antara",
+            "nama": "ANTARA News",
+            "feed": "https://www.antaranews.com/rss/terkini.xml",
+            "grup": "Negara (Perum LKBN ANTARA)",
+            "catatan": "Kantor berita milik negara berbentuk Perusahaan Umum (Perum LKBN ANTARA) di bawah Kementerian BUMN.",
+            "independen": false
+        },
+        {
+            "id": "liputan6",
+            "nama": "Liputan6.com",
+            "feed": "https://feed.liputan6.com/rss/news",
+            "grup": "Emtek",
+            "catatan": "Dikelola KapanLagi Youniverse (KLY), bagian dari grup Emtek milik keluarga Sariaatmadja.",
+            "independen": false
+        },
+        {
+            "id": "merdeka",
+            "nama": "Merdeka.com",
+            "feed": "https://www.merdeka.com/feed/",
+            "grup": "Emtek",
+            "catatan": "Bagian dari KapanLagi Youniverse (KLY) yang dikendalikan grup Emtek (keluarga Sariaatmadja).",
+            "independen": false
+        },
+        {
+            "id": "kumparan",
+            "nama": "Kumparan",
+            "feed": "https://lapi.kumparan.com/v2.0/rss/",
+            "grup": "GDP Venture (Grup Djarum)",
+            "catatan": "Diterbitkan PT Dynamo Media Network; GDP Venture (Grup Djarum, keluarga Hartono) dilaporkan meningkatkan kepemilikannya hingga sekitar 82 persen.",
+            "independen": false
+        },
+        {
+            "id": "okezone",
+            "nama": "Okezone",
+            "feed": "https://sindikasi.okezone.com/index.php/rss/1/RSS2.0",
+            "grup": "MNC Group",
+            "catatan": "Dimiliki MNC Group (Hary Tanoesoedibjo, pendiri Partai Perindo).",
+            "independen": false
+        },
+        {
+            "id": "cnbc_indonesia",
+            "nama": "CNBC Indonesia",
+            "feed": "https://www.cnbcindonesia.com/rss",
+            "grup": "CT Corp",
+            "catatan": "Lisensi CNBC yang dioperasikan Trans Media, bagian dari CT Corp (Chairul Tanjung).",
+            "independen": false
+        },
+        {
+            "id": "republika",
+            "nama": "Republika",
+            "feed": "https://www.republika.co.id/rss",
+            "grup": "Mahaka Group",
+            "catatan": "Diterbitkan PT Republika Media Mandiri di bawah Mahaka Group yang didirikan Erick Thohir dan kini diteruskan keluarga Thohir.",
+            "independen": false
+        },
+        {
+            "id": "jpnn",
+            "nama": "JPNN.com",
+            "feed": "https://www.jpnn.com/index.php?mib=rss",
+            "grup": "Dahlan Iskan (eks Jawa Pos)",
+            "catatan": "Dioperasikan PT Jaringan Pemberitaan Nusantara Negeriku, pecahan jaringan Jawa Pos News Network yang terafiliasi Dahlan Iskan dan kini terpisah dari PT Jawa Pos.",
+            "independen": false
+        },
+        {
+            "id": "katadata",
+            "nama": "Katadata",
+            "feed": "https://katadata.co.id/rss",
+            "grup": "PT Katadata Indonesia",
+            "catatan": "Didirikan jurnalis Metta Dharmasaputra melalui PT Katadata Indonesia; pendanaannya antara lain dipimpin pemodal ventura East Ventures.",
+            "independen": false
+        },
+        {
+            "id": "voi",
+            "nama": "VOI",
+            "feed": "https://voi.id/rss",
+            "grup": "PT VOI Media Informasi",
+            "catatan": "Diterbitkan PT VOI Media Informasi; struktur kepemilikan di baliknya tidak terdokumentasi publik.",
+            "independen": false
+        },
+        {
+            "id": "alinea",
+            "nama": "Alinea.id",
+            "feed": "https://www.alinea.id/rss",
+            "grup": "PT Alinea Tek Nusantara",
+            "catatan": "Diterbitkan PT Alinea Tek Nusantara; struktur kepemilikan di baliknya tidak terdokumentasi publik.",
+            "independen": false
+        },
+        {
+            "id": "the_conversation_id",
+            "nama": "The Conversation Indonesia",
+            "feed": "https://theconversation.com/id/articles.atom",
+            "grup": "The Conversation (nonprofit)",
+            "catatan": "Bagian dari jaringan nonprofit global The Conversation yang menerbitkan analisis akademisi, didanai lembaga riset dan filantropi.",
+            "independen": true
+        },
+        {
+            "id": "konde",
+            "nama": "Konde.co",
+            "feed": "https://www.konde.co/feed",
+            "grup": "Konde.co (independen)",
+            "catatan": "Media feminis independen yang didirikan jurnalis Luviana Ariyanti pada 2016, tidak berafiliasi dengan konglomerat.",
+            "independen": true
+        },
+        {
+            "id": "betahita",
+            "nama": "Betahita",
+            "feed": "https://betahita.id/rss.xml",
+            "grup": "Auriga Nusantara (nonprofit)",
+            "catatan": "Media lingkungan yang diterbitkan PT Lakuna Nusantara Media dan terafiliasi organisasi lingkungan nirlaba Auriga Nusantara.",
+            "independen": true
+        },
+        {
+            "id": "floresa",
+            "nama": "Floresa",
+            "feed": "https://floresa.co/feed",
+            "grup": "Floresa (independen)",
+            "catatan": "Media lokal independen di Flores yang didirikan pada 2014, dibiayai pembaca dan tidak bergantung pada iklan korporasi maupun kepentingan politik.",
+            "independen": true
+        },
+        {
+            "id": "suara_papua",
+            "nama": "Suara Papua",
+            "feed": "https://suarapapua.com/feed",
+            "grup": "Suara Papua (independen)",
+            "catatan": "Media independen yang didirikan jurnalis Papua dan berfokus pada pemberitaan Tanah Papua, tidak berafiliasi dengan konglomerat.",
+            "independen": true
+        },
+        {
+            "id": "suara",
+            "nama": "Suara.com",
+            "feed": null,
+            "grup": "Arkadia Digital Media",
+            "catatan": "Diterbitkan PT Arkadia Media Nusantara di bawah PT Arkadia Digital Media Tbk yang dipimpin jurnalis Suwarjono dan tercatat di bursa sejak 2018; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "tirto",
+            "nama": "Tirto.id",
+            "feed": null,
+            "grup": "PT Tirta Adi Surya",
+            "catatan": "Diterbitkan PT Tirta Adi Surya; sejak 2021 para pendirinya tidak lagi menjadi pemegang saham mayoritas dan pemilik baru tidak diungkap ke publik; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "idn_times",
+            "nama": "IDN Times",
+            "feed": null,
+            "grup": "IDN Media",
+            "catatan": "Bagian dari IDN Media yang didirikan Winston dan William Utomo dengan investor antara lain GDP Venture (Grup Djarum); umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "bisnis",
+            "nama": "Bisnis.com",
+            "feed": null,
+            "grup": "Bisnis Indonesia Group",
+            "catatan": "Diterbitkan PT Jurnalindo Aksara Grafika (Bisnis Indonesia Group) yang didirikan Sukamdani Sahid Gitosardjono, Ciputra, Anthony Salim, dan Eric Samola; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "beritasatu",
+            "nama": "BeritaSatu",
+            "feed": null,
+            "grup": "B Universe",
+            "catatan": "Dimiliki B Universe setelah Grup Lippo melepas 80 persen saham kepada Enggartiasto Lukita (politikus NasDem, mantan Menteri Perdagangan) pada 2022 dengan Lippo menyisakan sekitar 20 persen; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "narasi",
+            "nama": "Narasi",
+            "feed": null,
+            "grup": "Narasi (Najwa Shihab)",
+            "catatan": "Didirikan Najwa Shihab, Catharina Davy, dan Dahlia Citra melalui PT Narasi Citra Sahwahita dengan investor antara lain GDP Venture (Grup Djarum), Go-Ventures, dan Intiland; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
         }
     ]
 }
