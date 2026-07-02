@@ -616,7 +616,224 @@ scraping stack does not port and should not.
 Verdict: GO now on phase 1 only; NO-GO on migrating the batch today.
 Re-assess at 1.0 stable; pin 1.0.0-beta.x exactly wherever adopted.
 
-## 13. Session log (running, newest first)
+## 13. THE GRAND REDESIGN — every component, one doctrine (planned 2026-07-02)
+
+This section consolidates and supersedes the per-act sketches in §3.5 and the
+hardening list in §7 wherever they conflict. It exists because the NEGARA HARI
+INI gauge board set the quality bar: Yose's verdict was "this is what we want
+with the others as well." So: what made it work, codified, then applied to
+every component from masthead to kolofon.
+
+### 13.1 The doctrine (why the gauge board worked)
+
+1. **Form = the data's own logic.** A reading-against-target is a gauge. An
+   absence is an unpaid ledger row. A composition is a waffle. A gap is a
+   bracket with a distance label. A flow is a funnel. Ask "what is the claim?"
+   — never "which template is free." If two components share a form, their
+   data must share a logic.
+2. **The finding is drawn, not adjectived.** Needle outside the band; bracket
+   reading −2,4 PP; scribble circling a zero. The reader concludes. No
+   dramatic copy, ever (tone law).
+3. **Ink on paper, not boxes.** Hairline rules and vertical rhythm carry
+   structure. `border` + `background: var(--card)` is reserved for true
+   *artifacts* — things that are physically objects in the newspaper fiction
+   (struk, infobox, meter plates, museum labels, the torn lembar). Everything
+   else is open ledger. Current offenders (grep 2026-07-02): PapanAngka,
+   aparat cols, GarisStart, parts of PetaKabar chrome.
+4. **Three voices of type.** Display/Fraunces = the voice of record (values,
+   titles). Body = reading voice. Geist Mono = the apparatus (labels, scales,
+   receipts, legends) at exactly three sizes (see 13.6). Data numerals always
+   tabular, always id-ID.
+5. **One motion per instrument, and the motion enacts the measurement.**
+   Needle sweeps, bar draws, stamp slams, counter ticks. IO threshold 0.3;
+   reduced-motion = the resolved state, never a blank.
+6. **Receipts compose the picture.** The ⊙ chip is placed like a plate mark
+   (bottom edge, aligned), not appended as an afterthought.
+7. **Register is mood.** Dinas khaki = the morning ledger. Mesin black = the
+   instrument room (plates, meters, gold/madder ink). Atlas cream = engraved
+   plates and magazine serif. A component moved across registers must be
+   re-tuned, not just re-tokened.
+
+### 13.2 Act I — HALAMAN MUKA becomes one feed (decision)
+
+Yose asked: drop TEMUAN UTAMA, open with the Rak, Digg-like. **Yes — with one
+amendment: the paper keeps its voice by leading the feed, not by owning a
+separate block.**
+
+- Kill the standalone `pagi` section (headline + receipt rail — wave 2's rail
+  was a patch on a redundant block; Yose confirmed).
+- **The feed** is the front page: masthead → ticker → EDISI feed.
+  - Entry №1 = the paper's own lead finding, typeset broadsheet-large inside
+    the feed, tagged `DARI MEJA REDAKSI`, madder inkbar, receipt chips inline
+    under the dek, stamp. Distinct voice, same surface. (ids ku-judul/ku-dek/
+    ku-chips/ku-stamp/ku-serial/ku-src move here; pagi-live unchanged.)
+  - Entries №2… = kliping clusters, Digg-grammar rows: ghost rank numeral,
+    headline (opens Lembar), meta line in mono (N MEDIA · N GRUP + ownership
+    squares + meja tag + TITIK BUTA stamp when earned). Generous row height,
+    hairline separators, no boxes.
+  - **Cut the lead cluster's inline liputan list from the feed** — that is
+    the duplication Yose flagged (headline row already shows sources via
+    squares; the full coverage list belongs to the Lembar).
+  - Meja filter chips + transparency strip ride the feed header (exists).
+- Below the feed, Act I keeps only: PASAR (see 13.4), PETA KABAR (+cuaca).
+
+### 13.3 Lembar Kliping v2 — from sheet to dossier (the Digg move)
+
+The v1 tear-off sheet ships the mechanic; v2 makes it a full page. Anatomy,
+top to bottom (every layer gated by the lanes):
+
+1. **KEPALA** — meja tag, meta counts, ownership squares, stamps.
+2. **JUDUL** — the lead outlet's verbatim headline (Lane A), credited.
+3. **SARI** *(new, newsroom)* — 2–3 sentence machine overview of the cluster,
+   labeled `SARI · LANE C`, fact-gated against the clips.
+4. **BUTIR** *(new, newsroom)* — 3–5 key points; each butir must cite ≥1 clip
+   by outlet (inline mono credit). Fails the gate → the butir is dropped, the
+   section prints shorter. Silence over invention.
+5. **SUARA** *(new, phased)* — the POV layer.
+   - v2a (RSS-only): contrasting *verbatim headlines/ledes* grouped by
+     ownership group — "how each group tells it," which is our thesis and
+     needs zero synthesis.
+   - v2b (article fetch): named-expert quotes extracted from article bodies,
+     Lane A verbatim + attributed. Requires the newsroom to fetch article
+     HTML for top clusters (respect robots, cache, budget) — separate task.
+6. **LIPUTAN** — the full outlet list with ownership labels (exists in v1).
+7. **KAKI** — legend + link to /sumber#kliping methodology row.
+
+Mechanics: grow the takeover to near-fullscreen (keep the torn edge — it's
+the signature), add `#/kliping/{id}` hash routing so back-button and sharing
+work, scroll-lock + focus trap (v1 has lock + Escape). Newsroom: harvest RSS
+`description` fields now (many feeds carry ledes — free content); add
+`sari`/`butir` to `Kliping` model for top ~6 clusters, generated Lane C with
+the standard gate, size-guarded before KV publish.
+
+### 13.4 Per-component prescriptions (top of page → footer)
+
+**ACT I · DINAS**
+- `masthead/infobox/folio` — keep; the infobox is a legitimate artifact.
+  Tighten mobile folio wrap. (small)
+- `ticker` — keep. (none)
+- `RakKabar → EdisiFeed` — 13.2. (large)
+- `PasarPagi` — good bones (rows, not boxes). Refine: values to Fraunces 340
+  via --fs tokens (now default-font bold), verdict aligned to a fixed column,
+  hairline *vertical* rules between the 3 columns, labels to the mono scale.
+  Merge header with Gelombang into one **PASAR** section: macro row
+  (PasarPagi) then kitchen-table movement (Gelombang), one inkbar, two
+  eyebrows. De-box `gelombang-blok` (kill `.card`, rule-top instead). (medium)
+- `CuacaPagi + PetaKabar` — cuaca is the map's header instrument: same width
+  as the map frame, hairline join, city temps as margin annotations in mono.
+  PetaKabar chrome (1,937 lines, its own world): dedicated sub-wave — legend,
+  layer chips, dossier typography to the apparatus spec. (medium + sub-wave)
+
+**ACT II · MESIN**
+- `angka-blok` — keep the ceremony. Align sparkbar baseline to the odometer
+  baseline; sparkbars label their axis (14 HARI) in the mono scale. (small)
+- `NasionalPagi` — shipped wave 2; the reference. Add fmtRp abbreviation so
+  the spending counter never wraps on 360px (see 13.6). (small)
+- `PapanAngka` — **dissolve into the instrument panel.** Its four counters
+  join BUKTI №2 as a second meter bank: BPJS/day + hutan/day as plated
+  meters; PHK as a labeled micro bar-strip; Danantara days-without-report as
+  the absence meter — full-width row, madder, scribble-circled numeral
+  (data-annotate exists). Kills a boxed section, consolidates every ticking
+  state meter in one place, and puts the absence where the measurement
+  should be (hening doctrine). (large)
+- `TemuanRedaksi board` — keep; unify ghost-num style with feed rank
+  numerals (one .ghost-num spec). (small)
+- `SembilanPuluh` — audit against doctrine in-wave. (small)
+- `CabangBand` — strong. Unify its micro-viz vocabulary with the gauge
+  language: gantt tracks get ruler ticks, range gets a needle. (medium)
+- `SkorCabang` — strong. Add axis honesty (min/max mono labels on funnel and
+  dumbbell), align ⊙ to tile bottom, drop "(data contoh)" when live wiring
+  lands. (small)
+- `KabinetWaffle` — keep form; dossier-on-hover typography to spec. (small)
+- `GradienKeadilan` — bespoke and right; add the outlier scribble annotation
+  + axis labels to the mono scale. (small)
+- `aparat-grid` — de-box both columns: anggaran as open ledger rows;
+  kekerasan as big stat + annotated sentence (exists). Resolve the 602
+  duplicate (KontraS box vs hening) — one number, one owner. (medium)
+- `janji-list` — keep 3-up articles + stamps; add a target-vs-terukur mini
+  dumbbell per janji (same vocabulary as SkorCabang) so the grade is drawn.
+  (medium)
+- `MbgKorban / DuaGaris / JanjiCair / SisaAlam / PetaPiksel` — chrome audit:
+  one axis style, mono scale, de-box, ⊙ placement. (small each)
+- `ekonomi movement` (RupiahIHSG, JciVsPeers, FloatKonsentrasi,
+  RepublikOligarki, GarisStart) — **chart chrome unification**: one axis
+  spec, one watermark spec (DATA CONTOH), one live/contoh chip, Fraunces
+  end-labels, consistent PAD geometry. GarisStart loses its card. (medium)
+- `dunia-board / layar-ganda / hening / struk` — keep. Hening is beloved
+  (scribbles, brutalist); struk stays boxed — it is an artifact. (none)
+
+**ACT III · ATLAS → the magazine**
+- Plate system: every Act III figure becomes a numbered plate — `PLAT I …`
+  caption convention (mono, letterspaced, under the figure), one frame spec.
+  PetaAtlas is PLAT I. (medium)
+- `WajahNusantara` — the magazine feature: drop cap, measured 2-col prose on
+  wide screens, pull-quote, longer text (Wikipedia lead section via REST,
+  Lane A quoted + linked; curated fallback stays), photo as plate with
+  engraved-caption + credit; SukuLokasi inset gets coordinates in the
+  caption (`5°30'S 138°30'E`). (large)
+- `Bahasa718` — companion plate beside Wajah. (small)
+- `GaleriNusantara` — museum label grammar: title / year / medium /
+  collection in mono microtype under the plate. (small)
+- `AlmanakSains` — set as an almanac table (ruled, mono). (small)
+- `GunungApi + PetaRupa` — twin plates, shared frame + caption spec. (small)
+- `RimbaHidup` — keep as the closing understory. (none)
+- `ruang-main` — puzzle-corner furniture: one ruled column header (TEKA-TEKI
+  HARIAN), games share a mono header + hand-drawn accent, no boxes. (medium)
+- `TuguRakyat` — keep. (none)
+- `kolofon` — tighten agate leading; add the press mark (a small engraved
+  ⊙-in-gear glyph as the machine's signature). (small)
+- `Aksara` — instrument-styling pass parked until worker features settle.
+
+### 13.5 What this kills (redundancy law, continued)
+
+- The standalone TEMUAN UTAMA block (absorbed as feed entry №1).
+- The lead cluster's inline liputan in the feed (lives in the Lembar).
+- PapanAngka as a section (meters merge into BUKTI №2).
+- The `.card` box on gelombang-blok, aparat cols, GarisStart.
+- The KontraS-box 602 duplicate.
+
+### 13.6 Design-system hardening v2 (the token sweep)
+
+- **Type**: only 1/42 islands uses the --fs scale (audit 2026-07-02). Sweep
+  all islands to --fs--1…--fs-6; add --fs-7 for act titles if needed. Mono
+  apparatus locks to three sizes: --label-s (8.5px/.14em), --label-m
+  (10px/.14em), --label-l (11px/.18em).
+- **Space**: --sp-1…--sp-6 (4/8/14/22/34/56) replaces ad-hoc margins.
+- **Rules**: --rule-act (2px solid), --rule-block (1px solid), --rule-soft
+  (1px dashed). No other border styles outside artifacts.
+- **Numbers**: `lib/format.ts` — fmtRp abbreviation (Rp 10,3 T / 24,1 M /
+  329 rb) with the full figure in `title=`; adopt in every counter so no
+  numeral ever wraps (NasionalPagi spending counter is the known offender).
+- **Chips/stamps**: one chip anatomy (⊙ source · state), one stamp anatomy;
+  audit strays.
+- **Motion**: IO threshold 0.3; duration tiers 0.4/0.7/1.4s; stagger ≤130ms;
+  reduced-motion renders the resolved state. Document in tokens.css header.
+- **Shaders**: the veil pattern (lazy import, IO speed-gate, masked aura,
+  never boxed) is the approved recipe. Candidate spots, pending veil verdict:
+  seam slats during the flip, the fajar dawn canvas, atlas paper grain.
+
+### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
+
+- **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
+  render when the edition carries them) + newsroom: RSS description harvest,
+  sari/butir generation behind the gate, edisi payload + size guard.
+- **Wave 4 · The instrument room**: PapanAngka merge, aparat de-box, janji
+  dumbbells, chart chrome unification, CabangBand/SkorCabang polish, 602.
+- **Wave 5 · The magazine**: plate system, Wajah feature template, museum
+  labels, almanac, twin plates, puzzle corner, kolofon, press mark.
+- **Wave 6 · The sweep**: 13.6 tokens across 42 islands, format util,
+  motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
+
+## 14. Session log (running, newest first)
+
+### 2026-07-02 · grand redesign planned (§13)
+- Yose review of wave 2: gauge board = the bar ("this is what we want with
+  the others"); lembar nice but lead-row source list duplicates it; TEMUAN
+  UTAMA still redundant → open with the Rak as a Digg-like feed; wants a
+  hands-on, thorough, component-by-component redesign plan before touching
+  anything else. §13 written: doctrine, feed decision, Lembar v2 dossier
+  (SARI/BUTIR/SUARA + newsroom pipeline), per-component prescriptions,
+  kill list, token sweep, waves 3–6. Implementation starts wave 3 on his go.
 
 ### 2026-07-02 · wave 2 (`5279a8f`)
 - NEGARA HARI INI moved Act I → Act II as **BUKTI №2** (after the loss
