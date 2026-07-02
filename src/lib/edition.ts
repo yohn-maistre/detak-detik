@@ -20,7 +20,9 @@ export interface LiveKliping {
   n_grup?: number;
   skor?: number;
   titik_buta?: boolean;
+  meja?: string;
 }
+export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 export interface LiveEdisi {
   edisi?: number;
   terbit?: string;
@@ -33,6 +35,7 @@ export interface LiveEdisi {
   agenda?: LiveAgenda[];
   makro?: LiveMakro[];
   kliping?: LiveKliping[];
+  kliping_meta?: LiveKlipingMeta;
   harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }

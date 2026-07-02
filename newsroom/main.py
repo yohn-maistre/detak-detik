@@ -74,9 +74,10 @@ async def run() -> int:
     # the kliping desk is Lane A pass-through (verbatim headlines, no model
     # text), so it never enters the fact-gate or the lawyer; dark feeds are
     # logged here (the roster records them honestly either way)
-    kliping, kliping_gelap, kliping_feeds = await gather_kliping(EDISI_NO)
+    kliping, kliping_gelap, kliping_feeds, kliping_meta = await gather_kliping(EDISI_NO)
     log.event("kliping", klaster=len(kliping), per_feed=kliping_feeds,
-              gelap=kliping_gelap)
+              gelap=kliping_gelap, judul=kliping_meta.judul,
+              disusun=kliping_meta.disusun)
 
     # desks run in parallel; each gates against the full corpus
     drafted = await asyncio.gather(
@@ -114,7 +115,8 @@ async def run() -> int:
                 log.event("ditulis_ulang", temuan_id=t.temuan_id, headline=reviewed.headline)
             survivors.append(reviewed)
 
-    edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines, kliping)
+    edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines,
+                     kliping, kliping_meta)
     if edisi is None:
         log.event("kosong", catatan="tak ada temuan layak terbit; edisi lama dibiarkan, tidak ditimpa")
         log.close()

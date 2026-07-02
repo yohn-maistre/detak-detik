@@ -35,7 +35,6 @@ export const CABANG: Cabang[] = [
     apa: 'Presiden, 48 menteri, 56 wakil menteri, dan badan seperti Danantara dan Badan Pengarah Papua.',
     big: '109',
     cap: 'pejabat kabinet, terbanyak sejak 1966',
-    side: 'DANANTARA: 0 LAPORAN KEUANGAN TERBIT',
     viz: { type: 'dots', n: 109 },
   },
   {

@@ -11,7 +11,8 @@ still publishes.
 
 from __future__ import annotations
 
-from .models import AngkaEdisi, CorpusRow, Edisi, Kliping, LiveTemuan, TickerItem, Temuan
+from .models import (AngkaEdisi, CorpusRow, Edisi, Kliping, KlipingMeta,
+                     LiveTemuan, TickerItem, Temuan)
 
 # the front page carries at most this many story clusters
 _KLIPING_MAKS = 12
@@ -52,6 +53,7 @@ def assemble(
     corpus_rows: list[CorpusRow],
     ticker: list[TickerItem],
     kliping: list[Kliping] | None = None,
+    kliping_meta: KlipingMeta | None = None,
 ) -> Edisi | None:
     if not survivors:
         return None
@@ -60,6 +62,14 @@ def assemble(
     angka = pick_angka(corpus_rows, lead)
     if angka is None:
         return None
+
+    kliping_final = (sorted(kliping, key=lambda k: k.skor, reverse=True)[:_KLIPING_MAKS]
+                     if kliping else None)
+    if kliping_meta is not None:
+        # the meta's klaster counts what the front page actually shows, so it is
+        # re-stamped here after the cap
+        kliping_meta = kliping_meta.model_copy(
+            update={"klaster": len(kliping_final or [])})
 
     return Edisi(
         edisi=edisi_no,
@@ -72,6 +82,6 @@ def assemble(
         ticker=ticker,
         # kliping is Lane A pass-through (verbatim headlines, no model text), so
         # it skips the fact-gate and the lawyer by design
-        kliping=(sorted(kliping, key=lambda k: k.skor, reverse=True)[:_KLIPING_MAKS]
-                 if kliping else None),
+        kliping=kliping_final,
+        kliping_meta=kliping_meta,
     )

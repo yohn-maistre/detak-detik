@@ -1,6 +1,7 @@
 <script lang="ts">
-  /** Kabinet yang membengkak: 109 pejabat kabinet, terbanyak sejak 1966 — one
-      stamped cell each, by tier. Beside it the Danantara clock: time accrues,
+  /** Kabinet yang membengkak: one stamped cell per official, by tier. The
+      chapter band above (CabangBand) owns the 109 headline; here the
+      composition speaks. Beside it the Danantara clock: time accrues,
       financial reports stay at zero. Figures are sample (contoh). */
   import { onMount } from 'svelte';
   import { gsap, reducedMotion, EASE_STAMP } from '../lib/motion';
@@ -12,7 +13,6 @@
     { label: 'Kepala badan', n: 5, cls: 'b' },
   ];
   const cells = TIER.flatMap((t) => Array.from({ length: t.n }, () => t.cls));
-  const TOTAL = cells.length; // 109
 
   // Danantara diluncurkan 24 Feb 2025; laporan keuangan terbit: 0
   const LAUNCH = Date.UTC(2025, 1, 24);
@@ -20,12 +20,10 @@
   const idn = new Intl.NumberFormat('id-ID');
 
   let root: HTMLElement | undefined = $state();
-  let heroEl: HTMLElement | undefined = $state();
   let hariEl: HTMLElement | undefined = $state();
   onMount(() => {
     const io = new IntersectionObserver(([e]) => {
       if (e?.isIntersecting) {
-        if (heroEl) countUp(heroEl, TOTAL, (n) => String(Math.round(n)));
         if (hariEl) countUp(hariEl, hariSejak, (n) => idn.format(Math.round(n)));
         if (!reducedMotion() && root) {
           gsap.fromTo(root.querySelectorAll('.kw-cell'),
@@ -43,10 +41,7 @@
 <section class="kw" data-no-stempel data-ref="kabinet" bind:this={root}>
   <div class="kw-grid">
     <figure class="kw-waffle-wrap">
-      <div class="kw-hero">
-        <span class="kw-n display num" bind:this={heroEl}>0</span>
-        <span class="kw-hero-lab">pejabat kabinet · <span data-annotate="underline" data-annotate-color="#e44a06">terbanyak sejak 1966</span></span>
-      </div>
+      <p class="kw-anno fig">Satu sel satu pejabat · <span data-annotate="underline" data-annotate-color="#e44a06">terbanyak sejak 1966</span></p>
       <div class="kw-waffle" role="img" aria-label="109 pejabat kabinet: 48 menteri, 56 wakil menteri, 5 kepala badan">
         {#each cells as c, i (i)}
           <i class="kw-cell kw-{c}"></i>
@@ -86,9 +81,7 @@
   @media (max-width: 760px) { .kw-grid { grid-template-columns: 1fr; } }
   figure { margin: 0; display: grid; gap: 12px; }
 
-  .kw-hero { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
-  .kw-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(48px, 8vw, 92px); line-height: 0.85; color: var(--ink); }
-  .kw-hero-lab { font-size: 13px; color: var(--muted); max-width: 30ch; }
+  .kw-anno { font-size: 13.5px; margin: 0; }
   .kw-waffle { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; }
   @media (max-width: 420px) { .kw-waffle { grid-template-columns: repeat(11, 1fr); } }
   .kw-cell { aspect-ratio: 1; border-radius: 1px; }

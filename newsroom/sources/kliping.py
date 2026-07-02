@@ -26,7 +26,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-from ..models import Kliping, KlipingItem
+from ..models import Kliping, KlipingItem, KlipingMeta
 
 _ROSTER = Path(__file__).resolve().parent.parent / "data" / "media_roster.json"
 _TIMEOUT = 10
@@ -54,6 +54,40 @@ _STOPWORDS = frozenset({
     "agar", "bagi", "oleh", "para", "atas", "antara", "masih", "saja", "juga",
     "bisa", "dapat", "kini", "lagi", "buat", "usung", "punya", "adalah",
 })
+
+
+# meja (desk) rules: deterministic keywords matched against a cluster's combined
+# normalized titles; first matching desk wins, in this order, else nasional.
+# Multi-word keys ("batu bara") match as phrases; "as" is the standalone token
+# (Amerika Serikat in Indonesian headlines, the "as-amerika" pair).
+_MEJA_ATURAN: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("alam", ("hutan", "deforestasi", "tambang", "sawit", "konsesi", "satwa",
+              "banjir", "karhutla", "iklim", "lingkungan", "nikel", "batu bara",
+              "sampah", "polusi")),
+    ("daerah", ("papua", "aceh", "jayapura", "kabupaten", "pemda", "pemprov",
+                "gubernur", "bupati", "otsus", "desa", "apbd")),
+    ("dunia", ("as", "amerika", "tiongkok", "china", "dunia", "global", "pbb",
+               "asean", "internasional", "perang", "gaza", "ukraina")),
+)
+
+
+def _meja(anggota: list[dict]) -> str:
+    """Assign the cluster's desk from its combined normalized titles (lowercase,
+    punctuation collapsed to spaces, whole-word matches only). When no rule
+    fires, a cluster covered solely by BBC Indonesia is dunia; the rest land on
+    nasional."""
+    teks = " " + " ".join(
+        re.sub(r"[\W_]+", " ", it["judul"].lower(), flags=re.UNICODE)
+        for it in anggota
+    ) + " "
+    kata = frozenset(teks.split())
+    for meja, kunci in _MEJA_ATURAN:
+        for k in kunci:
+            if (f" {k} " in teks) if " " in k else (k in kata):
+                return meja
+    if {it["media"] for it in anggota} == {"BBC Indonesia"}:
+        return "dunia"
+    return "nasional"
 
 
 def _muat_roster() -> list[dict]:
@@ -236,14 +270,19 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
         skor=n_grup * 2 + n_media,  # corroboration by ownership diversity, not volume
         titik_buta=n_media >= 2 and n_grup == 1,
         tumbuh=False,  # delta vs the previous edition lands in v2
+        meja=_meja(anggota),
     )
 
 
-async def gather_kliping(edisi_no: int) -> tuple[list[Kliping], list[str], dict[str, int]]:
+async def gather_kliping(
+    edisi_no: int,
+) -> tuple[list[Kliping], list[str], dict[str, int], KlipingMeta]:
     """Fetch every live roster feed, cluster the 48h window, score by ownership
     diversity. Returns (clusters sorted by skor desc, dark feed names, items per
-    feed). Only clusters seen by at least two outlets surface; a single-outlet
-    headline is a ticker item, not a corroborated story."""
+    feed, pipeline meta). Only clusters seen by at least two outlets surface; a
+    single-outlet headline is a ticker item, not a corroborated story. The
+    meta's `klaster` counts what the desk emitted; the editor overwrites it
+    after applying the front-page cap."""
     roster = _muat_roster()
     batas = datetime.now(timezone.utc) - timedelta(hours=_JENDELA_JAM)
     hidup = [m for m in roster if m.get("feed")]
@@ -269,19 +308,32 @@ async def gather_kliping(edisi_no: int) -> tuple[list[Kliping], list[str], dict[
                                  min(x["url"] for x in c)))
     for urut, anggota in enumerate(kandidat, start=1):
         kliping.append(_susun_kliping(anggota, edisi_no, urut))
-    return kliping, gelap, per_feed
+    meta = KlipingMeta(
+        judul=len(items),  # every headline that made it inside the window
+        klaster=len(kliping),
+        gelap=len(gelap),
+        disusun=datetime.now(_WIB).strftime("%H.%M"),
+    )
+    return kliping, gelap, per_feed, meta
 
 
 def _cetak_laporan() -> None:
-    kliping, gelap, per_feed = asyncio.run(gather_kliping(0))
+    kliping, gelap, per_feed, meta = asyncio.run(gather_kliping(0))
     print("== item per feed ==")
     for nama, n in per_feed.items():
         print(f"  {nama}: {n}")
     if gelap:
         print(f"== feed gelap: {', '.join(gelap)}")
+    print(f"== meta: judul={meta.judul} klaster={meta.klaster} "
+          f"gelap={meta.gelap} disusun={meta.disusun} WIB")
+    sebaran: dict[str, int] = {}
+    for k in kliping:
+        sebaran[k.meja] = sebaran.get(k.meja, 0) + 1
+    print("== meja: " + ", ".join(
+        f"{m}={sebaran.get(m, 0)}" for m in ("nasional", "daerah", "alam", "dunia")))
     print(f"== klaster (>= 2 media): {len(kliping)}")
     for k in kliping[:5]:
-        print(f"  [{k.skor}] media={k.n_media} grup={k.n_grup} "
+        print(f"  [{k.skor}] meja={k.meja} media={k.n_media} grup={k.n_grup} "
               f"titik_buta={k.titik_buta} :: {k.utama.judul} ({k.utama.media})")
         for l in k.liputan:
             print(f"      - {l.media} ({l.grup}): {l.judul[:80]}")

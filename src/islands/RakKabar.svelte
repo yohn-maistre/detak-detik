@@ -6,13 +6,32 @@
       linked; the paper adds only documented ownership facts. The board
       renders nothing until a live edition carries kliping[]. */
   import { onMount } from 'svelte';
-  import { onEdisi, type LiveKliping } from '../lib/edition';
+  import { onEdisi, type LiveKliping, type LiveKlipingMeta } from '../lib/edition';
 
   let rak = $state<LiveKliping[]>([]);
-  onMount(() => onEdisi((e) => { if (e?.kliping?.length) rak = e.kliping; }));
+  let meta = $state<LiveKlipingMeta | null>(null);
+  onMount(() => onEdisi((e) => {
+    if (e?.kliping?.length) rak = e.kliping;
+    if (e?.kliping_meta) meta = e.kliping_meta;
+  }));
 
-  const utamaDulu = $derived(rak[0]);
-  const sisa = $derived(rak.slice(1, 7));
+  // the four desks live on as filter chips over one surface
+  const MEJA = [
+    { id: 'semua', label: 'SEMUA' },
+    { id: 'nasional', label: 'NASIONAL' },
+    { id: 'daerah', label: 'DAERAH' },
+    { id: 'alam', label: 'ALAM' },
+    { id: 'dunia', label: 'DUNIA' },
+  ] as const;
+  let pilihMeja = $state<string>('semua');
+  const tampil = $derived(pilihMeja === 'semua' ? rak : rak.filter((k) => (k.meja ?? 'nasional') === pilihMeja));
+
+  const utamaDulu = $derived(tampil[0]);
+  const sisa = $derived(tampil.slice(1, 7));
+
+  const metaStrip = $derived(meta
+    ? `${meta.judul ?? '?'} JUDUL · ${meta.klaster ?? rak.length} KLIPING · DISUSUN ${meta.disusun ?? '--.--'} WIB${meta.gelap ? ` · ${meta.gelap} SUMBER GELAP` : ''}`
+    : null);
 
   function metaBaris(k: LiveKliping): string {
     const m = k.n_media ?? (k.liputan ? k.liputan.length : 1);
@@ -26,6 +45,16 @@
     <div class="rak-head">
       <span class="inkbar"><span class="dot">●</span>RAK KABAR · SATU PERISTIWA, SEMUA LIPUTANNYA</span>
       <span class="eyebrow">JUDUL APA ADANYA DARI TIAP MEDIA · DIKELOMPOKKAN OTOMATIS TIAP TERBIT</span>
+    </div>
+    <div class="rak-bar">
+      <nav class="rak-meja" aria-label="Saring menurut meja">
+        {#each MEJA as m (m.id)}
+          <button class="rak-meja-btn mono" class:aktif={pilihMeja === m.id} onclick={() => (pilihMeja = m.id)}>{m.label}</button>
+        {/each}
+      </nav>
+      {#if metaStrip}
+        <span class="rak-strip mono">{metaStrip}</span>
+      {/if}
     </div>
 
     <!-- the lead cluster: the day's most independently corroborated story -->
@@ -67,8 +96,9 @@
 
     {#if sisa.length}
       <ol class="rak-sisa">
-        {#each sisa as k}
+        {#each sisa as k, i (k.id ?? i)}
           <li class="rak-baris" data-rise>
+            <span class="rak-no ghost-num num" aria-hidden="true">{String(i + 2).padStart(2, '0')}</span>
             {#if k.utama.url}
               <a class="rak-b-judul" href={k.utama.url} target="_blank" rel="noopener">{k.utama.judul}</a>
             {:else}
@@ -90,6 +120,19 @@
 <style>
   .rak { margin-top: 34px; border-top: 2px solid var(--line); padding-top: 16px; }
   .rak-head { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items: baseline; }
+
+  .rak-bar { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-top: 12px; border-bottom: 1px solid var(--line-soft); padding-bottom: 8px; }
+  .rak-meja { display: flex; gap: 16px; }
+  .rak-meja-btn {
+    background: none; border: none; padding: 0 0 3px; cursor: pointer;
+    font-size: 10px; letter-spacing: 0.16em; color: var(--muted);
+    border-bottom: 1px solid transparent;
+  }
+  .rak-meja-btn:hover { color: var(--ink); border-bottom-color: var(--line-soft); }
+  .rak-meja-btn.aktif { color: var(--ink); border-bottom: 2px solid var(--accent); }
+  .rak-strip { font-size: 9px; letter-spacing: 0.13em; color: var(--muted); }
+
+  .rak-no { position: absolute; top: 8px; right: 0; font-size: 26px; opacity: 0.5; pointer-events: none; }
 
   .rak-utama { padding: 18px 0 20px; border-bottom: 1px solid var(--line); }
   .rak-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); }
@@ -125,11 +168,12 @@
 
   .rak-sisa { list-style: none; margin: 0; padding: 0; }
   .rak-baris {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 16px;
     align-items: baseline;
-    padding: 11px 0;
+    padding: 11px 44px 11px 0;
     border-bottom: 1px dashed var(--line-soft);
   }
   .rak-b-judul { font-size: 15px; line-height: 1.3; color: var(--ink); text-decoration: none; max-width: 62ch; }

@@ -70,7 +70,9 @@ class Kliping(BaseModel):
     """One story cluster from the kliping desk: the same event as covered across
     outlets, scored by ownership diversity (n_grup weighs double so corroboration
     across groups beats volume inside one group). `titik_buta` marks coverage
-    that never leaves a single ownership group."""
+    that never leaves a single ownership group. `meja` is the desk the cluster
+    lands on (nasional | daerah | alam | dunia), assigned by deterministic
+    keyword rules over the cluster's combined titles."""
 
     id: str
     utama: KlipingItem
@@ -80,6 +82,19 @@ class Kliping(BaseModel):
     skor: int
     titik_buta: bool
     tumbuh: bool = False
+    meja: str = "nasional"
+
+
+class KlipingMeta(BaseModel):
+    """Pipeline transparency numbers for the kliping desk, shown on the front
+    page: `judul` counts every headline fetched inside the window, `klaster` the
+    clusters emitted after the editor's cap, `gelap` the dark feeds, and
+    `disusun` the WIB wall-clock time (HH.MM) the desk finished."""
+
+    judul: int
+    klaster: int
+    gelap: int
+    disusun: str
 
 
 class LiveTemuan(BaseModel):
@@ -104,6 +119,7 @@ class Edisi(BaseModel):
     dek: str | None = None
     tajuk: dict | None = None
     kliping: list[Kliping] | None = None
+    kliping_meta: KlipingMeta | None = None
 
 
 class CorpusRow(BaseModel):

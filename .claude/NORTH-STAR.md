@@ -193,6 +193,69 @@ points.
 
 ---
 
+### 3.5 REVISION 2026-07-02 (post RakKabar v1, agreed with Yose)
+
+The v1 newsstand shipped and validated the mechanic; Act I now carries FOUR
+news surfaces (Kabar Utama, Ringkas Pagi, Rak Kabar, four rubrik desks), some
+printing the same stories twice. The consolidation:
+
+1. **One news surface: HALAMAN MUKA.** The Rak absorbs everything above it.
+   Top slot = TEMUAN UTAMA (Lane B, the paper's own lead + dek + receipt),
+   a rule, then the Rak lead cluster and ranked rows (Lane A). Kabar Utama
+   as a standalone block dies; Ringkas Pagi dies (the ticker and the Rak
+   carry the wire); the four rubrik desks die as a section and return as
+   FILTER CHIPS on the Rak (NASIONAL / DAERAH / ALAM / DUNIA), fed by a
+   deterministic keyword classifier (`meja` field on each cluster).
+2. **Digg translations, gazette-ified** (from Yose's reference shots):
+   the pipeline transparency strip under the Rak head
+   (`495 JUDUL · 32 KLIPING · DISUSUN 16.33 WIB`, real numbers from the
+   desk); rank numerals on rows (ghost-num); `tumbuh` arrows once edition
+   memory lands; TODAY/7-DAYS tabs deferred until the kliping archive
+   exists. Story page sub-angle chips (Digg's USAGE WATCH / OPEN QUESTION)
+   become Lembar Kliping's labeled sections when Lane C lands.
+3. **Weather integrates into the map block** (Yose: standalone strip is
+   unaligned and useless): CuacaPagi becomes a slim ruled row inside the
+   §PETA KABAR header, sharing its grid; the standalone section dies.
+4. **Sensus Diri moves to Ruang Main** (mirror toy, not morning news).
+5. **Act I section spine after the cut**: masthead + KILAS, HALAMAN MUKA
+   (temuan utama + rak), §1 ANGKA PAGI (Negara Hari Ini + Pasar Pagi as one
+   ruled band), §2 HARGA PANGAN, §3 PETA KABAR (with weather + lapor).
+   Lensa Wilayah leaves for Act II Daerah (see 4.3); big NasionalPagi
+   figures print abbreviated (Rp 10.329 T), never wrapped raw integers.
+6. **Redundancy law (site-wide, from the audit):** one number, one owner.
+   A chapter's hero stat prints once at scale (CabangBand); every other
+   component in the chapter must show a DIFFERENT cut or structure, never
+   restate the anchor. Documented duplicates to kill: KabinetWaffle's big
+   109 (waffle + legend stay), the KontraS box's big 602 (text stays),
+   RupiahIHSG's IHSG side panel (JciVsPeers owns that story), PapanAngka's
+   sembako card (Gelombang's basket owns it), cabang.ts Danantara caption
+   (the waffle clock + wall card own it, two instances max with distinct
+   jobs).
+7. **Lensa Wilayah**: v1 move into Act II Daerah as planned. v2 concept,
+   logged for later: KARTOTEK, a card-catalog drawer (state-archive
+   metaphor): each province an index card pulled from a drawer, national
+   comparison spine always visible, kabupaten as a second drawer. Bespoke
+   form, fits the document-ornament kit.
+8. **Act III redesign (escalated to THIS wave, Yose 2026-07-02): the
+   magazine.** Act III adopts Act II's signposted chapter grammar in the
+   Atlas register: LAMPIRAN I MANUSIA / LAMPIRAN II HAYATI & RUPA /
+   LAMPIRAN III TANAH, each with the unified bab-kepala anatomy (kicker,
+   Fraunces tajuk on the scale, formal dek). Writeups get feature
+   typography: drop caps, a measured two-column body where width allows,
+   fig-italic provenance lines, plates on a consistent grid. Data viz per
+   chapter earns its place like Act II exhibits (the language barcode, the
+   volcano triangles, the extinction ledger). Content pipelines (reviewed
+   Manusia backlog, Daftar Merah, sky almanac, Peta Bahasa yang Memudar,
+   region rotation) remain the following wave; this wave ships the chrome,
+   typography, and layout so the act reads as a magazine, not a stack of
+   cards.
+9. **Flue migration (Yose: the chosen direction).** A concise migration
+   assessment lives in section 12 (agent-researched): what maps from the
+   Python newsroom to Flue, the phased path that never breaks the
+   twice-daily print, and the go/no-go signal. Aksara's interactive lane
+   is the natural first Flue surface; the batch newsroom follows only
+   after a pilot desk proves the fact-gate equivalent.
+
 ## 4. Act II · MALAM: the accountability engine
 
 Role: what is wrong, and against what standard. The register (Mesin) and the
@@ -506,3 +569,49 @@ phase (cap 5, prefer read-only or disjoint-file agents on this host).
 - Corroboration threshold start value (2 source types proposed, calibrate).
 - Whether Act II exhibits rotate per edition or accumulate into archive pages.
 - The traveling map's perf reality on budget Android (prototype behind a flag).
+
+## 12. Flue migration assessment (agent-researched, verified 2026-07-02)
+
+Flue (github.com/withastro/flue, Apache-2.0): the Astro team's TS agent
+framework: defineAgent/defineTool/defineWorkflow on the Pi harness
+("Project Think", the read-act-observe-correct loop), runtime-agnostic
+across Node, Cloudflare, GitHub Actions. On Cloudflare each agent is a
+Durable Object with fibers (checkpoint/resume) and a SQLite-backed FS.
+
+### Mapping (newsroom -> Flue)
+
+| today | Flue equivalent |
+|---|---|
+| desk detector (deterministic) | plain TS step in a defineWorkflow |
+| narrate() (Pydantic AI typed output) | session.prompt with a Valibot result schema |
+| gate.periksa + ModelRetry(reason) | v.rawCheck in the schema; auto-retry, ResultUnavailableError -> deterministic fallback. CAVEAT: whether the check message feeds back verbatim is undocumented; spike first, worst case a 5-line manual loop |
+| lawyer / editor | second gated prompt step / pure TS step |
+| publish (POST /edisi) | defineTool or fetch; direct KV binding on Workers |
+| llm.py FallbackModel chain | openai-compatible registerProvider for NIM/Groq; NO fallback primitive, hand-roll try/catch |
+| main.py on Actions cron | npx flue run <workflow> --target node, JSON to stdout |
+| worker /ask /tour | a durable Flue agent per conversation, typed tools over /edisi + corpus |
+
+### Adds / loses
+
+Adds: stateful live Aksara (DO-backed, streams state and tool calls to the
+page), one language across worker + newsroom (gate.py was ported FROM
+factGate.ts originally), markdown skills (the pedoman as a loadable
+skill), durable batch resume. Loses/risks: 1.0.0-beta.9 with ~2
+releases/week and admitted breaking changes (pin exact versions); the
+proven retry-with-feedback semantics; LiteLLM's fallback+auth
+normalization; no @flue/svelte yet (React only; use raw @flue/sdk);
+Dynamic-Workers sandboxing is paid, keep it off; the Python sources/
+scraping stack does not port and should not.
+
+### Phased path (the print never breaks)
+
+1. NOW: Aksara lane as a new Flue app beside the worker (additive; free
+   tier holds: DOs free on SQLite, 10 ms CPU fine for I/O-bound calls).
+   Old /ask stays until parity.
+2. One pilot desk (harga) as a Flue workflow inside the same Actions cron
+   via npx flue run, consumed behind a flag; compare gate pass-rates over
+   ~10 editions. Print stays 100% Python.
+3. The batch, only after Flue 1.0 stable AND the pilot wins.
+
+Verdict: GO now on phase 1 only; NO-GO on migrating the batch today.
+Re-assess at 1.0 stable; pin 1.0.0-beta.x exactly wherever adopted.

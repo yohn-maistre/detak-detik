@@ -40,10 +40,6 @@
   const phkMax = Math.max(...PHK_BULANAN.map((p) => p.v));
   const phkTotal = PHK_BULANAN.reduce((a, p) => a + p.v, 0);
 
-  // air: Jakarta annual mean PM2.5 41.7 µg/m3 (IQAir 2024) ≈ cigarettes at 22 µg/cig
-  const ROKOK = 41.7 / 22;
-  // basket vs daily minimum wage (sample basket, marked contoh)
-  const SEMBAKO = { basket: 78_500, upahHarian: 260_449 };
   const danantaraHari = $derived(Math.floor((now - DANANTARA_EPOCH) / 86_400_000));
 </script>
 
@@ -77,16 +73,6 @@
         {/each}
       </div>
       <span class="wall-chip mono">⊙ kemnaker satudata · hanya pekerja ter-JKP</span>
-    </article>
-
-    <article class="wall-card">
-      <span class="eyebrow">SEMBAKO vs UPAH HARIAN</span>
-      <p class="wall-val num">{Math.round((SEMBAKO.basket / SEMBAKO.upahHarian) * 100)}%</p>
-      <div class="wall-bullet" role="img" aria-label="Keranjang sembako sebagai persen upah harian">
-        <i style={`--w:${Math.round((SEMBAKO.basket / SEMBAKO.upahHarian) * 100)}%`}></i>
-      </div>
-      <p class="wall-note">keranjang harian {rp(SEMBAKO.basket)} dari upah harian {rp(SEMBAKO.upahHarian)}</p>
-      <span class="wall-chip mono">⊙ panel harga + ump dki/22 · (data contoh)</span>
     </article>
 
     <article class="wall-card lapor">
@@ -129,21 +115,6 @@
   .wall-bar-col { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 3px; height: 100%; }
   .wall-bar-col i { display: block; height: var(--h); background: var(--ink); }
   .wall-bar-col span { font-size: 7.5px; letter-spacing: 0.1em; color: var(--muted); text-align: center; }
-
-  .wall-rokok { display: flex; gap: 5px; }
-  .rokok {
-    width: 38px; height: 9px; position: relative;
-    background: linear-gradient(90deg, var(--accent) 0 22%, #f6f3ea 22%);
-    border: 1px solid var(--line);
-  }
-  .rokok::after {
-    content: ''; position: absolute; top: 0; bottom: 0; right: 0;
-    width: calc(100% - var(--isi, 100%));
-    background: var(--card);
-  }
-
-  .wall-bullet { height: 12px; border: 1px solid var(--line); position: relative; }
-  .wall-bullet i { position: absolute; inset: 1px auto 1px 1px; width: var(--w); background: var(--accent); }
 
   .lapor .wall-val { color: var(--accent); }
 </style>

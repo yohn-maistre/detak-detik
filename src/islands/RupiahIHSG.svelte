@@ -1,13 +1,12 @@
 <script lang="ts">
-  /** Pasar, terburuk sedunia: the rupiah against the dollar, and the IHSG's
-      place among the world's indices. When the Aksara worker answers, the
-      curve is six months of real daily closes (Frankfurter + Yahoo, via
-      /pasar `seri`); until then a deterministic contoh stands in, watermarked
+  /** Rupiah terhadap dolar: the currency story alone. The IHSG story lives
+      in JciVsPeers, directly above. When the Aksara worker answers, the
+      curve is six months of real daily closes (Frankfurter, via /pasar
+      `seri`); until then a deterministic contoh stands in, watermarked
       so nobody mistakes the shape for data. */
   import { onMount } from 'svelte';
   import { gsap, reducedMotion } from '../lib/motion';
   import { rngFrom } from '../lib/seed';
-  import { fmtPct } from '../lib/chart-kit';
 
   function seri(seed: string, dari: number, ke: number, n: number, goyang: number): number[] {
     const rng = rngFrom(seed);
@@ -22,7 +21,7 @@
   }
   const CONTOH = seri('rupiah-2026', 16210, 18047, 140, 0.012);
 
-  type Live = { tanggal: string[]; usdidr: number[]; jkse: number[] };
+  type Live = { tanggal: string[]; usdidr: number[] };
   let live = $state<Live | null>(null);
 
   const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
@@ -31,16 +30,15 @@
     (async () => {
       try {
         const res = await fetch(`${AKSARA_URL}/pasar`, { signal: AbortSignal.timeout(8000) });
-        const d = (await res.json()) as { seri?: { tanggal?: unknown; usdidr?: unknown; jkse?: unknown } };
+        const d = (await res.json()) as { seri?: { tanggal?: unknown; usdidr?: unknown } };
         const s = d.seri;
         if (
-          s && Array.isArray(s.tanggal) && Array.isArray(s.usdidr) && Array.isArray(s.jkse)
+          s && Array.isArray(s.tanggal) && Array.isArray(s.usdidr)
           && s.tanggal.length >= 20
           && s.usdidr.length === s.tanggal.length
-          && s.jkse.length === s.tanggal.length
           && typeof s.usdidr[0] === 'number'
         ) {
-          live = { tanggal: s.tanggal as string[], usdidr: s.usdidr as number[], jkse: s.jkse as number[] };
+          live = { tanggal: s.tanggal as string[], usdidr: s.usdidr as number[] };
         }
       } catch { /* contoh stands; the watermark says so */ }
     })();
@@ -54,6 +52,9 @@
 
   const data = $derived(live ? live.usdidr : CONTOH);
   const akhir = $derived(data[data.length - 1] ?? 0);
+  const awal = $derived(data[0] ?? akhir);
+  const rpPct = $derived(awal ? ((akhir - awal) / awal) * 100 : 0);
+  const rpPctLabel = $derived(`${rpPct >= 0 ? '+' : '−'}${Math.abs(rpPct).toFixed(1).replace('.', ',')}%`);
 
   const W = 540, H = 230, PAD = { l: 16, r: 70, t: 20, b: 24 };
   const loRaw = $derived(Math.min(...data));
@@ -82,13 +83,6 @@
     if (!live) return 'JUN';
     const t = live.tanggal[live.tanggal.length - 1] ?? '';
     return (BULAN[Number(t.slice(5, 7)) - 1] ?? '').toUpperCase();
-  });
-  const jksePct = $derived.by(() => {
-    if (!live) return -31;
-    const a = live.jkse[0] ?? 0;
-    const b = live.jkse[live.jkse.length - 1] ?? 0;
-    if (!a) return 0;
-    return ((b - a) / a) * 100;
   });
   const ariaSvg = $derived(live
     ? 'Kurs rupiah terhadap dolar AS, penutupan harian enam bulan terakhir, data langsung'
@@ -144,14 +138,12 @@
     </div>
 
     <aside class="ri-side">
-      <span class="eyebrow">BURSA SAHAM · IHSG</span>
+      <span class="eyebrow">RUPIAH · 6 BULAN</span>
+      <p class="ri-side-big num">{rpPctLabel}<span class="ri-unit"> vs US$</span></p>
+      <p class="ri-side-teks">perubahan nilai tukar terhadap dolar AS dalam enam bulan terakhir, dihitung dari kurs penutupan harian.</p>
       {#if live}
-        <p class="ri-side-big num">{fmtPct(jksePct, 1)}<span class="ri-unit"> 6 BLN</span></p>
-        <p class="ri-side-teks">perubahan IHSG enam bulan terakhir, dihitung dari penutupan harian yang ditarik langsung dari bursa.</p>
         <button class="chip"><span class="tick">⊙</span>frankfurter + yahoo · langsung</button>
       {:else}
-        <p class="ri-side-big num">−31<span class="ri-unit">% YTD</span></p>
-        <p class="ri-side-teks">indeks saham Jakarta mencatat penurunan terbesar di antara 90+ indeks dunia tahun ini, mendekati titik terendah 5,5 tahun. Bank Indonesia menaikkan suku bunga ke 5,5%.</p>
         <button class="chip"><span class="tick">⊙</span>data contoh · menunggu sumber langsung</button>
       {/if}
     </aside>
