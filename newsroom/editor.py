@@ -11,7 +11,10 @@ still publishes.
 
 from __future__ import annotations
 
-from .models import AngkaEdisi, CorpusRow, Edisi, LiveTemuan, TickerItem, Temuan
+from .models import AngkaEdisi, CorpusRow, Edisi, Kliping, LiveTemuan, TickerItem, Temuan
+
+# the front page carries at most this many story clusters
+_KLIPING_MAKS = 12
 
 
 def pick_angka(corpus_rows: list[CorpusRow], lead: Temuan | None) -> AngkaEdisi | None:
@@ -48,6 +51,7 @@ def assemble(
     survivors: list[Temuan],
     corpus_rows: list[CorpusRow],
     ticker: list[TickerItem],
+    kliping: list[Kliping] | None = None,
 ) -> Edisi | None:
     if not survivors:
         return None
@@ -66,4 +70,8 @@ def assemble(
         dek="Temuan paling menonjol edisi ini, diperiksa terhadap sumbernya sebelum naik cetak.",
         temuan=[LiveTemuan(lens=t.lens, headline=t.headline, body=t.body) for t in ranked],
         ticker=ticker,
+        # kliping is Lane A pass-through (verbatim headlines, no model text), so
+        # it skips the fact-gate and the lawyer by design
+        kliping=(sorted(kliping, key=lambda k: k.skor, reverse=True)[:_KLIPING_MAKS]
+                 if kliping else None),
     )

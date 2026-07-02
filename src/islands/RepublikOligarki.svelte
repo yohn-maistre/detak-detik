@@ -63,7 +63,7 @@
         <span class="ro-sub-num num accent">Rp 2.500.000</span>
       </div>
     </div>
-    <p class="ro-cap">Subsidi BBM per kapita per kelompok pendapatan. Rumah tangga terkaya menikmati <b class="accent">{lipat}×</b> lipat dari yang termiskin — dari anggaran yang sama. Lebih dari separuh subsidi BBM mengalir ke 20% teratas.</p>
+    <p class="ro-cap">Subsidi BBM per kapita per kelompok pendapatan. Rumah tangga terkaya menerima <b class="accent">{lipat}×</b> lipat dari yang termiskin, dari anggaran yang sama. Lebih dari separuh subsidi BBM mengalir ke 20% teratas.</p>
     <button class="chip"><span class="tick">⊙</span>bank dunia · iep · 12 jun 2026</button>
   </section>
 
@@ -75,7 +75,7 @@
         <i class:korp={i < TANAH_KORP}></i>
       {/each}
     </div>
-    <p class="ro-cap"><b class="accent">{TANAH_KORP} dari 100 hektare</b> lahan perkebunan dikuasai korporasi; sisanya — delapan petak — dibagi masyarakat dan petani kecil. Pada 2024, 58,7% deforestasi terjadi di dalam konsesi.</p>
+    <p class="ro-cap"><b class="accent">{TANAH_KORP} dari 100 hektare</b> lahan perkebunan dikuasai korporasi; sisanya (delapan petak) dibagi masyarakat dan petani kecil. Pada 2024, 58,7% deforestasi terjadi di dalam konsesi.</p>
     <button class="chip"><span class="tick">⊙</span>forest watch indonesia · auriga · 2025</button>
   </section>
 
@@ -85,13 +85,13 @@
     <div class="ro-asim">
       <div class="ro-asim-col kecil">
         <span class="ro-asim-tag mono">USAHA KECIL</span>
-        <p class="ro-asim-teks">Cakupan fasilitas PPh final diperketat (PP 20/2026); tidak ada keringanan biaya hidup. Mahasiswa menyebutnya “ditekan”.</p>
-        <span class="ro-asim-arah mono turun">SEKRUP DIKENCANGKAN ↓</span>
+        <p class="ro-asim-teks">Cakupan fasilitas PPh final diperketat (PP 20/2026); tidak ada keringanan biaya hidup.</p>
+        <span class="ro-asim-arah mono turun">ATURAN DIPERKETAT ↓</span>
       </div>
       <div class="ro-asim-col besar">
         <span class="ro-asim-tag mono">TAMBANG BESAR</span>
         <p class="ro-asim-teks">Kenaikan royalti minerba dan bea keluar yang dijadwalkan Juni 2026 ditunda pada Mei 2026, setelah “masukan pelaku usaha”.</p>
-        <span class="ro-asim-arah mono naik">SEKRUP DILONGGARKAN ↑</span>
+        <span class="ro-asim-arah mono naik">ATURAN DILONGGARKAN ↑</span>
       </div>
     </div>
     <p class="ro-cap mono ro-cap-kecil">CATATAN: ini asimetri perlakuan, bukan kenaikan tarif pajak UMKM. Tarif PPh final 0,5% tetap; yang berubah adalah cakupan dan penegakan. Sumber royalti: PP 19/2025 dan penundaan Mei 2026.</p>
@@ -101,7 +101,7 @@
     </div>
   </section>
 
-  <p class="ro-tutup fig">Lima puluh orang menguasai kekayaan setara lima puluh lima juta rakyat — hampir tiga perlima darinya dari nikel, batu bara, dan sawit. <span class="mono">(angka terverifikasi; rincian di Sumber &amp; Metode)</span></p>
+  <p class="ro-tutup fig">Lima puluh orang menguasai kekayaan setara lima puluh lima juta rakyat; hampir tiga perlima di antaranya berasal dari nikel, batu bara, dan sawit. <span class="mono">(angka terverifikasi; rincian di Sumber &amp; Metode)</span></p>
 </div>
 
 <style>

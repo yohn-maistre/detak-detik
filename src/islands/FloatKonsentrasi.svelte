@@ -112,7 +112,7 @@
   </div>
 
   <div class="fk-foot">
-    <p class="fk-note">Float setipis ini membuat harga mudah berayun dan indeks rentan — alasan yang dikutip saat MSCI membekukan sebagian bobot pada awal 2026. <span class="mono">Dokumen berdampingan, pembaca menyimpulkan.</span></p>
+    <p class="fk-note">Float setipis ini membuat harga mudah berayun dan indeks rentan, alasan yang dikutip saat MSCI membekukan sebagian bobot pada awal 2026. <span class="mono">Dokumen ditampilkan berdampingan; kesimpulan diserahkan kepada pembaca.</span></p>
     <button class="chip"><span class="tick">⊙</span>idx · msci · ojk · jun 2026 · (data contoh)</button>
   </div>
 </section>

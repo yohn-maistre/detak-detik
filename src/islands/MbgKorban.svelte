@@ -38,7 +38,7 @@
     <div class="mbg-tally">
       <span class="eyebrow">KORBAN KERACUNAN · CATATAN BERJALAN</span>
       <p class="mbg-big num" bind:this={bigEl}>{reducedMotion() ? fmt.format(TOTAL) : '0'}</p>
-      <p class="mbg-cap">jiwa, sebagian besar anak sekolah, hingga akhir 2025; pemantauan masih berjalan hari demi hari.</p>
+      <p class="mbg-cap">jiwa, sebagian besar anak sekolah, hingga akhir 2025; pemantauan masih berlangsung.</p>
       <div class="mbg-bars" aria-hidden="true">
         {#each BULAN as m (m.b)}
           <div class="mbg-col">
@@ -57,7 +57,7 @@
       <div class="mbg-row mono"><span>Anggaran 2026 (≈2×)</span><b class="num">Rp 335 T</b></div>
       <div class="mbg-row mono"><span>Sasaran penerima</span><b class="num">± 83 jt</b></div>
       <div class="mbg-row mono"><span>Dapur beroperasi</span><b class="num">21.102</b></div>
-      <p class="mbg-scale-teks">Program anti-kelaparan terbesar negara, dan angka korban yang menyertainya, sama-sama terus bertambah.</p>
+      <p class="mbg-scale-teks">Anggaran program naik dari Rp 171 T menjadi Rp 335 T; jumlah korban yang tercatat terus bertambah.</p>
       <button class="chip"><span class="tick">⊙</span>bgn · fsgi · jppi · (data contoh)</button>
     </aside>
   </div>

@@ -61,7 +61,7 @@
     <article class="wall-card">
       <span class="eyebrow">HUTAN PRIMER HILANG HARI INI</span>
       <p class="wall-val num">{fmt1.format((HUTAN_HA_PER_JAM * detikHariIni) / 3600)} ha</p>
-      <p class="wall-note">± {fmt1.format(HUTAN_HA_PER_JAM)} ha per jam — sekitar satu lapangan bola tiap dua menit</p>
+      <p class="wall-note">± {fmt1.format(HUTAN_HA_PER_JAM)} ha per jam, sekitar satu lapangan bola tiap dua menit</p>
       <span class="wall-chip mono">⊙ gfw/umd · 296.000 ha (2025) · laju rata-rata</span>
     </article>
 

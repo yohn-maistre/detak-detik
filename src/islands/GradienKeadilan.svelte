@@ -123,7 +123,7 @@
     <h3 class="gk-title display">Gradien Keadilan</h3>
     <button class="chip" onclick={drop}>↻ Putar ulang</button>
   </div>
-  <p class="gk-sub">Kerugian negara (log) × vonis penjara. Titik jatuh seperti sedimen. <span class="mono">(data contoh)</span></p>
+  <p class="gk-sub">Kerugian negara (log) × vonis penjara. Setiap titik adalah satu putusan. <span class="mono">(data contoh)</span></p>
 
   <svg
     bind:this={svgEl}

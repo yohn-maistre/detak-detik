@@ -13,7 +13,7 @@
   // curated fallbacks — always good, used when live fetch is unavailable
   const RUPA_CADANGAN = {
     img: '', judul: 'Penangkapan Pangeran Diponegoro', seniman: 'Raden Saleh', tahun: '1857',
-    blurb: 'Raden Saleh melukis ulang adegan penangkapan versi pelukis Belanda — tetapi menukar sudut pandangnya: Diponegoro berdiri tegak, para perwira digambar berkepala sedikit besar. Perspektif adalah pernyataan.',
+    blurb: 'Raden Saleh melukis ulang adegan penangkapan versi pelukis Belanda dengan menukar sudut pandangnya: Diponegoro berdiri tegak, para perwira digambar berkepala sedikit besar.',
     lisensi: 'domain publik',
   };
   const HAYATI_CADANGAN = {

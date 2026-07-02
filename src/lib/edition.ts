@@ -11,6 +11,16 @@ export interface LiveTemuan { lens?: string; headline?: string; body?: string }
 export interface LiveTicker { src: string; teks: string; url?: string }
 export interface LiveAgenda { jam: string; teks: string; tag?: string }
 export interface LiveMakro { label: string; nilai: string; pre?: string; acuan?: string; chip?: string; nada?: string }
+export interface LiveKlipingItem { judul: string; url?: string; media: string; grup?: string; independen?: boolean }
+export interface LiveKliping {
+  id?: string;
+  utama: LiveKlipingItem;
+  liputan?: LiveKlipingItem[];
+  n_media?: number;
+  n_grup?: number;
+  skor?: number;
+  titik_buta?: boolean;
+}
 export interface LiveEdisi {
   edisi?: number;
   terbit?: string;
@@ -22,6 +32,7 @@ export interface LiveEdisi {
   temuan?: LiveTemuan[];
   agenda?: LiveAgenda[];
   makro?: LiveMakro[];
+  kliping?: LiveKliping[];
   harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }

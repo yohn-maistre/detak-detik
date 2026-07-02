@@ -28,7 +28,7 @@ export interface Skor {
 
 export const SKOR: Record<string, Skor> = {
   eksekutif: {
-    ringkas: 'Kuasa, dan apa yang terbuka untuk diperiksa.',
+    ringkas: 'Belanja, regulasi, dan keterbukaan laporan.',
     tiles: [
       { tipe: 'stat', besar: 'Rp 1,2 T', label: 'Belanja perjalanan dinas kepresidenan 2026', sumber: 'setpres · apbn', nada: 'buruk', sub: 'naik dari ±Rp 0,9 T (2025)' },
       { tipe: 'stat', besar: '247', label: 'Perpres & PP diterbitkan tahun ini', sumber: 'peraturan.go.id', nada: 'datar' },
@@ -36,7 +36,7 @@ export const SKOR: Record<string, Skor> = {
     ],
   },
   legislatif: {
-    ringkas: 'Yang dihasilkan, dan seberapa hadir.',
+    ringkas: 'Produk legislasi, kehadiran, dan kepatuhan lapor harta.',
     tiles: [
       { tipe: 'waffle', isi: 7, dari: 47, label: 'RUU disahkan dari target Prolegnas 2026', sumber: 'dpr.go.id', nada: 'buruk' },
       { tipe: 'stat', besar: '62%', label: 'Kehadiran rata-rata rapat paripurna', sumber: 'kompilasi redaksi', nada: 'buruk' },
@@ -44,7 +44,7 @@ export const SKOR: Record<string, Skor> = {
     ],
   },
   yudikatif: {
-    ringkas: 'Yang kembali, dan yang dijaga.',
+    ringkas: 'Pemulihan aset dan penyelesaian perkara.',
     tiles: [
       { tipe: 'waffle', isi: 13, dari: 100, label: 'Kerugian korupsi yang kembali ke kas negara', sumber: 'kpk · kejagung', nada: 'buruk' },
       { tipe: 'stat', besar: '61%', label: 'Perkara selesai tepat waktu (clearance)', sumber: 'ma · sipp', nada: 'datar' },
@@ -52,7 +52,7 @@ export const SKOR: Record<string, Skor> = {
     ],
   },
   aparat: {
-    ringkas: 'Anggaran besar, akuntabilitas yang menyempit.',
+    ringkas: 'Anggaran, insiden kekerasan, dan penyelesaiannya.',
     tiles: [
       { tipe: 'funnel', label: 'Dari insiden ke vonis', sumber: 'kontras · imparsial', langkah: [
         { k: 'Insiden kekerasan', v: '602', w: 100 },
@@ -65,7 +65,7 @@ export const SKOR: Record<string, Skor> = {
     ],
   },
   daerah: {
-    ringkas: 'Siapa yang membiayai dirinya sendiri.',
+    ringkas: 'Kemandirian fiskal dan kualitas laporan keuangan.',
     tiles: [
       { tipe: 'dumbbell', label: 'Sumber pendapatan daerah, rata-rata', sumber: 'djpk kemenkeu', satuan: '%', a: { k: 'PAD sendiri', v: 15 }, b: { k: 'Transfer pusat', v: 65 } },
       { tipe: 'stat', besar: '21 / 38', label: 'Provinsi beropini WTP dari BPK', sumber: 'bpk', nada: 'datar' },

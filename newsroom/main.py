@@ -39,6 +39,7 @@ from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
 from .sources.hutan import gather_hutan
 from .sources.janji import gather_janji
+from .sources.kliping import gather_kliping
 from .sources.papua import gather_papua
 from .sources.pulse import gather_pulse
 
@@ -69,6 +70,13 @@ async def run() -> int:
               + hutan_rows + janji_rows + papua_rows)
     corpus_map = {r.id: r for r in corpus}
     log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
+
+    # the kliping desk is Lane A pass-through (verbatim headlines, no model
+    # text), so it never enters the fact-gate or the lawyer; dark feeds are
+    # logged here (the roster records them honestly either way)
+    kliping, kliping_gelap, kliping_feeds = await gather_kliping(EDISI_NO)
+    log.event("kliping", klaster=len(kliping), per_feed=kliping_feeds,
+              gelap=kliping_gelap)
 
     # desks run in parallel; each gates against the full corpus
     drafted = await asyncio.gather(
@@ -106,7 +114,7 @@ async def run() -> int:
                 log.event("ditulis_ulang", temuan_id=t.temuan_id, headline=reviewed.headline)
             survivors.append(reviewed)
 
-    edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines)
+    edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines, kliping)
     if edisi is None:
         log.event("kosong", catatan="tak ada temuan layak terbit; edisi lama dibiarkan, tidak ditimpa")
         log.close()

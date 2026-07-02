@@ -96,7 +96,7 @@
     <div class="bs-tamat">
       <p class="bs-skor display num">{benarCount}/{BENAR_SALAH.length}</p>
       <span class="stamp bs-verdict">{gelar(benarCount)}</span>
-      <p class="bs-catatan">Rentetan terpanjang: {rentetanMax}. Setiap verdik menyertakan sumbernya, begitu pula koran ini.</p>
+      <p class="bs-catatan">Rentetan terpanjang: {rentetanMax}. Setiap verdik menyertakan sumbernya.</p>
       <button class="bs-act mono" onclick={ulang}>↻ Ulangi</button>
     </div>
   {/if}

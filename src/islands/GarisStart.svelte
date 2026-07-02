@@ -17,7 +17,7 @@
       chip: 'world bank · nv.ind.manf.zs (seri disederhanakan)',
       idn: [{ t: 2000, v: 27.7 }, { t: 2005, v: 27.4 }, { t: 2010, v: 22.0 }, { t: 2015, v: 20.9 }, { t: 2020, v: 19.9 }, { t: 2025, v: 17.4 }],
       vnm: [{ t: 2000, v: 17.0 }, { t: 2005, v: 18.8 }, { t: 2010, v: 17.0 }, { t: 2015, v: 18.5 }, { t: 2020, v: 23.0 }, { t: 2025, v: 25.0 }],
-      catatan: 'Indonesia turun sebelum sempat kaya; Vietnam masih menanjak.',
+      catatan: 'Pangsa manufaktur Indonesia turun dari 27,7% menjadi 17,4% PDB; pangsa Vietnam naik menjadi 25,0%.',
     },
     {
       judul: 'FDI masuk · % PDB',
@@ -25,7 +25,7 @@
       chip: 'world bank · bx.klt.dinv (seri disederhanakan)',
       idn: [{ t: 2000, v: -2.8 }, { t: 2005, v: 2.9 }, { t: 2010, v: 1.8 }, { t: 2015, v: 2.3 }, { t: 2020, v: 1.8 }, { t: 2024, v: 1.6 }],
       vnm: [{ t: 2000, v: 4.2 }, { t: 2005, v: 3.4 }, { t: 2010, v: 6.9 }, { t: 2015, v: 6.1 }, { t: 2020, v: 4.6 }, { t: 2024, v: 4.2 }],
-      catatan: 'Modal asing memilih; rasionya bicara lebih jujur dari nominalnya.',
+      catatan: 'Rasio FDI terhadap PDB Vietnam tercatat 4,2% pada 2024; Indonesia 1,6%.',
     },
     {
       judul: 'PISA Matematika',
@@ -41,7 +41,7 @@
       chip: 'bps sakernas · gso vietnam · 2025',
       idn: [{ t: 2015, v: 142 }, { t: 2020, v: 176 }, { t: 2025, v: 198 }],
       vnm: [{ t: 2015, v: 195 }, { t: 2020, v: 255 }, { t: 2025, v: 331 }],
-      catatan: 'Buruh Vietnam kini dibayar ±70% lebih tinggi. Banyak yang masih mengira sebaliknya.',
+      catatan: 'Buruh Vietnam kini dibayar ±70% lebih tinggi.',
     },
   ];
 

@@ -58,7 +58,7 @@
       <p class="sp-lbl mono">DIPULIHKAN NEGARA · {persen}%</p>
     </div>
   </div>
-  <p class="sp-foot fig">Sembilan puluh menit habis. Sembilan puluh lima dari setiap seratus rupiah tidak pernah kembali. <button class="chip"><span class="tick">⊙</span>icw 2024</button></p>
+  <p class="sp-foot fig">Selama 90 menit itu, 95 dari setiap 100 rupiah yang hilang tidak kembali ke kas negara. <button class="chip"><span class="tick">⊙</span>icw 2024</button></p>
 </section>
 
 <style>

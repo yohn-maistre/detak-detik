@@ -38,7 +38,7 @@
       </div>
     {/each}
   </div>
-  <p class="pu-kaki fig">Yang memperluas kewenangan melaju dalam hitungan hari; yang merampas hasil korupsi menunggu belasan tahun. Skala logaritmik — pada skala biasa, sembilan baris ini tidak muat satu halaman.</p>
+  <p class="pu-kaki fig">Rentang waktunya terbentang dari 13 hari hingga lebih dari 16 tahun bagi rancangan yang belum disahkan. Skala logaritmik: pada skala linear, sembilan baris ini tidak muat dalam satu halaman.</p>
   <div class="pu-chips">
     <button class="chip"><span class="tick">⊙</span>dpr.go.id · prolegnas</button>
     <button class="chip hop">kompilasi redaksi · (data contoh) · verifikasi berlanjut</button>

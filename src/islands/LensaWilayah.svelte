@@ -151,7 +151,7 @@
 <section class="lw" class:prov={!isNas} data-no-stempel data-ref="dossier" id="lensa" bind:this={root}>
   <div class="lw-head">
     <span class="inkbar"><span class="dot">●</span>LENSA WILAYAH</span>
-    <span class="eyebrow lw-head-sub">{isNas ? 'ANGKA DASAR NASIONAL · CARI PROVINSIMU UNTUK MELIHAT DI MANA IA BERDIRI' : 'SATU PROVINSI, DIBACA TERHADAP ACUAN NASIONAL'}</span>
+    <span class="eyebrow lw-head-sub">{isNas ? 'ANGKA DASAR NASIONAL · CARI PROVINSI UNTUK MELIHAT POSISINYA' : 'SATU PROVINSI, DIBACA TERHADAP ACUAN NASIONAL'}</span>
     <span class="coordstamp lw-tele mono">{isNas ? 'LENS · NASIONAL' : `LENS · ${d.kode} · IPM ${ipmRank}/${N}`}</span>
   </div>
 
@@ -181,7 +181,7 @@
             <span class="ld-opt-nama">{r.nama}</span><span class="ld-opt-pulau">{r.pulau}</span>
           </button>
         {:else}
-          <p class="ld-kosong mono">tak ada provinsi cocok dengan “{query}”.</p>
+          <p class="ld-kosong mono">tidak ada provinsi yang cocok dengan “{query}”.</p>
         {/each}
       </div>
     {/if}

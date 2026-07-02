@@ -21,8 +21,8 @@
     const ed = liveEd;
     const nomor = ed?.edisi ?? EDISI.nomor;
     const angka = ed?.angka_edisi
-      ? `${ed.angka_edisi.nilai.toLocaleString('id-ID')} — ${ed.angka_edisi.label}`
-      : `${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} — ${ANGKA_EDISI.label}`;
+      ? `${ed.angka_edisi.nilai.toLocaleString('id-ID')} · ${ed.angka_edisi.label}`
+      : `${ANGKA_EDISI.prefix} ${ANGKA_EDISI.nilai.toLocaleString('id-ID')} · ${ANGKA_EDISI.label}`;
     const temuan = ((ed?.temuan?.length ? ed.temuan : TEMUAN) as { lens?: string; headline?: string; body?: string }[])
       .map((t) => `Temuan ${t.lens}: ${t.headline}. ${t.body}`);
     return [
@@ -107,14 +107,14 @@
     judul: 'Edisi ini dalam 30 detik',
     asal: 'newsroom' as const,
     langkah: [
-      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi ini. Pagi: keadaan hari ini. Malam: yang tak ingin dilihat. Nusantara: yang tetap tinggal.', tahan_ms: 4200 },
+      { cmd: 'scroll_to', params: { anchor: 'depan' }, narasi: 'Edisi pagi ini. Pagi: keadaan hari ini. Malam: pemeriksaan lima cabang kekuasaan. Nusantara: arsip yang menetap.', tahan_ms: 4200 },
       { cmd: 'highlight', params: { ids: ['peta'] }, narasi: 'Peta Kabar: lapisan data langsung. Minta saya tunjukkan gempa, kebakaran, atau udara di satu pulau.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['lensa'] }, narasi: 'Lensa Wilayah: cari provinsimu, lihat di mana ia berdiri di antara 38 provinsi.', tahan_ms: 4400 },
       { cmd: 'highlight', params: { ids: ['kuasa'] }, narasi: 'Eksekutif: presiden dan kabinet terbesar sejak 1966, dan seberapa terbuka pertanggungjawabannya.', tahan_ms: 4800 },
       { cmd: 'highlight', params: { ids: ['hukum'] }, narasi: 'Yudikatif: vonis dibanding kerugian, dari putusan pengadilan sendiri.', tahan_ms: 4400 },
-      { cmd: 'highlight', params: { ids: ['aparat'] }, narasi: 'Aparat: anggaran terbesar negara, pertanggungjawaban yang paling jarang sampai ke pengadilan.', tahan_ms: 4800 },
-      { cmd: 'highlight', params: { ids: ['hening'] }, narasi: 'Yang tidak dihitung: baris yang kosong di statistik resmi juga sebuah dokumen.', tahan_ms: 4400 },
-      { cmd: 'scroll_to', params: { anchor: 'nusantara' }, narasi: 'Dan penutup: tanah, hayati, dan rupa. Semua angka membawa kuitansinya.', tahan_ms: 3600 },
+      { cmd: 'highlight', params: { ids: ['aparat'] }, narasi: 'Aparat: anggaran terbesar di APBN; sebagian besar insiden kekerasan berakhir di sidang etik.', tahan_ms: 4800 },
+      { cmd: 'highlight', params: { ids: ['hening'] }, narasi: 'Yang tidak dihitung: ketiadaan data di statistik resmi dicatat sebagai fakta.', tahan_ms: 4400 },
+      { cmd: 'scroll_to', params: { anchor: 'nusantara' }, narasi: 'Penutup: tanah, hayati, dan rupa. Setiap angka menyertakan sumbernya.', tahan_ms: 3600 },
     ],
   };
 

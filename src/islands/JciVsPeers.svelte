@@ -112,7 +112,7 @@
     : 'BURSA, DIINDEKS KE 100 · JAN → JUN 2026');
   const dek = $derived(live
     ? 'Bursa Jakarta dan tetangganya diukur dari titik yang sama, ditarik dari penutupan harian enam bulan terakhir.'
-    : 'Empat bursa Asia diukur dari titik yang sama. Yang lain menanjak; IHSG meluncur paling dalam di antara indeks utama dunia.');
+    : 'Empat bursa Asia diukur dari titik yang sama. Tiga indeks pembanding mencatat kenaikan; IHSG mencatat penurunan terbesar di antara indeks utama dunia.');
   const ihsgPct = $derived(ihsg.akhir - 100);
   const ariaSvg = $derived(live
     ? 'IHSG dibanding bursa Asia lain enam bulan terakhir, diindeks ke 100, data langsung'
@@ -188,7 +188,7 @@
     <circle class="jp-dot-ihsg" cx={px(N - 1)} cy={py(ihsg.akhir)} r="4.2" />
     <text class="jp-end jp-end-ihsg" x={px(N - 1) + 7} y={py(ihsg.akhir) + 1}>IHSG {Math.round(ihsg.akhir)}</text>
     {#if !live}
-      <text class="jp-end-sub jp-end-ihsg" x={px(N - 1) + 7} y={py(ihsg.akhir) + 13}>TERDALAM SEDUNIA</text>
+      <text class="jp-end-sub jp-end-ihsg" x={px(N - 1) + 7} y={py(ihsg.akhir) + 13}>−31% SEJAK JAN</text>
     {/if}
 
     <text class="jp-x0" x={PAD.l} y={H - 6}>{x0Lab}</text>

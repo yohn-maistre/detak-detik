@@ -21,7 +21,7 @@
     { title: 'Suku Nias', nama: 'Nias', wilayah: 'Sumatra Utara', rumpun: 'Austronesia', lat: 1.1, lon: 97.7, blurb: 'Di pulau barat Sumatra, membangun rumah batu megalitik dan tradisi lompat batu fahombo setinggi dua meter sebagai tanda kedewasaan.' },
     { title: 'Orang Rimba', nama: 'Orang Rimba', wilayah: 'Jambi', rumpun: 'Melayu', lat: -1.8, lon: 102.6, blurb: 'Peramu-pengembara di hutan Sumatra yang berpindah mengikuti pantangan melangun. Wilayah jelajahnya menyusut seiring kebun sawit meluas.' },
     { title: 'Suku Tengger', nama: 'Tengger', wilayah: 'Jawa Timur', rumpun: 'Jawa', lat: -7.94, lon: 112.95, blurb: 'Pewaris Majapahit di lereng Bromo yang tetap memeluk Hindu; tiap tahun melempar hasil bumi ke kawah dalam upacara Yadnya Kasada.' },
-    { title: 'Suku Sasak', nama: 'Sasak', wilayah: 'Lombok', rumpun: 'Austronesia', lat: -8.6, lon: 116.3, blurb: 'Mayoritas penghuni Lombok, dengan tenun songket, rumah lumbung beratap tinggi, dan tradisi peresean — duel rotan dan perisai.' },
+    { title: 'Suku Sasak', nama: 'Sasak', wilayah: 'Lombok', rumpun: 'Austronesia', lat: -8.6, lon: 116.3, blurb: 'Mayoritas penghuni Lombok, dengan tenun songket, rumah lumbung beratap tinggi, dan tradisi peresean, duel rotan dan perisai.' },
   ];
   const SLOT = Math.floor(Date.now() / (12 * 3600_000));
   const base = SUKU[SLOT % SUKU.length]!;

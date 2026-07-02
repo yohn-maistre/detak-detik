@@ -39,7 +39,7 @@
   <div class="sd-head">
     <span class="eyebrow">SENSUS DIRI · CERMIN STATISTIK</span>
   </div>
-  <p class="sd-intro">Dua angka, satu cermin. Tidak ada yang dikirim ke mana pun — seluruh hitungan terjadi di perangkat ini.</p>
+  <p class="sd-intro">Seluruh hitungan terjadi di perangkat ini; tidak ada data yang dikirim ke mana pun.</p>
 
   <div class="sd-form">
     <label class="sd-field">
@@ -61,7 +61,7 @@
         <span class:lewat={!hasil.wb}>{hasil.wb ? 'DI BAWAH' : 'DI ATAS'} GARIS BANK DUNIA (Rp {fmt.format(GARIS_WB)})</span>
       </div>
       {#if !hasil.bps && hasil.wb}
-        <p class="sd-catatan">Menurut negara kamu tidak miskin; menurut Bank Dunia kamu belum aman. Dua garis itu punya lembarnya sendiri di <a class="ink-link" href="/perspektif/dua-garis-kemiskinan">arsip perspektif</a>.</p>
+        <p class="sd-catatan">Pengeluaran ini berada di atas garis BPS namun di bawah garis Bank Dunia; kedua garis itu diulas di <a class="ink-link" href="/perspektif/dua-garis-kemiskinan">arsip perspektif</a>.</p>
       {/if}
       {#if hasil.mudaPct !== null}
         <p class="sd-baris">Kamu lebih muda dari ± <b class="num">{hasil.mudaPct}%</b> penduduk (median umur {UMUR_MEDIAN.toString().replace('.', ',')} tahun).</p>

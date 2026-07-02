@@ -181,12 +181,12 @@ export const PUTUSAN_HARIAN = [3, 5, 2, 7, 4, 6, 9, 5, 8, 6, 11, 7, 6, 5];
 
 /** Benar atau Salah: pernyataan untuk permainan verifikasi cepat (Mesin). */
 export const BENAR_SALAH: { teks: string; benar: boolean; catatan: string; sumber: string }[] = [
-  { teks: 'Belanja pegawai Kabupaten Nabire memakan 58,2% dari APBD 2026.', benar: true, catatan: 'Persis seperti di struk: 58,2%, belanja modal hanya 11,4%.', sumber: 'djpk_apbd · 2026' },
-  { teks: 'Rasio elektrifikasi Papua sudah menyentuh 100% sejak 2023.', benar: false, catatan: 'Tercatat 94,8% per Desember 2025. Janji 100% tidak tercapai.', sumber: 'esdm · des 2025' },
+  { teks: 'Belanja pegawai Kabupaten Nabire mencapai 58,2% dari APBD 2026.', benar: true, catatan: 'Sesuai dokumen anggaran: 58,2%; belanja modal tercatat 11,4%.', sumber: 'djpk_apbd · 2026' },
+  { teks: 'Rasio elektrifikasi Papua sudah mencapai 100% sejak 2023.', benar: false, catatan: 'Tercatat 94,8% per Desember 2025. Janji 100% tidak tercapai.', sumber: 'esdm · des 2025' },
   { teks: '214 peringatan deforestasi terdeteksi kemarin, 31 di dalam konsesi.', benar: true, catatan: 'Peringatan GLAD/RADD, beririsan dengan poligon konsesi PSN.', sumber: 'gfw_alerts · 11 jun' },
-  { teks: 'Harga cabai rawit di Manado turun 41% dalam sepekan terakhir.', benar: false, catatan: 'Terbalik: harganya NAIK 41% dalam sepekan.', sumber: 'panel harga · 11 jun' },
-  { teks: 'APBD Kabupaten Puncak tahun 2026 melewati angka satu triliun rupiah.', benar: true, catatan: 'Rp 1,12 T untuk 2.731 aparatur dan 9 puskesmas.', sumber: 'djpk · 2026' },
-  { teks: 'Semua kabupaten di Papua Tengah punya data pengungsian resmi.', benar: false, catatan: 'Baris itu kosong di statistik resmi. Ketiadaan juga dokumen.', sumber: 'keheningan · edisi 41' },
+  { teks: 'Harga cabai rawit di Manado turun 41% dalam sepekan terakhir.', benar: false, catatan: 'Yang tercatat adalah kenaikan 41% dalam sepekan.', sumber: 'panel harga · 11 jun' },
+  { teks: 'APBD Kabupaten Puncak tahun 2026 melewati angka satu triliun rupiah.', benar: true, catatan: 'APBD tercatat Rp 1,12 T, dengan 2.731 aparatur dan 9 puskesmas.', sumber: 'djpk · 2026' },
+  { teks: 'Semua kabupaten di Papua Tengah memiliki data pengungsian resmi.', benar: false, catatan: 'Baris tersebut kosong dalam statistik resmi; ketiadaan data itu sendiri tercatat sebagai temuan.', sumber: 'keheningan · edisi 41' },
 ];
 
 export const TEBAK = {
@@ -261,7 +261,7 @@ export const APARAT = {
     { k: 'Polri', v: 'Rp 145,7 T' },
   ],
   kekerasan: { jumlah: 602, tembak: 411, tewas: 10, periode: 'Jul 2024 – Jun 2025', sumber: 'kontras' },
-  impunitas: 'Kasus terhadap perwira umumnya berakhir di sidang etik (demosi atau pemberhentian), bukan pidana. Dalam kematian Affan Kurniawan (rantis Brimob, 28 Agu 2025), perwira disanksi etik; warga sipil yang ditangkap justru diadili pidana.',
+  impunitas: 'Kasus terhadap perwira umumnya berakhir di sidang etik (demosi atau pemberhentian), bukan pidana. Dalam kematian Affan Kurniawan (rantis Brimob, 28 Agu 2025), perwira disanksi etik; warga sipil yang ditangkap diadili pidana.',
   perwiraSipil: 2569,
 };
 
@@ -269,7 +269,7 @@ export const APARAT = {
 export const EKONOMI = {
   apbn: { belanja: 'Rp 3.842 T', defisit: '> 3% PDB (proyeksi)', pajak: 'rasio ± 10%' },
   otsus: {
-    teks: 'Sejak 2002 Papua menerima dana otonomi khusus Rp 138,65 triliun; jilid kedua diproyeksikan ± Rp 234 triliun hingga 2041. Sementara itu provinsi-provinsi Papua tetap mencatat kemiskinan tertinggi di Indonesia.',
+    teks: 'Sejak 2002 Papua menerima dana otonomi khusus Rp 138,65 triliun; jilid kedua diproyeksikan ± Rp 234 triliun hingga 2041. Provinsi-provinsi Papua mencatat tingkat kemiskinan tertinggi di Indonesia.',
     chip: 'djpk · bps',
   },
 };
@@ -281,12 +281,12 @@ export const EKONOMI = {
     unemployment. A future weekend lowers this to kabupaten (see
     docs/DATA_SOURCES.md). */
 export const DAERAH = [
-  { kode: 'nasional', nama: 'Indonesia', pulau: 'Nasional', penduduk: '284,4 jt', ump: 'Rp 3,1 jt', miskin: '8,25%', dokter: '0,76', ipm: '74,4', pegawai: '35%', tpt: '4,68%', fakta: 'Rerata nasional. Cari provinsi untuk melihat di mana ia berdiri.' },
+  { kode: 'nasional', nama: 'Indonesia', pulau: 'Nasional', penduduk: '284,4 jt', ump: 'Rp 3,1 jt', miskin: '8,25%', dokter: '0,76', ipm: '74,4', pegawai: '35%', tpt: '4,68%', fakta: 'Rerata nasional. Cari provinsi untuk melihat posisinya.' },
 
   { kode: '11', nama: 'Aceh', pulau: 'Sumatra', penduduk: '5,5 jt', ump: 'Rp 3,7 jt', miskin: '14,23%', dokter: '0,80', ipm: '74,7', pegawai: '41%', tpt: '5,75%', fakta: 'Dana Otsus ± Rp 3,7 T (2026); kemiskinan tertinggi di Sumatra.' },
   { kode: '12', nama: 'Sumatera Utara', pulau: 'Sumatra', penduduk: '15,4 jt', ump: 'Rp 2,99 jt', miskin: '8,15%', dokter: '0,62', ipm: '73,0', pegawai: '33%', tpt: '5,60%', fakta: 'Provinsi terpadat di luar Jawa; gerbang ekonomi Sumatra.' },
   { kode: '13', nama: 'Sumatera Barat', pulau: 'Sumatra', penduduk: '5,7 jt', ump: 'Rp 2,99 jt', miskin: '5,90%', dokter: '0,70', ipm: '74,2', pegawai: '36%', tpt: '5,90%', fakta: 'IPM di atas rerata nasional, kemiskinan di bawahnya.' },
-  { kode: '14', nama: 'Riau', pulau: 'Sumatra', penduduk: '6,7 jt', ump: 'Rp 3,51 jt', miskin: '6,68%', dokter: '0,55', ipm: '74,6', pegawai: '30%', tpt: '4,30%', fakta: 'Sawit dan migas: pendapatan tinggi, layanan masih timpang.' },
+  { kode: '14', nama: 'Riau', pulau: 'Sumatra', penduduk: '6,7 jt', ump: 'Rp 3,51 jt', miskin: '6,68%', dokter: '0,55', ipm: '74,6', pegawai: '30%', tpt: '4,30%', fakta: 'Sawit dan migas: pendapatan tinggi, rasio dokter di bawah rerata nasional.' },
   { kode: '15', nama: 'Jambi', pulau: 'Sumatra', penduduk: '3,7 jt', ump: 'Rp 3,30 jt', miskin: '7,58%', dokter: '0,45', ipm: '73,0', pegawai: '34%', tpt: '4,50%', fakta: 'Rasio dokter di bawah rerata nasional.' },
   { kode: '16', nama: 'Sumatera Selatan', pulau: 'Sumatra', penduduk: '8,8 jt', ump: 'Rp 3,68 jt', miskin: '10,80%', dokter: '0,40', ipm: '71,4', pegawai: '33%', tpt: '4,30%', fakta: 'Kemiskinan dua digit; rasio dokter terendah di Sumatra.' },
   { kode: '17', nama: 'Bengkulu', pulau: 'Sumatra', penduduk: '2,1 jt', ump: 'Rp 2,67 jt', miskin: '14,04%', dokter: '0,55', ipm: '72,5', pegawai: '38%', tpt: '3,40%', fakta: 'Kemiskinan dua digit meski penduduk paling sedikit di Sumatra.' },
@@ -313,7 +313,7 @@ export const DAERAH = [
 
   { kode: '71', nama: 'Sulawesi Utara', pulau: 'Sulawesi', penduduk: '2,7 jt', ump: 'Rp 3,55 jt', miskin: '7,38%', dokter: '0,80', ipm: '75,7', pegawai: '32%', tpt: '5,50%', fakta: 'IPM dan rasio dokter di atas rerata nasional.' },
   { kode: '72', nama: 'Sulawesi Tengah', pulau: 'Sulawesi', penduduk: '3,1 jt', ump: 'Rp 2,91 jt', miskin: '12,33%', dokter: '0,50', ipm: '72,0', pegawai: '36%', tpt: '3,20%', fakta: 'Pusat smelter nikel Morowali: pertumbuhan tinggi, kemiskinan tinggi.' },
-  { kode: '73', nama: 'Sulawesi Selatan', pulau: 'Sulawesi', penduduk: '9,4 jt', ump: 'Rp 3,66 jt', miskin: '8,70%', dokter: '0,70', ipm: '73,5', pegawai: '36%', tpt: '4,30%', fakta: 'Gerbang timur; lumbung pangan dengan ketimpangan layanan.' },
+  { kode: '73', nama: 'Sulawesi Selatan', pulau: 'Sulawesi', penduduk: '9,4 jt', ump: 'Rp 3,66 jt', miskin: '8,70%', dokter: '0,70', ipm: '73,5', pegawai: '36%', tpt: '4,30%', fakta: 'Gerbang timur; lumbung pangan, rasio dokter di bawah rerata nasional.' },
   { kode: '74', nama: 'Sulawesi Tenggara', pulau: 'Sulawesi', penduduk: '2,8 jt', ump: 'Rp 3,07 jt', miskin: '11,40%', dokter: '0,55', ipm: '72,5', pegawai: '37%', tpt: '3,20%', fakta: 'Tambang nikel meluas; kemiskinan dua digit.' },
   { kode: '75', nama: 'Gorontalo', pulau: 'Sulawesi', penduduk: '1,2 jt', ump: 'Rp 3,22 jt', miskin: '15,00%', dokter: '0,55', ipm: '70,5', pegawai: '38%', tpt: '3,80%', fakta: 'Kemiskinan tertinggi di Sulawesi: 15,00%.' },
   { kode: '76', nama: 'Sulawesi Barat', pulau: 'Sulawesi', penduduk: '1,5 jt', ump: 'Rp 3,03 jt', miskin: '11,20%', dokter: '0,40', ipm: '67,5', pegawai: '38%', tpt: '2,90%', fakta: 'IPM terendah di Sulawesi; pengangguran terendah.' },

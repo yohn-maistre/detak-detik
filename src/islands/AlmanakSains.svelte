@@ -16,13 +16,13 @@
   const ENTRI = [
     {
       judul: 'Tentang ternak dan atmosfer',
-      teks: `Indonesia memelihara sekitar 18,6 juta ekor sapi. Pencernaan mereka melepas metana setara ±${sapiCo2JtTon} juta ton CO₂ per tahun — kira-kira knalpot 11 juta mobil yang tidak pernah dimatikan.`,
+      teks: `Indonesia memelihara sekitar 18,6 juta ekor sapi. Pencernaan mereka melepas metana setara ±${sapiCo2JtTon} juta ton CO₂ per tahun, kira-kira setara emisi tahunan 11 juta mobil.`,
       rumus: '18,6 jt ekor × 99 kg CH₄/th × GWP 28',
       chips: ['bps · populasi ternak', 'fao · faktor emisi'],
     },
     {
       judul: 'Tentang batu dari langit',
-      teks: `Seandainya asteroid berdiameter 500 meter jatuh di ${kota} hari ini, radius kehancuran beratnya mencapai ±30 km — lebih luas dari kota itu sendiri. Probabilitas tahun ini: hampir nol. Almanak mencatatnya supaya angka besar punya pembanding.`,
+      teks: `Seandainya asteroid berdiameter 500 meter jatuh di ${kota} hari ini, radius kehancuran beratnya mencapai ±30 km, lebih luas dari kota itu sendiri. Probabilitas tahun ini: hampir nol. Almanak mencatatnya supaya angka besar punya pembanding.`,
       rumus: 'impact-scaling purdue/imperial · d=500 m, v=17 km/s',
       chips: ['earth impact effects program'],
     },
@@ -34,13 +34,13 @@
     },
     {
       judul: 'Tentang gunung yang bernapas',
-      teks: 'Republik ini berdiri di atas 127 gunung api aktif — terbanyak di dunia. Tujuh puluh enam di antaranya pernah meletus sejak tahun 1600. Sekitar 175 juta jiwa tinggal dalam radius 100 km dari salah satunya.',
+      teks: 'Republik ini berdiri di atas 127 gunung api aktif, terbanyak di dunia. Tujuh puluh enam di antaranya pernah meletus sejak tahun 1600. Sekitar 175 juta jiwa tinggal dalam radius 100 km dari salah satunya.',
       rumus: 'katalog gunung api holosen',
       chips: ['smithsonian gvp', 'magma esdm'],
     },
     {
       judul: 'Tentang 718 cara mengucapkan air',
-      teks: 'Tercatat 718 bahasa daerah hidup di kepulauan ini — kedua terbanyak di dunia setelah Papua Nugini. Sebagian dituturkan kurang dari seratus orang; setiap dasawarsa, beberapa di antaranya berhenti dituturkan sama sekali.',
+      teks: 'Tercatat 718 bahasa daerah hidup di kepulauan ini, kedua terbanyak di dunia setelah Papua Nugini. Sebagian dituturkan kurang dari seratus orang; setiap dasawarsa, beberapa di antaranya berhenti dituturkan sama sekali.',
       rumus: 'pemetaan bahasa kemdikbudristek',
       chips: ['badan bahasa · 718 bahasa'],
     },

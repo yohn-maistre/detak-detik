@@ -52,6 +52,36 @@ class TickerItem(BaseModel):
     url: str | None = None
 
 
+class KlipingItem(BaseModel):
+    """One outlet's coverage of a clustered story. `judul` is verbatim Lane A
+    text (a headline copied as-is from the outlet's feed, no model ever touches
+    it); `grup` is the documented ownership group from the media roster and
+    `independen` its documented independence flag (the site renders a filled
+    square per independent outlet, a hollow one per conglomerate outlet)."""
+
+    judul: str
+    url: str
+    media: str
+    grup: str
+    independen: bool = False
+
+
+class Kliping(BaseModel):
+    """One story cluster from the kliping desk: the same event as covered across
+    outlets, scored by ownership diversity (n_grup weighs double so corroboration
+    across groups beats volume inside one group). `titik_buta` marks coverage
+    that never leaves a single ownership group."""
+
+    id: str
+    utama: KlipingItem
+    liputan: list[KlipingItem]
+    n_media: int
+    n_grup: int
+    skor: int
+    titik_buta: bool
+    tumbuh: bool = False
+
+
 class LiveTemuan(BaseModel):
     """The lighter shape the site renders (edition.ts `LiveTemuan`)."""
 
@@ -73,6 +103,7 @@ class Edisi(BaseModel):
     ticker: list[TickerItem] = Field(default_factory=list)
     dek: str | None = None
     tajuk: dict | None = None
+    kliping: list[Kliping] | None = None
 
 
 class CorpusRow(BaseModel):

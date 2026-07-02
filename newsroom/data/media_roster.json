@@ -1,0 +1,116 @@
+{
+    "media": [
+        {
+            "id": "tempo",
+            "nama": "Tempo",
+            "feed": "https://rss.tempo.co/nasional",
+            "grup": "Tempo Media Group",
+            "catatan": "Dimiliki Tempo Media Group; media independen dengan rekam jejak kritis sejak 1971.",
+            "independen": true
+        },
+        {
+            "id": "bbc_indonesia",
+            "nama": "BBC Indonesia",
+            "feed": "https://feeds.bbci.co.uk/indonesia/rss.xml",
+            "grup": "BBC (publik Inggris)",
+            "catatan": "Dimiliki lembaga penyiaran publik Inggris (BBC), didanai publik, bukan konglomerat Indonesia.",
+            "independen": true
+        },
+        {
+            "id": "project_multatuli",
+            "nama": "Project Multatuli",
+            "feed": "https://projectmultatuli.org/feed/",
+            "grup": "Project Multatuli (nonprofit)",
+            "catatan": "Media nonprofit independen yang berfokus pada kelompok terpinggirkan.",
+            "independen": true
+        },
+        {
+            "id": "jubi",
+            "nama": "Jubi",
+            "feed": "https://jubi.id/feed/",
+            "grup": "Jubi (nonprofit)",
+            "catatan": "Media independen yang berbasis di Papua, tidak berafiliasi dengan konglomerat.",
+            "independen": true
+        },
+        {
+            "id": "kbr",
+            "nama": "KBR",
+            "feed": "https://kbr.id/feed",
+            "grup": "KBR (nonprofit)",
+            "catatan": "Kantor Berita Radio, jaringan berita radio independen.",
+            "independen": true
+        },
+        {
+            "id": "mongabay_indonesia",
+            "nama": "Mongabay Indonesia",
+            "feed": "https://news.mongabay.com/feed/?lang=id",
+            "grup": "Mongabay (nonprofit)",
+            "catatan": "Media lingkungan nonprofit, bagian dari jaringan Mongabay.",
+            "independen": true
+        },
+        {
+            "id": "kompas",
+            "nama": "Kompas.com",
+            "feed": null,
+            "grup": "Kompas Gramedia",
+            "catatan": "Dimiliki Kompas Gramedia, grup media terbesar berdasarkan sirkulasi; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "tribunnews",
+            "nama": "Tribunnews",
+            "feed": "https://www.tribunnews.com/rss",
+            "grup": "Kompas Gramedia",
+            "catatan": "Bagian dari Tribun Network yang dimiliki Kompas Gramedia.",
+            "independen": false
+        },
+        {
+            "id": "detik",
+            "nama": "Detik",
+            "feed": "https://news.detik.com/rss",
+            "grup": "CT Corp",
+            "catatan": "Dimiliki CT Corp (Chairul Tanjung) melalui Trans Media.",
+            "independen": false
+        },
+        {
+            "id": "cnn_indonesia",
+            "nama": "CNN Indonesia",
+            "feed": "https://www.cnnindonesia.com/nasional/rss",
+            "grup": "CT Corp",
+            "catatan": "Lisensi CNN yang dioperasikan Trans Media, bagian dari CT Corp (Chairul Tanjung).",
+            "independen": false
+        },
+        {
+            "id": "sindonews",
+            "nama": "Sindonews",
+            "feed": "https://nasional.sindonews.com/rss",
+            "grup": "MNC Group",
+            "catatan": "Dimiliki MNC Group (Hary Tanoesoedibjo, pendiri Partai Perindo).",
+            "independen": false
+        },
+        {
+            "id": "media_indonesia",
+            "nama": "Media Indonesia",
+            "feed": "https://mediaindonesia.com/feed",
+            "grup": "Media Group",
+            "catatan": "Dimiliki Media Group (Surya Paloh, pendiri Partai NasDem).",
+            "independen": false
+        },
+        {
+            "id": "viva",
+            "nama": "VIVA",
+            "feed": null,
+            "grup": "Bakrie/Viva Group",
+            "catatan": "Dimiliki keluarga Bakrie (Aburizal Bakrie, mantan ketua umum Partai Golkar); umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
+            "independen": false
+        },
+        {
+            "id": "jawapos",
+            "nama": "Jawa Pos",
+            "feed": "https://www.jawapos.com/rss.xml",
+            "grup": "Jawa Pos Group",
+            "catatan": "Dimiliki Jawa Pos Group, jaringan media dengan jejak kuat di daerah.",
+            "independen": false
+        }
+    ]
+}

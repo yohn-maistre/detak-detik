@@ -15,14 +15,14 @@ export const PIECES: Piece[] = [
   {
     slug: 'republik-oligarki',
     judul: 'Republik Oligarki',
-    satuKalimat: 'Rumah tangga terkaya menerima 50× lipat subsidi BBM dari yang termiskin — dari anggaran yang sama.',
+    satuKalimat: 'Rumah tangga terkaya menerima subsidi BBM 50× lipat dibanding yang termiskin, dari anggaran yang sama.',
     bentuk: 'Batang · wafel · asimetri',
     sumber: ['bank dunia · iep jun 2026', 'fwi/auriga 2025', 'celios 2026', 'pp 20/2026 · esdm'],
   },
   {
     slug: 'dua-garis-kemiskinan',
     judul: 'Dua Garis Kemiskinan',
-    satuKalimat: 'Penduduk yang sama, dua definisi: 8,25% miskin menurut garis BPS — 68,3% menurut garis Bank Dunia.',
+    satuKalimat: 'Penduduk yang sama, dua definisi: 8,25% miskin menurut garis BPS; 68,3% menurut garis Bank Dunia.',
     bentuk: 'Plat titik · dua ambang',
     sumber: ['bps · sep 2025', 'bank dunia · $8,30/hari (ppp 2021)'],
   },

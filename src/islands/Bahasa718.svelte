@@ -80,7 +80,7 @@
   </div>
 
   <div class="bh-foot">
-    <p class="bh-note fig">Setiap dasawarsa, beberapa di antaranya berhenti dituturkan sama sekali — yang pucat di atas. Sebuah kata yang hilang membawa serta satu cara memandang dunia.</p>
+    <p class="bh-note fig">Setiap dasawarsa, beberapa di antaranya berhenti dituturkan sama sekali; garis yang pucat pada bidang di atas menandainya.</p>
     <button class="chip"><span class="tick">⊙</span>badan bahasa · wiktionary · (data contoh)</button>
   </div>
 </section>

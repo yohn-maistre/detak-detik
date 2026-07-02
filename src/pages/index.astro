@@ -38,6 +38,8 @@ import JciVsPeers from '../islands/JciVsPeers.svelte';
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
+import VeilMesin from '../islands/VeilMesin.svelte';
+import RakKabar from '../islands/RakKabar.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
@@ -196,6 +198,10 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
           </aside>
         </section>
 
+        <!-- the clustered newsstand: renders only when a live edition carries
+             kliping[]; hydrates on idle because it starts at zero height -->
+        <RakKabar client:idle />
+
         <!-- ===== the day's news, by desk: a magazine front, text-led ===== -->
         <section class="rubrik" aria-label="Kabar menurut meja">
           <div class="kabar-head">
@@ -289,6 +295,7 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
       <div class="wrap">
         <!-- Angka Edisi -->
         <section class="angka-blok" aria-labelledby="angka-label">
+          <VeilMesin client:visible />
           <div class="angka-kiri">
             <span class="inkbar"><span class="dot">●</span>BUKTI №1 · ANGKA EDISI</span>
             <p class="angka num display" id="angka-odometer" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
@@ -1170,11 +1177,17 @@ for (const t of TICKER) { const r = SRC_RAIL[t.src]; if (r) railItems[r]!.push({
   @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
 
   .angka-blok {
+    position: relative;
     display: grid;
     grid-template-columns: 1.7fr 1px 1fr;
     gap: clamp(20px, 4vw, 52px);
     align-items: end;
     padding: clamp(40px, 7vh, 80px) 0 28px;
+  }
+  /* the veil paints at z 0; the figures ride above it */
+  .angka-kiri, .angka-sela, .angka-kanan {
+    position: relative;
+    z-index: 1;
   }
   @media (max-width: 900px) {
     .angka-blok { grid-template-columns: 1fr; }

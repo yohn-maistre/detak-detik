@@ -45,14 +45,14 @@
     </div>
     <p class="jc-kalimat fig">
       Dari US$ 21,6 miliar yang dijanjikan negara-negara kaya untuk transisi energi, sekitar
-      US$ 3,3 miliar yang benar-benar cair sampai awal 2026. Amerika Serikat menarik diri dari
+      US$ 3,3 miliar tercatat cair sampai awal 2026. Amerika Serikat menarik diri dari
       kemitraan ini pada 2025.
     </p>
     <button class="chip"><span class="tick">⊙</span>ieefa · jetp · feb 2026 · (data contoh)</button>
   </div>
 
   <div class="jc-side">
-    <span class="jc-k mono">SEMENTARA ITU</span>
+    <span class="jc-k mono">PADA PERIODE YANG SAMA</span>
     <p class="jc-big display num">31<span class="jc-unit"> GW</span></p>
     <p class="jc-side-teks">
       batu bara <i>captive</i> terus dibangun untuk smelter nikel, sekitar 80% dari seluruh

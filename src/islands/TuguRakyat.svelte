@@ -87,9 +87,9 @@
 <section class="tr" data-no-stempel>
   <div class="tr-head">
     <span class="eyebrow">TUGU RAKYAT · KANVAS BERSAMA</span>
-    <span class="tr-status mono">{sel} PETAK DITARUH · VERSI LOKAL</span>
+    <span class="tr-status mono">{sel} PETAK DITEMPATKAN · VERSI LOKAL</span>
   </div>
-  <p class="tr-intro">Pilih warna, taruh satu petak. Palet tetap, tanpa teks bebas: mural sipil yang menetap di perangkatmu. Kanvas bersama lintas pembaca menyusul.</p>
+  <p class="tr-intro">Pilih warna dan letakkan satu petak. Palet tetap, tanpa teks bebas: mural sipil yang tersimpan di perangkat ini. Kanvas bersama lintas pembaca menyusul.</p>
 
   <div class="tr-palet" role="group" aria-label="Palet warna">
     {#each PALET as p, i}

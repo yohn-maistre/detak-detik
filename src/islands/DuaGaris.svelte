@@ -56,7 +56,7 @@
     <button class="chip"><span class="tick">⊙</span>{aktif.chip}</button>
   </div>
 
-  <p class="dg-kaki fig">Pilih garisnya, dan republik ini sukses besar — atau dua dari tiga warganya tak sanggup menahan satu guncangan.</p>
+  <p class="dg-kaki fig">Dua ambang yang berbeda menghitung penduduk yang sama: 8,25% berada di bawah garis BPS, 68,3% di bawah garis Bank Dunia.</p>
 </div>
 
 <style>

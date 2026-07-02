@@ -72,7 +72,7 @@
 
   const cap = $derived(live
     ? `kurs penutupan harian enam bulan terakhir · titik terakhir ${tglID(live.tanggal[live.tanggal.length - 1] ?? '')}`
-    : 'pertama kali menembus 18.000, 4 Juni 2026 · terlemah sepanjang sejarah');
+    : 'pertama kali melewati 18.000, 4 Juni 2026 · nilai terlemah yang pernah tercatat');
   const x0Lab = $derived.by(() => {
     if (!live) return 'JAN 2026';
     const t = live.tanggal[0] ?? '';
@@ -151,7 +151,7 @@
         <button class="chip"><span class="tick">⊙</span>frankfurter + yahoo · langsung</button>
       {:else}
         <p class="ri-side-big num">−31<span class="ri-unit">% YTD</span></p>
-        <p class="ri-side-teks">indeks saham Jakarta turun paling dalam dari 90+ indeks dunia tahun ini, mendekati titik terendah 5,5 tahun. Bank Indonesia menaikkan suku bunga ke 5,5%.</p>
+        <p class="ri-side-teks">indeks saham Jakarta mencatat penurunan terbesar di antara 90+ indeks dunia tahun ini, mendekati titik terendah 5,5 tahun. Bank Indonesia menaikkan suku bunga ke 5,5%.</p>
         <button class="chip"><span class="tick">⊙</span>data contoh · menunggu sumber langsung</button>
       {/if}
     </aside>

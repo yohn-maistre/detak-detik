@@ -53,7 +53,7 @@
     {/each}
   </div>
   <p class="sa-kaki fig">
-    Badak Jawa dan badak Sumatra yang masih hidup di alam liar, digabung,
+    Jumlah badak Jawa dan badak Sumatra yang masih hidup di alam liar, digabungkan,
     <span data-annotate="circle" data-annotate-color="#c96a5a">kurang dari 90 ekor</span>
     di seluruh Bumi. Tiap titik di atas adalah satu ekor.
   </p>

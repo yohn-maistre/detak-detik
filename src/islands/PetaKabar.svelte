@@ -620,11 +620,11 @@
       if (p.elev != null) baris.push(['Ketinggian', `${N(p.elev).toLocaleString('id-ID')} mdpl`]);
       if (p.jenis) baris.push(['Tipe', VOL_TIPE[String(p.jenis)] ?? String(p.jenis)]);
       if (N(p.letus) > 0) baris.push(['Letusan terakhir', String(p.letus)]);
-      return { judul: String(p.nama ?? 'Gunung api'), src: gunungLive ? 'PVMBG / MAGMA · langsung' : 'registri GVP · status PVMBG menyusul', baris, catatan: lv >= 3 ? 'Status tinggi — ikuti arahan & radius bahaya PVMBG.' : '' };
+      return { judul: String(p.nama ?? 'Gunung api'), src: gunungLive ? 'PVMBG / MAGMA · langsung' : 'registri GVP · status PVMBG menyusul', baris, catatan: lv >= 3 ? 'Status tinggi; ikuti arahan dan radius bahaya PVMBG.' : '' };
     }
     if (f.kind === 'udara') { const a = N(p.aqi); return { judul: `Udara · AQI ${a}`, src: 'WAQI · langsung', baris: [['Stasiun', String(p.nama ?? '-')], ['Kategori', aqiBand(a)]], catatan: a > 150 ? 'Kurangi aktivitas luar ruangan.' : '' }; }
     if (f.kind === 'banjir') { const s = N(p.state); return { judul: 'Laporan banjir', src: 'PetaBencana · langsung', baris: [['Lokasi', String(p.nama ?? '-')], ['Siaga', s >= 3 ? 'tinggi' : s >= 2 ? 'sedang' : 'rendah']], catatan: '' }; }
-    if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit — belum tentu kebakaran.' };
+    if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit; belum tentu kebakaran.' };
     if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'OpenSky Network · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'karbon') {
@@ -651,7 +651,7 @@
           ['Luas', p.luas ? `${N(p.luas).toLocaleString('id-ID')} ha` : '-'],
           ['Wilayah', [p.kab, p.prov].filter(Boolean).join(', ') || '-'],
         ],
-        catatan: p.cnc ? `Clean & Clear: ${String(p.cnc)} — izin pertambangan (IUP).` : 'Izin Usaha Pertambangan (IUP).',
+        catatan: p.cnc ? `Clean & Clear: ${String(p.cnc)}; izin pertambangan (IUP).` : 'Izin Usaha Pertambangan (IUP).',
       };
     }
     if (f.kind === 'konsesi') {
@@ -1702,7 +1702,7 @@
           <span><b class="ember">{dossier.gempa}</b> gempa 24j</span>
         </div>
         {#if lensaKabNama}
-          <button class="kb-dossier-kabptr" onclick={() => pulseRef('dossier')}>▸ {lensaKabNama} — buka di Lensa Wilayah ↓</button>
+          <button class="kb-dossier-kabptr" onclick={() => pulseRef('dossier')}>▸ {lensaKabNama} · buka di Lensa Wilayah ↓</button>
         {:else}
           <button class="kb-dossier-ask" onclick={() => pulseRef('dossier')}>baca dasar wilayah ↓</button>
         {/if}
