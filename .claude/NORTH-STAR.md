@@ -973,11 +973,80 @@ ILMU & LANGIT (almanak + sky events) · TANAH (gunung + Wallace). Longer
 writeups (Wikipedia lead sections, Lane A quoted + linked), one bespoke
 viz per slot where the data earns it, newsroom-curated rotation later.
 
-**Sequencing from here**: 5b map geometry + line styling + legend + the
-two screenshot bugs + rak loading (today) → 5c tiered selection +
-dossier v2 + lensa decouple (today) → 6 denominations + janji expansion
-+ bumi reorder + udara ridgeline (today/next) → 7 viz kit + lens-coupled
-receipts + Act III living + INFORMASI theme (next).
+**I. Yose review 3 addenda (locked 2026-07-03).**
+- Theme order final: **JANJI → EKONOMI (Pasar) → DUNIA → SUMBER DAYA
+  ALAM** (the alam/ekstraksi theme renames to Sumber Daya Alam), then
+  hening → ObituariHutan → seam. INFORMASI theme approved, queued wave 7.
+- **Meja expansion (Act I coverage)**: the clusters should cover the
+  whole civic surface. Two new desks now: **EKONOMI** (rupiah, ihsg,
+  saham, bank, pajak, ekspor, investasi, tarif…) and **TEKNO** (ai,
+  kecerdasan buatan, digital, siber, startup, satelit, data center,
+  internet…), classified deterministically like the others; law /
+  education / official-program news folds into NASIONAL keywords until
+  volume proves a desk. Chip row becomes horizontally scrollable with
+  fade edges on mobile (7 chips).
+- **RESMI tag**: clusters containing a clip from a state/official source
+  (ANTARA, Setkab, kementerian releases) print a quiet RESMI marker —
+  the government's own words, labeled as such. (Roster gains
+  `resmi: true` on state sources.)
+- **Roster expansion round 2 (agent)**: verticals — tech/AI (DetikInet,
+  CNBC tech, Katadata tekno, Dailysocial…), energy (Katadata energi,
+  Dunia-Energi…), law (Hukumonline…), education, agriculture/
+  conservation (beyond Mongabay/Betahita), geopolitics, and official
+  feeds (Setkab, DPR, kementerian). Section feeds of rostered outlets
+  are allowed as separate entries (nama = section brand, same grup);
+  scoring stays honest because n_grup drives skor.
+
+**Sequencing from here**: 5b map geometry untangle + line styling +
+legend + the two screenshot bugs + rak loading (today) → 5c tiered
+selection + dossier v2 + lensa decouple (today) → 6 denominations +
+janji expansion + theme reorder + udara ridgeline + meja desks (next) →
+7 viz kit + lens-coupled receipts + Act III living + INFORMASI (next).
+
+### 13.10 Lemari ide — the crazy shelf (Claude's brainstorm, curated 2026-07-03)
+
+Beyond Yose's asks; each thesis-pure and free-infra feasible. Phase tags:
+[6]/[7] = existing waves, [8] = the wave after.
+
+1. **Kartu edisi (share card)** [6] — one tap renders a beautiful PNG
+   broadsheet snapshot (masthead, lead, angka edisi, top clusters) via
+   canvas, sized for WhatsApp/IG stories. WhatsApp IS Indonesian
+   distribution; this is the growth mechanic. Zero backend.
+2. **Arsip edisi + permalink** [6] — worker keeps `edisi:{n}` history in
+   KV (tiny), `/edisi/85` renders it client-side. The "paper that keeps
+   score" finally has a spine. Unlocks 3–5.
+3. **YANG BERUBAH strip** [7] — the edition diffs itself against the
+   previous one: "kurs +0,4% · 1 janji berubah status · 5 klaster baru ·
+   2 cerita senyap". Pure computation, prints under the masthead. The
+   paper telling you what moved.
+4. **Cerita berlanjut / coverage decay** [7] — cluster fingerprints
+   matched across editions: persistent stories get "HARI KE-3 · 14 JUDUL
+   KUMULATIF"; stories the press dropped get "SENYAP SETELAH 2 HARI".
+   What the press stops covering is itself civic data — nobody in
+   Indonesia shows this.
+5. **Papan titik buta** [7] — blindspot behavior over time, per
+   ownership group: which group is systematically alone on which desks.
+   The ownership thesis, longitudinal.
+6. **SIDANG HARI INI** [7] — court calendar strip for major corruption
+   trials (MA/KPK schedules): the machine watches the courtroom door.
+7. **Tangga skala** [6] — the angka edisi placed on a log ladder between
+   citable rungs (gaji menteri setahun … APBD kabupaten … anggaran MBG):
+   instant scale context beyond the denominator buttons.
+8. **TANYA EDISI INI** [7] — three newsroom-generated, gated questions
+   under the lead that Aksara can answer from the cited corpus; teaches
+   readers the agent exists.
+9. **Cetak & simpan** [6] — a real @media print stylesheet: the paper
+   prints as an actual broadsheet, and "Simpan edisi" = PDF. A newspaper
+   that prints beautifully is the most detak-detik flex possible.
+10. **PWA-lite** [8] — manifest + service worker caching the last
+    edition: the paper you keep in your pocket, offline. Local-first
+    made literal.
+11. **HARI INI DALAM SEJARAH** [7, Act III] — daily archival plate from
+    public-domain scans (Perpusnas/KITLV/Delpher), primary source
+    linked. History with receipts.
+12. **Segel edisi** [8] — a tiny generative press seal in the masthead
+    derived from edition number + lead hash (VeilMuka's grammar at
+    stamp scale): every edition visually fingerprinted.
 
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
