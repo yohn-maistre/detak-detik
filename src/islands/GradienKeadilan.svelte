@@ -48,6 +48,21 @@
   // the day's outlier gets a caption and a leader line
   const sorot = dots.find((d) => d.id === 'k-2241')!;
 
+  /* the hand-drawn outlier ring (the site's scribble idiom, in SVG): a wobbled
+     circle that overshoots past 360° like a real pen stroke. Deterministic
+     wobble — no RNG, so server and client draw the same ink. */
+  function scribbleRing(cx: number, cy: number, r: number): string {
+    const pts: string[] = [];
+    const N = 22;
+    for (let i = 0; i <= N + 3; i++) {
+      const a = (i / N) * Math.PI * 2 - Math.PI / 3;
+      const wob = 1 + 0.09 * Math.sin(i * 2.7) + 0.06 * Math.cos(i * 4.3);
+      const rr = r * wob + (i > N ? (i - N) * 0.9 : 0);
+      pts.push(`${(cx + Math.cos(a) * rr * 1.15).toFixed(1)} ${(cy + Math.sin(a) * rr * 0.88).toFixed(1)}`);
+    }
+    return 'M ' + pts.join(' L ');
+  }
+
   const TICKS_X = [
     { v: 1e6, label: 'Rp 1 jt' },
     { v: 1e7, label: '10 jt' },
@@ -171,7 +186,7 @@
 
     <g class="sorot" opacity={reducedMotion() ? 1 : 0}>
       <line x1={sorot.cx + 8} y1={sorot.cy - 8} x2={sorot.cx + 56} y2={sorot.cy - 52} />
-      <circle cx={sorot.cx} cy={sorot.cy} r="10" class="sorot-ring" />
+      <path class="sorot-ring" d={scribbleRing(sorot.cx, sorot.cy, 11)} />
       <text x={sorot.cx + 60} y={sorot.cy - 58} class="sorot-teks">№ {sorot.id} · {fmtRp(sorot.kerugian)} → {sorot.vonis} bln</text>
       <text x={sorot.cx + 60} y={sorot.cy - 44} class="sorot-teks sub">3σ di bawah kurva tren</text>
     </g>
@@ -211,7 +226,7 @@
   .dot.dim { opacity: 0.3; }
   .dot:hover { r: 8; }
   .sorot line { stroke: var(--ink); stroke-width: 0.8; }
-  .sorot-ring { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 3 3; }
+  .sorot-ring { fill: none; stroke: var(--accent); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
   .sorot-teks { fill: var(--ink); font-size: 10.5px; }
   .sorot-teks.sub { fill: var(--muted); font-style: italic; font-size: 9.5px; }
   .gk-legend { display: flex; gap: 18px; font-size: 11px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; }
