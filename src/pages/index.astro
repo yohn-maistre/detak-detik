@@ -41,21 +41,21 @@ import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, JANJI, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
+// the buku besar: the SAME registry the newsroom's janji desk audits every
+// edition (single source of truth — see newsroom/sources/janji.py)
+import JANJI from '../../newsroom/data/janji_registry.json';
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
 
-// janji dumbbell: parse the first id-ID figure in target/realisasi; a full
-// pair draws a track (target tick vs measured dot), a missing figure draws
-// the absence itself (hatched track), never a fabricated position
-const angkaId = (s: string): number | null => {
-  const m = s.replace(/\.(?=\d{3})/g, '').match(/(\d+(?:,\d+)?)/);
-  return m?.[1] ? Number(m[1].replace(',', '.')) : null;
-};
+// janji dumbbell from the registry's EXPLICIT figures (target_angka /
+// realisasi_angka — no string parsing): a full pair draws a track (target
+// tick vs measured dot), a missing figure draws the absence itself
+// (hatched track), never a fabricated position
 const JANJI_TRACK = JANJI.map((j) => {
-  const t = angkaId(j.target);
-  const r = angkaId(j.realisasi);
+  const t = j.target_angka;
+  const r = j.realisasi_angka;
   if (t == null || r == null) return null;
   const maks = Math.max(t, r, 0.0001) * 1.25;
   return { t: (t / maks) * 100, r: (r / maks) * 100 };
@@ -484,28 +484,36 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
 
-          <div class="janji-list">
+          <!-- the buku besar itself: numbered ruled entries, promise beside its
+               measurement, stamped mechanically from deadline × figure -->
+          <div class="janji-buku">
             {JANJI.map((j, ji) => (
               <article class="janji">
-                <p class="janji-teks">{j.teks}</p>
-                <p class="janji-meta mono">{j.sumber}</p>
-                <div class="janji-baris mono">
-                  <span>TARGET · {j.target}</span>
-                  <span>TERUKUR · {j.realisasi}</span>
+                <span class="janji-no ghost-num num" aria-hidden="true">{String(ji + 1).padStart(2, '0')}</span>
+                <div class="janji-isi">
+                  <p class="janji-teks">{j.teks}</p>
+                  <p class="janji-meta mono">{j.sumber}</p>
                 </div>
-                {JANJI_TRACK[ji] ? (
-                  <div class={`janji-track ${j.status === 'TIDAK TERCAPAI' ? 'gagal' : ''}`} role="img" aria-label={`Target ${j.target}, terukur ${j.realisasi}`}>
-                    <i class="jt-target" style={`left:${JANJI_TRACK[ji].t}%`}></i>
-                    <i class="jt-bar" style={`left:${Math.min(JANJI_TRACK[ji].t, JANJI_TRACK[ji].r)}%;width:${Math.abs(JANJI_TRACK[ji].t - JANJI_TRACK[ji].r)}%`}></i>
-                    <i class="jt-real" style={`left:${JANJI_TRACK[ji].r}%`}></i>
+                <div class="janji-ukur">
+                  <div class="janji-baris mono">
+                    <span>TARGET · {j.target}</span>
+                    <span>TERUKUR · {j.realisasi}</span>
                   </div>
-                ) : (
-                  <div class="janji-track kosong" role="img" aria-label="Realisasi tidak tersedia"></div>
-                )}
+                  {JANJI_TRACK[ji] ? (
+                    <div class={`janji-track ${j.status === 'TIDAK TERCAPAI' ? 'gagal' : ''}`} role="img" aria-label={`Target ${j.target}, terukur ${j.realisasi}`}>
+                      <i class="jt-target" style={`left:${JANJI_TRACK[ji].t}%`}></i>
+                      <i class="jt-bar" style={`left:${Math.min(JANJI_TRACK[ji].t, JANJI_TRACK[ji].r)}%;width:${Math.abs(JANJI_TRACK[ji].t - JANJI_TRACK[ji].r)}%`}></i>
+                      <i class="jt-real" style={`left:${JANJI_TRACK[ji].r}%`}></i>
+                    </div>
+                  ) : (
+                    <div class="janji-track kosong" role="img" aria-label="Realisasi tidak tersedia"></div>
+                  )}
+                </div>
                 <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
               </article>
             ))}
           </div>
+          <p class="janji-foot mono">STATUS DIHITUNG DARI TENGGAT × ANGKA TERUKUR · SUMBER TIAP BARIS TERCATAT · ▌TARGET ● TERUKUR</p>
 
           <div class="bab-lembar bab-sub" data-rise>
             <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
@@ -1059,8 +1067,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .ekonomi-teks { font-size: 14.5px; line-height: 1.6; color: var(--muted); max-width: 52ch; }
 
   /* ---- Janji (now Bab VI) ---- */
-  .janji-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  @media (max-width: 800px) { .janji-list { grid-template-columns: 1fr; } }
+  /* the buku besar: ruled ledger rows — entry № · promise · measurement · stamp */
+  .janji-buku { border-top: 2px solid var(--ink); }
 
   /* ---- the scoreboard ---- */
   .cabang-blok { padding-top: 8px; }
@@ -1305,7 +1313,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
     white-space: nowrap;
   }
 
-  .janji { position: relative; border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+  .janji {
+    display: grid; grid-template-columns: auto minmax(0, 1.1fr) minmax(0, 1fr) auto;
+    gap: 8px 28px; align-items: start; padding: 16px 0 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .janji-no { font-size: 19px; line-height: 1.1; opacity: 0.4; padding-top: 2px; min-width: 26px; }
+  .janji-isi { display: grid; gap: 6px; }
+  .janji-ukur { display: grid; gap: 8px; align-self: center; }
   /* the grade, drawn: target tick vs measured dot on one track (SkorCabang's
      dumbbell vocabulary); a hatched track is a missing measurement */
   .janji-track { position: relative; height: 12px; margin-top: 10px; }
@@ -1317,12 +1332,21 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .janji-track.gagal .jt-bar { background: var(--accent); opacity: 0.6; }
   .janji-track.kosong::before { background: repeating-linear-gradient(90deg, var(--line) 0 5px, transparent 5px 10px); }
   /* right padding reserves the stamp's corner so long promises never collide */
-  .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; padding-right: 112px; }
-  .janji-meta { font-size: 10px; letter-spacing: 0.12em; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; }
+  .janji-teks { font-size: clamp(15px, 1.7vw, 18px); max-width: 44ch; line-height: 1.4; }
+  .janji-meta { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; }
   .janji-baris { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 11px; color: var(--muted); }
-  .janji-stamp { position: absolute; top: 0; right: 0; font-size: 9px; }
-  .janji-stamp.s-tidak-tercapai { color: var(--accent2); border-color: var(--accent2); }
+  .janji-stamp { justify-self: end; align-self: start; font-size: 9px; }
+  /* stamp ink follows the track's own verdict: missed = madder, met = calm ink,
+     running = quiet, absent measurement = dashed absence */
+  .janji-stamp.s-tercapai { color: var(--accent2); border-color: var(--accent2); }
+  .janji-stamp.s-berjalan { color: var(--muted); border-color: var(--line); }
+  .janji-stamp.s-tidak-tercapai { color: var(--accent); border-color: var(--accent); }
   .janji-stamp.s-data-hilang { color: var(--muted); border-color: var(--muted); border-style: dashed; }
+  @media (max-width: 800px) {
+    .janji { grid-template-columns: auto 1fr; }
+    .janji-ukur, .janji-stamp { grid-column: 2; }
+    .janji-stamp { justify-self: start; }
+  }
   .janji-foot { margin-top: 16px; font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
 
   /* ---------- colophon ---------- */

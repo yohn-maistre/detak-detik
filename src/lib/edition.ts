@@ -32,6 +32,23 @@ export interface LiveKliping {
   hukum?: string[];
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
+/** buku besar row: promise (Lane A, sourced) beside its measured figure;
+ *  status recomputed mechanically by the janji desk each edition */
+export interface LiveJanji {
+  id?: string;
+  teks: string;
+  sumber: string;
+  sumber_url?: string;
+  target: string;
+  target_angka?: number;
+  tenggat?: string;
+  arah?: 'naik' | 'turun';
+  realisasi: string;
+  realisasi_angka?: number;
+  realisasi_sumber?: string;
+  realisasi_tanggal?: string;
+  status?: 'TERCAPAI' | 'BERJALAN' | 'TIDAK TERCAPAI' | 'DATA HILANG';
+}
 export interface LiveEdisi {
   edisi?: number;
   terbit?: string;
@@ -45,6 +62,7 @@ export interface LiveEdisi {
   makro?: LiveMakro[];
   kliping?: LiveKliping[];
   kliping_meta?: LiveKlipingMeta;
+  janji?: LiveJanji[];
   harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }

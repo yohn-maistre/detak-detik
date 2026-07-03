@@ -39,7 +39,7 @@ from .sources.anggaran import gather_anggaran
 from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
 from .sources.hutan import gather_hutan
-from .sources.janji import gather_janji
+from .sources.janji import gather_janji, muat_buku_janji
 from .sources.kliping import gather_kliping
 from .sources.papua import gather_papua
 from .sources.pulse import gather_pulse
@@ -123,8 +123,9 @@ async def run() -> int:
                 log.event("ditulis_ulang", temuan_id=t.temuan_id, headline=reviewed.headline)
             survivors.append(reviewed)
 
+    buku_janji = muat_buku_janji(log.event)
     edisi = assemble(EDISI_NO, TERBIT, SESI, survivors, corpus, headlines,
-                     kliping, kliping_meta)
+                     kliping, kliping_meta, buku_janji)
     if edisi is None:
         log.event("kosong", catatan="tak ada temuan layak terbit; edisi lama dibiarkan, tidak ditimpa")
         log.close()

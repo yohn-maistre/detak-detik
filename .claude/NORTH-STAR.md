@@ -1186,6 +1186,27 @@ The order of the remaining epoch, in Yose's own priorities:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-03 · wave 7 (open) — janji: from 3 cards to the continuous ledger
+- **Yose's standing requirement (applies to EVERY data surface)**: never
+  one-time research — the newsroom continuously re-checks. Dataviz
+  components + machine summaries must be built as slots agents write
+  into. DeepSeek v4 pro assumed capable as the engine — the LiteLLM
+  fallback chain takes it as pure config (NIM or OpenRouter slot).
+- **Continuous-audit scaffold shipped**: `newsroom/data/janji_registry
+  .json` is the single source of truth — index.astro imports it at
+  build AND the janji desk (sources/janji.muat_buku_janji) loads it
+  every edition, recomputes each status mechanically (tenggat × angka ×
+  arah floor/ceiling), logs self-corrections, publishes rows into the
+  edisi payload (Edisi.janji / LiveJanji), and feeds every registry
+  figure into the citation corpus so temuan can quote the ledger.
+  The realisasi REFRESH hook is designed + documented in the desk,
+  dormant until a model lane has a live key.
+- **Buku besar form recut**: 3-up cards → numbered ruled ledger rows
+  (№ ghost · promise+source · target/terukur dumbbell · stamp), stamp
+  ink now follows the track's verdict (missed = madder — was wrongly
+  accent2; met = calm ink; absent = dashed). Fact-desk agent out
+  verifying the ~10-promise roster with receipts.
+
 ### 2026-07-03 · wave 6c — gerak I gauge pass + BPS verdict + crosswalk
 - **CabangBand speaks the gauge language**: the legislatif gantt now sits
   on a LABELED LOG RULER (10→10.000 hari; 20 hari vs 13 tahun drawn

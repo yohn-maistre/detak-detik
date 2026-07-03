@@ -142,29 +142,8 @@ export const HARGA: number[] = [
   93, 97, 95, 99, 104, 102, 107, 111, 108, 114,
 ];
 
-export const JANJI = [
-  {
-    teks: 'Angka kemiskinan ekstrem 0% pada 2026',
-    sumber: 'RPJMN 2020–2024 · Perpres 59/2021',
-    target: '0% · des 2026',
-    realisasi: '0,83% · mar 2026 (BPS)',
-    status: 'BERJALAN' as const,
-  },
-  {
-    teks: 'Rasio elektrifikasi Papua 100% pada 2025',
-    sumber: 'RUPTL PLN 2021–2030',
-    target: '100% · des 2025',
-    realisasi: '94,8% · des 2025 (ESDM)',
-    status: 'TIDAK TERCAPAI' as const,
-  },
-  {
-    teks: 'Rehabilitasi hutan 230.000 ha per tahun',
-    sumber: 'Renstra KLHK 2020–2024',
-    target: '230.000 ha · 2025',
-    realisasi: 'data tidak tersedia',
-    status: 'DATA HILANG' as const,
-  },
-];
+// JANJI moved to newsroom/data/janji_registry.json — the buku besar's single
+// source of truth, imported by index.astro and audited by the janji desk.
 
 /** Real centroids; the only non-contoh table (regions are regions). */
 export const REGIONS = [

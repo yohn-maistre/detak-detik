@@ -11,7 +11,7 @@ still publishes.
 
 from __future__ import annotations
 
-from .models import (AngkaEdisi, CorpusRow, Edisi, Kliping, KlipingMeta,
+from .models import (AngkaEdisi, CorpusRow, Edisi, Janji, Kliping, KlipingMeta,
                      LiveTemuan, TickerItem, Temuan)
 
 # the front page carries at most this many story clusters
@@ -54,6 +54,7 @@ def assemble(
     ticker: list[TickerItem],
     kliping: list[Kliping] | None = None,
     kliping_meta: KlipingMeta | None = None,
+    janji: list[Janji] | None = None,
 ) -> Edisi | None:
     if not survivors:
         return None
@@ -85,4 +86,7 @@ def assemble(
         # it skips the fact-gate and the lawyer by design
         kliping=kliping_final,
         kliping_meta=kliping_meta,
+        # buku besar rows: registry-sourced, statuses recomputed mechanically
+        # by the janji desk each run (see sources/janji.muat_buku_janji)
+        janji=janji or None,
     )

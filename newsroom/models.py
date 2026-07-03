@@ -132,6 +132,29 @@ class LiveTemuan(BaseModel):
     temuan_id: str | None = None
 
 
+class Janji(BaseModel):
+    """One entry of the buku besar (the promise ledger). The promise itself is
+    Lane A — a documented statement with its source — and never changes; only
+    `realisasi*` moves, refreshed by the janji desk, and `status` is COMPUTED
+    (deadline × measured figure), never chosen. `arah` says whether the target
+    is a floor ('naik', e.g. growth 8%) or a ceiling ('turun', e.g. poverty 0%).
+    """
+
+    id: str
+    teks: str
+    sumber: str
+    sumber_url: str | None = None
+    target: str
+    target_angka: float | None = None
+    tenggat: str | None = None  # ISO date the promise is due
+    arah: Literal["naik", "turun"] = "naik"
+    realisasi: str
+    realisasi_angka: float | None = None
+    realisasi_sumber: str | None = None
+    realisasi_tanggal: str | None = None
+    status: Literal["TERCAPAI", "BERJALAN", "TIDAK TERCAPAI", "DATA HILANG"] = "BERJALAN"
+
+
 class Edisi(BaseModel):
     """The published edition. `model_dump(exclude_none=True)` drops the optional
     fields when absent, matching the JSON the worker stores and the site reads."""
@@ -147,6 +170,7 @@ class Edisi(BaseModel):
     tajuk: dict | None = None
     kliping: list[Kliping] | None = None
     kliping_meta: KlipingMeta | None = None
+    janji: list[Janji] | None = None
 
 
 class CorpusRow(BaseModel):
