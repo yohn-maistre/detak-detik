@@ -7,9 +7,21 @@
  */
 export type CabangViz =
   | { type: 'dots'; n: number }
-  | { type: 'gantt'; rows: { k: string; w: string; label: string; macet?: boolean }[] }
+  | {
+      // durations on a LABELED LOG RULER (the honest way to draw 20 days next
+      // to 13 years on one track — a linear scale makes the fast bar a lie)
+      type: 'gantt';
+      skala: { ticks: { v: number; label: string }[]; catatan: string };
+      rows: { k: string; hari: number; label: string; macet?: boolean }[];
+    }
   | { type: 'prop'; w: string; cls: 'kembali' | 'etik' }
-  | { type: 'range'; lo: string; hi: string };
+  | {
+      type: 'range';
+      lo: string;
+      hi: string;
+      // the national needle: where the whole country sits inside the span
+      jarum?: { min: number; max: number; nilai: number; label: string };
+    };
 
 export interface Cabang {
   slug: string;
@@ -47,9 +59,18 @@ export const CABANG: Cabang[] = [
     cap: 'Revisi UU Polri disahkan dalam 20 hari; RUU Perampasan Aset belum disahkan setelah lebih dari 13 tahun.',
     viz: {
       type: 'gantt',
+      skala: {
+        ticks: [
+          { v: 10, label: '10 HARI' },
+          { v: 100, label: '100' },
+          { v: 1000, label: '1.000' },
+          { v: 10000, label: '10.000' },
+        ],
+        catatan: 'SKALA LOG · HARI KALENDER',
+      },
       rows: [
-        { k: 'Revisi UU Polri', w: '4%', label: '20 hari' },
-        { k: 'RUU Perampasan Aset', w: '100%', label: '13+ tahun', macet: true },
+        { k: 'Revisi UU Polri', hari: 20, label: '20 hari' },
+        { k: 'RUU Perampasan Aset', hari: 4750, label: '13+ tahun', macet: true },
       ],
     },
   },
@@ -87,7 +108,12 @@ export const CABANG: Cabang[] = [
     apa: '38 provinsi, ratusan pemda, plus otonomi khusus Aceh dan Papua.',
     big: '8×',
     cap: 'selisih peluang lahir miskin antara provinsi terendah dan tertinggi',
-    viz: { type: 'range', lo: 'BALI 3,7%', hi: 'PAPUA PEG. 30,0%' },
+    viz: {
+      type: 'range',
+      lo: 'BALI 3,7%',
+      hi: 'PAPUA PEG. 30,0%',
+      jarum: { min: 3.7, max: 30.0, nilai: 8.57, label: 'NASIONAL 8,6%' },
+    },
   },
 ];
 

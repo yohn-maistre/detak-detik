@@ -50,6 +50,8 @@
                 </div>
               {/each}
             </div>
+            <!-- axis honesty: the funnel's 100% is its own first step, said plainly -->
+            <div class="sk-ruler mono" aria-hidden="true"><span>0</span><span>100% = {t.langkah[0]?.v}</span></div>
             <p class="sk-label">{t.label}</p>
           {:else if t.tipe === 'dumbbell'}
             <div class="sk-dumb" aria-hidden="true">
@@ -57,10 +59,11 @@
               <span class="sk-bar" style={`left:${Math.min(t.a.v, t.b.v)}%;width:${Math.abs(t.b.v - t.a.v)}%`}></span>
               <span class="sk-dot b" style={`left:${t.b.v}%`}></span>
             </div>
+            <div class="sk-ruler mono" aria-hidden="true"><span>0{t.satuan}</span><span>100{t.satuan}</span></div>
             <p class="sk-dumb-key mono"><span class="a">{t.a.k} {t.a.v}{t.satuan}</span> · <span class="b">{t.b.k} {t.b.v}{t.satuan}</span></p>
             <p class="sk-label">{t.label}</p>
           {/if}
-          <span class="sk-src mono">⊙ {t.sumber} · (data contoh)</span>
+          <span class="sk-src mono">⊙ {t.sumber} · {t.live ?? '(data contoh)'}</span>
         </article>
       {/each}
     </div>
@@ -73,7 +76,9 @@
   .sk-ringkas { font-size: clamp(15px, 1.8vw, 19px); color: var(--ink); }
   .sk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 3vw, 40px); }
   @media (max-width: 760px) { .sk-grid { grid-template-columns: 1fr; gap: 22px; } }
-  .sk-tile { display: grid; gap: 8px; align-content: start; border-top: 1px solid var(--line-soft); padding-top: 12px; }
+  /* flex column so the ⊙ source line pins to the tile bottom, aligned across the row */
+  .sk-tile { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line-soft); padding-top: 12px; }
+  .sk-ruler { display: flex; justify-content: space-between; border-top: 1px solid var(--line-soft); padding-top: 2px; font-size: 7.5px; letter-spacing: 0.08em; color: var(--muted); opacity: 0.85; }
 
   .sk-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(34px, 4.6vw, 56px); line-height: 0.9; color: var(--ink); }
   .sk-n.buruk { color: var(--accent); }
@@ -81,7 +86,7 @@
   .sk-of { font-size: 0.42em; color: var(--muted); }
   .sk-label { font-size: 13px; color: var(--ink); line-height: 1.4; max-width: 34ch; }
   .sk-sub { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); }
-  .sk-src { font-size: 8.5px; letter-spacing: 0.08em; color: var(--muted); margin-top: 2px; }
+  .sk-src { font-size: 8.5px; letter-spacing: 0.08em; color: var(--muted); margin-top: auto; padding-top: 6px; }
 
   /* waffle */
   .sk-waffle { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; max-width: 180px; }

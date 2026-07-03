@@ -12,7 +12,8 @@
     { label: 'Wakil menteri', n: 56, cls: 'w' },
     { label: 'Kepala badan', n: 5, cls: 'b' },
   ];
-  const cells = TIER.flatMap((t) => Array.from({ length: t.n }, () => t.cls));
+  // each cell carries its own filing line for the hover dossier (native title)
+  const cells = TIER.flatMap((t) => Array.from({ length: t.n }, (_, k) => ({ cls: t.cls, tip: `${t.label} · ${k + 1} dari ${t.n}` })));
 
   // Danantara diluncurkan 24 Feb 2025; laporan keuangan terbit: 0
   const LAUNCH = Date.UTC(2025, 1, 24);
@@ -44,7 +45,7 @@
       <p class="kw-anno fig">Satu sel satu pejabat · <span data-annotate="underline" data-annotate-color="#e44a06">terbanyak sejak 1966</span></p>
       <div class="kw-waffle" role="img" aria-label="109 pejabat kabinet: 48 menteri, 56 wakil menteri, 5 kepala badan">
         {#each cells as c, i (i)}
-          <i class="kw-cell kw-{c}"></i>
+          <i class="kw-cell kw-{c.cls}" title={c.tip}></i>
         {/each}
       </div>
       <div class="kw-key mono">
@@ -85,6 +86,7 @@
   .kw-waffle { display: grid; grid-template-columns: repeat(14, 1fr); gap: 4px; }
   @media (max-width: 420px) { .kw-waffle { grid-template-columns: repeat(11, 1fr); } }
   .kw-cell { aspect-ratio: 1; border-radius: 1px; }
+  .kw-cell:hover { outline: 1px solid var(--ink); outline-offset: 1px; }
   .kw-m { background: var(--ink); }
   .kw-w { background: var(--muted); }
   .kw-b { background: var(--accent); }

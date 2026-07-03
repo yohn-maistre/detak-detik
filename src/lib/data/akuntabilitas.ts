@@ -15,11 +15,13 @@
 
 export type Nada = 'buruk' | 'baik' | 'datar';
 
+/** `live` on a tile replaces the "(data contoh)" tail with a real provenance
+ *  tag — tiles flip one by one as their wiring lands, never all at once */
 export type SkorTile =
-  | { tipe: 'stat'; besar: string; label: string; sumber: string; nada?: Nada; sub?: string }
-  | { tipe: 'waffle'; isi: number; dari: number; label: string; sumber: string; nada?: Nada }
-  | { tipe: 'funnel'; langkah: { k: string; v: string; w: number }[]; label: string; sumber: string }
-  | { tipe: 'dumbbell'; a: { k: string; v: number }; b: { k: string; v: number }; satuan: string; label: string; sumber: string };
+  | { tipe: 'stat'; besar: string; label: string; sumber: string; nada?: Nada; sub?: string; live?: string }
+  | { tipe: 'waffle'; isi: number; dari: number; label: string; sumber: string; nada?: Nada; live?: string }
+  | { tipe: 'funnel'; langkah: { k: string; v: string; w: number }[]; label: string; sumber: string; live?: string }
+  | { tipe: 'dumbbell'; a: { k: string; v: number }; b: { k: string; v: number }; satuan: string; label: string; sumber: string; live?: string };
 
 export interface Skor {
   ringkas: string;
@@ -69,7 +71,9 @@ export const SKOR: Record<string, Skor> = {
     tiles: [
       { tipe: 'dumbbell', label: 'Sumber pendapatan daerah, rata-rata', sumber: 'djpk kemenkeu', satuan: '%', a: { k: 'PAD sendiri', v: 15 }, b: { k: 'Transfer pusat', v: 65 } },
       { tipe: 'stat', besar: '21 / 38', label: 'Provinsi beropini WTP dari BPK', sumber: 'bpk', nada: 'datar' },
-      { tipe: 'stat', besar: '35%', label: 'Belanja pegawai dari APBD (median)', sumber: 'djpk', nada: 'buruk' },
+      // real figure from our own DJPK harvest (scripts/fetch-apbd.mjs):
+      // median pegawaiPct across all 546 reporting pemda, 2024 realisasi
+      { tipe: 'stat', besar: '37%', label: 'Belanja pegawai dari APBD (median 546 pemda)', sumber: 'djpk kemenkeu', nada: 'buruk', live: 'realisasi 2024' },
     ],
   },
 };
