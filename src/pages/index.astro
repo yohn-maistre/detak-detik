@@ -16,6 +16,7 @@ import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
 import TenggatStrip from '../islands/TenggatStrip.svelte';
+import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import PetaRupa from '../islands/PetaRupa.svelte';
@@ -305,6 +306,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </ol>
         </nav>
+
+        <!-- the doctor's chart: five vitals against their documented healthy
+             ranges — daerah's band is a statutory ceiling (UU 1/2022 Ps.146) -->
+        <VitalCabang client:visible />
 
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">

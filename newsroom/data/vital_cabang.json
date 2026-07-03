@@ -1,0 +1,57 @@
+[
+  {
+    "id": "eksekutif-kabinet",
+    "cabang": "EKSEKUTIF",
+    "metrik": "Jumlah menteri & pejabat setingkat (tanpa wakil menteri)",
+    "nilai": 48,
+    "satuan": "orang",
+    "catatan": "±109–112 termasuk wakil menteri & kepala badan; terbesar sejak 1966",
+    "band": { "lo": 33, "hi": 38, "label": "KISARAN 1998–2019", "sumber": "seluruh kabinet 1998–2019; median pasca-1966 = 34 (Daftar kabinet Indonesia, id.wikipedia)" },
+    "dulu": { "nilai": 34, "tahun": "2014", "sumber": "Kabinet Kerja" },
+    "sumber": "Kabinet Merah Putih · detik/kontan okt 2024 · infobox id.wikipedia 2026"
+  },
+  {
+    "id": "legislatif-throughput",
+    "cabang": "LEGISLATIF",
+    "metrik": "RUU prioritas disahkan, tahun penuh terakhir (2025)",
+    "nilai": 9,
+    "satuan": "RUU",
+    "catatan": "dari target Prolegnas 52 RUU yang DPR tetapkan sendiri — realisasi ±17%",
+    "band": { "lo": 52, "hi": 52, "label": "TARGET PROLEGNAS 2025", "sumber": "target 52 RUU ditetapkan DPR; PSHK Catahu 2025 via kompas.id & aktual.com" },
+    "dulu": { "nilai": 7, "tahun": "rerata 2015–2019", "sumber": "36 RUU prioritas dalam 5 tahun (Databoks)" },
+    "sumber": "PSHK Catahu 2025 · 9 RUU non-kumulatif, 2 di luar daftar prioritas"
+  },
+  {
+    "id": "yudikatif-recovery",
+    "cabang": "YUDIKATIF",
+    "metrik": "Kerugian negara dalam vonis korupsi yang kembali",
+    "nilai": 4.84,
+    "satuan": "%",
+    "catatan": "2024: Rp16,9 T dari Rp330,9 T (terangkat kasus timah); plafon hukum 100% — UU 31/1999 Ps.18",
+    "band": { "lo": 2, "hi": 34, "label": "RENTANG ICW 2018–2022", "sumber": "uang pengganti 2–34% dari kerugian, ICW via Databoks; konteks global StAR/OECD: pemulihan aset memang seret di mana-mana" },
+    "dulu": { "nilai": 2.2, "tahun": "2021", "sumber": "Rp1,4 T dari Rp62,9 T (ICW)" },
+    "sumber": "ICW Tren Vonis 2024 · antikorupsi.org, des 2025"
+  },
+  {
+    "id": "aparat-anggaran",
+    "cabang": "APARAT",
+    "metrik": "Porsi anggaran Polri + Kemhan/TNI terhadap belanja negara",
+    "nilai": 8.7,
+    "satuan": "%",
+    "catatan": "2026: Rp332,7 T dari Rp3.842,7 T; tidak ada plafon hukum — pembandingnya riwayat sendiri. Kekerasan Polri (KontraS, jul–jun): 645 → 602 → 561 peristiwa",
+    "band": { "lo": 8.1, "hi": 8.7, "label": "RIWAYAT 2016–2026", "sumber": "hitungan dari UU APBN 2016 & 2026 (Kemhan+Polri / belanja negara)" },
+    "dulu": { "nilai": 8.2, "tahun": "2016", "sumber": "Kemhan Rp99,5 T + Polri Rp73 T / APBN Rp2.095,7 T" },
+    "sumber": "UU APBN 2026 · Kemhan Rp187,1 T (tempo/antara) · Polri Rp145,6 T (angka RAPBN)"
+  },
+  {
+    "id": "daerah-pegawai",
+    "cabang": "DAERAH",
+    "metrik": "Rasio belanja pegawai terhadap APBD, rerata nasional",
+    "nilai": 37.18,
+    "satuan": "%",
+    "catatan": "melampaui plafon undang-undang; opini WTP daerah justru membaik (47% → 90% LKPD 2014–2024, BPK)",
+    "band": { "lo": 0, "hi": 30, "label": "PLAFON UU · MAKS 30%", "sumber": "UU 1/2022 (HKPD) Pasal 146 — plafon hukum 30%, wajib penuh 2027; pelaksanaan via UU APBN (DDTC, Kemenkeu KLC)" },
+    "dulu": { "nilai": 37.4, "tahun": "2022", "sumber": "DJPb Kemenkeu via CNBC; angka pra-2022 tak terverifikasi" },
+    "sumber": "DJPb Kemenkeu 2023 · harvest DJPK sendiri: median 546 pemda = 37% (realisasi 2024)"
+  }
+]
