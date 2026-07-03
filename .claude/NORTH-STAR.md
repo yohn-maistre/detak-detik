@@ -1338,9 +1338,11 @@ never embeddings, never a store the reader can't audit.
 2. **THE DIFF (`newsroom/memory.py`)**: each run loads the window and
    computes one structured INGATAN artifact:
    - `cerita`: today's kliping clusters fingerprint-matched against the
-     window (the _serumpun token machinery, reused) → BARU / BERLANJUT
-     (with first-seen date + n editions covered) / MATI (coverage decay:
-     stories that vanished — itself a finding).
+     window (the _serumpun token machinery, reused) → **BARU /
+     BERKEMBANG / BERLALU** (Yose's naming, 2026-07-03: a story that
+     stopped isn't "dead", it passed) — BERKEMBANG carries first-seen
+     date + n editions covered; BERLALU is coverage decay, itself a
+     finding.
    - `angka`: deltas on angka_edisi, pasar, and any janji status change
      (the ledger self-audit log feeds straight in).
    - Compact block rides the edisi payload (`Edisi.ingatan`).
