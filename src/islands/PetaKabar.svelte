@@ -217,7 +217,7 @@
      dossier — keyless, from cahyadsn/Kemendagri 2025, joined to our 514 kab by
      name. Keyed `${prov}|${stripped nama}`. BPS indicators (IPM, poverty, PDRB)
      layer on later when the key lands. */
-  type WilRow = { kode?: string; ibukota?: string; pop?: number; luas?: number; lat?: number; lon?: number };
+  type WilRow = { kode?: string; ibukota?: string; pop?: number; luas?: number; lat?: number; lon?: number; dagri?: string; pos?: string };
   const normKab = (s: unknown) => String(s ?? '').toLowerCase().replace(/[^a-z]/g, '');
   let wilayahIdx = $state<Record<string, WilRow>>({});
   fetch(`${import.meta.env.BASE_URL}data/idn-wilayah.json`)
@@ -617,11 +617,16 @@
     const k = lensaKab;
     if (!k || k.prov !== lensaKode) return null;
     const dens = k.pop && k.luas ? k.pop / k.luas : null;
+    // the filing codes (Kemendagri + postal) read straight off the enriched
+    // wilayah registry — no bus round-trip (see scripts/enrich-wilayah.mjs)
+    const w = wilayahIdx[`${k.prov}|${normKab(k.nama)}`];
     return {
       ...k,
       dens,
       densStr: dens != null ? fmtN(dens, dens < 10 ? 1 : 0) : null,
       shPop: k.pop && k.provPop ? (k.pop / k.provPop) * 100 : null,
+      dagri: w?.dagri ?? null,
+      pos: w?.pos ?? null,
     };
   });
 
@@ -1800,6 +1805,7 @@
             {#if dossierKab.pop}<div class="kb-dossier-row"><span>Penduduk</span><b>{fmtN(dossierKab.pop)} <i>№{dossierKab.rankPop}/{dossierKab.nKab}</i></b></div>{/if}
             {#if dossierKab.luas}<div class="kb-dossier-row"><span>Luas</span><b>{fmtN(dossierKab.luas)} km²</b></div>{/if}
             {#if dossierKab.densStr}<div class="kb-dossier-row"><span>Kepadatan</span><b>{dossierKab.densStr}/km² <i>№{dossierKab.rankPad}/{dossierKab.nKab}</i></b></div>{/if}
+            {#if dossierKab.dagri}<div class="kb-dossier-row"><span>Kode</span><b>{dossierKab.dagri}{#if dossierKab.pos} <i>POS {dossierKab.pos}</i>{/if}</b></div>{/if}
           </div>
           {#if dossierKab.shPop != null}
             <div class="kb-dossier-sh">
@@ -1814,7 +1820,7 @@
             <div class="kb-dossier-pbody">{@render provBody(dossier)}</div>
           {/if}
           <div class="kb-dossier-kaki">
-            <span class="kb-dossier-src">Kemendagri 2025</span>
+            <span class="kb-dossier-src">Kemendagri 2025 · kode BPS SIG</span>
             <button class="kb-dossier-tautan" onclick={() => pulseRef('dossier')}>buka di Lensa Wilayah ↓</button>
           </div>
         {:else}

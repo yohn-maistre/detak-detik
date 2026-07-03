@@ -567,6 +567,14 @@ phase (cap 5, prefer read-only or disjoint-file agents on this host).
 7. Make a free pasal.id account and file its API token as a repo secret
    (`PASAL_API_TOKEN`) — unlocks legal search for Aksara + the pasal.id
    MCP server (§13.11). The public law pages stay linkable without it.
+8. **BPS indicator snapshots (manual browser download — scripts cannot):**
+   every BPS surface carrying numbers is Cloudflare-challenged, so grab
+   these xlsx from bps.go.id in a normal browser and drop them in
+   `newsroom/data/bps/` (any filename): (a) IPM per kabupaten/kota
+   (latest), (b) persentase penduduk miskin per kabupaten/kota,
+   (c) TPT per provinsi, (d) PDRB per kapita per kabupaten. A convert
+   script will join them to the registry on the 4-digit BPS code and
+   feed the map choropleth + Lensa Wilayah. Quarterly/annual refresh.
 
 ## 11. Open questions (parked, not blockers)
 
@@ -1156,6 +1164,31 @@ Design regardless of endpoint details (scout verifying):
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-03 · wave 6c — gerak I gauge pass + BPS verdict + crosswalk
+- **CabangBand speaks the gauge language**: the legislatif gantt now sits
+  on a LABELED LOG RULER (10→10.000 hari; 20 hari vs 13 tahun drawn
+  honestly — the old 4% width was a visual compromise), scale declared
+  "SKALA LOG · HARI KALENDER"; the daerah range carries the national
+  needle (NASIONAL 8,6% inside the Bali↔Papua Peg. span); prop bars get
+  0–100 rulers. SkorCabang: min/max mono labels on funnel ("100% = 602")
+  and dumbbell, ⊙ pinned to tile bottom (flex+auto margin), per-tile
+  `live` tag — the daerah pegawai tile now prints the REAL median from
+  our own harvest (35% contoh → 37% · djpk realisasi 2024).
+  KabinetWaffle cells carry hover filings; GradienKeadilan's outlier
+  ring became the hand-drawn scribble (deterministic wobble, madder).
+- **BPS scout verdict (all curl-verified)**: sig.bps.go.id is a keyless
+  REST family — crosswalks BPS↔Kemendagri↔POSTAL, period snapshots,
+  and code lineage 1961→2025 (pemekaran archaeology, future mechanic).
+  But NO keyless indicator endpoint exists: www/regional/api hosts are
+  Cloudflare/WAF-shut and the one keyless thematic backend is dead
+  (500). Indicators therefore = manual browser xlsx snapshots
+  (needs-from-Yose №8), joined on the 4-digit BPS code.
+- **Crosswalk shipped**: scripts/enrich-wilayah.mjs merged dagri + pos
+  codes into idn-wilayah.json (511/514; Dumai + both Sorongs miss on
+  sig's side — left absent, never guessed). Map dossier tier-2 gains a
+  KODE row (Kemendagri dotted + POS). sig serves the OLD 34-province
+  scheme, so Papua joins by name fallback with ambiguity poisoning.
 
 ### 2026-07-03 · wave 6b — the accountability engine gets fuel (DJPK) + § stamps
 - **KARTOTEK APBD shipped**: `scripts/fetch-apbd.mjs` harvests DJPK's
