@@ -562,6 +562,11 @@ phase (cap 5, prefer read-only or disjoint-file agents on this host).
 4. Review cadence for the Manusia backlog and the kliping flag queue (you are
    the editorial cell v1).
 5. Approve `indonesia-civic-stack` adoption after the footprint check.
+6. Rotate `NIM_API_KEY` (or add GROQ/OPENROUTER/GEMINI keys) — SARI and
+   model phrasing lanes are dead until then (see §14 wave-3 addendum).
+7. Make a free pasal.id account and file its API token as a repo secret
+   (`PASAL_API_TOKEN`) — unlocks legal search for Aksara + the pasal.id
+   MCP server (§13.11). The public law pages stay linkable without it.
 
 ## 11. Open questions (parked, not blockers)
 
@@ -1054,10 +1059,29 @@ Yose found pasal.id and asked where legal data fits ("for the sources, or
 for Aksara"). The answer is bigger than either: **law is the state's own
 receipt**. A civic paper that prints "the regime promised X" is good; one
 that prints the pasal that *obligates* X, verbatim, with its
-berlaku/diubah/dicabut status, is untouchable. Two scouts are verifying
-pasal.id's API surface + the official landscape (peraturan.bpk.go.id,
-peraturan.go.id/JDIHN, MA putusan, DPR RUU tracker). Everything below is
-gated on what they verify — citation-or-silence applies to endpoints too.
+berlaku/diubah/dicabut status, is untouchable.
+
+**Scout findings (all curl-verified 2026-07-03):**
+- **pasal.id** — independent free platform by Ilham Firdausi Putra, born
+  at the Claude Code Hackathon (Feb 2026). 100k+ regulations, pasal/ayat-
+  structured, status + amendment relationships, Akoma Ntoso FRBR URIs.
+  Public pages keyless (`pasal.id/peraturan/uu/uu-no-13-tahun-2003`, each
+  citing peraturan.go.id back); **REST API + MCP server
+  (`mcp.pasal.id/mcp`) free but token-gated** (free account, rate limits
+  60/min search). ToS explicitly permits programmatic access within
+  limits; forbids wholesale DB redistribution. → NEEDS-FROM-YOSE: a free
+  pasal.id account + API token unlocks search-by-Aksara + the MCP.
+- **peraturan.bpk.go.id** — keyless, server-rendered, the richest status
+  source: full "Diubah dengan / Mencabut / Mengubah" chains AND uji
+  materi (MK amar + putusan PDFs) per law. HTML parse, no API.
+- **peraturan.go.id** — canonical anchor + official PDFs; sitemap-driven,
+  search endpoint broken (500). **jdihn.go.id/api/search** — keyless JSON
+  (872k docs) but noisy federation, weak status data.
+- **Dead ends from this host**: MA putusan3 (Cloudflare challenge), all
+  DPR properties incl. sileg (Akamai 403/timeout) — RUU-in-progress
+  tracking has no reachable source yet; needs a proxy or manual capture.
+- **Citation pattern**: pasal.id for readable structured text, BPK/
+  peraturan.go.id as the official anchor — cite both on legal receipts.
 
 **Foundation (build first):** a legal registry — curated, vendored JSON
 (`src/lib/data/hukum.ts`): the ~20 laws the paper actually cites (UU ITE,
@@ -1132,6 +1156,32 @@ Design regardless of endpoint details (scout verifying):
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-03 · wave 6b — the accountability engine gets fuel (DJPK) + § stamps
+- **KARTOTEK APBD shipped**: `scripts/fetch-apbd.mjs` harvests DJPK's
+  keyless csv_apbd portal (2024 realisasi, ~552 pemda, throttled) and
+  joins DJPK names to OUR registries (DAERAH provinces + idn-wilayah
+  kabs; the BPS bridging API was rejected — still on the pre-pemekaran
+  Papua scheme). Output `public/data/apbd.json` carries FINISHED metrics:
+  belanja pegawai %, belanja modal %, belanja per kapita, each ranked
+  /38 (prov) and /~500 (kab). LensaWilayah files them as a corner-marked
+  plate whose rows reuse the spread's ld-* grammar (rank chip, national
+  print, TERBURUK→TERBAIK ruler with the mark drawn from rank; per-kapita
+  carries no verdict — capacity, not virtue). Kab tier shows on drill;
+  static pegawai estimate yields to the real number; source chip flips to
+  `djpk 2024 realisasi`. Unjoined pemda are dropped and logged, never
+  guessed. DKI correctly files as 1 pemda (kota adm have no own APBD).
+- **§ stamp shipped (LAPIS HUKUM mechanic 2)**: deterministic law-mention
+  extraction in the newsroom — numbered regex (UU/RUU/Perppu/Perpres/PP
+  n/yyyy) + curated named aliases (title-case-safe; "PP Muhammadiyah"
+  and "Permen" traps tested, 16/16). Kliping gains `hukum[]`; lembar
+  prints MENYEBUT · § UU …; feed meta gets a quiet § chip.
+- **Legal + fiscal scouts returned** (findings in §13.11): pasal.id has a
+  free token-gated API + MCP; peraturan.bpk.go.id is the status-chain
+  goldmine; DPR/MA unreachable from this host. DJPK verified end-to-end.
+- **Deferred**: struk↔lens coupling (struk is static APBN server HTML —
+  islandizing it is its own pass), legal registry content (needs
+  hand-verified pasal texts), pasal.id token (needs-from-Yose №7).
 
 ### 2026-07-03 · wave 6 — dossier v2 (the tiered filing) + quick wins
 - **Map dossier v2 shipped** (§13.9-B done): the card is now two-tier.

@@ -107,6 +107,57 @@
       stamp: koord(k.lat, k.lon),
     };
   });
+  /* ── KARTOTEK APBD (P13.12): real DJPK realization figures, vendored by
+     scripts/fetch-apbd.mjs. Metrics + ranks are precomputed in the script;
+     this panel only files them. Absent/failed file = the card stays silent. ── */
+  type ApbdRow = {
+    kode: string; nama: string; b: number; p: number; m: number; d: number; pop: number | null;
+    pegawaiPct: number | null; modalPct: number | null; perKapita: number | null;
+    rank_pegawaiPct?: number; rank_modalPct?: number; rank_perKapita?: number;
+  };
+  type Apbd = { sumber: string; tahun: number; nasional: { pegawaiPct: number; modalPct: number; perKapita: number }; nProv: number; nKab: number; baris: ApbdRow[] };
+  let apbd = $state<Apbd | null>(null);
+  let apbdIdx = $state<Record<string, ApbdRow>>({});
+  fetch(`${import.meta.env.BASE_URL}data/apbd.json`)
+    .then((r) => r.json())
+    .then((a: Apbd) => {
+      const m: Record<string, ApbdRow> = {};
+      for (const r of a.baris) m[r.kode] = r;
+      apbdIdx = m;
+      apbd = a;
+    })
+    .catch(() => null);
+  const apbdProv = $derived(!isNas ? (apbdIdx[d.kode] ?? null) : null);
+  const apbdKab = $derived(kab?.kode ? (apbdIdx[kab.kode] ?? null) : null);
+  const fmtRp = (n: number) => (n >= 1e6 ? `Rp ${fmtN(n / 1e6, 1)} jt` : `Rp ${fmtN(n / 1e3)} rb`);
+  const pctStr = (n: number) => `${fmtN(n, 1)}%`;
+  /* one filed metric: value, national print, rank, and a drawn position on the
+     TERBURUK→TERBAIK ruler derived from the rank itself (rank 1 = highest value).
+     Per-kapita carries no verdict — spending size is capacity, not virtue. */
+  function kartotekBaris(r: ApbdRow, n: number) {
+    const pos = (rank: number | undefined, tinggiBaik: boolean | null) => {
+      if (!rank || n < 2) return null;
+      const t = (rank - 1) / (n - 1); // 0 = highest value
+      return tinggiBaik === null ? 1 - t : tinggiBaik ? 1 - t : t;
+    };
+    const rows = [
+      { k: 'Belanja pegawai', v: r.pegawaiPct, nas: apbd!.nasional.pegawaiPct, rank: r.rank_pegawaiPct, tinggiBaik: false as boolean | null, fmt: pctStr, ujung: ['TERBURUK', 'TERBAIK'] },
+      { k: 'Belanja modal', v: r.modalPct, nas: apbd!.nasional.modalPct, rank: r.rank_modalPct, tinggiBaik: true as boolean | null, fmt: pctStr, ujung: ['TERBURUK', 'TERBAIK'] },
+      { k: 'Belanja per kapita', v: r.perKapita, nas: apbd!.nasional.perKapita, rank: r.rank_perKapita, tinggiBaik: null, fmt: fmtRp, ujung: ['TERKECIL', 'TERBESAR'] },
+    ];
+    return rows.filter((x) => x.v != null).map((x) => {
+      const p = pos(x.rank, x.tinggiBaik);
+      return {
+        k: x.k, val: x.fmt(x.v!), nas: x.fmt(x.nas), rank: x.rank ?? null, n,
+        p, ujung: x.ujung,
+        buruk: x.tinggiBaik !== null && p != null && p < 0.34,
+        baik: x.tinggiBaik !== null && p != null && p > 0.66,
+      };
+    });
+  }
+  const kartotekProv = $derived(apbd && apbdProv ? kartotekBaris(apbdProv, apbd.nProv) : null);
+  const kartotekKab = $derived(apbd && apbdKab ? kartotekBaris(apbdKab, apbd.nKab) : null);
+
   /* the share meters self-draw when the band appears; instant under reduced motion */
   function reveal(node: HTMLElement) {
     if (reducedMotion()) { node.classList.add('in'); return; }
@@ -119,13 +170,15 @@
     return q ? PROV.filter((r) => r.nama.toLowerCase().includes(q) || r.pulau.toLowerCase().includes(q)) : PROV;
   });
 
-  /* province face: the dossier stats, each against the national print */
+  /* province face: the dossier stats, each against the national print. The
+     static belanja-pegawai estimate yields to the KARTOTEK card once the real
+     DJPK figures have loaded (one number, one source). */
   const STAT = $derived([
     { k: 'Penduduk', v: d.penduduk, n: nas.penduduk },
     { k: 'Kemiskinan', v: d.miskin, n: nas.miskin },
     { k: 'Dokter / 1.000', v: d.dokter, n: nas.dokter },
     { k: 'IPM', v: d.ipm, n: nas.ipm },
-    { k: 'Belanja pegawai APBD', v: d.pegawai, n: nas.pegawai },
+    ...(apbdProv ? [] : [{ k: 'Belanja pegawai APBD', v: d.pegawai, n: nas.pegawai }]),
   ]);
 
   /* the rank tallies up when a province is chosen; instant under reduced motion */
@@ -213,6 +266,36 @@
             </div>
           {/each}
         </div>
+
+        {#if kartotekProv && apbd}
+          <!-- KARTOTEK APBD: how the province spends, from DJPK's own ledger.
+               Rows speak the spread's ld-* grammar; position is drawn from rank. -->
+          <div class="lw-apbd">
+            <div class="lw-apbd-head">
+              <span class="lw-apbd-t mono">KARTOTEK APBD · REALISASI {apbd.tahun}</span>
+              <span class="lw-apbd-s mono">PEMERINTAH PROVINSI · DJPK KEMENKEU</span>
+            </div>
+            {#each kartotekProv as r (r.k)}
+              <div class="ld-row">
+                <div class="ld-row-l">
+                  <span class="ld-label">{r.k}</span>
+                  {#if r.rank}<span class="ld-rank-chip mono" class:buruk={r.buruk} class:baik={r.baik}>ke-{r.rank}/{r.n}</span>{/if}
+                </div>
+                <div class="ld-row-r">
+                  <span class="ld-val num" class:buruk={r.buruk} class:baik={r.baik}>{r.val}</span>
+                  <span class="ld-delta mono">nasional {r.nas}</span>
+                </div>
+                {#if r.p != null}
+                  <div class="ld-track">
+                    <span class="ld-end mono kiri">{r.ujung[0]}</span>
+                    <span class="ld-end mono kanan">{r.ujung[1]}</span>
+                    <span class="ld-mark" class:buruk={r.buruk} class:baik={r.baik} style={`left:${(r.p * 100).toFixed(1)}%`}></span>
+                  </div>
+                {/if}
+              </div>
+            {/each}
+          </div>
+        {/if}
       {:else}
         <p class="lw-prompt fig">Klik sebuah provinsi di peta, atau cari namanya di atas, untuk membacanya terhadap acuan nasional. Sebaran di bawah menunjukkan posisi tiap provinsi.</p>
       {/if}
@@ -255,6 +338,34 @@
         {#if kabView.kepadatan != null}
           <p class="lw-kab-foot mono">kepadatan <b>{fmtN(kabView.kepadatan)}</b> jiwa/km²{#if kabView.k.rankPad} · terpadat ke-{kabView.k.rankPad} dari {kabView.k.nKab} kabupaten{/if}</p>
         {/if}
+
+        {#if kartotekKab && apbd}
+          <div class="lw-apbd kab">
+            <div class="lw-apbd-head">
+              <span class="lw-apbd-t mono">KARTOTEK APBD · REALISASI {apbd.tahun}</span>
+              <span class="lw-apbd-s mono">PEMERINTAH KAB/KOTA · DJPK KEMENKEU · PERINGKAT DARI {apbd.nKab} PEMDA</span>
+            </div>
+            {#each kartotekKab as r (r.k)}
+              <div class="ld-row">
+                <div class="ld-row-l">
+                  <span class="ld-label">{r.k}</span>
+                  {#if r.rank}<span class="ld-rank-chip mono" class:buruk={r.buruk} class:baik={r.baik}>ke-{r.rank}/{r.n}</span>{/if}
+                </div>
+                <div class="ld-row-r">
+                  <span class="ld-val num" class:buruk={r.buruk} class:baik={r.baik}>{r.val}</span>
+                  <span class="ld-delta mono">nasional {r.nas}</span>
+                </div>
+                {#if r.p != null}
+                  <div class="ld-track">
+                    <span class="ld-end mono kiri">{r.ujung[0]}</span>
+                    <span class="ld-end mono kanan">{r.ujung[1]}</span>
+                    <span class="ld-mark" class:buruk={r.buruk} class:baik={r.baik} style={`left:${(r.p * 100).toFixed(1)}%`}></span>
+                  </div>
+                {/if}
+              </div>
+            {/each}
+          </div>
+        {/if}
         <p class="lw-kab-note mono">Angka BPS lanjutan (IPM, kemiskinan, PDRB) menyusul saat kunci terpasang.</p>
       </aside>
     {/key}
@@ -295,7 +406,7 @@
     {:else}
       <span class="eyebrow">SEMUA UKURAN: NASIONAL DEFAULT · DAERAH HANYA LEWAT LENSA INI</span>
     {/if}
-    <button class="chip"><span class="tick">⊙</span>bps · djpk · (data contoh)</button>
+    <button class="chip"><span class="tick">⊙</span>{apbd ? `bps (contoh) · djpk ${apbd.tahun} realisasi` : 'bps · djpk · (data contoh)'}</button>
   </div>
 </section>
 
@@ -389,6 +500,17 @@
   @keyframes ld-stamp { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   .ld-rank-of { font-size: 0.36em; color: var(--muted); letter-spacing: 0; }
   .ld-rank-sub { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); display: block; margin-top: 2px; }
+  /* KARTOTEK APBD: a filed plate (the instrument-room corner marks) whose rows
+     speak the spread's ld-* grammar — one drawing language for both */
+  .lw-apbd { position: relative; margin-top: 22px; border: 1px solid var(--line); padding: 14px 16px 22px; display: grid; gap: 18px; }
+  .lw-apbd::before, .lw-apbd::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
+  .lw-apbd::before { top: -6px; left: -4px; }
+  .lw-apbd::after { bottom: -6px; right: -4px; }
+  .lw-apbd-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; }
+  .lw-apbd-t { font-size: 9px; letter-spacing: 0.16em; color: var(--ink); }
+  .lw-apbd-s { font-size: 8px; letter-spacing: 0.12em; color: var(--muted); }
+  .lw-apbd.kab { background: color-mix(in oklab, var(--bg) 94%, transparent); }
+
   .dossier-stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(10px, 2vw, 22px); margin: 22px 0 0; }
   @media (max-width: 760px) { .dossier-stats { grid-template-columns: repeat(2, 1fr); gap: 18px; } }
   .dossier-stat { display: grid; gap: 3px; align-content: start; position: relative; padding-left: 14px; }
