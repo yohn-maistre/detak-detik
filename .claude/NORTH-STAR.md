@@ -575,6 +575,17 @@ phase (cap 5, prefer read-only or disjoint-file agents on this host).
    (c) TPT per provinsi, (d) PDRB per kapita per kabupaten. A convert
    script will join them to the registry on the 4-digit BPS code and
    feed the map choropleth + Lensa Wilayah. Quarterly/annual refresh.
+9. Register a free IDMC API client_id (internal-displacement.org → Database
+   → API docs / contact form) and file it as repo secret `IDMC_CLIENT_ID` —
+   unlocks the displacement figures of record (GIDD annual + IDU event
+   stream) for the ALAM rebuild (§13.17 A.6; cookbook
+   `docs/research/2026-07-03-alam-endpoint-cookbook.md`).
+10. **KPA Catahu + Komnas HAM annual reports (manual browser download —
+   both Cloudflare/WAF-walled to scripts):** each January grab the KPA
+   Catatan Akhir Tahun PDF (konflik agraria count, luas, KK terdampak)
+   and the Komnas HAM annual statistics, drop in `newsroom/data/alam/`.
+   These are the paper's most sensitive figures; they enter only through
+   the verification desk.
 
 ## 11. Open questions (parked, not blockers)
 
@@ -1391,11 +1402,20 @@ VITAL shipped.
    lensa/lensa-kab) = enlarged labeled dot. When a Papua province is in
    the lens, the verified otsus series + receipt appears as an extra
    plate (that data is Papua's; it shows when Papua is asked for).
-6. **ALAM & EKSTRAKSI expansion** — scout in flight for open public
-   APIs (GFW data-api per-adm, KLHK ArcGIS, data.go.id CKAN, IDMC GIDD,
-   KPA/Komnas HAM yearly publications). Registry + refresh script
-   pattern; displacement figures = most sensitive in the paper,
-   verification scout before ANY number prints (§13.15 stands).
+6. **ALAM & EKSTRAKSI expansion** — scout RETURNED (2026-07-03, full
+   cookbook: `docs/research/2026-07-03-alam-endpoint-cookbook.md`).
+   Headlines: GFW `download/csv` on GADM zonal tables is KEYLESS +
+   CORS `*` (annual adm1/adm2 tree-cover loss w/ inside-concession
+   flags AND daily integrated deforestation alerts); IDMC GIDD = the
+   displacement figures of record (free client_id, needs-from-Yose №9);
+   KLHK Time_Series = official DEF polygons (overlay + vintage watch);
+   KPA/Komnas HAM = manual January snapshots (№10). Interim SHIPPED in
+   8a: seeded PetaPiksel retired from the chapter, real map-layer
+   pointers (konsesi/tambang/kebakaran) + printed absences instead.
+   Displacement figures = most sensitive in the paper, verification
+   desk before ANY number prints (§13.15 stands). Yose steer 2026-07-03:
+   the chapter tracks deforestation + tergusur (people), NOT nature —
+   species/flora stay in Act 3 + the map (already true after §13.15).
 
 **B. ACT III v3 — the atlas becomes a stack of small sections**
 
@@ -1465,6 +1485,44 @@ order re-homed into v3 sections.
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-03 · wave 8a (`e336dfe`, deploy green) — act 2 round 3
+
+Yose screenshot review (act2-temp-1..6) → §13.17 charter written, then
+one ship:
+
+- **KARTU VITAL dissolved into the chapters**: `VitalCabang` `id` prop
+  (single-row mode), one vital mounted after each `CabangBand`,
+  standalone block dead — the duplication temp-1/2 exposed is gone.
+- **FUNGSI lines**: every bab-kepala now opens with the branch's
+  constitutional mandate, quoted verbatim + article stamp (UUD 1945
+  Ps.4(1)/20(1)/24(1)/30(4)/18(5)) — every reading below is against the
+  branch's own charter. Deks tightened ("menyahkan" typo dead);
+  legislatif vintages disambiguated (vital = 2025 full year, SKOR tile
+  = 2026 running, said on the tile).
+- **Oligarki opener de-boxed**: the CELIOS ticker is now pure type —
+  oligarch delta display-size madder vs worker delta caption-size, the
+  6.500.000× rate gap as the centre pivot.
+- **Pasar yang Tipis = one ruler**: random-dot blob dead; 0–30% axis
+  carries the emiten's ±3% float (only filled bar) and every exchange's
+  minimum as ticks (IDX 7,5→15 arrow, SGX 10, Nasdaq 20, HK/NSE 25).
+- **KasDaerah** (new island): 546 pemda belanja-pegawai% strip vs the
+  UU 1/2022 Ps.146 30% plafon (count-over printed), deterministic
+  jitter, follows lensa + lensa-kab (selected daerah named with rank),
+  Papua provinces open the otsus exhibit (OtsusGrafik now lives inside
+  it). Replaced the hard-wired ekonomi-otsus block.
+- **SDA honest interim**: seeded PetaPiksel OUT of the most sensitive
+  chapter; in its place the real documents already held (konsesi 1.040
+  KLHK / tambang 4.797 IUP / titik api chips via data-buka-peta) + a
+  printed absence ledger (hutan hilang, warga tergusur: MENUNGGU
+  VERIFIKASI).
+- **Act 3 hierarchy quick fix**: the dead mid-titles (Manusia/Hayati &
+  Rupa/Tanah h3 under identical LAMPIRAN labels) removed; the subject
+  is the only display title.
+- **ALAM scout returned**: cookbook committed (see §13.17 A.6 +
+  needs-from-Yose №9/№10). GFW keyless+CORS stats = the 8b fuel.
+- Built HTML sanity: 12/12 checks (vital ×5 in chapters, fungsi lines,
+  pivot, one-ruler, kas eyebrow, absences, piksel gone, mid-titles gone).
 
 ### 2026-07-03 · wave 7 (open) — janji: from 3 cards to the continuous ledger
 - **Yose's standing requirement (applies to EVERY data surface)**: never
