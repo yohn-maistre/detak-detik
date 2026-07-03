@@ -1,0 +1,162 @@
+[
+  {
+    "id": "kartini",
+    "nama": "Kartini",
+    "peran": "pemikir emansipasi",
+    "deskripsi": "pahlawan nasional emansipasi wanita Indonesia (1879–1904)",
+    "wikipedia": {
+      "judul": "Kartini",
+      "url": "https://id.wikipedia.org/wiki/Kartini"
+    },
+    "ringkas": "Raden Ajeng Kartini atau juga setelah menikah dikenal sebagai Raden Ayu Kartini adalah seorang tokoh perempuan ningrat asal Jawa dan resmi menjadikan sebagai pahlawan nasional Indonesia. Kartini dikenal sebagai sosok pejuang yang gigih dalam memperjuangkan kemerdekaan dan kedudukan kaumnya pada saat itu terutama wanita Jawa serta mendirikannya Sekolah Kartini di beberapa daerah lainnya.",
+    "karya": {
+      "judul": "Habis Gelap Terbitlah Terang",
+      "tahun": "1911",
+      "catatan": "Surat-suratnya kepada sahabat pena di Eropa, terbit setelah ia wafat; dari korespondensi pribadi menjadi dokumen awal pemikiran emansipasi."
+    }
+  },
+  {
+    "id": "tan-malaka",
+    "nama": "Tan Malaka",
+    "peran": "filsuf & negarawan",
+    "deskripsi": "tokoh komunis Indonesia",
+    "wikipedia": {
+      "judul": "Tan_Malaka",
+      "url": "https://id.wikipedia.org/wiki/Tan_Malaka"
+    },
+    "ringkas": "Ibrahim Datuk Sutan Malaka, juga dikenal sebagai Tan Malaka, adalah seorang negarawan, guru, penganut paham Marxisme, dan filsuf Indonesia yang merupakan pendiri Persatuan Perjuangan dan Partai Murba. Ia juga dikenal sebagai pejuang, pahlawan nasional, gerilyawan independen, dan mata-mata Indonesia. Tempo menjulukinya sebagai \"Bapak Republik Indonesia\".",
+    "karya": {
+      "judul": "Madilog",
+      "tahun": "1943",
+      "catatan": "Materialisme, dialektika, logika: ditulis dalam persembunyian di Rajawali, Jakarta; mengajak cara berpikir lepas dari takhayul."
+    }
+  },
+  {
+    "id": "sutan-sjahrir",
+    "nama": "Sutan Sjahrir",
+    "peran": "negarawan & penulis",
+    "deskripsi": "Perdana Menteri Indonesia ke-1, pahlawan nasional Indonesia",
+    "wikipedia": {
+      "judul": "Sutan_Sjahrir",
+      "url": "https://id.wikipedia.org/wiki/Sutan_Sjahrir"
+    },
+    "ringkas": "Sutan Sjahrir adalah seorang negarawan dan pemimpin kemerdekaan Indonesia yang menjabat sebagai Perdana Menteri pertama Indonesia dari tahun 1945 hingga 1947. Ia memainkan peran kunci selama Revolusi Nasional Indonesia dan aktif dalam gerakan nasionalis pada tahun 1930-an. Sjahrir dikenang sebagai seorang idealis dan intelektual.",
+    "karya": {
+      "judul": "Renungan dan Perjuangan",
+      "tahun": "1947",
+      "catatan": "Catatan dari penjara dan pembuangan Banda Neira, terbit pertama dalam bahasa Belanda (1945) lalu Indonesia."
+    }
+  },
+  {
+    "id": "chairil-anwar",
+    "nama": "Chairil Anwar",
+    "peran": "penyair",
+    "deskripsi": "seorang penyair Indonesia terkenal pada masa awal kemerdekaan Indonesia.",
+    "wikipedia": {
+      "judul": "Chairil_Anwar",
+      "url": "https://id.wikipedia.org/wiki/Chairil_Anwar"
+    },
+    "ringkas": "Chairil Anwar, dijuluki sebagai \"Si Binatang Jalang\", adalah penyair terkemuka Indonesia. Dia diperkirakan telah menulis 96 karya, termasuk 70 puisi. Bersama Asrul Sani dan Rivai Apin, ia dinobatkan oleh H.B. Jassin sebagai pelopor Angkatan '45 sekaligus puisi modern Indonesia.",
+    "karya": {
+      "judul": "Aku",
+      "tahun": "1943",
+      "catatan": "Puisi yang membuka angkatan '45; \"aku ini binatang jalang\" menjadi baris paling dikenal dalam puisi Indonesia."
+    }
+  },
+  {
+    "id": "pramoedya-ananta-toer",
+    "nama": "Pramoedya Ananta Toer",
+    "peran": "novelis",
+    "deskripsi": "penulis Indonesia yang diakui internasional (lahir 1925)",
+    "wikipedia": {
+      "judul": "Pramoedya_Ananta_Toer",
+      "url": "https://id.wikipedia.org/wiki/Pramoedya_Ananta_Toer"
+    },
+    "ringkas": "Pramoedya Ananta Toer secara luas dianggap sebagai salah satu pengarang yang produktif dalam sejarah sastra Indonesia. Pramoedya telah menghasilkan lebih dari 50 karya yang terdiri dari novel, cerpen, esai, hingga karya terjemahan. Karya-karyanya terutama novel dan cerpen telah diterjemahkan ke dalam lebih dari 42 bahasa asing di seluruh dunia. Ia juga menjadi satu-satunya pengarang dari Indonesia yang pernah dinominasikan untuk penghargaan Nobel Sastra.",
+    "karya": {
+      "judul": "Bumi Manusia",
+      "tahun": "1980",
+      "catatan": "Jilid pertama Tetralogi Buru, disusun lisan di pulau tahanan tanpa kertas; dilarang beredar 1981, kini diterjemahkan ke lebih dari 30 bahasa."
+    }
+  },
+  {
+    "id": "soe-hok-gie",
+    "nama": "Soe Hok Gie",
+    "peran": "penulis harian & aktivis",
+    "deskripsi": "Aktivis Indonesia",
+    "wikipedia": {
+      "judul": "Soe_Hok_Gie",
+      "url": "https://id.wikipedia.org/wiki/Soe_Hok_Gie"
+    },
+    "ringkas": "Soe Hok Gie adalah seorang aktivis Tionghoa Indonesia yang menentang kediktatoran Presiden Soekarno dan Soeharto.",
+    "karya": {
+      "judul": "Catatan Seorang Demonstran",
+      "tahun": "1983",
+      "catatan": "Buku harian 1957-1969, terbit satu dasawarsa setelah ia meninggal di Semeru; kritik dari dalam terhadap dua rezim."
+    }
+  },
+  {
+    "id": "ws-rendra",
+    "nama": "W.S. Rendra",
+    "peran": "penyair & dramawan",
+    "deskripsi": "seorang sastrawan, penyair, dan tokoh teater Indonesia",
+    "wikipedia": {
+      "judul": "W.S._Rendra",
+      "url": "https://id.wikipedia.org/wiki/W.S._Rendra"
+    },
+    "ringkas": "Willibrordus Surendra Broto Narendra atau dikenal sebagai W.S. Rendra adalah penyair, dramawan, aktor dan sutradara teater berkebangsaan Indonesia.",
+    "karya": {
+      "judul": "Blues untuk Bonnie",
+      "tahun": "1971",
+      "catatan": "Kumpulan sajak balada; panggung pembacaannya kerap diawasi dan sebagian dilarang pada masa Orde Baru."
+    }
+  },
+  {
+    "id": "yb-mangunwijaya",
+    "nama": "Y.B. Mangunwijaya",
+    "peran": "arsitek & sastrawan",
+    "deskripsi": "pastor Katolik, budayawan, arsitek, sastrawan",
+    "wikipedia": {
+      "judul": "Y.B._Mangunwijaya",
+      "url": "https://id.wikipedia.org/wiki/Y.B._Mangunwijaya"
+    },
+    "ringkas": "Yusuf Bilyarta Mangunwijaya adalah seorang imam Gereja Katolik Roma, budayawan, arsitek, penulis, aktivis sosial, dan dikenal sebagai pembela wong cilik. Ia juga dikenal dengan panggilan populernya, Rama Mangun. Romo Mangun adalah anak sulung dari dua belas bersaudara pasangan suami istri Yulianus Sumadi dan Serafin Kamdaniyah.",
+    "karya": {
+      "judul": "Burung-Burung Manyar",
+      "tahun": "1981",
+      "catatan": "Novel tentang pilihan sejarah seorang Indonesia di dua sisi revolusi; memenangkan penghargaan sastra Asia Tenggara."
+    }
+  },
+  {
+    "id": "goenawan-mohamad",
+    "nama": "Goenawan Mohamad",
+    "peran": "esais & penyair",
+    "deskripsi": "Sastrawan Bahasa Indonesia dan Jawa",
+    "wikipedia": {
+      "judul": "Goenawan_Mohamad",
+      "url": "https://id.wikipedia.org/wiki/Goenawan_Mohamad"
+    },
+    "ringkas": "Goenawan Soesatyo Mohamad adalah seorang penyair, esais, penulis naskah drama, dan editor Indonesia. Dia adalah pendiri dan editor majalah Indonesia Tempo. Goenawan adalah seorang pengkritik yang vokal terhadap pemerintah Indonesia, dan majalahnya secara berkala ditutup karena kritik-kritiknya.",
+    "karya": {
+      "judul": "Catatan Pinggir",
+      "tahun": "sejak 1977",
+      "catatan": "Esai mingguan di halaman terakhir Tempo, hampir setengah abad tanpa putus kecuali saat majalahnya dibredel (1982, 1994)."
+    }
+  },
+  {
+    "id": "widji-thukul",
+    "nama": "Widji Thukul",
+    "peran": "penyair",
+    "deskripsi": "penyair dan aktivis asal Indonesia",
+    "wikipedia": {
+      "judul": "Widji_Thukul",
+      "url": "https://id.wikipedia.org/wiki/Widji_Thukul"
+    },
+    "ringkas": "Widji Thukul adalah penyair dan aktivis, yang terkenal atas puisi dan syairnya yang ditujukan untuk mengkritik pemerintahan rezim Orde Baru yang berkuasa pada masa pemerintahan Presiden Indonesia kedua, Soeharto. Pada tanggal 10 Februari 1998, Tukul dikabarkan menghilang dan tidak diketahui keberadaannya sampai sekarang, muncul dugaan bahwa Thukul diculik oleh militer bersama beberapa aktivis lainnya.",
+    "karya": {
+      "judul": "Peringatan",
+      "tahun": "1986",
+      "catatan": "\"Hanya ada satu kata: lawan!\" — penyairnya hilang sejak 1998 dan belum ditemukan; kasusnya tercatat di berkas penghilangan paksa."
+    }
+  }
+]

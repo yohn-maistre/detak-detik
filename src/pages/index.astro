@@ -19,6 +19,7 @@ import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import ZonaHayati from '../islands/ZonaHayati.svelte';
+import PustakaPikiran from '../islands/PustakaPikiran.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import KasDaerah from '../islands/KasDaerah.svelte';
@@ -780,11 +781,21 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         </header>
         <GaleriNusantara client:visible />
 
-        <!-- ILMU & LANGIT: science with an Indonesian address -->
+        <!-- PUSTAKA & PIKIRAN: the shelf — writers & public thinkers -->
         <header class="bab-kepala">
           <span class="bab-folio ghost-num" aria-hidden="true">IV</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN IV · ILMU &amp; LANGIT</span>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN IV · PUSTAKA &amp; PIKIRAN</span>
+            <p class="bab-dek">Sepuluh pena di satu rak: penulis dan pemikir kepulauan, satu buku terambil tiap hari.</p>
+          </div>
+        </header>
+        <PustakaPikiran client:visible />
+
+        <!-- ILMU & LANGIT: science with an Indonesian address -->
+        <header class="bab-kepala">
+          <span class="bab-folio ghost-num" aria-hidden="true">V</span>
+          <div class="bab-kepala-teks">
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · ILMU &amp; LANGIT</span>
             <p class="bab-dek">Pengetahuan dengan alamat Nusantara: langit khatulistiwa, dan catatan alam harian.</p>
           </div>
         </header>
@@ -792,9 +803,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
         <!-- INGATAN: today in history -->
         <header class="bab-kepala">
-          <span class="bab-folio ghost-num" aria-hidden="true">V</span>
+          <span class="bab-folio ghost-num" aria-hidden="true">VI</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · INGATAN</span>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN VI · INGATAN</span>
             <p class="bab-dek">Satu peristiwa dari hari ini dalam sejarah, dengan tautan ke arsipnya.</p>
           </div>
         </header>

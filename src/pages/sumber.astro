@@ -84,7 +84,7 @@ const GRUP: Grup[] = [
     kicker: 'ARSIP & PUSTAKA',
     catatan: 'Pustaka terbuka untuk lembar Nusantara dan pembanding dunia.',
     baris: [
-      { id: 'wikipedia', nama: 'Wikipedia / Wikidata', url: 'https://id.wikipedia.org', dipakai: 'Nusantara · Wajah Nusantara, Almanak', metode: 'ringkasan REST bahasa Indonesia tanpa kunci (CORS terbuka), dibaca langsung; gagal → kurasi berlabel', status: 'LANGSUNG' },
+      { id: 'wikipedia', nama: 'Wikipedia / Wikidata', url: 'https://id.wikipedia.org', dipakai: 'Nusantara · Wajah Nusantara, Pustaka & Pikiran, Zona Hayati, Ingatan, Almanak', metode: 'ringkasan REST bahasa Indonesia tanpa kunci (CORS terbuka), dibaca langsung + registri tinjauan yang disegarkan skrip refresh-* (teks apa adanya, roster dikurasi); gagal → teks tinjauan bertahan', status: 'LANGSUNG' },
       { id: 'wikimedia-commons', nama: 'Wikimedia Commons', url: 'https://commons.wikimedia.org', dipakai: 'Nusantara · Galeri (RUPA)', metode: 'API kategori + imageinfo tanpa kunci; lisensi tiap karya dicetak di bawah gambar', status: 'LANGSUNG' },
       { id: 'gbif', nama: 'GBIF · keanekaragaman hayati', url: 'https://www.gbif.org', dipakai: 'Nusantara · Galeri (HAYATI)', metode: 'foto okurensi CC0/CC-BY tanpa kunci, dibaca langsung; juga hulu data satwa Mandum Rimba', status: 'LANGSUNG' },
       { id: 'wikimedia-feed', nama: 'Wikimedia Feed API', url: 'https://api.wikimedia.org', dipakai: 'Hari Ini dalam Sejarah (menyusul)', metode: 'JSON resmi onthisday + featured, di-cache worker saat cetak', status: 'SEGERA' },

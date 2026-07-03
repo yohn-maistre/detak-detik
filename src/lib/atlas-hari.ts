@@ -11,6 +11,7 @@
  */
 import MANUSIA from '../../newsroom/data/atlas/manusia.json';
 import HAYATI from '../../newsroom/data/atlas/hayati.json';
+import PUSTAKA from '../../newsroom/data/atlas/pustaka.json';
 
 export const ANKER = 41275; // slot for 2026-07-03 pagi — Mee, the inaugural
 export const SLOT = Math.floor(Date.now() / (12 * 3_600_000));
@@ -23,6 +24,11 @@ export const manusiaHari = MANUSIA[wrap(SLOT - ANKER, MANUSIA.length)]!;
 
 /** the day's species showcase (calendar-paced, slower than the profile) */
 export const hayatiHari = HAYATI[wrap(HARI, HAYATI.length)]!;
+
+/** the day's thinker + the work pulled from the shelf (calendar-paced;
+ *  offset so pustaka and hayati don't tick in lockstep) */
+export const pustakaIdx = wrap(HARI + 3, PUSTAKA.length);
+export const pustakaHari = PUSTAKA[pustakaIdx]!;
 
 /** the biogeographic zone the day leans toward: the featured people's
  *  island resolved onto the Wallace/Weber scheme, so HAYATI can open on
