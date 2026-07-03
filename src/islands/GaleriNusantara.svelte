@@ -16,16 +16,8 @@
     blurb: 'Raden Saleh melukis ulang adegan penangkapan versi pelukis Belanda dengan menukar sudut pandangnya: Diponegoro berdiri tegak, para perwira digambar berkepala sedikit besar.',
     lisensi: 'domain publik',
   };
-  const HAYATI_CADANGAN = {
-    img: '', nama: 'Cendrawasih raja', ilmiah: 'Cicinnurus regius', status: 'Risiko Rendah',
-    blurb: 'Burung sebesar genggaman dengan dua kawat ekor melingkar hijau; menari terbalik di dahan untuk meminang. Hanya ada di hutan dataran rendah Papua.',
-    lisensi: 'gbif',
-  };
-
   let rupa = $state(RUPA_CADANGAN);
-  let hayati = $state(HAYATI_CADANGAN);
   let rupaLive = $state(false);
-  let hayatiLive = $state(false);
 
   const bersih = (s: string) => (s || '').replace(/<[^>]*>/g, '').trim();
 
@@ -52,30 +44,12 @@
           rupaLive = true;
         }
       } catch { /* curated plate stands */ }
-
-      try {
-        const taxa = ['Paradisaea', 'Varanus komodoensis', 'Rafflesia arnoldii', 'Bubalus depressicornis', 'Babyrousa babyrussa'];
-        const name = taxa[HARI % taxa.length]!;
-        const u = `https://api.gbif.org/v1/occurrence/search?country=ID&mediaType=StillImage&license=CC0_1_0&license=CC_BY_4_0&q=${encodeURIComponent(name)}&limit=20`;
-        const res = await fetch(u, { signal: AbortSignal.timeout(6000) });
-        const data = await res.json();
-        const hit = (data?.results ?? []).find((r: any) => r?.media?.[0]?.identifier && r?.scientificName);
-        if (hit) {
-          hayati = {
-            img: hit.media[0].identifier,
-            nama: hit.vernacularName || HAYATI_CADANGAN.nama,
-            ilmiah: hit.species || hit.scientificName,
-            status: HAYATI_CADANGAN.status,
-            blurb: HAYATI_CADANGAN.blurb,
-            lisensi: 'gbif · ' + (hit.media[0].license ? 'cc' : 'cc'),
-          };
-          hayatiLive = true;
-        }
-      } catch { /* curated plate stands */ }
     })();
   });
 </script>
 
+<!-- RUPA only: the species plate moved to Zona Hayati (one owner, §13.17).
+     One painting a day, image beside the reading. -->
 <div class="gn" data-rise data-no-stempel>
   <figure class="gn-plat">
     <div class="gn-img">
@@ -86,37 +60,20 @@
       {/if}
     </div>
     <figcaption>
-      <span class="gn-kicker mono">RUPA · {rupaLive ? 'WIKIMEDIA COMMONS' : 'KURASI'}</span>
+      <span class="gn-kicker mono">RUPA · {rupaLive ? 'WIKIMEDIA COMMONS' : 'KURASI'} · SATU LUKISAN TIAP HARI</span>
       <h4 class="gn-judul fig">{rupa.judul}</h4>
       <p class="gn-meta mono">{rupa.seniman}{rupa.tahun ? ` · ${rupa.tahun}` : ''}</p>
       <p class="gn-blurb">{rupa.blurb}</p>
       <span class="chip" data-no-link>⊙ {rupa.lisensi}</span>
     </figcaption>
   </figure>
-
-  <figure class="gn-plat">
-    <div class="gn-img">
-      {#if hayati.img}
-        <img src={hayati.img} alt={hayati.nama} loading="lazy" onerror={() => (hayati = { ...hayati, img: '' })} />
-      {:else}
-        <div class="gn-kosong"><span class="mono">PLAT · HAYATI</span></div>
-      {/if}
-    </div>
-    <figcaption>
-      <span class="gn-kicker mono">HAYATI · {hayatiLive ? 'GBIF' : 'KURASI'}</span>
-      <h4 class="gn-judul fig">{hayati.nama}</h4>
-      <p class="gn-meta mono">{hayati.ilmiah} · {hayati.status}</p>
-      <p class="gn-blurb">{hayati.blurb}</p>
-      <span class="chip" data-no-link>⊙ {hayati.lisensi}</span>
-    </figcaption>
-  </figure>
 </div>
 
 <style>
-  .gn { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 56px); }
+  .gn { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(24px, 5vw, 56px); align-items: start; }
   @media (max-width: 760px) { .gn { grid-template-columns: 1fr; } }
-  /* no double-frame box: the image carries a single hairline, the caption opens below */
-  .gn-plat { margin: 0; display: grid; gap: 0; }
+  /* no double-frame box: the image carries a single hairline, the caption opens beside */
+  .gn-plat { margin: 0; display: contents; }
   .gn-img { aspect-ratio: 4 / 3; background: #ece1c9; overflow: hidden; border: 1px solid var(--line); }
   .gn-img img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.95); }
   .gn-kosong {

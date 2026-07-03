@@ -7,6 +7,7 @@
   import { onMount } from 'svelte';
   import { gsap, reducedMotion, EASE_STAMP } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
+  import { bahasaHari, HARI } from '../lib/atlas-hari';
 
   const TOTAL = 718, SENYAP = 24; // illustrative: those falling out of use
 
@@ -33,8 +34,16 @@
     { lang: 'Lampung', kata: 'way', wil: 'Lampung' },
     { lang: 'Rejang', kata: 'bioa', wil: 'Bengkulu' },
   ];
-  const HARI = Math.floor(Date.now() / 86_400_000);
-  const kata = KATA_AIR[HARI % KATA_AIR.length]!;
+  // §13.17 B.3: the featured tongue follows the day's PROFILE when the
+  // registry knows its word for "air"; otherwise it rotates by calendar.
+  const cocok = bahasaHari
+    ? KATA_AIR.findIndex((k) => {
+        const a = k.lang.toLowerCase(), b = bahasaHari.toLowerCase();
+        return a.includes(b) || b.includes(a);
+      })
+    : -1;
+  const kata = KATA_AIR[cocok >= 0 ? cocok : HARI % KATA_AIR.length]!;
+  const terikat = cocok >= 0;
 
   let root: HTMLElement | undefined = $state();
   let heroEl: HTMLElement | undefined = $state();
@@ -66,11 +75,11 @@
     </div>
   </header>
 
-  <!-- the day's word: one of the 718, surfaced -->
+  <!-- the day's word: one of the 718, surfaced; tied to the profile when known -->
   <div class="bh-kata">
     <span class="bh-kata-lab mono">HARI INI · "AIR" DALAM BAHASA {kata.lang.toUpperCase()}</span>
     <p class="bh-kata-word display">{kata.kata}</p>
-    <span class="bh-kata-wil mono">{kata.wil} · berganti tiap terbit</span>
+    <span class="bh-kata-wil mono">{kata.wil} · {terikat ? 'bahasa yang dituturkan wajah hari ini' : 'berganti tiap terbit'}</span>
   </div>
 
   <div class="bh-field" role="img" aria-label={`${TOTAL} bahasa daerah, ${SENYAP} di antaranya kian jarang dituturkan`}>

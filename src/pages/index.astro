@@ -18,9 +18,8 @@ import TenggatStrip from '../islands/TenggatStrip.svelte';
 import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
-import PetaRupa from '../islands/PetaRupa.svelte';
+import ZonaHayati from '../islands/ZonaHayati.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
-import DaftarMerah from '../islands/DaftarMerah.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import KasDaerah from '../islands/KasDaerah.svelte';
 import HutanHilang from '../islands/HutanHilang.svelte';
@@ -753,36 +752,53 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <WajahNusantara client:visible />
         <Bahasa718 client:visible />
 
-        <!-- HAYATI & RUPA: the day's species, painting, and a wonder -->
+        <!-- HAYATI & EKOSISTEM: the Wallace/Weber lines as the control
+             (§13.17 B.5). ZonaHayati absorbs the retired Daftar Merah (species
+             ledger) and PetaRupa (the standalone Wallace band). -->
         <header class="bab-kepala">
           <span class="bab-folio ghost-num" aria-hidden="true">II</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN II · HAYATI &amp; RUPA</span>
-            <p class="bab-dek">Yang tumbuh dan yang dilukis: spesies endemik, satu plat seni, dan catatan alam harian.</p>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN II · HAYATI &amp; EKOSISTEM</span>
+            <p class="bab-dek">Garis Wallace dan Weber membelah kepulauan jadi tiga dunia satwa. Ketuk sebuah sisi; daftar spesiesnya terbuka, diurutkan dari yang paling terancam.</p>
           </div>
         </header>
-        <GaleriNusantara client:visible />
-        <DaftarMerah client:visible />
-        <AlmanakSains client:visible />
-        <IngatanHari client:visible />
+        <ZonaHayati client:visible />
+        <!-- the volcano field lives on the MAP (one owner: MAGMA levels are
+             news); the land keeps only its fact and the door to it -->
+        <aside class="tanah-note ekosistem-note">
+          <p class="tanah-fakta fig">127 gunung api aktif — terbanyak di dunia; 76 di antaranya pernah meletus sejak 1600. Status hariannya, dari Normal sampai Awas, terbaca langsung di Peta Kabar.</p>
+          <button class="chip" data-buka-peta="gunungapi"><span class="tick">▲</span>BUKA DI PETA · LAPISAN GUNUNG API</button>
+        </aside>
 
-        <!-- TANAH: the land that breathes and the line that splits it -->
+        <!-- RUPA: one painting a day, explained -->
         <header class="bab-kepala">
           <span class="bab-folio ghost-num" aria-hidden="true">III</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · TANAH</span>
-            <p class="bab-dek">Perbatasan fauna paling tajam di bumi — dan gunung-gunung yang kabar terkininya hidup di peta.</p>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · RUPA</span>
+            <p class="bab-dek">Satu lukisan dari khazanah Nusantara tiap hari, dengan keterangan pelukis, tahun, dan tempat ia kini disimpan.</p>
           </div>
         </header>
-        <div class="atlas-grid">
-          <PetaRupa client:visible />
-          <!-- the volcano field lives on the MAP (one owner: MAGMA levels are
-               news); here the land keeps only its fact and the door to it -->
-          <aside class="tanah-note">
-            <p class="tanah-fakta fig">127 gunung api aktif — terbanyak di dunia; 76 di antaranya pernah meletus sejak 1600. Status hariannya, dari Normal sampai Awas, terbaca langsung di Peta Kabar.</p>
-            <button class="chip" data-buka-peta="gunungapi"><span class="tick">▲</span>BUKA DI PETA · LAPISAN GUNUNG API</button>
-          </aside>
-        </div>
+        <GaleriNusantara client:visible />
+
+        <!-- ILMU & LANGIT: science with an Indonesian address -->
+        <header class="bab-kepala">
+          <span class="bab-folio ghost-num" aria-hidden="true">IV</span>
+          <div class="bab-kepala-teks">
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN IV · ILMU &amp; LANGIT</span>
+            <p class="bab-dek">Pengetahuan dengan alamat Nusantara: langit khatulistiwa, dan catatan alam harian.</p>
+          </div>
+        </header>
+        <AlmanakSains client:visible />
+
+        <!-- INGATAN: today in history -->
+        <header class="bab-kepala">
+          <span class="bab-folio ghost-num" aria-hidden="true">V</span>
+          <div class="bab-kepala-teks">
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · INGATAN</span>
+            <p class="bab-dek">Satu peristiwa dari hari ini dalam sejarah, dengan tautan ke arsipnya.</p>
+          </div>
+        </header>
+        <IngatanHari client:visible />
       </div>
 
       <!-- the living understory closes the act: after the record, what stays moving -->
@@ -1105,6 +1121,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   @media (max-width: 760px) { .tanah-note { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
   .tanah-fakta { font-size: clamp(15px, 1.8vw, 19px); line-height: 1.55; max-width: 40ch; }
   .tanah-note .chip { justify-self: start; }
+  /* the volcano fact rides under Zona Hayati now: full width, quiet rule */
+  .ekosistem-note { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; margin-top: 18px; grid-template-columns: 1fr; }
   #hutan { margin-top: 8px; }
   .tugu-wrap { margin-top: 44px; max-width: 820px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }

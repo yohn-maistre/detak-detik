@@ -10,12 +10,7 @@
   import { onMount } from 'svelte';
   import { drawEngraving, ENGRAVE_ATLAS } from '../lib/engrave';
   import SukuLokasi from './SukuLokasi.svelte';
-  import MANUSIA from '../../newsroom/data/atlas/manusia.json';
-
-  // slot 41275 = 2026-07-03 pagi — the edition Suku Mee (index 0) opened the magazine
-  const ANKER = 41275;
-  const SLOT = Math.floor(Date.now() / (12 * 3600_000));
-  const p = MANUSIA[((SLOT - ANKER) % MANUSIA.length + MANUSIA.length) % MANUSIA.length]!;
+  import { manusiaHari as p } from '../lib/atlas-hari';
 
   let extract = $state(p.ringkas);
   let live = $state(false);

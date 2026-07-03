@@ -27,7 +27,8 @@
       "berkas": "File:Rhinoceros_sondaicus_in_London_Zoo.jpg",
       "lisensi": "Public domain",
       "atribusi": "T.Dixon. The Zoological Society of London, Public domain, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "badak-sumatra",
@@ -57,7 +58,8 @@
       "berkas": "File:Sumatran_Rhino_2.jpg",
       "lisensi": "CC BY 2.0",
       "atribusi": "Charles W. Hardin, CC BY 2.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "harimau-sumatra",
@@ -87,7 +89,8 @@
       "berkas": "File:Sumatran_Tiger_Berlin_Tierpark.jpg",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Captain Herbert, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "orangutan-sumatra",
@@ -117,7 +120,8 @@
       "berkas": "File:Man_of_the_woods.JPG",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Dave59 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "orangutan-tapanuli",
@@ -147,7 +151,8 @@
       "berkas": "File:Pongo_tapanuliensis.jpg",
       "lisensi": "CC BY 4.0",
       "atribusi": "Tim Laman, CC BY 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "orangutan-kalimantan",
@@ -177,7 +182,8 @@
       "berkas": "File:OrangutanP1.jpg",
       "lisensi": "Public domain",
       "atribusi": "Ltshears, Public domain, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "anoa",
@@ -207,7 +213,8 @@
       "berkas": "File:Anoa_Bubalus_depressicornis_Surabaya_Zoo.jpg",
       "lisensi": "CC BY 3.0",
       "atribusi": "Sakurai Midori, CC BY 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "babirusa",
@@ -237,7 +244,8 @@
       "berkas": "File:Hirscheber1a.jpg",
       "lisensi": "CC BY-SA 2.0 de",
       "atribusi": "Masteraah at German Wikipedia, CC BY-SA 2.0 de, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "tarsius",
@@ -267,7 +275,8 @@
       "berkas": "File:Tarsius_sp._1.jpg",
       "lisensi": "CC BY-SA 2.0",
       "atribusi": "Lip Kee Yap, CC BY-SA 2.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "bekantan",
@@ -297,7 +306,8 @@
       "berkas": "File:Proboscis.jpg",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "yaki",
@@ -327,7 +337,8 @@
       "berkas": "File:Crested_Black_Macaque_(Macaca_nigra).jpg",
       "lisensi": "CC BY-SA 2.0",
       "atribusi": "Lip Kee Yap, CC BY-SA 2.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "kucing-merah",
@@ -357,7 +368,8 @@
       "berkas": "File:Bay_cat_1_Jim_Sanderson-cropped.jpg",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Bay_cat_1_Jim_Sanderson.jpg: Jim Sanderson\nderivative work: Abujoy (talk), CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "owa-jawa",
@@ -387,7 +399,8 @@
       "berkas": "File:Owa_Jawa,_Sang_Pesinden_Yang_Terancam_Punah.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "Ariel Afrido Muhammad, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "surili",
@@ -417,7 +430,8 @@
       "berkas": "File:Presbytiscom.jpg",
       "lisensi": "Public domain",
       "atribusi": "The original uploader was Lkdenison at English Wikipedia., Public domain, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "macan-tutul-jawa",
@@ -447,7 +461,8 @@
       "berkas": "File:Levhart_jávský_v_Zoo_Praha_002.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "Vachovec1, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "maleo",
@@ -477,7 +492,8 @@
       "berkas": "File:Wattled_Brush-turkey_(Aepypodius_arfakianus)_(7937162662)_(cropped).jpg",
       "lisensi": "CC BY-SA 2.0",
       "atribusi": "Bernard DUPONT from FRANCE, CC BY-SA 2.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "jalak-bali",
@@ -507,7 +523,8 @@
       "berkas": "File:Bali_Myna_0A2A9443.jpg",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "JJ Harrison, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "cendrawasih-merah",
@@ -537,7 +554,8 @@
       "berkas": "File:Stavenn_Paradisaea_rubra_00.jpg",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "No machine-readable author provided. Stavenn assumed (based on copyright claims)., CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sahul"
   },
   {
     "id": "kakatua-jambul-kuning",
@@ -567,7 +585,8 @@
       "berkas": "File:Gelbwangenkakadu_8559.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "J. Patrick Fischer, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "komodo",
@@ -597,7 +616,8 @@
       "berkas": "File:Komodo_dragon_(Varanus_komodoensis)_4.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "ikan-raja-laut",
@@ -627,7 +647,8 @@
       "berkas": "File:Coelacanth_off_Pumula_on_the_KwaZulu-Natal_South_Coast,_South_Africa,_on_22_November_2019.png",
       "lisensi": "CC BY 4.0",
       "atribusi": "Bruce A.S. Henderson, CC BY 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   },
   {
     "id": "rangkong-gading",
@@ -657,7 +678,8 @@
       "berkas": "File:Buceros-vigil-bvk.JPG",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Hydrocorax, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "rafflesia-arnoldii",
@@ -687,7 +709,8 @@
       "berkas": "File:Rafflesia_Arnoldii_Batang_Palupuah_Indonesia.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "Maizal Chaniago, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "bunga-bangkai",
@@ -717,7 +740,8 @@
       "berkas": "File:Titan-arum1web.jpg",
       "lisensi": "Public domain",
       "atribusi": "Credits: US Botanic Garden., Public domain, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "anggrek-hitam",
@@ -747,7 +771,8 @@
       "berkas": "File:Coelogyne_pandurata_orchid_(49375109546).jpg",
       "lisensi": "CC BY 2.0",
       "atribusi": "geoff mckay from Palmerston North, New Zealand, CC BY 2.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "edelweis-jawa",
@@ -777,7 +802,8 @@
       "berkas": "File:Bunga_Senduro.JPG",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Imron Fauzi, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "nepenthes-aristolochioides",
@@ -807,7 +833,8 @@
       "berkas": "File:Nepenthes_aristolochioides_upper_pitcher.jpg",
       "lisensi": "CC BY 3.0 cz",
       "atribusi": "Jaroslav Neubauer, CC BY 3.0 cz, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "ulin",
@@ -837,7 +864,8 @@
       "berkas": "File:Eusideroxylon_zwageri.JPG",
       "lisensi": "Public domain",
       "atribusi": "Patrice78500, Public domain, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "anggrek-tebu",
@@ -867,7 +895,8 @@
       "berkas": "File:Grammatophyllum_speciosum1.JPG",
       "lisensi": "CC BY-SA 3.0",
       "atribusi": "Meneerke bloem, CC BY-SA 3.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "sunda"
   },
   {
     "id": "cendana",
@@ -897,6 +926,7 @@
       "berkas": "File:Santalum_album_(Chandan)_in_Hyderabad,_AP_W_IMG_0025.jpg",
       "lisensi": "CC BY-SA 4.0",
       "atribusi": "J.M.Garg, CC BY-SA 4.0, via Wikimedia Commons"
-    }
+    },
+    "zona": "wallacea"
   }
 ]

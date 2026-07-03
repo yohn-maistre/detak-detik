@@ -201,7 +201,7 @@
 
 <figure class="pa" bind:this={wrapEl} data-no-stempel>
   <div class="pa-head">
-    <span class="eyebrow">PLAT UTAMA · ATLAS NUSANTARA · 38 PROVINSI</span>
+    <span class="eyebrow">ATLAS NUSANTARA · KETUK SEBUAH PROVINSI UNTUK MEMBUKANYA DI LENSA WILAYAH</span>
     <span class="eyebrow pa-sumber">⊙ BIG RUPABUMI · PROYEKSI LURUS</span>
   </div>
   <canvas bind:this={cv} class:tunjuk={!diLaut} role="img" aria-label="Peta kepulauan Indonesia sebagai plat titik ukir; setiap provinsi dapat diketuk untuk membuka Lensa Wilayah"></canvas>
