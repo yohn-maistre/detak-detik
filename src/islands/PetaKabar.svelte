@@ -244,8 +244,9 @@
      drives the dossier below and recentres the map */
   /* ADM1 province polygons, fetched as a static asset; codes patched to join
      DAERAH (see scripts/patch-prov-geojson.mjs). MapLibre fetches the URL. */
-  const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson`;
-  const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson`;
+  // ?v= busts browser caches when the vendored geometry is repaired in place
+  const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson?v=3`;
+  const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson?v=3`;
   type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
   type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
   let provData: { features: ProvFeature[] } | null = null;
@@ -329,9 +330,8 @@
           id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
           // the INNER regency edges: faint, DASHED, cadastral — never a mesh that
           // competes with the data layers. Nearly invisible at the national view,
-          // a quiet stitch once you drill in. The heavier PROVINCE perimeter is a
-          // separate layer (prov-line) on top; the selected kabupaten alone gets a
-          // solid madder outline.
+          // a quiet stitch once you drill in. Province lines come from the
+          // basemap's native boundary tiles (see the note above provinsi-sel-fill).
           paint: {
             'line-color': ink,
             'line-dasharray': [1, 2.2],
@@ -358,26 +358,18 @@
           },
         }, below);
       }
-      // the OUTER province perimeter (incl. coastlines) drawn from the province polygons
-      // themselves — a clean, moderate outline on TOP of the thin kab hairlines. This
-      // replaces the old idn-prov-lines.geojson, which actually held kabupaten-level
-      // edges (drawing them bold made the regency mesh masquerade as the province border).
-      if (!map.getLayer('prov-line')) {
-        map.addLayer({
-          id: 'prov-line', type: 'line', source: 'provinsi', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.8, 8, 1.6], 'line-opacity': 0.7 },
-        }, below);
-      }
+      // NO perimeter is drawn from the province polygons: the vendored ADM1
+      // set is a fragmented tessellation (Kalimantan Timur alone carries ~77
+      // sliver parts), so any line/outline layer over it prints the interior
+      // mesh as spike triangles. The polygons serve fills, hit-testing, and
+      // choropleths only (their union renders correctly); the VISIBLE
+      // province lines come from the basemap's native `batas-prov` boundary
+      // tiles (OpenFreeMap admin_level 4). Selection reads as a fill tint +
+      // the province label, never an outline.
       if (!map.getLayer('provinsi-sel-fill')) {
         map.addLayer({
           id: 'provinsi-sel-fill', type: 'fill', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
-          paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.06 },
-        }, below);
-      }
-      if (!map.getLayer('provinsi-sel')) {
-        map.addLayer({
-          id: 'provinsi-sel', type: 'line', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
-          paint: { 'line-color': '#e44a06', 'line-width': 2.2 },
+          paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.12 },
         }, below);
       }
       // province name: a single bold label at the province's representative point
@@ -403,7 +395,7 @@
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'kab-lab', 'prov-line', 'provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'kab-lab', 'provinsi-sel-fill', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
   }
@@ -1523,7 +1515,7 @@
       unsubs.push(onLensa((k) => {
         lensaKode = k;
         lensaKabNama = null; // a province (re)selection clears any drilled-in regency pointer
-        for (const id of ['provinsi-sel-fill', 'provinsi-sel', 'provinsi-lab']) {
+        for (const id of ['provinsi-sel-fill', 'provinsi-lab']) {
           if (map?.getLayer(id)) map.setFilter(id, ['==', ['get', 'kode'], k]);
         }
         if (!map) return;

@@ -21,11 +21,17 @@
 // was considered and rejected: with one jump in a closed ring the closure re-creates
 // the jump, and no real input in this file needs it.)
 //
-// Run: node scripts/clean-kab-geojson.mjs
+// Run: node scripts/clean-kab-geojson.mjs [path-to-geojson]
+//   default: public/data/idn-kab.geojson
+//   also used on idn-prov.geojson, whose Kalimantan Timur carried ~77
+//   baked-in 4-vertex tessellation triangles (the spike storm on the map)
 
 import { readFileSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 
-const FILE = new URL('../public/data/idn-kab.geojson', import.meta.url);
+const FILE = process.argv[2]
+  ? resolve(process.argv[2])
+  : new URL('../public/data/idn-kab.geojson', import.meta.url);
 
 const JUMP = 1.0; // degrees; nonsense within one kabupaten, except the PNG border
 const isBorderRun = (a, b) =>
@@ -177,7 +183,11 @@ for (const f of gj.features) for (const p of f.geometry.coordinates) for (const 
 const lostFeatures = [];
 
 for (const f of gj.features) {
-  const { nama } = f.properties;
+  const nama = f.properties.nama ?? f.properties.kode ?? '?';
+  if (f.geometry.type === 'Polygon') {
+    // normalize: the pipeline below works on MultiPolygon
+    f.geometry = { type: 'MultiPolygon', coordinates: [f.geometry.coordinates] };
+  }
   if (f.geometry.type !== 'MultiPolygon') throw new Error(`${nama}: unexpected ${f.geometry.type}`);
 
   // 1. scrub every ring; classify survivors by winding (CCW = outer by convention)
