@@ -23,6 +23,7 @@ import IngatanHari from '../islands/IngatanHari.svelte';
 import DaftarMerah from '../islands/DaftarMerah.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import KasDaerah from '../islands/KasDaerah.svelte';
+import HutanHilang from '../islands/HutanHilang.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import LensaWilayah from '../islands/LensaWilayah.svelte';
 import CabangBand from '../islands/CabangBand.svelte';
@@ -644,12 +645,18 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <!-- retired (2026-07-03, §13.15+§13.17): Riwayat Udara Jakarta (the
                MAP owns live air), Janji yang Belum Cair (buku besar row), Sisa
                di Alam Liar (Act III Daftar Merah), and the SEEDED PetaPiksel
-               heatmap — a contoh chart has no place in the paper's most
-               sensitive chapter. Until the deforestation + displacement feeds
-               pass verification (scout in flight, §13.17 A.6), the chapter
-               shows the real documents it already holds, and prints its
-               absences instead of filling them. -->
-          <div class="lingk-sub bab-sub" id="hutan">
+               heatmap. Its replacement is REAL: 24 years of Hansen/UMD loss
+               via the keyless GFW stats route, harvested by
+               scripts/fetch-hutan.mjs, per-province sums reconciling to the
+               national total within 1 ha. Displacement stays an ABSENCE until
+               its sources pass the verification desk. -->
+          <div class="lingk-sub bab-sub" id="hutan" data-rise>
+            <h3 class="bab-subjudul display">Hutan yang Hilang</h3>
+            <p class="bab-kalimat fig">Dua puluh empat tahun kehilangan tutupan pohon, satu kolom per tahun; bagian gelap terjadi di dalam konsesi. Pilih provinsi di peta atau lensa dan serinya bertukar.</p>
+            <HutanHilang client:visible />
+          </div>
+
+          <div class="lingk-sub bab-sub">
             <span class="eyebrow">DOKUMEN YANG SUDAH TERBUKA · DI PETA KABAR</span>
             <p class="bab-kalimat fig">Konsesi hutan dan sawit (1.040 poligon, KLHK), izin usaha pertambangan (4.797 wilayah, ESDM), dan titik api satelit hari ini: dokumen aslinya terbuka di lapisan peta.</p>
             <div class="lingk-chips">
@@ -662,8 +669,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="lingk-sub bab-sub">
             <span class="eyebrow">YANG BELUM DICETAK · MENUNGGU VERIFIKASI</span>
             <div class="ledger lingk-absen">
-              <div><span>Luas hutan hilang per provinsi, per tahun <span class="mono">gfw/umd · uji sumber berjalan</span></span><span class="v num">—</span></div>
-              <div><span>Warga tergusur konflik agraria, per tahun <span class="mono">kpa catahu · komnas ham · uji sumber berjalan</span></span><span class="v num">—</span></div>
+              <div><span>Warga tergusur konflik agraria, per tahun <span class="mono">kpa catahu · komnas ham · idmc — uji sumber berjalan</span></span><span class="v num">—</span></div>
             </div>
             <p class="bab-kalimat fig lingk-catatan">Angka penggusuran adalah angka paling sensitif di koran ini; ia dicetak setelah lolos periksa sumber, bukan sebelum. Kualitas udara kota-kota terbaca langsung di lapisan udara peta.</p>
             <button class="chip" data-buka-peta="udara"><span class="tick">◌</span>BUKA DI PETA · LAPISAN UDARA</button>
