@@ -1062,6 +1062,32 @@ Beyond Yose's asks; each thesis-pure and free-infra feasible. Phase tags:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-03 · wave 5 CLOSED (5a+5b+5c-map) — compact point
+- **The spike saga, resolved in three acts**: (1) kab file untangled
+  (self-crossings + pinch vertices, gate in cleaner, 514 intact);
+  (2) real culprit found — idn-prov.geojson is a fragmented tessellation
+  (Kaltim = 77 sliver parts), so prov-line + selection outline were
+  DELETED (no line may ever draw those polygons; visible province lines
+  = native OFM batas-prov tiles); (3) my prov "cleaning" broke fills
+  (Papua Selatan 20%) → file restored for labels/bbox ONLY, and **all
+  province surfaces (wash/hover/selection/choropleth) now draw from the
+  clean kab polygons keyed by `prov`** — accurate borders, fills align
+  with kab lines, choropleth keyed ['get','prov'], hover = filter layer.
+- **Tier-2 selection shipped**: clicked kabupaten gets a solid madder
+  outline (kab-sel, filter prov+nama), province stays a tint. Kab lines
+  dashed faint; legend scrolls on mobile.
+- Also in wave 5: rak instant-load (localStorage snapshot + client:load
+  + skeleton), JETP caption line, janji stamp reserve, meja
+  EKONOMI/TEKNO, RESMI marker, roster → 54, VeilMuka, PAPAN ANGKA label,
+  obituari closer, cluster tune (Icha/Tifa), map to top of Act I.
+- **Moved to post-compact (5d/6)**: dossier v2 (PROV ▸ KAB breadcrumb +
+  in-place expansion, more data rows), satellite/malam province lines
+  (tile-based), kab-line strength on dark modes, LensaWilayah v2
+  (DJPK metrics + struk coupling), denominations, janji expansion,
+  theme reorder + SDA rename, udara ridgeline, lemari ide §13.10.
+
+
+
 ### 2026-07-02 · wave 5a — front reorder, plates, seeded art, map repair
 - Act I order is now feed → PETA KABAR → PASAR. Act II opens as PAPAN
   ANGKA (BUKTI № labels dropped). PasarPagi wears the meter-plate grammar.

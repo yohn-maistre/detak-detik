@@ -350,6 +350,16 @@
           },
         }, below);
       }
+      // the clicked kabupaten alone carries a solid madder outline (tier 2 of
+      // the selection: province = tint, kabupaten = line). Safe to draw now:
+      // the kab polygons are untangled (see scripts/clean-kab-geojson.mjs).
+      if (!map.getLayer('kab-sel')) {
+        map.addLayer({
+          id: 'kab-sel', type: 'line', source: 'kab',
+          filter: ['==', ['get', 'nama'], '__none__'], layout: { visibility: vis },
+          paint: { 'line-color': '#e44a06', 'line-width': 1.8 },
+        }, below);
+      }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
       // map's own font — replaces the default-box popup (one real kab name per
       // label, never the province repeated). Subtler than the bold province label.
@@ -405,7 +415,7 @@
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-fill', 'provinsi-hover', 'kab-fill', 'kab-line', 'kab-lab', 'provinsi-sel-fill', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'provinsi-hover', 'kab-fill', 'kab-line', 'kab-lab', 'kab-sel', 'provinsi-sel-fill', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
   }
@@ -1469,6 +1479,7 @@
         dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
         // set AFTER set_lensa (onLensa clears the regency), then record + publish it
         lensaKabNama = String(p.nama);
+        if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['all', ['==', ['get', 'prov'], p.prov], ['==', ['get', 'nama'], String(p.nama)]]);
         const payload = buildKabPayload(p.prov, String(p.nama));
         if (payload) dispatch({ cmd: 'set_lensa_kab', params: payload });
       });
@@ -1526,6 +1537,7 @@
       unsubs.push(onLensa((k) => {
         lensaKode = k;
         lensaKabNama = null; // a province (re)selection clears any drilled-in regency pointer
+        if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['==', ['get', 'nama'], '__none__']);
         if (map?.getLayer('provinsi-sel-fill')) map.setFilter('provinsi-sel-fill', ['==', ['get', 'prov'], k]);
         if (map?.getLayer('provinsi-lab')) map.setFilter('provinsi-lab', ['==', ['get', 'kode'], k]);
         if (!map) return;
@@ -1540,7 +1552,12 @@
         });
       }));
       // keep the in-map breadcrumb in sync when the regency is dismissed from Lensa Wilayah
-      unsubs.push(onLensaKab((k) => { if (!k) lensaKabNama = null; }));
+      unsubs.push(onLensaKab((k) => {
+        if (!k) {
+          lensaKabNama = null;
+          if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['==', ['get', 'nama'], '__none__']);
+        }
+      }));
 
       unsubs.push(on('map_choropleth', ({ metric, judul }) => {
         if (!map?.getLayer('provinsi-fill')) return;
