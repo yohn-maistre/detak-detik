@@ -347,7 +347,10 @@
             'line-color': ink,
             'line-dasharray': [1, 2.2],
             'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.3, 9, 0.6],
-            'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.06, 7, 0.18, 11, 0.3],
+            // busy imagery swallows the paper-thin dashes: the dark plates get a stronger stitch
+            'line-opacity': sat
+              ? ['interpolate', ['linear'], ['zoom'], 5, 0.12, 7, 0.32, 11, 0.5]
+              : ['interpolate', ['linear'], ['zoom'], 5, 0.06, 7, 0.18, 11, 0.3],
           },
         }, below);
       }
@@ -493,6 +496,16 @@
     ],
   };
 
+  /* the same OFM admin_level-4 boundary tiles that carry the province lines on
+     the DINAS plate, re-inked in paper white for the dark/imagery basemaps —
+     our own province polygons must never draw lines (fragmented tessellation) */
+  const BATAS_PROV_TERANG = (opacity: number) => ({
+    id: 'batas-prov', type: 'line' as const, source: 'ofm', 'source-layer': 'boundary',
+    filter: ['==', ['get', 'admin_level'], 4],
+    paint: { 'line-color': '#f2efe6', 'line-width': 0.7, 'line-dasharray': [2, 3], 'line-opacity': opacity },
+  });
+  const OFM_SRC = { type: 'vector' as const, url: 'https://tiles.openfreemap.org/planet' };
+
   const SATELIT_STYLE = {
     version: 8 as const,
     sources: {
@@ -502,8 +515,9 @@
         tileSize: 256,
         attribution: 'Citra: Esri, Maxar, Earthstar Geographics',
       },
+      ofm: OFM_SRC,
     },
-    layers: [{ id: 'sat', type: 'raster' as const, source: 'esri' }],
+    layers: [{ id: 'sat', type: 'raster' as const, source: 'esri' }, BATAS_PROV_TERANG(0.55)],
   };
 
   /* CUACA: NASA GIBS true-color, the previous day's global mosaic (today's may not
@@ -522,10 +536,12 @@
         maxzoom: 8,
         attribution: 'Citra: NASA EOSDIS GIBS / Worldview',
       },
+      ofm: OFM_SRC,
     },
     layers: [
       { id: 'bg', type: 'background' as const, paint: { 'background-color': '#0a1622' } },
       { id: 'gibs', type: 'raster' as const, source: 'gibs' },
+      BATAS_PROV_TERANG(0.5),
     ],
   };
 
@@ -542,10 +558,13 @@
         maxzoom: 8,
         attribution: 'Citra: NASA Earth Observatory · VIIRS Black Marble',
       },
+      ofm: OFM_SRC,
     },
     layers: [
       { id: 'bg', type: 'background' as const, paint: { 'background-color': '#05060a' } },
       { id: 'lights', type: 'raster' as const, source: 'lights' },
+      // on near-black the lines glow: keep them quieter so the city lamps star
+      BATAS_PROV_TERANG(0.35),
     ],
   };
 

@@ -1086,13 +1086,18 @@ Beyond Yose's asks; each thesis-pure and free-infra feasible. Phase tags:
   (sel-fill 0.12 → 0.05 at tier 2, so the regency alone reads selected).
   Failed name-joins now file a minimal payload (name-only card) instead
   of silently doing nothing.
+- **Dark plates get their province lines back**: the OFM admin_level-4
+  `boundary` tiles (the same ones the DINAS plate uses) are baked into
+  the SATELIT/CUACA/MALAM styles, re-inked paper-white — dashed, opacity
+  0.55/0.5/0.35 (quietest on Black Marble so the city lamps star). The
+  kab stitch also reads stronger over imagery (opacity ramp ~2× on dark
+  modes). Our own province polygons still never draw lines.
 - Earlier same day (`8f18392`): denominations nasi → **liter Pertamax**
   + **peluncuran Starship** (1 decimal below ten), theme order
   **janji → ekonomi → dunia → sumber daya alam** (folios renumbered,
   SDA rename, gerak II dek).
-- Next in wave 6: satellite/malam province lines (tile-based),
-  LensaWilayah v2 (DJPK + struk coupling), janji expansion, udara
-  ridgeline, lemari ide §13.10.
+- Next in wave 6: LensaWilayah v2 (DJPK + struk coupling), janji
+  expansion, udara ridgeline, INFORMASI theme, lemari ide §13.10.
 
 ### 2026-07-03 · wave 5 CLOSED (5a+5b+5c-map) — compact point
 - **The spike saga, resolved in three acts**: (1) kab file untangled
