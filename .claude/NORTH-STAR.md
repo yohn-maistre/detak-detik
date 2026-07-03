@@ -1189,6 +1189,55 @@ even when you're not at the helm"):**
   news desk (EdisiFeed lembar) is the template: every future surface =
   slot + gate + registry, so new writers plug in without new plumbing.
 
+### 13.14 ACT III BLUEPRINT — "the weekend magazine" (planned 2026-07-03, pre-implementation)
+
+**Audit of the 12 organs (current state):**
+- `PetaAtlas` (225ln) — engraved dot-grid archipelago, bus-wired, uses
+  prov geojson via FILL rasterization (immune to the tessellation bug —
+  no change needed). STRONG; becomes PLAT I.
+- `WajahNusantara` (110ln) — rotating people portrait, Wikipedia lead,
+  2×/day. Good bones, THIN — a stub of the §13.4 feature vision.
+- `Bahasa718` (106ln) — tally field + daily word for "air". Keep.
+- `GaleriNusantara` (133ln) — Commons painting + GBIF species frames,
+  absence-documented fallbacks. Good bones.
+- `AlmanakSains` (77ln) — daily computed margin note. Small, right voice.
+- `GunungApi` (68ln) — 127 triangles, STATIC sample. The map already
+  fetches MAGMA alert levels live — an obvious live upgrade.
+- `PetaRupa` (74ln) — Wallace line, self-drawing. Fine as a plate.
+- `RimbaHidup` (147ln) — boids murmuration closer. Beloved; keep.
+- Ruang Main (`TebakDaerah`/`BenarSalah`/`SensusDiri`/`TuguRakyat`) —
+  coherent zone; not this wave (BenarSalah could later pull live corpus).
+
+**The concept: ATLAS = the paper's weekend MAGAZINE.** Act I is the
+front page, Act II the instrument room; Act III reads slow — plates,
+features, margin notes. Structure:
+1. **PLAT system**: every figure gets the engraved caption convention
+   (`PLAT I · …`, mono, letterspaced, roman numerals, one CSS spec —
+   .plat-cap; no wrapper component needed).
+2. **MANUSIA → the FEATURE (WajahNusantara v2)**: drop cap, measured
+   2-col prose on wide screens, PULL-QUOTE lifted verbatim from the
+   Wikipedia lead (Lane A), portrait as PLAT II with engraved caption +
+   license credit, SukuLokasi coordinate inset (`5°30'S 138°30'E`).
+   Bahasa718 rides as the companion sidebar plate (PLAT III).
+3. **NEW · TULISAN section**: the §13.13 writeup slot RENDERS here —
+   machine essays (Lane C, gated, labeled DISUSUN MESIN) with VizPapan
+   figures inline. Absent until the lanes are live (silence law), but
+   seeded with ONE hand-gated inaugural essay so the form exists.
+4. **HAYATI & RUPA**: GaleriNusantara frames become PLAT IV/V;
+   AlmanakSains sits as the literal MARGIN NOTE column beside them.
+5. **NEW · SEJARAH**: HARI INI DALAM SEJARAH (§13.10 idea promoted) —
+   deterministic daily plate from a curated dated-events registry
+   (sejarah_registry.json, calendar-chosen law 5, every event sourced).
+6. **TANAH**: GunungApi goes LIVE — join today's MAGMA levels (same
+   proxy the map uses): a triangle above Normal turns madder TODAY;
+   the field breathes with the earth. PetaRupa stays (PLAT VI).
+7. **RimbaHidup** closes the act unchanged.
+
+**Sequencing:** 8a typography heart (plates + Wajah v2 + Bahasa
+companion) → 8b living organs (GunungApi live, SEJARAH registry,
+almanak margin) → 8c TULISAN renderer + inaugural essay → 8d act-scoped
+token sweep + ruang-main small polish.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
