@@ -20,6 +20,8 @@ import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import ZonaHayati from '../islands/ZonaHayati.svelte';
 import PustakaPikiran from '../islands/PustakaPikiran.svelte';
+import TulisanPapan from '../islands/TulisanPapan.svelte';
+import YangBerubah from '../islands/YangBerubah.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import KasDaerah from '../islands/KasDaerah.svelte';
@@ -176,6 +178,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             serial: TEMUAN[0].serial,
           }}
         />
+
+        <!-- INGATAN REDAKSI, the reader's face: what changed vs the arsip
+             window — prints only when the edition carries memory -->
+        <YangBerubah client:visible />
 
         <!-- the republic, mapped: right under the news, the country it
              happens in. Live layers + one province at a time. -->
@@ -810,6 +816,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </header>
         <IngatanHari client:visible />
+
+        <!-- TULISAN: the essay surface the newsroom writes into — renders
+             ONLY when the edition carries tulisan[] (no empty frames) -->
+        <TulisanPapan client:visible />
       </div>
 
       <!-- the living understory closes the act: after the record, what stays moving -->

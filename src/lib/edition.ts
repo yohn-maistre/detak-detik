@@ -45,6 +45,23 @@ export interface LiveTulisan {
 }
 /** buku besar row: promise (Lane A, sourced) beside its measured figure;
  *  status recomputed mechanically by the janji desk each edition */
+/** INGATAN REDAKSI (§13.16): the edition's memory block, computed
+ *  mechanically from committed arsip records — BARU / BERKEMBANG / BERLALU
+ *  story lines + plain-text meter deltas and promise status changes.
+ *  Deterministic; every line traces to a published edition. */
+export interface LiveIngatanCerita {
+  status: 'BARU' | 'BERKEMBANG' | 'BERLALU';
+  judul: string;
+  sejak?: string;
+  n_edisi?: number;
+  terakhir?: string;
+}
+export interface LiveIngatan {
+  jendela: number;
+  cerita: LiveIngatanCerita[];
+  angka?: string[];
+  janji_berubah?: string[];
+}
 export interface LiveJanji {
   id?: string;
   teks: string;
@@ -75,6 +92,7 @@ export interface LiveEdisi {
   kliping_meta?: LiveKlipingMeta;
   janji?: LiveJanji[];
   tulisan?: LiveTulisan[];
+  ingatan?: LiveIngatan;
   harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }

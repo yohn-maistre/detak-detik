@@ -33,6 +33,7 @@ from .gate import fact_gate
 from .lawyer import redaktur_hukum
 from .llm import configured_providers, model_available
 from .log import Log
+from .memory import ingat, simpan_arsip
 from .publish import publish_edisi
 from .sari import tulis_sari
 from .sources.anggaran import gather_anggaran
@@ -131,10 +132,17 @@ async def run() -> int:
         log.close()
         return 0
 
+    # INGATAN REDAKSI (§13.16): the memory block rides the payload; the slim
+    # arsip record is written after, for the NEXT edition to diff against
+    # (the Actions job commits arsip/ — the repo itself is the memory)
+    edisi.ingatan = ingat(EDISI_NO, edisi, log.event)
+
     log.event("terbit", edisi=edisi.edisi, lead=edisi.lead,
               angka_edisi=edisi.angka_edisi.nilai, temuan=len(edisi.temuan))
     ok = publish_edisi(edisi)
     log.event("publish", terkirim=ok)
+    arsip_p = simpan_arsip(edisi)
+    log.event("arsip", berkas=str(arsip_p))
     log.close()
     return 0
 

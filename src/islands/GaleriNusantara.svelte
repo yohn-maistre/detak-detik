@@ -1,10 +1,11 @@
 <script lang="ts">
   /**
-   * Galeri Nusantara: two framed plates a day. Rupa — a public-domain
-   * painting from Wikimedia Commons. Hayati — an endemic species from GBIF.
-   * Both fetched best-effort, license-clean; when the network is dark or an
-   * image fails, the frame falls to an engraved text plate (the absence is
-   * documented, never a broken page).
+   * Galeri Nusantara — RUPA only (§13.17: the species plate moved to Zona
+   * Hayati; one owner). A public-domain painting from Wikimedia Commons
+   * each day, image beside its reading: painter, year, license. Fetched
+   * best-effort license-clean; when the network is dark or an image fails,
+   * the frame falls to the curated plate (the absence is documented, never
+   * a broken page).
    */
   import { onMount } from 'svelte';
 
@@ -81,7 +82,8 @@
     background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--line) 30%, transparent) 0 1px, transparent 1px 7px);
   }
   .gn-kosong span { font-size: 9px; letter-spacing: 0.24em; color: var(--muted); }
-  figcaption { padding: 14px 0 0; display: grid; gap: 7px; }
+  figcaption { padding: 0; display: grid; gap: 7px; align-content: start; }
+  @media (max-width: 760px) { figcaption { padding-top: 14px; } }
   .gn-kicker { font-size: 8.5px; letter-spacing: 0.18em; color: var(--accent); }
   .gn-judul { font-size: clamp(22px, 3vw, 34px); color: var(--ink); line-height: 1.05; }
   .gn-meta { font-size: 10px; letter-spacing: 0.06em; color: var(--muted); }

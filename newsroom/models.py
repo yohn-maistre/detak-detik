@@ -196,6 +196,31 @@ class Tulisan(BaseModel):
     viz: list[VizSpec] | None = None
 
 
+class IngatanCerita(BaseModel):
+    """One remembered story line (§13.16): a kliping cluster read against the
+    14-edition window. BARU = first appearance; BERKEMBANG = seen before
+    (first-seen date + editions covered, today included); BERLALU = led the
+    previous edition and finds no kin today — coverage decay, printed."""
+
+    status: Literal["BARU", "BERKEMBANG", "BERLALU"]
+    judul: str
+    sejak: str | None = None      # BERKEMBANG: first seen (YYYY-MM-DD)
+    n_edisi: int | None = None    # BERKEMBANG: editions covered incl. today
+    terakhir: str | None = None   # BERLALU: last seen (YYYY-MM-DD)
+
+
+class Ingatan(BaseModel):
+    """INGATAN REDAKSI: the edition's memory block, computed mechanically by
+    memory.py from committed arsip records (deterministic; every line traces
+    to a published edition). One artifact, three audiences: the writers'
+    context, Aksara's answers, the reader's YANG BERUBAH strip."""
+
+    jendela: int                             # editions compared against
+    cerita: list[IngatanCerita] = Field(default_factory=list)
+    angka: list[str] | None = None           # meter delta / handover, plain
+    janji_berubah: list[str] | None = None   # ledger status changes, plain
+
+
 class Edisi(BaseModel):
     """The published edition. `model_dump(exclude_none=True)` drops the optional
     fields when absent, matching the JSON the worker stores and the site reads."""
@@ -213,6 +238,7 @@ class Edisi(BaseModel):
     kliping_meta: KlipingMeta | None = None
     janji: list[Janji] | None = None
     tulisan: list[Tulisan] | None = None
+    ingatan: Ingatan | None = None
 
 
 class CorpusRow(BaseModel):

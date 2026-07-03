@@ -14,6 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     # flip the NEWSROOM_ENABLED repo Variable to 'true' once the secrets are set
     if: ${{ vars.NEWSROOM_ENABLED == 'true' }}
+    # contents: write — the run commits its slim arsip record (INGATAN REDAKSI,
+    # §13.16): the repo itself is the memory the next edition diffs against
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -34,6 +38,19 @@ jobs:
           NIM_BASE_URL: ${{ vars.NIM_BASE_URL }}
           AKSARA_URL: ${{ vars.AKSARA_URL }}
         run: python -m newsroom.main
+      # the edition's slim record enters the repo: versioned, diffable,
+      # citable memory. [skip ci] keeps archive commits from triggering a
+      # site rebuild (the page reads memory from the KV payload, not arsip/)
+      - name: Arsipkan edisi (INGATAN REDAKSI)
+        run: |
+          if [ -n "$(git status --porcelain arsip/)" ]; then
+            git config user.name "newsroom[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add arsip/
+            git commit -m "arsip: rekaman edisi untuk ingatan redaksi [skip ci]"
+            git pull --rebase origin main || true
+            git push || echo "arsip push gagal; rekaman tetap di artifact log"
+          fi
       - name: Simpan log redaksi
         if: always()
         uses: actions/upload-artifact@v4
