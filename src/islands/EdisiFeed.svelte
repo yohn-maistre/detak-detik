@@ -42,6 +42,8 @@
     { id: 'semua', label: 'SEMUA' },
     { id: 'nasional', label: 'NASIONAL' },
     { id: 'daerah', label: 'DAERAH' },
+    { id: 'ekonomi', label: 'EKONOMI' },
+    { id: 'tekno', label: 'TEKNO' },
     { id: 'alam', label: 'ALAM' },
     { id: 'dunia', label: 'DUNIA' },
   ] as const;
@@ -148,6 +150,7 @@
                 {#each k.liputan ?? [k.utama] as l}<i class:penuh={l.independen} title={l.media}></i>{/each}
               </span>
               <span>{metaBaris(k)} · MEJA {(k.meja ?? 'nasional').toUpperCase()}</span>
+              {#if k.resmi}<span class="feed-resmi">RESMI</span>{/if}
               {#if k.titik_buta}<span class="feed-buta">TITIK BUTA · SATU GRUP</span>{/if}
             </p>
           </div>
@@ -156,7 +159,20 @@
     </ol>
     <p class="feed-kaki mono">■ INDEPENDEN · □ GRUP KONGLOMERASI · JUDUL MEMBUKA LEMBAR KLIPING</p>
   {:else}
-    <p class="feed-tunggu mono">RAK MENUNGGU EDISI BERIKUTNYA · KLIPING DISUSUN OTOMATIS TIAP TERBIT, 2× SEHARI</p>
+    <!-- skeleton rows: the rack's silhouette while the edition arrives, so the
+         page never shifts under the reader -->
+    <ol class="feed-rows feed-rangka" aria-hidden="true">
+      {#each Array(5) as _, i (i)}
+        <li class="feed-baris">
+          <span class="feed-no ghost-num num">{String(i + 2).padStart(2, '0')}</span>
+          <div class="feed-isi">
+            <span class="rangka-j" style={`width:${78 - (i % 3) * 14}%`}></span>
+            <span class="rangka-m"></span>
+          </div>
+        </li>
+      {/each}
+    </ol>
+    <p class="feed-tunggu mono">MENYUSUN RAK · KLIPING TERBIT OTOMATIS 2× SEHARI</p>
   {/if}
 </section>
 
@@ -265,7 +281,15 @@
   .feed-resi-meta { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
 
   .feed-bar { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; flex-wrap: wrap; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line-soft); padding: 10px 0 8px; }
-  .feed-meja { display: flex; gap: 16px; }
+  /* seven desks: the chip row scrolls sideways on a phone, with a fade edge */
+  .feed-meja {
+    display: flex; gap: 16px;
+    overflow-x: auto; scrollbar-width: none; white-space: nowrap;
+    max-width: 100%;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 22px), transparent);
+    mask-image: linear-gradient(90deg, #000 calc(100% - 22px), transparent);
+  }
+  .feed-meja::-webkit-scrollbar { display: none; }
   .feed-meja-btn {
     background: none; border: none; padding: 0 0 3px; cursor: pointer;
     font-size: 10px; letter-spacing: 0.16em; color: var(--muted);
@@ -298,6 +322,16 @@
   .feed-sq i, .lk-sq i { width: 8px; height: 8px; border: 1px solid var(--ink); background: transparent; }
   .feed-sq i.penuh, .lk-sq i.penuh { background: var(--ink); }
   .feed-buta { color: var(--accent); border: 1px solid var(--accent); padding: 1px 6px; font-size: 8.5px; letter-spacing: 0.12em; }
+  .feed-resmi { color: var(--accent2); border: 1px solid var(--accent2); padding: 1px 6px; font-size: 8.5px; letter-spacing: 0.12em; }
+
+  /* skeleton */
+  .rangka-j, .rangka-m { display: block; background: color-mix(in oklab, var(--ink) 8%, transparent); }
+  .rangka-j { height: 14px; max-width: 62ch; }
+  .rangka-m { height: 8px; width: 190px; margin-top: 2px; }
+  .feed-rangka .feed-baris { animation: rangka 1.6s ease-in-out infinite; }
+  .feed-rangka .feed-baris:nth-child(2n) { animation-delay: 0.5s; }
+  @keyframes rangka { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+  @media (prefers-reduced-motion: reduce) { .feed-rangka .feed-baris { animation: none; } }
   .feed-kaki { margin-top: 12px; font-size: 9px; letter-spacing: 0.13em; color: var(--muted); }
   .feed-tunggu { padding: 18px 0 6px; font-size: 10px; letter-spacing: 0.14em; color: var(--muted); }
 

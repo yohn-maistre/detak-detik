@@ -75,6 +75,12 @@ _MEJA_ATURAN: tuple[tuple[str, tuple[str, ...]], ...] = (
               "sampah", "polusi")),
     ("daerah", ("papua", "aceh", "jayapura", "kabupaten", "pemda", "pemprov",
                 "gubernur", "bupati", "otsus", "desa", "apbd")),
+    ("ekonomi", ("rupiah", "ihsg", "saham", "bursa", "obligasi", "pajak",
+                 "ekspor", "impor", "investasi", "tarif", "inflasi", "kurs",
+                 "suku bunga", "bi rate", "perbankan", "umkm")),
+    ("tekno", ("ai", "kecerdasan buatan", "digital", "siber", "startup",
+               "satelit", "data center", "pusat data", "internet", "aplikasi",
+               "chip", "semikonduktor", "fintech", "e-commerce", "gadget")),
     ("dunia", ("as", "amerika", "tiongkok", "china", "dunia", "global", "pbb",
                "asean", "internasional", "perang", "gaza", "ukraina")),
 )
@@ -250,6 +256,7 @@ def _ambil_feed(outlet: dict, batas: datetime) -> list[dict]:
             "media": outlet["nama"],
             "grup": outlet["grup"],
             "independen": bool(outlet.get("independen")),
+            "resmi": bool(outlet.get("resmi")),
             "judul": judul,
             "url": url,
             "ringkas": ringkas,
@@ -337,6 +344,8 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
                              media=w["media"], grup=w["grup"],
                              independen=w["independen"]) for w in liputan],
         butir=butir if len(butir) >= 2 else None,
+        # a cluster carrying the state's own announcement is marked, quietly
+        resmi=any(it.get("resmi") for it in anggota),
         n_media=n_media,
         n_grup=n_grup,
         skor=n_grup * 2 + n_media,  # corroboration by ownership diversity, not volume

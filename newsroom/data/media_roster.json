@@ -287,6 +287,153 @@
             "grup": "Narasi (Najwa Shihab)",
             "catatan": "Didirikan Najwa Shihab, Catharina Davy, dan Dahlia Citra melalui PT Narasi Citra Sahwahita dengan investor antara lain GDP Venture (Grup Djarum), Go-Ventures, dan Intiland; umpan RSS publik tidak tersedia saat diperiksa pada 2 Juli 2026.",
             "independen": false
+        },
+        {
+            "id": "detik_inet",
+            "nama": "detikInet",
+            "feed": "https://inet.detik.com/rss",
+            "grup": "CT Corp",
+            "catatan": "Kanal teknologi Detikcom yang dimiliki CT Corp (Chairul Tanjung) melalui Trans Media.",
+            "independen": false
+        },
+        {
+            "id": "cnbc_tech",
+            "nama": "CNBC Indonesia Tech",
+            "feed": "https://www.cnbcindonesia.com/tech/rss",
+            "grup": "CT Corp",
+            "catatan": "Kanal teknologi CNBC Indonesia, lisensi CNBC yang dioperasikan Trans Media di bawah CT Corp (Chairul Tanjung).",
+            "independen": false
+        },
+        {
+            "id": "antara_tekno",
+            "nama": "ANTARA Tekno",
+            "feed": "https://www.antaranews.com/rss/tekno.xml",
+            "grup": "Negara (Perum LKBN ANTARA)",
+            "catatan": "Kanal teknologi kantor berita milik negara Perum LKBN ANTARA di bawah Kementerian BUMN.",
+            "independen": false
+        },
+        {
+            "id": "dailysocial",
+            "nama": "DailySocial",
+            "feed": "https://dailysocial.id/feed",
+            "grup": "DailySocial (PT Digital Startup Nusantara)",
+            "catatan": "Media ekosistem startup dan teknologi yang didirikan Rama Mamuaya melalui PT Digital Startup Nusantara; kini menerbitkan buletin RISE melalui platform Substack.",
+            "independen": false
+        },
+        {
+            "id": "dunia_energi",
+            "nama": "Dunia Energi",
+            "feed": "https://www.dunia-energi.com/feed/",
+            "grup": "Dunia Energi",
+            "catatan": "Portal berita tambang dan migas; struktur kepemilikan di baliknya tidak terdokumentasi publik.",
+            "independen": false
+        },
+        {
+            "id": "ruangenergi",
+            "nama": "RuangEnergi",
+            "feed": "https://www.ruangenergi.com/feed/",
+            "grup": "RuangEnergi",
+            "catatan": "Portal berita migas, minerba, dan energi; struktur kepemilikan di baliknya tidak terdokumentasi publik.",
+            "independen": false
+        },
+        {
+            "id": "antara_hukum",
+            "nama": "ANTARA Hukum",
+            "feed": "https://www.antaranews.com/rss/hukum.xml",
+            "grup": "Negara (Perum LKBN ANTARA)",
+            "catatan": "Kanal hukum kantor berita milik negara Perum LKBN ANTARA di bawah Kementerian BUMN.",
+            "independen": false
+        },
+        {
+            "id": "detik_edu",
+            "nama": "detikEdu",
+            "feed": "https://www.detik.com/edu/rss",
+            "grup": "CT Corp",
+            "catatan": "Kanal pendidikan Detikcom yang dimiliki CT Corp (Chairul Tanjung) melalui Trans Media.",
+            "independen": false
+        },
+        {
+            "id": "antara_humaniora",
+            "nama": "ANTARA Humaniora",
+            "feed": "https://www.antaranews.com/rss/humaniora.xml",
+            "grup": "Negara (Perum LKBN ANTARA)",
+            "catatan": "Kanal humaniora yang mencakup pendidikan, kesehatan, dan sosial budaya dari kantor berita milik negara Perum LKBN ANTARA di bawah Kementerian BUMN.",
+            "independen": false
+        },
+        {
+            "id": "trubus",
+            "nama": "Trubus",
+            "feed": "https://www.trubus.id/feed",
+            "grup": "Bina Swadaya",
+            "catatan": "Media pertanian dan agribisnis yang diterbitkan PT Trubus Swadaya, bagian dari kelompok wirausaha sosial Bina Swadaya yang didirikan Bambang Ismawan.",
+            "independen": true
+        },
+        {
+            "id": "greeners",
+            "nama": "Greeners.co",
+            "feed": "https://www.greeners.co/feed/",
+            "grup": "Greeners",
+            "catatan": "Media daring lingkungan hidup yang beroperasi sejak 2012; badan hukum dan struktur kepemilikan penerbitnya tidak terdokumentasi publik.",
+            "independen": false
+        },
+        {
+            "id": "antara_dunia",
+            "nama": "ANTARA Dunia",
+            "feed": "https://www.antaranews.com/rss/dunia.xml",
+            "grup": "Negara (Perum LKBN ANTARA)",
+            "catatan": "Kanal internasional kantor berita milik negara Perum LKBN ANTARA di bawah Kementerian BUMN.",
+            "independen": false
+        },
+        {
+            "id": "airspace_review",
+            "nama": "Airspace Review",
+            "feed": "https://www.airspace-review.com/feed/",
+            "grup": "Airspace Review (independen)",
+            "catatan": "Media kedirgantaraan dan pertahanan yang didirikan mantan awak majalah Angkasa dan dipimpin jurnalis Roni Sontani, tidak berafiliasi dengan konglomerat.",
+            "independen": true
+        },
+        {
+            "id": "kontan_investasi",
+            "nama": "Kontan Investasi",
+            "feed": "https://investasi.kontan.co.id/rss",
+            "grup": "Kompas Gramedia",
+            "catatan": "Kanal investasi dan pasar modal Kontan yang diterbitkan PT Grahanusa Mediatama, bagian dari Kompas Gramedia.",
+            "independen": false
+        },
+        {
+            "id": "idx_channel",
+            "nama": "IDX Channel",
+            "feed": "https://www.idxchannel.com/rss",
+            "grup": "MNC Group",
+            "catatan": "Media berita pasar modal dan emiten yang dioperasikan MNC Group (Hary Tanoesoedibjo, pendiri Partai Perindo).",
+            "independen": false
+        },
+        {
+            "id": "kemhan",
+            "nama": "Kementerian Pertahanan RI",
+            "feed": "https://www.kemhan.go.id/feed",
+            "grup": "Negara (Kementerian Pertahanan)",
+            "catatan": "Saluran resmi Kementerian Pertahanan Republik Indonesia yang memublikasikan siaran pers dan berita kementerian.",
+            "independen": false,
+            "resmi": true
+        },
+        {
+            "id": "wapresri",
+            "nama": "Sekretariat Wakil Presiden",
+            "feed": "https://wapresri.go.id/feed/",
+            "grup": "Negara (Sekretariat Wakil Presiden)",
+            "catatan": "Saluran resmi Sekretariat Wakil Presiden Republik Indonesia yang memublikasikan siaran pers dan agenda wakil presiden.",
+            "independen": false,
+            "resmi": true
+        },
+        {
+            "id": "kemenko_polkam",
+            "nama": "Kemenko Polkam",
+            "feed": "https://polkam.go.id/feed/",
+            "grup": "Negara (Kemenko Polkam)",
+            "catatan": "Saluran resmi Kementerian Koordinator Bidang Politik dan Keamanan Republik Indonesia yang memublikasikan siaran pers dan berita kementerian.",
+            "independen": false,
+            "resmi": true
         }
     ]
 }

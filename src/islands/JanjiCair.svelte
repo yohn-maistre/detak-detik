@@ -40,8 +40,10 @@
     <span class="jc-k mono">JETP · KEMITRAAN TRANSISI ENERGI BERKEADILAN</span>
     <div class="jc-bar" style={`--p:${pct}%`}>
       <i class="jc-fill"></i>
-      <span class="jc-pledge mono">DIJANJIKAN · US$ 21,6 MILIAR</span>
-      <span class="jc-cair mono">CAIR ± US$ 3,3 M · {pct}%</span>
+    </div>
+    <div class="jc-tanda mono">
+      <span class="jc-cair">CAIR ± US$ 3,3 M · {pct}%</span>
+      <span class="jc-pledge">DIJANJIKAN · US$ 21,6 MILIAR</span>
     </div>
     <p class="jc-kalimat fig">
       Dari US$ 21,6 miliar yang dijanjikan negara-negara kaya untuk transisi energi, sekitar
@@ -67,7 +69,7 @@
   @media (max-width: 800px) { .jc { grid-template-columns: 1fr; } }
   .jc-k { font-size: 9px; letter-spacing: 0.18em; color: var(--muted); display: block; margin-bottom: 14px; }
 
-  .jc-bar { position: relative; height: 64px; border: 1px solid var(--line);
+  .jc-bar { position: relative; height: 46px; border: 1px solid var(--line);
     background: repeating-linear-gradient(45deg, color-mix(in oklab, var(--line) 30%, transparent) 0 1px, transparent 1px 8px); }
   .jc-fill {
     position: absolute; left: 0; top: 0; bottom: 0; width: var(--p, 15%);
@@ -75,8 +77,10 @@
   }
   .jc.siap .jc-fill { transform: scaleX(0); }
   .jc.masuk .jc-fill { transform: scaleX(1); transition: transform 1.2s var(--ease-out); }
-  .jc-pledge { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 10px; letter-spacing: 0.12em; color: var(--muted); }
-  .jc-cair { position: absolute; left: calc(var(--p, 15%) + 10px); top: 50%; transform: translateY(-50%); font-size: 10px; letter-spacing: 0.1em; color: var(--accent2); z-index: 2; }
+  /* one caption line under the bar: no absolute labels, no collisions */
+  .jc-tanda { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; margin-top: 7px; font-size: 10px; }
+  .jc-cair { letter-spacing: 0.1em; color: var(--accent2); }
+  .jc-pledge { letter-spacing: 0.12em; color: var(--muted); }
 
   .jc-kalimat { font-size: clamp(15px, 1.9vw, 18px); margin: 18px 0 14px; max-width: 56ch; }
   .jc :global(.chip) { align-self: flex-start; }

@@ -26,6 +26,8 @@ export interface LiveKliping {
   sari?: string;
   /** gated key points, each crediting the clip that supports it */
   butir?: LiveButir[];
+  /** any clip comes from an official state source (the RESMI marker) */
+  resmi?: boolean;
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 export interface LiveEdisi {
@@ -46,11 +48,22 @@ export interface LiveEdisi {
 }
 
 const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
+const SIMPANAN = 'dd:edisi:v1';
 
 type Sub = (e: LiveEdisi | null) => void;
 let live: LiveEdisi | null = null;
 const subs = new Set<Sub>();
 let started = false;
+
+/** Last edition snapshot from localStorage: the front paints instantly on a
+ *  return visit, then the network copy replaces it (stale-while-revalidate).
+ *  Local-first, device-only, and safe to lose. */
+function ambilSimpanan(): LiveEdisi | null {
+  try {
+    const raw = localStorage.getItem(SIMPANAN);
+    return raw ? (JSON.parse(raw) as LiveEdisi) : null;
+  } catch { return null; }
+}
 
 async function load(): Promise<void> {
   if (!AKSARA_URL) return;
@@ -59,13 +72,15 @@ async function load(): Promise<void> {
     if (res.status === 200) {
       live = (await res.json()) as LiveEdisi;
       subs.forEach((fn) => fn(live));
+      try { localStorage.setItem(SIMPANAN, JSON.stringify(live)); } catch { /* full/blocked: fine */ }
     }
-  } catch { /* the baked-in contoh stays; the chip says so */ }
+  } catch { /* the baked-in contoh (or the snapshot) stays; the chip says so */ }
 }
 
 /** Subscribe to the live edition. Fires immediately with the current value
- *  (null until loaded), then again once the live edition arrives. */
+ *  (the stored snapshot until the network answers), then again live. */
 export function onEdisi(fn: Sub): () => void {
+  if (live === null && !started && typeof localStorage !== 'undefined') live = ambilSimpanan();
   subs.add(fn);
   fn(live);
   if (!started) { started = true; void load(); }

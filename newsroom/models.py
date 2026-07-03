@@ -100,6 +100,9 @@ class Kliping(BaseModel):
     sari: str | None = None
     # Lane A key points (see Butir); None/empty = the section is absent
     butir: list[Butir] | None = None
+    # True when any clip comes from an official state source (roster `resmi`):
+    # the government's own words, marked as such on the shelf
+    resmi: bool = False
 
 
 class KlipingMeta(BaseModel):

@@ -167,7 +167,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              (SSR'd contoh, swapped live by the island); the day's press
              follows as ranked kliping rows. Headlines open the Lembar. -->
         <EdisiFeed
-          client:idle
+          client:load
           lead={{
             headline: TEMUAN[0].headline,
             dek: TEMUAN[0].body,
@@ -1313,7 +1313,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .janji-track.gagal .jt-real { background: var(--accent); }
   .janji-track.gagal .jt-bar { background: var(--accent); opacity: 0.6; }
   .janji-track.kosong::before { background: repeating-linear-gradient(90deg, var(--line) 0 5px, transparent 5px 10px); }
-  .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; }
+  /* right padding reserves the stamp's corner so long promises never collide */
+  .janji-teks { font-size: clamp(16px, 1.8vw, 19px); max-width: 34ch; padding-right: 112px; }
   .janji-meta { font-size: 10px; letter-spacing: 0.12em; color: var(--muted); margin: 6px 0 10px; text-transform: uppercase; }
   .janji-baris { display: flex; flex-wrap: wrap; gap: 6px 22px; font-size: 11px; color: var(--muted); }
   .janji-stamp { position: absolute; top: 0; right: 0; font-size: 9px; }

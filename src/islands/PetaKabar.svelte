@@ -327,11 +327,17 @@
       if (!map.getLayer('kab-line')) {
         map.addLayer({
           id: 'kab-line', type: 'line', source: 'kab', layout: { visibility: vis },
-          // the INNER regency edges: a thin, even hairline — like the map's own island
-          // coastlines, never a bold mesh. Faint at the national view (avoids clutter),
-          // a clean hairline once you drill into a province. The heavier PROVINCE
-          // perimeter is a separate layer (prov-line) drawn on top.
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.3, 9, 0.55], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.12, 7, 0.32, 11, 0.42] },
+          // the INNER regency edges: faint, DASHED, cadastral — never a mesh that
+          // competes with the data layers. Nearly invisible at the national view,
+          // a quiet stitch once you drill in. The heavier PROVINCE perimeter is a
+          // separate layer (prov-line) on top; the selected kabupaten alone gets a
+          // solid madder outline.
+          paint: {
+            'line-color': ink,
+            'line-dasharray': [1, 2.2],
+            'line-width': ['interpolate', ['linear'], ['zoom'], 5, 0.3, 9, 0.6],
+            'line-opacity': ['interpolate', ['linear'], ['zoom'], 5, 0.06, 7, 0.18, 11, 0.3],
+          },
         }, below);
       }
       // kabupaten names: fade in as you zoom past a province, decluttered, in the
@@ -359,7 +365,7 @@
       if (!map.getLayer('prov-line')) {
         map.addLayer({
           id: 'prov-line', type: 'line', source: 'provinsi', layout: { visibility: vis, 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.9, 8, 1.8], 'line-opacity': 0.85 },
+          paint: { 'line-color': ink, 'line-width': ['interpolate', ['linear'], ['zoom'], 4, 0.8, 8, 1.6], 'line-opacity': 0.7 },
         }, below);
       }
       if (!map.getLayer('provinsi-sel-fill')) {
@@ -1792,13 +1798,22 @@
     background: color-mix(in oklab, var(--bg) 90%, transparent);
     font-size: 9.5px; letter-spacing: 0.12em;
     max-width: 230px;
+    /* never taller than the map on a phone: rows scroll inside the panel */
+    max-height: min(52dvh, 340px);
+    display: flex;
+    flex-direction: column;
   }
   .kb-leg-head {
     display: block; width: 100%; text-align: left;
     background: none; border: none; cursor: pointer;
     padding: 6px 10px; font: inherit; letter-spacing: inherit; color: var(--ink);
   }
-  .kb-leg-rows { border-top: 1px solid var(--line); padding: 6px 10px 8px; display: grid; gap: 6px; }
+  .kb-leg-rows {
+    border-top: 1px solid var(--line); padding: 6px 10px 8px; display: grid; gap: 6px;
+    overflow-y: auto; overscroll-behavior: contain; min-height: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 14px), transparent);
+    mask-image: linear-gradient(180deg, #000 calc(100% - 14px), transparent);
+  }
   .kb-leg-row { display: flex; align-items: center; gap: 7px; color: var(--ink); cursor: pointer; }
   .kb-leg-row.mati { color: var(--muted); cursor: default; }
   .kb-leg-row input { accent-color: var(--accent); width: 11px; height: 11px; }
