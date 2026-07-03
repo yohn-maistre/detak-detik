@@ -368,6 +368,23 @@ function denomLever() {
   onDenom((d) => btns.forEach((b) => b.classList.toggle('aktif', b.dataset.denom === d)));
 }
 
+/** BUKA DI PETA chips: any element with data-buka-peta="{layerId}" turns that
+    map layer on through the bus and glides the reader up to the plate. One
+    attribute wires a chip anywhere (Act II chapters, Act III tanah notes). */
+function bukaPetaChips() {
+  const chips = [...document.querySelectorAll<HTMLElement>('[data-buka-peta]')];
+  if (!chips.length) return;
+  import('../lib/commands/dispatcher').then(({ dispatch }) => {
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        const layer = chip.dataset.bukaPeta;
+        if (layer) dispatch({ cmd: 'set_layer', params: { layer, on: true } });
+        document.getElementById('peta-blok')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  });
+}
+
 /** Stempel pad: a click stamps a seal; holding the press inks a blot. */
 const STEMPEL_WORDS = ['EDISI 41', 'TERUJI', 'BERCATATAN', 'ARSIP', 'DETAK', 'DETIK'];
 function stempelPad() {
@@ -660,6 +677,7 @@ export function boot() {
   odometer();
   jamTri();
   denomLever();
+  bukaPetaChips();
   stempelPad();
   strukTear();
   fajarButton();

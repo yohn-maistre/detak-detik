@@ -18,7 +18,6 @@ import PetaPiksel from '../islands/PetaPiksel.svelte';
 import SembilanPuluh from '../islands/SembilanPuluh.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
-import GunungApi from '../islands/GunungApi.svelte';
 import PetaRupa from '../islands/PetaRupa.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
@@ -735,7 +734,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <p class="atlas-sub fig">Tanah, hayati, dan rupa: sejarah, alam, dan manusia kepulauan, berganti tiap terbit.</p>
 
         <!-- the atlas plate: the archipelago itself, engraved from real polygons -->
-        <PetaAtlas client:visible />
+        <figure class="plat-wrap">
+          <PetaAtlas client:visible />
+          <figcaption class="plat-cap mono">PLAT I · KEPULAUAN, DIGRAFIR DARI POLIGON RUPABUMI</figcaption>
+        </figure>
 
         <!-- MANUSIA: the day's people + their tongues -->
         <header class="bab-kepala">
@@ -767,12 +769,17 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · TANAH</span>
             <h3 class="bab-tajuk display">Tanah</h3>
-            <p class="bab-dek">Gunung yang bernapas, dan perbatasan fauna paling tajam di bumi.</p>
+            <p class="bab-dek">Perbatasan fauna paling tajam di bumi — dan gunung-gunung yang kabar terkininya hidup di peta.</p>
           </div>
         </header>
         <div class="atlas-grid">
-          <GunungApi client:visible />
           <PetaRupa client:visible />
+          <!-- the volcano field lives on the MAP (one owner: MAGMA levels are
+               news); here the land keeps only its fact and the door to it -->
+          <aside class="tanah-note">
+            <p class="tanah-fakta fig">127 gunung api aktif — terbanyak di dunia; 76 di antaranya pernah meletus sejak 1600. Status hariannya, dari Normal sampai Awas, terbaca langsung di Peta Kabar.</p>
+            <button class="chip" data-buka-peta="gunungapi"><span class="tick">▲</span>BUKA DI PETA · LAPISAN GUNUNG API</button>
+          </aside>
         </div>
       </div>
 
@@ -1084,6 +1091,13 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .cabang-col .chip { align-self: flex-start; font-size: 8.5px; padding: 4px 7px; }
 
   /* ---- Act III + Ruang Main ---- */
+  /* the plate convention: engraved caption under every atlas figure (§13.14) */
+  .plat-wrap { margin: 0; }
+  .plat-cap { display: block; font-size: 8.5px; letter-spacing: 0.22em; color: var(--muted); text-align: center; margin-top: 10px; }
+  .tanah-note { display: grid; gap: 14px; align-content: center; border-left: 1px solid var(--line); padding-left: clamp(16px, 3vw, 28px); }
+  @media (max-width: 760px) { .tanah-note { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
+  .tanah-fakta { font-size: clamp(15px, 1.8vw, 19px); line-height: 1.55; max-width: 40ch; }
+  .tanah-note .chip { justify-self: start; }
   #hutan { margin-top: 8px; }
   .tugu-wrap { margin-top: 44px; max-width: 820px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
