@@ -30,7 +30,7 @@ export const commandSchemas = {
     plat: z.enum(['atlas', 'satelit', 'cuaca', 'malam']),
   }),
   denominate: z.object({
-    unit: z.enum(['rp', 'nasi', 'mbg', 'umphari']),
+    unit: z.enum(['rp', 'pertamax', 'mbg', 'umphari', 'starship']),
   }),
   set_lensa: z.object({
     kode: z.string(),

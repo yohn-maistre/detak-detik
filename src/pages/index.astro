@@ -228,9 +228,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="angka-denom mono" role="group" aria-label="Setarakan kerugian dengan satuan lain">
               <span class="angka-denom-label">SETARA DENGAN</span>
               <button class="angka-denom-btn aktif" data-denom="rp">RUPIAH</button>
-              <button class="angka-denom-btn" data-denom="nasi">NASI BUNGKUS</button>
+              <button class="angka-denom-btn" data-denom="pertamax">LITER PERTAMAX</button>
               <button class="angka-denom-btn" data-denom="mbg">PORSI MBG</button>
               <button class="angka-denom-btn" data-denom="umphari">HARI UPAH MINIMUM</button>
+              <button class="angka-denom-btn" data-denom="starship">PELUNCURAN STARSHIP</button>
             </div>
             <div class="cite-chips">
               {ANGKA_EDISI.chips.map((c) => <button class="chip"><span class="tick">⊙</span>{c}</button>)}
@@ -467,13 +468,56 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <div class="gerak" data-rise>
           <span class="gerak-no mono">GERAK II</span>
           <h2 class="gerak-judul display">Keadaan Negeri</h2>
-          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: pasar, lingkungan, rumah tangga, dan tempat republik ini berdiri di dunia.</p>
+          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: janji yang diucapkan, pasar, posisi di antara bangsa, dan sumber daya alam.</p>
         </div>
+
+        <!-- TEMA · JANJI & PROGRAM: the ledger that remembers, and the programs
+             it grades. The old standalone Janji jeda and the Rumah Tangga bab
+             were folded here: one chapter, promise next to outcome. -->
+        <section class="bab" id="janji">
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">06</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · JANJI</span>
+              <h2 class="bab-tajuk display">Janji &amp; Program</h2>
+              <p class="bab-dek">Buku besar yang mengingat: target yang diucapkan, angka yang terukur, dan ongkos program terbesarnya. Dinilai dengan aritmetika, bukan opini.</p>
+            </div>
+          </header>
+
+          <div class="janji-list">
+            {JANJI.map((j, ji) => (
+              <article class="janji">
+                <p class="janji-teks">{j.teks}</p>
+                <p class="janji-meta mono">{j.sumber}</p>
+                <div class="janji-baris mono">
+                  <span>TARGET · {j.target}</span>
+                  <span>TERUKUR · {j.realisasi}</span>
+                </div>
+                {JANJI_TRACK[ji] ? (
+                  <div class={`janji-track ${j.status === 'TIDAK TERCAPAI' ? 'gagal' : ''}`} role="img" aria-label={`Target ${j.target}, terukur ${j.realisasi}`}>
+                    <i class="jt-target" style={`left:${JANJI_TRACK[ji].t}%`}></i>
+                    <i class="jt-bar" style={`left:${Math.min(JANJI_TRACK[ji].t, JANJI_TRACK[ji].r)}%;width:${Math.abs(JANJI_TRACK[ji].t - JANJI_TRACK[ji].r)}%`}></i>
+                    <i class="jt-real" style={`left:${JANJI_TRACK[ji].r}%`}></i>
+                  </div>
+                ) : (
+                  <div class="janji-track kosong" role="img" aria-label="Realisasi tidak tersedia"></div>
+                )}
+                <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
+              </article>
+            ))}
+          </div>
+
+          <div class="bab-lembar bab-sub" data-rise>
+            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
+            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
+            <MbgKorban client:visible />
+          </div>
+        </section>
 
         <!-- TEMA · PASAR & EKONOMI -->
         <section class="bab" id="ekonomi">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">06</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · PASAR</span>
               <h2 class="bab-tajuk display">Pasar &amp; Ekonomi</h2>
@@ -516,13 +560,65 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           )}
         </section>
 
+
+
+        <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
+          <span class="eyebrow ganda-eyebrow">LAYAR GANDA · DUA KABAR SEMALAM, SENGAJA TANPA KETERANGAN</span>
+          <div class="ganda">
+            <div class="ganda-panel" data-rise>
+              <p class="ganda-angka display num">{LAYAR_GANDA.kiri.angka}</p>
+              <p class="ganda-label">{LAYAR_GANDA.kiri.label}</p>
+              <button class="chip"><span class="tick">⊙</span>{LAYAR_GANDA.kiri.chip}</button>
+            </div>
+            <div class="ganda-sela" aria-hidden="true"></div>
+            <div class="ganda-panel" data-rise>
+              <p class="ganda-angka display num">{LAYAR_GANDA.kanan.angka}</p>
+              <p class="ganda-label">{LAYAR_GANDA.kanan.label}</p>
+              <button class="chip lane-c">{LAYAR_GANDA.kanan.chip}</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- DUNIA: where the republic ranks, and the country that began beside it -->
+        <section class="bab" id="dunia">
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
+              <h2 class="bab-tajuk display">Dunia</h2>
+              <p class="bab-dek">Dua hal yang hanya tampak dari luar: di mana kita berdiri di antara bangsa lain, dan satu negara yang dulu berdiri sejajar.</p>
+            </div>
+          </header>
+
+          <div class="dunia-board">
+            {DUNIA.map((d) => (
+              <div class="dunia-row" data-rise>
+                <p class={`dunia-n display num ${d.baik ? 'baik' : 'buruk'}`}>{d.nilai}</p>
+                <div class="dunia-meta">
+                  <p class="dunia-label">{d.label}</p>
+                  <p class="dunia-peer mono">{d.peer}</p>
+                </div>
+                <button class="chip"><span class="tick">⊙</span>{d.chip}</button>
+              </div>
+            ))}
+          </div>
+
+          {vietnam && (
+            <div class="bab-lembar bab-sub" data-rise>
+              <h3 class="bab-subjudul display">{vietnam.judul}</h3>
+              <p class="bab-kalimat fig">{vietnam.satuKalimat}</p>
+              <GarisStart client:visible />
+            </div>
+          )}
+        </section>
+
         <!-- UMUM · LINGKUNGAN & EKSTRAKSI -->
         <section class="bab" id="lingkungan">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
             <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>TEMA · BUMI</span>
-              <h2 class="bab-tajuk display">Lingkungan &amp; Ekstraksi</h2>
+              <span class="inkbar"><span class="dot">●</span>TEMA · SUMBER DAYA ALAM</span>
+              <h2 class="bab-tajuk display">Sumber Daya Alam</h2>
               <p class="bab-dek">Di luar cabang kekuasaan: tanah, udara, dan hayati yang menanggung pertumbuhan. Dokumen berdampingan, pembaca menyimpulkan.</p>
             </div>
           </header>
@@ -570,99 +666,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <p class="bab-kalimat fig">Indonesia memimpin dunia dalam jumlah mamalia terancam punah. Inilah yang tersisa dari empat yang paling dekat dengan garis akhir.</p>
             <SisaAlam client:visible />
           </div>
-        </section>
-
-        <!-- TEMA · JANJI & PROGRAM: the ledger that remembers, and the programs
-             it grades. The old standalone Janji jeda and the Rumah Tangga bab
-             were folded here: one chapter, promise next to outcome. -->
-        <section class="bab" id="janji">
-          <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
-            <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>TEMA · JANJI</span>
-              <h2 class="bab-tajuk display">Janji &amp; Program</h2>
-              <p class="bab-dek">Buku besar yang mengingat: target yang diucapkan, angka yang terukur, dan ongkos program terbesarnya. Dinilai dengan aritmetika, bukan opini.</p>
-            </div>
-          </header>
-
-          <div class="janji-list">
-            {JANJI.map((j, ji) => (
-              <article class="janji">
-                <p class="janji-teks">{j.teks}</p>
-                <p class="janji-meta mono">{j.sumber}</p>
-                <div class="janji-baris mono">
-                  <span>TARGET · {j.target}</span>
-                  <span>TERUKUR · {j.realisasi}</span>
-                </div>
-                {JANJI_TRACK[ji] ? (
-                  <div class={`janji-track ${j.status === 'TIDAK TERCAPAI' ? 'gagal' : ''}`} role="img" aria-label={`Target ${j.target}, terukur ${j.realisasi}`}>
-                    <i class="jt-target" style={`left:${JANJI_TRACK[ji].t}%`}></i>
-                    <i class="jt-bar" style={`left:${Math.min(JANJI_TRACK[ji].t, JANJI_TRACK[ji].r)}%;width:${Math.abs(JANJI_TRACK[ji].t - JANJI_TRACK[ji].r)}%`}></i>
-                    <i class="jt-real" style={`left:${JANJI_TRACK[ji].r}%`}></i>
-                  </div>
-                ) : (
-                  <div class="janji-track kosong" role="img" aria-label="Realisasi tidak tersedia"></div>
-                )}
-                <span class={`stamp janji-stamp s-${j.status.replaceAll(' ', '-').toLowerCase()}`} data-stamp-in>{j.status}</span>
-              </article>
-            ))}
-          </div>
-
-          <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
-            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
-            <MbgKorban client:visible />
-          </div>
-        </section>
-
-        <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
-          <span class="eyebrow ganda-eyebrow">LAYAR GANDA · DUA KABAR SEMALAM, SENGAJA TANPA KETERANGAN</span>
-          <div class="ganda">
-            <div class="ganda-panel" data-rise>
-              <p class="ganda-angka display num">{LAYAR_GANDA.kiri.angka}</p>
-              <p class="ganda-label">{LAYAR_GANDA.kiri.label}</p>
-              <button class="chip"><span class="tick">⊙</span>{LAYAR_GANDA.kiri.chip}</button>
-            </div>
-            <div class="ganda-sela" aria-hidden="true"></div>
-            <div class="ganda-panel" data-rise>
-              <p class="ganda-angka display num">{LAYAR_GANDA.kanan.angka}</p>
-              <p class="ganda-label">{LAYAR_GANDA.kanan.label}</p>
-              <button class="chip lane-c">{LAYAR_GANDA.kanan.chip}</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- DUNIA: where the republic ranks, and the country that began beside it -->
-        <section class="bab" id="dunia">
-          <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
-            <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
-              <h2 class="bab-tajuk display">Dunia</h2>
-              <p class="bab-dek">Dua hal yang hanya tampak dari luar: di mana kita berdiri di antara bangsa lain, dan satu negara yang dulu berdiri sejajar.</p>
-            </div>
-          </header>
-
-          <div class="dunia-board">
-            {DUNIA.map((d) => (
-              <div class="dunia-row" data-rise>
-                <p class={`dunia-n display num ${d.baik ? 'baik' : 'buruk'}`}>{d.nilai}</p>
-                <div class="dunia-meta">
-                  <p class="dunia-label">{d.label}</p>
-                  <p class="dunia-peer mono">{d.peer}</p>
-                </div>
-                <button class="chip"><span class="tick">⊙</span>{d.chip}</button>
-              </div>
-            ))}
-          </div>
-
-          {vietnam && (
-            <div class="bab-lembar bab-sub" data-rise>
-              <h3 class="bab-subjudul display">{vietnam.judul}</h3>
-              <p class="bab-kalimat fig">{vietnam.satuKalimat}</p>
-              <GarisStart client:visible />
-            </div>
-          )}
         </section>
 
         <!-- archive: the perspektif permalinks live on; the shelf is one link away -->
