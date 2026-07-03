@@ -1,0 +1,717 @@
+[
+  {
+    "id": "suku-mee",
+    "nama": "Suku Mee",
+    "wilayah": "Pegunungan Meepago — Kabupaten Deiyai, Paniai, Dogiyai, Nabire, dan Mimika barat, Papua Tengah",
+    "pulau": "papua",
+    "koordinat": [
+      -3.93,
+      136.38
+    ],
+    "wikipedia": {
+      "judul": "Suku Mee",
+      "url": "https://id.wikipedia.org/wiki/Suku_Mee"
+    },
+    "ringkas": "Suku Mee, dikenal juga sebagai Bunani Mee atau Ekari, adalah sebuah Kelompok etnis yang mendiami kawasan pegunungan di Provinsi Papua Tengah, Indonesia. Suku ini mendiami wilayah pegunungan Kabupaten Nabire, Kabupaten Dogiyai, Kabupaten Deiyai, Paniai, dan pegunungan bagian barat Kabupaten Mimika yang termasuk kedalam wilayah adat Mee Pago. Suku Mee mayoritas beragama Kristen, dan sebagian beragama Islam di pesisir Kabupaten Nabire.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Twilmakayame-20220718-0001.jpg",
+      "berkas": "File:Twilmakayame-20220718-0001.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Jajang Pict's, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Mee (Ekari/Ekagi)",
+    "warisan": [
+      {
+        "nama": "Mege",
+        "deskripsi": "Uang tradisional dari kulit keong laut (kuwuk), alat tukar perdagangan lama dengan suku Moni dan Kamoro.",
+        "sumber": "id.wikipedia: Suku Mee"
+      },
+      {
+        "nama": "Koteka dan moge",
+        "deskripsi": "Busana adat: koteka labu air bagi pria — kata 'koteka' berasal dari bahasa Mee yang berarti pakaian — dan moge, rok pintalan kulit kayu bagi perempuan.",
+        "sumber": "id.wikipedia: Suku Mee; Koteka"
+      },
+      {
+        "nama": "Emawa",
+        "deskripsi": "Kompleks rumah tradisional: yame owa (rumah laki-laki), yagamo owa (rumah perempuan), dan yuwu owa (rumah pesta adat).",
+        "sumber": "id.wikipedia: Suku Mee"
+      }
+    ]
+  },
+  {
+    "id": "suku-dani",
+    "nama": "Suku Dani (Hubula)",
+    "wilayah": "Lembah Baliem, Kabupaten Jayawijaya, Papua Pegunungan",
+    "pulau": "papua",
+    "koordinat": [
+      -4.08,
+      138.95
+    ],
+    "wikipedia": {
+      "judul": "Suku Dani",
+      "url": "https://id.wikipedia.org/wiki/Suku_Dani"
+    },
+    "ringkas": "Suku Dani atau Hubula adalah suku yang mendiami wilayah Lembah Baliem di Pegunungan Tengah Papua, Kabupaten Jayawijaya, Papua Pegunungan, Indonesia. Sebanyak 100.000 jiwa diperkirakan menetap di Lembah Baliem, yang terdiri dari suku-suku Dani bagian hilir dan bagian hulu lembah, masing-masing sebanyak 20.000 jiwa dan 50.000 jiwa di bagian tengah lembah. Daerah di bagian sebelah barat Lembah Baliem dihuni oleh sekitar 180.000 jiwa, yaitu dari suku Lani yang sering keliru disebut sebagai suku \"Dani Barat\".",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Dani_people_traditional_house_near_Wamena%2C_Papua%2C_Indonesia_04.jpg",
+      "berkas": "File:Dani people traditional house near Wamena, Papua, Indonesia 04.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Spasimir Pilev, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Dani (rumpun Lembah Baliem)",
+    "warisan": [
+      {
+        "nama": "Honai",
+        "deskripsi": "Rumah bulat beratap jerami tanpa jendela, khas Papua Pegunungan dan Papua Tengah, khususnya suku Dani.",
+        "sumber": "id.wikipedia: Rumah Honai"
+      },
+      {
+        "nama": "Bakar batu",
+        "deskripsi": "Ritual memasak bersama satu kampung dengan batu panas sebagai tanda syukur dan silaturahmi, antara lain di Lembah Baliem.",
+        "sumber": "id.wikipedia: Bakar batu"
+      },
+      {
+        "nama": "Holim",
+        "deskripsi": "Sebutan Dani untuk koteka, pakaian pria dari kulit labu.",
+        "sumber": "id.wikipedia: Koteka"
+      }
+    ]
+  },
+  {
+    "id": "suku-asmat",
+    "nama": "Suku Asmat",
+    "wilayah": "Kabupaten Asmat, pesisir selatan Papua, Papua Selatan",
+    "pulau": "papua",
+    "koordinat": [
+      -5.54,
+      138.13
+    ],
+    "wikipedia": {
+      "judul": "Suku Asmat",
+      "url": "https://id.wikipedia.org/wiki/Suku_Asmat"
+    },
+    "ringkas": "Suku Asmat adalah sebuah suku di kawasan Provinsi Papua Selatan, Indonesia. Suku Asmat dikenal dengan hasil ukiran kayunya yang unik. Populasi suku Asmat terbagi dua, yaitu mereka yang tinggal di pesisir pantai dan mereka yang tinggal di bagian pedalaman.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Asmat_Longhouse.jpg",
+      "berkas": "File:Asmat Longhouse.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Spencer Weart, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa-bahasa Asmat",
+    "warisan": [
+      {
+        "nama": "Ukiran kayu Asmat",
+        "deskripsi": "Seni pahat kayu yang membuat suku Asmat dikenal dunia.",
+        "sumber": "id.wikipedia: Suku Asmat"
+      },
+      {
+        "nama": "Tiang bisj",
+        "deskripsi": "Tiang leluhur berukir untuk upacara peringatan arwah; padanannya pada suku Kamoro disebut mbitoro.",
+        "sumber": "id.wikipedia: Mbitoro"
+      }
+    ]
+  },
+  {
+    "id": "suku-amungme",
+    "nama": "Suku Amungme (Amung)",
+    "wilayah": "Lembah-lembah tinggi Kabupaten Mimika, Puncak, dan Puncak Jaya, Papua Tengah",
+    "pulau": "papua",
+    "koordinat": [
+      -4.15,
+      137.1
+    ],
+    "wikipedia": {
+      "judul": "Suku Amungme",
+      "url": "https://id.wikipedia.org/wiki/Suku_Amungme",
+      "en_fallback": "Amungme"
+    },
+    "ringkas": "Suku Amung adalah kelompok etnis dengan populasi sekitar 17.700 orang yang tinggal di dataran tinggi provinsi Papua Tengah, Indonesia.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/TM-60026098_Portret_van_een_groep_Amungme_Papua%27s_tijdens_een_onverwacht_bezoek_aan_de_leden_van_de_Colijn_Expeditie_naar_het_Centrale_Bergland_van_Nieuw-Guinea_1935_bewerkt_%2851172575324%29.jpg",
+      "berkas": "File:TM-60026098 Portret van een groep Amungme Papua's tijdens een onverwacht bezoek aan de leden van de Colijn Expeditie naar het Centrale Bergland van Nieuw-Guinea 1935 bewerkt (51172575324).jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Koleksi Nationaal Museum van Wereldculturen / Papua Heritage Foundation (1935), domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Amung-kal (Uhunduni); varian utara Damal-kal",
+    "warisan": [
+      {
+        "nama": "Amungsa",
+        "deskripsi": "Bentangan tanah adat Amungme; pegunungan sekitarnya disucikan, termasuk puncak keramat Nemangkawi ('panah suci') di Puncak Jaya.",
+        "sumber": "id.wikipedia: Suku Amungme"
+      },
+      {
+        "nama": "Moietas Mom–Magai",
+        "deskripsi": "Sistem dua paroh masyarakat eksogam yang mengatur perkawinan antarklan.",
+        "sumber": "id.wikipedia: Suku Amungme"
+      }
+    ]
+  },
+  {
+    "id": "suku-kamoro",
+    "nama": "Suku Kamoro (Mimika Wee)",
+    "wilayah": "Pesisir selatan Kabupaten Mimika, dari Sungai Otakwa hingga Potowai Buru, Papua Tengah",
+    "pulau": "papua",
+    "koordinat": [
+      -4.55,
+      136.89
+    ],
+    "wikipedia": {
+      "judul": "Suku Kamoro",
+      "url": "https://id.wikipedia.org/wiki/Suku_Kamoro"
+    },
+    "ringkas": "Suku Kamoro atau Mimika Wee adalah kelompok etnis yang tinggal di wilayah pesisir selatan Papua, Kabupaten Mimika, Papua Tengah. Luas daerah tersebut sekitar 250 km, yang membentang dari Sungai Otakwa di sisi timur hingga mendekati Potowai Buru di sisi barat. Sebagai masyarakat semi-nomaden, orang Kamoro tinggal di tiga ekosistem, yaitu hutan hujan tropis, rawa-rawa bakau dan daerah muara yang kaya akan sumber makanan.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Suku_Kamoro_mencari_bahan_Mbitoro.jpg",
+      "berkas": "File:Suku Kamoro mencari bahan Mbitoro.jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Kemdikbud RI, domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Kamoro",
+    "warisan": [
+      {
+        "nama": "Mbitoro",
+        "deskripsi": "Patung dari batang dan akar pohon bakau berukir makhluk hidup, kerabat tiang bisj Asmat.",
+        "sumber": "id.wikipedia: Mbitoro"
+      },
+      {
+        "nama": "Karapau",
+        "deskripsi": "Bangunan adat tempat mbitoro digantung, dengan akar bakau di bagian atas.",
+        "sumber": "id.wikipedia: Mbitoro"
+      }
+    ]
+  },
+  {
+    "id": "suku-biak",
+    "nama": "Suku Biak",
+    "wilayah": "Kepulauan Biak Numfor, Teluk Cenderawasih, Papua",
+    "pulau": "papua",
+    "koordinat": [
+      -1.03,
+      136.05
+    ],
+    "wikipedia": {
+      "judul": "Suku Biak",
+      "url": "https://id.wikipedia.org/wiki/Suku_Biak"
+    },
+    "ringkas": "Suku Biak berasal dari kelompok etnis yang berasal dari Kepulauan Biak di Teluk Cenderawasih, tepat di lepas pantai utara Pulau Papua. Masyarakat Biak memiliki beberapa sub-suku, seperti Aimando, Betew, Doreri, Kafdaron, Karon, Usba, Wardo, dan Kaipuri yang kebanyakan telah bermigrasi serta menetap di pesisir utara Papua dan Kepulauan Raja Ampat sejak abad ke-15.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Yosim_Pancar_%28Yospan%29.jpg",
+      "berkas": "File:Yosim Pancar (Yospan).jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Rian Tatuwo, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Biak (Austronesia)",
+    "warisan": [
+      {
+        "nama": "Tari Yospan (Yosim Pancar)",
+        "deskripsi": "Tarian pergaulan muda-mudi Teluk Cenderawasih — Biak Numfor, Kepulauan Yapen, dan Waropen.",
+        "sumber": "id.wikipedia: Tari Yospan"
+      }
+    ]
+  },
+  {
+    "id": "suku-marind",
+    "nama": "Suku Marind (Malind Anim)",
+    "wilayah": "Merauke, dari Kondo hingga Sungai Digoel, Papua Selatan",
+    "pulau": "papua",
+    "koordinat": [
+      -8.47,
+      140.33
+    ],
+    "wikipedia": {
+      "judul": "Suku Marind",
+      "url": "https://id.wikipedia.org/wiki/Suku_Marind",
+      "en_fallback": "Marind people"
+    },
+    "ringkas": "Malind Anim merupakan suatu kelompok etnis atau suku bangsa yang berasal dari wilayah Papua Selatan, Indonesia. Suku bangsa Malind Anim adalah suku bangsa terbesar di Papua bagian selatan. Suku bangsa ini tersebar mulai dari Kondo sampai sungai Digoel.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Marind-Anim_men_dressed_for_ceremony%2C_south_coast_Dutch_New_Guinea.jpg",
+      "berkas": "File:Marind-Anim men dressed for ceremony, south coast Dutch New Guinea.jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Fotografer tak dikenal (kartu pos, ±1920-an), domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Marind",
+    "warisan": [
+      {
+        "nama": "Dema",
+        "deskripsi": "Konsep leluhur, roh, dan makhluk dalam kepercayaan Marind, terdokumentasi dalam etnografi klasik Jan van Baal.",
+        "sumber": "id.wikipedia: Suku Marind"
+      },
+      {
+        "nama": "Wati",
+        "deskripsi": "Minuman tradisional dari tanaman kava.",
+        "sumber": "id.wikipedia: Suku Marind"
+      },
+      {
+        "nama": "Wambad",
+        "deskripsi": "Teknik bertani bedeng tinggi agar tanaman tidak terendam banjir.",
+        "sumber": "id.wikipedia: Suku Marind"
+      }
+    ]
+  },
+  {
+    "id": "suku-yali",
+    "nama": "Suku Yali",
+    "wilayah": "Timur Lembah Baliem — Kabupaten Yalimo dan Yahukimo, Papua Pegunungan",
+    "pulau": "papua",
+    "koordinat": [
+      -4.2,
+      139.3
+    ],
+    "wikipedia": {
+      "judul": "Suku Yali",
+      "url": "https://id.wikipedia.org/wiki/Suku_Yali"
+    },
+    "ringkas": "Suku Yali adalah kelompok etnis yang mendiami Provinsi Papua Pegunungan, Indonesia. Suku Yali membentuk kampung-kampung kecil yang tersebar di daerah pegunungan tengah, di sebelah timur dari lembah Baliem. Orang Yali juga terbagi-bagi menurut bahasa, dialek, dan budayanya, menjadi dua kelompok besar: Yalimek dan Yalimo.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Yali_man_Baliem_Valley_Papua.jpg",
+      "berkas": "File:Yali man Baliem Valley Papua.jpg",
+      "lisensi": "CC BY 2.0",
+      "atribusi": "710928003 (Flickr), CC BY 2.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Yali (rumpun Lembah Baliem) dan bahasa Mek",
+    "warisan": [
+      {
+        "nama": "Sabiyab",
+        "deskripsi": "Busana adat lilitan rotan menyerupai rok dengan koteka humi; banyaknya lingkaran rotan menandai keberanian dan status.",
+        "sumber": "id.wikipedia: Suku Yali"
+      },
+      {
+        "nama": "Yowi dan opumbuk",
+        "deskripsi": "Rumah adat — yowi untuk laki-laki, homea untuk perempuan, usa yowi yang keramat — membentuk kompleks perumahan opumbuk.",
+        "sumber": "id.wikipedia: Suku Yali"
+      },
+      {
+        "nama": "Dansa yunggul",
+        "deskripsi": "Kesenian 'lari kecil' berkeliling sambil menyanyikan lagu eberi, suleng, dan wene puhur.",
+        "sumber": "id.wikipedia: Suku Yali"
+      }
+    ]
+  },
+  {
+    "id": "suku-korowai",
+    "nama": "Suku Korowai (Kolufo)",
+    "wilayah": "Pedalaman antara Kabupaten Yahukimo, Boven Digoel, dan Asmat — Papua Pegunungan dan Papua Selatan",
+    "pulau": "papua",
+    "koordinat": [
+      -5.4,
+      139.8
+    ],
+    "wikipedia": {
+      "judul": "Suku Korowai",
+      "url": "https://id.wikipedia.org/wiki/Suku_Korowai",
+      "en_fallback": "Korowai people"
+    },
+    "ringkas": "Suku Korowai (Koroway) atau Kolufo-yanop adalah suku di pedalaman Papua Pegunungan dan Papua Selatan, Indonesia dan populasi sekitar 3.000 orang. Suku ini hidup di rumah yang dibangun di atas pohon dengan ketinggian 4,5–9 meter yang disebut khaim (xaim).",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Korowai_Treehouse.jpg",
+      "berkas": "File:Korowai Treehouse.jpg",
+      "lisensi": "CC BY 2.0",
+      "atribusi": "Pengguna Flickr ♪ (Jayapura), CC BY 2.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Korowai",
+    "warisan": [
+      {
+        "nama": "Khaim (xaim)",
+        "deskripsi": "Rumah pohon setinggi 4,5–9 meter, hunian khas Korowai.",
+        "sumber": "id.wikipedia: Suku Korowai"
+      },
+      {
+        "nama": "Khawisip",
+        "deskripsi": "Sebutan Korowai untuk koteka dari moncong burung taun-taun.",
+        "sumber": "id.wikipedia: Koteka"
+      }
+    ]
+  },
+  {
+    "id": "suku-sentani",
+    "nama": "Suku Sentani",
+    "wilayah": "Sekitar Danau Sentani, Kabupaten Jayapura, Papua",
+    "pulau": "papua",
+    "koordinat": [
+      -2.61,
+      140.52
+    ],
+    "wikipedia": {
+      "judul": "Suku Sentani",
+      "url": "https://id.wikipedia.org/wiki/Suku_Sentani"
+    },
+    "ringkas": "Suku Sentani adalah kelompok etnis yang mendiami wilayah Kabupaten Jayapura, Provinsi Papua. Terutama di sekitar danau Sentani dan sebagian kotamadya Jayapura. Jumlah populasinya sekitar 30.000 jiwa.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Portret_van_een_groep_Papua%27s_bij_Joka_aan_het_Sentani-meer_-_Collectie_stichting_Nationaal_Museum_van_Wereldculturen_-_TM-60010111.jpg",
+      "berkas": "File:Portret van een groep Papua's bij Joka aan het Sentani-meer - Collectie stichting Nationaal Museum van Wereldculturen - TM-60010111.jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Gijsbert van der Sande, koleksi Nationaal Museum van Wereldculturen (TM-60010111), domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Sentani (rumpun Trans-Nugini)",
+    "warisan": [
+      {
+        "nama": "Khombow",
+        "deskripsi": "Lukisan kulit kayu dari kampung Asei Besar di Danau Sentani.",
+        "sumber": "id.wikipedia: Khombow"
+      },
+      {
+        "nama": "Gerabah Abar",
+        "deskripsi": "Tempayan hele dan helai dari pusat gerabah Abar — tradisi gerabah yang langka di Papua.",
+        "sumber": "id.wikipedia: Suku Sentani"
+      },
+      {
+        "nama": "Tato Sentani",
+        "deskripsi": "Tato di wajah, tangan, dan kaki sebagai simbol kekuasaan, kecantikan, dan status sosial.",
+        "sumber": "id.wikipedia: Suku Sentani"
+      }
+    ]
+  },
+  {
+    "id": "tionghoa-indonesia",
+    "nama": "Orang Tionghoa-Indonesia",
+    "wilayah": "Tersebar nasional; konsentrasi di kota-kota pesisir Jawa, Sumatera, dan Kalimantan Barat",
+    "pulau": "jawa",
+    "koordinat": [
+      -6.14,
+      106.81
+    ],
+    "wikipedia": {
+      "judul": "Orang Tionghoa-Indonesia",
+      "url": "https://id.wikipedia.org/wiki/Orang_Tionghoa-Indonesia"
+    },
+    "ringkas": "Orang Tionghoa Indonesia, adalah salah sebuah kelompok masyarakat di Indonesia adalah orang Indonesia yang leluhurnya bermigrasi dari Tiongkok dalam kurun waktu delapan abad terakhir. Leluhur orang Tionghoa-Indonesia berimigrasi secara bergelombang sejak ribuan tahun yang lalu melalui kegiatan perniagaan. Peran mereka beberapa kali muncul dalam sejarah Indonesia, bahkan sebelum Republik Indonesia dideklarasikan dan terbentuk.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Sembahyang_Imlek_2020.jpg",
+      "berkas": "File:Sembahyang Imlek 2020.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Sulist Heru, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Indonesia, Jawa, Betawi, Sunda; varietas Tionghoa: Hokkien, Hakka, Tiochiu, Hainan, dialek Fuzhou (Wikidata Q1945786, P1412)",
+    "warisan": [
+      {
+        "nama": "Imlek dan Cap Go Meh",
+        "deskripsi": "Rangkaian tahun baru Tionghoa yang ditutup Festival Lampion pada bulan purnama pertama, dengan doa di kelenteng.",
+        "sumber": "id.wikipedia: Cap Go Meh"
+      },
+      {
+        "nama": "Barongsai",
+        "deskripsi": "Tarian kostum singa, simbol keberanian, kekuatan, dan keunggulan.",
+        "sumber": "id.wikipedia: Barongsai"
+      }
+    ]
+  },
+  {
+    "id": "dayak-ngaju",
+    "nama": "Suku Dayak Ngaju",
+    "wilayah": "Kalimantan Tengah — Palangka Raya, Kapuas, Pulang Pisau, Gunung Mas",
+    "pulau": "kalimantan",
+    "koordinat": [
+      -2.21,
+      113.92
+    ],
+    "wikipedia": {
+      "judul": "Suku Dayak Ngaju",
+      "url": "https://id.wikipedia.org/wiki/Suku_Dayak_Ngaju"
+    },
+    "ringkas": "Suku Dayak Ngaju (Biaju) adalah suku asli yang mendiami provinsi Kalimantan Tengah. Suku Ngaju merupakan sub etnis Dayak terbesar di Kalimantan Tengah yang persebarannya cukup luas dan utamanya terkonsentrasi di daerah Kota Palangka Raya, Kabupaten Pulang Pisau, Kabupaten Gunung Mas, Kabupaten Kapuas dan di kabupaten lainnya di seluruh wilayah Kalimantan Tengah dapat ditemui suku Ngaju.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Rumah_Betang_Sei_Pasah_180505002.JPG",
+      "berkas": "File:Rumah Betang Sei Pasah 180505002.JPG",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Ezagren, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Dayak Ngaju (Biaju)",
+    "warisan": [
+      {
+        "nama": "Tiwah",
+        "deskripsi": "Upacara kematian agama Kaharingan untuk mengantar liau (arwah) orang mati, khas Dayak Ngaju.",
+        "sumber": "id.wikipedia: Tiwah"
+      },
+      {
+        "nama": "Kaharingan",
+        "deskripsi": "Agama asli suku Dayak yang masih bertahan, khususnya di Kalimantan Tengah dan Selatan.",
+        "sumber": "id.wikipedia: Kaharingan"
+      },
+      {
+        "nama": "Rumah betang",
+        "deskripsi": "Rumah panjang komunal di hulu-hulu sungai, pusat permukiman Dayak.",
+        "sumber": "id.wikipedia: Rumah Betang"
+      }
+    ]
+  },
+  {
+    "id": "dayak-iban",
+    "nama": "Suku Dayak Iban",
+    "wilayah": "Kapuas Hulu, Kalimantan Barat; juga Sarawak dan Brunei",
+    "pulau": "kalimantan",
+    "koordinat": [
+      0.88,
+      112.2
+    ],
+    "wikipedia": {
+      "judul": "Suku Dayak Iban",
+      "url": "https://id.wikipedia.org/wiki/Suku_Dayak_Iban",
+      "en_fallback": "Iban people"
+    },
+    "ringkas": "Suku Iban atau Dayak Laut, adalah salah satu rumpun suku Dayak yang terdapat di Sarawak, Kalimantan Barat, dan Brunei. Kata Iban berasal dari bahasa Iban asli yang bermaksud manusia atau orang. Bangsa Iban bermaksud bangsa manusia.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Gawai_Dayak.jpg",
+      "berkas": "File:Gawai Dayak.jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Pemerintah Kabupaten Sekadau, Kalimantan Barat, domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Iban",
+    "warisan": [
+      {
+        "nama": "Gawai Dayak",
+        "deskripsi": "Perayaan panen besar suku Dayak di Kalimantan Barat dan Sarawak, terutama oleh Dayak Iban.",
+        "sumber": "id.wikipedia: Gawai Dayak"
+      },
+      {
+        "nama": "Rumah panjang",
+        "deskripsi": "Pusat kehidupan sosial masyarakat Dayak di Kalimantan Barat dan Sarawak.",
+        "sumber": "id.wikipedia: Rumah panjang"
+      }
+    ]
+  },
+  {
+    "id": "batak-toba",
+    "nama": "Suku Batak Toba",
+    "wilayah": "Sekitar Danau Toba — Samosir, Toba, Humbang Hasundutan, Tapanuli Utara, Sumatera Utara",
+    "pulau": "sumatra",
+    "koordinat": [
+      2.6,
+      98.83
+    ],
+    "wikipedia": {
+      "judul": "Suku Batak Toba",
+      "url": "https://id.wikipedia.org/wiki/Suku_Batak_Toba"
+    },
+    "ringkas": "Batak Toba merupakan salah satu kelompok etnis Batak yang berasal dari Provinsi Sumatera Utara, Indonesia. Wilayah persebaran utama kelompok etnis Batak Toba meliputi Kabupaten Samosir, Kabupaten Toba, Kabupaten Humbang Hasundutan, Kabupaten Tapanuli Utara, dan Kabupaten Tapanuli Tengah. Daerah persebaran utama lainnya adalah di Kabupaten Dairi, Kabupaten Simalungun, Kota Pematangsiantar, Kota Sibolga, Kabupaten Asahan, dan Kota Medan.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Rumah_Bolon.jpg",
+      "berkas": "File:Rumah Bolon.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Nurul Ichlasiah, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Batak Toba",
+    "warisan": [
+      {
+        "nama": "Ulos",
+        "deskripsi": "Kain tenun khas Batak, ditenun dengan alat tenun bukan mesin.",
+        "sumber": "id.wikipedia: Ulos"
+      },
+      {
+        "nama": "Ruma bolon",
+        "deskripsi": "Rumah adat tradisional masyarakat Batak Toba di Sumatera Utara.",
+        "sumber": "id.wikipedia: Ruma Bolon"
+      }
+    ]
+  },
+  {
+    "id": "minangkabau",
+    "nama": "Orang Minangkabau",
+    "wilayah": "Dataran Tinggi Minangkabau, Sumatera Barat; persebaran hingga Riau, Jambi, dan Negeri Sembilan",
+    "pulau": "sumatra",
+    "koordinat": [
+      -0.46,
+      100.6
+    ],
+    "wikipedia": {
+      "judul": "Orang Minangkabau",
+      "url": "https://id.wikipedia.org/wiki/Orang_Minangkabau"
+    },
+    "ringkas": "Minangkabau merupakan kelompok etnik di Indonesia bagian dari rumpun Austronesia yang berasal dari Dataran Tinggi Minangkabau, Sumatera Barat. Saat ini, persebaran etnik Minangkabau meliputi seluruh daratan Sumatera Barat, separuh daratan Riau, bagian utara Bengkulu, bagian barat Jambi, pantai barat Sumatera Utara, pantai barat daya Aceh dan Negeri Sembilan di Malaysia. Minangkabau merujuk pada entitas kultural dan geografis yang ditandai dengan penggunaan bahasa, adat yang menganut sistem kekerabatan matrilineal dan identitas agama Islam.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Minangkabau_wedding_2.jpg",
+      "berkas": "File:Minangkabau wedding 2.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Mamasamala, CC BY-SA 3.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Minangkabau",
+    "warisan": [
+      {
+        "nama": "Rumah gadang",
+        "deskripsi": "Rumah adat bergonjong (bagonjong) khas Minangkabau.",
+        "sumber": "id.wikipedia: Rumah Gadang"
+      },
+      {
+        "nama": "Randai",
+        "deskripsi": "Permainan berkelompok melingkar yang menggabungkan lagu, musik, tari, drama, dan silat.",
+        "sumber": "id.wikipedia: Randai"
+      },
+      {
+        "nama": "Rendang",
+        "deskripsi": "Hidangan daging berempah bersantan yang lahir dari budaya merantau.",
+        "sumber": "id.wikipedia: Rendang"
+      }
+    ]
+  },
+  {
+    "id": "suku-bugis",
+    "nama": "Suku Bugis",
+    "wilayah": "Sulawesi Selatan, bagian barat daya pulau Sulawesi",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -4.54,
+      120.33
+    ],
+    "wikipedia": {
+      "judul": "Suku Bugis",
+      "url": "https://id.wikipedia.org/wiki/Suku_Bugis"
+    },
+    "ringkas": "Suku Bugis merupakan kelompok etnis Austronesia terbesar di antara tiga kelompok etnolinguistik utama di Sulawesi Selatan, bersama dengan suku Makassar dan Toraja. Sulawesi Selatan terletak di bagian barat daya pulau Sulawesi, pulau terbesar ketiga di Indonesia. Pada tahun 1605, suku Bugis beralih dari kepercayaan animisme ke Islam.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Taopere.jpg",
+      "berkas": "File:Taopere.jpg",
+      "lisensi": "Copyrighted free use",
+      "atribusi": "Marc Obrowski (1994), copyrighted free use, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Bugis",
+    "warisan": [
+      {
+        "nama": "Pinisi",
+        "deskripsi": "Sistem layar kapal khas, dibangun sub-etnis Konjo (Bugis-Makassar) dan dipakai luas orang Bugis dan Makassar.",
+        "sumber": "id.wikipedia: Pinisi"
+      },
+      {
+        "nama": "Aksara Lontara",
+        "deskripsi": "Aksara Bugis untuk menulis bahasa Bugis, Makassar, dan Mandar.",
+        "sumber": "id.wikipedia: Aksara Lontara"
+      }
+    ]
+  },
+  {
+    "id": "suku-toraja",
+    "nama": "Suku Toraja",
+    "wilayah": "Pegunungan utara Sulawesi Selatan — Tana Toraja, Toraja Utara, Mamasa",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -2.97,
+      119.9
+    ],
+    "wikipedia": {
+      "judul": "Suku Toraja",
+      "url": "https://id.wikipedia.org/wiki/Suku_Toraja"
+    },
+    "ringkas": "Suku Toraja adalah sebuah suku bangsa yang menetap di pegunungan bagian utara Sulawesi Selatan, Indonesia. Populasinya diperkirakan sekitar 1 juta jiwa, dengan sekitar 500.000 di antaranya masih tinggal di Kabupaten Tana Toraja, Kabupaten Toraja Utara, dan Kabupaten Mamasa. Mayoritas suku Toraja memeluk Kekristenan, sebagian masih menganut agama asli Aluk To Dolo, dan sebagian lagi menganut Islam.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/C%C3%A9l%C3%A8bes_6543a.jpg",
+      "berkas": "File:Célèbes 6543a.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "veton.picq.fr, CC BY-SA 3.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Toraja (Toraja-Sa'dan)",
+    "warisan": [
+      {
+        "nama": "Tongkonan",
+        "deskripsi": "Rumah adat Toraja dengan estetika struktur bawah-tengah-atas yang khas.",
+        "sumber": "id.wikipedia: Tongkonan"
+      },
+      {
+        "nama": "Rambu Solo'",
+        "deskripsi": "Upacara pemakaman ajaran Aluk Todolo dengan kurban kerbau untuk menghormati yang meninggal.",
+        "sumber": "id.wikipedia: Rambu Solo'"
+      }
+    ]
+  },
+  {
+    "id": "suku-sasak",
+    "nama": "Suku Sasak",
+    "wilayah": "Pulau Lombok, Nusa Tenggara Barat",
+    "pulau": "bali_nusa",
+    "koordinat": [
+      -8.65,
+      116.32
+    ],
+    "wikipedia": {
+      "judul": "Suku Sasak",
+      "url": "https://id.wikipedia.org/wiki/Suku_Sasak"
+    },
+    "ringkas": "Suku Sasak adalah suatu kelompok etnis yang mendiami pulau Lombok dan menggunakan bahasa Sasak. Sebagian besar suku Sasak beragama Islam, uniknya pada sebagian kecil masyarakat suku Sasak, terdapat praktik agama Islam yang agak berbeda dengan Islam pada umumnya yakni Islam Wetu Telu, tetapi hanya berjumlah sekitar 1% yang melakukan praktik ibadah seperti itu.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Pulih_Tuturan.jpg",
+      "berkas": "File:Pulih Tuturan.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Fiyan Zaki, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Sasak",
+    "warisan": [
+      {
+        "nama": "Peresean",
+        "deskripsi": "Pertarungan tongkat rotan berperisai kulit kerbau antara para pepadu, bagian seni tari Lombok.",
+        "sumber": "id.wikipedia: Peresean"
+      },
+      {
+        "nama": "Bau Nyale",
+        "deskripsi": "Pesta menangkap cacing laut nyale di pantai selatan Lombok sekitar Februari–Maret.",
+        "sumber": "id.wikipedia: Bau Nyale"
+      }
+    ]
+  },
+  {
+    "id": "suku-betawi",
+    "nama": "Suku Betawi",
+    "wilayah": "Jakarta dan sekitarnya",
+    "pulau": "jawa",
+    "koordinat": [
+      -6.2,
+      106.82
+    ],
+    "wikipedia": {
+      "judul": "Suku Betawi",
+      "url": "https://id.wikipedia.org/wiki/Suku_Betawi",
+      "en_fallback": "Betawi people"
+    },
+    "ringkas": "Suku Betawi adalah kelompok etnis Austronesia yang merupakan penduduk asli kota Jakarta dan sekitarnya. Kemunculan istilah \"Betawi\" pertama kali pada abad ke-17 sebagai suatu komunitas masyarakat dari berbagai etnis Nusantara yang datang dan menetap di Batavia.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Betawi_wedding.jpg",
+      "berkas": "File:Betawi wedding.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Yulivan S. Saaba, CC BY-SA 3.0, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Melayu dialek Betawi",
+    "warisan": [
+      {
+        "nama": "Ondel-ondel",
+        "deskripsi": "Boneka raksasa pertunjukan rakyat, perlambang leluhur penjaga kampung.",
+        "sumber": "id.wikipedia: Ondel-ondel"
+      },
+      {
+        "nama": "Lenong",
+        "deskripsi": "Teater rakyat berdialek Betawi yang diiringi musik gambang kromong.",
+        "sumber": "id.wikipedia: Lenong"
+      }
+    ]
+  },
+  {
+    "id": "suku-ambon",
+    "nama": "Suku Ambon",
+    "wilayah": "Maluku Tengah — Pulau Ambon, Kepulauan Lease, pesisir Seram, Maluku",
+    "pulau": "maluku",
+    "koordinat": [
+      -3.7,
+      128.17
+    ],
+    "wikipedia": {
+      "judul": "Suku Ambon",
+      "url": "https://id.wikipedia.org/wiki/Suku_Ambon"
+    },
+    "ringkas": "Suku Ambon adalah sebuah kelompok etnis dengan ras campuran Austronesia-Polinesia yang mendiami Kepulauan Maluku bagian tengah. Suku Ambon adalah kelompok etnis terbesar di Provinsi Maluku, daerah huni Suku Ambon meliputi pulau Ambon, pulau Ambalau, kepulauan Lease, serta pulau Seram dan pulau pulau kecil disekitarnya. Suku ini menuturkan Bahasa Melayu Ambon untuk percakapan sehari hari, dan Bahasa Tanah atau bahasa asli dengan berbagai dialek, seperti dialek Hatuhaha, Saparua, Hitu, Laha, Iha, Buano, Ambalau dan lain lain, keduanya termasuk dalam Rumpun Bahasa Austronesia.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Pakaian_Adat_Pengantin_Ambon.jpg",
+      "berkas": "File:Pakaian Adat Pengantin Ambon.jpg",
+      "lisensi": "Domain publik",
+      "atribusi": "Pengarang tak dikenal, domain publik, via Wikimedia Commons"
+    },
+    "bahasa": "Bahasa Melayu Ambon; bahasa-bahasa tanah (Austronesia)",
+    "warisan": [
+      {
+        "nama": "Cakalele",
+        "deskripsi": "Tarian perang tradisional Maluku untuk menyambut tamu dan perayaan adat.",
+        "sumber": "id.wikipedia: Cakalele"
+      },
+      {
+        "nama": "Pela",
+        "deskripsi": "Pakta persekutuan antarnegeri (desa) di Maluku bagian tengah.",
+        "sumber": "id.wikipedia: Pela"
+      }
+    ]
+  }
+]
