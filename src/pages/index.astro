@@ -15,7 +15,7 @@ import AlmanakSains from '../islands/AlmanakSains.svelte';
 import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
 import PetaPiksel from '../islands/PetaPiksel.svelte';
-import SembilanPuluh from '../islands/SembilanPuluh.svelte';
+import TenggatStrip from '../islands/TenggatStrip.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import PetaRupa from '../islands/PetaRupa.svelte';
@@ -31,8 +31,6 @@ import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
 import GarisStart from '../islands/GarisStart.svelte';
 import DuaGaris from '../islands/DuaGaris.svelte';
-import JanjiCair from '../islands/JanjiCair.svelte';
-import SisaAlam from '../islands/SisaAlam.svelte';
 import RupiahIHSG from '../islands/RupiahIHSG.svelte';
 import JciVsPeers from '../islands/JciVsPeers.svelte';
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
@@ -282,7 +280,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </section>
 
-        <SembilanPuluh client:visible />
+        <TenggatStrip client:visible />
 
         <!-- ╌╌ GERAK I · LIMA CABANG KEKUASAAN ╌╌ -->
         <div class="gerak" data-rise>
@@ -628,7 +626,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · SUMBER DAYA ALAM</span>
               <h2 class="bab-tajuk display">Sumber Daya Alam</h2>
-              <p class="bab-dek">Di luar cabang kekuasaan: tanah, udara, dan hayati yang menanggung pertumbuhan. Dokumen berdampingan, pembaca menyimpulkan.</p>
+              <p class="bab-dek">Tanah yang menanggung pertumbuhan: hutan yang ditebang, dan — menyusul — siapa yang tergusur karenanya. Dokumen berdampingan, pembaca menyimpulkan.</p>
             </div>
           </header>
 
@@ -648,32 +646,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             />
           </div>
 
-          <div class="lingk-sub bab-sub" id="udara">
-            <PetaPiksel
-              client:visible
-              judul="Riwayat Udara Jakarta"
-              dek="Satu piksel per hari sejak 2018; udara hari ini terbaca di Peta Kabar. PM2,5 harian dibanding ambang WHO (5 µg/m³); musim kemarau menyala tiap tahun. Garis emas: hari ini."
-              satuan="µg/m³"
-              sumber="waqi/iqair · (data contoh)"
-              tahunMulai={2018}
-              seed="udara-jakarta-harian"
-              puncak={150}
-              tren={0.015}
-              dasar={36}
-              goyang={0.5}
-            />
-          </div>
-
+          <!-- retired from this chapter (2026-07-03, §13.15): Riwayat Udara
+               Jakarta (the MAP owns live air quality — chip below), Janji yang
+               Belum Cair (JETP now a buku besar row), Sisa di Alam Liar (the
+               Daftar Merah in Act III owns species). The chapter keeps its
+               accountability core: the land being cut, and — next wave — the
+               people displaced by it. -->
           <div class="lingk-sub bab-sub">
-            <h3 class="bab-subjudul display">Janji yang Belum Cair</h3>
-            <p class="bab-kalimat fig">Uang transisi energi yang dijanjikan dunia, dan batu bara yang tetap dibangun untuk menambang nikelnya.</p>
-            <JanjiCair client:visible />
-          </div>
-
-          <div class="lingk-sub bab-sub">
-            <h3 class="bab-subjudul display">Sisa di Alam Liar</h3>
-            <p class="bab-kalimat fig">Indonesia memimpin dunia dalam jumlah mamalia terancam punah. Inilah yang tersisa dari empat yang paling dekat dengan garis akhir.</p>
-            <SisaAlam client:visible />
+            <p class="bab-kalimat fig">Kualitas udara kota-kota hari ini, PM2,5 dan peringkatnya, terbaca langsung di lapisan udara Peta Kabar.</p>
+            <button class="chip" data-buka-peta="udara"><span class="tick">◌</span>BUKA DI PETA · LAPISAN UDARA</button>
           </div>
         </section>
 

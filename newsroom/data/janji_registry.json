@@ -150,6 +150,21 @@
     "status": "TERCAPAI"
   },
   {
+    "id": "jetp-cair",
+    "teks": "Pendanaan transisi energi JETP: US$21,6 miliar dijanjikan negara-negara maju pada 2022; Amerika Serikat menarik diri pada 2025.",
+    "sumber": "JETP Indonesia · Comprehensive Investment and Policy Plan",
+    "sumber_url": "https://jetp-id.org/",
+    "target": "US$21,6 miliar · tanpa tenggat terpublikasi",
+    "target_angka": 21.6,
+    "tenggat": null,
+    "arah": "naik",
+    "realisasi": "belum ada rekap pencairan resmi yang terverifikasi redaksi",
+    "realisasi_angka": null,
+    "realisasi_sumber": "angka pencairan beredar (±US$3,3 M, IEEFA feb 2026) belum diverifikasi ke dokumen sumber",
+    "realisasi_tanggal": null,
+    "status": "DATA TIDAK TERSEDIA"
+  },
+  {
     "id": "hutan-12jt-ha",
     "teks": "Rehabilitasi 12 juta hektare lahan kritis (ikrar di forum PBB; Kemenhut menyebut 12,7 juta ha).",
     "sumber": "Kemenhut, penanaman serentak 31 provinsi, nov 2025",

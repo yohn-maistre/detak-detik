@@ -1324,6 +1324,34 @@ Banked verbatim, with first-take seeds to expand when we arrive:
    they now live. NEEDS a verification scout before building — the
    displacement numbers are the most sensitive figures in the paper.
 
+### 13.16 INGATAN REDAKSI — the 7-day memory (architected 2026-07-03, builds after Acts 2+3 close)
+
+Yose's ask: agents should remember the past week, "kinda like a diff".
+The answer that fits our laws: **memory = published artifacts, diffed** —
+never embeddings, never a store the reader can't audit.
+
+1. **ARSIP (the store)**: every published edition ALSO lands in the repo —
+   the Actions run commits `arsip/edisi-{n}.json` after POST /edisi. The
+   paper's own history becomes its memory: versioned, diffable, citable,
+   free. Keep the last 14 hot (7 days × 2 editions); prune older to
+   monthly snapshots. (This also unlocks lemari-ide arsip permalinks.)
+2. **THE DIFF (`newsroom/memory.py`)**: each run loads the window and
+   computes one structured INGATAN artifact:
+   - `cerita`: today's kliping clusters fingerprint-matched against the
+     window (the _serumpun token machinery, reused) → BARU / BERLANJUT
+     (with first-seen date + n editions covered) / MATI (coverage decay:
+     stories that vanished — itself a finding).
+   - `angka`: deltas on angka_edisi, pasar, and any janji status change
+     (the ledger self-audit log feeds straight in).
+   - Compact block rides the edisi payload (`Edisi.ingatan`).
+3. **CONSUMERS**: SARI + tulisan writers receive ingatan as context
+   ("this continues Tuesday's story — say so"); Aksara answers "apa yang
+   berubah minggu ini" from it; the READER-facing face is the YANG
+   BERUBAH strip (lemari ide №3) — same artifact, three audiences.
+4. **Laws hold**: deterministic (same window → same diff), every memory
+   line traces to a published edition (citation-or-silence), local-first
+   untouched. Memory the reader can open and check.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
