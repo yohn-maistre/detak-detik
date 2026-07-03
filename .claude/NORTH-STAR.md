@@ -1281,6 +1281,49 @@ region rotation + PULAU RAKSASA + EKSPEDISI → 8g TULISAN renderer +
 inaugural essay + act token sweep. Yose reviews content batches between
 sub-waves; each ends build → deploy → screenshots.
 
+### 13.15 ACT II POLISH ROUND 2 (Yose 2026-07-03 — AFTER Act 3 completes)
+
+Banked verbatim, with first-take seeds to expand when we arrive:
+1. **SembilanPuluh ("90") — "useless now"**: audit → likely retire or
+   repurpose its slot. Seed: its countdown grammar could become the
+   TENGGAT strip — nearest janji deadlines counting down (the ledger
+   already knows them). One instrument, real data, no new form.
+2. **Branches of power = "numbers sprinkled" → ONE bespoke scorecard**:
+   healthy-vs-sick drawn by JUXTAPOSITION, not adjectives. Seeds per
+   branch (pick per §13.1: form = the data's own logic):
+   - shared grammar: every branch metric gets a **KISARAN SEHAT band**
+     (the harga-cabai wajar treatment / speedometer red zone): a shaded
+     normal zone + the needle where the branch sits + a faint
+     10-year-ago tick for historical drift. One drawing, three honesty
+     layers (now / normal / then).
+   - eksekutif: kabinet size vs post-1966 median band; perpres rate.
+   - legislatif: RUU throughput vs Prolegnas target band; the log-ruler
+     stays (durations); kehadiran vs quorum line.
+   - yudikatif: asset recovery % vs regional peers band; clearance rate.
+   - aparat: criminal-vs-ethics funnel against a "rule of law" line
+     (peer democracies); anggaran share vs 10yr median.
+   - daerah: pegawai% national line ALREADY REAL (djpk) — extend with
+     WTP opinion share trend. The scorecard reads like a doctor's chart:
+     five vitals, each with its normal range printed.
+3. **Riwayat Udara Jakarta — Jakarta-centric, "useless for everyone
+   else"**: retire from Act 2. Seed: air quality is already a MAP layer
+   (udara); if a chapter needs it, BUKA DI PETA chip. The slot goes to
+   the new ALAM focus (below).
+4. **JanjiCair (JETP) → folds into the janji LEDGER** as a registry row
+   (target: US$21,6 M committed; terukur: disbursed; the dumbbell +
+   DATA TIDAK TERSEDIA machinery already handles it). Kill the
+   standalone dramatic card — tone law.
+5. **ALAM refocus — deforestation + displaced people** (Yose: flora/
+   fauna belongs to Act 3): Act 2's SDA chapter becomes extraction
+   accountability: hutan loss (GFW/Hansen keyless tiles or annual
+   stats), sawit/tambang concession overlap with adat territory
+   (WRI/AMAN sources to verify), **displaced-communities counter with
+   named receipts** (citation-heavy — needs a careful source scout:
+   Komnas HAM, AMAN, WALHI annual reports), obituari hutan already
+   closes the act. Flora/fauna showcases migrate to Act 3 HAYATI where
+   they now live. NEEDS a verification scout before building — the
+   displacement numbers are the most sensitive figures in the paper.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots

@@ -1,0 +1,902 @@
+[
+  {
+    "id": "badak-jawa",
+    "nama": "Badak jawa",
+    "ilmiah": "Rhinoceros sondaicus",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Taman Nasional Ujung Kulon, Banten, Jawa",
+    "pulau": "jawa",
+    "koordinat": [
+      -6.75,
+      105.35
+    ],
+    "endemik": "Kini hanya bertahan di Ujung Kulon, ujung barat Jawa.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Badak jawa",
+      "url": "https://id.wikipedia.org/wiki/Badak_jawa"
+    },
+    "ringkas": "Badak jawa, badak sunda, atau badak bercula satu kecil adalah anggota famili Rhinocerotidae dan genus Rhinoceros yang terancam kritis. Spesies ini merupakan satu dari lima spesies badak yang masih hidup di Asia Selatan dan Afrika. Hewan ini memiliki kulit yang tampak seperti lempeng baju zirah dengan lipatan-lipatan pelindung dan merupakan salah satu spesies badak terkecil dengan panjang tubuh 31–32 m (102–105 ft) dan tinggi 14–17 m (46–56 ft). Spesimen terberat memiliki bobot sekitar 2.300 kg (5.100 pon). Culanya biasanya lebih pendek dari 25 cm (9,8 in).",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Rhinoceros_sondaicus_in_London_Zoo.jpg",
+      "berkas": "File:Rhinoceros_sondaicus_in_London_Zoo.jpg",
+      "lisensi": "Public domain",
+      "atribusi": "T.Dixon. The Zoological Society of London, Public domain, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "badak-sumatra",
+    "nama": "Badak sumatra",
+    "ilmiah": "Dicerorhinus sumatrensis",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sumatra dan Kalimantan",
+    "pulau": "sumatra",
+    "koordinat": [
+      0.5,
+      101.5
+    ],
+    "endemik": "Badak berbulu terkecil yang tersisa, terbatas di hutan Sumatra dan Kalimantan.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Badak sumatra",
+      "url": "https://id.wikipedia.org/wiki/Badak_sumatra"
+    },
+    "ringkas": "Badak sumatra, juga dikenal sebagai badak berambut atau badak Asia bercula dua, merupakan spesies langka dari famili Rhinocerotidae dan termasuk salah satu dari lima spesies badak yang masih lestari. Badak sumatra merupakan satu-satunya spesies yang tersisa dari genus Dicerorhinus. Spesies ini merupakan jenis badak terkecil, meskipun masih tergolong hewan mamalia yang besar. Tingginya 112-145 cm sampai pundak, dengan panjang keseluruhan tubuh dan kepala 2,36-3,18 m, serta panjang ekor 35–70 cm. Beratnya dilaporkan berkisar antara 500 sampai 1.000 kg, dengan rata-rata 700–800 kg, meskipun sebuah catatan melaporkan mengenai seekor spesimen dengan berat 2.000 kg.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Sumatran_Rhino_2.jpg",
+      "berkas": "File:Sumatran_Rhino_2.jpg",
+      "lisensi": "CC BY 2.0",
+      "atribusi": "Charles W. Hardin, CC BY 2.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "harimau-sumatra",
+    "nama": "Harimau sumatra",
+    "ilmiah": "Panthera tigris sumatrae",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pulau Sumatra",
+    "pulau": "sumatra",
+    "koordinat": [
+      -0.5,
+      101.5
+    ],
+    "endemik": "Subspesies harimau terakhir Indonesia; endemik Sumatra.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Harimau sumatra",
+      "url": "https://id.wikipedia.org/wiki/Harimau_sumatra"
+    },
+    "ringkas": "Harimau sumatra adalah populasi Panthera tigris sondaica yang mendiami pulau Sumatra, Indonesia dan satu-satunya anggota subspesies harimau sunda yang masih bertahan hidup hingga saat ini. Ia termasuk dalam klasifikasi satwa kritis yang terancam punah dalam daftar merah spesies terancam yang dirilis Lembaga Konservasi Dunia IUCN. Populasi liar diperkirakan antara 400-500 ekor, terutama hidup di Pegunungan Bukit Barisan jama sejarah taman-taman nasional di Sumatra jaman pra-sejarah. Uji genetik mutakhir telah mengungkapkan tanda-tanda genetik yang unik, yang menandakan bahwa subspesies ini mungkin berkembang menjadi spesies terpisah, bila berhasil lestari.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Sumatran_Tiger_Berlin_Tierpark.jpg",
+      "berkas": "File:Sumatran_Tiger_Berlin_Tierpark.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Captain Herbert, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "orangutan-sumatra",
+    "nama": "Orangutan sumatra",
+    "ilmiah": "Pongo abelii",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sumatra bagian utara",
+    "pulau": "sumatra",
+    "koordinat": [
+      3.5,
+      97.8
+    ],
+    "endemik": "Endemik hutan utara Sumatra.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Orang utan sumatra",
+      "url": "https://id.wikipedia.org/wiki/Orang_utan_sumatra"
+    },
+    "ringkas": "Orang utan sumatra adalah spesies orang utan terlangka. Orang utan sumatra hidup dan endemik di Sumatra, sebuah pulau yang terletak di Indonesia. Tubuh mereka lebih kecil daripada orang utan kalimantan. Berat bayi orangutan mencapai sekitar 0,5 kilogram pada saat lahir. Betina dewasa mampu memiliki tinggi badan hingga 1,3 meter, dengan berat tubuh sampai 45 kg. Sedangkan orangutan jantan mampu mencapai tinggi sampai 1,8 meter dan berat badan 120 kg.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Man_of_the_woods.JPG",
+      "berkas": "File:Man_of_the_woods.JPG",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Dave59 at English Wikipedia, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "orangutan-tapanuli",
+    "nama": "Orangutan tapanuli",
+    "ilmiah": "Pongo tapanuliensis",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Ekosistem Batang Toru, Tapanuli, Sumatra Utara",
+    "pulau": "sumatra",
+    "koordinat": [
+      1.55,
+      99.05
+    ],
+    "endemik": "Kera besar paling langka di dunia, hanya di Batang Toru.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Orang utan tapanuli",
+      "url": "https://id.wikipedia.org/wiki/Orang_utan_tapanuli"
+    },
+    "ringkas": "Orang utan tapanuli atau Nihagatua dalam bahasa Nias, Maos dalam bahasa Batak Toba, Mawas dalam bahasa Angkolamerupakan salah satu spesies dari genus orang utan (Pongo) yang berasal dari daerah Tapanuli, Sumatra. Tapanuli. Orang utan tapanuli merupakan tambahan spesies baru sekaligus spesies ketiga yang ditemukan setelah spesies orang utan kalimantan dan orang utan sumatra.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Pongo_tapanuliensis.jpg",
+      "berkas": "File:Pongo_tapanuliensis.jpg",
+      "lisensi": "CC BY 4.0",
+      "atribusi": "Tim Laman, CC BY 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "orangutan-kalimantan",
+    "nama": "Orangutan kalimantan",
+    "ilmiah": "Pongo pygmaeus",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pulau Kalimantan (Borneo)",
+    "pulau": "kalimantan",
+    "koordinat": [
+      0.5,
+      113.5
+    ],
+    "endemik": "Endemik Borneo, terbagi tiga subspesies.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Orang utan kalimantan",
+      "url": "https://id.wikipedia.org/wiki/Orang_utan_kalimantan"
+    },
+    "ringkas": "Orang utan kalimantan atau juga dikenal dengan nama Kahiu adalah spesies orang utan asli pulau Kalimantan. Bersama dengan orang utan sumatra yang lebih kecil, orang utan kalimantan masuk kedalam genus pongo yang dapat ditemui di Asia. Orang utan kalimantan memiliki lama waktu hidup selama 35 sampai 40 tahun di alam liar, sedangkan di penangkaran dapat mencapai usia 60 tahun.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/OrangutanP1.jpg",
+      "berkas": "File:OrangutanP1.jpg",
+      "lisensi": "Public domain",
+      "atribusi": "Ltshears, Public domain, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "anoa",
+    "nama": "Anoa dataran rendah",
+    "ilmiah": "Bubalus depressicornis",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pulau Sulawesi",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -1.5,
+      121.0
+    ],
+    "endemik": "Kerbau kerdil endemik Sulawesi.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Anoa",
+      "url": "https://id.wikipedia.org/wiki/Anoa"
+    },
+    "ringkas": "Anoa atau kerbau kerdil adalah kerbau endemik yang hidup di daratan Pulau Sulawesi dan Pulau Buton. Banyak yang menyebut anoa sebagai kerbau kerdil. Anoa merupakan hewan yang tergolong fauna peralihan. Anoa merupakan mamalia tergolong dalam famili bovidae yang tersebar hampir di seluruh pulau Sulawesi. Kawasan Wallacea yang terdiri atas pulau Sulawesi, Maluku, Halmahera, Kepulauan Flores, dan pulaupulau kecil di Nusa Tenggara. Wilayah ini unik karena banyak memiliki flora dan fauna yang endemik dan merupakan kawasan peralihan antara benua Asia dan Australia. Salah satu kawasan yang memiliki flora dan fauna endemik Sulawesi antara lain Kawasan Poso.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Anoa_Bubalus_depressicornis_Surabaya_Zoo.jpg",
+      "berkas": "File:Anoa_Bubalus_depressicornis_Surabaya_Zoo.jpg",
+      "lisensi": "CC BY 3.0",
+      "atribusi": "Sakurai Midori, CC BY 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "babirusa",
+    "nama": "Babirusa",
+    "ilmiah": "Babyrousa celebensis",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sulawesi utara dan tengah",
+    "pulau": "sulawesi",
+    "koordinat": [
+      0.5,
+      122.5
+    ],
+    "endemik": "Babi bertaring melengkung, endemik Sulawesi.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Babi rusa",
+      "url": "https://id.wikipedia.org/wiki/Babi_rusa"
+    },
+    "ringkas": "Babi rusa (Babyrousa) adalah marga binatang yang termasuk kerabat babi liar. Hewan ini memiliki taring panjang yang mencuat dan melengkung di atas moncongnya. Babi rusa hidup berkelompok di daerah rawa-rawa dan semak-semak. Mereka aktif mencari makan pada malam hari dan beristirahat pada siang hari. Makanannya terdiri atas umbi, akar, hewan tanah, buah-buahan, dan kelapa yang jatuh. Habitat babi rusa banyak ditemukan di hutanhujan tropis. Hewan ini memakan buah-buahan dan tumbuhan seperti mangga, jamur, dan dedaunan. Mereka mencari makan pada malam hari untuk menghindari pemangsa.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Hirscheber1a.jpg",
+      "berkas": "File:Hirscheber1a.jpg",
+      "lisensi": "CC BY-SA 2.0 de",
+      "atribusi": "Masteraah at German Wikipedia, CC BY-SA 2.0 de, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "tarsius",
+    "nama": "Tarsius (tangkasi)",
+    "ilmiah": "Tarsius tarsier",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sulawesi dan pulau sekitarnya",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -1.0,
+      124.0
+    ],
+    "endemik": "Primata terkecil, mata sebesar otaknya; endemik Wallacea.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Tarsius (genus)",
+      "url": "https://id.wikipedia.org/wiki/Tarsius_(genus)"
+    },
+    "ringkas": "Tarsius adalah sebuah genus dari famili Tarsiidae, yaitu primata kecil yang berasal dari pulau-pulau di Asia Tenggara Maritim, dengan semua spesiesnya ditemukan di Pulau Sulawesi. Hingga 2010, semua spesies tarsius dimasukkan kedalam genus ini, tetapi sebuah revisi famili Tarsiidae mengembalikan status genus Cephalopachus untuk populasi di sebelah barat Pulau Sulawesi (Sundaland) dan menghasilkan sebuah genus baru, Carlito untuk populasi di Filipina.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Tarsius_sp._1.jpg",
+      "berkas": "File:Tarsius_sp._1.jpg",
+      "lisensi": "CC BY-SA 2.0",
+      "atribusi": "Lip Kee Yap, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "bekantan",
+    "nama": "Bekantan",
+    "ilmiah": "Nasalis larvatus",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Hutan bakau dan riparian Kalimantan",
+    "pulau": "kalimantan",
+    "koordinat": [
+      -2.0,
+      114.5
+    ],
+    "endemik": "Monyet berhidung panjang, endemik Borneo.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Bekantan",
+      "url": "https://id.wikipedia.org/wiki/Bekantan"
+    },
+    "ringkas": "Bekantan, kahau, kera belanda atau monyet belanda adalah jenis monyet berhidung panjang dengan rambut berwarna hitam kemerahan. Bekantan merupakan hewan endemik pulau Kalimantan yang tersebar di hutan, rawa dan hutan pantai. Ciri utama yang membedakan bekantan dari monyet lain adalah hidung panjang dan besar yang hanya ditemukan di spesies jantan. Kampung Wisata Bekantan dijadikan sebagai tempat wisata edukasi.Bekantan terdapat di Kalimantan Selatan, Timur dan Utara.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Proboscis.jpg",
+      "berkas": "File:Proboscis.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "yaki",
+    "nama": "Yaki (monyet hitam sulawesi)",
+    "ilmiah": "Macaca nigra",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sulawesi utara",
+    "pulau": "sulawesi",
+    "koordinat": [
+      1.4,
+      125.0
+    ],
+    "endemik": "Monyet berjambul hitam, endemik Sulawesi utara.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Yaki",
+      "url": "https://id.wikipedia.org/wiki/Yaki"
+    },
+    "ringkas": "Yaki atau monyet wolai atau monyet hitam Sulawesi adalah satwa endemik Indonesia yang hanya terdapat di Pulau Sulawesi bagian utara dan beberapa pulau di sekitarnya. Yaki merupakan jenis makaka terbesar di Pulau Sulawesi. Ciri khas yaki adalah seluruh tubuhnya berwarna hitam, memiliki rambut berbentuk jambul di atas kepala, serta pantat berwarna merah muda.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Crested_Black_Macaque_%28Macaca_nigra%29.jpg",
+      "berkas": "File:Crested_Black_Macaque_(Macaca_nigra).jpg",
+      "lisensi": "CC BY-SA 2.0",
+      "atribusi": "Lip Kee Yap, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "kucing-merah",
+    "nama": "Kucing merah",
+    "ilmiah": "Catopuma badia",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pedalaman Kalimantan (Borneo)",
+    "pulau": "kalimantan",
+    "koordinat": [
+      1.0,
+      114.0
+    ],
+    "endemik": "Kucing liar endemik Borneo, sangat jarang teramati.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Kucing merah",
+      "url": "https://id.wikipedia.org/wiki/Kucing_merah"
+    },
+    "ringkas": "Kucing merah, juga dikenal sebagai kucing kalimantan, kucing merah kalimantan, atau kucing batu kalimantan, adalah kucing liar endemik pulau Kalimantan yang lebih jarang ditemui dibandingkan dengan spesies kucing lain yang simpatrik, berdasarkan pada kurangnya historis serta catatan terakhir. Pada tahun 2002, Uni Internasional untuk Konservasi Alam mengklasifikasikan spesies hutan ini sebagai terancam punah karena penurunan populasi yang diperkirakan lebih dari 20% pada tahun 2020 karena hilangnya habitat. Pada tahun 2007, jumlah populasi efektif diperkirakan kurang dari 2.500 ekor kucing dewasa.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Bay_cat_1_Jim_Sanderson-cropped.jpg",
+      "berkas": "File:Bay_cat_1_Jim_Sanderson-cropped.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Bay_cat_1_Jim_Sanderson.jpg: Jim Sanderson\nderivative work: Abujoy (talk), CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "owa-jawa",
+    "nama": "Owa jawa",
+    "ilmiah": "Hylobates moloch",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Hutan Jawa bagian barat",
+    "pulau": "jawa",
+    "koordinat": [
+      -6.7,
+      106.6
+    ],
+    "endemik": "Owa kelabu endemik hutan Jawa Barat.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Owa jawa",
+      "url": "https://id.wikipedia.org/wiki/Owa_jawa"
+    },
+    "ringkas": "Owa jawa adalah sejenis primata anggota famili Hylobatidae. Dengan populasi tersisa sekitar 4.000 ekor saja, kera ini adalah spesies owa yang paling langka di dunia. Owa jawa menyebar terbatas (endemik) di pulau Jawa bagian barat dan tengah.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Owa_Jawa%2C_Sang_Pesinden_Yang_Terancam_Punah.jpg",
+      "berkas": "File:Owa_Jawa,_Sang_Pesinden_Yang_Terancam_Punah.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Ariel Afrido Muhammad, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "surili",
+    "nama": "Surili",
+    "ilmiah": "Presbytis comata",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Jawa Barat",
+    "pulau": "jawa",
+    "koordinat": [
+      -6.9,
+      107.0
+    ],
+    "endemik": "Lutung endemik Jawa Barat.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Surili",
+      "url": "https://id.wikipedia.org/wiki/Surili"
+    },
+    "ringkas": "Surili adalah sebuah genus monyet Dunia Lama dan membuat genus Presbytis. Mereka hidup di bagian selatan semenanjung Malaya, di Sumatra, Borneo, Jawa, dan pulau kecil di sekitarnya. Umumnya warna tubuh Surili dewasa mulai dari kepala sampai bagian punggung hitam atau coklat dan keabuan, sedangkan warna rambut jambul dan kepala berwarna hitam. Rambut yang tumbuh di bawah dagu, dada dan perut, bagian dalam lengan kaki dan ekor, berwarna putih. Warna kulit muka dan telinga hitam pekat agak kemerahan. Anak yang baru lahir berwarna putih dan memiliki garis hitam mulai dari kepala hingga bagian ekor.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Presbytiscom.jpg",
+      "berkas": "File:Presbytiscom.jpg",
+      "lisensi": "Public domain",
+      "atribusi": "The original uploader was Lkdenison at English Wikipedia., Public domain, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "macan-tutul-jawa",
+    "nama": "Macan tutul jawa",
+    "ilmiah": "Panthera pardus melas",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pulau Jawa",
+    "pulau": "jawa",
+    "koordinat": [
+      -7.3,
+      110.0
+    ],
+    "endemik": "Karnivora besar terakhir Jawa; subspesies endemik.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Macan tutul jawa",
+      "url": "https://id.wikipedia.org/wiki/Macan_tutul_jawa"
+    },
+    "ringkas": "Macan tutul jawa adalah salah satu subspesies dari macan tutul yang hanya ditemukan di hutan tropis, pegunungan dan kawasan konservasi Pulau Jawa. Macan tutul jawa adalah satwa endemik Provinsi Jawa Barat, Jawa Tengah dan Jawa Timur, dan merupakan satu-satunya kucing besar yang masih tersisa di pulau Jawa.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Levhart_j%C3%A1vsk%C3%BD_v_Zoo_Praha_002.jpg/3840px-Levhart_j%C3%A1vsk%C3%BD_v_Zoo_Praha_002.jpg",
+      "berkas": "File:Levhart_jávský_v_Zoo_Praha_002.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Vachovec1, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "maleo",
+    "nama": "Maleo",
+    "ilmiah": "Macrocephalon maleo",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Sulawesi",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -1.0,
+      120.0
+    ],
+    "endemik": "Burung gosong endemik Sulawesi; menetaskan telur dengan panas bumi.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Maleo",
+      "url": "https://id.wikipedia.org/wiki/Maleo"
+    },
+    "ringkas": "Maleo atau kalkun sikat awalnya merujuk pada burung dengan nama ilmiah Macrocephalon maleo, yang lebih dikenal sebagai maleo senkawor. Namun, nama maleo kini juga digunakan untuk menyebut berbagai burung megapoda dari empat genus Macrocephalon, Alectura, Aepypodius, dan Talegalla karena memiliki kemiripan morfologi.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Wattled_Brush-turkey_%28Aepypodius_arfakianus%29_%287937162662%29_%28cropped%29.jpg",
+      "berkas": "File:Wattled_Brush-turkey_(Aepypodius_arfakianus)_(7937162662)_(cropped).jpg",
+      "lisensi": "CC BY-SA 2.0",
+      "atribusi": "Bernard DUPONT from FRANCE, CC BY-SA 2.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "jalak-bali",
+    "nama": "Jalak bali",
+    "ilmiah": "Leucopsar rothschildi",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Bali bagian barat",
+    "pulau": "bali_nusa",
+    "koordinat": [
+      -8.15,
+      114.5
+    ],
+    "endemik": "Endemik Bali barat, satwa identitas provinsi Bali.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Jalak bali",
+      "url": "https://id.wikipedia.org/wiki/Jalak_bali"
+    },
+    "ringkas": "Jalak Bali (Leucopsar rothschildi) adalah sejenis burung pengicau berukuran sedang, dengan panjang lebih kurang 25 cm, dari suku Sturnidae. Ia turut dikenali sebagai Curik Ketimbang Jalak. Jalak Bali hanya ditemukan di hutan bagian barat Pulau Bali dan merupakan hewan endemik Indonesia. Burung ini juga merupakan satu-satunya spesies endemik Bali dan pada tahun 1991 dinobatkan sebagai lambang fauna Provinsi Bali.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bali_Myna_0A2A9443.jpg/3840px-Bali_Myna_0A2A9443.jpg",
+      "berkas": "File:Bali_Myna_0A2A9443.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "JJ Harrison, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "cendrawasih-merah",
+    "nama": "Cendrawasih merah",
+    "ilmiah": "Paradisaea rubra",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Kepulauan Raja Ampat, Papua Barat Daya",
+    "pulau": "papua",
+    "koordinat": [
+      -0.4,
+      130.7
+    ],
+    "endemik": "Endemik Raja Ampat (Waigeo, Batanta, Gam).",
+    "status": {
+      "kode": "NT",
+      "label": "Hampir Terancam",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Cenderawasih merah",
+      "url": "https://id.wikipedia.org/wiki/Cenderawasih_merah"
+    },
+    "ringkas": "Cenderawasih merah adalah spesies burung dari marga Paradisaea yang berukuran sedang dengan panjang sekitar 33 cm. Burung ini merupakan burung pengicau dengan warna kulit kuning dan coklat, serta berparuh kuning.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Stavenn_Paradisaea_rubra_00.jpg",
+      "berkas": "File:Stavenn_Paradisaea_rubra_00.jpg",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "No machine-readable author provided. Stavenn assumed (based on copyright claims)., CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "kakatua-jambul-kuning",
+    "nama": "Kakatua-kecil jambul-kuning",
+    "ilmiah": "Cacatua sulphurea",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Nusa Tenggara, Sulawesi, dan Timor",
+    "pulau": "bali_nusa",
+    "koordinat": [
+      -8.5,
+      120.0
+    ],
+    "endemik": "Kakatua endemik Wallacea, ditangkap besar-besaran untuk perdagangan.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Kakatua kecil jambul-kuning",
+      "url": "https://id.wikipedia.org/wiki/Kakatua_kecil_jambul-kuning"
+    },
+    "ringkas": "Kakatua kecil jambul-kuning atau kakatua jambul-kuning (Cacatua sulphurea) adalah burung berukuran sedang, dengan panjang sekitar 35 cm, dari marga Cacatua. Burung ini hampir semua bulunya berwarna putih. Di kepalanya terdapat jambul berwarna kuning yang dapat ditegakkan. Kakatua-kecil jambul-kuning berparuh hitam, kulit di sekitar matanya berwarna kebiruan dan kakinya berwarna abu-abu. Bulu-bulu terbang dan ekornya juga berwarna kuning. Burung betina serupa dengan burung jantan. Hanya saja burung betina memiliki paruh yang lebih pendek dan mata yang sedikit kemerahan.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gelbwangenkakadu_8559.jpg",
+      "berkas": "File:Gelbwangenkakadu_8559.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "J. Patrick Fischer, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "komodo",
+    "nama": "Komodo",
+    "ilmiah": "Varanus komodoensis",
+    "takson": "fauna",
+    "kelompok": "reptil",
+    "wilayah": "Komodo, Rinca, Flores, Nusa Tenggara Timur",
+    "pulau": "bali_nusa",
+    "koordinat": [
+      -8.55,
+      119.5
+    ],
+    "endemik": "Kadal terbesar di dunia, endemik NTT.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Komodo",
+      "url": "https://id.wikipedia.org/wiki/Komodo"
+    },
+    "ringkas": "Komodo atau lengkapnya biawak komodo, adalah spesies biawak besar yang terdapat di Pulau Komodo, Rinca, Flores, Gili Motang, dan Gili Dasami di Provinsi Nusa Tenggara Timur, Indonesia. Penduduk asli pulau Komodo juga menyebut hewan ini dengan nama setempat ora. Nama lain dari komodo adalah buaya darat, walaupun komodo bukanlah spesies buaya.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Komodo_dragon_%28Varanus_komodoensis%29_4.jpg/3840px-Komodo_dragon_%28Varanus_komodoensis%29_4.jpg",
+      "berkas": "File:Komodo_dragon_(Varanus_komodoensis)_4.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "ikan-raja-laut",
+    "nama": "Ikan raja laut",
+    "ilmiah": "Latimeria menadoensis",
+    "takson": "fauna",
+    "kelompok": "ikan",
+    "wilayah": "Perairan dalam Sulawesi utara (Manado)",
+    "pulau": "sulawesi",
+    "koordinat": [
+      1.5,
+      124.8
+    ],
+    "endemik": "Coelacanth Sulawesi, 'fosil hidup' endemik perairan Manado.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Coelacanth",
+      "url": "https://id.wikipedia.org/wiki/Coelacanth"
+    },
+    "ringkas": "Coelacanth adalah kelompok ikan bersirip lobus purba (Sarcopterygii) dalam kelas Actinistia. Sebagai sarcopterygian, mereka lebih berkerabat dekat dengan ikan paru-paru dan tetrapoda dibandingkan dengan ikan bersirip pari.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Coelacanth_off_Pumula_on_the_KwaZulu-Natal_South_Coast%2C_South_Africa%2C_on_22_November_2019.png",
+      "berkas": "File:Coelacanth_off_Pumula_on_the_KwaZulu-Natal_South_Coast,_South_Africa,_on_22_November_2019.png",
+      "lisensi": "CC BY 4.0",
+      "atribusi": "Bruce A.S. Henderson, CC BY 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "rangkong-gading",
+    "nama": "Rangkong gading",
+    "ilmiah": "Rhinoplax vigil",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Hutan Sumatra dan Kalimantan",
+    "pulau": "sumatra",
+    "koordinat": [
+      -1.0,
+      102.0
+    ],
+    "endemik": "Enggang berbalung padat, diburu untuk 'gading merah'.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Rangkong gading",
+      "url": "https://id.wikipedia.org/wiki/Rangkong_gading"
+    },
+    "ringkas": "Rangkong gading atau enggang gading (Rhinoplax vigil) adalah burung berukuran besar dari famili Bucerotidae.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Buceros-vigil-bvk.JPG",
+      "berkas": "File:Buceros-vigil-bvk.JPG",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Hydrocorax, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "rafflesia-arnoldii",
+    "nama": "Rafflesia arnoldii",
+    "ilmiah": "Rafflesia arnoldii",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Hutan Sumatra dan Kalimantan barat daya",
+    "pulau": "sumatra",
+    "koordinat": [
+      -3.5,
+      102.3
+    ],
+    "endemik": "Padma raksasa, bunga tunggal terbesar di dunia; puspa langka nasional.",
+    "status": {
+      "kode": "NE",
+      "label": "Belum Dinilai",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Padma raksasa",
+      "url": "https://id.wikipedia.org/wiki/Padma_raksasa"
+    },
+    "ringkas": "Padma raksasa (bahasa Latin: Rafflesia arnoldii) adalah tumbuhan parasit obligat yang terkenal karena memiliki bunga berukuran sangat besar, bahkan merupakan bunga terbesar di dunia. Sementara itu, di Kecamatan Pandam Gadang, bunga ini disebut cendawan biriang dalam bahasa Minangkabau. Bunga ini memiliki wangi yang kuat dan menyerupai bau bangkai sehingga masyarakat lokal sering menyebutnya sebagai bunga bangkai. Bunga Rafflesia dikatakan bunga yang unik karena hanya berupa bunga mekar tanpa daun, akar dan tidak memiliki batang. Rafflesia memiliki jaringan yang mirip seperti fungsi akar yang disebut haustarium.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Rafflesia_Arnoldii_Batang_Palupuah_Indonesia.jpg",
+      "berkas": "File:Rafflesia_Arnoldii_Batang_Palupuah_Indonesia.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "Maizal Chaniago, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "bunga-bangkai",
+    "nama": "Bunga bangkai raksasa",
+    "ilmiah": "Amorphophallus titanum",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Hutan hujan Sumatra",
+    "pulau": "sumatra",
+    "koordinat": [
+      -2.0,
+      101.5
+    ],
+    "endemik": "Perbungaan tak bercabang tertinggi di dunia; endemik Sumatra.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Bunga bangkai raksasa",
+      "url": "https://id.wikipedia.org/wiki/Bunga_bangkai_raksasa"
+    },
+    "ringkas": "Bunga bangkai raksasa (Amorphophallus titanum Becc.) adalah tumbuhan dari famili talas-talasan (Araceae) endemik dari daerah hutan tropis dan eksokarst, khususnya di wilayah Sumatra, Indonesia. Bunga ini dikenal sebagai tumbuhan dengan bunga majemuk terbesar di dunia, meskipun catatan menyebutkan bahwa kerabatnya, A. gigas dapat menghasilkan bunga setinggi 5 m. Kibut atau Karabut disebut juga sebagai bunga bangkai, yang disebabkan oleh bunganya yang dapat mengeluarkan bau seperti bangkai yang membusuk. Hal ini berfungsi untuk mengundang kumbang dan lalat untuk menyerbuki bunganya.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Titan-arum1web.jpg",
+      "berkas": "File:Titan-arum1web.jpg",
+      "lisensi": "Public domain",
+      "atribusi": "Credits: US Botanic Garden., Public domain, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "anggrek-hitam",
+    "nama": "Anggrek hitam",
+    "ilmiah": "Coelogyne pandurata",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Kalimantan dan Sumatra",
+    "pulau": "kalimantan",
+    "koordinat": [
+      0.0,
+      114.0
+    ],
+    "endemik": "Anggrek berlidah hitam, maskot flora Kalimantan Timur.",
+    "status": {
+      "kode": "NE",
+      "label": "Belum Dinilai",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Anggrek hitam",
+      "url": "https://id.wikipedia.org/wiki/Anggrek_hitam"
+    },
+    "ringkas": "Anggrek Hitam adalah spesies anggrek yang tumbuh di Semenanjung Malaya, Kalimantan, dan Sumatra. Angrek hitam adalah maskot flora Provinsi Kalimantan Timur. Saat ini,populasi Anggrek Hitam mengalami penurunan jumlah yang cukup besar, karena habitatnya semakin menyusut, seiring dengan areal hutan di Kalimantan makin sedikit.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Coelogyne_pandurata_orchid_%2849375109546%29.jpg/3840px-Coelogyne_pandurata_orchid_%2849375109546%29.jpg",
+      "berkas": "File:Coelogyne_pandurata_orchid_(49375109546).jpg",
+      "lisensi": "CC BY 2.0",
+      "atribusi": "geoff mckay from Palmerston North, New Zealand, CC BY 2.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "edelweis-jawa",
+    "nama": "Edelweis jawa",
+    "ilmiah": "Anaphalis javanica",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Padang tinggi pegunungan Jawa",
+    "pulau": "jawa",
+    "koordinat": [
+      -7.9,
+      112.9
+    ],
+    "endemik": "'Bunga abadi' endemik puncak gunung Jawa.",
+    "status": {
+      "kode": "NE",
+      "label": "Belum Dinilai",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Anaphalis javanica",
+      "url": "https://id.wikipedia.org/wiki/Anaphalis_javanica"
+    },
+    "ringkas": "Anaphalis javanica, yang dikenal sebagai Edelweis jawa atau Bunga Senduro, adalah tumbuhan endemik zona alpina/montana di berbagai pegunungan tinggi di Indonesia yang saat ini dikategorikan sebagai tumbuhan langka. Tumbuhan ini dapat mencapai ketinggian 8 meter dan dapat memiliki batang sebesar kaki manusia, walaupun pada umumnya tidak melebihi 1 meter.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Bunga_Senduro.JPG",
+      "berkas": "File:Bunga_Senduro.JPG",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Imron Fauzi, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "nepenthes-aristolochioides",
+    "nama": "Kantong semar",
+    "ilmiah": "Nepenthes aristolochioides",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Dataran tinggi Sumatra (Jambi)",
+    "pulau": "sumatra",
+    "koordinat": [
+      -1.7,
+      101.3
+    ],
+    "endemik": "Kantong semar berkantong unik, endemik pegunungan Sumatra.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Nepenthes aristolochioides",
+      "url": "https://id.wikipedia.org/wiki/Nepenthes_aristolochioides"
+    },
+    "ringkas": "Nepenthes aristolochioides adalah kantong semar endemik Sumatra, tempat di mana tanaman ini tumbuh pada ketinggian 1800–2500 m di atas permukaan laut. Tanaman ini memiliki bentuk yang sangat aneh dibanding biasanya, dengan pembukaan yang hampir vertikal pada kantong penjebaknya.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Nepenthes_aristolochioides_upper_pitcher.jpg",
+      "berkas": "File:Nepenthes_aristolochioides_upper_pitcher.jpg",
+      "lisensi": "CC BY 3.0 cz",
+      "atribusi": "Jaroslav Neubauer, CC BY 3.0 cz, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "ulin",
+    "nama": "Ulin (kayu besi)",
+    "ilmiah": "Eusideroxylon zwageri",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Kalimantan dan Sumatra",
+    "pulau": "kalimantan",
+    "koordinat": [
+      0.0,
+      115.0
+    ],
+    "endemik": "Kayu besi Borneo, kayu terkeras dan tahan lama.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Ulin",
+      "url": "https://id.wikipedia.org/wiki/Ulin"
+    },
+    "ringkas": "Ulin atau disebut juga dengan bulian atau kayu besi adalah pohon berkayu dan merupakan tanaman khas Asia Tenggara meliputi Indonesia, Malaysia, Filipina. Ulin digolongkan ke dalam suku Lauraceae. Ulin memiliki tinggi pohon umumnya 30–35 m, diameter setinggi dada (DBH) 60–120 cm. Batang lurus berbanir, tajuk berbentuk bulat dan rapat serta memiliki percabangan yang mendatar.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Eusideroxylon_zwageri.JPG",
+      "berkas": "File:Eusideroxylon_zwageri.JPG",
+      "lisensi": "Public domain",
+      "atribusi": "Patrice78500, Public domain, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "anggrek-tebu",
+    "nama": "Anggrek tebu",
+    "ilmiah": "Grammatophyllum speciosum",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Hutan dataran rendah Nusantara",
+    "pulau": "sumatra",
+    "koordinat": [
+      -2.0,
+      104.0
+    ],
+    "endemik": "Anggrek raksasa, jenis anggrek terbesar dan terberat di dunia.",
+    "status": {
+      "kode": "NE",
+      "label": "Belum Dinilai",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Anggrek tebu",
+      "url": "https://id.wikipedia.org/wiki/Anggrek_tebu"
+    },
+    "ringkas": "Anggrek tebu, juga disebut Anggrek raksasa, Anggrek harimau, Anggrek tebu atau Ratu anggrek, adalah anggrek terbesar didunia yang merupakan spesies anggrek asli Laos, Myanmar, Thailand, Vietnam, Kalimantan, Indonesia dan Malaysia. Dan telah tercatat di Filipina, New Guinea maupun Kepulauan Solomon. Anggrek tebu terdaftar oleh Guinness Book of World Records sebagai anggrek tertinggi di dunia, dengan spesimen yang pernah tercatat setinggi 7,62 meter [3]",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Grammatophyllum_speciosum1.JPG",
+      "berkas": "File:Grammatophyllum_speciosum1.JPG",
+      "lisensi": "CC BY-SA 3.0",
+      "atribusi": "Meneerke bloem, CC BY-SA 3.0, via Wikimedia Commons"
+    }
+  },
+  {
+    "id": "cendana",
+    "nama": "Cendana",
+    "ilmiah": "Santalum album",
+    "takson": "flora",
+    "kelompok": "tumbuhan",
+    "wilayah": "Nusa Tenggara Timur (Timor, Sumba)",
+    "pulau": "bali_nusa",
+    "koordinat": [
+      -9.7,
+      124.0
+    ],
+    "endemik": "Kayu wangi ikon Nusa Tenggara Timur, kian langka akibat penebangan.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "gbif"
+    },
+    "wikipedia": {
+      "judul": "Cendana",
+      "url": "https://id.wikipedia.org/wiki/Cendana"
+    },
+    "ringkas": "Cendana adalah pohon penghasil kayu cendana dan minyak cendana. Kayunya digunakan sebagai rempah-rempah, bahan dupa, aromaterapi, campuran parfum, serta sangkur keris (warangka). Kayu yang baik bisa menyimpan aromanya selama berabad-abad. Konon di Sri Lanka kayu ini digunakan untuk membalsam jenazah putri-putri raja sejak abad ke-9. Di Indonesia, kayu ini banyak ditemukan di Nusa Tenggara Timur, khususnya di Pulau Timor, meskipun sekarang bisa ditemukan pula di Pulau Jawa dan pulau-pulau Nusa Tenggara lainnya.",
+    "gambar": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Santalum_album_%28Chandan%29_in_Hyderabad%2C_AP_W_IMG_0025.jpg",
+      "berkas": "File:Santalum_album_(Chandan)_in_Hyderabad,_AP_W_IMG_0025.jpg",
+      "lisensi": "CC BY-SA 4.0",
+      "atribusi": "J.M.Garg, CC BY-SA 4.0, via Wikimedia Commons"
+    }
+  }
+]

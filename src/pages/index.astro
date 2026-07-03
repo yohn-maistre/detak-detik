@@ -20,6 +20,7 @@ import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import PetaRupa from '../islands/PetaRupa.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
+import DaftarMerah from '../islands/DaftarMerah.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
 import OtsusGrafik from '../islands/OtsusGrafik.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
@@ -762,6 +763,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </header>
         <GaleriNusantara client:visible />
+        <DaftarMerah client:visible />
         <AlmanakSains client:visible />
         <IngatanHari client:visible />
 
