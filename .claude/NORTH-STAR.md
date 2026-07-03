@@ -1189,54 +1189,97 @@ even when you're not at the helm"):**
   news desk (EdisiFeed lembar) is the template: every future surface =
   slot + gate + registry, so new writers plug in without new plumbing.
 
-### 13.14 ACT III BLUEPRINT — "the weekend magazine" (planned 2026-07-03, pre-implementation)
+### 13.14 ACT III BLUEPRINT v2 — "MAJALAH NUSANTARA" (2026-07-03, merges §5 + Yose's nat-geo dump; supersedes v1)
 
-**Audit of the 12 organs (current state):**
-- `PetaAtlas` (225ln) — engraved dot-grid archipelago, bus-wired, uses
-  prov geojson via FILL rasterization (immune to the tessellation bug —
-  no change needed). STRONG; becomes PLAT I.
-- `WajahNusantara` (110ln) — rotating people portrait, Wikipedia lead,
-  2×/day. Good bones, THIN — a stub of the §13.4 feature vision.
-- `Bahasa718` (106ln) — tally field + daily word for "air". Keep.
-- `GaleriNusantara` (133ln) — Commons painting + GBIF species frames,
-  absence-documented fallbacks. Good bones.
-- `AlmanakSains` (77ln) — daily computed margin note. Small, right voice.
-- `GunungApi` (68ln) — 127 triangles, STATIC sample. The map already
-  fetches MAGMA alert levels live — an obvious live upgrade.
-- `PetaRupa` (74ln) — Wallace line, self-drawing. Fine as a plate.
-- `RimbaHidup` (147ln) — boids murmuration closer. Beloved; keep.
-- Ruang Main (`TebakDaerah`/`BenarSalah`/`SensusDiri`/`TuguRakyat`) —
-  coherent zone; not this wave (BenarSalah could later pull live corpus).
+**Register**: Nat Geo × the engraved scientific atlas the site already
+speaks. Act I is fast, Act II measured, Act III reads SLOW — a magazine
+with a feature well, a plate wall, margin notes, an emotional closer.
+Everything below obeys three laws at once: law 5 (calendar rotation,
+same for every reader), citation-or-silence (every plate sourced),
+autonomy-by-schema (registry + gate + slot — agents write rows, never
+markup; Yose reviews backlog batches, rotation serves only reviewed rows).
 
-**The concept: ATLAS = the paper's weekend MAGAZINE.** Act I is the
-front page, Act II the instrument room; Act III reads slow — plates,
-features, margin notes. Structure:
-1. **PLAT system**: every figure gets the engraved caption convention
-   (`PLAT I · …`, mono, letterspaced, roman numerals, one CSS spec —
-   .plat-cap; no wrapper component needed).
-2. **MANUSIA → the FEATURE (WajahNusantara v2)**: drop cap, measured
-   2-col prose on wide screens, PULL-QUOTE lifted verbatim from the
-   Wikipedia lead (Lane A), portrait as PLAT II with engraved caption +
-   license credit, SukuLokasi coordinate inset (`5°30'S 138°30'E`).
-   Bahasa718 rides as the companion sidebar plate (PLAT III).
-3. **NEW · TULISAN section**: the §13.13 writeup slot RENDERS here —
-   machine essays (Lane C, gated, labeled DISUSUN MESIN) with VizPapan
-   figures inline. Absent until the lanes are live (silence law), but
-   seeded with ONE hand-gated inaugural essay so the form exists.
-4. **HAYATI & RUPA**: GaleriNusantara frames become PLAT IV/V;
-   AlmanakSains sits as the literal MARGIN NOTE column beside them.
-5. **NEW · SEJARAH**: HARI INI DALAM SEJARAH (§13.10 idea promoted) —
-   deterministic daily plate from a curated dated-events registry
-   (sejarah_registry.json, calendar-chosen law 5, every event sourced).
-6. **TANAH**: GunungApi goes LIVE — join today's MAGMA levels (same
-   proxy the map uses): a triangle above Normal turns madder TODAY;
-   the field breathes with the earth. PetaRupa stays (PLAT VI).
-7. **RimbaHidup** closes the act unchanged.
+**THE MACHINE — one template, nine pipelines (from §5.1, extended):**
+generalize `AlmanakSains` into THE plate template (Atlas frame, `PLAT
+№/HARI KE-n` caption, engraved fallback, source chip) and feed it from
+per-pipeline REGISTRIES (`newsroom/data/atlas/*.json`, one row = one
+reviewed plate; a fetch/refresh script per pipeline, apbd.json pattern):
+1. **MANUSIA** — the FEATURE: rotating indigenous-group profile with
+   substantial writing (reviewed backlog, start 20; id.wikipedia REST +
+   Wikidata + WBTb budaya-data.kemdikbud.go.id 1.941 entries). Magazine
+   form: drop cap, 2-col measured prose, verbatim pull-quote (Lane A),
+   portrait plate w/ license credit, coordinate inset. **Cultural
+   heritage rides the group** (Yose): the profile carries its carving/
+   weave/dance/rite entries as sidebars, tag-joined from the registry.
+2. **HAYATI** — Daftar Merah Nusantara (~30 endemics, live IUCN codes,
+   re-sorts by extinction risk) + the day's species showcase writeup.
+   Living images only (GBIF/iNaturalist CC0/CC-BY), never taxidermy.
+3. **RUPA** — the day's painting EXPLAINED: Tropenmuseum (51.504 files)/
+   KITLV/Rijksmuseum; museum + Wikipedia description as Lane A text,
+   Lane C elaboration slot once lanes live; colonial provenance line as
+   quiet context ("kini disimpan di …").
+4. **BUNYI** — traditional music + instruments: Wikipedia/Wikidata +
+   MusicBrainz metadata, PD audio via Commons/IA when license-clean;
+   metadata only, no lyrics.
+5. **INGATAN** — HARI INI DALAM SEJARAH: Wikidata SPARQL filtered to
+   Indonesia (id on-this-day feed 404s, verified) + en-feed fallback +
+   curated deck; every event dated + sourced.
+6. **TANAH & LANGIT** — geography/science: sky almanac (sunrise, moon
+   phase, true terminator — keyless), geology/expedition notes.
+   **GunungApi RETIRED as standalone** (Yose's instinct confirmed: the
+   MAP owns live volcano truth via MAGMA; one owner). Its 127-count
+   fact becomes a Tanah plate line + a BUKA DI PETA chip dispatching
+   set_layer+scroll_to. PetaRupa/Wallace stays as a plate.
+7. **BAHASA** — Peta Bahasa yang Memudar: Glottolog CLDF (CC-BY) baked
+   at build, each languoid a mark at its coordinates colored by real
+   AES status, endangered marks decaying first on the Game-of-Life
+   tick. THE ACT'S EMOTIONAL CENTER; Bahasa718's daily "air" word rides
+   inside it.
+8. **LAYAR & PUSTAKA** (new, Yose) — classic Indonesian film (Wikidata
+   metadata; posters rarely PD → text plates), prose/novel plates
+   (pre-PD openings verbatim; else Wikipedia lead), sculpture/monument
+   entries (Commons). One registry, three row-types.
+9. **ILMU** — Indonesian science writeups: computed almanac plates
+   (the current voice) + discovery notes (BRIN/eijkman history etc. via
+   Wikipedia Lane A) + TULISAN deep essays (§13.13 slot renders here,
+   DISUSUN MESIN label, VizPapan figures inline).
 
-**Sequencing:** 8a typography heart (plates + Wajah v2 + Bahasa
-companion) → 8b living organs (GunungApi live, SEJARAH registry,
-almanak margin) → 8c TULISAN renderer + inaugural essay → 8d act-scoped
-token sweep + ruang-main small polish.
+**THE DAILY HAND** (new): not all nine pipelines print daily — the
+calendar deals a HAND of ~5 plates per edition (deterministic, law 5).
+Variety without bloat; a pipeline with a thin registry simply surfaces
+less often (graceful, iterable).
+
+**PULAU RAKSASA weighting** (Yose: Papua + Kalimantan, "if iterable"):
+registry rows carry `pulau` tags; rotation guarantees a Papua-or-
+Kalimantan row surfaces at a set cadence (~every 3rd hand). Weighting,
+not a hardcoded section — dies gracefully when content is thin. ITERABLE ✓.
+
+**REGION ROTATION** (§5.3, the awwwards move): PetaAtlas stays PLAT I;
+clicking a region — or arriving with the lensa already set from Acts
+I/II — rotates the whole act's plates to that region when reviewed
+content exists (its people, species, heritage, events), national hand
+otherwise. One store (lensa.ts) already carries the region.
+
+**EKSPEDISI** (new, monthly): a tag threads one entry from EVERY
+pipeline into a composed issue-feature ("Ekspedisi Mahakam": the
+river's peoples + species + paintings + events + music). Agents
+assemble it from registries by tag — the first fully machine-composed
+magazine section.
+
+**Layout** (top to bottom): PetaAtlas frontispiece → MANUSIA feature
+well (full magazine spread + heritage sidebars) → THE PLATE WALL (the
+daily hand, 2-col, mixed pipelines, one plate grammar) → ILMU/TANAH
+margin column → Peta Bahasa yang Memudar (emotional closer) →
+RimbaHidup (murmuration, unchanged) → Ruang Main (padding fixed
+2026-07-03; content untouched this wave).
+
+**Sequencing:** 8a plate template + regrouping + GunungApi retirement →
+8b MANUSIA feature v2 + backlog registry + heritage ties → 8c HAYATI
+Daftar Merah + RUPA provenance plates → 8d BUNYI + INGATAN + LAYAR &
+PUSTAKA registries → 8e BAHASA memudar + sky almanac → 8f daily hand +
+region rotation + PULAU RAKSASA + EKSPEDISI → 8g TULISAN renderer +
+inaugural essay + act token sweep. Yose reviews content batches between
+sub-waves; each ends build → deploy → screenshots.
 
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 

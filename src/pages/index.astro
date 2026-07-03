@@ -1085,13 +1085,17 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
   /* ---- Act III + Ruang Main ---- */
   #hutan { margin-top: 8px; }
-  .tugu-wrap { margin-top: 22px; max-width: 820px; }
+  .tugu-wrap { margin-top: 44px; max-width: 820px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
   .main-rule { height: 1px; background: var(--line); margin: 8px 0 0; }
   .rak-eyebrow { display: block; margin-top: 40px; }
-  .main-rak { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(22px, 4vw, 48px); margin-top: 22px; align-items: start; }
+  .main-rak { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px clamp(22px, 4vw, 48px); margin-top: 22px; align-items: start; }
   @media (max-width: 1100px) { .main-rak { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 940px) { .main-rak { grid-template-columns: 1fr; } }
+  @media (max-width: 940px) {
+    .main-rak { grid-template-columns: 1fr; gap: 34px; }
+    /* stacked games get a quiet rule between them so each puzzle reads as its own sitting */
+    .main-rak > :not(:first-child) { border-top: 1px dashed var(--line-soft); padding-top: 30px; }
+  }
 
   .angka-blok {
     position: relative;
