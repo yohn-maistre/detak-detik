@@ -1172,6 +1172,23 @@ The order of the remaining epoch, in Yose's own priorities:
    the newspaper's pipeline (sources → lanes → gates → composed page)
    generalized so agents can be pointed at it. Explicitly LAST.
 
+**Autonomy contract (scaffolded 2026-07-03; Yose: "everything autonomous
+even when you're not at the helm"):**
+- `src/lib/viz/spec.ts` — the Zod viz kit: stat/bars/dumbbell/waffle/
+  garis, `sumber` REQUIRED on every form (an uncited figure cannot be
+  drawn); parse-or-nothing. New forms land schema-first, never ad hoc.
+- `VizPapan.svelte` — renders any validated spec in SkorCabang's tile
+  grammar; machine figures are chrome-identical to hand-built ones.
+- `newsroom/models.VizSpec` (loose mirror; the site's Zod is binding)
+  + `Tulisan` (deep-writeup slot: Lane C prose, fact-gated like temuan,
+  cited_ids, viz list) + `Edisi.tulisan` / `LiveTulisan` payload slots.
+  The desk that FILLS tulisan ships with the Act 3 wave — agents already
+  have a stable shape to write against.
+- Existing agent-writable slots: kliping SARI/BUTIR (gated), janji
+  realisasi refresh (designed, dormant), temuan desks. The Digg-grammar
+  news desk (EdisiFeed lembar) is the template: every future surface =
+  slot + gate + registry, so new writers plug in without new plumbing.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots

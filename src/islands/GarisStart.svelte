@@ -94,7 +94,7 @@
           <text class="t1" x={W - PAD.r} y={H - 6} text-anchor="end">{Math.max(...[...p.idn, ...p.vnm].map((d) => d.t))}</text>
         </svg>
         <p class="gs-catatan">{p.catatan}</p>
-        <span class="gs-chip mono">⊙ {p.chip}</span>
+        <button class="chip gs-chip"><span class="tick">⊙</span>{p.chip}</button>
       </figure>
     {/each}
   </div>
@@ -121,5 +121,5 @@
   svg text.val.idn { fill: var(--accent); }
   svg text.val.vnm { fill: var(--accent2); }
   .gs-catatan { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
-  .gs-chip { display: block; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); margin-top: 8px; }
+  .gs-chip { margin-top: 8px; }
 </style>

@@ -52,7 +52,7 @@ def _load_registry() -> list[dict]:
 def _status_mekanis(j: dict, hari_ini: date) -> str:
     r = j.get("realisasi_angka")
     if r is None:
-        return "DATA HILANG"
+        return "DATA TIDAK TERSEDIA"
     t = j.get("target_angka")
     # a met target is TERCAPAI even before its deadline — achieving early counts
     if t is not None:
@@ -66,7 +66,7 @@ def _status_mekanis(j: dict, hari_ini: date) -> str:
         except ValueError:
             jatuh = None
         if jatuh and hari_ini > jatuh:
-            return "TIDAK TERCAPAI" if t is not None else "DATA HILANG"
+            return "TIDAK TERCAPAI" if t is not None else "DATA TIDAK TERSEDIA"
     return "BERJALAN"
 
 

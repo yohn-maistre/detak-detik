@@ -32,6 +32,17 @@ export interface LiveKliping {
   hukum?: string[];
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
+/** deep writeup (Act 3 pipeline): Lane C prose, fact-gated in the newsroom,
+ *  labeled machine-written on the page; viz entries are raw specs validated
+ *  client-side by lib/viz/spec.parseVizSpec — unparsable figures never draw */
+export interface LiveTulisan {
+  id: string;
+  judul: string;
+  teks: string;
+  lane?: 'C';
+  cited_ids?: string[];
+  viz?: unknown[];
+}
 /** buku besar row: promise (Lane A, sourced) beside its measured figure;
  *  status recomputed mechanically by the janji desk each edition */
 export interface LiveJanji {
@@ -47,7 +58,7 @@ export interface LiveJanji {
   realisasi_angka?: number;
   realisasi_sumber?: string;
   realisasi_tanggal?: string;
-  status?: 'TERCAPAI' | 'BERJALAN' | 'TIDAK TERCAPAI' | 'DATA HILANG';
+  status?: 'TERCAPAI' | 'BERJALAN' | 'TIDAK TERCAPAI' | 'DATA TIDAK TERSEDIA';
 }
 export interface LiveEdisi {
   edisi?: number;
@@ -63,6 +74,7 @@ export interface LiveEdisi {
   kliping?: LiveKliping[];
   kliping_meta?: LiveKlipingMeta;
   janji?: LiveJanji[];
+  tulisan?: LiveTulisan[];
   harga?: number[];
   tajuk?: { teks: string; cited_ids?: string[] };
 }

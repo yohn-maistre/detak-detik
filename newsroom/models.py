@@ -152,7 +152,48 @@ class Janji(BaseModel):
     realisasi_angka: float | None = None
     realisasi_sumber: str | None = None
     realisasi_tanggal: str | None = None
-    status: Literal["TERCAPAI", "BERJALAN", "TIDAK TERCAPAI", "DATA HILANG"] = "BERJALAN"
+    status: Literal["TERCAPAI", "BERJALAN", "TIDAK TERCAPAI", "DATA TIDAK TERSEDIA"] = "BERJALAN"
+
+
+class VizSpec(BaseModel):
+    """A drawn-figure request (loose mirror of src/lib/viz/spec.ts — the site's
+    Zod parse is the BINDING gate; a spec that fails it renders nothing).
+    `sumber` is required by contract: an uncited figure cannot be drawn."""
+
+    bentuk: Literal["stat", "bars", "dumbbell", "waffle", "garis"]
+    judul: str
+    sumber: str
+    catatan: str | None = None
+    # per-form fields, optional here — the Zod schema enforces the real shape
+    nilai: str | None = None
+    label: str | None = None
+    nada: str | None = None
+    baris: list[dict] | None = None
+    maks: float | None = None
+    a: dict | None = None
+    b: dict | None = None
+    satuan: str | None = None
+    isi: int | None = None
+    dari: int | None = None
+    seri: list[float] | None = None
+    label0: str | None = None
+    label1: str | None = None
+
+
+class Tulisan(BaseModel):
+    """A deep writeup slot (the Act 3 pipeline, §13.13): Lane C prose that must
+    pass the fact-gate before publish (every angka documented in cited corpus
+    rows, like temuan), labeled machine-written on the page. Its figures are
+    VizSpec requests — drawn only if they parse against the site's contract.
+    The desk that fills this ships with the Act 3 wave; the slot ships now so
+    agents have a stable shape to write against."""
+
+    id: str
+    judul: str
+    teks: str
+    lane: Literal["C"] = "C"
+    cited_ids: list[str] = Field(default_factory=list)
+    viz: list[VizSpec] | None = None
 
 
 class Edisi(BaseModel):
@@ -171,6 +212,7 @@ class Edisi(BaseModel):
     kliping: list[Kliping] | None = None
     kliping_meta: KlipingMeta | None = None
     janji: list[Janji] | None = None
+    tulisan: list[Tulisan] | None = None
 
 
 class CorpusRow(BaseModel):

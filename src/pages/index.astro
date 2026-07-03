@@ -1165,36 +1165,27 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
      hierarchy is the ranking made visible, not six equal boxes. */
   .temuan-blok { padding: 32px 0 36px; border-top: 1px solid var(--line); margin-top: 40px; }
   .temuan-head-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-  .temuan-grid { display: grid; grid-template-columns: repeat(2, 1fr); column-gap: clamp(24px, 3.5vw, 52px); margin-top: 8px; }
-  @media (max-width: 900px) { .temuan-grid { grid-template-columns: 1fr; } }
+  /* the findings board reads in the FEED's row grammar (rank numeral left,
+     ruled rows, no featured first item — the front page lead owns that job) */
+  .temuan-grid { display: grid; margin-top: 10px; border-top: 2px solid var(--ink); }
   .temuan {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 22px 0 24px;
-    border-top: 1px dashed var(--line-soft);
-  }
-  .temuan:first-child {
-    grid-column: 1 / -1;
-    border-top: none;
-    padding: 24px 0 30px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: clamp(14px, 2vw, 26px);
+    row-gap: 7px;
+    padding: 18px 0 20px;
     border-bottom: 1px solid var(--line);
-    margin-bottom: 2px;
   }
-  .temuan:first-child .temuan-headline { font-size: var(--fs-4); max-width: 28ch; }
-  .temuan:first-child .temuan-body { font-size: 15px; max-width: 64ch; }
-  .temuan .ghost-num { position: absolute; top: 20px; right: 0; font-size: 40px; opacity: 0.55; pointer-events: none; }
-  .temuan:first-child .ghost-num { font-size: 64px; top: 22px; }
-  .temuan-head { display: flex; gap: 12px; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); padding-right: 64px; }
+  .temuan .ghost-num { grid-row: 1 / span 4; font-size: 30px; line-height: 1; opacity: 0.4; padding-top: 3px; min-width: 40px; pointer-events: none; }
+  .temuan-head { display: flex; gap: 12px; align-items: baseline; font-size: 10px; letter-spacing: 0.16em; color: var(--muted); }
   .temuan-lens {
     color: var(--bg);
     background: var(--accent);
     font-weight: 700;
     padding: 2px 7px 1px;
   }
-  .temuan-headline { font-size: clamp(18px, 1.6vw, 21px); line-height: 1.18; padding-right: 52px; }
-  .temuan-body { font-size: 13.5px; line-height: 1.55; color: var(--muted); flex: 1; max-width: 58ch; }
+  .temuan-headline { font-size: clamp(18px, 1.8vw, 23px); line-height: 1.16; max-width: 44ch; }
+  .temuan-body { font-size: 13.5px; line-height: 1.55; color: var(--muted); max-width: 62ch; }
   .temuan-foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; flex-wrap: wrap; }
   .temuan-foot .cite-chips { margin: 0; }
 
@@ -1341,7 +1332,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .janji-stamp.s-tercapai { color: var(--accent2); border-color: var(--accent2); }
   .janji-stamp.s-berjalan { color: var(--muted); border-color: var(--line); }
   .janji-stamp.s-tidak-tercapai { color: var(--accent); border-color: var(--accent); }
-  .janji-stamp.s-data-hilang { color: var(--muted); border-color: var(--muted); border-style: dashed; }
+  .janji-stamp.s-data-tidak-tersedia { color: var(--muted); border-color: var(--muted); border-style: dashed; }
   @media (max-width: 800px) {
     .janji { grid-template-columns: auto 1fr; }
     .janji-ukur, .janji-stamp { grid-column: 2; }

@@ -217,7 +217,8 @@
   .jp-base-lab, svg text { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.1em; fill: var(--muted); }
   .jp-wm { font-family: var(--font-mono); font-size: 30px; letter-spacing: 0.3em; fill: var(--ink); opacity: 0.08; pointer-events: none; }
   .jp-end { font-size: 9.5px; letter-spacing: 0.08em; }
-  .jp-end-ihsg { fill: var(--accent); font-weight: 700; opacity: 0; }
+  /* the featured value wears Fraunces; peer annotations stay mono */
+  .jp-end-ihsg { fill: var(--accent); font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 12.5px; letter-spacing: 0; opacity: 0; }
   .jp-dot-ihsg { fill: var(--accent); opacity: 0; }
   .jp-end-sub { font-size: 7.5px; letter-spacing: 0.12em; }
   /* reduced-motion resting state: everything visible without animation */

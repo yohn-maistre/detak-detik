@@ -163,7 +163,8 @@
   .ri-rekor { stroke: var(--accent); stroke-width: 0.8; stroke-dasharray: 3 4; opacity: 0.8; }
   .ri-rekor-lab { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.14em; fill: var(--accent); }
   .ri-dot { fill: var(--accent2); }
-  .ri-end { font-family: var(--font-mono); font-size: 12px; font-weight: 700; fill: var(--accent2); }
+  /* the featured value wears Fraunces (site law since the pasar plates) */
+  .ri-end { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 13.5px; fill: var(--accent2); }
   .ri-wm { font-family: var(--font-mono); font-size: 30px; letter-spacing: 0.3em; fill: var(--ink); opacity: 0.08; pointer-events: none; }
   svg text { font-family: var(--font-mono); font-size: 8.5px; letter-spacing: 0.1em; fill: var(--muted); }
 
