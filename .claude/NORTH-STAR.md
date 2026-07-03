@@ -553,39 +553,55 @@ phase (cap 5, prefer read-only or disjoint-file agents on this host).
   (DO), Bluesky Jetstream ingestion, D1 kliping archive search, member-level
   party pages.
 
-## 10. Needs from Yose (unblockers, all small)
+## 10. NEEDS FROM YOSE — the compiled ledger (2026-07-03, end of waves 8a-8d+INGATAN)
 
-1. Register the BPS WebAPI key and the Web API NFA account (both free; NFA has
-   manual approval lag).
-2. Add `OPENSKY_CLIENT_ID/SECRET` GitHub secrets (planes go live).
-3. Decide the Lane C label word (`SARI` proposed) and approve the amendment §2.
-4. Review cadence for the Manusia backlog and the kliping flag queue (you are
-   the editorial cell v1).
-5. Approve `indonesia-civic-stack` adoption after the footprint check.
-6. Rotate `NIM_API_KEY` (or add GROQ/OPENROUTER/GEMINI keys) — SARI and
-   model phrasing lanes are dead until then (see §14 wave-3 addendum).
-7. Make a free pasal.id account and file its API token as a repo secret
-   (`PASAL_API_TOKEN`) — unlocks legal search for Aksara + the pasal.id
-   MCP server (§13.11). The public law pages stay linkable without it.
-8. **BPS indicator snapshots (manual browser download — scripts cannot):**
-   every BPS surface carrying numbers is Cloudflare-challenged, so grab
-   these xlsx from bps.go.id in a normal browser and drop them in
-   `newsroom/data/bps/` (any filename): (a) IPM per kabupaten/kota
-   (latest), (b) persentase penduduk miskin per kabupaten/kota,
-   (c) TPT per provinsi, (d) PDRB per kapita per kabupaten. A convert
-   script will join them to the registry on the 4-digit BPS code and
-   feed the map choropleth + Lensa Wilayah. Quarterly/annual refresh.
-9. Register a free IDMC API client_id (internal-displacement.org → Database
-   → API docs / contact form) and file it as repo secret `IDMC_CLIENT_ID` —
-   unlocks the displacement figures of record (GIDD annual + IDU event
-   stream) for the ALAM rebuild (§13.17 A.6; cookbook
-   `docs/research/2026-07-03-alam-endpoint-cookbook.md`).
-10. **KPA Catahu + Komnas HAM annual reports (manual browser download —
-   both Cloudflare/WAF-walled to scripts):** each January grab the KPA
-   Catatan Akhir Tahun PDF (konflik agraria count, luas, KK terdampak)
-   and the Komnas HAM annual statistics, drop in `newsroom/data/alam/`.
-   These are the paper's most sensitive figures; they enter only through
-   the verification desk.
+Everything that needs YOUR hands, ordered by what it unlocks. Done rows
+kept for the record.
+
+**A · KEYS & SECRETS (each ~5 minutes, each revives a dead lane)**
+
+1. **LLM keys** — rotate `NIM_API_KEY` and/or add `GROQ_API_KEY` /
+   `OPENROUTER_API_KEY` / `GEMINI_API_KEY` (repo Secrets). Unlocks: SARI
+   overviews, desk phrasing, janji dormant-refresh, the TULISAN writers
+   (their page surface + viz kit + fact gate are LIVE and waiting), and
+   INGATAN-as-context. The single biggest switch.
+2. **Flip `NEWSROOM_ENABLED`** (repo Variable) to `true` once keys are in —
+   the twice-daily print run starts, and with it the arsip commits that
+   grow the paper's memory.
+3. **`IDMC_CLIENT_ID`** — free registration at internal-displacement.org
+   (Database → API docs / contact form) → repo Secret. Unlocks the
+   displaced-people figures of record (GIDD annual + hourly IDU events)
+   for the ALAM tergusur row — the last absence in the SDA chapter.
+   Cookbook: `docs/research/2026-07-03-alam-endpoint-cookbook.md`.
+4. **`PASAL_API_TOKEN`** — free pasal.id account → repo Secret. Unlocks
+   legal search for Aksara + the pasal.id MCP (§13.11). Law pages stay
+   linkable without it.
+5. **BPS WebAPI key + NFA Panel Harga account** (both free; NFA has manual
+   approval lag). Unlocks: live IPM/kemiskinan in Lensa + live Harga
+   Pangan (retires that contoh label).
+
+**B · MANUAL SNAPSHOTS (browser-only; scripts are WAF-walled)**
+
+6. **BPS xlsx** → `newsroom/data/bps/`: (a) IPM per kab/kota, (b) penduduk
+   miskin per kab/kota, (c) TPT per provinsi, (d) PDRB per kapita per kab.
+   Joined on the 4-digit code; feeds map choropleth + Lensa. Quarterly.
+7. **KPA Catahu + Komnas HAM annual PDFs** (each January) →
+   `newsroom/data/alam/`. The paper's most sensitive figures; they print
+   only through the verification desk.
+
+**C · EDITORIAL REVIEWS (you are the editorial cell v1)**
+
+8. **Review the rotating rosters**: 20 MANUSIA profiles (Mee opened;
+   images two-gate-verified but eyes beat gates), 10 PUSTAKA pens + their
+   karya notes (my curation of "well-intentioned lineage" — your call),
+   19 INGATAN dates, 30 HAYATI rows + zona tags, 5 KARTU VITAL bands,
+   12 JANJI registry rows.
+9. **Screenshot pass** of waves 8a-8d on the phone (the branch chapters,
+   KasDaerah with a lens pick, Hutan yang Hilang, ZonaHayati taps,
+   DARI RAK) — my eyes end at the build; yours end at the paper.
+
+**DONE (for the record)**: OpenSky secrets (planes live) · SARI label
+decided + shipped · `indonesia-civic-stack` assessed, parked (§11).
 
 ## 11. Open questions (parked, not blockers)
 
@@ -1485,6 +1501,36 @@ order re-homed into v3 sections.
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-03 · waves 8b-8d + INGATAN (`cf2ab97`→`6f68eee`, deploys green) — the long push
+
+- **8b HUTAN LIVE** (`cf2ab97`): GFW keyless harvest → hutan.json (24y
+  national + 34 prov reconciling to 1 ha, konsesi split 37% in 2024,
+  authoritative GADM map incl. the retired-gid-15 Kaltim quirk + the
+  Maluku/Malut swap), HutanHilang island (lensa-aware, gabung caveats
+  printed), alert-pulse tail cut (confidence-upgrade lag documented),
+  sumber.astro +djpk +gfw rows.
+- **8c ATLAS SECTIONS** (`3d3189a`): atlas-hari.ts = the one deterministic
+  clock (profile is the spine); Bahasa718 follows the profile's tongue;
+  **ZonaHayati** — Wallace/Weber become the clickable control (3 realms,
+  risk-sorted columns, absorbs DaftarMerah + PetaRupa); hayati.json +zona;
+  GaleriNusantara → RUPA-only; lampiran split I-VI.
+- **8d DARI RAK** (`2a9f20b`): PUSTAKA & PIKIRAN — 10 pens
+  (Kartini→Wiji Thukul, verbatim wiki leads, curated karya notes), the
+  shelf design (today's spine pulled forward), refresh-pustaka.py
+  live-tested 10/10.
+- **INGATAN REDAKSI + TULISAN** (`6f68eee`): memory.py (arsip window diff
+  via the desk's own _serumpun rule → BARU/BERKEMBANG/BERLALU + meter
+  delta + janji flips; functional-tested green), Ingatan on Edisi,
+  newsroom.yml commits arsip/ `[skip ci]`, YangBerubah reader strip
+  (SSRs empty until memory exists), TulisanPapan essay surface (the
+  autonomy contract's last surface: Lane C labeled, VizPapan figures).
+- **Seams left on purpose**: writers don't RECEIVE ingatan as context yet
+  (ingat() runs post-assemble; feed it forward when LLM lanes wake),
+  LAYAR & BUNYI + EKSPEDISI + daily-hand constellation ride the pustaka/
+  atlas-hari templates next, ALAM tergusur waits on IDMC (§10.3).
+- §10 rewritten as the COMPILED NEEDS-FROM-YOSE ledger (keys → snapshots
+  → reviews).
 
 ### 2026-07-03 · wave 8a (`e336dfe`, deploy green) — act 2 round 3
 
