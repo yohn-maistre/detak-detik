@@ -1354,6 +1354,104 @@ never embeddings, never a store the reader can't audit.
    line traces to a published edition (citation-or-silence), local-first
    untouched. Memory the reader can open and check.
 
+### 13.17 WAVE 8 — Act 2 round 3 + ACT III v3 "STACK OF SMALL SECTIONS" (Yose steers 2026-07-03, screenshots act2-temp-1..6)
+
+Supersedes §13.14's LAYOUT (its nine pipelines survive and re-home here);
+absorbs §13.15's leftovers. Source: Yose's screenshot review after KARTU
+VITAL shipped.
+
+**A. Act 2 round 3 (execute first — context-dependent)**
+
+1. **KARTU VITAL dissolves into the chapters.** The standalone block
+   duplicated each chapter's own numbers one scroll later (temp-1/2).
+   Fix: `VitalCabang` gains an `id` prop = single-row mode (no section
+   head); each chapter mounts ITS vital right after `CabangBand` — the
+   chapter opens with its diagnosis. Standalone mount dies.
+2. **FUNGSI line, cited.** Each bab-kepala gets one constitutional
+   sentence stating what the branch is FOR (UUD 1945: Ps.4 eksekutif,
+   Ps.20+20A legislatif, Ps.24 yudikatif, Ps.30 aparat, Ps.18 daerah),
+   replacing over-explaining deks. Tone: straight to the point. Deks
+   tightened ("menyahkan" typo dies). Legislatif vintage disambiguation:
+   vital row = last FULL year (9/52, 2025); SKOR tile = running year
+   (7/47, 2026) — label both explicitly.
+3. **Republik Oligarki opener de-boxed** (temp-3: cramped dark box).
+   Becomes typographic juxtaposition: oligarch delta in display size vs
+   worker delta small, the ×multiple (≈6,5 jt× per day, CELIOS rates) as
+   the centre pivot. No box, no wash: the type scale IS the chart.
+4. **Pasar yang Tipis = one ruler.** The random-dot blob dies. One
+   0–30% axis: the emiten's ±3% real float as the only filled bar, every
+   exchange's minimum free-float threshold as labeled ticks on the SAME
+   scale (IDX 7,5→15 arrow, SGX 10, Nasdaq 20, HK/NSE 25). One glance:
+   the float fails every rulebook, including Jakarta's own raised bar.
+   (data contoh) chip stays until verified.
+5. **KAS DAERAH (otsus generalized).** The Papua-wired chart (temp-4)
+   becomes a lensa-follower: strip plot of all 546 pemda belanja-pegawai%
+   (apbd.json, deterministic jitter), the UU 1/2022 Ps.146 30% plafon
+   drawn, count-over-ceiling stated; selected daerah (prov OR kab, via
+   lensa/lensa-kab) = enlarged labeled dot. When a Papua province is in
+   the lens, the verified otsus series + receipt appears as an extra
+   plate (that data is Papua's; it shows when Papua is asked for).
+6. **ALAM & EKSTRAKSI expansion** — scout in flight for open public
+   APIs (GFW data-api per-adm, KLHK ArcGIS, data.go.id CKAN, IDMC GIDD,
+   KPA/Komnas HAM yearly publications). Registry + refresh script
+   pattern; displacement figures = most sensitive in the paper,
+   verification scout before ANY number prints (§13.15 stands).
+
+**B. ACT III v3 — the atlas becomes a stack of small sections**
+
+Diagnosis (temp-6): pipelines render as caption-boxes; hayati+rupa
+share one section; Wallace/Weber decorative; language rotates unlinked
+to the profile; "Manusia" h2 sits dead between LAMPIRAN label and Mee.
+
+1. **Sections, not boxes.** Each pipeline = a full-width small section
+   with the Act 2 chapter grammar (kepala, instrument, receipts), aged
+   cream register. LAMPIRAN numbering stays as the act's spine.
+2. **The locator plate is the connective tissue.** The dotted map
+   becomes a reusable `PlatLokasi` (dotted grid + marker(s) + caption):
+   the act MASTHEAD plate carries ALL of today's subjects as one daily
+   constellation (each mark = a section anchor link); each section
+   repeats it small, marking its own subject's place. The standalone
+   "PLAT UTAMA" as pure decoration dies.
+3. **The profile is the spine.** MANUSIA leads; BAHASA ties to the
+   profile (featured language = the profile's language where the
+   registry knows it; 718 stays as the section's standing stat);
+   WARISAN already tied; RUPA/BUNYI prefer the profiled region when
+   their registries carry a match, else rotate free. Agents pick
+   components by available data (alignment-by-schema).
+4. **Title hierarchy**: act masthead (Nusantara) → eyebrow LAMPIRAN
+   I · MANUSIA → the SUBJECT is the only display title (Mee). Kill the
+   intermediate "Manusia" h2.
+5. **HAYATI & EKOSISTEM** (split from RUPA): Wallace/Weber becomes the
+   CONTROL, not decoration — the dotted map cut into three clickable
+   ecoregions (Sundaland / Wallacea / Sahul); a click swaps in that
+   region's species column (hayati.json + region tag, daily-rotated
+   showcase, risk ledger folded in). Needs `wilayah` tag per species
+   row (Wallace-side), a curation pass, no new bio research.
+6. **RUPA — arts explained**: provenance plates (Commons extmetadata:
+   painter, year, "kini disimpan di …"), one painting rotated daily,
+   agent writeup slot (Lane C). Scraps current GaleriNusantara.
+7. **PUSTAKA & PIKIRAN**: rotating profiles of writers/thinkers/public
+   intellectuals + one work summarized (Tan Malaka, Pramoedya, Goenawan
+   Mohamad/Catatan Pinggir, Kartini's letters …). Roster curated (Yose
+   steer on lineage), content re-pulled from id.wikipedia REST like
+   manusia. LAYAR (film) + BUNYI (musical genres by region) same
+   template, regions feed the locator.
+8. **ILMU & LANGIT**: science with an Indonesian address — Bosscha,
+   equatorial sky events, Wallace's own expedition notes, volcanology
+   as science. Registry + almanac (sky rotation is calendar-driven,
+   law 5).
+9. **INGATAN** (today-in-history) keeps its slot after ILMU; **RUANG
+   MAIN** closes the act (padding fix rides §13.14), RimbaHidup stays
+   the ambient floor.
+10. Order: masthead constellation → MANUSIA → HAYATI & EKOSISTEM →
+    RUPA → PUSTAKA & PIKIRAN → LAYAR & BUNYI → ILMU & LANGIT →
+    INGATAN → RUANG MAIN.
+
+Sequencing: **8a** = A.1–A.5 (one ship), **8b** = ALAM rebuild when
+scout + verification return, **8c** = Act 3 skeleton (sections +
+PlatLokasi + hierarchy + profile ties), **8d+** = pipelines in §13.14
+order re-homed into v3 sections.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots

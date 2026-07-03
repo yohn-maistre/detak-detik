@@ -1,115 +1,79 @@
 <script lang="ts">
-  /** Mengapa bursa setipis ini rapuh: pada sejumlah emiten terbesar, hampir
-      seluruh saham dipegang segelintir pengendali — hanya sesisa kecil yang
-      benar-benar beredar di publik (free float). Di sebelahnya, ambang free
-      float minimum: IDX termasuk paling rendah di antara bursa besar. Angka
-      contoh, dibentuk dari aturan dan kepemilikan terkini. */
-  import { gsap, reducedMotion, EASE_PRESS, EASE_STAMP } from '../lib/motion';
-  import { rngFrom } from '../lib/seed';
-  import { ramp } from '../lib/chart-kit';
+  /** Pasar yang tipis, dibaca pada SATU penggaris: sumbu 0–30% memuat
+      float nyata emiten terbesar (±3% beredar di publik) DAN ambang free
+      float minimum tiap bursa besar sebagai patok di skala yang sama.
+      Satu pandangan: float itu gagal di semua buku aturan, termasuk
+      ambang baru Jakarta sendiri (7,5 → 15). Angka contoh, dibentuk dari
+      aturan dan kepemilikan terkini. */
+  import { onMount } from 'svelte';
+  import { reducedMotion } from '../lib/motion';
 
-  // 97 of 100 shares held by the controlling core; ~3 truly float
-  const INTI = 97, PUBLIK = 3;
-  const CW = 250, CH = 240;
-  const cx0 = CW / 2, cy0 = CH / 2;
-  const rng = rngFrom('float-konsentrasi');
-  const bell = () => (rng() + rng() + rng() - 1.5) / 1.5; // ~[-1,1], centre-weighted
-  const maxd = Math.hypot(50, 46);
-  // a dense ember clot: darkest at the gravitational centre, warmer at the rim
-  const inti = Array.from({ length: INTI }, () => {
-    const x = cx0 + bell() * 50, y = cy0 + bell() * 46;
-    const t = 1 - Math.min(1, Math.hypot(x - cx0, y - cy0) / maxd);
-    return { x, y, col: ramp(0.45 + 0.5 * t) };
-  });
-  // the thin public float, isolated at the rim, each tagged
-  const publik = [
-    { x: 30, y: 36 }, { x: CW - 26, y: 58 }, { x: 38, y: CH - 32 },
-  ].slice(0, PUBLIK);
-
-  // minimum free-float thresholds, by exchange (%). IDX is a raise: 7,5 → 15
-  type Aturan = { bursa: string; nilai: number; dari?: number; tandai?: boolean };
+  const FLOAT = 3; // emiten terbesar: ±3 dari 100 saham benar-benar beredar
+  type Aturan = { bursa: string; nilai: number; dari?: number; tandai?: boolean; lv: number };
   const ATURAN: Aturan[] = [
-    { bursa: 'Hong Kong', nilai: 25 },
-    { bursa: 'India (NSE)', nilai: 25 },
-    { bursa: 'Nasdaq', nilai: 20 },
-    { bursa: 'Singapura', nilai: 10 },
-    { bursa: 'IDX (Jakarta)', nilai: 15, dari: 7.5, tandai: true },
+    { bursa: 'SINGAPURA', nilai: 10, lv: 1 },
+    { bursa: 'IDX (JAKARTA)', nilai: 15, dari: 7.5, tandai: true, lv: 0 },
+    { bursa: 'NASDAQ', nilai: 20, lv: 1 },
+    { bursa: 'HONG KONG · INDIA (NSE)', nilai: 25, lv: 0 },
   ];
-  const SKALA = 28; // % axis max
-  const BW = 300, rowH = 30, bx = (v: number) => (v / SKALA) * (BW - 96) + 84;
 
-  let root: HTMLElement | undefined = $state();
-  $effect(() => {
-    if (!root) return;
-    if (reducedMotion()) { root.classList.add('in'); return; }
+  const MAKS = 30;
+  const W = 640, H = 176, AXIS = 118, PADL = 14, PADR = 20;
+  const x = (v: number) => PADL + (v / MAKS) * (W - PADL - PADR);
+  const labelY = (lv: number) => AXIS - 66 + lv * 24;
+
+  let root: HTMLElement;
+  let masuk = $state(false);
+  onMount(() => {
+    if (reducedMotion()) { masuk = true; return; }
     const io = new IntersectionObserver(([e]) => {
-      if (e?.isIntersecting) {
-        root!.classList.add('in');
-        gsap.fromTo(root!.querySelectorAll('.fk-dot-inti'),
-          { scale: 0, transformOrigin: 'center' },
-          { scale: 1, duration: 0.5, ease: EASE_STAMP, stagger: { each: 0.004, from: 'random' } });
-        // second beat: the core consolidates inward
-        gsap.fromTo(root!.querySelector('.fk-inti-g'),
-          { scale: 1.14, transformOrigin: 'center' },
-          { scale: 1, duration: 0.7, ease: EASE_PRESS, delay: 0.55 });
-        gsap.fromTo(root!.querySelectorAll('.fk-publik, .fk-publik-tag'),
-          { opacity: 0 }, { opacity: 1, duration: 0.5, delay: 0.9, stagger: 0.1 });
-        gsap.fromTo(root!.querySelectorAll('.fk-bar'),
-          { scaleX: 0, transformOrigin: 'left center' },
-          { scaleX: 1, duration: 0.8, ease: 'power3.out', stagger: 0.08, delay: 0.3 });
-        io.disconnect();
-      }
+      if (e?.isIntersecting) { masuk = true; io.disconnect(); }
     }, { threshold: 0.3 });
     io.observe(root);
     return () => io.disconnect();
   });
 </script>
 
-<section class="fk" data-no-stempel data-ref="float" bind:this={root}>
-  <div class="fk-grid">
-    <!-- the constellation: who actually holds the shares -->
-    <figure class="fk-con">
-      <figcaption class="eyebrow">SATU EMITEN BESAR · 100 SAHAM, SIAPA YANG MEMEGANG</figcaption>
-      <svg viewBox="0 0 {CW} {CH}" width="100%" role="img" aria-label="97 dari 100 saham dipegang segelintir pengendali, 3 beredar di publik, data contoh">
-        <text class="fk-ghost" x={cx0} y={cy0 + 46} text-anchor="middle">97<tspan class="fk-ghost-sm">:3</tspan></text>
-        <g class="fk-inti-g">
-          {#each inti as d, i (i)}
-            <circle class="fk-dot-inti" style={`fill:${d.col}`} cx={d.x} cy={d.y} r="4" />
-          {/each}
-        </g>
-        {#each publik as d, i (i)}
-          <circle class="fk-publik" cx={d.x} cy={d.y} r="4.2" />
-          <text class="fk-publik-tag" x={d.x + (d.x > cx0 ? -8 : 8)} y={d.y - 7} text-anchor={d.x > cx0 ? 'end' : 'start'}>publik</text>
-        {/each}
-      </svg>
-      <p class="fk-con-key mono">
-        <span><i class="sw inti"></i>97 · DIKUASAI 4 PEMEGANG</span>
-        <span><i class="sw publik"></i>3 · BEREDAR DI PUBLIK</span>
-      </p>
-    </figure>
+<section class="fk" class:masuk data-no-stempel data-ref="float" bind:this={root}>
+  <figure class="fk-fig">
+    <figcaption class="eyebrow">SATU PENGGARIS · FLOAT NYATA EMITEN TERBESAR VS AMBANG MINIMUM TIAP BURSA</figcaption>
+    <svg viewBox="0 0 {W} {H}" width="100%" role="img"
+      aria-label={`Pada emiten terbesar hanya ±${FLOAT}% saham beredar di publik; ambang free float minimum: Singapura 10%, IDX 15% (naik dari 7,5%), Nasdaq 20%, Hong Kong dan India 25%. Data contoh.`}>
+      <!-- the ruler -->
+      <line class="fk-axis" x1={PADL} x2={x(MAKS)} y1={AXIS} y2={AXIS} />
+      {#each [0, 5, 10, 15, 20, 25, 30] as v (v)}
+        <line class="fk-grad" x1={x(v)} x2={x(v)} y1={AXIS} y2={AXIS + 5} />
+        <text class="fk-grad-t" x={x(v)} y={AXIS + 16} text-anchor="middle">{v}</text>
+      {/each}
+      <text class="fk-cut mono" x={x(MAKS) + 4} y={AXIS + 4}>⫽</text>
+      <text class="fk-grad-t satuan" x={x(MAKS)} y={AXIS + 30} text-anchor="end">% SAHAM BEREDAR · SKALA DIPOTONG DI 30</text>
 
-    <!-- the rulebook: minimum free float, by exchange -->
-    <figure class="fk-rule">
-      <figcaption class="eyebrow">FREE FLOAT MINIMUM · AMBANG TIAP BURSA</figcaption>
-      <svg viewBox="0 0 {BW} {ATURAN.length * rowH + 18}" width="100%" role="img" aria-label="Ambang free float minimum tiap bursa, IDX paling rendah, data contoh">
-        {#each ATURAN as a, i (a.bursa)}
-          {@const y = i * rowH + 16}
-          <text class="fk-bursa" class:tandai={a.tandai} x="0" y={y + 4}>{a.bursa}</text>
-          <line class="fk-track" x1="84" x2={BW - 12} y1={y} y2={y} />
-          {#if a.dari}
-            <line class="fk-ghost-tick" x1={bx(a.dari)} x2={bx(a.dari)} y1={y - 6} y2={y + 6} />
-            <rect class="fk-bar fk-bar-tandai" x={bx(a.dari)} y={y - 3} width={Math.max(2, bx(a.nilai) - bx(a.dari))} height="6" />
-            <circle class="fk-pt tandai" cx={bx(a.nilai)} cy={y} r="4" />
-            <text class="fk-val tandai" x={bx(a.nilai) + 8} y={y + 3.5}>7,5 → {a.nilai}%</text>
-          {:else}
-            <line class="fk-bar" x1="84" x2={bx(a.nilai)} y1={y} y2={y} />
-            <circle class="fk-pt" cx={bx(a.nilai)} cy={y} r="3.4" />
-            <text class="fk-val" x={bx(a.nilai) + 8} y={y + 3.5}>{a.nilai}%</text>
-          {/if}
-        {/each}
-      </svg>
-    </figure>
-  </div>
+      <!-- the actual float: the only filled thing on the ruler -->
+      <rect class="fk-float" x={x(0)} y={AXIS - 16} width={Math.max(2, x(FLOAT) - x(0))} height="16" />
+      <text class="fk-float-n num" x={x(FLOAT) + 8} y={AXIS - 4}>±{FLOAT}</text>
+      <text class="fk-float-t" x={x(0)} y={AXIS + 30}>BEREDAR DI PUBLIK,</text>
+      <text class="fk-float-t" x={x(0)} y={AXIS + 41}>EMITEN TERBESAR</text>
+
+      <!-- every rulebook, on the same scale -->
+      {#each ATURAN as a, i (a.bursa)}
+        {@const tx = x(a.nilai)}
+        {@const ty = labelY(a.lv)}
+        <line class="fk-tick" class:tandai={a.tandai} x1={tx} x2={tx} y1={ty + 6} y2={AXIS} style={`transition-delay:${200 + i * 110}ms`} />
+        <text class="fk-bursa" class:tandai={a.tandai} x={tx} y={ty} text-anchor="middle" style={`transition-delay:${200 + i * 110}ms`}>{a.bursa} · MIN {a.nilai}%</text>
+        {#if a.dari}
+          <line class="fk-dari" x1={x(a.dari)} x2={x(a.dari)} y1={AXIS - 22} y2={AXIS} />
+          <line class="fk-dari-arah" x1={x(a.dari) + 2} x2={tx - 3} y1={AXIS - 24} y2={AXIS - 24} marker-end="url(#fk-panah)" />
+          <text class="fk-dari-t" x={x(a.dari)} y={AXIS - 28} text-anchor="middle">7,5 → 15</text>
+        {/if}
+      {/each}
+      <defs>
+        <marker id="fk-panah" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+          <path d="M0,0 L5,2.5 L0,5" fill="none" stroke="var(--accent)" stroke-width="1" />
+        </marker>
+      </defs>
+    </svg>
+    <p class="fk-key mono">SETIAP PATOK = AMBANG MINIMUM BURSA ITU · BALOK = YANG BENAR-BENAR BEREDAR · SISANYA, ±97, DIPEGANG SEGELINTIR PENGENDALI</p>
+  </figure>
 
   <div class="fk-foot">
     <p class="fk-note">Float setipis ini membuat harga mudah berayun dan indeks rentan, alasan yang dikutip saat MSCI membekukan sebagian bobot pada awal 2026. <span class="mono">Dokumen ditampilkan berdampingan; kesimpulan diserahkan kepada pembaca.</span></p>
@@ -119,34 +83,33 @@
 
 <style>
   .fk { display: grid; gap: 16px; }
-  .fk-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(20px, 4vw, 44px); align-items: start; }
-  @media (max-width: 820px) { .fk-grid { grid-template-columns: 1fr; } }
-  figure { margin: 0; display: grid; gap: 10px; }
-  svg { display: block; }
-  .fk-ghost { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 110px; fill: transparent; -webkit-text-stroke: 1.2px var(--line-soft); }
-  .fk-ghost-sm { font-size: 0.42em; -webkit-text-stroke: 0.8px var(--line-soft); }
-  .fk-dot-inti { fill: var(--accent); }
-  .fk-publik { fill: none; stroke: var(--ink); stroke-width: 1.4; opacity: 0; }
-  .fk.in .fk-publik { opacity: 1; }
-  .fk-publik-tag { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.12em; fill: var(--muted); opacity: 0; }
-  .fk.in .fk-publik-tag { opacity: 1; }
-  .fk-con-key { display: flex; gap: 18px; flex-wrap: wrap; font-size: 9px; letter-spacing: 0.1em; color: var(--muted); }
-  .fk-con-key span { display: inline-flex; align-items: center; gap: 6px; }
-  .sw { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
-  .sw.inti { background: var(--accent); }
-  .sw.publik { border: 1.4px solid var(--ink); }
+  .fk-fig { margin: 0; display: grid; gap: 12px; }
+  svg { display: block; overflow: visible; }
 
-  .fk-track { stroke: var(--line-soft); stroke-width: 1; }
-  .fk-ghost-tick { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.7; }
-  .fk-bar { stroke: var(--muted); stroke-width: 2.4; }
-  .fk-bar-tandai { fill: var(--accent); opacity: 0.9; }
-  .fk-pt { fill: var(--muted); }
-  .fk-pt.tandai { fill: var(--accent); }
-  svg text { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.04em; fill: var(--muted); }
-  .fk-bursa { font-size: 9.5px; }
-  .fk-bursa.tandai { fill: var(--accent); font-weight: 700; }
-  .fk-val.tandai { fill: var(--accent); font-weight: 700; }
+  .fk-axis { stroke: var(--ink); stroke-width: 1.5; }
+  .fk-grad { stroke: var(--line); stroke-width: 1; }
+  .fk-grad-t { font-family: var(--font-mono); font-size: 8.5px; fill: var(--muted); }
+  .fk-grad-t.satuan { font-size: 7px; letter-spacing: 0.14em; }
+  .fk-cut { font-size: 11px; fill: var(--muted); }
 
+  .fk-float { fill: var(--accent); transform: scaleX(0); transform-origin: left center; transition: transform 0.9s cubic-bezier(0.22, 0.9, 0.24, 1.03) 0.1s; }
+  .fk.masuk .fk-float { transform: scaleX(1); }
+  .fk-float-n { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: 26px; fill: var(--accent); }
+  .fk-float-t { font-family: var(--font-mono); font-size: 7px; letter-spacing: 0.12em; fill: var(--accent); }
+
+  .fk-tick { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 3; opacity: 0; transition: opacity 0.5s ease; }
+  .fk-tick.tandai { stroke: var(--ink); stroke-dasharray: none; stroke-width: 1.4; }
+  .fk.masuk .fk-tick { opacity: 0.9; }
+  .fk-bursa { font-family: var(--font-mono); font-size: 8px; letter-spacing: 0.08em; fill: var(--muted); opacity: 0; transition: opacity 0.5s ease; }
+  .fk-bursa.tandai { fill: var(--ink); font-weight: 700; }
+  .fk.masuk .fk-bursa { opacity: 1; }
+
+  .fk-dari { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 2 2; opacity: 0.8; }
+  .fk-dari-arah { stroke: var(--accent); stroke-width: 1; }
+  .fk-dari-t { font-family: var(--font-mono); font-size: 7.5px; fill: var(--accent); letter-spacing: 0.06em; }
+
+  .fk-key { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); line-height: 1.7; }
   .fk-foot { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; }
   .fk-note { font-size: 13.5px; color: var(--ink); line-height: 1.55; max-width: 64ch; }
+  @media (prefers-reduced-motion: reduce) { .fk-float, .fk-tick, .fk-bursa { transition: none; } }
 </style>

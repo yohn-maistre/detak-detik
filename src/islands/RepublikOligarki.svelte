@@ -35,15 +35,19 @@
 </script>
 
 <div class="ro" data-no-stempel>
-  <!-- live gap ticker -->
-  <div class="ro-tik">
-    <div class="ro-tik-row">
+  <!-- the live gap, set in type: the size contrast is the chart -->
+  <div class="ro-tik" role="group" aria-label={`Sejak 1 Januari: 50 orang terkaya bertambah ${rpSingkat(OLIGARK_PER_HARI * hari)}, pekerja rata-rata ${rpSingkat(PEKERJA_PER_HARI * hari)}`}>
+    <div class="ro-tik-sisi">
       <span class="ro-tik-lbl mono">50 ORANG TERKAYA · SEJAK 1 JAN</span>
-      <span class="ro-tik-val num naik">+ {rpSingkat(OLIGARK_PER_HARI * hari)}</span>
+      <span class="ro-tik-val besar num">+&thinsp;{rpSingkat(OLIGARK_PER_HARI * hari)}</span>
     </div>
-    <div class="ro-tik-row">
+    <div class="ro-tik-pivot" aria-hidden="true">
+      <b class="num">{fmt.format(OLIGARK_PER_HARI / PEKERJA_PER_HARI)}×</b>
+      <span class="mono">SELISIH LAJU HARIAN</span>
+    </div>
+    <div class="ro-tik-sisi kanan">
       <span class="ro-tik-lbl mono">PEKERJA RATA-RATA · PERIODE SAMA</span>
-      <span class="ro-tik-val num">+ {rpSingkat(PEKERJA_PER_HARI * hari)}</span>
+      <span class="ro-tik-val kecil num">+&thinsp;{rpSingkat(PEKERJA_PER_HARI * hari)}</span>
     </div>
     <p class="ro-tik-foot mono">⊙ celios 2026 · ± Rp 13 miliar/hari berbanding ± Rp 2.000/hari · laju rata-rata · hari ke-{hari}</p>
   </div>
@@ -106,13 +110,21 @@
 
 <style>
   .ro { display: grid; gap: clamp(34px, 5vw, 52px); }
-  .ro-tik { border: 1px solid var(--line); padding: 18px 20px; background: color-mix(in oklab, var(--accent) 6%, transparent); }
-  .ro-tik-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 6px 0; border-bottom: 1px dashed var(--line-soft); }
-  .ro-tik-row:last-of-type { border-bottom: none; }
-  .ro-tik-lbl { font-size: 9.5px; letter-spacing: 0.14em; color: var(--muted); }
-  .ro-tik-val { font-family: var(--font-display); font-weight: 800; font-size: clamp(20px, 3vw, 34px); line-height: 1; }
-  .ro-tik-val.naik { color: var(--accent); }
-  .ro-tik-foot { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); margin-top: 10px; }
+  /* de-boxed: two deltas on one baseline, the pivot states the rate gap.
+     The oligarch's figure is display-size, the worker's is caption-size:
+     the typography carries the ratio no bar chart could. */
+  .ro-tik { display: grid; grid-template-columns: auto auto 1fr; gap: 10px clamp(20px, 4vw, 56px); align-items: end; border-top: 2px solid var(--ink); padding-top: 16px; }
+  @media (max-width: 640px) { .ro-tik { grid-template-columns: 1fr; align-items: start; } }
+  .ro-tik-sisi { display: grid; gap: 8px; align-content: end; }
+  .ro-tik-sisi.kanan { align-content: end; }
+  .ro-tik-lbl { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
+  .ro-tik-val { font-family: 'Fraunces Variable', serif; font-weight: 340; line-height: 0.9; }
+  .ro-tik-val.besar { font-size: clamp(44px, 7vw, 84px); color: var(--accent); }
+  .ro-tik-val.kecil { font-size: clamp(17px, 2.2vw, 24px); color: var(--ink); }
+  .ro-tik-pivot { display: grid; gap: 3px; align-content: end; padding: 0 0 6px; }
+  .ro-tik-pivot b { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(15px, 1.8vw, 20px); color: var(--ink); }
+  .ro-tik-pivot .mono { font-size: 7.5px; letter-spacing: 0.16em; color: var(--muted); }
+  .ro-tik-foot { grid-column: 1 / -1; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 8px; margin-top: 4px; }
 
   .ro-h { font-size: clamp(20px, 2.6vw, 28px); color: var(--ink); margin-bottom: 16px; }
   .ro-cap { font-size: 14.5px; line-height: 1.6; color: var(--muted); margin: 14px 0 12px; max-width: 60ch; }

@@ -40,7 +40,7 @@ export const SKOR: Record<string, Skor> = {
   legislatif: {
     ringkas: 'Produk legislasi, kehadiran, dan kepatuhan lapor harta.',
     tiles: [
-      { tipe: 'waffle', isi: 7, dari: 47, label: 'RUU disahkan dari target Prolegnas 2026', sumber: 'dpr.go.id', nada: 'buruk' },
+      { tipe: 'waffle', isi: 7, dari: 47, label: 'RUU disahkan dari target Prolegnas 2026, tahun berjalan (kartu vital di atas membaca tahun penuh terakhir)', sumber: 'dpr.go.id', nada: 'buruk' },
       { tipe: 'stat', besar: '62%', label: 'Kehadiran rata-rata rapat paripurna', sumber: 'kompilasi redaksi', nada: 'buruk' },
       { tipe: 'stat', besar: '84%', label: 'Anggota patuh lapor LHKPN', sumber: 'kpk', nada: 'datar' },
     ],

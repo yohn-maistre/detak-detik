@@ -14,7 +14,6 @@ import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
 import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
-import PetaPiksel from '../islands/PetaPiksel.svelte';
 import TenggatStrip from '../islands/TenggatStrip.svelte';
 import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
@@ -23,7 +22,7 @@ import PetaRupa from '../islands/PetaRupa.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
 import DaftarMerah from '../islands/DaftarMerah.svelte';
 import Bahasa718 from '../islands/Bahasa718.svelte';
-import OtsusGrafik from '../islands/OtsusGrafik.svelte';
+import KasDaerah from '../islands/KasDaerah.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
 import LensaWilayah from '../islands/LensaWilayah.svelte';
 import CabangBand from '../islands/CabangBand.svelte';
@@ -307,10 +306,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </ol>
         </nav>
 
-        <!-- the doctor's chart: five vitals against their documented healthy
-             ranges — daerah's band is a statutory ceiling (UU 1/2022 Ps.146) -->
-        <VitalCabang client:visible />
-
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">
           <header class="bab-kepala">
@@ -318,10 +313,13 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>EKSEKUTIF</span>
               <h2 class="bab-tajuk display">Presiden &amp; Kabinet</h2>
-              <p class="bab-dek">Presiden dan kabinet terbesar sejak 1966: seberapa luas kuasa eksekutif, dan seberapa terbuka pertanggungjawabannya.</p>
+              <p class="bab-fungsi"><span class="fig">&ldquo;Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar.&rdquo;</span> <span class="mono">UUD 1945 · PS. 4 (1)</span></p>
+              <p class="bab-dek">Kabinet terbesar sejak 1966, dan seberapa terbuka pertanggungjawabannya.</p>
             </div>
           </header>
           <CabangBand cabang="eksekutif" client:visible />
+          <!-- the chapter's vital: read against its documented healthy range -->
+          <VitalCabang id="eksekutif-kabinet" client:visible />
           <SkorCabang cabang="eksekutif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Kabinet yang Membengkak</h3>
@@ -337,10 +335,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>LEGISLATIF</span>
               <h2 class="bab-tajuk display">Wakil &amp; Undang-Undang</h2>
-              <p class="bab-dek">DPR 580 kursi menyusun undang-undang dan anggaran. Kecepatannya menyahkan sebuah RUU menunjukkan prioritasnya.</p>
+              <p class="bab-fungsi"><span class="fig">&ldquo;Dewan Perwakilan Rakyat memegang kekuasaan membentuk undang-undang.&rdquo;</span> <span class="mono">UUD 1945 · PS. 20 (1)</span></p>
+              <p class="bab-dek">DPR 580 kursi; kecepatan mengesahkan RUU menunjukkan prioritasnya.</p>
             </div>
           </header>
           <CabangBand cabang="legislatif" client:visible />
+          <VitalCabang id="legislatif-throughput" client:visible />
           <SkorCabang cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
@@ -358,10 +358,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>YUDIKATIF</span>
               <h2 class="bab-tajuk display">Hukum &amp; Vonis</h2>
+              <p class="bab-fungsi"><span class="fig">&ldquo;Kekuasaan kehakiman merupakan kekuasaan yang merdeka untuk menyelenggarakan peradilan guna menegakkan hukum dan keadilan.&rdquo;</span> <span class="mono">UUD 1945 · PS. 24 (1)</span></p>
               <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
             </div>
           </header>
           <CabangBand cabang="yudikatif" client:visible />
+          <VitalCabang id="yudikatif-recovery" client:visible />
           <SkorCabang cabang="yudikatif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Hukuman yang Tak Sebanding</h3>
@@ -384,10 +386,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>APARAT</span>
               <h2 class="bab-tajuk display">Alat Paksa Negara</h2>
+              <p class="bab-fungsi"><span class="fig">&ldquo;&hellip; bertugas melindungi, mengayomi, melayani masyarakat, serta menegakkan hukum.&rdquo;</span> <span class="mono">UUD 1945 · PS. 30 (4), TENTANG POLRI</span></p>
               <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
             </div>
           </header>
           <CabangBand cabang="aparat" client:visible />
+          <VitalCabang id="aparat-anggaran" client:visible />
           <SkorCabang cabang="aparat" client:visible />
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
@@ -418,10 +422,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>DAERAH</span>
               <h2 class="bab-tajuk display">Pemerintahan &amp; Anggaran</h2>
+              <p class="bab-fungsi"><span class="fig">&ldquo;Pemerintahan daerah menjalankan otonomi seluas-luasnya &hellip;&rdquo;</span> <span class="mono">UUD 1945 · PS. 18 (5)</span></p>
               <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
             </div>
           </header>
           <CabangBand cabang="daerah" client:visible />
+          <VitalCabang id="daerah-pegawai" client:visible />
           <SkorCabang cabang="daerah" client:visible />
 
           <!-- the chapter's instrument: the morphing region lens, moved here
@@ -440,10 +446,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
                 <p class="aparat-note">defisit {EKONOMI.apbn.defisit} · rasio pajak {EKONOMI.apbn.pajak}</p>
               </div>
               <div class="ekonomi-otsus">
-                <span class="eyebrow">OTONOMI KHUSUS PAPUA · BELANJA DAN HASIL</span>
-                <OtsusGrafik client:visible />
-                <p class="ekonomi-teks">{EKONOMI.otsus.teks}</p>
-                <button class="chip"><span class="tick">⊙</span>{EKONOMI.otsus.chip}</button>
+                <span class="eyebrow">KAS DAERAH · BELANJA PEGAWAI 546 PEMDA TERHADAP PLAFON UU</span>
+                <!-- follows the lens: any prov/kab picked upstairs is named on
+                     the strip; a Papua province also opens the otsus exhibit -->
+                <KasDaerah client:visible />
               </div>
             </div>
             <div class="struk-rail">
@@ -635,30 +641,31 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
 
+          <!-- retired (2026-07-03, §13.15+§13.17): Riwayat Udara Jakarta (the
+               MAP owns live air), Janji yang Belum Cair (buku besar row), Sisa
+               di Alam Liar (Act III Daftar Merah), and the SEEDED PetaPiksel
+               heatmap — a contoh chart has no place in the paper's most
+               sensitive chapter. Until the deforestation + displacement feeds
+               pass verification (scout in flight, §13.17 A.6), the chapter
+               shows the real documents it already holds, and prints its
+               absences instead of filling them. -->
           <div class="lingk-sub bab-sub" id="hutan">
-            <PetaPiksel
-              client:visible
-              judul="Hutan yang Hilang"
-              dek="Setiap hari sejak 2015, satu piksel. Warna menandai luas peringatan deforestasi hari itu. Garis emas: hari ini."
-              satuan="ha"
-              sumber="gfw/umd · (data contoh)"
-              tahunMulai={2015}
-              seed="hutan-hilang-harian"
-              puncak={250}
-              tren={0.07}
-              dasar={28}
-              goyang={0.55}
-            />
+            <span class="eyebrow">DOKUMEN YANG SUDAH TERBUKA · DI PETA KABAR</span>
+            <p class="bab-kalimat fig">Konsesi hutan dan sawit (1.040 poligon, KLHK), izin usaha pertambangan (4.797 wilayah, ESDM), dan titik api satelit hari ini: dokumen aslinya terbuka di lapisan peta.</p>
+            <div class="lingk-chips">
+              <button class="chip" data-buka-peta="konsesi"><span class="tick">◌</span>BUKA DI PETA · KONSESI HUTAN/SAWIT</button>
+              <button class="chip" data-buka-peta="tambang"><span class="tick">◌</span>BUKA DI PETA · TAMBANG IUP</button>
+              <button class="chip" data-buka-peta="kebakaran"><span class="tick">◌</span>BUKA DI PETA · TITIK API</button>
+            </div>
           </div>
 
-          <!-- retired from this chapter (2026-07-03, §13.15): Riwayat Udara
-               Jakarta (the MAP owns live air quality — chip below), Janji yang
-               Belum Cair (JETP now a buku besar row), Sisa di Alam Liar (the
-               Daftar Merah in Act III owns species). The chapter keeps its
-               accountability core: the land being cut, and — next wave — the
-               people displaced by it. -->
           <div class="lingk-sub bab-sub">
-            <p class="bab-kalimat fig">Kualitas udara kota-kota hari ini, PM2,5 dan peringkatnya, terbaca langsung di lapisan udara Peta Kabar.</p>
+            <span class="eyebrow">YANG BELUM DICETAK · MENUNGGU VERIFIKASI</span>
+            <div class="ledger lingk-absen">
+              <div><span>Luas hutan hilang per provinsi, per tahun <span class="mono">gfw/umd · uji sumber berjalan</span></span><span class="v num">—</span></div>
+              <div><span>Warga tergusur konflik agraria, per tahun <span class="mono">kpa catahu · komnas ham · uji sumber berjalan</span></span><span class="v num">—</span></div>
+            </div>
+            <p class="bab-kalimat fig lingk-catatan">Angka penggusuran adalah angka paling sensitif di koran ini; ia dicetak setelah lolos periksa sumber, bukan sebelum. Kualitas udara kota-kota terbaca langsung di lapisan udara peta.</p>
             <button class="chip" data-buka-peta="udara"><span class="tick">◌</span>BUKA DI PETA · LAPISAN UDARA</button>
           </div>
         </section>
@@ -731,8 +738,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <header class="bab-kepala">
           <span class="bab-folio ghost-num" aria-hidden="true">I</span>
           <div class="bab-kepala-teks">
+            <!-- §13.17 B.4: the LAMPIRAN label carries the pipeline name;
+                 the SUBJECT below (the day's people) is the only display title -->
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN I · MANUSIA</span>
-            <h3 class="bab-tajuk display">Manusia</h3>
             <p class="bab-dek">Satu dari ratusan suku kepulauan, berganti dua kali sehari, dan cara mereka berbicara.</p>
           </div>
         </header>
@@ -744,7 +752,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <span class="bab-folio ghost-num" aria-hidden="true">II</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN II · HAYATI &amp; RUPA</span>
-            <h3 class="bab-tajuk display">Hayati &amp; Rupa</h3>
             <p class="bab-dek">Yang tumbuh dan yang dilukis: spesies endemik, satu plat seni, dan catatan alam harian.</p>
           </div>
         </header>
@@ -758,7 +765,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <span class="bab-folio ghost-num" aria-hidden="true">III</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · TANAH</span>
-            <h3 class="bab-tajuk display">Tanah</h3>
             <p class="bab-dek">Perbatasan fauna paling tajam di bumi — dan gunung-gunung yang kabar terkininya hidup di peta.</p>
           </div>
         </header>
@@ -1016,6 +1022,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .bab { padding-top: 8px; }
   .bab-head { margin-bottom: 22px; }
   .bab-dek { font-size: clamp(14px, 1.4vw, 16px); color: var(--muted); margin-top: 12px; max-width: 58ch; line-height: 1.55; }
+  /* the branch's constitutional mandate, quoted verbatim: what it is FOR,
+     so every reading below is against the branch's own charter */
+  .bab-fungsi { margin-top: 14px; max-width: 64ch; line-height: 1.5; }
+  .bab-fungsi .fig { font-style: italic; font-size: clamp(13.5px, 1.5vw, 16px); color: var(--ink); }
+  .bab-fungsi .mono { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); white-space: nowrap; margin-left: 8px; }
 
   /* the chapter masthead: a stroked folio numeral + small kicker + big serif title */
   /* one chapter-header anatomy, everywhere: kicker, title, dek, all flush
@@ -1239,6 +1250,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .act-mesin .wrap { display: grid; gap: clamp(48px, 9vh, 110px); }
   .hening-blok { margin: clamp(36px, 6vw, 64px) 0 8px; }
   .hening-ledger > div { padding: 9px 0; }
+  .lingk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .lingk-absen { margin: 8px 0 12px; }
+  .lingk-absen .mono { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); }
+  .lingk-catatan { max-width: 62ch; }
+  .lingk-sub .eyebrow { display: block; margin-bottom: 8px; }
   .hening-sumber { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); margin-left: 10px; text-transform: uppercase; }
   .hening-absen {
     display: flex;

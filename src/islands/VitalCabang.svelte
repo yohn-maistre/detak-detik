@@ -7,14 +7,20 @@
    * historical ranges. The needle sits where the branch is now (madder when
    * outside its range); a ghost tick marks where it stood before. Registry:
    * newsroom/data/vital_cabang.json, every row sourced.
+   *
+   * With an `id` prop the component renders ONE row (no section head) — the
+   * chapter-embedded mode: each branch chapter opens with its own vital,
+   * so the numbers live where their story is told, never twice.
    */
   import { onMount } from 'svelte';
   import { reducedMotion } from '../lib/motion';
   import VITAL from '../../newsroom/data/vital_cabang.json';
 
+  let { id }: { id?: string } = $props();
+
   const fmt = (n: number) => new Intl.NumberFormat('id-ID', { maximumFractionDigits: n < 10 ? 2 : 0 }).format(n);
 
-  const rows = VITAL.map((v) => {
+  const rows = (id ? VITAL.filter((v) => v.id === id) : VITAL).map((v) => {
     const pts = [v.band.lo, v.band.hi, v.dulu.nilai, v.nilai];
     const lo = Math.min(...pts), hi = Math.max(...pts);
     const pad = (hi - lo || 1) * 0.14;
@@ -37,15 +43,17 @@
   });
 </script>
 
-<section class="vc" bind:this={root} class:masuk data-no-stempel data-ref="vital-cabang">
-  <header class="vc-head">
-    <span class="eyebrow">KARTU VITAL · TIAP CABANG DIBACA TERHADAP KISARAN SEHATNYA YANG TERDOKUMENTASI</span>
-  </header>
+<section class="vc" class:solo={!!id} bind:this={root} class:masuk data-no-stempel data-ref="vital-cabang">
+  {#if !id}
+    <header class="vc-head">
+      <span class="eyebrow">KARTU VITAL · TIAP CABANG DIBACA TERHADAP KISARAN SEHATNYA YANG TERDOKUMENTASI</span>
+    </header>
+  {/if}
   <div class="vc-rows">
     {#each rows as r, i (r.id)}
       <article class="vc-row">
         <div class="vc-l">
-          <span class="vc-cabang mono">{r.cabang}</span>
+          <span class="vc-cabang mono">{id ? 'KARTU VITAL · DIBACA TERHADAP KISARAN TERDOKUMENTASI' : r.cabang}</span>
           <p class="vc-metrik">{r.metrik}</p>
         </div>
         <div class="vc-baca">
@@ -71,6 +79,10 @@
 
 <style>
   .vc { display: grid; gap: 14px; border-top: 2px solid var(--ink); padding-top: 14px; margin: 26px 0 34px; }
+  /* chapter-embedded: the chapter owns the chrome, the row is an instrument */
+  .vc.solo { border-top: 1px solid var(--line); padding-top: 4px; margin: 14px 0 8px; }
+  .vc.solo .vc-row { border-bottom: none; padding-bottom: 20px; }
+  .vc.solo .vc-cabang { color: var(--muted); letter-spacing: 0.16em; font-size: 8.5px; }
   .vc-rows { display: grid; }
   .vc-row {
     display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
