@@ -869,6 +869,116 @@ Remaining known items: struk rotates its region per edition (DJPK), SkorCabang
 "(data contoh)" flips as sources wire, CabangBand ruler-tick unification
 (wave 6).
 
+### 13.9 The Peta wave + Act II/III deepening (planned 2026-07-03, Yose review 3)
+
+**A. Map geometry, the real fix (diagnosed).** The wave-5a cleaner fixed
+ring sanity (dupes, slivers, unclosed) but not topology: a fresh scan finds
+**17 features with self-intersecting "bowtie" rings** (Kutai Kartanegara 3,
+Halmahera Utara 3, Kaimana 2, Konawe Utara 2, Tanggamus 2, + 12 more) —
+MapLibre's tessellator sprays exactly the spike-triangles in the
+screenshots. Fix path, in order:
+1. Extend clean-kab-geojson.mjs with an untangle pass: find crossing
+   segment pairs per ring, split at crossings into simple sub-rings, keep
+   sub-rings with >= 4 points and sane area. Gate: re-run the
+   self-intersection scan, require 0; feature count stays 514.
+2. If untangling drops real geometry: re-source ADM2 (geoBoundaries IDN
+   simplified), re-key to `${prov}|${nama}`, own Douglas-Peucker to
+   ~350 KB. (Download; check disk first per standing rule.)
+3. Styling regardless (Yose direction, agreed): kab lines go **faint +
+   dashed** (dasharray [1,2], opacity ramp 0.10→0.25, width 0.4→0.8);
+   province lines stay solid, slightly fainter than today; the selected
+   kabupaten alone carries a solid madder outline. No MapLibre built-in
+   borders exist, but OpenFreeMap tiles carry an admin `boundary` layer —
+   the fallback for visual lines if our polygons stay ugly (fills stay
+   ours for hit-testing).
+
+**B. Map interaction: tiered selection + the dossier v2.**
+- Tier 1, province: click highlights the province, dossier shows province
+  vitals (penduduk, IPM, kemiskinan, APBD, live-layer counts) with
+  receipts.
+- Tier 2, kabupaten: click inside a selected province (or any click past a
+  zoom threshold) highlights **only the kabupaten** (tint + solid line);
+  the province drops to a hairline halo. Dossier header becomes
+  PROV ▸ KAB breadcrumb: kabupaten rows (ibukota, penduduk, luas,
+  kepadatan, APBD per kapita when DJPK lands) with the province row
+  **collapsed underneath** — tapping it expands province context in place
+  (the switching-expansion mechanic Yose described). Esc / × steps back
+  one tier.
+- **Decouple from Lensa Wilayah**: the dossier is self-sufficient; "buka
+  di Lensa Wilayah →" becomes a quiet secondary link (no auto-scroll).
+- Legend on mobile: max-height min(48dvh, 340px), scrollable, masked fade
+  edges (it currently overflows the viewport).
+
+**C. Lensa Wilayah v2 = the accountability lens (Act II · Daerah).**
+Its own metrics, distinct from the map dossier: DJPK csv_apbd (keyless)
+per province AND kabupaten — belanja pegawai %, belanja modal %, APBD per
+kapita, each with rank /38 or /514 and the national line; BPS (key
+pending) adds IPM/kemiskinan/PDRB. KARTOTEK card-catalog form. The
+**struk artifact couples to the lens**: region selected → the struk
+reprints that region's budget composition (receipts change with the
+search, Yose's ask); national when idle. SkorCabang daerah tiles same.
+
+**D. Rak loads slow (diagnosed + plan).** The kliping data is already
+KV-cached (published 2×/day; nothing is fetched from RSS at page load) —
+the delay is client-side: `client:idle` hydration + the /edisi fetch +
+no reserved space (CLS shift). Fix: EdisiFeed → `client:load`;
+`<link rel="preload" as="fetch">` for /edisi; **localStorage snapshot**
+of the last edition in edition.ts (instant paint, stale-while-
+revalidate); skeleton rows + min-height so nothing shifts. Keep the
+2×/day editorial rhythm (a 15-minute re-cluster would burn Actions
+minutes to reshuffle headlines nobody asked for; the ticker already
+refreshes hourly for immediacy).
+
+**E. Denominations (Angka Edisi).** NASI BUNGKUS retires. New set:
+RUPIAH · LITER PERTAMAX (Rp 12.400/L, mypertamina) · PORSI MBG · HARI
+UPAH MINIMUM · **PELUNCURAN STARSHIP** (± US$100 jt/peluncuran, SpaceX
+2024 statements, × kurs — the scale-shock comparator, labeled ±).
+
+**F. Act II deepening (exploratory, brainstormed).**
+- Theme order becomes: PASAR → JANJI → DUNIA → **BUMI last** (thin today;
+  closing theme flows into hening → ObituariHutan → the seam into Act
+  III's nature — the record ends where the permanent record begins).
+- **Janji comprehensive**: ledger grows 3 → ~10 curated promises across
+  the regime's stated targets (8% growth, 3 jt rumah, swasembada pangan,
+  IKN, hilirisasi, MBG coverage, kemiskinan ekstrem 0%, stunting, energi,
+  tax ratio), each sumber + target + terukur + stamp + dumbbell; the
+  janji desk refreshes them. Laws/programs velocity stays in LEGISLATIF
+  (PabrikUU owns it).
+- **Viz variety law**: no form repeats within one act unless the data is
+  the same shape AND adjacent. Concretely: hutan keeps the pixel
+  calendar (unique), udara switches to a **horizon/ridgeline of kemarau
+  seasons** (same data, different honest form).
+- New theme candidate (propose to Yose): **INFORMASI** — press freedom
+  rank (RSF), internet shutdowns (SAFEnet), UU ITE prosecutions. Fits
+  the civic thesis; sources are citable.
+- Branch chapters get the regime-agnostic framing line: fungsi
+  konstitusional vs praktik terukur, one sentence per bab-dek.
+- Bug list from screenshots: JanjiCair JETP bar labels collide; janji
+  stamps overlap long titles on mobile (stamp moves inline-end or the
+  title gets padding-right).
+
+**G. The modular viz kit (the newsroom's instrument shelf).**
+`src/lib/viz/` registry: each form is a Svelte component + a Zod schema
+(type enum + encodings + cited row ids). The newsroom emits `viz_spec[]`;
+the client renders only from rows it can cite (Doc2Chart: the model
+picks the shape, never the values). Phase 1 registers the existing forms
+(pixel-calendar, dumbbell, gauge, waffle, funnel, sparkbar, ridgeline);
+Act III consumes the same registry so both acts stay "living."
+
+**H. Act III as a living act (like Act II).** Rotating slots with real
+depth: MANUSIA (Wajah feature + Bahasa) · HAYATI (species profile with
+IUCN status + range inset) · RUPA & BUDAYA (art plate + book/film/music
+of the day via Wikidata) · SEJARAH (on-this-day with primary source) ·
+ILMU & LANGIT (almanak + sky events) · TANAH (gunung + Wallace). Longer
+writeups (Wikipedia lead sections, Lane A quoted + linked), one bespoke
+viz per slot where the data earns it, newsroom-curated rotation later.
+
+**Sequencing from here**: 5b map geometry + line styling + legend + the
+two screenshot bugs + rak loading (today) → 5c tiered selection +
+dossier v2 + lensa decouple (today) → 6 denominations + janji expansion
++ bumi reorder + udara ridgeline (today/next) → 7 viz kit + lens-coupled
+receipts + Act III living + INFORMASI theme (next).
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
