@@ -245,7 +245,7 @@
   /* ADM1 province polygons, fetched as a static asset; codes patched to join
      DAERAH (see scripts/patch-prov-geojson.mjs). MapLibre fetches the URL. */
   // ?v= busts browser caches when the vendored geometry is repaired in place
-  const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson?v=3`;
+  const PROV_URL = `${import.meta.env.BASE_URL}data/idn-prov.geojson?v=4`;
   const KAB_URL = `${import.meta.env.BASE_URL}data/idn-kab.geojson?v=3`;
   type ProvGeom = { type: 'Polygon' | 'MultiPolygon'; coordinates: number[][][] | number[][][][] };
   type ProvFeature = { properties: { kode: string; nama: string }; geometry: ProvGeom };
@@ -310,18 +310,28 @@
       const ink = sat ? '#f2efe6' : '#15130e';
       // keep the polygons beneath the hazard dots so dots stay legible and clickable
       const below = map.getLayer('gempa-dot') ? 'gempa-dot' : undefined;
-      if (!map.getSource('provinsi')) map.addSource('provinsi', { type: 'geojson', data: provData as never, promoteId: 'kode' });
+      // the 'provinsi' geojson stays for LABEL POINTS and ZOOM BBOXES only —
+      // its polygons are a fragmented tessellation and must never render.
+      // Every province-level surface (base wash, hover, selection tint,
+      // choropleth) draws from the CLEAN kab polygons, keyed by their `prov`
+      // code, so fills match the real borders and align with the kab lines.
+      if (!map.getSource('kab')) map.addSource('kab', { type: 'geojson', data: KAB_URL });
       if (!map.getLayer('provinsi-fill')) {
         map.addLayer({
-          id: 'provinsi-fill', type: 'fill', source: 'provinsi', layout: { visibility: vis },
+          id: 'provinsi-fill', type: 'fill', source: 'kab', layout: { visibility: vis },
           paint: {
             'fill-color': (choroExpr as string) ?? ink,
-            'fill-opacity': choroExpr ? 0.72 : ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04],
+            'fill-opacity': choroExpr ? 0.72 : 0.045,
           },
         }, below);
       }
-      // kabupaten boundaries (thin) + a transparent clickable kab surface (BIG ADM2)
-      if (!map.getSource('kab')) map.addSource('kab', { type: 'geojson', data: KAB_URL });
+      if (!map.getLayer('provinsi-hover')) {
+        map.addLayer({
+          id: 'provinsi-hover', type: 'fill', source: 'kab',
+          filter: ['==', ['get', 'prov'], '__none__'], layout: { visibility: vis },
+          paint: { 'fill-color': ink, 'fill-opacity': 0.1 },
+        }, below);
+      }
       if (!map.getLayer('kab-fill')) {
         map.addLayer({ id: 'kab-fill', type: 'fill', source: 'kab', layout: { visibility: vis }, paint: { 'fill-color': '#000', 'fill-opacity': 0 } }, below);
       }
@@ -368,7 +378,7 @@
       // the province label, never an outline.
       if (!map.getLayer('provinsi-sel-fill')) {
         map.addLayer({
-          id: 'provinsi-sel-fill', type: 'fill', source: 'provinsi', filter: ['==', ['get', 'kode'], lensaKode], layout: { visibility: vis },
+          id: 'provinsi-sel-fill', type: 'fill', source: 'kab', filter: ['==', ['get', 'prov'], lensaKode], layout: { visibility: vis },
           paint: { 'fill-color': '#e44a06', 'fill-opacity': 0.12 },
         }, below);
       }
@@ -395,7 +405,7 @@
 
   function toggleProvinsi(onState: boolean) {
     provinsiOn = onState;
-    for (const id of ['provinsi-fill', 'kab-fill', 'kab-line', 'kab-lab', 'provinsi-sel-fill', 'provinsi-lab']) {
+    for (const id of ['provinsi-fill', 'provinsi-hover', 'kab-fill', 'kab-line', 'kab-lab', 'provinsi-sel-fill', 'provinsi-lab']) {
       if (map?.getLayer(id)) map.setLayoutProperty(id, 'visibility', onState ? 'visible' : 'none');
     }
   }
@@ -428,7 +438,9 @@
       .map((d) => ({ kode: d.kode!, v: angkaDaerah(d[metric]) }))
       .filter((r) => Number.isFinite(r.v));
     const lo = Math.min(...rows.map((r) => r.v)), hi = Math.max(...rows.map((r) => r.v));
-    const expr: unknown[] = ['match', ['get', 'kode']];
+    // keyed by the kab layer's `prov` code: fills draw from the CLEAN kab
+    // polygons (the vendored province set is fragmented; see below)
+    const expr: unknown[] = ['match', ['get', 'prov']];
     for (const r of rows) expr.push(r.kode, rampWarna((r.v - lo) / (hi - lo || 1)));
     expr.push('#bcb094');
     return { expr, lo, hi };
@@ -1469,17 +1481,16 @@
         if (!hit.length) fitur = null;
       });
       map.on('mousemove', 'provinsi-fill', (e) => {
-        const k = e.features?.[0]?.properties?.kode as string | undefined;
+        const k = e.features?.[0]?.properties?.prov as string | undefined;
         if (!map || !k || k === hoverKode) return;
-        if (hoverKode) map.setFeatureState({ source: 'provinsi', id: hoverKode }, { hover: false });
         hoverKode = k;
-        map.setFeatureState({ source: 'provinsi', id: k }, { hover: true });
+        if (map.getLayer('provinsi-hover')) map.setFilter('provinsi-hover', ['==', ['get', 'prov'], k]);
         map.getCanvas().style.cursor = 'pointer';
       });
       map.on('mouseleave', 'provinsi-fill', () => {
         if (!map) return;
-        if (hoverKode) map.setFeatureState({ source: 'provinsi', id: hoverKode }, { hover: false });
         hoverKode = null;
+        if (map.getLayer('provinsi-hover')) map.setFilter('provinsi-hover', ['==', ['get', 'prov'], '__none__']);
         map.getCanvas().style.cursor = '';
       });
 
@@ -1515,9 +1526,8 @@
       unsubs.push(onLensa((k) => {
         lensaKode = k;
         lensaKabNama = null; // a province (re)selection clears any drilled-in regency pointer
-        for (const id of ['provinsi-sel-fill', 'provinsi-lab']) {
-          if (map?.getLayer(id)) map.setFilter(id, ['==', ['get', 'kode'], k]);
-        }
+        if (map?.getLayer('provinsi-sel-fill')) map.setFilter('provinsi-sel-fill', ['==', ['get', 'prov'], k]);
+        if (map?.getLayer('provinsi-lab')) map.setFilter('provinsi-lab', ['==', ['get', 'kode'], k]);
         if (!map) return;
         if (k === 'nasional') { map.fitBounds(IDN_BOUNDS, { padding: fitPad(), duration: 900 }); return; }
         void provDataReady.then(() => {
@@ -1537,7 +1547,7 @@
         if (metric === 'mati') {
           choroExpr = null; choroLegend = null;
           map.setPaintProperty('provinsi-fill', 'fill-color', (plat === 'satelit' || plat === 'cuaca' || plat === 'malam') ? '#f2efe6' : '#15130e');
-          map.setPaintProperty('provinsi-fill', 'fill-opacity', ['case', ['boolean', ['feature-state', 'hover'], false], 0.16, 0.04] as never);
+          map.setPaintProperty('provinsi-fill', 'fill-opacity', 0.045);
           return;
         }
         const meta = METRIK_PETA[metric];
