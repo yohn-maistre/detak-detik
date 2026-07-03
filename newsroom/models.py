@@ -103,6 +103,10 @@ class Kliping(BaseModel):
     # True when any clip comes from an official state source (roster `resmi`):
     # the government's own words, marked as such on the shelf
     resmi: bool = False
+    # Lane A law mentions: legislation cited in the cluster's own verbatim
+    # headlines (numbered regex + curated named aliases, see kliping._hukum_dari).
+    # The lembar prints a § row; None = no law was named.
+    hukum: list[str] | None = None
 
 
 class KlipingMeta(BaseModel):

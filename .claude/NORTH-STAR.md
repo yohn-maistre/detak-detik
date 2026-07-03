@@ -1048,6 +1048,77 @@ Beyond Yose's asks; each thesis-pure and free-infra feasible. Phase tags:
     derived from edition number + lead hash (VeilMuka's grammar at
     stamp scale): every edition visually fingerprinted.
 
+### 13.11 LAPIS HUKUM — the legal layer (planned 2026-07-03, research in flight)
+
+Yose found pasal.id and asked where legal data fits ("for the sources, or
+for Aksara"). The answer is bigger than either: **law is the state's own
+receipt**. A civic paper that prints "the regime promised X" is good; one
+that prints the pasal that *obligates* X, verbatim, with its
+berlaku/diubah/dicabut status, is untouchable. Two scouts are verifying
+pasal.id's API surface + the official landscape (peraturan.bpk.go.id,
+peraturan.go.id/JDIHN, MA putusan, DPR RUU tracker). Everything below is
+gated on what they verify — citation-or-silence applies to endpoints too.
+
+**Foundation (build first):** a legal registry — curated, vendored JSON
+(`src/lib/data/hukum.ts`): the ~20 laws the paper actually cites (UU ITE,
+UU TNI, UU Polri, UU Minerba, UU IKN, UU Cipta Kerja, UU BUMN/Danantara,
+UU KPK, KUHP baru, UU PDP…), each with: identity (№/year), judul, status
+chain (diubah/dicabut-by, verbatim from the official source), the 2–4
+pasal the paper quotes (text verbatim + source URL), and tanggal
+diundangkan. Hand-verified once, cheap forever; a live API upgrades it
+later without changing consumers. Lane A by construction.
+
+**Mechanics, ranked by leverage:**
+1. **DASAR HUKUM chips** [9] — receipts that rest on a law (janji rows,
+   aparat structure, Danantara, INFORMASI theme) gain a `§ UU 1/2025 ·
+   PSL 3` chip → small tear-off lembar: pasal text verbatim, status line
+   ("berlaku · diubah oleh UU 19/2016"), official link. The legal quote
+   IS the receipt.
+2. **Kliping ↔ law joins** [8] — deterministic regex in the newsroom
+   (`UU\s+№?\d+/\d{4}`, "RUU X", "Perppu") stamps clusters that mention
+   a law; the lembar dossier gains a MENYEBUT row linking into the
+   registry. Zero LLM, pure Lane A.
+3. **Aksara speaks law** [8] — new bus verb `buka_pasal { uu, pasal }`
+   (Zod-validated like everything): Aksara answers "apa dasar hukumnya?"
+   by *opening the actual pasal*, never paraphrasing it. The agent stays
+   one more speaker.
+4. **PABRIK UNDANG-UNDANG live** [7] — the existing perspektif becomes a
+   living instrument if DPR/BPK data verifies: RUU pipeline counts,
+   status board (prolegnas → sidang → diundangkan), days-in-chamber.
+   The law factory measured like the loss odometer.
+5. **Rantai perubahan** [6] — a law's amendment chain drawn as a
+   paper-trail timeline (UU 11/2008 → UU 19/2016 → …), viz-variety law
+   satisfied; pairs with the INFORMASI theme (UU ITE's own family tree
+   next to its prosecution counts).
+6. **SIDANG HARI INI** [§13.10 item, now upgradeable] — MA putusan
+   metadata if the scout verifies access: today's verdict count as a
+   quiet meter, notable putusan linked.
+
+**pasal.id itself**: treat as a *reader convenience link target* (nice
+deep-links into consolidated law text) unless the scout finds a public
+API + permissive terms; the registry's canonical sources stay official
+(BPK/BPHN). Never scrape a private product.
+
+### 13.12 DJPK / APBD — the accountability engine's fuel (research in flight)
+
+Design regardless of endpoint details (scout verifying):
+- **Ingest**: `scripts/fetch-apbd.mjs`, run manually/CI-monthly — never
+  at page load. Output: one vendored JSON keyed by Kemendagri kode
+  (`{ kode, tahun, pendapatan, belanja, pegawai, modal }` × 38 prov +
+  514 kab), joined to idn-wilayah pop for per-kapita. Small, static,
+  versioned — the idn-wilayah.json pattern.
+- **Metrics** (each with rank /38 or /514 + the national line):
+  belanja pegawai % (payroll share — the "government that pays itself"
+  number), belanja modal % (what actually gets built), APBD per kapita.
+- **LensaWilayah v2 = KARTOTEK**: card-catalog form; search stays; the
+  province card files these three metrics as drawn rows (rank ticks on
+  a national ruler, not adjectives); kab tier appears when the map
+  drills (set_lensa_kab already carries the join key).
+- **Struk coupling**: region selected → the struk artifact reprints that
+  region's budget composition; national when idle (Yose's ask, §13.9-C).
+- If DJPK is CSV-only + no CORS: fetch in the script, not the worker —
+  the data is yearly, the worker stays stateless.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots

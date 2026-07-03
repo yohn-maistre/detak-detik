@@ -28,6 +28,8 @@ export interface LiveKliping {
   butir?: LiveButir[];
   /** any clip comes from an official state source (the RESMI marker) */
   resmi?: boolean;
+  /** Lane A law mentions extracted from the cluster's verbatim headlines (§ row) */
+  hukum?: string[];
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 export interface LiveEdisi {

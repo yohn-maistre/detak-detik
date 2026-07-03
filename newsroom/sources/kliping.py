@@ -281,6 +281,56 @@ def _klaster(items: list[dict]) -> list[list[dict]]:
 _KALIMAT = re.compile(r"(?<=[.!?…])\s+")
 
 
+# ── law mentions (Lane A): legislation cited in the cluster's own verbatim
+#    headlines. Numbered forms parse by regex; NAMED forms must join the curated
+#    alias list below — headlines are Title Case, so free capture after "RUU"
+#    would swallow the rest of the sentence ("RUU KUHAP Bersama Pemerintah").
+#    Precision over recall: a missed law is silence, a wrong one is a lie.
+#    The list doubles later as the join key into the legal registry (§13.11).
+_UU_ALIAS: tuple[str, ...] = (
+    "cipta kerja", "perampasan aset", "perlindungan data pribadi",
+    "kesejahteraan ibu dan anak", "lalu lintas", "sumber daya air",
+    "ciptaker", "omnibus", "ite", "tni", "polri", "kpk", "kuhp", "kuhap",
+    "pdp", "ikn", "asn", "bumn", "md3", "desa", "ormas", "pemilu", "pilkada",
+    "penyiaran", "kejaksaan", "kesehatan", "minerba", "migas", "sisdiknas",
+    "pesantren", "imigrasi", "narkotika", "otsus", "hpp", "p2sk", "kia",
+    "pprt", "tppu", "tpks",
+)
+_ALIAS_URUT = sorted(_UU_ALIAS, key=len, reverse=True)
+# "PP"/"Perpres"/"Permen…" only count in numbered form (bare "PP" is a false
+# friend: PP Muhammadiyah is an organisation, "Permen" is candy)
+_HUKUM_NOMOR = re.compile(
+    r"\b(UU|RUU|Perppu|Perpres|PP)\s+(?:No(?:mor)?\.?\s*)?(\d{1,3})\s*(?:/\s*|\s+Tahun\s+)(\d{4})\b",
+    re.IGNORECASE,
+)
+_HUKUM_NAMA = re.compile(r"\b(UU|RUU|Perppu)\s+", re.IGNORECASE)
+
+
+def _rapikan_kw(kw: str) -> str:
+    kw = kw.upper()
+    return {"PERPPU": "Perppu", "PERPRES": "Perpres"}.get(kw, kw)
+
+
+def _hukum_dari(anggota: list[dict]) -> list[str]:
+    """The § stamp: laws the cluster's headlines cite, verbatim surface text,
+    deduped case-insensitively, capped at three."""
+    temu: dict[str, str] = {}
+    for it in anggota:
+        j = it["judul"]
+        for m in _HUKUM_NOMOR.finditer(j):
+            disp = f"{_rapikan_kw(m.group(1))} {int(m.group(2))}/{m.group(3)}"
+            temu.setdefault(disp.upper(), disp)
+        for m in _HUKUM_NAMA.finditer(j):
+            sisa = j[m.end():]
+            sisa_low = sisa.lower()
+            for alias in _ALIAS_URUT:
+                if sisa_low.startswith(alias) and not sisa_low[len(alias):len(alias) + 1].isalnum():
+                    disp = f"{_rapikan_kw(m.group(1))} {sisa[:len(alias)]}"
+                    temu.setdefault(disp.upper(), disp)
+                    break
+    return list(temu.values())[:3]
+
+
 def _butir_dari(wakil: list[dict], utama: dict) -> list[Butir]:
     """Key points, Lane A verbatim: the first sentence of each outlet's lede,
     preferring one lede per ownership group, near-duplicates (and the lead
@@ -346,6 +396,7 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
         butir=butir if len(butir) >= 2 else None,
         # a cluster carrying the state's own announcement is marked, quietly
         resmi=any(it.get("resmi") for it in anggota),
+        hukum=_hukum_dari(anggota) or None,
         n_media=n_media,
         n_grup=n_grup,
         skor=n_grup * 2 + n_media,  # corroboration by ownership diversity, not volume

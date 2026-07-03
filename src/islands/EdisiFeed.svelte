@@ -151,6 +151,7 @@
               </span>
               <span>{metaBaris(k)} · MEJA {(k.meja ?? 'nasional').toUpperCase()}</span>
               {#if k.resmi}<span class="feed-resmi">RESMI</span>{/if}
+              {#if k.hukum?.length}<span class="feed-hukum">§ {k.hukum[0].toUpperCase()}</span>{/if}
               {#if k.titik_buta}<span class="feed-buta">TITIK BUTA · SATU GRUP</span>{/if}
             </p>
           </div>
@@ -193,6 +194,11 @@
     </div>
     <h3 class="lk-judul display">{buka.utama.judul}</h3>
     <p class="lk-kredit mono">JUDUL VERBATIM · {buka.utama.media.toUpperCase()}</p>
+    {#if buka.hukum?.length}
+      <!-- laws the headlines themselves cite (Lane A regex, newsroom) — becomes
+           a link into the legal registry when LAPIS HUKUM lands (§13.11) -->
+      <p class="lk-hukum mono">MENYEBUT {#each buka.hukum as h, i (h)}{#if i}<span class="lk-hukum-pisah"> · </span>{/if}<span class="lk-hukum-uu">§ {h.toUpperCase()}</span>{/each}</p>
+    {/if}
 
     {#if buka.utama.ringkas}
       <blockquote class="lk-lede">
@@ -323,6 +329,8 @@
   .feed-sq i.penuh, .lk-sq i.penuh { background: var(--ink); }
   .feed-buta { color: var(--accent); border: 1px solid var(--accent); padding: 1px 6px; font-size: 8.5px; letter-spacing: 0.12em; }
   .feed-resmi { color: var(--accent2); border: 1px solid var(--accent2); padding: 1px 6px; font-size: 8.5px; letter-spacing: 0.12em; }
+  /* a law named in the headlines: a factual stamp, ink not alarm */
+  .feed-hukum { color: var(--ink); opacity: 0.7; font-size: 8.5px; letter-spacing: 0.12em; }
 
   /* skeleton */
   .rangka-j, .rangka-m { display: block; background: color-mix(in oklab, var(--ink) 8%, transparent); }
@@ -367,6 +375,9 @@
   .lk-buta { font-size: 9px; letter-spacing: 0.14em; color: var(--accent); border-color: var(--accent); }
   .lk-judul { font-size: clamp(22px, 3.4vw, 34px); line-height: 1.08; margin: 12px 0 4px; max-width: 30ch; }
   .lk-kredit { font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
+  .lk-hukum { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); margin-top: 2px; }
+  .lk-hukum-uu { color: var(--ink); }
+  .lk-hukum-pisah { color: var(--muted); }
 
   .lk-lede { margin: 14px 0 0; padding-left: 14px; border-left: 2px solid var(--line); font-size: 14.5px; line-height: 1.6; color: var(--ink); max-width: 62ch; }
   .lk-lede cite { display: block; margin-top: 6px; font-style: normal; font-size: 8.5px; letter-spacing: 0.14em; color: var(--muted); }
