@@ -10,7 +10,7 @@
   import { onMount } from 'svelte';
   import { REGIONS, PROV_GEO, DAERAH } from '../lib/data/edisi';
   import { getLensa, onLensa } from '../lib/lensa';
-  import { onLensaKab } from '../lib/lensa-kab';
+  import { getLensaKab, onLensaKab, setLensaKab, type LensaKab } from '../lib/lensa-kab';
   import { on, dispatch } from '../lib/commands/dispatcher';
   import { drawEngraving, ENGRAVE_DINAS } from '../lib/engrave';
   import { reducedMotion } from '../lib/motion';
@@ -254,7 +254,8 @@
 
   let provinsiOn = $state(true);
   let lensaKode = $state(getLensa());
-  let lensaKabNama = $state<string | null>(null); // clicked regency name — a quiet pointer to Lensa Wilayah
+  let lensaKab = $state<LensaKab | null>(getLensaKab()); // the drilled regency (tier 2) — mirrors the shared store
+  let provTerbuka = $state(false); // tier 2: province context expanded in place under the regency filing
   let hoverKode: string | null = null;
   /** choropleth fill expression, set by the map_choropleth verb; null = plain */
   let choroExpr: unknown = null;
@@ -589,6 +590,22 @@
     };
   });
 
+  /* tier 2 of the same card: the drilled regency's own filing. Shares and
+     density derive from the Kemendagri figures; a name that failed to join the
+     wilayah table still renders (name + breadcrumb, rows absent). */
+  const fmtN = (n: number, dec = 0) => new Intl.NumberFormat('id-ID', { maximumFractionDigits: dec }).format(n);
+  const dossierKab = $derived.by(() => {
+    const k = lensaKab;
+    if (!k || k.prov !== lensaKode) return null;
+    const dens = k.pop && k.luas ? k.pop / k.luas : null;
+    return {
+      ...k,
+      dens,
+      densStr: dens != null ? fmtN(dens, dens < 10 ? 1 : 0) : null,
+      shPop: k.pop && k.provPop ? (k.pop / k.provPop) * 100 : null,
+    };
+  });
+
   /* a clicked regency builds a payload (its figures + province aggregates) and
      hands it to Lensa Wilayah via set_lensa_kab — the dense in-map sub-card is gone,
      the panel below renders the proper filing. Returns null if the wilayah table
@@ -608,6 +625,12 @@
       ibukota: row.ibukota, pop: row.pop, luas: row.luas, lat: row.lat, lon: row.lon,
       provPop, provLuas, nKab: kabs.length, rankPop, rankPad,
     };
+  }
+
+  /* × and Esc step back one tier: regency → province → national */
+  function mundurTier() {
+    if (lensaKab) setLensaKab(null);
+    else dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } });
   }
 
   /* the single info card's contents, derived from the clicked feature's props */
@@ -1391,6 +1414,17 @@
     const ro = new ResizeObserver(() => { if (!petaSiap) drawEngraving(engraveEl, ENGRAVE_DINAS); });
     ro.observe(engraveEl);
 
+    // Esc steps back one tier: info card → regency → province → national.
+    // A scroll-locked lightbox (the kliping lembar) owns the key while open.
+    const onEsc = (e: KeyboardEvent) => {
+      if (e.key !== 'Escape' || document.body.style.overflow === 'hidden') return;
+      if (fitur) { fitur = null; return; }
+      if (lensaKab) { setLensaKab(null); return; }
+      if (lensaKode !== 'nasional') dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } });
+    };
+    window.addEventListener('keydown', onEsc);
+    unsubs.push(() => window.removeEventListener('keydown', onEsc));
+
     // live feeds: BMKG quakes (refreshed on a timer) + RainViewer, best-effort
     void refreshGempa();
     const gempaIv = setInterval(() => void refreshGempa(), 120_000);
@@ -1468,20 +1502,22 @@
         const p = e.features?.[0]?.properties as GeoPt | undefined;
         if (p) bukaFitur('sppg', e.lngLat.lng, e.lngLat.lat, p);
       });
-      // click a kabupaten: set its province as the lensa AND hand its filing to Lensa
-      // Wilayah (set_lensa_kab). Its name reads off the zoomed-in map labels (kab-lab),
-      // never a popup. The dispatches fire province-first, regency-second.
+      // click a kabupaten — tiered: the first click from afar selects the PROVINCE
+      // (tier 1); a click inside the already-selected province, or any click from
+      // close range, drills to the REGENCY itself (tier 2, set_lensa_kab). Its name
+      // reads off the zoomed-in map labels (kab-lab), never a popup.
       map.on('click', 'kab-fill', (e) => {
         if (titikMode) return; // armed for a point report: let the map click handle it
         const p = e.features?.[0]?.properties as { prov?: string; nama?: string } | undefined;
         if (!p?.prov || !p.nama) return;
         titik = null;
+        const drill = lensaKode === p.prov || (map?.getZoom() ?? 0) >= 6.5;
         dispatch({ cmd: 'set_lensa', params: { kode: p.prov } });
-        // set AFTER set_lensa (onLensa clears the regency), then record + publish it
-        lensaKabNama = String(p.nama);
-        if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['all', ['==', ['get', 'prov'], p.prov], ['==', ['get', 'nama'], String(p.nama)]]);
-        const payload = buildKabPayload(p.prov, String(p.nama));
-        if (payload) dispatch({ cmd: 'set_lensa_kab', params: payload });
+        if (drill) {
+          // a name that fails the wilayah join still files (breadcrumb-only card)
+          const payload = buildKabPayload(p.prov, String(p.nama)) ?? { kode: '', nama: String(p.nama), prov: p.prov };
+          dispatch({ cmd: 'set_lensa_kab', params: payload });
+        }
       });
       // a bare-map click: drop the location panel if armed, else close the info card
       const DOT_LAYERS = ['gempa-dot', 'tambang-fill', 'konsesi-fill', 'satwa-fill', 'sppg-dot', ...LAYERS.map((l) => `${l.id}-dot`)];
@@ -1536,8 +1572,7 @@
       }));
       unsubs.push(onLensa((k) => {
         lensaKode = k;
-        lensaKabNama = null; // a province (re)selection clears any drilled-in regency pointer
-        if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['==', ['get', 'nama'], '__none__']);
+        // any drilled regency clears itself in lensa-kab.ts when the lens moves
         if (map?.getLayer('provinsi-sel-fill')) map.setFilter('provinsi-sel-fill', ['==', ['get', 'prov'], k]);
         if (map?.getLayer('provinsi-lab')) map.setFilter('provinsi-lab', ['==', ['get', 'kode'], k]);
         if (!map) return;
@@ -1551,12 +1586,19 @@
           }
         });
       }));
-      // keep the in-map breadcrumb in sync when the regency is dismissed from Lensa Wilayah
+      // the shared store is the single authority for tier 2: every speaker (map
+      // click, Lensa Wilayah's TUTUP, a tour, Aksara) lands here. The regency
+      // outline follows it, and the province tint drops to a hairline halo so
+      // the drilled regency alone reads selected.
       unsubs.push(onLensaKab((k) => {
-        if (!k) {
-          lensaKabNama = null;
-          if (map?.getLayer('kab-sel')) map.setFilter('kab-sel', ['==', ['get', 'nama'], '__none__']);
+        lensaKab = k;
+        provTerbuka = false; // the province context re-collapses for each new filing
+        if (map?.getLayer('kab-sel')) {
+          map.setFilter('kab-sel', k
+            ? ['all', ['==', ['get', 'prov'], k.prov], ['==', ['get', 'nama'], k.nama]]
+            : ['==', ['get', 'nama'], '__none__']);
         }
+        if (map?.getLayer('provinsi-sel-fill')) map.setPaintProperty('provinsi-sel-fill', 'fill-opacity', k ? 0.05 : 0.12);
       }));
 
       unsubs.push(on('map_choropleth', ({ metric, judul }) => {
@@ -1714,21 +1756,52 @@
 
     {#if dossier}
       <aside class="kb-dossier mono">
-        <button class="kb-dossier-x" onclick={() => dispatch({ cmd: 'set_lensa', params: { kode: 'nasional' } })} aria-label="Tutup dasar wilayah">✕</button>
-        <span class="kb-dossier-pulau">{dossier.pulau.toUpperCase()}</span>
-        <h3 class="kb-dossier-nama">{dossier.nama}</h3>
-        <div class="kb-dossier-rank">
-          <span class="kb-dossier-rank-n num">{dossier.ipmRank}</span><span class="kb-dossier-of">/{dossier.n} · IPM {dossier.ipm}</span>
-        </div>
-        <p class="kb-dossier-fakta">{dossier.fakta}</p>
-        <div class="kb-dossier-tally">
-          <span><b>{dossier.miskin}</b> miskin</span>
-          <span><b>{dossier.dokter}</b> dr/1k</span>
-          <span><b class="ember">{dossier.gempa}</b> gempa 24j</span>
-        </div>
-        {#if lensaKabNama}
-          <button class="kb-dossier-kabptr" onclick={() => pulseRef('dossier')}>▸ {lensaKabNama} · buka di Lensa Wilayah ↓</button>
+        {#snippet provBody(d: NonNullable<typeof dossier>)}
+          <div class="kb-dossier-rank">
+            <span class="kb-dossier-rank-n num">{d.ipmRank}</span><span class="kb-dossier-of">/{d.n} · IPM {d.ipm}</span>
+          </div>
+          <p class="kb-dossier-fakta">{d.fakta}</p>
+          <div class="kb-dossier-tally">
+            <span><b>{d.miskin}</b> miskin</span>
+            <span><b>{d.dokter}</b> dr/1k</span>
+            <span><b class="ember">{d.gempa}</b> gempa 24j</span>
+          </div>
+        {/snippet}
+        <button class="kb-dossier-x" onclick={mundurTier} aria-label={dossierKab ? 'Kembali ke tingkat provinsi' : 'Tutup dasar wilayah'}>✕</button>
+        {#if dossierKab}
+          <!-- tier 2: the regency filing. PROV ▸ crumb steps back; province context expands in place below -->
+          <nav class="kb-dossier-jejak" aria-label="Jejak wilayah">
+            <button onclick={() => setLensaKab(null)}>{dossier.nama.toUpperCase()}</button>
+            <span aria-hidden="true">▸</span>
+            <b>KAB/KOTA</b>
+          </nav>
+          <h3 class="kb-dossier-nama">{dossierKab.nama}</h3>
+          <div class="kb-dossier-baris">
+            {#if dossierKab.ibukota}<div class="kb-dossier-row"><span>Ibu kota</span><b>{dossierKab.ibukota}</b></div>{/if}
+            {#if dossierKab.pop}<div class="kb-dossier-row"><span>Penduduk</span><b>{fmtN(dossierKab.pop)} <i>№{dossierKab.rankPop}/{dossierKab.nKab}</i></b></div>{/if}
+            {#if dossierKab.luas}<div class="kb-dossier-row"><span>Luas</span><b>{fmtN(dossierKab.luas)} km²</b></div>{/if}
+            {#if dossierKab.densStr}<div class="kb-dossier-row"><span>Kepadatan</span><b>{dossierKab.densStr}/km² <i>№{dossierKab.rankPad}/{dossierKab.nKab}</i></b></div>{/if}
+          </div>
+          {#if dossierKab.shPop != null}
+            <div class="kb-dossier-sh">
+              <div class="kb-dossier-shbar"><i style={`width:${Math.min(100, Math.max(1, dossierKab.shPop)).toFixed(1)}%`}></i></div>
+              <span>{fmtN(dossierKab.shPop, 1)}% penduduk provinsi · 1 dari {dossierKab.nKab} kab/kota</span>
+            </div>
+          {/if}
+          <button class="kb-dossier-prow" onclick={() => (provTerbuka = !provTerbuka)} aria-expanded={provTerbuka}>
+            {provTerbuka ? '▾' : '▸'} PROVINSI · {dossier.nama.toUpperCase()}
+          </button>
+          {#if provTerbuka}
+            <div class="kb-dossier-pbody">{@render provBody(dossier)}</div>
+          {/if}
+          <div class="kb-dossier-kaki">
+            <span class="kb-dossier-src">Kemendagri 2025</span>
+            <button class="kb-dossier-tautan" onclick={() => pulseRef('dossier')}>buka di Lensa Wilayah ↓</button>
+          </div>
         {:else}
+          <span class="kb-dossier-pulau">{dossier.pulau.toUpperCase()}</span>
+          <h3 class="kb-dossier-nama">{dossier.nama}</h3>
+          {@render provBody(dossier)}
           <button class="kb-dossier-ask" onclick={() => pulseRef('dossier')}>baca dasar wilayah ↓</button>
         {/if}
       </aside>
@@ -1886,11 +1959,31 @@
   .kb-dossier-tally { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 9px; letter-spacing: 0.08em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 7px; }
   .kb-dossier-tally b { color: var(--ink); font-weight: 600; }
   .kb-dossier-tally b.ember { color: var(--accent); }
-  /* expand-in-place kabupaten sub-section: the province card grows this when a regency is clicked */
-  .kb-dossier-ask, .kb-dossier-kabptr { margin-top: 8px; background: none; border: 1px solid var(--line); color: var(--ink); font: inherit; font-size: 9px; letter-spacing: 0.12em; padding: 6px 8px; cursor: pointer; text-align: left; transition: background 0.2s, padding-left 0.2s; }
-  .kb-dossier-ask:hover, .kb-dossier-kabptr:hover { background: color-mix(in oklab, var(--accent) 12%, transparent); padding-left: 12px; }
-  /* the regency pointer: the dense in-map sub-card moved to Lensa Wilayah; this is the breadcrumb to it */
-  .kb-dossier-kabptr { border-left: 2px solid var(--accent); color: var(--accent); }
+  .kb-dossier-ask { margin-top: 8px; background: none; border: 1px solid var(--line); color: var(--ink); font: inherit; font-size: 9px; letter-spacing: 0.12em; padding: 6px 8px; cursor: pointer; text-align: left; transition: background 0.2s, padding-left 0.2s; }
+  .kb-dossier-ask:hover { background: color-mix(in oklab, var(--accent) 12%, transparent); padding-left: 12px; }
+  /* tier 2 — the regency filing: PROV ▸ crumb, ledger rows, a share-of-province
+     bar, the province row collapsed underneath (expands in place) */
+  .kb-dossier-jejak { display: flex; align-items: baseline; gap: 5px; font-size: 8.5px; letter-spacing: 0.18em; color: var(--muted); }
+  .kb-dossier-jejak button { background: none; border: none; padding: 0; font: inherit; letter-spacing: inherit; color: var(--muted); cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+  .kb-dossier-jejak button:hover { color: var(--accent); }
+  .kb-dossier-jejak span { color: var(--accent); }
+  .kb-dossier-jejak b { font-weight: 400; }
+  .kb-dossier-baris { display: grid; margin-top: 2px; }
+  .kb-dossier-row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; font-size: 9.5px; letter-spacing: 0.04em; color: var(--muted); padding: 3px 0; border-top: 1px dotted var(--line-soft); }
+  .kb-dossier-row:first-child { border-top: none; }
+  .kb-dossier-row b { color: var(--ink); font-weight: 600; text-align: right; }
+  .kb-dossier-row b i { font-style: normal; font-weight: 400; font-size: 8.5px; color: var(--muted); }
+  .kb-dossier-sh { display: grid; gap: 3px; margin-top: 2px; }
+  .kb-dossier-shbar { height: 3px; background: var(--line-soft); }
+  .kb-dossier-shbar i { display: block; height: 100%; background: var(--accent); }
+  .kb-dossier-sh > span { font-size: 8.5px; letter-spacing: 0.08em; color: var(--muted); }
+  .kb-dossier-prow { margin-top: 6px; background: none; border: none; border-top: 1px solid var(--line-soft); padding: 7px 0 0; font: inherit; font-size: 8.5px; letter-spacing: 0.16em; color: var(--muted); cursor: pointer; text-align: left; }
+  .kb-dossier-prow:hover { color: var(--accent); }
+  .kb-dossier-pbody { border-left: 2px solid var(--line-soft); padding-left: 9px; display: grid; gap: 4px; }
+  .kb-dossier-kaki { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 4px; }
+  .kb-dossier-src { font-size: 8px; letter-spacing: 0.08em; color: var(--muted); opacity: 0.85; }
+  .kb-dossier-tautan { background: none; border: none; padding: 0; font: inherit; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; }
+  .kb-dossier-tautan:hover { color: var(--accent); }
   .kb-choro {
     position: absolute; right: 12px; bottom: 12px; z-index: 5;
     display: flex; flex-direction: column; gap: 5px;

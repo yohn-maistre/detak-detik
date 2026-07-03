@@ -1062,6 +1062,38 @@ Beyond Yose's asks; each thesis-pure and free-infra feasible. Phase tags:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-03 · wave 6 — dossier v2 (the tiered filing) + quick wins
+- **Map dossier v2 shipped** (§13.9-B done): the card is now two-tier.
+  Tier 1 unchanged (province face). Tier 2 = the regency filing:
+  PROV ▸ crumb (province name clickable, steps back), Fraunces regency
+  name, ledger rows (ibu kota / penduduk №rank / luas / kepadatan №rank,
+  dotted leaders), a hairline **share-of-province bar**, and the
+  province row **collapsed underneath** — expands in place (Yose's
+  switching-expansion mechanic), re-collapses on each new filing.
+  Footer: quiet "Kemendagri 2025" source + dotted-underline
+  "buka di Lensa Wilayah ↓" (decoupled: dossier is self-sufficient,
+  the trip down is opt-in).
+- **Tier gate on kab clicks**: first click from afar selects the
+  province only; a click inside the selected province (or any click at
+  zoom ≥ 6.5) drills to the regency. **Esc steps back one tier**
+  (info card → regency → province → national; defers to the kliping
+  lembar while it scroll-locks). × and the crumb do the same.
+- **Store coherence fix**: lensa-kab now self-clears when the province
+  lens moves away (the "see lensa.ts" comment was aspirational — nothing
+  actually cleared it; LensaWilayah could show a stale regency from the
+  previous province). The map's onLensaKab subscription is the single
+  authority for the kab-sel outline + a **province-halo drop**
+  (sel-fill 0.12 → 0.05 at tier 2, so the regency alone reads selected).
+  Failed name-joins now file a minimal payload (name-only card) instead
+  of silently doing nothing.
+- Earlier same day (`8f18392`): denominations nasi → **liter Pertamax**
+  + **peluncuran Starship** (1 decimal below ten), theme order
+  **janji → ekonomi → dunia → sumber daya alam** (folios renumbered,
+  SDA rename, gerak II dek).
+- Next in wave 6: satellite/malam province lines (tile-based),
+  LensaWilayah v2 (DJPK + struk coupling), janji expansion, udara
+  ridgeline, lemari ide §13.10.
+
 ### 2026-07-03 · wave 5 CLOSED (5a+5b+5c-map) — compact point
 - **The spike saga, resolved in three acts**: (1) kab file untangled
   (self-crossings + pinch vertices, gate in cleaner, 514 intact);
