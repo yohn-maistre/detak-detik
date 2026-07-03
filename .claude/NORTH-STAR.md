@@ -1151,6 +1151,27 @@ Design regardless of endpoint details (scout verifying):
 - If DJPK is CSV-only + no CORS: fetch in the script, not the worker —
   the data is yearly, the worker stays stateless.
 
+### 13.13 THE ENDGAME ARC (Yose, 2026-07-03 — "writing this down before we forget")
+
+The order of the remaining epoch, in Yose's own priorities:
+1. **Act 2 swept top-to-bottom, then Act 3 completely redesigned** — be
+   thorough; pick up small cheap wins stumbled upon along the way
+   ("Midas' hands" rule: every file touched leaves shinier).
+2. **Sources must be easy to add** — one registry, one shape, drop a
+   feed in and the newsroom picks it up (media_roster.json is the seed;
+   the same pattern should hold for data sources: registry + fetch
+   script + vendored JSON, like apbd.json / enrich-wilayah).
+3. **Modular + reusable everything** — file structure organized for
+   reuse; the dataviz becomes a kit agents can drive: `src/lib/viz/`
+   registry, one Zod `viz_spec` per form, newsroom emits specs and the
+   site renders them (§13.9's modular viz law, now a pillar).
+4. **Aksara × Flue** — after Act 3's redesign, wire Aksara through the
+   Flue framework (§12 assessment). The agent stays one speaker on the
+   Zod bus; Flue is the runtime, not a new power.
+5. **The final form: detak-detik as an AGENT HARNESS, perhaps a CLI** —
+   the newspaper's pipeline (sources → lanes → gates → composed page)
+   generalized so agents can be pointed at it. Explicitly LAST.
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
