@@ -1,0 +1,554 @@
+{
+ "_catatan": "Arsip agenda istana — akumulasi dari setkab.go.id/feed/ oleh newsroom/sources/agenda.py (deterministik: regex + tabel kata, tanpa model). Feed hanya memuat ±10 butir; arsip inilah ingatannya. Setiap baris mengutip URL terbitan resminya.",
+ "_sumber": [
+  "https://setkab.go.id/feed/"
+ ],
+ "diambil": "2026-07-05T08:38:05+00:00",
+ "acara": [
+  {
+   "id": "57015c150cfa",
+   "url": "https://setkab.go.id/presiden-prabowo-dan-presiden-lukashenko-luncurkan-peta-jalan-kerja-sama-indonesia-belarus-2026-2030/",
+   "judul": "Presiden Prabowo dan Presiden Lukashenko Luncurkan Peta Jalan Kerja Sama Indonesia–Belarus 2026–2030",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-02",
+   "tanggal_terbit": "2026-07-02",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "luar-negeri",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "45902828dbb6",
+   "url": "https://setkab.go.id/amanat-presiden-republik-indonesia-pada-upacara-peringatan-ke-80-hari-bhayangkara-tahun-2026-di-lapangan-satuan-latihan-korbrimob-polri-cikeas-bogor-provinsi-jawa-barat-1-juli-2026/",
+   "judul": "Amanat Presiden Republik Indonesia pada Upacara Peringatan ke-80 Hari Bhayangkara Tahun 2026 di Lapangan Satuan Latihan Korbrimob Polri, Cikeas, Bogor, Provinsi Jawa Barat, 1 Juli 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "AMANAT",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-02",
+   "audiens": "Upacara Peringatan ke-80 Hari Bhayangkara Tahun 2026",
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum"
+   ],
+   "venue": "Lapangan Satuan Latihan Korbrimob Polri, Cikeas",
+   "kota": "Bogor",
+   "prov": "32",
+   "prov_nama": "Jawa Barat",
+   "lokasi_mentah": "Cikeas, Bogor, Provinsi Jawa Barat"
+  },
+  {
+   "id": "b4223e2d0bca",
+   "url": "https://setkab.go.id/beri-pengarahan-kepada-pegawai-seskab-teddy-ajak-bangun-motivasi-dan-berikan-kontribusi-terbaik-bagi-bangsa/",
+   "judul": "Beri Pengarahan kepada Pegawai, Seskab Teddy Ajak Bangun Motivasi dan Berikan Kontribusi Terbaik bagi Bangsa",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Pegawai",
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "1df3173c4e5d",
+   "url": "https://setkab.go.id/enam-pesan-presiden-prabowo-kepada-polri-jaga-kepercayaan-rakyat-hingga-tegakkan-hukum-dengan-adil/",
+   "judul": "Enam Pesan Presiden Prabowo kepada Polri: Jaga Kepercayaan Rakyat hingga Tegakkan Hukum dengan Adil",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Polri: Jaga Kepercayaan Rakyat hingga Tegakkan Hukum dengan Adil",
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b3c70736ee67",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-medali-loka-praja-samrakshana-pada-peringatan-ke-80-hari-bhayangkara/",
+   "judul": "Presiden Prabowo Terima Medali Loka Praja Samrakshana pada Peringatan Ke-80 Hari Bhayangkara",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Peringatan Ke-80 Hari Bhayangkara",
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "44c7a204e54a",
+   "url": "https://setkab.go.id/presiden-prabowo-hukum-harus-ditegakkan-secara-adil-melindungi-seluruh-lapisan-rakyat/",
+   "judul": "Presiden Prabowo: Hukum Harus Ditegakkan Secara Adil Melindungi Seluruh Lapisan Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "248050ca6ce3",
+   "url": "https://setkab.go.id/presiden-prabowo-anugerahkan-tanda-kehormatan-dan-pangkat-istimewa-kepada-jajaran-polri/",
+   "judul": "Presiden Prabowo Anugerahkan Tanda Kehormatan dan Pangkat Istimewa kepada Jajaran Polri",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Jajaran Polri",
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2efc51a91fac",
+   "url": "https://setkab.go.id/hari-bhayangkara-ke-80-presiden-prabowo-polri-harus-selalu-hadir-melindungi-melayani-dan-mengabdi-kepada-rakyat-2/",
+   "judul": "Hari Bhayangkara Ke-80, Presiden Prabowo: Polri Harus Selalu Hadir Melindungi, Melayani, dan Mengabdi kepada Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Rakyat",
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pertahanan-keamanan",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dcb13e16a975",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-upacara-peringatan-ke-80-hari-bhayangkara-di-bogor/",
+   "judul": "Presiden Prabowo Pimpin Upacara Peringatan ke-80 Hari Bhayangkara di Bogor",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "950f1be10e88",
+   "url": "https://setkab.go.id/pemerintah-resmi-luncurkan-logo-dan-identitas-visual-hut-ke-81-kemerdekaan-ri/",
+   "judul": "Pemerintah Resmi Luncurkan Logo dan Identitas Visual HUT Ke-81 Kemerdekaan RI",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-29",
+   "tanggal_terbit": "2026-06-29",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e55ecf6b0d20",
+   "url": "https://setkab.go.id/pemerintah-buka-angkatan-kedua-program-pemagangan-nasional-targetkan-150-ribu-peserta/",
+   "judul": "Pemerintah Buka Angkatan Kedua Program Pemagangan Nasional, Targetkan 150 Ribu Peserta",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-29",
+   "tanggal_terbit": "2026-06-29",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "70d2555046be",
+   "url": "https://setkab.go.id/presiden-prabowo-apresiasi-lompatan-inovasi-anak-bangsa-akademisi-diminta-hadirkan-solusi-bagi-indonesia/",
+   "judul": "Presiden Prabowo Apresiasi Lompatan Inovasi Anak Bangsa, Akademisi Diminta Hadirkan Solusi bagi Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "bfa7827a80e0",
+   "url": "https://setkab.go.id/presiden-prabowo-ajak-perkuat-persatuan-di-tengah-keberagaman-demi-kemajuan-bangsa/",
+   "judul": "Presiden Prabowo Ajak Perkuat Persatuan di Tengah Keberagaman demi Kemajuan Bangsa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8f707a373fbd",
+   "url": "https://setkab.go.id/presiden-prabowo-kemajuan-bangsa-dimulai-dari-gagasan-para-ilmuwan-dan-akademisi/",
+   "judul": "Presiden Prabowo: Kemajuan Bangsa Dimulai dari Gagasan para Ilmuwan dan Akademisi",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "809d11307898",
+   "url": "https://setkab.go.id/buka-sarasehan-kebangsaan-ksti-2026-presiden-prabowo-ajak-kampus-jadi-motor-kemandirian-ekonomi/",
+   "judul": "Buka Sarasehan Kebangsaan KSTI 2026, Presiden Prabowo Ajak Kampus Jadi Motor Kemandirian Ekonomi",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "079f928ff33a",
+   "url": "https://setkab.go.id/mensesneg-antusiasme-puluhan-ribu-masyarakat-dalam-pemilihan-logo-hut-ke-81-kemerdekaan-ri-cerminkan-semangat-kebangsaan/",
+   "judul": "Mensesneg: Antusiasme Puluhan Ribu Masyarakat dalam Pemilihan Logo HUT ke-81 Kemerdekaan RI Cerminkan Semangat Kebangsaan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "41c3f37c7848",
+   "url": "https://setkab.go.id/presiden-prabowo-instruksikan-perguruan-tinggi-cetak-sdm-unggul-untuk-percepat-industrialisasi-nasional/",
+   "judul": "Presiden Prabowo Instruksikan Perguruan Tinggi Cetak SDM Unggul untuk Percepat Industrialisasi Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-25",
+   "tanggal_terbit": "2026-06-25",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c7c30c6b9824",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-kapolri-seskab-teddy-polri-tekankan-komitmen-jaga-stabilitas-nasional/",
+   "judul": "Presiden Prabowo Terima Kapolri, Seskab Teddy: Polri Tekankan Komitmen Jaga Stabilitas Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-06-25",
+   "tanggal_terbit": "2026-06-25",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2b5aed8eb533",
+   "url": "https://setkab.go.id/dari-pesantren-ke-istana-santri-qurrotu-nafsin-belajar-langsung-mengenal-istana-kepresidenan/",
+   "judul": "Dari Pesantren ke Istana, Santri Qurrotu Nafsin Belajar Langsung Mengenal Istana Kepresidenan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-25",
+   "tanggal_terbit": "2026-06-25",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan",
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a32c324a57d6",
+   "url": "https://setkab.go.id/mensesneg-partisipasi-publik-dalam-pemilihan-logo-hut-ke-81-kemerdekaan-ri-wujud-semangat-gotong-royong-dan-rasa-memiliki-terhadap-bangsa/",
+   "judul": "Mensesneg: Partisipasi Publik dalam Pemilihan Logo HUT ke-81 Kemerdekaan RI Wujud Semangat Gotong Royong dan Rasa Memiliki terhadap Bangsa",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-25",
+   "tanggal_terbit": "2026-06-25",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "070a2c5ee414",
+   "url": "https://setkab.go.id/seskab-teddy-bagikan-progres-pembangunan-2-500-jembatan-target-5-000-jembatan-rampung-akhir-2026/",
+   "judul": "Seskab Teddy Bagikan Progres Pembangunan 2.500 Jembatan, Target 5.000 Jembatan Rampung Akhir 2026",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-25",
+   "tanggal_terbit": "2026-06-25",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "85492cad7617",
+   "url": "https://setkab.go.id/pemerintah-resmi-luncurkan-polling-pemilihan-logo-hut-ke-81-kemerdekaan-ri-libatkan-masyarakat-untuk-pertama-kalinya/",
+   "judul": "Pemerintah Resmi Luncurkan Polling Pemilihan Logo HUT Ke-81 Kemerdekaan RI, Libatkan Masyarakat untuk Pertama Kalinya",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "aedf0c2ec3b4",
+   "url": "https://setkab.go.id/petani-sampaikan-apresiasi-atas-dukungan-pemerintah-di-sektor-pertanian/",
+   "judul": "Petani Sampaikan Apresiasi atas Dukungan Pemerintah di Sektor Pertanian",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "4141d1782ee6",
+   "url": "https://setkab.go.id/di-penas-xvii-presiden-prabowo-tinjau-teknologi-pertanian-modern-untuk-perkuat-swasembada-pangan/",
+   "judul": "Di PENAS XVII, Presiden Prabowo Tinjau Teknologi Pertanian Modern untuk Perkuat Swasembada Pangan",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "a433649d206d",
+   "url": "https://setkab.go.id/presiden-prabowo-swasembada-pangan-dan-energi-jadi-bukti-nyata-kemandirian-bangsa/",
+   "judul": "Presiden Prabowo: Swasembada Pangan dan Energi Jadi Bukti Nyata Kemandirian Bangsa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "bbc0d5ee21a1",
+   "url": "https://setkab.go.id/presiden-prabowo-tegaskan-tujuan-kemerdekaan-adalah-kesejahteraan-seluruh-rakyat/",
+   "judul": "Presiden Prabowo Tegaskan Tujuan Kemerdekaan adalah Kesejahteraan Seluruh Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "241c2647f7ae",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-lencana-emas-adi-bhakti-tani-nelayan-maha-utama-dari-ktna-nasional/",
+   "judul": "Presiden Prabowo Terima Lencana Emas Adi Bhakti Tani Nelayan Maha Utama dari KTNA Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "14feed6bce99",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-puncak-penas-petani-dan-nelayan-xvii-tahun-2026-di-gorontalo-bersama-50-ribu-peserta/",
+   "judul": "Presiden Prabowo Hadiri Puncak PENAS Petani dan Nelayan XVII Tahun 2026 di Gorontalo Bersama 50 Ribu Peserta",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "5a3126450889",
+   "url": "https://setkab.go.id/bertolak-ke-gorontalo-presiden-prabowo-akan-hadiri-puncak-penas-petani-dan-nelayan-xvii/",
+   "judul": "Bertolak ke Gorontalo, Presiden Prabowo Akan Hadiri Puncak PENAS Petani dan Nelayan XVII",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "75",
+   "prov_nama": "Gorontalo"
+  },
+  {
+   "id": "1833e92a12b2",
+   "url": "https://setkab.go.id/presiden-prabowo-kekayaan-indonesia-harus-kembali-untuk-rakyat-kuncinya-pemerintahan-yang-bersih/",
+   "judul": "Presiden Prabowo: Kekayaan Indonesia Harus Kembali untuk Rakyat, Kuncinya Pemerintahan yang Bersih",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-23",
+   "tanggal_terbit": "2026-06-23",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  }
+ ]
+}

@@ -36,6 +36,7 @@ from .log import Log
 from .memory import ingat, simpan_arsip
 from .publish import publish_edisi
 from .sari import tulis_sari
+from .sources.agenda import gather_agenda
 from .sources.anggaran import gather_anggaran
 from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
@@ -68,10 +69,14 @@ async def run() -> int:
     hutan_rows, alert = await gather_hutan()
     janji_rows, janji = await gather_janji()
     papua_rows, papua = await gather_papua()
+    # AGENDA ISTANA: the executive's own published record (setkab, keyless,
+    # deterministic) — also grows data/agenda_istana.json every run
+    agenda_rows, agenda_ringkas = await gather_agenda()
     corpus = (pulse_rows + hukum_rows + harga_rows + anggaran_rows
-              + hutan_rows + janji_rows + papua_rows)
+              + hutan_rows + janji_rows + papua_rows + agenda_rows)
     corpus_map = {r.id: r for r in corpus}
     log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
+    log.event("agenda", **agenda_ringkas)
 
     # the kliping desk is Lane A pass-through (verbatim headlines, no model
     # text), so it never enters the fact-gate or the lawyer; dark feeds are

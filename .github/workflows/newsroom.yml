@@ -39,15 +39,20 @@ jobs:
           AKSARA_URL: ${{ vars.AKSARA_URL }}
         run: python -m newsroom.main
       # the edition's slim record enters the repo: versioned, diffable,
-      # citable memory. [skip ci] keeps archive commits from triggering a
-      # site rebuild (the page reads memory from the KV payload, not arsip/)
-      - name: Arsipkan edisi (INGATAN REDAKSI)
+      # citable memory. Arsip-only changes keep [skip ci]; when the run also
+      # refreshed newsroom/data (agenda istana, registries), the commit drops
+      # [skip ci] so the deploy bakes the fresh rows into the page.
+      - name: Arsipkan edisi (INGATAN REDAKSI + data)
         run: |
-          if [ -n "$(git status --porcelain arsip/)" ]; then
+          if [ -n "$(git status --porcelain arsip/ newsroom/data/)" ]; then
             git config user.name "newsroom[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add arsip/
-            git commit -m "arsip: rekaman edisi untuk ingatan redaksi [skip ci]"
+            git add arsip/ newsroom/data/
+            if git diff --cached --quiet -- newsroom/data/; then
+              git commit -m "arsip: rekaman edisi untuk ingatan redaksi [skip ci]"
+            else
+              git commit -m "data: agenda istana + arsip edisi"
+            fi
             git pull --rebase origin main || true
             git push || echo "arsip push gagal; rekaman tetap di artifact log"
           fi

@@ -1,0 +1,36 @@
+name: Agenda Istana
+
+# The keyless activity harvest: setkab.go.id/feed/ -> data/agenda_istana.json.
+# Deterministic (regex + word tables, no model), stdlib-only Python — so it
+# runs even while NEWSROOM_ENABLED is false and the LLM lanes sleep. The feed
+# only shows ~10 items; THIS cron is what grows the paper's activity record.
+# Offset from the Newsroom crons so their archive commits don't race.
+on:
+  schedule:
+    - cron: '2 22 * * *'
+    - cron: '2 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  panen:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # stdlib only — no pip install, by design (see agenda.py docstring)
+      - name: Panen agenda
+        run: python -m newsroom.sources.agenda
+      - name: Commit arsip agenda
+        run: |
+          if [ -n "$(git status --porcelain newsroom/data/agenda_istana.json)" ]; then
+            git config user.name "newsroom[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add newsroom/data/agenda_istana.json
+            git commit -m "data: agenda istana (panen setkab)"
+            git pull --rebase origin main || true
+            git push || echo "push gagal; panen berikutnya mengulang"
+          fi
