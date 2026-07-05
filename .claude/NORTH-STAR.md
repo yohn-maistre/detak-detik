@@ -596,6 +596,26 @@ kept for the record.
    karya notes (my curation of "well-intentioned lineage" — your call),
    19 INGATAN dates, 30 HAYATI rows + zona tags, 5 KARTU VITAL bands,
    12 JANJI registry rows.
+8b. **(wave 9, 2026-07-05) PARTAI registry review** —
+   `newsroom/data/partai_registry.json`: kursi KPU 2024, alias lists (the
+   kliping tagger matches them; "pan" is a live token, watch for false
+   positives), and especially the media-ownership rows (NasDem/Media
+   Group, Perindo/MNC, Golkar/Bakrie-historis) — documented facts, your
+   framing call before they carry weight.
+8c. **(wave 9) PUTUSAN curation** — upgrade
+   `newsroom/data/hukum_putusan.json` to real: 20-40 tipikor verdicts w/
+   nomor perkara + putusan3 URLs from ICW Tren Vonis (browser; the portal
+   walls machines). GradienKeadilan flips its contoh chip the day this
+   lands. Also: source real pencurian comparison rows (famous documented
+   cases) — the contrast is the chart's thesis.
+8d. **(wave 9) KontraS vintage check** — the vital catatan records
+   645→602→561 across KontraS periods; the page standardizes on 602
+   (Jul 2024–Jun 2025). Confirm which vintage is current at the next
+   Catahu, or re-label.
+8e. **(wave 9) ADS-B verdict sign-off** — cookbook at
+   `docs/research/2026-07-05-adsb-presidential-fleet.md`; my verdict
+   NO-GO for any standing tracker (only rare manual past-tense
+   corroboration via adsb.lol ODbL is defensible). Your call to close it.
 9. **Screenshot pass** of waves 8a-8d on the phone (the branch chapters,
    KasDaerah with a lens pick, Hutan yang Hilang, ZonaHayati taps,
    DARI RAK) — my eyes end at the build; yours end at the paper.
@@ -1488,6 +1508,44 @@ scout + verification return, **8c** = Act 3 skeleton (sections +
 PlatLokasi + hierarchy + profile ties), **8d+** = pipelines in §13.14
 order re-homed into v3 sections.
 
+### 13.18 WAVE 9 — ACT 2 THE AGGREGATOR (Yose steers 2026-07-05; charter + verdicts)
+
+Yose's steer: Act 2 = "the go-to place to see what the government is doing
+right now" — branches-of-power engine + party tracker, regime-agnostic and
+automatable; polemics live on editorial surfaces. Full plan (with the
+aggregator matrix): `/root/.claude/plans/hey-broski-please-go-delegated-torvalds.md`;
+executed 9a→9g same day (session log below). Standing doctrine added:
+
+1. **AGENDA ISTANA is the executive activity lane.** Setkab RSS (keyless,
+   full-text; DATA_SOURCES row has the parse grammar + TLS gotcha) →
+   deterministic desk `sources/agenda.py` → accumulating cited archive →
+   AgendaIstana (ledger + presence plate + rhythm). The schema describes
+   the OFFICE, so the next administration is scored identically. The
+   stdlib-only `agenda.yml` cron grows the record even while
+   `NEWSROOM_ENABLED` is false.
+2. **Window honesty (new law, learned in 9d):** a time-window label never
+   claims more history than the archive holds — young archives print
+   "ARSIP n HARI" and grow into their window. Staleness (>14 d) prints as
+   an absence row, never as fresh.
+3. **Flight tracking: NO-GO** (probe cookbook
+   `docs/research/2026-07-05-adsb-presidential-fleet.md`): fleet hexes
+   identified but 0/10 visible live; only adsb.lol is redistributable
+   (ODbL); a standing tracker would duplicate a fact Setkab already owns
+   and author a security pattern. Sole defensible use: rare, manual,
+   past-tense corroboration of an already-announced trip. Default silence.
+4. **PARTAI & KEPENTINGAN v1 shipped as bab 06** (racks now 07–11):
+   curated `partai_registry.json` (KPU 2024 kursi + media-ownership ties,
+   receipts, REVIEW PENDING) + Wikidata governor harvest (coverage printed
+   "terdata n/38"; P102 ganda never guessed; NB Wikidata is NOT reliable
+   for current-term DPR membership — probed, 13 rows) + the kliping
+   partai tagger (alias-normalized token match; `Kliping.partai`,
+   `LiveKliping.partai`) feeding DISEBUT DALAM LIPUTAN chips live.
+5. **Designed slots left open**: JDIH BPK `lembaran.py` (UU + Perda
+   gazetted streams — one keyless parser feeds legislatif AND daerah;
+   the §4.2 follow-through tracker is its v2), putusan curation
+   (GradienKeadilan now reads hukum_putusan.json; needs 20-40 real
+   verdicts), cabinet-posts-per-party (prints "menunggu kurasi").
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
@@ -1501,6 +1559,54 @@ order re-homed into v3 sections.
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-05 · WAVE 9 — Act 2 the aggregator (`a70da5c`→`271fb0a`, all 8 runs green)
+
+Yose's steer mid-plan-mode: not just dedupe — Act 2 becomes THE aggregator
+(branches + parties, regime-agnostic, automatable). Charter: §13.18. One day,
+six waves, each build→verify→commit→deploy-green:
+
+- **9a `a70da5c` satu fakta satu pemilik**: kabinet.json = one owner read by
+  TS AND Python; both on-page contradictions dead (recovery 13%→4,84 ICW via
+  vital-derivation; Perampasan-Aset 4750d/4900d → ONE date constant, the bill
+  now ages live in both surfaces); APARAT moved edisi→akuntabilitas; 5 SKOR
+  tiles retired (Rp332T stat → TNI/Polri split dumbbell whose parts SUM to
+  the vital's own 332,7 — pipeline proves itself); ekonomi-stat block + dead
+  edisi CABANG deleted; daerah range/needle now derive from the DAERAH table
+  (fixed the hidden 8,6 vs 8,25 drift too).
+- **9b `c0508b0` racks**: GERAK II = one-instrument sections 07–11; seeded
+  JciVsPeers + RupiahIHSG DELETED (absence row in their place); GarisStart +
+  DuaGaris retired to arsip permalinks. Gotcha: HTML comments ship into dist —
+  use `{/* */}` in .astro for anything naming dead components.
+- **9c `953e826` AGENDA ISTANA producer**: sources/agenda.py (deterministic
+  title-grammar parse, tested 8/8 vs live fixtures incl. longest-name prov
+  match Papua Barat Daya≠Barat), archive seeded LIVE (30 rows, 3 feed pages),
+  agenda.yml stdlib cron GREEN on the GH runner (TLS risk retired),
+  newsroom.yml data commits drop [skip ci] (janji unstales too).
+- **9d `83cd0de` the jewel**: AgendaIstana island — BUKU AGENDA (cited
+  ledger), JEJAK KEHADIRAN (multi-marker locator; province centroids computed
+  FROM the raster so drawing and data cannot disagree), IRAMA & PERIHAL;
+  SKOR eksekutif live tile; LAYAR GANDA kiri = "{n} kota disinggahi presiden"
+  (closes the 552T double-print). Window-honesty law born here (§13.18.2).
+  + ADS-B cookbook (NO-GO, §13.18.3).
+- **9e `5f6ee3d`**: GradienKeadilan → hukum_putusan.json (outlier = max
+  residual, computed; pencurian rows stay contoh-labeled in-island);
+  sources/vital.py guardian (corpus + drift validation incl. the kabinet
+  cross-language check — ran SEHAT); yudikatif/aparat honest absence rows.
+- **9g `271fb0a` PARTAI & KEPENTINGAN v1**: registry + governor harvest +
+  kliping tagger + PartaiPapan (bab 06, "Siapa Memegang Apa"). Tagger
+  gotcha: aliases must get the SAME normalization as headline text or
+  "PDI-P" never matches (hyphen loss) — tested 8/8.
+- **9f**: hero-once audit passed (109/4,84/602/8× once at scale each);
+  ledgers synced (sumber.astro + DATA_SOURCES: setkab + wikidata rows);
+  this log. `astro check` now swap-thrashes the phone (7 min timeout) —
+  the CI `pnpm build` is the gate, per docs/CLAUDE.md §11.
+- **Seams left on purpose**: lembaran.py (JDIH) is a designed slot, not
+  code; PartaiPapan liputan chips print "menunggu edisi" until the print
+  run is on; agenda jenis classification is coarse on non-transcript
+  headlines (LAINNYA-heavy — refine keyword tables as real rows accumulate);
+  KontraS 602 vintage question (645→602→561 in the vital catatan) parked
+  for Yose's review.
 
 ### 2026-07-03 · waves 8b-8d + INGATAN (`cf2ab97`→`6f68eee`, deploys green) — the long push
 
