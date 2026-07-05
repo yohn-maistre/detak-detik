@@ -10,12 +10,25 @@
   import { onEdisi, type LiveEdisi } from '../lib/edition';
   import REG from '../../newsroom/data/partai_registry.json';
   import GUB from '../../newsroom/data/partai_gubernur.json';
+  import SUARA from '../../newsroom/data/suara_negara.json';
 
   type Partai = {
     id: string; nama: string; singkat: string; alias: string[]; kursi: number;
     luar_parlemen?: boolean; media: { grup: string; catatan: string; sumber: string } | null;
+    umpan?: { status: string; feed?: string; catatan?: string } | null;
     sumber: string;
   };
+
+  // SUARA PARTAI: the party's own newest publication (Lane A verbatim) —
+  // or its documented absence (only 2 of 8 DPR parties are machine-readable;
+  // printing the hole keeps the board from becoming a two-party amplifier)
+  type SuaraRow = { partai?: string; judul: string; url: string; tanggal: string };
+  const suaraPer: Record<string, SuaraRow> = {};
+  for (const r of (SUARA.baris ?? []) as SuaraRow[]) {
+    if (r.partai && !suaraPer[r.partai]) suaraPer[r.partai] = r;
+  }
+  const fmtS = new Intl.DateTimeFormat('id-ID', { day: '2-digit', month: 'short' });
+  const tglS = (iso: string) => fmtS.format(new Date(iso)).toUpperCase().replace('.', '');
   const PARTAI = (REG.partai as Partai[]).filter((p) => !p.luar_parlemen).sort((a, b) => b.kursi - a.kursi);
   const LUAR = (REG.partai as Partai[]).filter((p) => p.luar_parlemen);
   const TOTAL = REG.kursi_total as number;
@@ -67,6 +80,11 @@
           {#if GUB_PER[p.id]}<span class="pp-f">⌂ {GUB_PER[p.id]} GUBERNUR TERDATA</span>{/if}
           {#if p.media}<span class="pp-f pp-media" title={`${p.media.catatan} — ${p.media.sumber}`}>▤ {p.media.grup}</span>{/if}
           {#if liputan[p.id]}<span class="pp-f pp-lip">✳ DISEBUT DALAM {liputan[p.id]} KLASTER LIPUTAN</span>{/if}
+          {#if suaraPer[p.id]}
+            <a class="pp-f pp-suara" href={suaraPer[p.id].url} target="_blank" rel="noopener">◆ SUARA SENDIRI · {tglS(suaraPer[p.id].tanggal)} · {suaraPer[p.id].judul}</a>
+          {:else if p.umpan && p.umpan.status === 'mati'}
+            <span class="pp-f pp-bisu">◇ SUARA SENDIRI: {p.umpan.catatan}</span>
+          {/if}
         </div>
       </article>
     {/each}
@@ -111,6 +129,9 @@
   .pp-fakta { display: grid; gap: 4px; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); }
   .pp-media { cursor: help; }
   .pp-lip { color: var(--accent2); }
+  .pp-suara { color: inherit; text-decoration: none; }
+  .pp-suara:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .pp-bisu { opacity: 0.65; font-style: italic; }
   .pp-luar { display: grid; gap: 7px; }
   .pp-luar-baris { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); line-height: 2; }
   .pp-kaki { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); line-height: 1.9; border-top: 1px solid var(--line-soft); padding-top: 10px; }

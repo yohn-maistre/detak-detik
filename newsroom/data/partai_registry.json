@@ -1,5 +1,5 @@
 {
-  "_catatan": "Registri partai (PARTAI & KEPENTINGAN v1, wave 9g). Hukum §4.4: dokumen saja — kursi, jabatan, kepemilikan; tanpa skor, tanpa tafsir. Kursi = penetapan KPU Pemilu 2024 (jumlah 580, diverifikasi menjumlah). Baris media = fakta kepemilikan terdokumentasi (orang yang sama memegang jabatan partai dan kepemilikan grup media), bukan penilaian bias. MENUNGGU TINJAUAN EDITORIAL YOSE. Alias dipakai penanda liputan di meja kliping (cocokan token utuh).",
+  "_catatan": "Registri partai (PARTAI & KEPENTINGAN v1, wave 9g). Hukum §4.4: dokumen saja — kursi, jabatan, kepemilikan; tanpa skor, tanpa tafsir. Kursi = penetapan KPU Pemilu 2024 (jumlah 580, diverifikasi menjumlah). Baris media = fakta kepemilikan terdokumentasi (orang yang sama memegang jabatan partai dan kepemilikan grup media), bukan penilaian bias. MENUNGGU TINJAUAN EDITORIAL YOSE. Alias dipakai penanda liputan di meja kliping (cocokan token utuh). Kolom `umpan` = verdik probe kanal resmi partai (5 Jul 2026): hanya 2 dari 8 partai parlemen terbaca mesin — ketiadaannya dicetak.",
   "pemilu": "2024",
   "kursi_total": 580,
   "sumber_kursi": "Penetapan perolehan kursi DPR RI Pemilu 2024, KPU RI — rujuk tabel id.wikipedia.org/wiki/Pemilihan_umum_legislatif_Indonesia_2024",
@@ -17,7 +17,11 @@
       ],
       "kursi": 110,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "situs tanpa umpan mesin (feed & wp-json 404, 5 Jul 2026)"
+      }
     },
     {
       "id": "golkar",
@@ -33,7 +37,11 @@
         "catatan": "Aburizal Bakrie, ketua umum 2009–2014, keluarganya pemilik grup Viva (tvOne, ANTV); kaitan bersifat historis-terdokumentasi.",
         "sumber": "id.wikipedia: Aburizal Bakrie; Visi Media Asia"
       },
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "domain partaigolkar.com tersuspensi hosting (5 Jul 2026)"
+      }
     },
     {
       "id": "gerindra",
@@ -45,7 +53,11 @@
       ],
       "kursi": 86,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "hidup",
+        "feed": "https://gerindra.id/feed/"
+      }
     },
     {
       "id": "nasdem",
@@ -60,7 +72,11 @@
         "catatan": "Surya Paloh, pendiri dan ketua umum NasDem, adalah pemilik Media Group.",
         "sumber": "id.wikipedia: Surya Paloh; Media Group"
       },
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "situs tanpa umpan mesin (5 Jul 2026)"
+      }
     },
     {
       "id": "pkb",
@@ -72,7 +88,11 @@
       ],
       "kursi": 68,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "umpan tak terbaca mesin; wp-json dimatikan (5 Jul 2026)"
+      }
     },
     {
       "id": "pks",
@@ -84,7 +104,11 @@
       ],
       "kursi": 53,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "hidup",
+        "feed": "https://pks.id/rss/"
+      }
     },
     {
       "id": "pan",
@@ -96,7 +120,11 @@
       ],
       "kursi": 48,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "situs tanpa umpan mesin (5 Jul 2026)"
+      }
     },
     {
       "id": "demokrat",
@@ -107,7 +135,11 @@
       ],
       "kursi": 44,
       "media": null,
-      "sumber": "KPU 2024"
+      "sumber": "KPU 2024",
+      "umpan": {
+        "status": "mati",
+        "catatan": "dinding anti-bot 403 (5 Jul 2026)"
+      }
     },
     {
       "id": "ppp",
@@ -120,7 +152,11 @@
       "kursi": 0,
       "luar_parlemen": true,
       "media": null,
-      "sumber": "KPU 2024 — gagal ambang batas parlemen, pertama sejak 1973"
+      "sumber": "KPU 2024 — gagal ambang batas parlemen, pertama sejak 1973",
+      "umpan": {
+        "status": "mati",
+        "catatan": "situs tak terjangkau (5 Jul 2026)"
+      }
     },
     {
       "id": "psi",
@@ -133,7 +169,11 @@
       "kursi": 0,
       "luar_parlemen": true,
       "media": null,
-      "sumber": "KPU 2024 — di bawah ambang batas parlemen"
+      "sumber": "KPU 2024 — di bawah ambang batas parlemen",
+      "umpan": {
+        "status": "mati",
+        "catatan": "tantangan Cloudflare (5 Jul 2026)"
+      }
     },
     {
       "id": "perindo",
@@ -149,7 +189,11 @@
         "catatan": "Hary Tanoesoedibjo, pendiri dan ketua umum Perindo, adalah pemilik MNC Group.",
         "sumber": "id.wikipedia: Hary Tanoesoedibjo; MNC Group"
       },
-      "sumber": "KPU 2024 — di bawah ambang batas parlemen"
+      "sumber": "KPU 2024 — di bawah ambang batas parlemen",
+      "umpan": {
+        "status": "mati",
+        "catatan": "situs tanpa RSS (5 Jul 2026)"
+      }
     }
   ]
 }

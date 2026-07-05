@@ -38,6 +38,9 @@ import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import AgendaIstana from '../islands/AgendaIstana.svelte';
 import PartaiPapan from '../islands/PartaiPapan.svelte';
+import HariIniNegara from '../islands/HariIniNegara.svelte';
+import SuaraLembaga from '../islands/SuaraLembaga.svelte';
+import LembaranNegara from '../islands/LembaranNegara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
@@ -313,6 +316,13 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </ol>
         </nav>
 
+        {/* the aggregator's front desk (§13.19): the newest documented act
+             per pantau lane — the reason to come back every morning */}
+        <section class="hari-ini" aria-labelledby="hn-judul">
+          <span class="eyebrow" id="hn-judul">HARI INI DI NEGARA · CATATAN TERBARU TIAP LAJUR PANTAU</span>
+          <HariIniNegara client:visible />
+        </section>
+
         <!-- CABANG · EKSEKUTIF -->
         <section class="bab" id="kuasa">
           <header class="bab-kepala">
@@ -365,6 +375,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <PabrikUU client:visible />
             </div>
           )}
+
+          {/* the three voices (§13.19): above, how the machine performs;
+               here, what became LAW (ink) and what the chamber SAYS (voice) */}
+          <div class="bab-lembar bab-sub" data-rise>
+            <LembaranNegara client:visible />
+          </div>
+          <div class="bab-lembar bab-sub" data-rise>
+            <SuaraLembaga cabang="legislatif" client:visible />
+          </div>
         </section>
 
         <!-- CABANG · YUDIKATIF -->
@@ -438,6 +457,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <p class="figcap-dinas mono">KADENS PEMBARUAN: TAHUNAN (CATAHU KONTRAS, TIAP JULI) — BUKAN UMPAN HARIAN</p>
               <button class="chip"><span class="tick">⊙</span>{APARAT_KEKERASAN.sumber} · imparsial</button>
             </div>
+          </div>
+
+          {/* the institution's own account, labeled as such — beside the
+               independent record above, never blended with it */}
+          <div class="bab-lembar bab-sub" data-rise>
+            <SuaraLembaga cabang="aparat" client:visible />
           </div>
         </section>
 
@@ -1102,6 +1127,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
   /* the five-branch index strip (bands now live in their chapters) */
   .cabang-indeks { border-top: 1px solid var(--line); }
+  .hari-ini { display: grid; gap: 12px; margin-top: clamp(28px, 5vh, 52px); }
   .ci-head { display: block; font-size: 9px; letter-spacing: 0.2em; color: var(--accent2); padding: 12px 2px 4px; }
   .ci-head .dot { color: var(--accent); margin-right: 8px; }
   .ci-list { list-style: none; display: grid; margin: 0; padding: 0; }
