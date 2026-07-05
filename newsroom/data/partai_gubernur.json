@@ -1,0 +1,68 @@
+{
+ "_catatan": "Gubernur menjabat per partai — Wikidata (CC0), kueri: jabatan subclass gubernur di Indonesia, tanpa tanggal akhir, mulai >= 2025-01-01. Cakupan TIDAK lengkap; halaman mencetak \"terdata n dari 38\". P102 ganda dihitung sebagai afiliasi ganda, tidak pernah ditebak. Snapshot vendored; segarkan dengan `node scripts/fetch-partai.mjs`.",
+ "_sumber": [
+  "https://query.wikidata.org/ (CC0)"
+ ],
+ "diambil": "2026-07-05T09:18:23Z",
+ "terdata": 6,
+ "dari": 38,
+ "per_partai": {
+  "pdip": 1,
+  "demokrat": 1,
+  "nasdem": 1
+ },
+ "lainnya": {
+  "Partai Aceh": 1
+ },
+ "afiliasi_ganda": 1,
+ "tanpa_partai_terdata": 1,
+ "gubernur": [
+  {
+   "nama": "Muzakkir Manaf",
+   "posisi": "Gubernur Aceh",
+   "mulai": "2025-02-12",
+   "partai": [
+    "Partai Aceh"
+   ]
+  },
+  {
+   "nama": "Pramono Anung",
+   "posisi": "Gubernur Daerah Khusus Jakarta",
+   "mulai": "2025-02-20",
+   "partai": [
+    "Partai Demokrasi Indonesia Perjuangan"
+   ]
+  },
+  {
+   "nama": "Dedi Mulyadi",
+   "posisi": "Gubernur Jawa Barat",
+   "mulai": "2025-02-20",
+   "partai": [
+    "Partai Golongan Karya",
+    "Partai Gerakan Indonesia Raya"
+   ]
+  },
+  {
+   "nama": "Sherly Tjoanda",
+   "posisi": "Gubernur Maluku Utara",
+   "mulai": "2025-02-20",
+   "partai": [
+    "Partai Demokrat (Indonesia)"
+   ]
+  },
+  {
+   "nama": "Dominggus Mandacan",
+   "posisi": "Gubernur Papua Barat",
+   "mulai": "2025-02-20",
+   "partai": [
+    "Partai NasDem"
+   ]
+  },
+  {
+   "nama": "Yulius Selvanus",
+   "posisi": "Gubernur Sulawesi Utara",
+   "mulai": "2025-02-20",
+   "partai": []
+  }
+ ]
+}

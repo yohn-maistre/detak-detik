@@ -1,0 +1,155 @@
+{
+  "_catatan": "Registri partai (PARTAI & KEPENTINGAN v1, wave 9g). Hukum §4.4: dokumen saja — kursi, jabatan, kepemilikan; tanpa skor, tanpa tafsir. Kursi = penetapan KPU Pemilu 2024 (jumlah 580, diverifikasi menjumlah). Baris media = fakta kepemilikan terdokumentasi (orang yang sama memegang jabatan partai dan kepemilikan grup media), bukan penilaian bias. MENUNGGU TINJAUAN EDITORIAL YOSE. Alias dipakai penanda liputan di meja kliping (cocokan token utuh).",
+  "pemilu": "2024",
+  "kursi_total": 580,
+  "sumber_kursi": "Penetapan perolehan kursi DPR RI Pemilu 2024, KPU RI — rujuk tabel id.wikipedia.org/wiki/Pemilihan_umum_legislatif_Indonesia_2024",
+  "partai": [
+    {
+      "id": "pdip",
+      "nama": "PDI Perjuangan",
+      "singkat": "PDI-P",
+      "alias": [
+        "pdip",
+        "pdi-p",
+        "pdi perjuangan",
+        "banteng moncong putih",
+        "demokrasi indonesia perjuangan"
+      ],
+      "kursi": 110,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "golkar",
+      "nama": "Partai Golongan Karya",
+      "singkat": "Golkar",
+      "alias": [
+        "golkar",
+        "golongan karya"
+      ],
+      "kursi": 102,
+      "media": {
+        "grup": "Bakrie/Viva (historis)",
+        "catatan": "Aburizal Bakrie, ketua umum 2009–2014, keluarganya pemilik grup Viva (tvOne, ANTV); kaitan bersifat historis-terdokumentasi.",
+        "sumber": "id.wikipedia: Aburizal Bakrie; Visi Media Asia"
+      },
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "gerindra",
+      "nama": "Partai Gerakan Indonesia Raya",
+      "singkat": "Gerindra",
+      "alias": [
+        "gerindra",
+        "gerakan indonesia raya"
+      ],
+      "kursi": 86,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "nasdem",
+      "nama": "Partai NasDem",
+      "singkat": "NasDem",
+      "alias": [
+        "nasdem"
+      ],
+      "kursi": 69,
+      "media": {
+        "grup": "Media Group (Metro TV, Media Indonesia)",
+        "catatan": "Surya Paloh, pendiri dan ketua umum NasDem, adalah pemilik Media Group.",
+        "sumber": "id.wikipedia: Surya Paloh; Media Group"
+      },
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "pkb",
+      "nama": "Partai Kebangkitan Bangsa",
+      "singkat": "PKB",
+      "alias": [
+        "pkb",
+        "kebangkitan bangsa"
+      ],
+      "kursi": 68,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "pks",
+      "nama": "Partai Keadilan Sejahtera",
+      "singkat": "PKS",
+      "alias": [
+        "pks",
+        "keadilan sejahtera"
+      ],
+      "kursi": 53,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "pan",
+      "nama": "Partai Amanat Nasional",
+      "singkat": "PAN",
+      "alias": [
+        "pan",
+        "amanat nasional"
+      ],
+      "kursi": 48,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "demokrat",
+      "nama": "Partai Demokrat",
+      "singkat": "Demokrat",
+      "alias": [
+        "demokrat"
+      ],
+      "kursi": 44,
+      "media": null,
+      "sumber": "KPU 2024"
+    },
+    {
+      "id": "ppp",
+      "nama": "Partai Persatuan Pembangunan",
+      "singkat": "PPP",
+      "alias": [
+        "ppp",
+        "persatuan pembangunan"
+      ],
+      "kursi": 0,
+      "luar_parlemen": true,
+      "media": null,
+      "sumber": "KPU 2024 — gagal ambang batas parlemen, pertama sejak 1973"
+    },
+    {
+      "id": "psi",
+      "nama": "Partai Solidaritas Indonesia",
+      "singkat": "PSI",
+      "alias": [
+        "psi",
+        "solidaritas indonesia"
+      ],
+      "kursi": 0,
+      "luar_parlemen": true,
+      "media": null,
+      "sumber": "KPU 2024 — di bawah ambang batas parlemen"
+    },
+    {
+      "id": "perindo",
+      "nama": "Partai Perindo",
+      "singkat": "Perindo",
+      "alias": [
+        "perindo"
+      ],
+      "kursi": 0,
+      "luar_parlemen": true,
+      "media": {
+        "grup": "MNC Group (RCTI, MNCTV, GTV, iNews)",
+        "catatan": "Hary Tanoesoedibjo, pendiri dan ketua umum Perindo, adalah pemilik MNC Group.",
+        "sumber": "id.wikipedia: Hary Tanoesoedibjo; MNC Group"
+      },
+      "sumber": "KPU 2024 — di bawah ambang batas parlemen"
+    }
+  ]
+}

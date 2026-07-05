@@ -30,6 +30,8 @@ export interface LiveKliping {
   resmi?: boolean;
   /** Lane A law mentions extracted from the cluster's verbatim headlines (§ row) */
   hukum?: string[];
+  /** parties named in the cluster's verbatim headlines (registry alias match) */
+  partai?: string[];
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 /** deep writeup (Act 3 pipeline): Lane C prose, fact-gated in the newsroom,

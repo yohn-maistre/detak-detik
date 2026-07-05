@@ -37,6 +37,7 @@ import PabrikUU from '../islands/PabrikUU.svelte';
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import AgendaIstana from '../islands/AgendaIstana.svelte';
+import PartaiPapan from '../islands/PartaiPapan.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
@@ -496,6 +497,21 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
         </section>
 
+        {/* BAB 06 · PARTAI & KEPENTINGAN — GERAK I's closing chapter: the
+             interests that operate across all five branches. §4.4 law:
+             documents only — kursi, jabatan, kepemilikan; never a score. */}
+        <section class="bab" id="partai">
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">06</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>PARTAI &amp; KEPENTINGAN</span>
+              <h2 class="bab-tajuk display">Siapa Memegang Apa</h2>
+              <p class="bab-dek">Kursi di parlemen, gubernur di daerah, grup media di tangan pengurusnya — dokumen saja, tanpa skor. Supaya jelas ke pintu siapa sebuah urusan pantas diketuk.</p>
+            </div>
+          </header>
+          <PartaiPapan client:visible />
+        </section>
+
         <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
         <div class="gerak" data-rise>
           <span class="gerak-no mono">GERAK II</span>
@@ -508,7 +524,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              were folded here: one chapter, promise next to outcome. -->
         <section class="bab" id="janji">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">06</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · JANJI</span>
               <h2 class="bab-tajuk display">Janji &amp; Program</h2>
@@ -558,7 +574,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         {oligarki && (
           <section class="bab" id="oligarki">
             <header class="bab-kepala">
-              <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+              <span class="bab-folio ghost-num" aria-hidden="true">08</span>
               <div class="bab-kepala-teks">
                 <span class="inkbar"><span class="dot">●</span>TEMA · KEPEMILIKAN</span>
                 <h2 class="bab-tajuk display">{oligarki.judul}</h2>
@@ -574,7 +590,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              here, wave 9b — real rows or silence) */}
         <section class="bab" id="ekonomi">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · PASAR</span>
               <h2 class="bab-tajuk display">Pasar yang Tipis</h2>
@@ -616,7 +632,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              shelf (wave 9b) — permalinks live on; one instrument here. */}
         <section class="bab" id="dunia">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">10</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
               <h2 class="bab-tajuk display">Dunia</h2>
@@ -642,7 +658,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <!-- RAK 10 · LINGKUNGAN & EKSTRAKSI -->
         <section class="bab" id="lingkungan">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">10</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">11</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · SUMBER DAYA ALAM</span>
               <h2 class="bab-tajuk display">Sumber Daya Alam</h2>

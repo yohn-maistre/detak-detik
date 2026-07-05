@@ -112,6 +112,46 @@ def _muat_roster() -> list[dict]:
         return []
 
 
+# ── partai tagger (wave 9g): parties NAMED in the cluster's verbatim
+# headlines, matched whole-token/phrase against the curated registry aliases
+# (data/partai_registry.json — the same file PartaiPapan renders). A mention
+# is a documented fact of coverage, never a stance. Deterministic, Lane A.
+_PARTAI_REG = Path(__file__).resolve().parent.parent / "data" / "partai_registry.json"
+
+
+def _muat_partai_alias() -> list[tuple[str, tuple[str, ...]]]:
+    # aliases get the SAME normalization the headline text gets (lowercase,
+    # punctuation to spaces) — otherwise "PDI-P" could never match: the
+    # headline loses its hyphen, so the alias must lose it too
+    try:
+        reg = json.loads(_PARTAI_REG.read_text(encoding="utf-8"))
+        return [
+            (p["id"], tuple(
+                re.sub(r"[\W_]+", " ", a.lower(), flags=re.UNICODE).strip()
+                for a in p.get("alias", [])))
+            for p in reg.get("partai", [])
+        ]
+    except Exception:
+        return []
+
+
+_PARTAI_ALIAS = _muat_partai_alias()
+
+
+def _partai(anggota: list[dict]) -> list[str] | None:
+    """Registry parties named in the cluster's combined normalized titles
+    (the _meja normalization: lowercase, punctuation to spaces, whole-word
+    for single tokens, phrase match for multi-word aliases)."""
+    teks = " " + " ".join(
+        re.sub(r"[\W_]+", " ", it["judul"].lower(), flags=re.UNICODE)
+        for it in anggota
+    ) + " "
+    kata = frozenset(teks.split())
+    kena = [pid for pid, alias in _PARTAI_ALIAS
+            if any((f" {a} " in teks) if " " in a else (a in kata) for a in alias)]
+    return kena or None
+
+
 def _ambil(url: str) -> str:
     percobaan_terakhir: Exception | None = None
     for _ in range(2):  # one retry; flaky egress must not mislabel a live feed
@@ -403,6 +443,7 @@ def _susun_kliping(anggota: list[dict], edisi_no: int, urut: int) -> Kliping:
         titik_buta=n_media >= 2 and n_grup == 1,
         tumbuh=False,  # delta vs the previous edition lands in v2
         meja=_meja(anggota),
+        partai=_partai(anggota),
     )
 
 

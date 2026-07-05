@@ -107,6 +107,11 @@ class Kliping(BaseModel):
     # headlines (numbered regex + curated named aliases, see kliping._hukum_dari).
     # The lembar prints a § row; None = no law was named.
     hukum: list[str] | None = None
+    # parties NAMED in the cluster's verbatim headlines (whole-token match
+    # against data/partai_registry.json aliases — deterministic, Lane A).
+    # Feeds PARTAI & KEPENTINGAN's "disebut dalam liputan" chips. Coverage
+    # mention is a documented fact; it is never a stance or a score.
+    partai: list[str] | None = None
 
 
 class KlipingMeta(BaseModel):
