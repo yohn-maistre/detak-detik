@@ -579,6 +579,9 @@ kept for the record.
 5. **BPS WebAPI key + NFA Panel Harga account** (both free; NFA has manual
    approval lag). Unlocks: live IPM/kemiskinan in Lensa + live Harga
    Pangan (retires that contoh label).
+5b. **ISB LKPP registration** (free account at isb.lkpp.go.id, wave 10
+   probe) — unlocks the procurement open-data JSON (paket, pagu, satker):
+   the PANTAU lane for "where the money goes", strictly documents-speak.
 
 **B · MANUAL SNAPSHOTS (browser-only; scripts are WAF-walled)**
 
@@ -1546,6 +1549,41 @@ executed 9a→9g same day (session log below). Standing doctrine added:
    (GradienKeadilan now reads hukum_putusan.json; needs 20-40 real
    verdicts), cabinet-posts-per-party (prints "menunggu kurasi").
 
+### 13.19 PANTAU NEGARA — every branch gets an activity lane (Yose approves 2026-07-05, built same day)
+
+Yose's steer: "the go-to platform to see what the govt is doing right now"
+— extend the AGENDA ISTANA machine to every branch. Three probe agents
+swept ~70 endpoints (cookbooks, LOCAL ONLY — docs/ is gitignored by
+Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
+
+1. **The core** (`newsroom/pantau.py`): official publication →
+   deterministic parse → slim cited archive (merge/prune/write-on-change)
+   → corpus rows. Stdlib only; TLS-honest fetch; dark lane = archive
+   as-was. One cron `pantau.yml` (replaced agenda.yml) runs ALL lanes
+   2×/day regardless of NEWSROOM_ENABLED. Proven GREEN on the runner.
+2. **Lanes live**: agenda (setkab + WAPRESRI now merged, aktor rule),
+   lembaran (`sources/lembaran.py`: JDIH BPK per-jenis newest-first,
+   detail-dates for new rows only, budget 40/run, current-year backfill
+   converges over runs; '' = dated-absence, None = retry), suara
+   (`sources/suara.py`: 7 verbatim Lane A channels — e-Media DPR (the
+   side door around the walled main site), Kemhan, TNI AD, Gerindra,
+   PKS, KontraS, ICW — per-lane prune so chatty feeds never evict quiet
+   history).
+3. **The three voices per chapter** (doctrine): what the branch DOES
+   (records), what it SAYS (suara, labeled verbatim), how it PERFORMS
+   (vitals). Coverage (kliping) is a fourth voice. Never blended.
+4. **HARI INI DI NEGARA**: the act's front desk — newest row per lane,
+   stale lanes print their age (the board monitors its own health).
+5. **Suara-partai honesty**: only 2/8 DPR parties machine-readable; the
+   registry's `umpan` column documents each absence (incl. Golkar's
+   suspended domain — itself a civic datum) and PartaiPapan prints them,
+   so the board can't become a two-party amplifier.
+6. **Parked with reasons**: MA berita = HTML parse on
+   jdih.mahkamahagung.go.id (next wave candidate); MK putusan PDFs via
+   peraturan.go.id/putusan; Perda umbrella jenis=18; procurement = ISB
+   LKPP free registration (needs-Yose keys ledger); kejaksaan/KY/KPK
+   feeds all walled or 404 (cookbook).
+
 ### 13.7 Sequencing (each wave ends: build → deploy → Yose screenshots)
 
 - **Wave 3 · The front feed**: 13.2 + Lembar v2 shell (SARI/BUTIR slots
@@ -1559,6 +1597,32 @@ executed 9a→9g same day (session log below). Standing doctrine added:
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-05 · WAVE 10 — PANTAU NEGARA (`1b9bd46`→`eaf185e`+10f, deploys + pantau cron green)
+
+Same day as wave 9, after Yose's "go-to platform" steer + a Termux crash
+(nothing lost; exposed that docs/ is gitignored → cookbooks are LOCAL-ONLY
+by Yose's decision — commit messages before this wave over-claimed their
+inclusion; corrected here for the record). Three probe agents swept ~70
+endpoints; charter §13.19. Shipped:
+
+- **10a `1b9bd46`**: pantau.py core; agenda refactored onto it + wapresri
+  feed (10 WAPRES rows first harvest); lembaran.py seeded 90 gazetted
+  docs (backfill bug found by reading the numbers: year-filter p=1
+  overlaps unfiltered p=1 → break only on p>1 yielding zero); pantau.yml
+  replaces agenda.yml.
+- **10b-d `eaf185e`**: suara.py 7 lanes ALL live first harvest (129 rows,
+  zero dark, incl. same-day DPR + Gerindra items); SuaraLembaga voices in
+  legislatif + aparat; LembaranNegara ledger ("talk upstairs, ink here");
+  HARI INI DI NEGARA front desk (stale lanes print their age);
+  PartaiPapan SUARA SENDIRI column + registry `umpan` absences.
+- **10f**: sumber.astro +4 rows (jdih-bpk, suara 7-kanal, wapresri;
+  setkab row from 9f), §13.19 charter, ISB key on the needs ledger,
+  local DATA_SOURCES synced.
+- **Seams**: MA berita HTML lane + MK putusan PDFs + Perda jenis=18 +
+  procurement (ISB key) parked in §13.19.6; lembaran year-counts stay
+  labeled "angka minimum" until backfill converges (a few cron days);
+  agenda jenis tables still coarse on non-transcript titles.
 
 ### 2026-07-05 · WAVE 9 — Act 2 the aggregator (`a70da5c`→`271fb0a`, all 8 runs green)
 
