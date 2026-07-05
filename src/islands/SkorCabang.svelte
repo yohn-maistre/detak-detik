@@ -59,8 +59,8 @@
               <span class="sk-bar" style={`left:${Math.min(t.a.v, t.b.v)}%;width:${Math.abs(t.b.v - t.a.v)}%`}></span>
               <span class="sk-dot b" style={`left:${t.b.v}%`}></span>
             </div>
-            <div class="sk-ruler mono" aria-hidden="true"><span>0{t.satuan}</span><span>100{t.satuan}</span></div>
-            <p class="sk-dumb-key mono"><span class="a">{t.a.k} {t.a.v}{t.satuan}</span> · <span class="b">{t.b.k} {t.b.v}{t.satuan}</span></p>
+            <div class="sk-ruler mono" aria-hidden="true"><span>0{t.satuan}</span><span>{t.maks ?? `100${t.satuan}`}</span></div>
+            <p class="sk-dumb-key mono"><span class="a">{t.a.k} {t.a.teks ?? `${t.a.v}${t.satuan}`}</span> · <span class="b">{t.b.k} {t.b.teks ?? `${t.b.v}${t.satuan}`}</span></p>
             <p class="sk-label">{t.label}</p>
           {/if}
           <span class="sk-src mono">⊙ {t.sumber} · {t.live ?? '(data contoh)'}</span>

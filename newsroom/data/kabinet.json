@@ -1,0 +1,7 @@
+{
+  "_catatan": "Satu-satunya pemilik angka komposisi kabinet (satu fakta satu pemilik). Dibaca oleh src/lib/data/kabinet.ts (halaman, saat build) dan newsroom/sources/vital.py (validasi silang kartu vital). Ubah di sini; seluruh permukaan ikut.",
+  "sumber": "Kabinet Merah Putih · detik/kontan okt 2024 · infobox id.wikipedia 2026",
+  "menteri": 48,
+  "wamen": 56,
+  "badan": 5
+}

@@ -178,75 +178,14 @@ export const TEBAK = {
   ],
 };
 
-/** Pemantau Cabang Kekuasaan: the at-a-glance scoreboard. Plain explainers
-    plus a few verified metrics per branch (June 2026). */
-export const CABANG = [
-  {
-    nama: 'EKSEKUTIF',
-    apa: 'Presiden, 48 menteri, 56 wakil menteri, dan badan seperti Danantara serta Badan Pengarah Papua.',
-    metrik: [
-      { k: 'Kabinet', v: '109 pejabat' },
-      { k: 'Belanja negara 2026', v: 'Rp 3.842 T' },
-      { k: 'Laporan keuangan Danantara', v: 'belum terbit' },
-    ],
-    chip: 'kemenkeu · setkab',
-  },
-  {
-    nama: 'LEGISLATIF',
-    apa: 'DPR 580 kursi dan DPD: menyusun undang-undang dan anggaran.',
-    metrik: [
-      { k: 'Kursi DPR', v: '580' },
-      { k: 'Prioritas Prolegnas 2026', v: '67 RUU' },
-      { k: 'Penghasilan anggota', v: '± Rp 65,6 jt/bln' },
-    ],
-    chip: 'dpr · setjen',
-  },
-  {
-    nama: 'YUDIKATIF',
-    apa: 'Mahkamah Agung, Mahkamah Konstitusi, dan KPK: menafsir hukum dan mengadili.',
-    metrik: [
-      { k: 'Putusan MA tercatat', v: '> 10 juta' },
-      { k: 'Perkara MK 2025', v: '701' },
-      { k: 'Kerugian korupsi dipulihkan', v: '± 13%' },
-    ],
-    chip: 'ma · mk · kpk · icw',
-  },
-  {
-    nama: 'APARAT',
-    apa: 'Polri dan TNI: alat paksa negara, di bawah eksekutif.',
-    metrik: [
-      { k: 'Anggaran 2026', v: '± Rp 333 T' },
-      { k: 'Kekerasan polisi (setahun)', v: '602 insiden' },
-      { k: 'Perwira aktif di pos sipil', v: '2.569' },
-    ],
-    chip: 'apbn · kontras · imparsial',
-  },
-  {
-    nama: 'DAERAH',
-    apa: '38 provinsi, ratusan pemda, plus otonomi khusus Aceh dan Papua.',
-    metrik: [
-      { k: 'Dana Otsus 2026', v: '± Rp 13 T' },
-      { k: 'Kemiskinan tertinggi', v: 'Papua Peg. 30,0%' },
-      { k: 'Kemiskinan terendah', v: 'Bali 3,7%' },
-    ],
-    chip: 'bps · djpk',
-  },
-];
+// The old "Pemantau Cabang Kekuasaan" scoreboard (dead export, no consumer)
+// and the APARAT block are gone (wave 9a): the branch record now lives in
+// src/lib/data/akuntabilitas.ts (APARAT_KEKERASAN / APARAT_ANGGARAN), the
+// composition in newsroom/data/kabinet.json — satu fakta satu pemilik.
 
-/** Aparat: budget against documented violence and the impunity asymmetry. */
-export const APARAT = {
-  anggaran: [
-    { k: 'TNI / Kemhan', v: 'Rp 187,1 T' },
-    { k: 'Polri', v: 'Rp 145,7 T' },
-  ],
-  kekerasan: { jumlah: 602, tembak: 411, tewas: 10, periode: 'Jul 2024 – Jun 2025', sumber: 'kontras' },
-  impunitas: 'Kasus terhadap perwira umumnya berakhir di sidang etik (demosi atau pemberhentian), bukan pidana. Dalam kematian Affan Kurniawan (rantis Brimob, 28 Agu 2025), perwira disanksi etik; warga sipil yang ditangkap diadili pidana.',
-  perwiraSipil: 2569,
-};
-
-/** Ekonomi negara: APBN, and Otsus folded in as a plain spend-vs-outcome row. */
+/** Ekonomi daerah: Otsus as a plain spend-vs-outcome row (KasDaerah's
+    exhibit). The APBN totals live on the STRUK — the artifact owns them. */
 export const EKONOMI = {
-  apbn: { belanja: 'Rp 3.842 T', defisit: '> 3% PDB (proyeksi)', pajak: 'rasio ± 10%' },
   otsus: {
     teks: 'Sejak 2002 Papua menerima dana otonomi khusus Rp 138,65 triliun; jilid kedua diproyeksikan ± Rp 234 triliun hingga 2041. Provinsi-provinsi Papua mencatat tingkat kemiskinan tertinggi di Indonesia.',
     chip: 'djpk · bps',

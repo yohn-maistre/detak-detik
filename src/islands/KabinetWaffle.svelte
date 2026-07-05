@@ -6,11 +6,13 @@
   import { onMount } from 'svelte';
   import { gsap, reducedMotion, EASE_STAMP } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
+  import { KABINET } from '../lib/data/kabinet';
 
+  // tiers derive from the one owner (kabinet.json) — never restated here
   const TIER = [
-    { label: 'Menteri', n: 48, cls: 'm' },
-    { label: 'Wakil menteri', n: 56, cls: 'w' },
-    { label: 'Kepala badan', n: 5, cls: 'b' },
+    { label: 'Menteri', n: KABINET.menteri, cls: 'm' },
+    { label: 'Wakil menteri', n: KABINET.wamen, cls: 'w' },
+    { label: 'Kepala badan', n: KABINET.badan, cls: 'b' },
   ];
   // each cell carries its own filing line for the hover dossier (native title)
   const cells = TIER.flatMap((t) => Array.from({ length: t.n }, (_, k) => ({ cls: t.cls, tip: `${t.label} · ${k + 1} dari ${t.n}` })));
@@ -43,7 +45,7 @@
   <div class="kw-grid">
     <figure class="kw-waffle-wrap">
       <p class="kw-anno fig">Satu sel satu pejabat · <span data-annotate="underline" data-annotate-color="#e44a06">terbanyak sejak 1966</span></p>
-      <div class="kw-waffle" role="img" aria-label="109 pejabat kabinet: 48 menteri, 56 wakil menteri, 5 kepala badan">
+      <div class="kw-waffle" role="img" aria-label={`${KABINET.total} pejabat kabinet: ${KABINET.menteri} menteri, ${KABINET.wamen} wakil menteri, ${KABINET.badan} kepala badan`}>
         {#each cells as c, i (i)}
           <i class="kw-cell kw-{c.cls}" title={c.tip}></i>
         {/each}

@@ -4,6 +4,10 @@
    * scale, because the spread won't fit on a linear one — which is the
    * finding. Stalled bills run off the right edge with an arrow.
    */
+  // the stalled bill's age counts from the SAME date constant the chapter
+  // band uses (satu fakta satu pemilik) — the two can never disagree again
+  import { hariPerampasanAset } from '../lib/data/cabang';
+
   const UU = [
     { nama: 'Revisi UU KPK (2019)', hari: 13, sah: true },
     { nama: 'Revisi UU Polri (2026)', hari: 20, sah: true },
@@ -12,7 +16,7 @@
     { nama: 'Revisi UU Minerba (2020)', hari: 90, sah: true },
     { nama: 'UU Cipta Kerja (2020)', hari: 244, sah: true },
     { nama: 'UU PDP (2022)', hari: 2190, sah: true },
-    { nama: 'RUU Perampasan Aset', hari: 4900, sah: false },
+    { nama: 'RUU Perampasan Aset', hari: hariPerampasanAset(), sah: false },
     { nama: 'RUU Masyarakat Adat', hari: 6200, sah: false },
   ].sort((a, b) => a.hari - b.hari);
 
@@ -38,7 +42,7 @@
       </div>
     {/each}
   </div>
-  <p class="pu-kaki fig">Rentang waktunya terbentang dari 13 hari hingga lebih dari 16 tahun bagi rancangan yang belum disahkan. Skala logaritmik: pada skala linear, sembilan baris ini tidak muat dalam satu halaman.</p>
+  <p class="pu-kaki fig">Rentang waktunya terbentang dari belasan hari hingga belasan tahun bagi rancangan yang belum disahkan — dan baris yang macet terus bertambah umur setiap hari halaman ini dicetak. Skala logaritmik: pada skala linear, sembilan baris ini tidak muat dalam satu halaman.</p>
   <div class="pu-chips">
     <button class="chip"><span class="tick">⊙</span>dpr.go.id · prolegnas</button>
     <button class="chip hop">kompilasi redaksi · (data contoh) · verifikasi berlanjut</button>

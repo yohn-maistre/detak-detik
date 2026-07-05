@@ -43,7 +43,9 @@ import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, PUTUSAN_HARIAN, APARAT, EKONOMI } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, PUTUSAN_HARIAN } from '../lib/data/edisi';
+// aparat record: one owner for the band's 602, the funnel, and these rows
+import { APARAT_ANGGARAN, APARAT_KEKERASAN } from '../lib/data/akuntabilitas';
 // the buku besar: the SAME registry the newsroom's janji desk audits every
 // edition (single source of truth — see newsroom/sources/janji.py)
 import JANJI from '../../newsroom/data/janji_registry.json';
@@ -330,7 +332,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <SkorCabang cabang="eksekutif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Kabinet yang Membengkak</h3>
-            <p class="bab-kalimat fig">Empat puluh delapan menteri, lima puluh enam wakil, lima kepala badan: satu sel tiap pejabat, dan jam Danantara yang terus berjalan sementara laporan keuangannya tetap nol.</p>
+            <p class="bab-kalimat fig">Satu sel tiap pejabat, tersusun menurut tingkatnya — dan di sampingnya jam Danantara terus berjalan, menunggu laporan keuangan pertama.</p>
             <KabinetWaffle client:visible />
           </div>
         </section>
@@ -403,7 +405,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
               <span class="eyebrow">ANGGARAN 2026</span>
-              {APARAT.anggaran.map((a) => (
+              {APARAT_ANGGARAN.map((a) => (
                 <div class="aparat-row mono"><span>{a.k}</span><b class="num">{a.v}</b></div>
               ))}
               <p class="aparat-note">Dua pos terbesar dalam APBN.</p>
@@ -412,12 +414,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <!-- the 602 total is the chapter's signature figure (band above);
                  this column holds the breakdown it alone carries -->
             <div class="aparat-col besar" data-rise>
-              <span class="eyebrow">KEKERASAN POLISI · {APARAT.kekerasan.periode} · RINCIAN</span>
-              <div class="aparat-row mono"><span>Insiden dengan tembakan</span><b class="num">{APARAT.kekerasan.tembak}</b></div>
-              <div class="aparat-row mono"><span>Korban tewas</span><b class="num">{APARAT.kekerasan.tewas}</b></div>
-              <div class="aparat-row mono"><span data-annotate="underline" data-annotate-color="#e44a06">Perwira aktif di jabatan sipil</span><b class="num">{fmtRp.format(APARAT.perwiraSipil)}</b></div>
-              <p class="aparat-impun">{APARAT.impunitas}</p>
-              <button class="chip"><span class="tick">⊙</span>{APARAT.kekerasan.sumber} · imparsial</button>
+              <span class="eyebrow">KEKERASAN POLISI · {APARAT_KEKERASAN.periode} · RINCIAN</span>
+              <div class="aparat-row mono"><span>Insiden dengan tembakan</span><b class="num">{APARAT_KEKERASAN.tembak}</b></div>
+              <div class="aparat-row mono"><span>Korban tewas</span><b class="num">{APARAT_KEKERASAN.tewas}</b></div>
+              <div class="aparat-row mono"><span data-annotate="underline" data-annotate-color="#e44a06">Perwira aktif di jabatan sipil</span><b class="num">{fmtRp.format(APARAT_KEKERASAN.perwiraSipil)}</b></div>
+              <p class="aparat-impun">{APARAT_KEKERASAN.impunitas}</p>
+              <button class="chip"><span class="tick">⊙</span>{APARAT_KEKERASAN.sumber} · imparsial</button>
             </div>
           </div>
         </section>
@@ -447,11 +449,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
 
           <div class="hukum-grid">
             <div class="ekonomi-col" data-rise>
-              <div class="ekonomi-stat">
-                <span class="eyebrow">BELANJA NEGARA 2026</span>
-                <p class="aparat-angka display num">{EKONOMI.apbn.belanja}</p>
-                <p class="aparat-note">defisit {EKONOMI.apbn.defisit} · rasio pajak {EKONOMI.apbn.pajak}</p>
-              </div>
+              <!-- the APBN total prints once, on the struk beside this column:
+                   the artifact owns it (satu fakta satu pemilik) -->
               <div class="ekonomi-otsus">
                 <span class="eyebrow">KAS DAERAH · BELANJA PEGAWAI 546 PEMDA TERHADAP PLAFON UU</span>
                 <!-- follows the lens: any prov/kab picked upstairs is named on
