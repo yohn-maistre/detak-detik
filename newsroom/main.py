@@ -38,6 +38,7 @@ from .publish import publish_edisi
 from .sari import tulis_sari
 from .sources.agenda import gather_agenda
 from .sources.anggaran import gather_anggaran
+from .sources.lembaran import gather_lembaran
 from .sources.harga import gather_harga
 from .sources.hukum import gather_hukum
 from .sources.hutan import gather_hutan
@@ -73,13 +74,17 @@ async def run() -> int:
     # AGENDA ISTANA: the executive's own published record (setkab, keyless,
     # deterministic) — also grows data/agenda_istana.json every run
     agenda_rows, agenda_ringkas = await gather_agenda()
+    # LEMBARAN NEGARA: what actually became law (JDIH BPK, keyless)
+    lembaran_rows, lembaran_ringkas = await gather_lembaran()
     # the vital guardian: kartu-vital rows enter the corpus; drift logs loudly
     vital_rows, vital_masalah = await gather_vital()
     corpus = (pulse_rows + hukum_rows + harga_rows + anggaran_rows
-              + hutan_rows + janji_rows + papua_rows + agenda_rows + vital_rows)
+              + hutan_rows + janji_rows + papua_rows + agenda_rows
+              + lembaran_rows + vital_rows)
     corpus_map = {r.id: r for r in corpus}
     log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
     log.event("agenda", **agenda_ringkas)
+    log.event("lembaran", **lembaran_ringkas)
     if vital_masalah:
         log.event("vital_drift", masalah=vital_masalah)
 

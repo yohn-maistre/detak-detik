@@ -37,26 +37,28 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-import ssl
-import urllib.request
-import xml.etree.ElementTree as ET
 from datetime import date, datetime, timezone
-from email.utils import parsedate_to_datetime
-from html.parser import HTMLParser
-from pathlib import Path
 
-# NOTE: ..models (pydantic) is imported lazily inside gather_agenda() so the
-# standalone harvest entrypoint below runs on a bare stdlib Python — the
-# agenda cron needs zero pip installs and no LLM keys.
+# shared PANTAU core (fetch w/ TLS policy, RSS parse, archive discipline);
+# ..models (pydantic) stays lazy inside gather_agenda() so the standalone
+# harvest runs on a bare stdlib Python — no pip, no LLM keys
+from ..pantau import BULAN as _BULAN
+from ..pantau import DATA as _DATA
+from ..pantau import ambil as _ambil
+from ..pantau import cocok as _cocok
+from ..pantau import muat_arsip, parse_rss, simpan_arsip
 
-_DATA = Path(__file__).resolve().parent.parent / "data"
 _ARSIP = _DATA / "agenda_istana.json"
 
 _FEED = "https://setkab.go.id/feed/"
-_FEED_HAL = ("https://setkab.go.id/feed/?paged=2", "https://setkab.go.id/feed/?paged=3")
-_UA = "detak-detik/1.0 (koran sipil; github.com/yohn-maistre/detak-detik)"
-_TIMEOUT = 20
-SIMPAN_MAKS = 600  # ± a year of Setkab output; older rows pruned on write
+_FEED_HAL = (
+    "https://setkab.go.id/feed/?paged=2",
+    "https://setkab.go.id/feed/?paged=3",
+    # the vice-presidency publishes the same WordPress way (probed GOLD
+    # 2026-07-05); its rows classify as aktor WAPRES by the office rule
+    "https://www.wapresri.go.id/feed/",
+)
+SIMPAN_MAKS = 600  # ± a year of output; older rows pruned on write
 
 # ── the province table (kode = the house convention, edisi.ts DAERAH) ──
 _PROV: dict[str, tuple[str, str]] = {
@@ -106,11 +108,6 @@ _PROV: dict[str, tuple[str, str]] = {
 # longest names first so "papua barat daya" wins before "papua barat" & "papua"
 _PROV_URUT = sorted(_PROV, key=len, reverse=True)
 
-_BULAN = {
-    "januari": 1, "februari": 2, "maret": 3, "april": 4, "mei": 5, "juni": 6,
-    "juli": 7, "agustus": 8, "september": 9, "oktober": 10, "november": 11,
-    "desember": 12,
-}
 _RE_TANGGAL = re.compile(
     r"(\d{1,2})\s+(Januari|Februari|Maret|April|Mei|Juni|Juli|Agustus|"
     r"September|Oktober|November|Desember)\s+(\d{4})\s*$", re.I)
@@ -159,57 +156,6 @@ _TOPIK_ATURAN: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("energi-sda", ("energi", "listrik", "migas", "tambang", "nikel", "hilirisasi",
                     "sawit", "hutan", "b40", "b50")),
 )
-
-
-class _Polos(HTMLParser):
-    """Strip tags; keep text (stdlib only — the phone/CI parity rule)."""
-
-    def __init__(self) -> None:
-        super().__init__()
-        self.potongan: list[str] = []
-
-    def handle_data(self, data: str) -> None:
-        self.potongan.append(data)
-
-
-def _teks_polos(html: str) -> str:
-    p = _Polos()
-    try:
-        p.feed(html)
-    except Exception:
-        return html
-    return " ".join(" ".join(p.potongan).split())
-
-
-def _ambil(url: str) -> str:
-    """Verified fetch first; on SSL failure only, retry unverified for this
-    one host (incomplete chain server-side; rows stay re-checkable at their
-    cited URLs). Any other failure raises — the caller treats it as a dark
-    feed and keeps the existing archive."""
-    req = urllib.request.Request(url, headers={"User-Agent": _UA})
-    try:
-        with urllib.request.urlopen(req, timeout=_TIMEOUT) as resp:
-            return resp.read().decode("utf-8", errors="replace")
-    except ssl.SSLError:
-        pass
-    except Exception as exc:
-        if "SSL" not in str(exc) and "certificate" not in str(exc).lower():
-            raise
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    with urllib.request.urlopen(req, timeout=_TIMEOUT, context=ctx) as resp:
-        return resp.read().decode("utf-8", errors="replace")
-
-
-# ── deterministic field extraction ──────────────────────────────────────
-
-def _cocok(aturan: tuple[tuple[str, tuple[str, ...]], ...], teks: str) -> str | None:
-    for label, kunci in aturan:
-        for k in kunci:
-            if k in teks:
-                return label
-    return None
 
 
 def _tanggal_acara(judul: str, terbit: str) -> str:
@@ -298,61 +244,23 @@ def _baris(item: dict) -> dict:
 
 # ── feed parsing & the accumulating archive ─────────────────────────────
 
-_NS = {"content": "http://purl.org/rss/1.0/modules/content/"}
-
-
-def _parse_feed(xml_text: str) -> list[dict]:
-    items: list[dict] = []
-    try:
-        root = ET.fromstring(xml_text)
-    except ET.ParseError:
-        return items
-    for it in root.iter("item"):
-        judul = (it.findtext("title") or "").strip()
-        url = (it.findtext("link") or "").strip()
-        if not judul or not url:
-            continue
-        pub = (it.findtext("pubDate") or "").strip()
-        try:
-            terbit = parsedate_to_datetime(pub).date().isoformat()
-        except Exception:
-            terbit = datetime.now(timezone.utc).date().isoformat()
-        body_html = it.findtext("content:encoded", default="", namespaces=_NS) or ""
-        items.append({"judul": judul, "url": url, "terbit": terbit,
-                      "body": _teks_polos(body_html)})
-    return items
-
-
-def _muat_arsip() -> dict:
-    try:
-        return json.loads(_ARSIP.read_text(encoding="utf-8"))
-    except Exception:
-        return {"acara": []}
-
-
 def muat_agenda() -> list[dict]:
     """The archive rows, newest first (what the page and the desk read)."""
-    return list(_muat_arsip().get("acara", []))
+    return muat_arsip(_ARSIP, "acara")
 
 
 def _simpan(acara: list[dict]) -> bool:
-    """Merge-target write: newest first, pruned, only when content changed."""
-    acara = sorted(acara, key=lambda a: (a.get("tanggal_acara") or "", a.get("tanggal_terbit") or ""), reverse=True)[:SIMPAN_MAKS]
-    payload = {
-        "_catatan": ("Arsip agenda istana — akumulasi dari setkab.go.id/feed/ oleh "
-                     "newsroom/sources/agenda.py (deterministik: regex + tabel kata, tanpa model). "
-                     "Feed hanya memuat ±10 butir; arsip inilah ingatannya. Setiap baris "
-                     "mengutip URL terbitan resminya."),
-        "_sumber": [_FEED],
-        "diambil": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "acara": acara,
-    }
-    lama = _muat_arsip()
-    if lama.get("acara") == acara:
-        return False  # unchanged — don't churn the git history with timestamps
-    _ARSIP.parent.mkdir(parents=True, exist_ok=True)
-    _ARSIP.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    return True
+    return simpan_arsip(
+        _ARSIP, acara,
+        catatan=("Arsip agenda istana — akumulasi dari terbitan resmi setkab.go.id "
+                 "dan wapresri.go.id oleh newsroom/sources/agenda.py (deterministik: "
+                 "regex + tabel kata, tanpa model). Feed hanya memuat ±10 butir; "
+                 "arsip inilah ingatannya. Setiap baris mengutip URL terbitannya."),
+        sumber=[_FEED, "https://www.wapresri.go.id/feed/"],
+        kunci="acara",
+        maks=SIMPAN_MAKS,
+        urut=("tanggal_acara", "tanggal_terbit"),
+    )
 
 
 def panen() -> dict:
@@ -367,7 +275,7 @@ def panen() -> dict:
         except Exception:
             continue
         gelap = False
-        for item in _parse_feed(mentah):
+        for item in parse_rss(mentah):
             if item["url"] not in arsip:
                 segar += 1
             arsip[item["url"]] = _baris(item)

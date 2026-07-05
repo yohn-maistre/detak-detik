@@ -1,10 +1,26 @@
 {
- "_catatan": "Arsip agenda istana — akumulasi dari setkab.go.id/feed/ oleh newsroom/sources/agenda.py (deterministik: regex + tabel kata, tanpa model). Feed hanya memuat ±10 butir; arsip inilah ingatannya. Setiap baris mengutip URL terbitan resminya.",
+ "_catatan": "Arsip agenda istana — akumulasi dari terbitan resmi setkab.go.id dan wapresri.go.id oleh newsroom/sources/agenda.py (deterministik: regex + tabel kata, tanpa model). Feed hanya memuat ±10 butir; arsip inilah ingatannya. Setiap baris mengutip URL terbitannya.",
  "_sumber": [
-  "https://setkab.go.id/feed/"
+  "https://setkab.go.id/feed/",
+  "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-05T08:38:05+00:00",
+ "diambil": "2026-07-05T12:14:14+00:00",
  "acara": [
+  {
+   "id": "3339b59f65a4",
+   "url": "https://wapresri.go.id/wapres-dorong-jci-indonesia-cetak-pemimpin-muda-yang-siap-bersaing-di-tingkat-dunia/",
+   "judul": "Wapres Dorong JCI Indonesia Cetak Pemimpin Muda yang Siap Bersaing di Tingkat Dunia",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-03",
+   "tanggal_terbit": "2026-07-03",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "57015c150cfa",
    "url": "https://setkab.go.id/presiden-prabowo-dan-presiden-lukashenko-luncurkan-peta-jalan-kerja-sama-indonesia-belarus-2026-2030/",
@@ -179,6 +195,23 @@
    "prov_nama": null
   },
   {
+   "id": "01bd7f4b94c3",
+   "url": "https://wapresri.go.id/wapres-dampingi-presiden-pada-upacara-peringatan-ke-80-hari-bhayangkara/",
+   "judul": "Wapres Dampingi Presiden pada Upacara Peringatan Ke-80 Hari Bhayangkara",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-01",
+   "tanggal_terbit": "2026-07-01",
+   "audiens": "Upacara Peringatan Ke-80 Hari Bhayangkara",
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
    "id": "950f1be10e88",
    "url": "https://setkab.go.id/pemerintah-resmi-luncurkan-logo-dan-identitas-visual-hut-ke-81-kemerdekaan-ri/",
    "judul": "Pemerintah Resmi Luncurkan Logo dan Identitas Visual HUT Ke-81 Kemerdekaan RI",
@@ -207,6 +240,38 @@
    "topik": [
     "pendidikan"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "15680071b319",
+   "url": "https://wapresri.go.id/setelah-santri-di-jombang-lanjut-ke-pemuda-gereja-di-minahasa-utara-wapres-serukan-semangat-kerukunan-dan-persatuan/",
+   "judul": "Setelah Santri di Jombang Lanjut Ke Pemuda Gereja di Minahasa Utara, Wapres Serukan Semangat Kerukunan dan Persatuan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-29",
+   "tanggal_terbit": "2026-06-29",
+   "audiens": null,
+   "topik": [
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "22e80a674d7b",
+   "url": "https://wapresri.go.id/buka-permata-cai-2026-wapres-ajak-santri-perkuat-karakter-dan-keterampilan-wirausaha-untuk-hadapi-bonus-demografi/",
+   "judul": "Buka PERMATA CAI 2026, Wapres Ajak Santri Perkuat Karakter dan Keterampilan Wirausaha Untuk Hadapi Bonus Demografi",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-29",
+   "tanggal_terbit": "2026-06-29",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
@@ -296,6 +361,39 @@
    "tanggal_terbit": "2026-06-26",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "86babf57ed13",
+   "url": "https://wapresri.go.id/wapres-gibran-dampingi-presiden-prabowo-buka-sarasehan-kebangsaan-ksti-2026/",
+   "judul": "Wapres Gibran Dampingi Presiden Prabowo Buka Sarasehan Kebangsaan KSTI 2026",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4b328013022d",
+   "url": "https://wapresri.go.id/tinjau-fasilitas-produksi-kendaraan-listrik-wapres-dukung-penguatan-industri-nasional/",
+   "judul": "Tinjau Fasilitas Produksi Kendaraan Listrik, Wapres Dukung Penguatan Industri Nasional",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-06-26",
+   "tanggal_terbit": "2026-06-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
@@ -534,6 +632,23 @@
    "prov_nama": "Gorontalo"
   },
   {
+   "id": "e9c19facd77c",
+   "url": "https://wapresri.go.id/bersama-akademisi-university-of-notre-dame-wapres-bahas-masa-depan-sdm-dan-pendidikan-di-tengah-revolusi-ai/",
+   "judul": "Bersama Akademisi University of Notre Dame, Wapres Bahas Masa Depan SDM dan Pendidikan di Tengah Revolusi AI",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-24",
+   "tanggal_terbit": "2026-06-24",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
    "id": "1833e92a12b2",
    "url": "https://setkab.go.id/presiden-prabowo-kekayaan-indonesia-harus-kembali-untuk-rakyat-kuncinya-pemerintahan-yang-bersih/",
    "judul": "Presiden Prabowo: Kekayaan Indonesia Harus Kembali untuk Rakyat, Kuncinya Pemerintahan yang Bersih",
@@ -544,6 +659,58 @@
    "audiens": null,
    "topik": [
     "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "776f248b62f3",
+   "url": "https://wapresri.go.id/wapres-apresiasi-pemain-sepak-bola-anak-anak-jalanan-raih-juara-dunia/",
+   "judul": "Wapres Apresiasi Pemain Sepak Bola Anak-Anak Jalanan Raih Juara Dunia",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-23",
+   "tanggal_terbit": "2026-06-23",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "77ac164e1c84",
+   "url": "https://wapresri.go.id/terima-ika-bem-nusantara-wapres-ajak-alumni-mahasiswa-bergandengan-tangan-bangun-bangsa-dan-negara/",
+   "judul": "Terima IKA BEM Nusantara, Wapres Ajak Alumni Mahasiswa Bergandengan Tangan Bangun Bangsa dan Negara",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-06-22",
+   "tanggal_terbit": "2026-06-22",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e4d6af8cbf20",
+   "url": "https://wapresri.go.id/dari-asmat-wapres-dorong-penguatan-program-mbg-dan-peningkatan-layanan-kesehatan-di-wilayah-3t/",
+   "judul": "Dari Asmat, Wapres Dorong Penguatan Program MBG dan Peningkatan Layanan Kesehatan di Wilayah 3T",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-06-21",
+   "tanggal_terbit": "2026-06-21",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "kesehatan"
    ],
    "venue": null,
    "kota": null,

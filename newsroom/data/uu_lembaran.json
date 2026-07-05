@@ -1,0 +1,909 @@
+{
+ "_catatan": "Arsip lembaran — peraturan pusat terbaru per jenis dari peraturan.bpk.go.id (JDIH BPK), dipanen halaman-1-per-jenis oleh newsroom/sources/lembaran.py (deterministik, tanpa model); tanggal penetapan/pengundangan dari halaman Details, hanya untuk baris baru. Setiap baris mengutip URL dokumennya.",
+ "_sumber": [
+  "https://peraturan.bpk.go.id"
+ ],
+ "diambil": "2026-07-05T12:19:09+00:00",
+ "peraturan": [
+  {
+   "id": "350096",
+   "url": "https://peraturan.bpk.go.id/Details/350096/uu-no-5-tahun-2026",
+   "nomor": "5",
+   "tahun": 2026,
+   "judul": "Perubahan Ketiga atas Undang-Undang Nomor 2 Tahun 2002 tentang Kepolisian Negara Republik Indonesia",
+   "jenis": "UU",
+   "ditetapkan": "2026-06-17",
+   "diundangkan": "2026-06-17"
+  },
+  {
+   "id": "350166",
+   "url": "https://peraturan.bpk.go.id/Details/350166/uu-no-4-tahun-2026",
+   "nomor": "4",
+   "tahun": 2026,
+   "judul": "Perubahan atas Undang-Undang Nomor 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan",
+   "jenis": "UU",
+   "ditetapkan": "2026-06-17",
+   "diundangkan": "2026-06-17"
+  },
+  {
+   "id": "349942",
+   "url": "https://peraturan.bpk.go.id/Details/349942/uu-no-3-tahun-2026",
+   "nomor": "3",
+   "tahun": 2026,
+   "judul": "Pelindungan Saksi dan Korban",
+   "jenis": "UU",
+   "ditetapkan": "2026-05-20",
+   "diundangkan": "2026-05-20"
+  },
+  {
+   "id": "349945",
+   "url": "https://peraturan.bpk.go.id/Details/349945/pp-no-24-tahun-2026",
+   "nomor": "24",
+   "tahun": 2026,
+   "judul": "Tata Kelola Ekspor Komoditas Sumber Daya Alam Strategis",
+   "jenis": "PP",
+   "ditetapkan": "2026-05-20",
+   "diundangkan": "2026-05-20"
+  },
+  {
+   "id": "349430",
+   "url": "https://peraturan.bpk.go.id/Details/349430/perpres-no-32-tahun-2026",
+   "nomor": "32",
+   "tahun": 2026,
+   "judul": "Pengesahan Protokol Perubahan Persetujuan antara Republik Indonesia dan Jepang mengenai suatu Kemitraan Ekonomi (Protocol Amending the Agreement between the Republic of Indonesia and Japan for an Economic Partnership)",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-05-13",
+   "diundangkan": "2026-05-13"
+  },
+  {
+   "id": "349429",
+   "url": "https://peraturan.bpk.go.id/Details/349429/perpres-no-31-tahun-2026",
+   "nomor": "31",
+   "tahun": 2026,
+   "judul": "Komisi Nasional Indonesia untuk United Nations Educational, Scientific, and Cultural Organization",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-05-13",
+   "diundangkan": "2026-05-13"
+  },
+  {
+   "id": "349428",
+   "url": "https://peraturan.bpk.go.id/Details/349428/perpres-no-30-tahun-2026",
+   "nomor": "30",
+   "tahun": 2026,
+   "judul": "Pengesahan International Coffee Agreement 2022 (Persetujuan Kopi Internasional 2022)",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-05-12",
+   "diundangkan": "2026-05-12"
+  },
+  {
+   "id": "349427",
+   "url": "https://peraturan.bpk.go.id/Details/349427/perpres-no-29-tahun-2026",
+   "nomor": "29",
+   "tahun": 2026,
+   "judul": "Perubahan Kedua atas Peraturan Presiden Nomor 107 Tahun 2015 tentang Percepatan Penyelenggaraan Prasarana dan Sarana Kereta Cepat Antara Jakarta dan Bandung",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-05-12",
+   "diundangkan": "2026-05-12"
+  },
+  {
+   "id": "349944",
+   "url": "https://peraturan.bpk.go.id/Details/349944/pp-no-21-tahun-2026",
+   "nomor": "21",
+   "tahun": 2026,
+   "judul": "Perubahan Ketiga atas Peraturan Pemerintah Nomor 36 Tahun 2023 tentang Devisa Hasil Ekspor dari Kegiatan Pengusahaan, Pengelolaan, dan/atau Pengolahan Sumber Daya Alam",
+   "jenis": "PP",
+   "ditetapkan": "2026-05-06",
+   "diundangkan": "2026-05-06"
+  },
+  {
+   "id": "349426",
+   "url": "https://peraturan.bpk.go.id/Details/349426/perpres-no-26-tahun-2026",
+   "nomor": "26",
+   "tahun": 2026,
+   "judul": "Pengadaan Minyak Bumi, Bahan Bakar Minyak, dan/atau Liquefied Petroleum Gas untuk Ketahanan Energi Nasional",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-30",
+   "diundangkan": "2026-04-30"
+  },
+  {
+   "id": "349425",
+   "url": "https://peraturan.bpk.go.id/Details/349425/perpres-no-25-tahun-2026",
+   "nomor": "25",
+   "tahun": 2026,
+   "judul": "Pengesahan Convention Concerning Work in the Fishing Sector, International Labour Organization Convention 188 (Konvensi mengenai Pekerjaan dalam Sektor Penangkapan Ikan, Konvensi Organisasi Ketenagakerjaan Internasional 188)",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-24",
+   "diundangkan": "2026-04-24"
+  },
+  {
+   "id": "349415",
+   "url": "https://peraturan.bpk.go.id/Details/349415/pp-no-20-tahun-2026",
+   "nomor": "20",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 55 Tahun 2022 tentang Penyesuaian Pengaturan di Bidang Pajak Penghasilan",
+   "jenis": "PP",
+   "ditetapkan": "2026-04-22",
+   "diundangkan": "2026-04-22"
+  },
+  {
+   "id": "349424",
+   "url": "https://peraturan.bpk.go.id/Details/349424/perpres-no-23-tahun-2026",
+   "nomor": "23",
+   "tahun": 2026,
+   "judul": "Pengesahan Persetujuan antara Pemerintah Republik Indonesia dan Pemerintah Malaysia tentang Perdagangan Perbatasan (Agreement between the Government of the Republic of Indonesia and the Government of Malaysia on Border Trade)",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-22",
+   "diundangkan": "2026-04-22"
+  },
+  {
+   "id": "349423",
+   "url": "https://peraturan.bpk.go.id/Details/349423/perpres-no-22-tahun-2026",
+   "nomor": "22",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 162 Tahun 2024 tentang Kementerian Sosial",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-15",
+   "diundangkan": "2026-04-15"
+  },
+  {
+   "id": "349422",
+   "url": "https://peraturan.bpk.go.id/Details/349422/perpres-no-21-tahun-2026",
+   "nomor": "21",
+   "tahun": 2026,
+   "judul": "Penugasan Khusus Dalam Rangka Percepatan Pelaksanaan Pembangunan Infrastruktur",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-15",
+   "diundangkan": "2026-04-15"
+  },
+  {
+   "id": "349421",
+   "url": "https://peraturan.bpk.go.id/Details/349421/perpres-no-20-tahun-2026",
+   "nomor": "20",
+   "tahun": 2026,
+   "judul": "Hak Keuangan dan Fasilitas Lainnya bagi Kepala, Wakil Kepala, Deputi, dan Tenaga Profesional Badan Pengendalian Pembangunan dan Investigasi Khusus",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-04-09",
+   "diundangkan": "2026-04-09"
+  },
+  {
+   "id": "349414",
+   "url": "https://peraturan.bpk.go.id/Details/349414/pp-no-19-tahun-2026",
+   "nomor": "19",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 10 Tahun 2025 tentang Organisasi dan Tata Kelola Badan Pengelola Investasi Daya Anagata Nusantara",
+   "jenis": "PP",
+   "ditetapkan": "2026-04-08",
+   "diundangkan": "2026-04-08"
+  },
+  {
+   "id": "349411",
+   "url": "https://peraturan.bpk.go.id/Details/349411/pp-no-18-tahun-2026",
+   "nomor": "18",
+   "tahun": 2026,
+   "judul": "Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku di Lingkungan Kementerian Pertahanan",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349410",
+   "url": "https://peraturan.bpk.go.id/Details/349410/pp-no-17-tahun-2026",
+   "nomor": "17",
+   "tahun": 2026,
+   "judul": "Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Badan Pemeriksa Keuangan",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349409",
+   "url": "https://peraturan.bpk.go.id/Details/349409/pp-no-16-tahun-2026",
+   "nomor": "16",
+   "tahun": 2026,
+   "judul": "Peraturan Pelaksanaan Undang-Undang Nomor 6 Tahun 2014 tentang Desa",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349408",
+   "url": "https://peraturan.bpk.go.id/Details/349408/pp-no-15-tahun-2026",
+   "nomor": "15",
+   "tahun": 2026,
+   "judul": "Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Badan Pengawas Obat dan Makanan",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349406",
+   "url": "https://peraturan.bpk.go.id/Details/349406/pp-no-14-tahun-2026",
+   "nomor": "14",
+   "tahun": 2026,
+   "judul": "Perubahan Kedua atas Peraturan Pemerintah Nomor 38 Tahun 2002 tentang Daftar Koordinat Geografis Titik-Titik Garis Pangkal Kepulauan Indonesia",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349363",
+   "url": "https://peraturan.bpk.go.id/Details/349363/pp-no-13-tahun-2026",
+   "nomor": "13",
+   "tahun": 2026,
+   "judul": "Jenis dan Tarif atas Jenis Penerimaan Negara Bukan Pajak yang Berlaku pada Badan Riset dan Inovasi Nasional",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349420",
+   "url": "https://peraturan.bpk.go.id/Details/349420/perpres-no-19-tahun-2026",
+   "nomor": "19",
+   "tahun": 2026,
+   "judul": "Tunjangan Jabatan Fungsional Anggota Kepolisian Negara Republik Indonesia",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349419",
+   "url": "https://peraturan.bpk.go.id/Details/349419/perpres-no-18-tahun-2026",
+   "nomor": "18",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 152 Tahun 2024 tentang Kementerian Agama",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349418",
+   "url": "https://peraturan.bpk.go.id/Details/349418/perpres-no-17-tahun-2026",
+   "nomor": "17",
+   "tahun": 2026,
+   "judul": "Kantor Staf Presiden",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349417",
+   "url": "https://peraturan.bpk.go.id/Details/349417/perpres-no-16-tahun-2026",
+   "nomor": "16",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 173 Tahun 2024 tentang Kementerian Perhubungan",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "349416",
+   "url": "https://peraturan.bpk.go.id/Details/349416/perpres-no-15-tahun-2026",
+   "nomor": "15",
+   "tahun": 2026,
+   "judul": "Hak Keuangan dan Fasilitas Lainnya bagi Ketua dan Anggota Dewan Pertimbangan Presiden Republik Indonesia",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-27",
+   "diundangkan": "2026-03-27"
+  },
+  {
+   "id": "348704",
+   "url": "https://peraturan.bpk.go.id/Details/348704/pp-no-11-tahun-2026",
+   "nomor": "11",
+   "tahun": 2026,
+   "judul": "Penempatan Dana pada Bank dan Pelaksanaan Kewenangan dalam Penyelenggaraan Program Restrukturisasi Perbankan oleh Lembaga Penjamin Simpanan",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": "2026-03-11"
+  },
+  {
+   "id": "348121",
+   "url": "https://peraturan.bpk.go.id/Details/348121/perpres-no-14-tahun-2026",
+   "nomor": "14",
+   "tahun": 2026,
+   "judul": "Percepatan Pelaksanaan Penyediaan Infrastruktur Pascapanen dalam rangka Ketahanan Pangan Nasional",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": "2026-03-11"
+  },
+  {
+   "id": "348120",
+   "url": "https://peraturan.bpk.go.id/Details/348120/perpres-no-13-tahun-2026",
+   "nomor": "13",
+   "tahun": 2026,
+   "judul": "Pengelolaan Kesehatan",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": "2026-03-11"
+  },
+  {
+   "id": "348119",
+   "url": "https://peraturan.bpk.go.id/Details/348119/perpres-no-12-tahun-2026",
+   "nomor": "12",
+   "tahun": 2026,
+   "judul": "Pemberian Penghargaan Olahraga",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": "2026-03-11"
+  },
+  {
+   "id": "348118",
+   "url": "https://peraturan.bpk.go.id/Details/348118/perpres-no-11-tahun-2026",
+   "nomor": "11",
+   "tahun": 2026,
+   "judul": "Survei Hidrografi dan Pemetaan Hidrografi Nasional",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": "2026-03-11"
+  },
+  {
+   "id": "349360",
+   "url": "https://peraturan.bpk.go.id/Details/349360/pp-no-10-tahun-2026",
+   "nomor": "10",
+   "tahun": 2026,
+   "judul": "Perubahan Kedua atas Peraturan Pemerintah Nomor 39 Tahun 2010 tentang Administrasi Prajurit Tentara Nasional Indonesia",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-10",
+   "diundangkan": "2026-03-10"
+  },
+  {
+   "id": "345732",
+   "url": "https://peraturan.bpk.go.id/Details/345732/pp-no-9-tahun-2026",
+   "nomor": "9",
+   "tahun": 2026,
+   "judul": "Pemberian Tunjangan Hari Raya dan Gaji Ketiga Belas kepada Aparatur Negara, Pensiunan, Penerima Pensiun, dan Penerima Tunjangan Tahun 2026",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-03",
+   "diundangkan": "2026-03-03"
+  },
+  {
+   "id": "347927",
+   "url": "https://peraturan.bpk.go.id/Details/347927/pp-no-8-tahun-2026",
+   "nomor": "8",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 23 Tahun 2021 tentang Penyelenggaraan Kehutanan",
+   "jenis": "PP",
+   "ditetapkan": "2026-03-02",
+   "diundangkan": "2026-03-02"
+  },
+  {
+   "id": "347933",
+   "url": "https://peraturan.bpk.go.id/Details/347933/perpres-no-9-tahun-2026",
+   "nomor": "9",
+   "tahun": 2026,
+   "judul": "Badan Nasional Penanggulangan Terorisme",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-09",
+   "diundangkan": "2026-02-09"
+  },
+  {
+   "id": "347932",
+   "url": "https://peraturan.bpk.go.id/Details/347932/perpres-no-8-tahun-2026",
+   "nomor": "8",
+   "tahun": 2026,
+   "judul": "Rencana Aksi Nasional Pencegahan dan Penanggulangan Ekstremisme Berbasis Kekerasan yang Mengarah pada Terorisme Tahun 2026-2029",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-09",
+   "diundangkan": "2026-02-09"
+  },
+  {
+   "id": "347931",
+   "url": "https://peraturan.bpk.go.id/Details/347931/perpres-no-7-tahun-2026",
+   "nomor": "7",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 189 Tahun 2024 tentang Kementerian Pendidikan Tinggi, Sains, dan Teknologi",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-09",
+   "diundangkan": "2026-02-09"
+  },
+  {
+   "id": "347930",
+   "url": "https://peraturan.bpk.go.id/Details/347930/perpres-no-6-tahun-2026",
+   "nomor": "6",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 188 Tahun 2024 tentang Kementerian Pendidikan Dasar dan Menengah",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-09",
+   "diundangkan": "2026-02-09"
+  },
+  {
+   "id": "347925",
+   "url": "https://peraturan.bpk.go.id/Details/347925/pp-no-6-tahun-2026",
+   "nomor": "6",
+   "tahun": 2026,
+   "judul": "Pembinaan dan Pengawasan Lembaga Keuangan Mikro Inkubasi dan Lembaga Keuangan Mikro Skala Usaha Kecil oleh Pemerintah Daerah",
+   "jenis": "PP",
+   "ditetapkan": "2026-02-04",
+   "diundangkan": "2026-02-04"
+  },
+  {
+   "id": "347924",
+   "url": "https://peraturan.bpk.go.id/Details/347924/pp-no-5-tahun-2026",
+   "nomor": "5",
+   "tahun": 2026,
+   "judul": "Perubahan Kedua atas Peraturan Pemerintah Nomor 51 Tahun 1996 tentang Hak Keuangan/Administratif Duta Besar Luar Biasa dan Berkuasa Penuh dan Mantan Duta Besar Luar Biasa dan Berkuasa Penuh serta Janda/Dudanya",
+   "jenis": "PP",
+   "ditetapkan": "2026-02-04",
+   "diundangkan": "2026-02-04"
+  },
+  {
+   "id": "347929",
+   "url": "https://peraturan.bpk.go.id/Details/347929/perpres-no-5-tahun-2026",
+   "nomor": "5",
+   "tahun": 2026,
+   "judul": "Hak Keuangan dan Fasilitas Hakim Ad Hoc",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-04",
+   "diundangkan": "2026-02-04"
+  },
+  {
+   "id": "347928",
+   "url": "https://peraturan.bpk.go.id/Details/347928/perpres-no-4-tahun-2026",
+   "nomor": "4",
+   "tahun": 2026,
+   "judul": "Pengendalian Alih Fungsi Lahan Sawah",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-02-04",
+   "diundangkan": "2026-02-04"
+  },
+  {
+   "id": "348701",
+   "url": "https://peraturan.bpk.go.id/Details/348701/pp-no-4-tahun-2026",
+   "nomor": "4",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 28 Tahun 2022 tentang Pengurusan Piutang Negara oleh Panitia Urusan Piutang Negara",
+   "jenis": "PP",
+   "ditetapkan": "2026-01-26",
+   "diundangkan": "2026-01-26"
+  },
+  {
+   "id": "348123",
+   "url": "https://peraturan.bpk.go.id/Details/348123/perpres-no-3-tahun-2026",
+   "nomor": "3",
+   "tahun": 2026,
+   "judul": "Pencegahan dan Penanganan Anak Tidak Sekolah",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-01-26",
+   "diundangkan": "2026-01-26"
+  },
+  {
+   "id": "348122",
+   "url": "https://peraturan.bpk.go.id/Details/348122/perpres-no-2-tahun-2026",
+   "nomor": "2",
+   "tahun": 2026,
+   "judul": "Urusan Pemerintahan Konkuren Tambahan di Bidang Pertanian",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-01-26",
+   "diundangkan": "2026-01-26"
+  },
+  {
+   "id": "343972",
+   "url": "https://peraturan.bpk.go.id/Details/343972/pp-no-3-tahun-2026",
+   "nomor": "3",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 29 Tahun 2021 tentang Penyelenggaraan Bidang Perdagangan",
+   "jenis": "PP",
+   "ditetapkan": "2026-01-15",
+   "diundangkan": "2026-01-15"
+  },
+  {
+   "id": "349943",
+   "url": "https://peraturan.bpk.go.id/Details/349943/pp-no-2-tahun-2026",
+   "nomor": "2",
+   "tahun": 2026,
+   "judul": "Perubahan Kedua atas Peraturan Pemerintah Nomor 36 Tahun 2023 tentang Devisa Hasil Ekspor dari Kegiatan Pengusahaan, Pengelolaan, dan/atau Pengolahan Sumber Daya Alam",
+   "jenis": "PP",
+   "ditetapkan": "2026-01-14",
+   "diundangkan": "2026-01-14"
+  },
+  {
+   "id": "343427",
+   "url": "https://peraturan.bpk.go.id/Details/343427/perpres-no-1-tahun-2026",
+   "nomor": "1",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Presiden Nomor 148 Tahun 2024 tentang Kementerian Sekretariat Negara",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-01-08",
+   "diundangkan": "2026-01-08"
+  },
+  {
+   "id": "348700",
+   "url": "https://peraturan.bpk.go.id/Details/348700/pp-no-1-tahun-2026",
+   "nomor": "1",
+   "tahun": 2026,
+   "judul": "Perubahan atas Peraturan Pemerintah Nomor 86 Tahun 2019 tentang Keamanan Pangan",
+   "jenis": "PP",
+   "ditetapkan": "2026-01-05",
+   "diundangkan": "2026-01-05"
+  },
+  {
+   "id": "337869",
+   "url": "https://peraturan.bpk.go.id/Details/337869/uu-no-1-tahun-2026",
+   "nomor": "1",
+   "tahun": 2026,
+   "judul": "Penyesuaian Pidana",
+   "jenis": "UU",
+   "ditetapkan": "2026-01-02",
+   "diundangkan": "2026-01-02"
+  },
+  {
+   "id": "343632",
+   "url": "https://peraturan.bpk.go.id/Details/343632/uu-no-21-tahun-2025",
+   "nomor": "21",
+   "tahun": 2025,
+   "judul": "Pengelolaan Ruang Udara",
+   "jenis": "UU",
+   "ditetapkan": "2025-12-24",
+   "diundangkan": "2025-12-24"
+  },
+  {
+   "id": "337302",
+   "url": "https://peraturan.bpk.go.id/Details/337302/uu-no-20-tahun-2025",
+   "nomor": "20",
+   "tahun": 2025,
+   "judul": "Kitab Undang-Undang Hukum Acara Pidana",
+   "jenis": "UU",
+   "ditetapkan": "2025-12-17",
+   "diundangkan": "2025-12-17"
+  },
+  {
+   "id": "334498",
+   "url": "https://peraturan.bpk.go.id/Details/334498/uu-no-19-tahun-2025",
+   "nomor": "19",
+   "tahun": 2025,
+   "judul": "Pengesahan Perjanjian antara Republik Indonesia dan Federasi Rusia tentang Ekstradisi (Treaty between the Republic of Indonesia and the Russian Federation on Extradition)",
+   "jenis": "UU",
+   "ditetapkan": "2025-10-29",
+   "diundangkan": "2025-10-29"
+  },
+  {
+   "id": "334481",
+   "url": "https://peraturan.bpk.go.id/Details/334481/uu-no-18-tahun-2025",
+   "nomor": "18",
+   "tahun": 2025,
+   "judul": "Perubahan Ketiga atas Undang-Undang Nomor 10 Tahun 2009 tentang Kepariwisataan",
+   "jenis": "UU",
+   "ditetapkan": "2025-10-29",
+   "diundangkan": "2025-10-29"
+  },
+  {
+   "id": "338666",
+   "url": "https://peraturan.bpk.go.id/Details/338666/uu-no-17-tahun-2025",
+   "nomor": "17",
+   "tahun": 2025,
+   "judul": "Anggaran Pendapatan dan Belanja Negara Tahun Anggaran 2026",
+   "jenis": "UU",
+   "ditetapkan": "2025-10-22",
+   "diundangkan": "2025-10-22"
+  },
+  {
+   "id": "330668",
+   "url": "https://peraturan.bpk.go.id/Details/330668/uu-no-16-tahun-2025",
+   "nomor": "16",
+   "tahun": 2025,
+   "judul": "Perubahan Keempat atas Undang-Undang Nomor 19 Tahun 2003 tentang Badan Usaha Milik Negara",
+   "jenis": "UU",
+   "ditetapkan": "2025-10-06",
+   "diundangkan": "2025-10-06"
+  },
+  {
+   "id": "234926",
+   "url": "https://peraturan.bpk.go.id/Details/234926/perpu-no-2-tahun-2022",
+   "nomor": "2",
+   "tahun": 2022,
+   "judul": "Cipta Kerja",
+   "jenis": "Perpu",
+   "ditetapkan": "2022-12-30",
+   "diundangkan": "2022-12-30"
+  },
+  {
+   "id": "232762",
+   "url": "https://peraturan.bpk.go.id/Details/232762/perpu-no-1-tahun-2022",
+   "nomor": "1",
+   "tahun": 2022,
+   "judul": "Perubahan atas Undang-Undang Nomor 7 Tahun 2017 tentang Pemilihan Umum",
+   "jenis": "Perpu",
+   "ditetapkan": "2022-12-12",
+   "diundangkan": "2022-12-12"
+  },
+  {
+   "id": "136554",
+   "url": "https://peraturan.bpk.go.id/Details/136554/perpu-no-2-tahun-2020",
+   "nomor": "2",
+   "tahun": 2020,
+   "judul": "Perubahan Ketiga atas Undang-Undang Nomor 1 Tahun 2015 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 1 Tahun 2014 Tentang Pemilihan Gubernur, Bupati, dan Walikota Menjadi Undang-Undang",
+   "jenis": "Perpu",
+   "ditetapkan": "2020-05-04",
+   "diundangkan": "2020-05-04"
+  },
+  {
+   "id": "135060",
+   "url": "https://peraturan.bpk.go.id/Details/135060/perpu-no-1-tahun-2020",
+   "nomor": "1",
+   "tahun": 2020,
+   "judul": "Kebijakan Keuangan Negara dan Stabilitas Sistem Keuangan untuk Penanganan Pandemi Corona Virus Disease 2019 (COVID-19) dan/atau dalam Rangka Menghadapi Ancaman yang Membahayakan Perekonomian Nasional dan/atau Stabilitas Sistem Keuangan",
+   "jenis": "Perpu",
+   "ditetapkan": "2020-03-31",
+   "diundangkan": "2020-03-31"
+  },
+  {
+   "id": "53279",
+   "url": "https://peraturan.bpk.go.id/Details/53279/perpu-no-2-tahun-2017",
+   "nomor": "2",
+   "tahun": 2017,
+   "judul": "Perubahan Atas Undang-Undang Nomor 17 Tahun 2013 Tentang Organisasi Kemasyarakatan &#xD;&#xA;",
+   "jenis": "Perpu",
+   "ditetapkan": "2017-07-10",
+   "diundangkan": "2017-07-10"
+  },
+  {
+   "id": "53275",
+   "url": "https://peraturan.bpk.go.id/Details/53275/perpu-no-1-tahun-2017",
+   "nomor": "1",
+   "tahun": 2017,
+   "judul": "Akses Informasi Keuangan Untuk Kepentingan Perpajakan &#xD;&#xA;",
+   "jenis": "Perpu",
+   "ditetapkan": "2017-05-08",
+   "diundangkan": "2017-05-08"
+  },
+  {
+   "id": "61883",
+   "url": "https://peraturan.bpk.go.id/Details/61883/perpu-no-1-tahun-2016",
+   "nomor": "1",
+   "tahun": 2016,
+   "judul": "Perubahan Kedua atas Undang-Undang Nomor 23 Tahun 2002 tentang Perlindungan Anak",
+   "jenis": "Perpu",
+   "ditetapkan": "2016-05-25",
+   "diundangkan": "2016-05-25"
+  },
+  {
+   "id": "53266",
+   "url": "https://peraturan.bpk.go.id/Details/53266/perpu-no-1-tahun-2015",
+   "nomor": "1",
+   "tahun": 2015,
+   "judul": "Perubahan atas Undang-Undang Nomor 30 Tahun 2002 Tentang Komisi Pemberantasan Tindak Pidana Korupsi",
+   "jenis": "Perpu",
+   "ditetapkan": "2015-02-18",
+   "diundangkan": "2015-02-18"
+  },
+  {
+   "id": "53262",
+   "url": "https://peraturan.bpk.go.id/Details/53262/perpu-no-2-tahun-2014",
+   "nomor": "2",
+   "tahun": 2014,
+   "judul": "Perubahan Atas Undang-Undang Nomor 23 Tahun 2014 Tentang Pemerintahan Daerah&#xD;&#xA;",
+   "jenis": "Perpu",
+   "ditetapkan": "2014-10-02",
+   "diundangkan": "2014-10-02"
+  },
+  {
+   "id": "53255",
+   "url": "https://peraturan.bpk.go.id/Details/53255/perpu-no-1-tahun-2014",
+   "nomor": "1",
+   "tahun": 2014,
+   "judul": "Pemilihan Gubernur, Bupati, Dan Walikota",
+   "jenis": "Perpu",
+   "ditetapkan": "2014-10-02",
+   "diundangkan": "2014-10-02"
+  },
+  {
+   "id": "350721",
+   "url": "https://peraturan.bpk.go.id/Details/350721/keppres-no-9-tahun-2026",
+   "nomor": "9",
+   "tahun": 2026,
+   "judul": "Penambahan Wilayah Kerja Perusahaan Umum (Perum) Jasa Tirta I di Wilayah Sungai Bali-Penida, Wilayah Sungai Pompengan-Larona, Wilayah Sungai Saddang, dan Wilayah Sungai Parigi-Poso",
+   "jenis": "Keppres",
+   "ditetapkan": "2026-04-22",
+   "diundangkan": ""
+  },
+  {
+   "id": "350720",
+   "url": "https://peraturan.bpk.go.id/Details/350720/keppres-no-8-tahun-2026",
+   "nomor": "8",
+   "tahun": 2026,
+   "judul": "Satuan Tugas Inovasi Pembiayaan Pengelolaan Taman Nasional",
+   "jenis": "Keppres",
+   "ditetapkan": "2026-04-16",
+   "diundangkan": ""
+  },
+  {
+   "id": "350719",
+   "url": "https://peraturan.bpk.go.id/Details/350719/keppres-no-7-tahun-2026",
+   "nomor": "7",
+   "tahun": 2026,
+   "judul": "Panitia Seleksi Nasional Pengadaan Sumber Daya Manusia Dalam Rangka Pemenuhan Program Prioritas Presiden",
+   "jenis": "Keppres",
+   "ditetapkan": "2026-04-15",
+   "diundangkan": ""
+  },
+  {
+   "id": "349946",
+   "url": "https://peraturan.bpk.go.id/Details/349946/inpres-no-4-tahun-2026",
+   "nomor": "4",
+   "tahun": 2026,
+   "judul": "Pengadaan dan Pengelolaan Gabah/Beras Dalam Negeri serta Penyaluran Cadangan Beras Pemerintah Tahun 2026-2029",
+   "jenis": "Inpres",
+   "ditetapkan": "2026-04-02",
+   "diundangkan": ""
+  },
+  {
+   "id": "348362",
+   "url": "https://peraturan.bpk.go.id/Details/348362/inpres-no-3-tahun-2026",
+   "nomor": "3",
+   "tahun": 2026,
+   "judul": "Pengadaan dan Pengelolaan Jagung Dalam Negeri serta Penyaluran Cadangan Jagung Pemerintah Tahun 2026-2029",
+   "jenis": "Inpres",
+   "ditetapkan": "2026-03-25",
+   "diundangkan": ""
+  },
+  {
+   "id": "348359",
+   "url": "https://peraturan.bpk.go.id/Details/348359/inpres-no-2-tahun-2026",
+   "nomor": "2",
+   "tahun": 2026,
+   "judul": "Percepatan Swasembada Pangan Bidang Pertanian dalam Mewujudkan Ketahanan Nasional dan Kemandirian Bangsa",
+   "jenis": "Inpres",
+   "ditetapkan": "2026-03-25",
+   "diundangkan": ""
+  },
+  {
+   "id": "348124",
+   "url": "https://peraturan.bpk.go.id/Details/348124/keppres-no-4-tahun-2026",
+   "nomor": "4",
+   "tahun": 2026,
+   "judul": "Satuan Tugas Percepatan Program Pemerintah untuk Mendukung Peningkatan Pertumbuhan Ekonomi",
+   "jenis": "Keppres",
+   "ditetapkan": "2026-03-11",
+   "diundangkan": ""
+  },
+  {
+   "id": "343433",
+   "url": "https://peraturan.bpk.go.id/Details/343433/keppres-no-1-tahun-2026",
+   "nomor": "1",
+   "tahun": 2026,
+   "judul": "Satuan Tugas Percepatan Rehabilitasi dan Rekonstruksi Pascabencana Alam di Provinsi Aceh, Provinsi Sumatera Utara, dan Provinsi Sumatera Barat",
+   "jenis": "Keppres",
+   "ditetapkan": "2026-01-08",
+   "diundangkan": ""
+  },
+  {
+   "id": "343598",
+   "url": "https://peraturan.bpk.go.id/Details/343598/keppres-no-42-tahun-2025",
+   "nomor": "42",
+   "tahun": 2025,
+   "judul": "Cuti Bersama Pegawai Aparatur Sipil Negara Tahun 2026",
+   "jenis": "Keppres",
+   "ditetapkan": "2025-12-31",
+   "diundangkan": ""
+  },
+  {
+   "id": "343593",
+   "url": "https://peraturan.bpk.go.id/Details/343593/keppres-no-41-tahun-2025",
+   "nomor": "41",
+   "tahun": 2025,
+   "judul": "Pembentukan Pengadilan Tata Usaha Negara Tanjung Selor dan Pengadilan Tata Usaha Negara Sofifi",
+   "jenis": "Keppres",
+   "ditetapkan": "2025-12-31",
+   "diundangkan": ""
+  },
+  {
+   "id": "347926",
+   "url": "https://peraturan.bpk.go.id/Details/347926/pp-no-7-tahun-2026",
+   "nomor": "7",
+   "tahun": 2026,
+   "judul": "Peraturan Pelaksanaan Undang-Undang Nomor 22 Tahun 2019 tentang Sistem Budi Daya Pertanian Berkelanjutan",
+   "jenis": "PP",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "347934",
+   "url": "https://peraturan.bpk.go.id/Details/347934/perpres-no-10-tahun-2026",
+   "nomor": "10",
+   "tahun": 2026,
+   "judul": "Pembukaan Konsulat Jenderal Republik Indonesia di Chengdu, Republik Rakyat Tiongkok",
+   "jenis": "Perpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "343592",
+   "url": "https://peraturan.bpk.go.id/Details/343592/keppres-no-40-tahun-2025",
+   "nomor": "40",
+   "tahun": 2025,
+   "judul": "Pembentukan Pengadilan Agama Kabupaten Kepulauan Sula, Pengadilan Agama Kabupaten Halmahera Barat, Pengadilan Agama Kabupaten Buton Utara, Pengadilan Agama Kabupaten Buton Tengah, Pengadilan Agama Kabupaten Kepulauan Aru, Pengadilan Agama Kabupaten Kepulauan Mentawai, Pengadilan Agama Kabupaten Mamuju Tengah, Pengadilan Agama Kabupaten Bangka Selatan, dan Pengadilan Agama Kabupaten Lombok Utara",
+   "jenis": "Keppres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "343566",
+   "url": "https://peraturan.bpk.go.id/Details/343566/keppres-no-39-tahun-2025",
+   "nomor": "39",
+   "tahun": 2025,
+   "judul": "Pembentukan Pengadilan Negeri Kabupaten Badung, Pengadilan Negeri Kabupaten Tangerang, Pengadilan Negeri Kabupaten Morowali, Pengadilan Negeri Kabupaten Bolaang Mongondow Utara, Pengadilan Negeri Kabupaten Sumbawa Barat, Pengadilan Negeri Kabupaten Bangka Selatan, Pengadilan Negeri Kabupaten Sukamara, Pengadilan Negeri Kota Subulussalam, Pengadilan Negeri Kabupaten Penukal Abab Lematang Ilir, Pengadilan Negeri Kabupaten Halmahera Barat, Pengadilan Negeri Kabupaten Kepulauan Mentawai, Pengadilan Negeri Kabupaten Belitung Timur, dan Pengadilan Negeri Kabupaten Gorontalo Utara",
+   "jenis": "Keppres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "343436",
+   "url": "https://peraturan.bpk.go.id/Details/343436/keppres-no-38-tahun-2025",
+   "nomor": "38",
+   "tahun": 2025,
+   "judul": "Program Penyusunan Peraturan Presiden Tahun 2026",
+   "jenis": "Keppres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "343973",
+   "url": "https://peraturan.bpk.go.id/Details/343973/inpres-no-18-tahun-2025",
+   "nomor": "18",
+   "tahun": 2025,
+   "judul": "Percepatan Penanganan Darurat, Rehabilitasi, dan Rekonstruksi Pascabencana Alam di Provinsi Aceh, Provinsi Sumatera Utara, dan Provinsi Sumatera Barat",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "337872",
+   "url": "https://peraturan.bpk.go.id/Details/337872/inpres-no-16-tahun-2025",
+   "nomor": "16",
+   "tahun": 2025,
+   "judul": "Penguatan Percepatan Pembangunan Kawasan Swasembada Pangan, Energi, dan Air Nasional",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "327997",
+   "url": "https://peraturan.bpk.go.id/Details/327997/inpres-no-15-tahun-2025",
+   "nomor": "15",
+   "tahun": 2025,
+   "judul": "Pembangunan Kampung Haji Indonesia di Makkah, Kerajaan Arab Saudi",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "328144",
+   "url": "https://peraturan.bpk.go.id/Details/328144/inpres-no-14-tahun-2025",
+   "nomor": "14",
+   "tahun": 2025,
+   "judul": "Percepatan Pembangunan Kawasan Swasembada Pangan, Energi, dan Air Nasional",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "329089",
+   "url": "https://peraturan.bpk.go.id/Details/329089/inpres-no-13-tahun-2025",
+   "nomor": "13",
+   "tahun": 2025,
+   "judul": "Percepatan Pelaksanaan Pemanfaatan Rumah Susun Sewa yang Digunakan Sebagai Wisma Atlet Selama Penyelenggaraan ASIAN Games XVIII Tahun 2018 di Kompleks Kemayoran Jakarta",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "329086",
+   "url": "https://peraturan.bpk.go.id/Details/329086/inpres-no-12-tahun-2025",
+   "nomor": "12",
+   "tahun": 2025,
+   "judul": "Upaya Penanganan Keadaan Tertentu untuk Normalisasi Alur Pelayaran Pelabuhan Pulau Baai, Transportasi dan Logistik, serta Percepatan Pembangunan di Pulau Enggano",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  },
+  {
+   "id": "327916",
+   "url": "https://peraturan.bpk.go.id/Details/327916/inpres-no-11-tahun-2025",
+   "nomor": "11",
+   "tahun": 2025,
+   "judul": "Percepatan Peningkatan Konektivitas Jalan Daerah untuk Mendukung Swasembada Pangan dan Energi",
+   "jenis": "Inpres",
+   "ditetapkan": null,
+   "diundangkan": null
+  }
+ ]
+}
