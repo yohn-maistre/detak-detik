@@ -36,6 +36,7 @@ import PabrikUU from '../islands/PabrikUU.svelte';
 // only); the seeded JciVsPeers & RupiahIHSG were deleted (wave 9b).
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
+import AgendaIstana from '../islands/AgendaIstana.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
@@ -319,12 +320,21 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <span class="inkbar"><span class="dot">●</span>EKSEKUTIF</span>
               <h2 class="bab-tajuk display">Presiden &amp; Kabinet</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar.&rdquo;</span> <span class="mono">UUD 1945 · PS. 4 (1)</span></p>
-              <p class="bab-dek">Kabinet terbesar sejak 1966, dan seberapa terbuka pertanggungjawabannya.</p>
+              <p class="bab-dek">Kabinet terbesar sejak 1966; apa yang dikerjakannya tercatat di agenda resminya sendiri.</p>
             </div>
           </header>
           <CabangBand cabang="eksekutif" client:visible />
           <!-- the chapter's vital: read against its documented healthy range -->
           <VitalCabang id="eksekutif-kabinet" client:visible />
+
+          <!-- WHAT/WHERE/FOR WHOM: the office's own published record, grown
+               twice daily by the keyless setkab harvest (sources/agenda.py) -->
+          <div class="bab-lembar" data-rise>
+            <h3 class="bab-subjudul display">Agenda Istana</h3>
+            <p class="bab-kalimat fig">Apa yang presiden kerjakan, di mana, untuk siapa — dibaca dari terbitan resmi Sekretariat Kabinet, baris demi baris, dengan tautan ke dokumen aslinya.</p>
+            <AgendaIstana client:visible />
+          </div>
+
           <SkorCabang cabang="eksekutif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Kabinet yang Membengkak</h3>

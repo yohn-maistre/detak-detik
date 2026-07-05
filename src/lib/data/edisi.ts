@@ -4,6 +4,7 @@
  * this module with artifacts from the newsroom (see /newsroom, /etl).
  * Shapes follow docs/DATA_CONTRACTS.md.
  */
+import AGENDA_ISTANA from '../../../newsroom/data/agenda_istana.json';
 
 export const EDISI = {
   nomor: 41,
@@ -131,8 +132,22 @@ export const KEHENINGAN = {
   laneC: { teks: '107.039 jiwa tercatat mengungsi di Tanah Papua', chip: 'HRM · Mar 2026' },
 };
 
+// kiri derives from the paper's own setkab harvest (agenda istana): the
+// president's 30-day footprint beside the displacement clock — travel next
+// to stasis, deliberately uncaptioned. (Rp 552 T now prints only on the
+// struk roast: one fact, one owner.)
+type _AcaraRow = { aktor?: string; tanggal_acara?: string; kota?: string | null };
+const _pres = ((AGENDA_ISTANA.acara ?? []) as _AcaraRow[]).filter((a) => a.aktor === 'PRESIDEN');
+const _tertua = _pres.map((a) => a.tanggal_acara ?? '').sort()[0] ?? '';
+// window honesty: a young archive claims only the days it actually holds
+const _mulai = Math.max(Date.now() - 30 * 864e5, Date.parse(_tertua || '0'));
+const _hariArsip = Math.min(30, Math.max(1, Math.round((Date.now() - _mulai) / 864e5)));
+const _KOTA_30 = new Set(
+  _pres.filter((a) => Date.parse(a.tanggal_acara ?? '') >= _mulai && a.kota).map((a) => a.kota),
+).size;
+
 export const LAYAR_GANDA = {
-  kiri: { angka: 'Rp 552 T', label: 'bunga utang yang dibayar negara tahun ini', chip: 'apbn 2026 · kemenkeu' },
+  kiri: { angka: `${_KOTA_30} kota`, label: `disinggahi presiden dalam ${_hariArsip} hari arsip resminya`, chip: 'setkab · agenda istana' },
   kanan: { angka: 'Hari ke-1.892', label: 'pengungsian Kabupaten Puncak', chip: 'HRM · Mar 2026' },
 };
 

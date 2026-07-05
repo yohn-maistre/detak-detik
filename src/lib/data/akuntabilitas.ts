@@ -13,7 +13,17 @@
  * - Daerah: DJPK Kemenkeu (PAD vs transfer, belanja pegawai), BPK (opini).
  */
 
+import AGENDA from '../../../newsroom/data/agenda_istana.json';
+
 export type Nada = 'buruk' | 'baik' | 'datar';
+
+/** presidential events this calendar month, from the paper's own keyless
+ *  setkab harvest — recomputed every build (deploys ride the data commits) */
+const _BULAN_INI = new Date().toISOString().slice(0, 7);
+const _ACARA_BULAN = (AGENDA.acara ?? []).filter(
+  (a: { aktor?: string; tanggal_acara?: string }) =>
+    a.aktor === 'PRESIDEN' && (a.tanggal_acara ?? '').startsWith(_BULAN_INI),
+).length;
 
 /** `live` on a tile replaces the "(data contoh)" tail with a real provenance
  *  tag — tiles flip one by one as their wiring lands, never all at once.
@@ -60,9 +70,9 @@ export const SKOR: Record<string, Skor> = {
     tiles: [
       { tipe: 'stat', besar: 'Rp 1,2 T', label: 'Belanja perjalanan dinas kepresidenan 2026', sumber: 'setpres · apbn', nada: 'buruk', sub: 'naik dari ±Rp 0,9 T (2025)' },
       { tipe: 'stat', besar: '247', label: 'Perpres & PP diterbitkan tahun ini', sumber: 'peraturan.go.id', nada: 'datar' },
-      // Danantara "0" retired: KabinetWaffle's clock owns that absence.
-      // Slot reserved for the live agenda tile (wave 9d): acara resmi
-      // presiden bulan ini · setkab.go.id.
+      // Danantara "0" retired (KabinetWaffle's clock owns that absence);
+      // its slot is the chapter's first LIVE tile — our own setkab harvest:
+      { tipe: 'stat', besar: String(_ACARA_BULAN), label: 'Acara resmi presiden tercatat bulan ini', sumber: 'setkab.go.id', nada: 'datar', live: 'agenda istana' },
     ],
   },
   legislatif: {
