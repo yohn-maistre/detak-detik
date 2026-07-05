@@ -32,10 +32,8 @@ import CabangBand from '../islands/CabangBand.svelte';
 import SkorCabang from '../islands/SkorCabang.svelte';
 import { CABANG } from '../lib/data/cabang';
 import PabrikUU from '../islands/PabrikUU.svelte';
-import GarisStart from '../islands/GarisStart.svelte';
-import DuaGaris from '../islands/DuaGaris.svelte';
-import RupiahIHSG from '../islands/RupiahIHSG.svelte';
-import JciVsPeers from '../islands/JciVsPeers.svelte';
+// GarisStart & DuaGaris retired to the arsip-perspektif shelf (permalinks
+// only); the seeded JciVsPeers & RupiahIHSG were deleted (wave 9b).
 import FloatKonsentrasi from '../islands/FloatKonsentrasi.svelte';
 import KabinetWaffle from '../islands/KabinetWaffle.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
@@ -66,8 +64,6 @@ const JANJI_TRACK = JANJI.map((j) => {
 });
 const oligarki = PIECES.find((p) => p.slug === 'republik-oligarki');
 const pabrik = PIECES.find((p) => p.slug === 'pabrik-undang-undang');
-const vietnam = PIECES.find((p) => p.slug === 'garis-start-sama');
-const duaGaris = PIECES.find((p) => p.slug === 'dua-garis-kemiskinan');
 
 // The world scoreboard: where the republic ranks, moved into Act II beside the
 // Vietnam comparison. Big numerals, peer context, ruled rows (not tiles).
@@ -538,50 +534,42 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </section>
 
-        <!-- TEMA · PASAR & EKONOMI -->
+        <!-- RAK 07 · KEPEMILIKAN — one header, one instrument (rack grammar) -->
+        {oligarki && (
+          <section class="bab" id="oligarki">
+            <header class="bab-kepala">
+              <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+              <div class="bab-kepala-teks">
+                <span class="inkbar"><span class="dot">●</span>TEMA · KEPEMILIKAN</span>
+                <h2 class="bab-tajuk display">{oligarki.judul}</h2>
+                <p class="bab-dek">{oligarki.satuKalimat}</p>
+              </div>
+            </header>
+            <RepublikOligarki client:visible />
+          </section>
+        )}
+
+        {/* RAK 08 · PASAR — the float ruler; measured-from-outside series
+             print from real rows or not at all (two seeded charts died
+             here, wave 9b — real rows or silence) */}
         <section class="bab" id="ekonomi">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · PASAR</span>
-              <h2 class="bab-tajuk display">Pasar &amp; Ekonomi</h2>
-              <p class="bab-dek">Harga uang, pemusatan kepemilikan, dan bursa yang diukur dari luar. Dokumen berdampingan, pembaca menyimpulkan.</p>
+              <h2 class="bab-tajuk display">Pasar yang Tipis</h2>
+              <p class="bab-dek">Pada sejumlah emiten terbesar, hampir seluruh saham dipegang segelintir pengendali; ambang free float Jakarta termasuk paling rendah di antara bursa besar.</p>
             </div>
           </header>
+          <FloatKonsentrasi client:visible />
 
-          {oligarki && (
-            <div class="bab-lembar" data-rise>
-              <h3 class="bab-judul display">{oligarki.judul}</h3>
-              <p class="bab-kalimat fig">{oligarki.satuKalimat}</p>
-              <RepublikOligarki client:visible />
+          <div class="bab-lembar bab-sub">
+            <span class="eyebrow">YANG TIDAK DICETAK DI SINI · MENUNGGU SUMBER</span>
+            <div class="ledger lingk-absen">
+              <div><span>Bursa &amp; rupiah harian, diukur dari luar <span class="mono">deret waktu dicetak dari baris data sungguhan, bukan simulasi — sumber harga bebas-kunci: uji berjalan</span></span><span class="v num">—</span></div>
             </div>
-          )}
-
-          <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Pasar yang Tipis</h3>
-            <p class="bab-kalimat fig">Pada sejumlah emiten terbesar, hampir seluruh saham dipegang segelintir pengendali; ambang free float Jakarta termasuk paling rendah di antara bursa besar.</p>
-            <FloatKonsentrasi client:visible />
+            <p class="bab-kalimat fig">Esai perbandingannya menunggu di rak arsip perspektif; halaman ini hanya mencetak deret yang punya kuitansi.</p>
           </div>
-
-          <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Diukur dari Luar</h3>
-            <p class="bab-kalimat fig">Diindeks dari titik yang sama, bursa Jakarta meluncur paling dalam di antara indeks utama dunia pada 2026, sementara tetangganya menanjak.</p>
-            <JciVsPeers client:visible />
-          </div>
-
-          <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Di Antara yang Terlemah Dunia</h3>
-            <p class="bab-kalimat fig">Rupiah dan bursa Jakarta, diukur dari luar, termasuk yang paling lemah di dunia pada 2026.</p>
-            <RupiahIHSG client:visible />
-          </div>
-
-          {duaGaris && (
-            <div class="bab-lembar bab-sub" data-rise>
-              <h3 class="bab-subjudul display">{duaGaris.judul}</h3>
-              <p class="bab-kalimat fig">{duaGaris.satuKalimat}</p>
-              <DuaGaris client:visible />
-            </div>
-          )}
         </section>
 
 
@@ -603,14 +591,16 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </section>
 
-        <!-- DUNIA: where the republic ranks, and the country that began beside it -->
+        {/* RAK 09 · DUNIA: where the republic ranks, seen from outside.
+             The two comparison essays retired to the arsip-perspektif
+             shelf (wave 9b) — permalinks live on; one instrument here. */}
         <section class="bab" id="dunia">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">08</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
               <h2 class="bab-tajuk display">Dunia</h2>
-              <p class="bab-dek">Dua hal yang hanya tampak dari luar: di mana kita berdiri di antara bangsa lain, dan satu negara yang dulu berdiri sejajar.</p>
+              <p class="bab-dek">Di mana republik ini berdiri di antara bangsa lain — angka peringkat yang hanya tampak dari luar.</p>
             </div>
           </header>
 
@@ -627,19 +617,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </div>
 
-          {vietnam && (
-            <div class="bab-lembar bab-sub" data-rise>
-              <h3 class="bab-subjudul display">{vietnam.judul}</h3>
-              <p class="bab-kalimat fig">{vietnam.satuKalimat}</p>
-              <GarisStart client:visible />
-            </div>
-          )}
         </section>
 
-        <!-- UMUM · LINGKUNGAN & EKSTRAKSI -->
+        <!-- RAK 10 · LINGKUNGAN & EKSTRAKSI -->
         <section class="bab" id="lingkungan">
           <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">09</span>
+            <span class="bab-folio ghost-num" aria-hidden="true">10</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · SUMBER DAYA ALAM</span>
               <h2 class="bab-tajuk display">Sumber Daya Alam</h2>
