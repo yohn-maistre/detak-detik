@@ -392,6 +392,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               </div>
             </div>
           </div>
+
+          <!-- absence is content: the branch whose records sit behind
+               challenge walls says so in print -->
+          <div class="bab-lembar bab-sub">
+            <span class="eyebrow">YANG BELUM DICETAK · MENUNGGU KURASI</span>
+            <div class="ledger lingk-absen">
+              <div><span>Putusan langsung dari Direktori MA <span class="mono">portal berlapis tantangan untuk mesin — kurasi manual berjalan (ICW Tren Vonis)</span></span><span class="v num">—</span></div>
+            </div>
+          </div>
         </section>
 
         <!-- BAB III · APARAT -->
@@ -425,6 +434,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <div class="aparat-row mono"><span>Korban tewas</span><b class="num">{APARAT_KEKERASAN.tewas}</b></div>
               <div class="aparat-row mono"><span data-annotate="underline" data-annotate-color="#e44a06">Perwira aktif di jabatan sipil</span><b class="num">{fmtRp.format(APARAT_KEKERASAN.perwiraSipil)}</b></div>
               <p class="aparat-impun">{APARAT_KEKERASAN.impunitas}</p>
+              <p class="figcap-dinas mono">KADENS PEMBARUAN: TAHUNAN (CATAHU KONTRAS, TIAP JULI) — BUKAN UMPAN HARIAN</p>
               <button class="chip"><span class="tick">⊙</span>{APARAT_KEKERASAN.sumber} · imparsial</button>
             </div>
           </div>

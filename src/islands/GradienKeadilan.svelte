@@ -6,8 +6,33 @@
    * Sample data, marked contoh.
    */
   import { onMount } from 'svelte';
-  import { PUTUSAN } from '../lib/data/edisi';
   import { gsap, EASE_SETTLE, reducedMotion } from '../lib/motion';
+  // korupsi dots: one owner — the hukum desk's own registry (still contoh
+  // until the curated-real putusan pass; the chip below says so)
+  import HUKUM from '../../newsroom/data/hukum_putusan.json';
+
+  // the petty-theft comparison rows: contoh until sourced (documented cases
+  // exist; curation task on the needs-from-Yose ledger). The CONTRAST —
+  // small theft, long months; vast corruption, few months — is the chart.
+  const PENCURIAN_CONTOH = [
+    { kerugian: 1.2e6, vonis: 14, jenis: 'pencurian' as const, id: 'p-001' },
+    { kerugian: 4.5e5, vonis: 8, jenis: 'pencurian' as const, id: 'p-002' },
+    { kerugian: 2.4e6, vonis: 18, jenis: 'pencurian' as const, id: 'p-003' },
+    { kerugian: 8.0e5, vonis: 10, jenis: 'pencurian' as const, id: 'p-004' },
+    { kerugian: 3.1e6, vonis: 20, jenis: 'pencurian' as const, id: 'p-005' },
+    { kerugian: 6.2e5, vonis: 7, jenis: 'pencurian' as const, id: 'p-006' },
+    { kerugian: 1.8e6, vonis: 16, jenis: 'pencurian' as const, id: 'p-007' },
+    { kerugian: 9.4e5, vonis: 12, jenis: 'pencurian' as const, id: 'p-008' },
+  ];
+  const PUTUSAN = [
+    ...PENCURIAN_CONTOH,
+    ...(HUKUM.putusan ?? []).map((p: { id: string; kerugian_negara: number; vonis_bulan: number }) => ({
+      kerugian: p.kerugian_negara,
+      vonis: p.vonis_bulan,
+      jenis: 'korupsi' as const,
+      id: p.id.replace('putusan:', ''),
+    })),
+  ];
 
   const W = 620;
   const H = 380;
@@ -45,8 +70,12 @@
     `L ${x(10 ** lx0)} ${yClamp(ty(lx0) - fit.sigma)} Z`,
   ].join(' ');
 
-  // the day's outlier gets a caption and a leader line
-  const sorot = dots.find((d) => d.id === 'k-2241')!;
+  // the outlier caption: the korupsi ruling farthest BELOW the fitted trend
+  // (max negative residual — the most months "missing" for its scale),
+  // computed from the data, never hand-picked
+  const sorot = dots
+    .filter((d) => d.jenis === 'korupsi')
+    .reduce((a, d) => (d.vonis - ty(Math.log10(d.kerugian)) < a.vonis - ty(Math.log10(a.kerugian)) ? d : a));
 
   /* the hand-drawn outlier ring (the site's scribble idiom, in SVG): a wobbled
      circle that overshoots past 360° like a real pen stroke. Deterministic

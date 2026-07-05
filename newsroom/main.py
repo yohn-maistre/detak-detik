@@ -45,6 +45,7 @@ from .sources.janji import gather_janji, muat_buku_janji
 from .sources.kliping import gather_kliping
 from .sources.papua import gather_papua
 from .sources.pulse import gather_pulse
+from .sources.vital import gather_vital
 
 # deterministic edition number: #41 = pagi, 11 Jun 2026; two sessions a day
 _NOW_WIB = datetime.now(timezone.utc) + timedelta(hours=7)
@@ -72,11 +73,15 @@ async def run() -> int:
     # AGENDA ISTANA: the executive's own published record (setkab, keyless,
     # deterministic) — also grows data/agenda_istana.json every run
     agenda_rows, agenda_ringkas = await gather_agenda()
+    # the vital guardian: kartu-vital rows enter the corpus; drift logs loudly
+    vital_rows, vital_masalah = await gather_vital()
     corpus = (pulse_rows + hukum_rows + harga_rows + anggaran_rows
-              + hutan_rows + janji_rows + papua_rows + agenda_rows)
+              + hutan_rows + janji_rows + papua_rows + agenda_rows + vital_rows)
     corpus_map = {r.id: r for r in corpus}
     log.event("korpus", sinyal=[r.id for r in corpus], headlines=len(headlines))
     log.event("agenda", **agenda_ringkas)
+    if vital_masalah:
+        log.event("vital_drift", masalah=vital_masalah)
 
     # the kliping desk is Lane A pass-through (verbatim headlines, no model
     # text), so it never enters the fact-gate or the lawyer; dark feeds are

@@ -70,29 +70,8 @@ export const TEMUAN = [
   },
 ];
 
-/** Justice Gradient sample: kerugian (Rp, log x) vs vonis (bulan, y). */
-export const PUTUSAN: { kerugian: number; vonis: number; jenis: 'korupsi' | 'pencurian'; id: string }[] = [
-  { kerugian: 1.2e6, vonis: 14, jenis: 'pencurian', id: 'p-001' },
-  { kerugian: 4.5e5, vonis: 8, jenis: 'pencurian', id: 'p-002' },
-  { kerugian: 2.4e6, vonis: 18, jenis: 'pencurian', id: 'p-003' },
-  { kerugian: 8.0e5, vonis: 10, jenis: 'pencurian', id: 'p-004' },
-  { kerugian: 3.1e6, vonis: 20, jenis: 'pencurian', id: 'p-005' },
-  { kerugian: 6.2e5, vonis: 7, jenis: 'pencurian', id: 'p-006' },
-  { kerugian: 1.8e6, vonis: 16, jenis: 'pencurian', id: 'p-007' },
-  { kerugian: 9.4e5, vonis: 12, jenis: 'pencurian', id: 'p-008' },
-  { kerugian: 4.2e9, vonis: 14, jenis: 'korupsi', id: 'k-2241' },
-  { kerugian: 1.1e10, vonis: 30, jenis: 'korupsi', id: 'k-1874' },
-  { kerugian: 6.8e8, vonis: 12, jenis: 'korupsi', id: 'k-2017' },
-  { kerugian: 2.3e9, vonis: 18, jenis: 'korupsi', id: 'k-1992' },
-  { kerugian: 5.5e10, vonis: 48, jenis: 'korupsi', id: 'k-1741' },
-  { kerugian: 8.9e9, vonis: 24, jenis: 'korupsi', id: 'k-2103' },
-  { kerugian: 3.4e8, vonis: 10, jenis: 'korupsi', id: 'k-2199' },
-  { kerugian: 1.9e9, vonis: 15, jenis: 'korupsi', id: 'k-2056' },
-  { kerugian: 7.2e9, vonis: 20, jenis: 'korupsi', id: 'k-1888' },
-  { kerugian: 2.8e10, vonis: 36, jenis: 'korupsi', id: 'k-1799' },
-  { kerugian: 4.6e8, vonis: 9, jenis: 'korupsi', id: 'k-2244' },
-  { kerugian: 1.4e9, vonis: 13, jenis: 'korupsi', id: 'k-2230' },
-];
+// PUTUSAN moved: GradienKeadilan reads newsroom/data/hukum_putusan.json
+// (the hukum desk's registry — one owner) since wave 9e.
 
 export const STRUK = {
   judul: 'STRUK BELANJA NEGARA',
