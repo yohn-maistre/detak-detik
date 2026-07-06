@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-07-06T13:54:01+00:00",
+ "diambil": "2026-07-06T23:01:30+00:00",
  "baris": [
   {
    "id": "beaf18847af1",
@@ -930,16 +930,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "b4edbf36ed07",
-   "url": "https://tniad.mil.id/gelar-rakornis-tmmd-ke-129-tni-ad-tekankan-publikasi-kreatif-informatif-dan-inspiratif/",
-   "judul": "Gelar Rakornis TMMD ke-129, TNI AD Tekankan Publikasi Kreatif, Informatif, dan Inspiratif",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat menggelar Rapat Koordinasi Teknis (Rakornis) TNI Manunggal Membangun Desa (TMMD) ke-129 Tahun Anggaran 2026 di Markas Besar TNI AD, Kamis (2/7/2026). Selain mematangkan kesiapan...",
-   "tanggal": "2026-07-03",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "d85bdb3ee7f4",
    "url": "https://pks.id/content/bahas-ruu-sdi-legislator-pks-usulkan-konsep-layanan-proaktif-sekali-lapor",
    "judul": "Bahas RUU SDI, Legislator PKS Usulkan Konsep Layanan Proaktif ‘Sekali Lapor’",
@@ -982,6 +972,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "b4edbf36ed07",
+   "url": "https://tniad.mil.id/gelar-rakornis-tmmd-ke-129-tni-ad-tekankan-publikasi-kreatif-informatif-dan-inspiratif/",
+   "judul": "Gelar Rakornis TMMD ke-129, TNI AD Tekankan Publikasi Kreatif, Informatif, dan Inspiratif",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat menggelar Rapat Koordinasi Teknis (Rakornis) TNI Manunggal Membangun Desa (TMMD) ke-129 Tahun Anggaran 2026 di Markas Besar TNI AD, Kamis (2/7/2026). Selain mematangkan kesiapan...",
+   "tanggal": "2026-07-03",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "9e597b79cc77",
@@ -1034,16 +1034,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "2d1b2a15ff06",
-   "url": "https://tniad.mil.id/bekali-taruna-akmil-wakasad-tekankan-integritas-dan-kepemimpinan-calon-perwira/",
-   "judul": "Bekali Taruna Akmil, Wakasad Tekankan Integritas dan Kepemimpinan Calon Perwira",
-   "ringkas": "Magelang, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa menekankan pentingnya integritas, kepemimpinan, dan profesionalisme sebagai fondasi utama yang harus dimiliki setiap calon perwira TNI...",
-   "tanggal": "2026-07-01",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "f57ac3be764a",
@@ -1120,11 +1110,11 @@
    "cabang": "pengawas"
   },
   {
-   "id": "6433f4635b3c",
-   "url": "https://tniad.mil.id/perkuat-ketahanan-nasional-kasad-dianugerahi-tanda-alumni-kehormatan-lemhannas-ri/",
-   "judul": "Perkuat Ketahanan Nasional, Kasad Dianugerahi Tanda Alumni Kehormatan Lemhannas RI",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dianugerahi Tanda Alumni Kehormatan Lembaga Ketahanan Nasional Republik Indonesia (Lemhannas RI) sebagai bentuk apresiasi atas dedikasi, kepemimpinan,...",
-   "tanggal": "2026-06-30",
+   "id": "2d1b2a15ff06",
+   "url": "https://tniad.mil.id/bekali-taruna-akmil-wakasad-tekankan-integritas-dan-kepemimpinan-calon-perwira/",
+   "judul": "Bekali Taruna Akmil, Wakasad Tekankan Integritas dan Kepemimpinan Calon Perwira",
+   "ringkas": "Magelang, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa menekankan pentingnya integritas, kepemimpinan, dan profesionalisme sebagai fondasi utama yang harus dimiliki setiap calon perwira TNI...",
+   "tanggal": "2026-07-01",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -1140,11 +1130,11 @@
    "cabang": "pengawas"
   },
   {
-   "id": "c53c429d6c14",
-   "url": "https://tniad.mil.id/kasad-kejurnas-judo-piala-kasad-xvi-2026-pecahkan-rekor-jumlah-peserta/",
-   "judul": "Kasad: Kejurnas Judo Piala Kasad XVI 2026 Pecahkan Rekor Jumlah Peserta",
-   "ringkas": "Cilodong, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengungkapkan bahwa Kejuaraan Nasional (Kejurnas) Judo Piala Kasad XVI Tahun 2026 berhasil mencatatkan rekor jumlah peserta terbanyak...",
-   "tanggal": "2026-06-29",
+   "id": "6433f4635b3c",
+   "url": "https://tniad.mil.id/perkuat-ketahanan-nasional-kasad-dianugerahi-tanda-alumni-kehormatan-lemhannas-ri/",
+   "judul": "Perkuat Ketahanan Nasional, Kasad Dianugerahi Tanda Alumni Kehormatan Lemhannas RI",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dianugerahi Tanda Alumni Kehormatan Lembaga Ketahanan Nasional Republik Indonesia (Lemhannas RI) sebagai bentuk apresiasi atas dedikasi, kepemimpinan,...",
+   "tanggal": "2026-06-30",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -1158,6 +1148,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "c53c429d6c14",
+   "url": "https://tniad.mil.id/kasad-kejurnas-judo-piala-kasad-xvi-2026-pecahkan-rekor-jumlah-peserta/",
+   "judul": "Kasad: Kejurnas Judo Piala Kasad XVI 2026 Pecahkan Rekor Jumlah Peserta",
+   "ringkas": "Cilodong, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengungkapkan bahwa Kejuaraan Nasional (Kejurnas) Judo Piala Kasad XVI Tahun 2026 berhasil mencatatkan rekor jumlah peserta terbanyak...",
+   "tanggal": "2026-06-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "27d7bba0d595",
@@ -1175,6 +1175,26 @@
    "judul": "Hentikan Militerisasi Ruang Sipil: Kematian Lima Peserta Pelatihan Manajer Koperasi Desa Merah Putih Harus Diusut Tuntas",
    "ringkas": "Koalisi Masyarakat Sipil untuk Reformasi Sektor Keamanan menyampaikan duka cita yang mendalam atas meninggalnya lima calon Manajer Koperasi Desa Merah Putih (KDMP) dalam pelaksanaan pelatihan dasar militer. Tragedi ini merupakan konsekuensi serius dari kebijakan yang sejak awal k",
    "tanggal": "2026-06-27",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "2423d33205de",
+   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-indonesia-juli-2025-juni-2026/",
+   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan Indonesia Juli 2025-Juni 2026",
+   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
+   "tanggal": "2026-06-26",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "85d2bf22b575",
+   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-di-indonesia-juli-2025-juni-2026/",
+   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan di Indonesia Juli 2025 – Juni 2026",
+   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
+   "tanggal": "2026-06-26",
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
@@ -1198,26 +1218,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "2423d33205de",
-   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-indonesia-juli-2025-juni-2026/",
-   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan Indonesia Juli 2025-Juni 2026",
-   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
-   "tanggal": "2026-06-26",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
-   "id": "85d2bf22b575",
-   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-di-indonesia-juli-2025-juni-2026/",
-   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan di Indonesia Juli 2025 – Juni 2026",
-   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
-   "tanggal": "2026-06-26",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "d61c48ecf8ac",
@@ -1260,16 +1260,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "963078b4cb7b",
-   "url": "https://tniad.mil.id/kontingen-garuda-tni-ad-dominasi-kasau-cup-2026-raih-juara-umum-i-dan-iii/",
-   "judul": "Kontingen Garuda TNI AD Dominasi Kasau Cup 2026, Raih Juara Umum I dan III",
-   "ringkas": "Jakarta, tniad.mil.id – Kontingen Pencak Silat Garuda TNI Angkatan Darat kembali menorehkan prestasi membanggakan dengan meraih Juara Umum I pada Kejuaraan Nasional Pencak Silat Kasau Championship 2026 Tingkat Nasional yang...",
-   "tanggal": "2026-06-22",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "d902d9f68e26",
    "url": "https://kontras.org/menggugat-pengabaian-negara-menolak-pemutihan-sejarah-menguatkan-solidaritas-korban/",
    "judul": "Menggugat Pengabaian Negara, Menolak Pemutihan Sejarah, Menguatkan Solidaritas Korban",
@@ -1278,6 +1268,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "963078b4cb7b",
+   "url": "https://tniad.mil.id/kontingen-garuda-tni-ad-dominasi-kasau-cup-2026-raih-juara-umum-i-dan-iii/",
+   "judul": "Kontingen Garuda TNI AD Dominasi Kasau Cup 2026, Raih Juara Umum I dan III",
+   "ringkas": "Jakarta, tniad.mil.id – Kontingen Pencak Silat Garuda TNI Angkatan Darat kembali menorehkan prestasi membanggakan dengan meraih Juara Umum I pada Kejuaraan Nasional Pencak Silat Kasau Championship 2026 Tingkat Nasional yang...",
+   "tanggal": "2026-06-22",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "9599e4e8a4ff",
