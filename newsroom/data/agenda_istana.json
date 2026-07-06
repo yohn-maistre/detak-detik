@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-05T12:14:14+00:00",
+ "diambil": "2026-07-06T13:03:31+00:00",
  "acara": [
+  {
+   "id": "e00a8d8051bd",
+   "url": "https://setkab.go.id/presiden-prabowo-dan-pm-wong-sepakati-26-dokumen-kerja-sama/",
+   "judul": "Presiden Prabowo dan PM Wong Sepakati 26 Dokumen Kerja Sama",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-06",
+   "tanggal_terbit": "2026-07-06",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "3339b59f65a4",
    "url": "https://wapresri.go.id/wapres-dorong-jci-indonesia-cetak-pemimpin-muda-yang-siap-bersaing-di-tingkat-dunia/",
