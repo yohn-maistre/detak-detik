@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-06T13:03:31+00:00",
+ "diambil": "2026-07-07T22:37:30+00:00",
  "acara": [
+  {
+   "id": "d0413d281c78",
+   "url": "https://wapresri.go.id/dampingi-presiden-wapres-hadiri-pidato-pm-india-di-hadapan-anggota-dpr-dan-mpr-ri/",
+   "judul": "Dampingi Presiden, Wapres Hadiri Pidato PM India di Hadapan Anggota DPR dan MPR RI",
+   "aktor": "WAPRES",
+   "jenis": "PIDATO",
+   "tanggal_acara": "2026-07-07",
+   "tanggal_terbit": "2026-07-07",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e00a8d8051bd",
    "url": "https://setkab.go.id/presiden-prabowo-dan-pm-wong-sepakati-26-dokumen-kerja-sama/",
