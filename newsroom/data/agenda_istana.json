@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-08T11:21:36+00:00",
+ "diambil": "2026-07-08T11:50:58+00:00",
  "acara": [
   {
    "id": "d0413d281c78",
@@ -41,15 +41,18 @@
   {
    "id": "fe6a4386b1a3",
    "url": "https://setkab.go.id/presiden-prabowo-dan-pm-narendra-modi-sepakati-tujuh-mou-strategis-indonesia-india/",
-   "judul": "Presiden Prabowo dan PM Narendra Modi Sepakati Tujuh MoU Strategis Indonesia-India",
-   "aktor": "PRESIDEN",
+   "judul": "PM India Narendra Modi Tegaskan Penguatan Kerja Sama Strategis Indonesia–India untuk Kemakmuran Bersama",
+   "aktor": "ISTANA",
    "jenis": "LAINNYA",
    "tanggal_acara": "2026-07-07",
    "tanggal_terbit": "2026-07-07",
    "audiens": null,
    "topik": [
-    "ekonomi",
-    "luar-negeri"
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "luar-negeri",
+    "pendidikan",
+    "energi-sda"
    ],
    "venue": null,
    "kota": null,
