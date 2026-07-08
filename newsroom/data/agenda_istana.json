@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-07T22:37:30+00:00",
+ "diambil": "2026-07-08T11:21:36+00:00",
  "acara": [
   {
    "id": "d0413d281c78",
@@ -16,6 +16,41 @@
    "tanggal_terbit": "2026-07-07",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c91d914c8222",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-indian-community-reception-tegaskan-eratnya-persahabatan-indonesia-india-dan-pentingnya-demokrasi/",
+   "judul": "Presiden Prabowo Hadiri Indian Community Reception, Tegaskan Eratnya Persahabatan Indonesia–India dan Pentingnya Demokrasi",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-07",
+   "tanggal_terbit": "2026-07-07",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "fe6a4386b1a3",
+   "url": "https://setkab.go.id/presiden-prabowo-dan-pm-narendra-modi-sepakati-tujuh-mou-strategis-indonesia-india/",
+   "judul": "Presiden Prabowo dan PM Narendra Modi Sepakati Tujuh MoU Strategis Indonesia-India",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-07",
+   "tanggal_terbit": "2026-07-07",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
