@@ -1,0 +1,121 @@
+{
+ "edisi": 98,
+ "terbit": "2026-07-09T12:18:59.557382+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-98-01",
+   "judul": "Fakta-fakta penggeledahan polisi terkait korupsi batu bara PLN, Asabri dan Krakatau Steel – Apa yang sejauh ini diketahui?",
+   "skor": 40
+  },
+  {
+   "id": "klp-98-02",
+   "judul": "KPK Resmi Tahan Eks Sekjen MPR RI Ma'ruf Cahyono sebagai Tersangka Dugaan Penerimaan Gratifikasi Rp 17 Miliar",
+   "skor": 26
+  },
+  {
+   "id": "klp-98-03",
+   "judul": "BGN Bantah Ada Aksi Teror, Kaca Gedung Disebut Pecah Akibat Pemuaian",
+   "skor": 22
+  },
+  {
+   "id": "klp-98-04",
+   "judul": "Kapal tanker Pertamina berhasil melintasi Selat Hormuz setelah tertahan selama empat bulan",
+   "skor": 21
+  },
+  {
+   "id": "klp-98-05",
+   "judul": "Prabowo Ingin Indonesia Lolos Piala Dunia: Boy Thohir Kasih Tahu Adikmu",
+   "skor": 15
+  },
+  {
+   "id": "klp-98-06",
+   "judul": "PHE OSES Injeksi Polimer Perdana di Lepas Pantai, SKK Migas : Produksi Lapangan Rama Bisa Naik hingga 10.000 BOPD",
+   "skor": 15
+  },
+  {
+   "id": "klp-98-07",
+   "judul": "Presiden Prabowo Dijadwalkan Resmikan Program B50 di Rest Area KM 57",
+   "skor": 12
+  },
+  {
+   "id": "klp-98-08",
+   "judul": "Air mata kebahagiaan, Messi torehkan satu lagi bab luar biasa dalam perjalanan kariernya di Piala Dunia",
+   "skor": 12
+  },
+  {
+   "id": "klp-98-09",
+   "judul": "Tiga Pekerja Proyek Tewas Diduga Keracunan Gas di Gorong-Gorong Cipayung",
+   "skor": 12
+  },
+  {
+   "id": "klp-98-10",
+   "judul": "Bareskrim Tangkap Tiga Bandar Narkoba Terkait Tewasnya 3 Polisi di Katingan",
+   "skor": 12
+  },
+  {
+   "id": "klp-98-11",
+   "judul": "Dokter Tifa Sebut Dakwaan Kasus Ijazah Jokowi Salah Objek dan Salah Orang, Minta Hakim Tolak JPU",
+   "skor": 10
+  },
+  {
+   "id": "klp-98-12",
+   "judul": "Komdigi Ajak Generasi Muda Bangun Satelit Buatan Indonesia demi Kedaulatan Digital",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

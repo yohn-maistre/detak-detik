@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-08T11:50:58+00:00",
+ "diambil": "2026-07-09T12:19:21+00:00",
  "acara": [
+  {
+   "id": "7e8bdc77f236",
+   "url": "https://setkab.go.id/presiden-prabowo-dan-pm-narendra-modi-tinjau-candi-prambanan-tandai-dimulainya-kerja-sama-konservasi-warisan-dunia/",
+   "judul": "Presiden Prabowo dan PM Narendra Modi Tinjau Candi Prambanan, Tandai Dimulainya Kerja Sama Konservasi Warisan Dunia",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-08",
+   "tanggal_terbit": "2026-07-08",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "d0413d281c78",
    "url": "https://wapresri.go.id/dampingi-presiden-wapres-hadiri-pidato-pm-india-di-hadapan-anggota-dpr-dan-mpr-ri/",
