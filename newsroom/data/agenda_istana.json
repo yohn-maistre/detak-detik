@@ -4,8 +4,41 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-09T12:19:21+00:00",
+ "diambil": "2026-07-09T22:49:52+00:00",
  "acara": [
+  {
+   "id": "cad94cdb1402",
+   "url": "https://wapresri.go.id/dari-kampus-untuk-indonesia-wapres-apresiasi-mobil-listrik-karya-mahasiswa-unissula/",
+   "judul": "Dari Kampus untuk Indonesia: Wapres Apresiasi Mobil Listrik Karya Mahasiswa Unissula",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-09",
+   "tanggal_terbit": "2026-07-09",
+   "audiens": null,
+   "topik": [
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "de02ae7abfc0",
+   "url": "https://wapresri.go.id/wapres-sambut-aspirasi-hikmahbudhi-dorong-peran-aktif-generasi-muda-dalam-pembangunan/",
+   "judul": "Wapres Sambut Aspirasi Hikmahbudhi, Dorong Peran Aktif Generasi Muda dalam Pembangunan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-09",
+   "tanggal_terbit": "2026-07-09",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "7e8bdc77f236",
    "url": "https://setkab.go.id/presiden-prabowo-dan-pm-narendra-modi-tinjau-candi-prambanan-tandai-dimulainya-kerja-sama-konservasi-warisan-dunia/",
