@@ -4,8 +4,40 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-09T22:49:52+00:00",
+ "diambil": "2026-07-10T12:12:45+00:00",
  "acara": [
+  {
+   "id": "1d71b60d02b0",
+   "url": "https://wapresri.go.id/dialog-dengan-nelayan-muncar-wapres-dorong-penguatan-tata-kelola-dan-produktivitas-sektor-perikanan/",
+   "judul": "Dialog dengan Nelayan Muncar, Wapres Dorong Penguatan Tata Kelola dan Produktivitas Sektor Perikanan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "51da972ef643",
+   "url": "https://wapresri.go.id/tinjau-revitalisasi-pasar-induk-banyuwangi-wapres-dorong-penguatan-ekonomi-rakyat-dan-pelestarian-cagar-budaya/",
+   "judul": "Tinjau Revitalisasi Pasar Induk Banyuwangi, Wapres Dorong Penguatan Ekonomi Rakyat dan Pelestarian Cagar Budaya",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "cad94cdb1402",
    "url": "https://wapresri.go.id/dari-kampus-untuk-indonesia-wapres-apresiasi-mobil-listrik-karya-mahasiswa-unissula/",
