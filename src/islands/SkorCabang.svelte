@@ -21,7 +21,9 @@
   });
 </script>
 
-{#if skor}
+{#if skor && tiles.length >= 2}
+  <!-- a scoreboard with a single tile reads as an unfinished section; thin
+       branches wait until their second sourced tile lands -->
   <section class="sk" data-no-stempel bind:this={root}>
     <header class="sk-head">
       <span class="eyebrow">SKOR · PERTANGGUNGJAWABAN</span>

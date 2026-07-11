@@ -14,7 +14,6 @@ import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
 import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
-import TenggatStrip from '../islands/TenggatStrip.svelte';
 import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
@@ -42,11 +41,10 @@ import HariIniNegara from '../islands/HariIniNegara.svelte';
 import SuaraLembaga from '../islands/SuaraLembaga.svelte';
 import LembaranNegara from '../islands/LembaranNegara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
-import VeilMesin from '../islands/VeilMesin.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
-import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, LAYAR_GANDA, PUTUSAN_HARIAN } from '../lib/data/edisi';
+import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, PUTUSAN_HARIAN } from '../lib/data/edisi';
 // aparat record: one owner for the band's 602, the funnel, and these rows
 import { APARAT_ANGGARAN, APARAT_KEKERASAN } from '../lib/data/akuntabilitas';
 // the buku besar: the SAME registry the newsroom's janji desk audits every
@@ -136,6 +134,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <div class="infobox-row"><span>PEMBARUAN</span><b>2× SEHARI</b></div>
               <div class="infobox-row"><span>HARGA</span><b>GRATIS</b></div>
               <div class="infobox-row"><span>OPLAH</span><b>SELURUH REPUBLIK</b></div>
+              <div class="infobox-row"><span>LAJUR</span>{AKSARA_BUILD
+                ? <b class="lajur-live">● LANGSUNG</b>
+                : <b class="lajur-contoh">○ CONTOH</b>}</div>
               <div class="barcode" aria-hidden="true"></div>
               <p class="infobox-foot">DICETAK MESIN ·<br />DIPERIKSA HUKUM</p>
             </aside>
@@ -225,7 +226,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
       <div class="wrap">
         <!-- Angka Edisi -->
         <section class="angka-blok" aria-labelledby="angka-label">
-          <VeilMesin client:visible />
           <div class="angka-kiri">
             <span class="inkbar"><span class="dot">●</span>PAPAN ANGKA · ANGKA EDISI</span>
             <p class="angka num display" id="angka-odometer" data-odometer={ANGKA_EDISI.nilai} data-prefix={ANGKA_EDISI.prefix} title="Tarik mendatar untuk memutar ulang angka">
@@ -289,8 +289,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </div>
         </section>
-
-        <TenggatStrip client:visible />
 
         <!-- ╌╌ GERAK I · LIMA CABANG KEKUASAAN ╌╌ -->
         <div class="gerak" data-rise>
@@ -414,12 +412,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
 
           <!-- absence is content: the branch whose records sit behind
-               challenge walls says so in print -->
-          <div class="bab-lembar bab-sub">
-            <span class="eyebrow">YANG BELUM DICETAK · MENUNGGU KURASI</span>
-            <div class="ledger lingk-absen">
-              <div><span>Putusan langsung dari Direktori MA <span class="mono">portal berlapis tantangan untuk mesin — kurasi manual berjalan (ICW Tren Vonis)</span></span><span class="v num">—</span></div>
-            </div>
+               challenge walls says so in print — one ruled line, not a section -->
+          <div class="ledger lingk-absen absen-satu">
+            <div><span><b class="absen-k mono">YANG BELUM DICETAK · MENUNGGU KURASI</b> Putusan langsung dari Direktori MA <span class="mono">portal berlapis tantangan untuk mesin — kurasi manual berjalan (ICW Tren Vonis)</span></span><span class="v num">—</span></div>
           </div>
         </section>
 
@@ -537,21 +532,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <PartaiPapan client:visible />
         </section>
 
-        <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
-        <div class="gerak" data-rise>
-          <span class="gerak-no mono">GERAK II</span>
-          <h2 class="gerak-judul display">Keadaan Negeri</h2>
-          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: janji yang diucapkan, pasar, posisi di antara bangsa, dan sumber daya alam.</p>
-        </div>
-
-        <!-- TEMA · JANJI & PROGRAM: the ledger that remembers, and the programs
-             it grades. The old standalone Janji jeda and the Rumah Tangga bab
-             were folded here: one chapter, promise next to outcome. -->
+        <!-- BAB 07 · JANJI & PROGRAM: the ledger that remembers, and the programs
+             it grades — closes GERAK I: what the officeholders promised sits
+             right after who they are. (Moved out of Keadaan Negeri, 2026-07-11;
+             the TenggatStrip teaser died with the move — one ledger, one owner.) -->
         <section class="bab" id="janji">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">07</span>
             <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>TEMA · JANJI</span>
+              <span class="inkbar"><span class="dot">●</span>BUKU BESAR · JANJI</span>
               <h2 class="bab-tajuk display">Janji &amp; Program</h2>
               <p class="bab-dek">Buku besar yang mengingat: target yang diucapkan, angka yang terukur, dan ongkos program terbesarnya. Dinilai dengan aritmetika, bukan opini.</p>
             </div>
@@ -589,11 +578,18 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <p class="janji-foot mono">STATUS DIHITUNG DARI TENGGAT × ANGKA TERUKUR · SUMBER TIAP BARIS TERCATAT · ▌TARGET ● TERUKUR</p>
 
           <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Skala dan Korbannya</h3>
-            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan catatan korban keracunan yang terus berjalan.</p>
+            <h3 class="bab-subjudul display">Catatan Keracunan MBG</h3>
+            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan insiden keracunan yang tercatat — disajikan sebagai catatan, menunggu rekap sumber resmi.</p>
             <MbgKorban client:visible />
           </div>
         </section>
+
+        <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
+        <div class="gerak" data-rise>
+          <span class="gerak-no mono">GERAK II</span>
+          <h2 class="gerak-judul display">Keadaan Negeri</h2>
+          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: siapa memiliki apa, pasar, posisi di antara bangsa, dan sumber daya alam.</p>
+        </div>
 
         <!-- RAK 07 · KEPEMILIKAN — one header, one instrument (rack grammar) -->
         {oligarki && (
@@ -624,33 +620,12 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </header>
           <FloatKonsentrasi client:visible />
 
-          <div class="bab-lembar bab-sub">
-            <span class="eyebrow">YANG TIDAK DICETAK DI SINI · MENUNGGU SUMBER</span>
-            <div class="ledger lingk-absen">
-              <div><span>Bursa &amp; rupiah harian, diukur dari luar <span class="mono">deret waktu dicetak dari baris data sungguhan, bukan simulasi — sumber harga bebas-kunci: uji berjalan</span></span><span class="v num">—</span></div>
-            </div>
-            <p class="bab-kalimat fig">Esai perbandingannya menunggu di rak arsip perspektif; halaman ini hanya mencetak deret yang punya kuitansi.</p>
+          <div class="ledger lingk-absen absen-satu">
+            <div><span><b class="absen-k mono">YANG TIDAK DICETAK DI SINI · MENUNGGU SUMBER</b> Bursa &amp; rupiah harian, diukur dari luar <span class="mono">deret dicetak dari baris data sungguhan, bukan simulasi — esainya menunggu di rak arsip perspektif</span></span><span class="v num">—</span></div>
           </div>
         </section>
 
 
-
-        <section class="ganda-blok" aria-label="Layar ganda: dua angka berdampingan tanpa keterangan">
-          <span class="eyebrow ganda-eyebrow">LAYAR GANDA · DUA KABAR SEMALAM, SENGAJA TANPA KETERANGAN</span>
-          <div class="ganda">
-            <div class="ganda-panel" data-rise>
-              <p class="ganda-angka display num">{LAYAR_GANDA.kiri.angka}</p>
-              <p class="ganda-label">{LAYAR_GANDA.kiri.label}</p>
-              <button class="chip"><span class="tick">⊙</span>{LAYAR_GANDA.kiri.chip}</button>
-            </div>
-            <div class="ganda-sela" aria-hidden="true"></div>
-            <div class="ganda-panel" data-rise>
-              <p class="ganda-angka display num">{LAYAR_GANDA.kanan.angka}</p>
-              <p class="ganda-label">{LAYAR_GANDA.kanan.label}</p>
-              <button class="chip lane-c">{LAYAR_GANDA.kanan.chip}</button>
-            </div>
-          </div>
-        </section>
 
         {/* RAK 09 · DUNIA: where the republic ranks, seen from outside.
              The two comparison essays retired to the arsip-perspektif
@@ -716,11 +691,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
 
           <div class="lingk-sub bab-sub">
-            <span class="eyebrow">YANG BELUM DICETAK · MENUNGGU VERIFIKASI</span>
-            <div class="ledger lingk-absen">
-              <div><span>Warga tergusur konflik agraria, per tahun <span class="mono">kpa catahu · komnas ham · idmc — uji sumber berjalan</span></span><span class="v num">—</span></div>
+            <div class="ledger lingk-absen absen-satu">
+              <div><span><b class="absen-k mono">YANG BELUM DICETAK · MENUNGGU VERIFIKASI</b> Warga tergusur konflik agraria, per tahun <span class="mono">kpa catahu · komnas ham · idmc — angka paling sensitif di koran ini; dicetak setelah lolos periksa sumber, bukan sebelum</span></span><span class="v num">—</span></div>
             </div>
-            <p class="bab-kalimat fig lingk-catatan">Angka penggusuran adalah angka paling sensitif di koran ini; ia dicetak setelah lolos periksa sumber, bukan sebelum. Kualitas udara kota-kota terbaca langsung di lapisan udara peta.</p>
             <button class="chip" data-buka-peta="udara"><span class="tick">◌</span>BUKA DI PETA · LAPISAN UDARA</button>
           </div>
         </section>
@@ -813,12 +786,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           </div>
         </header>
         <ZonaHayati client:visible />
-        <!-- the volcano field lives on the MAP (one owner: MAGMA levels are
-             news); the land keeps only its fact and the door to it -->
-        <aside class="tanah-note ekosistem-note">
-          <p class="tanah-fakta fig">127 gunung api aktif — terbanyak di dunia; 76 di antaranya pernah meletus sejak 1600. Status hariannya, dari Normal sampai Awas, terbaca langsung di Peta Kabar.</p>
-          <button class="chip" data-buka-peta="gunungapi"><span class="tick">▲</span>BUKA DI PETA · LAPISAN GUNUNG API</button>
-        </aside>
+        <!-- the volcano note retired 2026-07-11 (one owner: the map's MAGMA
+             layer carries the field; the fact reads there, with live status) -->
 
         <!-- RUPA: one painting a day, explained -->
         <header class="bab-kepala">
@@ -1042,6 +1011,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   }
   .infobox-row b { color: var(--ink); font-weight: 600; }
   .infobox-row b.num { color: var(--accent); }
+  /* the live-lane telltale: an unset PUBLIC_AKSARA_URL must never be silent */
+  .infobox-row b.lajur-live { color: var(--accent); }
+  .infobox-row b.lajur-contoh { color: var(--muted); }
   .barcode {
     height: 30px;
     margin: 12px 0 8px;
@@ -1182,12 +1154,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   /* the plate convention: engraved caption under every atlas figure (§13.14) */
   .plat-wrap { margin: 0; }
   .plat-cap { display: block; font-size: 8.5px; letter-spacing: 0.22em; color: var(--muted); text-align: center; margin-top: 10px; }
-  .tanah-note { display: grid; gap: 14px; align-content: center; border-left: 1px solid var(--line); padding-left: clamp(16px, 3vw, 28px); }
-  @media (max-width: 760px) { .tanah-note { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
-  .tanah-fakta { font-size: clamp(15px, 1.8vw, 19px); line-height: 1.55; max-width: 40ch; }
-  .tanah-note .chip { justify-self: start; }
-  /* the volcano fact rides under Zona Hayati now: full width, quiet rule */
-  .ekosistem-note { border-left: none; border-top: 1px solid var(--line); padding-left: 0; padding-top: 16px; margin-top: 18px; grid-template-columns: 1fr; }
   #hutan { margin-top: 8px; }
   .tugu-wrap { margin-top: 44px; max-width: 820px; }
   .ruang-main { background: var(--bg); color: var(--ink); padding: 0 0 70px; }
@@ -1342,6 +1308,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .lingk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .lingk-absen { margin: 8px 0 12px; }
   .lingk-absen .mono { font-size: 9px; letter-spacing: 0.08em; color: var(--muted); }
+  /* one-line absence: the ruled row IS the section — no lone eyebrow floating
+     over a single dash (it read as an unfinished chapter) */
+  .absen-satu { margin-top: 30px; }
+  .absen-satu .absen-k { font-weight: 500; font-size: 9px; letter-spacing: 0.14em; color: var(--accent2); margin-right: 8px; }
   .lingk-catatan { max-width: 62ch; }
   .lingk-sub .eyebrow { display: block; margin-bottom: 8px; }
   .hening-sumber { font-size: 9.5px; letter-spacing: 0.12em; color: var(--muted); margin-left: 10px; text-transform: uppercase; }
@@ -1367,16 +1337,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   }
 
   .ganda-eyebrow { margin-bottom: 18px; }
-  .ganda { display: grid; grid-template-columns: 1fr 1px 1fr; gap: clamp(20px, 5vw, 64px); align-items: stretch; }
-  @media (max-width: 760px) { .ganda { grid-template-columns: 1fr; } .ganda-sela { display: none; } }
-  .ganda-sela { background: var(--line); }
-  .ganda-angka {
-    font-family: 'Fraunces Variable', serif;
-    font-weight: 340;
-    font-size: clamp(48px, 7.5vw, 100px);
-    line-height: 1;
-  }
-  .ganda-label { color: var(--muted); margin: 10px 0 14px; font-size: 14px; }
 
   .arsip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
   .arsip-semua { font-size: 10px; letter-spacing: 0.18em; color: var(--accent2); }

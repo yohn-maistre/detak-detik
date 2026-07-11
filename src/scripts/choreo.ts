@@ -11,6 +11,7 @@ import { setDenom, onDenom, getDenom, formatUang } from '../lib/denominasi';
 import { setLensa } from '../lib/lensa';
 import { setLensaKab } from '../lib/lensa-kab';
 import { pulseRef } from '../lib/motion-kit';
+import { registerLenis, lockScroll, unlockScroll } from '../lib/scroll-lock';
 
 let lenis: Lenis | null = null;
 
@@ -55,6 +56,7 @@ function smoothScroll() {
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add((time) => lenis!.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
+  registerLenis(lenis);
 }
 
 export function scrollToAnchor(anchor: string) {
@@ -77,6 +79,10 @@ function runLoader(onDone: () => void) {
   }
   sessionStorage.setItem('dd-loader', '1');
 
+  // The page must not scroll behind the ceremony (Lenis boots before the
+  // loader, so an eager wheel used to move the paper under the cover).
+  lockScroll();
+
   // The masthead simply settles in (no per-glyph curtain — that read as a second
   // reveal against the page's identical masthead), and the loader fades out once
   // instead of clip-wiping up. One clean press intro, no double curtain.
@@ -87,6 +93,7 @@ function runLoader(onDone: () => void) {
   const tl = gsap.timeline({
     onComplete() {
       loader.classList.add('is-done');
+      unlockScroll();
       onDone();
     },
   });

@@ -17,6 +17,8 @@ import { APARAT_KEKERASAN, ETIK_PCT } from './akuntabilitas';
 import { DAERAH } from './edisi';
 
 export type CabangViz =
+  // the band prints only the anchor figure; the chapter's instruments draw
+  | { type: 'none' }
   | { type: 'dots'; n: number }
   | {
       // durations on a LABELED LOG RULER (the honest way to draw 20 days next
@@ -91,7 +93,9 @@ export const CABANG: Cabang[] = [
     apa: `Presiden, ${KABINET.menteri} menteri, ${KABINET.wamen} wakil menteri, dan badan seperti Danantara dan Badan Pengarah Papua.`,
     big: String(KABINET.total),
     cap: 'pejabat kabinet, terbanyak sejak 1966',
-    viz: { type: 'dots', n: KABINET.total },
+    // one mark per pejabat is KabinetWaffle's job below — the band keeps
+    // only the anchor numeral (satu angka satu pemilik)
+    viz: { type: 'none' },
   },
   {
     slug: 'legislatif',
@@ -100,23 +104,11 @@ export const CABANG: Cabang[] = [
     anchor: 'pabrik',
     ringkas: 'Rentang waktu pengesahan undang-undang.',
     apa: 'DPR 580 kursi dan DPD: menyusun undang-undang dan anggaran negara.',
-    cap: `Revisi UU Polri disahkan dalam 20 hari; RUU Perampasan Aset belum disahkan setelah lebih dari ${tahunPA} tahun.`,
-    viz: {
-      type: 'gantt',
-      skala: {
-        ticks: [
-          { v: 10, label: '10 HARI' },
-          { v: 100, label: '100' },
-          { v: 1000, label: '1.000' },
-          { v: 10000, label: '10.000' },
-        ],
-        catatan: 'SKALA LOG · HARI KALENDER',
-      },
-      rows: [
-        { k: 'Revisi UU Polri', hari: 20, label: '20 hari' },
-        { k: 'RUU Perampasan Aset', hari: hariPA, label: `${tahunPA}+ tahun`, macet: true },
-      ],
-    },
+    big: `${tahunPA}+ tahun`,
+    cap: 'RUU Perampasan Aset menunggu pengesahan; Revisi UU Polri selesai dalam 20 hari. Rentang selengkapnya digambar Pabrik Undang-Undang di bawah.',
+    // the duration comparison is PabrikUU's chart — the band held a two-row
+    // copy of the same bars; it now keeps only the stalled-bill anchor
+    viz: { type: 'none' },
   },
   {
     slug: 'yudikatif',

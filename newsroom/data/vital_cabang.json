@@ -38,7 +38,7 @@
     "metrik": "Porsi anggaran Polri + Kemhan/TNI terhadap belanja negara",
     "nilai": 8.7,
     "satuan": "%",
-    "catatan": "2026: Rp332,7 T dari Rp3.842,7 T; tidak ada plafon hukum — pembandingnya riwayat sendiri. Kekerasan Polri (KontraS, jul–jun): 645 → 602 → 561 peristiwa",
+    "catatan": "2026: Rp332,7 T dari Rp3.842,7 T; tidak ada plafon hukum — pembandingnya riwayat sendiri",
     "band": { "lo": 8.1, "hi": 8.7, "label": "RIWAYAT 2016–2026", "sumber": "hitungan dari UU APBN 2016 & 2026 (Kemhan+Polri / belanja negara)" },
     "dulu": { "nilai": 8.2, "tahun": "2016", "sumber": "Kemhan Rp99,5 T + Polri Rp73 T / APBN Rp2.095,7 T" },
     "sumber": "UU APBN 2026 · Kemhan Rp187,1 T (tempo/antara) · Polri Rp145,6 T (angka RAPBN)"

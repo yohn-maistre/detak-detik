@@ -209,7 +209,7 @@
         <span>AKSARA · TERMINAL PERINTAH</span>
         <button class="term-x mono" onclick={() => (buka = false)}>✕</button>
       </div>
-      <div class="term-log mono" bind:this={logEl}>
+      <div class="term-log mono" bind:this={logEl} data-lenis-prevent>
         {#each riwayat as r}
           <p class="r-{r.jenis}">{r.teks}</p>
         {/each}

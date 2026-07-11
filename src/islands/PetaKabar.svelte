@@ -1699,7 +1699,7 @@
         LEGENDA {legendaBuka ? '▾' : '▸'}
       </button>
       {#if legendaBuka}
-        <div class="kb-leg-rows">
+        <div class="kb-leg-rows" data-lenis-prevent>
           <span class="kb-leg-group">PETA DASAR</span>
           <label class="kb-leg-row">
             <input type="checkbox" checked={provinsiOn} onchange={(e) => dispatch({ cmd: 'set_layer', params: { layer: 'provinsi', on: e.currentTarget.checked } })} />

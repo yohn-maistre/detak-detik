@@ -161,7 +161,7 @@
       <div class="np-absen-teks">
         <span class="eyebrow">HARI TANPA LAPORAN KEUANGAN DANANTARA</span>
         <p class="np-absen-note">dana kelolaan ± US$900 miliar · belum ada laporan terbit sejak berdiri 24 feb 2025</p>
-        <span class="np-chip mono">⊙ jakarta post · 19 mei 2026 · baris ini menunggu</span>
+        <span class="np-chip mono">⊙ jakarta post · 19 mei 2026 · baris ini menunggu · jam berjalan di bab 01</span>
       </div>
       <p class="np-live-n num np-absen-n">{fmt.format(danantaraHari)}</p>
     </div>
@@ -213,8 +213,8 @@
   .np-live-sela { background: var(--line); }
   .np-live-card { position: relative; border: 1px solid var(--line); padding: 15px 17px 13px; display: grid; gap: 9px; align-content: start; }
   .np-live-card::before, .np-live-card::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
-  .np-live-card::before { top: -6px; left: -4px; }
-  .np-live-card::after { bottom: -6px; right: -4px; }
+  .np-live-card::before { top: 0; left: 0; transform: translate(-50%, -50%); }
+  .np-live-card::after { bottom: 0; right: 0; transform: translate(50%, 50%); }
   .np-live-n { font-family: var(--font-mono); font-weight: 500; font-size: clamp(22px, 4vw, 42px); line-height: 1; letter-spacing: 0.01em; color: var(--ink); font-variant-numeric: tabular-nums lining-nums; }
   .np-live-n.kecil { font-size: clamp(18px, 2.6vw, 28px); }
 

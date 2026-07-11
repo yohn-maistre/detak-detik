@@ -1,0 +1,5 @@
+# pnpm 11: build-script allowlist lives here (package.json "pnpm" field is no
+# longer honored). esbuild/sharp need postinstall builds.
+allowBuilds:
+  esbuild: true
+  sharp: true

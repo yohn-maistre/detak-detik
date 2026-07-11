@@ -40,8 +40,17 @@ function rasterize(features: GeoFeature[], cols: number, rows: number): AtlasGri
   off.height = rows;
   const ctx = off.getContext('2d', { willReadFrequently: true });
   if (!ctx) throw new Error('ctx');
+  // One pass PER FEATURE, cell claimed by the province covering it most.
+  // (The old single-pass trick encoded the index in the red channel; canvas
+  // anti-aliasing then BLENDED indices at every coastline pixel, so hovering
+  // Papua could read an arbitrary mid-range index — "Sulawesi Tenggara".
+  // Alpha of a solitary fill is a true coverage estimate; comparing it across
+  // features is exact and 38 tiny getImageData passes cost nothing.)
+  const cells = new Uint8Array(cols * rows);
+  const coverage = new Uint8Array(cols * rows);
   features.forEach((f, i) => {
-    ctx.fillStyle = `rgb(${i + 1},0,0)`;
+    ctx.clearRect(0, 0, cols, rows);
+    ctx.fillStyle = '#000';
     const polys = (f.geometry.type === 'Polygon'
       ? [f.geometry.coordinates]
       : f.geometry.coordinates) as number[][][][];
@@ -58,10 +67,15 @@ function rasterize(features: GeoFeature[], cols: number, rows: number): AtlasGri
       }
     }
     ctx.fill('evenodd');
+    const px = ctx.getImageData(0, 0, cols, rows).data;
+    for (let j = 0; j < cells.length; j++) {
+      const a = px[j * 4 + 3]!;
+      if (a > 32 && a > coverage[j]!) {
+        coverage[j] = a;
+        cells[j] = i + 1;
+      }
+    }
   });
-  const px = ctx.getImageData(0, 0, cols, rows).data;
-  const cells = new Uint8Array(cols * rows);
-  for (let i = 0; i < cells.length; i++) cells[i] = px[i * 4 + 3]! > 0 ? px[i * 4]! : 0;
   return { cols, rows, cells, provs: features.map((f) => f.properties) };
 }
 

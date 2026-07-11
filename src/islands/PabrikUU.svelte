@@ -21,7 +21,11 @@
   ].sort((a, b) => a.hari - b.hari);
 
   const MAXLOG = Math.log10(8000);
-  const lebar = (hari: number) => `${(Math.log10(Math.max(hari, 1)) / MAXLOG) * 100}%`;
+  const pct = (hari: number) => (Math.log10(Math.max(hari, 1)) / MAXLOG) * 100;
+  const lebar = (hari: number) => `${pct(hari)}%`;
+  // past ~72% of the track the label no longer fits beside the bar — it moves
+  // inside the bar end instead of running off the page edge
+  const labelDalam = (hari: number) => pct(hari) > 72;
   const fmtHari = (h: number) =>
     h < 365 ? `${h} hari` : `${(h / 365).toFixed(h / 365 >= 10 ? 0 : 1).replace('.', ',')} tahun`;
 </script>
@@ -35,7 +39,7 @@
       <div class="pu-row">
         <span class="pu-nama">{u.nama}</span>
         <div class="pu-track">
-          <i class="pu-bar" class:macet={!u.sah} style={`--w:${lebar(u.hari)}`}>
+          <i class="pu-bar" class:macet={!u.sah} class:dalam={labelDalam(u.hari)} style={`--w:${lebar(u.hari)}`}>
             <span class="pu-hari mono">{fmtHari(u.hari)}{u.sah ? '' : ' · BELUM SAH ⇢'}</span>
           </i>
         </div>
@@ -70,6 +74,8 @@
     opacity: 0.85;
   }
   .pu-hari { margin-left: calc(100% + 8px); font-size: 9.5px; letter-spacing: 0.08em; color: var(--muted); white-space: nowrap; }
+  .pu-bar.dalam .pu-hari { margin-left: auto; margin-right: 8px; color: var(--bg); }
+  .pu-bar.macet.dalam .pu-hari { color: var(--ink); background: var(--bg); padding: 1px 5px; }
   .pu-kaki { font-size: 15px; margin-top: 24px; max-width: 56ch; }
   .pu-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
 </style>

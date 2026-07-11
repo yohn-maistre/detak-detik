@@ -225,7 +225,7 @@
       {/if}
     </div>
     {#if buka}
-      <div class="ld-results" role="listbox" aria-label="Hasil pencarian provinsi">
+      <div class="ld-results" role="listbox" aria-label="Hasil pencarian provinsi" data-lenis-prevent>
         <button class="ld-opt nas mono" class:aktif={isNas} onclick={() => pilih('nasional')}>
           <span class="ld-opt-nama">Indonesia</span><span class="ld-opt-pulau">acuan nasional</span>
         </button>
@@ -504,8 +504,8 @@
      speak the spread's ld-* grammar — one drawing language for both */
   .lw-apbd { position: relative; margin-top: 22px; border: 1px solid var(--line); padding: 14px 16px 22px; display: grid; gap: 18px; }
   .lw-apbd::before, .lw-apbd::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
-  .lw-apbd::before { top: -6px; left: -4px; }
-  .lw-apbd::after { bottom: -6px; right: -4px; }
+  .lw-apbd::before { top: 0; left: 0; transform: translate(-50%, -50%); }
+  .lw-apbd::after { bottom: 0; right: 0; transform: translate(50%, 50%); }
   .lw-apbd-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 14px; flex-wrap: wrap; }
   .lw-apbd-t { font-size: 9px; letter-spacing: 0.16em; color: var(--ink); }
   .lw-apbd-s { font-size: 8px; letter-spacing: 0.12em; color: var(--muted); }

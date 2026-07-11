@@ -5,16 +5,16 @@
    * (public/data/idn-prov.geojson), so the coastline is accurate, not
    * decorative. Each dot knows its province: hover names it, a tap files it
    * into the Lensa Wilayah through the same command bus every click speaks.
-   * Rasterization trick: provinces are filled to an offscreen canvas with
-   * their index encoded in the red channel, then pixels are sampled into
-   * dots. No point-in-polygon math, cheap enough for a budget phone.
+   * Rasterization lives in lib/atlas-dots.ts (shared with ZonaHayati and
+   * SukuLokasi): per-feature coverage passes, so a cell always names the
+   * province that actually covers it. No point-in-polygon math at runtime.
    */
   import { onMount } from 'svelte';
   import { dispatch } from '../lib/commands/dispatcher';
   import { onLensa, getDaerah } from '../lib/lensa';
   import { drawEngraving, ENGRAVE_ATLAS } from '../lib/engrave';
+  import { loadAtlasGrid, LON0, LON1, LAT0, LAT1 } from '../lib/atlas-dots';
 
-  const LON0 = 94.5, LON1 = 141.5, LAT0 = 6.5, LAT1 = -11.5;
   const COLS = 188, ROWS = 72;
 
   let cv: HTMLCanvasElement | undefined = $state();
@@ -146,39 +146,9 @@
 
     void (async () => {
       try {
-        const res = await fetch('/data/idn-prov.geojson', { signal: AbortSignal.timeout(12000) });
-        if (!res.ok) throw new Error(String(res.status));
-        const gj = (await res.json()) as {
-          features: { properties: Prov; geometry: { type: string; coordinates: unknown } }[];
-        };
-        provs = gj.features.map((f) => f.properties);
-
-        // rasterize: province index in the red channel of an offscreen grid
-        const off = document.createElement('canvas');
-        off.width = COLS; off.height = ROWS;
-        const octx = off.getContext('2d', { willReadFrequently: true });
-        if (!octx) throw new Error('ctx');
-        gj.features.forEach((f, i) => {
-          octx.fillStyle = `rgb(${i + 1},0,0)`;
-          const polys = (f.geometry.type === 'Polygon'
-            ? [f.geometry.coordinates]
-            : f.geometry.coordinates) as number[][][][];
-          octx.beginPath();
-          for (const poly of polys) {
-            for (const ring of poly) {
-              ring.forEach((pt, k) => {
-                const x = ((pt[0]! - LON0) / (LON1 - LON0)) * COLS;
-                const y = ((LAT0 - pt[1]!) / (LAT0 - LAT1)) * ROWS;
-                if (k === 0) octx.moveTo(x, y); else octx.lineTo(x, y);
-              });
-              octx.closePath();
-            }
-          }
-          octx.fill('evenodd');
-        });
-        const px = octx.getImageData(0, 0, COLS, ROWS).data;
-        grid = new Uint8Array(COLS * ROWS);
-        for (let i = 0; i < grid.length; i++) grid[i] = px[i * 4 + 3]! > 0 ? px[i * 4]! : 0;
+        const atlas = await loadAtlasGrid(COLS, ROWS);
+        provs = atlas.provs;
+        grid = atlas.cells;
 
         const d = getDaerah();
         if (d && d.kode !== 'nasional') {

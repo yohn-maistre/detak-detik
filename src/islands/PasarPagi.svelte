@@ -130,9 +130,12 @@
     display: flex; flex-direction: column; gap: 8px;
     background: none;
   }
+  /* crosshairs centered exactly on the plate corners — asymmetric offsets
+     used to overhang the grid's right edge and read as a rightward skew */
   .pp-card::before, .pp-card::after { content: '+'; position: absolute; font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--muted); }
-  .pp-card::before { top: -6px; left: -4px; }
-  .pp-card::after { bottom: -6px; right: -4px; }
+  .pp-card::before { top: 0; left: 0; transform: translate(-50%, -50%); }
+  .pp-card::after { bottom: 0; right: 0; transform: translate(50%, 50%); }
+  @media (max-width: 560px) { .pp-card::before, .pp-card::after { content: none; } }
   .pp-card-head { display: flex; justify-content: space-between; gap: 6px; font-size: 8.5px; letter-spacing: 0.13em; color: var(--muted); }
   .pp-live { font-size: 8px; white-space: nowrap; }
   .pp-live.on { color: var(--accent); }

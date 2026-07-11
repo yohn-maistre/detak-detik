@@ -57,7 +57,7 @@
       <div class="mbg-row mono"><span>Anggaran 2026 (≈2×)</span><b class="num">Rp 335 T</b></div>
       <div class="mbg-row mono"><span>Sasaran penerima</span><b class="num">± 83 jt</b></div>
       <div class="mbg-row mono"><span>Dapur beroperasi</span><b class="num">21.102</b></div>
-      <p class="mbg-scale-teks">Anggaran program naik dari Rp 171 T menjadi Rp 335 T; jumlah korban yang tercatat terus bertambah.</p>
+      <p class="mbg-scale-teks">Catatan pemantau (FSGI/JPPI), bukan rekap resmi; baris ini menunggu tabulasi Kemenkes/BGN untuk naik status.</p>
       <button class="chip"><span class="tick">⊙</span>bgn · fsgi · jppi · (data contoh)</button>
     </aside>
   </div>

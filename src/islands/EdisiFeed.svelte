@@ -10,7 +10,7 @@
       outlet rows link out. Deep links: #/kliping/{id}. */
   import { onMount } from 'svelte';
   import { onEdisi, type LiveKliping, type LiveKlipingItem, type LiveKlipingMeta } from '../lib/edition';
-  import VeilMuka from './VeilMuka.svelte';
+  import { lockScroll, unlockScroll } from '../lib/scroll-lock';
 
   type LeadContoh = { headline: string; dek: string; chips: string[]; stamp: string; serial: string };
   let { lead }: { lead: LeadContoh } = $props();
@@ -79,10 +79,9 @@
 
   $effect(() => {
     if (!buka) return;
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     tutupEl?.focus();
-    return () => { document.body.style.overflow = prev; };
+    return () => unlockScroll();
   });
 
   /* ---- hash routing: back button + share work ---- */
@@ -111,10 +110,8 @@
     <span class="eyebrow">SATU PERISTIWA, SEMUA LIPUTANNYA · JUDUL VERBATIM, DIKELOMPOKKAN OTOMATIS TIAP TERBIT</span>
   </div>
 
-  <!-- №01 · the paper's own lead, first entry of the same feed; behind it,
-       the edition's plate — dither art seeded from this very headline -->
+  <!-- №01 · the paper's own lead, first entry of the same feed -->
   <article class="feed-lead">
-    <VeilMuka seed={judul} />
     <p class="feed-lead-tag mono"><span class="feed-lead-no num">№ 01</span> DARI MEJA REDAKSI</p>
     <h2 class="feed-judul display">{judul}</h2>
     {#if dek}<p class="feed-dek">{dek}</p>{/if}
@@ -180,7 +177,7 @@
 <!-- Lembar Kliping: the tear-off dossier for one cluster -->
 {#if buka}
   <button class="lk-latar" aria-label="Tutup lembar kliping" onclick={tutupLembar}></button>
-  <aside class="lk" role="dialog" aria-modal="true" aria-label="Lembar kliping">
+  <aside class="lk" role="dialog" aria-modal="true" aria-label="Lembar kliping" data-lenis-prevent>
     <header class="lk-kepala">
       <span class="lk-tag mono">LEMBAR KLIPING · MEJA {(buka.meja ?? 'nasional').toUpperCase()}</span>
       <button class="lk-tutup mono" bind:this={tutupEl} onclick={tutupLembar}>TUTUP ✕</button>
