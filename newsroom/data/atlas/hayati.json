@@ -195,7 +195,7 @@
     "pulau": "sulawesi",
     "koordinat": [
       -1.5,
-      121.0
+      121
     ],
     "endemik": "Kerbau kerdil endemik Sulawesi.",
     "status": {
@@ -256,8 +256,8 @@
     "wilayah": "Sulawesi dan pulau sekitarnya",
     "pulau": "sulawesi",
     "koordinat": [
-      -1.0,
-      124.0
+      -1,
+      124
     ],
     "endemik": "Primata terkecil, mata sebesar otaknya; endemik Wallacea.",
     "status": {
@@ -287,7 +287,7 @@
     "wilayah": "Hutan bakau dan riparian Kalimantan",
     "pulau": "kalimantan",
     "koordinat": [
-      -2.0,
+      -2,
       114.5
     ],
     "endemik": "Monyet berhidung panjang, endemik Borneo.",
@@ -319,7 +319,7 @@
     "pulau": "sulawesi",
     "koordinat": [
       1.4,
-      125.0
+      125
     ],
     "endemik": "Monyet berjambul hitam, endemik Sulawesi utara.",
     "status": {
@@ -349,8 +349,8 @@
     "wilayah": "Pedalaman Kalimantan (Borneo)",
     "pulau": "kalimantan",
     "koordinat": [
-      1.0,
-      114.0
+      1,
+      114
     ],
     "endemik": "Kucing liar endemik Borneo, sangat jarang teramati.",
     "status": {
@@ -412,7 +412,7 @@
     "pulau": "jawa",
     "koordinat": [
       -6.9,
-      107.0
+      107
     ],
     "endemik": "Lutung endemik Jawa Barat.",
     "status": {
@@ -443,7 +443,7 @@
     "pulau": "jawa",
     "koordinat": [
       -7.3,
-      110.0
+      110
     ],
     "endemik": "Karnivora besar terakhir Jawa; subspesies endemik.",
     "status": {
@@ -473,8 +473,8 @@
     "wilayah": "Sulawesi",
     "pulau": "sulawesi",
     "koordinat": [
-      -1.0,
-      120.0
+      -1,
+      120
     ],
     "endemik": "Burung gosong endemik Sulawesi; menetaskan telur dengan panas bumi.",
     "status": {
@@ -567,7 +567,7 @@
     "pulau": "bali_nusa",
     "koordinat": [
       -8.5,
-      120.0
+      120
     ],
     "endemik": "Kakatua endemik Wallacea, ditangkap besar-besaran untuk perdagangan.",
     "status": {
@@ -659,8 +659,8 @@
     "wilayah": "Hutan Sumatra dan Kalimantan",
     "pulau": "sumatra",
     "koordinat": [
-      -1.0,
-      102.0
+      -1,
+      102
     ],
     "endemik": "Enggang berbalung padat, diburu untuk 'gading merah'.",
     "status": {
@@ -721,7 +721,7 @@
     "wilayah": "Hutan hujan Sumatra",
     "pulau": "sumatra",
     "koordinat": [
-      -2.0,
+      -2,
       101.5
     ],
     "endemik": "Perbungaan tak bercabang tertinggi di dunia; endemik Sumatra.",
@@ -752,8 +752,8 @@
     "wilayah": "Kalimantan dan Sumatra",
     "pulau": "kalimantan",
     "koordinat": [
-      0.0,
-      114.0
+      0,
+      114
     ],
     "endemik": "Anggrek berlidah hitam, maskot flora Kalimantan Timur.",
     "status": {
@@ -845,8 +845,8 @@
     "wilayah": "Kalimantan dan Sumatra",
     "pulau": "kalimantan",
     "koordinat": [
-      0.0,
-      115.0
+      0,
+      115
     ],
     "endemik": "Kayu besi Borneo, kayu terkeras dan tahan lama.",
     "status": {
@@ -876,8 +876,8 @@
     "wilayah": "Hutan dataran rendah Nusantara",
     "pulau": "sumatra",
     "koordinat": [
-      -2.0,
-      104.0
+      -2,
+      104
     ],
     "endemik": "Anggrek raksasa, jenis anggrek terbesar dan terberat di dunia.",
     "status": {
@@ -908,7 +908,7 @@
     "pulau": "bali_nusa",
     "koordinat": [
       -9.7,
-      124.0
+      124
     ],
     "endemik": "Kayu wangi ikon Nusa Tenggara Timur, kian langka akibat penebangan.",
     "status": {
@@ -928,5 +928,356 @@
       "atribusi": "J.M.Garg, CC BY-SA 4.0, via Wikimedia Commons"
     },
     "zona": "wallacea"
+  },
+  {
+    "id": "cendrawasih-kuning-besar",
+    "nama": "Cendrawasih kuning-besar",
+    "ilmiah": "Paradisaea apoda",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Kepulauan Aru dan Papua selatan",
+    "pulau": "papua",
+    "koordinat": [
+      -6.1,
+      134.5
+    ],
+    "endemik": "Cendrawasih terbesar; jantannya menari berkelompok di tajuk pohon tinggi Aru.",
+    "status": {
+      "kode": "LC",
+      "label": "Risiko Rendah",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Cendrawasih kuning-besar",
+      "url": "https://id.wikipedia.org/wiki/Cendrawasih_kuning-besar"
+    },
+    "ringkas": "Cendrawasih kuning-besar adalah jenis cendrawasih terbesar, dikenal dari bulu hias kuning keemasan yang dipertunjukkan jantan dalam tarian berkelompok. Tersebar di Kepulauan Aru dan dataran rendah Papua selatan.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "LC"
+  },
+  {
+    "id": "cendrawasih-botak",
+    "nama": "Cendrawasih botak",
+    "ilmiah": "Cicinnurus respublica",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Pulau Waigeo dan Batanta, Raja Ampat",
+    "pulau": "papua",
+    "koordinat": [
+      -0.15,
+      130.85
+    ],
+    "endemik": "Endemik Waigeo dan Batanta; mahkota kepalanya kulit biru telanjang.",
+    "status": {
+      "kode": "NT",
+      "label": "Hampir Terancam",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Cendrawasih botak",
+      "url": "https://id.wikipedia.org/wiki/Cendrawasih_botak"
+    },
+    "ringkas": "Cendrawasih botak adalah cendrawasih kecil endemik pulau Waigeo dan Batanta di Raja Ampat, dengan mahkota kepala berupa kulit biru terang tanpa bulu dan dua bulu ekor melingkar.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "NT"
+  },
+  {
+    "id": "mambruk-victoria",
+    "nama": "Mambruk victoria",
+    "ilmiah": "Goura victoria",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Papua bagian utara",
+    "pulau": "papua",
+    "koordinat": [
+      -2.5,
+      138.5
+    ],
+    "endemik": "Merpati terbesar di dunia, berjambul renda; endemik hutan utara Papua.",
+    "status": {
+      "kode": "NT",
+      "label": "Hampir Terancam",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Mambruk victoria",
+      "url": "https://id.wikipedia.org/wiki/Mambruk_victoria"
+    },
+    "ringkas": "Mambruk victoria adalah merpati terbesar di dunia, dikenal dari jambul renda biru keabuan di kepalanya. Hidup di lantai hutan dataran rendah Papua bagian utara.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "NT"
+  },
+  {
+    "id": "kanguru-pohon-mantel-emas",
+    "nama": "Kanguru pohon mantel-emas",
+    "ilmiah": "Dendrolagus pulcherrimus",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pegunungan Foja dan Torricelli, Papua",
+    "pulau": "papua",
+    "koordinat": [
+      -2.6,
+      138.7
+    ],
+    "endemik": "Marsupial pemanjat pohon endemik pegunungan Papua, salah satu mamalia paling langka.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Kanguru pohon mantel emas",
+      "url": "https://id.wikipedia.org/wiki/Kanguru_pohon_mantel_emas"
+    },
+    "ringkas": "Kanguru pohon mantel-emas adalah kanguru pohon yang hidup di tajuk hutan pegunungan Papua, dengan garis punggung keemasan. Termasuk mamalia paling langka dan terancam kritis akibat perburuan dan hilangnya hutan.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "CR"
+  },
+  {
+    "id": "kasuari-gelambir-ganda",
+    "nama": "Kasuari gelambir-ganda",
+    "ilmiah": "Casuarius casuarius",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Papua, Seram, dan Aru",
+    "pulau": "papua",
+    "koordinat": [
+      -4,
+      138
+    ],
+    "endemik": "Burung besar tak terbang berkasque; penyebar biji utama hutan Papua.",
+    "status": {
+      "kode": "LC",
+      "label": "Risiko Rendah",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Kasuari gelambir ganda",
+      "url": "https://id.wikipedia.org/wiki/Kasuari_gelambir_ganda"
+    },
+    "ringkas": "Kasuari gelambir-ganda adalah burung besar tak dapat terbang dengan pelindung kepala bertulang (kasque) dan dua gelambir merah di leher. Berperan penting sebagai penyebar biji di hutan Papua.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "LC"
+  },
+  {
+    "id": "nuri-sayap-hitam",
+    "nama": "Nuri sayap-hitam",
+    "ilmiah": "Eos cyanogenia",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Kepulauan Teluk Cenderawasih, Papua",
+    "pulau": "papua",
+    "koordinat": [
+      -1.7,
+      135.5
+    ],
+    "endemik": "Endemik pulau-pulau kecil Teluk Cenderawasih; merah menyala bersayap hitam.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Nuri sayap-hitam",
+      "url": "https://id.wikipedia.org/wiki/Nuri_sayap-hitam"
+    },
+    "ringkas": "Nuri sayap-hitam adalah nuri merah menyala dengan bidang hitam pada sayap, endemik pulau-pulau kecil di Teluk Cenderawasih, Papua. Terancam oleh penangkapan untuk perdagangan burung.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "VU"
+  },
+  {
+    "id": "labi-labi-moncong-babi",
+    "nama": "Labi-labi moncong-babi",
+    "ilmiah": "Carettochelys insculpta",
+    "takson": "fauna",
+    "kelompok": "reptil",
+    "wilayah": "Sungai-sungai Papua selatan",
+    "pulau": "papua",
+    "koordinat": [
+      -7.5,
+      139.5
+    ],
+    "endemik": "Kura-kura air tawar bermoncong seperti babi dan bersirip seperti penyu.",
+    "status": {
+      "kode": "EN",
+      "label": "Genting",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Labi-labi moncong babi",
+      "url": "https://id.wikipedia.org/wiki/Labi-labi_moncong_babi"
+    },
+    "ringkas": "Labi-labi moncong-babi adalah kura-kura air tawar unik dengan hidung memanjang seperti babi dan kaki berbentuk sirip seperti penyu laut. Hidup di sungai Papua selatan dan Australia utara, terancam oleh perdagangan telur dan tukik.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "EN"
+  },
+  {
+    "id": "echidna-moncong-panjang",
+    "nama": "Ekidna moncong-panjang",
+    "ilmiah": "Zaglossus bruijnii",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Pegunungan Papua Barat",
+    "pulau": "papua",
+    "koordinat": [
+      -1.3,
+      133.5
+    ],
+    "endemik": "Mamalia bertelur (monotremata) purba, endemik pegunungan Papua.",
+    "status": {
+      "kode": "CR",
+      "label": "Kritis",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Ekidna moncong panjang barat",
+      "url": "https://id.wikipedia.org/wiki/Ekidna_moncong_panjang_barat"
+    },
+    "ringkas": "Ekidna moncong-panjang barat adalah mamalia bertelur (monotremata) berduri dengan moncong panjang untuk menyantap cacing tanah. Salah satu mamalia paling purba yang masih hidup, endemik pegunungan Papua dan terancam kritis.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "CR"
+  },
+  {
+    "id": "buaya-papua",
+    "nama": "Buaya papua",
+    "ilmiah": "Crocodylus novaeguineae",
+    "takson": "fauna",
+    "kelompok": "reptil",
+    "wilayah": "Rawa dan sungai air tawar Papua",
+    "pulau": "papua",
+    "koordinat": [
+      -4.5,
+      137.5
+    ],
+    "endemik": "Buaya air tawar endemik pulau Papua.",
+    "status": {
+      "kode": "LC",
+      "label": "Risiko Rendah",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Buaya papua",
+      "url": "https://id.wikipedia.org/wiki/Buaya_papua"
+    },
+    "ringkas": "Buaya papua adalah buaya air tawar berukuran sedang yang mendiami rawa dan sungai di pulau Papua. Dikelola melalui panen telur berkelanjutan di beberapa wilayah.",
+    "gambar": null,
+    "zona": "sahul",
+    "iucn": "LC"
+  },
+  {
+    "id": "burung-mamoa",
+    "nama": "Burung gosong maluku",
+    "ilmiah": "Eulipoa wallacei",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Maluku dan Halmahera",
+    "pulau": "maluku",
+    "koordinat": [
+      -3.3,
+      128.2
+    ],
+    "endemik": "Menetaskan telur di pasir pantai berpanas bumi; endemik Maluku.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Gosong maluku",
+      "url": "https://id.wikipedia.org/wiki/Gosong_maluku"
+    },
+    "ringkas": "Gosong maluku adalah burung gosong endemik Maluku yang menguburkan telurnya di pasir pantai yang dihangatkan panas bumi atau matahari. Populasinya menurun akibat pengambilan telur.",
+    "gambar": null,
+    "zona": "wallacea",
+    "iucn": "VU"
+  },
+  {
+    "id": "bidadari-halmahera",
+    "nama": "Bidadari halmahera",
+    "ilmiah": "Semioptera wallacii",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Halmahera dan Bacan, Maluku Utara",
+    "pulau": "maluku",
+    "koordinat": [
+      1,
+      127.9
+    ],
+    "endemik": "Satu-satunya cendrawasih di sebelah barat Papua; ditemukan A.R. Wallace.",
+    "status": {
+      "kode": "LC",
+      "label": "Risiko Rendah",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Bidadari halmahera",
+      "url": "https://id.wikipedia.org/wiki/Bidadari_halmahera"
+    },
+    "ringkas": "Bidadari halmahera adalah satu-satunya jenis cendrawasih yang hidup di sebelah barat Papua, endemik Halmahera dan Bacan. Jantannya memiliki bulu bendera putih di bahu yang dikembangkan saat menari.",
+    "gambar": null,
+    "zona": "wallacea",
+    "iucn": "LC"
+  },
+  {
+    "id": "burung-rangkong-sulawesi",
+    "nama": "Julang sulawesi",
+    "ilmiah": "Rhyticeros cassidix",
+    "takson": "fauna",
+    "kelompok": "burung",
+    "wilayah": "Pulau Sulawesi",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -2,
+      120.5
+    ],
+    "endemik": "Enggang berkasque merah, penyebar biji besar; endemik Sulawesi.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Julang sulawesi",
+      "url": "https://id.wikipedia.org/wiki/Julang_sulawesi"
+    },
+    "ringkas": "Julang sulawesi adalah enggang besar endemik Sulawesi dengan pelindung kepala merah pada jantan. Sebagai pemakan buah, ia menjadi penyebar biji penting bagi hutan Sulawesi.",
+    "gambar": null,
+    "zona": "wallacea",
+    "iucn": "VU"
+  },
+  {
+    "id": "kuskus-beruang",
+    "nama": "Kuskus beruang sulawesi",
+    "ilmiah": "Ailurops ursinus",
+    "takson": "fauna",
+    "kelompok": "mamalia",
+    "wilayah": "Sulawesi dan pulau sekitarnya",
+    "pulau": "sulawesi",
+    "koordinat": [
+      -1,
+      121.5
+    ],
+    "endemik": "Marsupial arboreal endemik Sulawesi, aktif siang hari.",
+    "status": {
+      "kode": "VU",
+      "label": "Rentan",
+      "sumber": "curated"
+    },
+    "wikipedia": {
+      "judul": "Kuskus beruang",
+      "url": "https://id.wikipedia.org/wiki/Kuskus_beruang"
+    },
+    "ringkas": "Kuskus beruang adalah marsupial pemanjat pohon endemik Sulawesi, berbeda dari kuskus lain karena aktif pada siang hari. Terancam oleh perburuan dan hilangnya hutan.",
+    "gambar": null,
+    "zona": "wallacea",
+    "iucn": "VU"
   }
 ]

@@ -7,7 +7,7 @@
   import { onMount } from 'svelte';
   import { gsap, reducedMotion, EASE_STAMP } from '../lib/motion';
   import { countUp } from '../lib/motion-kit';
-  import { bahasaHari, HARI } from '../lib/atlas-hari';
+  import { bahasaHari, manusiaHari, HARI } from '../lib/atlas-hari';
 
   const TOTAL = 718, SENYAP = 24; // illustrative: those falling out of use
 
@@ -34,16 +34,21 @@
     { lang: 'Lampung', kata: 'way', wil: 'Lampung' },
     { lang: 'Rejang', kata: 'bioa', wil: 'Bengkulu' },
   ];
-  // §13.17 B.3: the featured tongue follows the day's PROFILE when the
-  // registry knows its word for "air"; otherwise it rotates by calendar.
+  // §13.17 B.3: the featured tongue follows the day's PROFILE. Preference
+  // order: (1) the reviewed registry entry's own curated kata_air (each row
+  // cites its source — filled during editorial review, never guessed here);
+  // (2) a name-match into the sample list; (3) honest calendar rotation.
+  const punya = (manusiaHari as { kata_air?: { kata: string; wilayah?: string; sumber?: string } }).kata_air;
   const cocok = bahasaHari
     ? KATA_AIR.findIndex((k) => {
         const a = k.lang.toLowerCase(), b = bahasaHari.toLowerCase();
         return a.includes(b) || b.includes(a);
       })
     : -1;
-  const kata = KATA_AIR[cocok >= 0 ? cocok : HARI % KATA_AIR.length]!;
-  const terikat = cocok >= 0;
+  const kata = punya
+    ? { lang: bahasaHari || manusiaHari.bahasa, kata: punya.kata, wil: punya.wilayah ?? manusiaHari.wilayah }
+    : KATA_AIR[cocok >= 0 ? cocok : HARI % KATA_AIR.length]!;
+  const terikat = !!punya || cocok >= 0;
 
   let root: HTMLElement | undefined = $state();
   let heroEl: HTMLElement | undefined = $state();

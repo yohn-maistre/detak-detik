@@ -291,6 +291,10 @@ def main():
             "ringkas": extract,
             "gambar": gambar,
         }
+        # curated pass-through fields the refresh must NEVER drop:
+        # zona feeds ZonaHayati's realm grouping; iucn is the curated fallback
+        if s.get("zona"): rec["zona"] = s["zona"]
+        if s.get("iucn"): rec["iucn"] = s["iucn"]
         out.append(rec)
         print(tag, "OK", "img=%s" % bool(gambar and gambar.get("lisensi")),
               "iucn=%s(%s)" % (code, used), "ext=%d" % len(extract), file=sys.stderr)

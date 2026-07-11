@@ -16,6 +16,15 @@
   let extract = $state(p.ringkas);
   let live = $state(false);
 
+  // the cursor-follow tooltip over the shelf: author · work · year · note
+  type Buku = (typeof PUSTAKA)[number];
+  let tip = $state<{ b: Buku; x: number; y: number } | null>(null);
+  function tipMove(e: PointerEvent, b: Buku) { tip = { b, x: e.clientX, y: e.clientY }; }
+  function tipTap(e: PointerEvent, b: Buku) {
+    if (e.pointerType === 'touch') tip = tip?.b?.id === b.id ? null : { b, x: e.clientX, y: e.clientY };
+  }
+  const wikiUrl = (b: Buku) => b.wikipedia.url;
+
   // the pull-quote: the second sentence, verbatim, at quote length only
   const kal = p.ringkas.split(/(?<=\.)\s+/);
   const kutip = kal.length > 2 && kal[1]!.length > 50 && kal[1]!.length < 230 ? kal[1]! : null;
@@ -50,12 +59,23 @@
 
     <div class="pp-rak-sisi">
       <!-- the shelf: every spine standing; today's pulled forward -->
-      <div class="pp-rak" role="img" aria-label={`Rak ${PUSTAKA.length} buku; hari ini terambil ${p.karya.judul} (${p.karya.tahun}) oleh ${p.nama}`}>
+      <div class="pp-rak" role="list" aria-label={`Rak ${PUSTAKA.length} buku; hari ini terambil ${p.karya.judul} (${p.karya.tahun}) oleh ${p.nama}`}>
         {#each PUSTAKA as b, i (b.id)}
-          <div class="pp-spine" class:hariIni={i === pustakaIdx} title={`${b.karya.judul} — ${b.nama}`}>
+          <a
+            class="pp-spine"
+            class:hariIni={i === pustakaIdx}
+            role="listitem"
+            href={wikiUrl(b)}
+            target="_blank"
+            rel="noopener"
+            aria-label={`${b.karya.judul} oleh ${b.nama} — buka di id.wikipedia`}
+            onpointermove={(e) => tipMove(e, b)}
+            onpointerleave={() => (tip = null)}
+            onpointerdown={(e) => tipTap(e, b)}
+          >
             <span class="pp-spine-judul">{b.karya.judul}</span>
             {#if i === pustakaIdx}<span class="pp-spine-thn mono">{b.karya.tahun}</span>{/if}
-          </div>
+          </a>
         {/each}
       </div>
       <div class="pp-papan" aria-hidden="true"></div>
@@ -64,11 +84,21 @@
         <span class="pp-karya-k mono">TERAMBIL HARI INI</span>
         <p class="pp-karya-judul fig">{p.karya.judul} <span class="pp-karya-thn mono">· {p.karya.tahun}</span></p>
         <p class="pp-karya-catatan">{p.karya.catatan}</p>
-        <span class="pp-karya-lbl mono">CATATAN KURASI REDAKSI · RIWAYAT TERBIT TERDOKUMENTASI</span>
+        <a class="chip pp-karya-baca" href={p.wikipedia.url} target="_blank" rel="noopener">⊙ baca tentangnya di id.wikipedia →</a>
+        <span class="pp-karya-lbl mono">CATATAN KURASI REDAKSI · TIAP SAMPUL TERTAUT KE ENSIKLOPEDIANYA</span>
       </div>
     </div>
   </div>
 </article>
+
+{#if tip}
+  <div class="pp-tip" style={`transform: translate(${tip.x}px, ${tip.y - 16}px)`} aria-hidden="true">
+    <b class="pp-tip-karya fig">{tip.b.karya.judul}</b>
+    <span class="pp-tip-meta mono">{tip.b.nama} · {tip.b.karya.tahun} · {tip.b.peran}</span>
+    <span class="pp-tip-catatan">{tip.b.karya.catatan}</span>
+    <span class="pp-tip-buka mono">↗ KETUK UNTUK MEMBUKA DI ID.WIKIPEDIA</span>
+  </div>
+{/if}
 
 <style>
   .pp { margin-bottom: clamp(24px, 4vw, 44px); }
@@ -101,8 +131,10 @@
     position: relative; overflow: hidden;
     display: grid; align-content: end; justify-items: center;
     padding-bottom: 8px;
-    transition: height 0.35s var(--ease-out, ease);
+    text-decoration: none;
+    transition: height 0.35s var(--ease-out, ease), background 0.2s, flex-grow 0.35s var(--ease-out, ease);
   }
+  .pp-spine:hover:not(.hariIni) { background: color-mix(in oklab, var(--accent) 14%, transparent); flex-grow: 1.5; }
   .pp-spine-judul {
     writing-mode: vertical-rl; transform: rotate(180deg);
     font-family: var(--font-fig); font-style: italic;
@@ -123,5 +155,19 @@
   .pp-karya-judul { font-size: clamp(20px, 2.6vw, 28px); color: var(--ink); line-height: 1.1; }
   .pp-karya-thn { font-size: 10px; letter-spacing: 0.08em; color: var(--muted); }
   .pp-karya-catatan { font-size: 13px; line-height: 1.6; color: var(--muted); max-width: 44ch; }
+  .pp-karya-baca { justify-self: start; text-decoration: none; margin-top: 2px; }
   .pp-karya-lbl { font-size: 7.5px; letter-spacing: 0.14em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 6px; margin-top: 4px; }
+
+  /* the cursor-follow tooltip over the shelf */
+  .pp-tip {
+    position: fixed; left: 0; top: 0; z-index: 145; pointer-events: none;
+    translate: -50% -100%; width: 244px;
+    background: var(--bg); color: var(--ink); border: 1px solid var(--ink);
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.5);
+    padding: 11px 13px; display: grid; gap: 4px;
+  }
+  .pp-tip-karya { font-size: 15px; color: var(--ink); line-height: 1.15; }
+  .pp-tip-meta { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); }
+  .pp-tip-catatan { font-size: 11.5px; line-height: 1.5; color: var(--ink); margin-top: 3px; }
+  .pp-tip-buka { font-size: 7.5px; letter-spacing: 0.14em; color: var(--accent); margin-top: 4px; }
 </style>

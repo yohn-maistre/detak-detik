@@ -129,6 +129,19 @@
   $effect(() => { void aktif; draw(); });
 
   const pilih = (z: Zona) => { aktif = z; };
+
+  // the cursor-follow dossier: hovering a species row raises a card that
+  // tracks the pointer (the .pp-tip idiom, enriched). Touch taps toggle it.
+  type Row = (typeof daftar)[number];
+  let tip = $state<{ r: Row; x: number; y: number } | null>(null);
+  const LABEL_RISIKO: Record<string, string> = {
+    CR: 'Kritis', EN: 'Genting', VU: 'Rentan', NT: 'Hampir terancam', NE: 'Belum dinilai',
+  };
+  function tipMove(e: PointerEvent, r: Row) { tip = { r, x: e.clientX, y: e.clientY }; }
+  function tipTap(e: PointerEvent, r: Row) {
+    if (e.pointerType !== 'touch') return;
+    tip = tip?.r?.id === r.id ? null : { r, x: e.clientX, y: e.clientY };
+  }
 </script>
 
 <section class="zh" bind:this={wrap} data-no-stempel data-ref="zona-hayati">
@@ -181,7 +194,14 @@
       {#if daftar.length}
         <ol class="zh-rows">
           {#each daftar as r (r.id)}
-            <li class="zh-row" class:sorot={r.id === sorot?.id}>
+            <li
+              class="zh-row"
+              class:sorot={r.id === sorot?.id}
+              class:aktif-tip={tip?.r?.id === r.id}
+              onpointermove={(e) => tipMove(e, r)}
+              onpointerleave={() => (tip = null)}
+              onpointerdown={(e) => tipTap(e, r)}
+            >
               <span class="zh-badge sm mono" data-k={r.status.kode}>{r.status.kode}</span>
               <span class="zh-row-nama">{r.nama}</span>
               <i class="zh-row-ilmiah">{r.ilmiah}</i>
@@ -195,6 +215,26 @@
     </div>
   </div>
 </section>
+
+{#if tip}
+  <div class="zh-tip" style={`transform: translate(${tip.x}px, ${tip.y - 16}px)`} aria-hidden="true">
+    <div class="zh-tip-img">
+      {#if tip.r.gambar?.url}
+        <img src={tip.r.gambar.url} alt="" loading="lazy" />
+      {:else}
+        <span class="zh-tip-plat mono">PLAT · {tip.r.nama.toUpperCase()}</span>
+      {/if}
+      <span class="zh-tip-badge mono" data-k={tip.r.status.kode}>{tip.r.status.kode}</span>
+    </div>
+    <div class="zh-tip-teks">
+      <b class="zh-tip-nama">{tip.r.nama}</b>
+      <i class="zh-tip-ilmiah">{tip.r.ilmiah}</i>
+      <span class="zh-tip-risiko mono" data-k={tip.r.status.kode}>{LABEL_RISIKO[tip.r.status.kode] ?? tip.r.status.label} · {tip.r.endemik ? 'endemik' : 'ikon'}</span>
+      <span class="zh-tip-wil mono">{tip.r.wilayah}</span>
+      {#if tip.r.endemik}<span class="zh-tip-endemik">{tip.r.endemik}</span>{/if}
+    </div>
+  </div>
+{/if}
 
 <style>
   .zh { display: grid; gap: 16px; }
@@ -241,7 +281,34 @@
   .zh-t[data-k="CR"], .zh-t[data-k="EN"] { color: var(--accent); }
   .zh-rows { list-style: none; margin: 0; padding: 0; display: grid; }
   .zh-row { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid var(--line-soft); }
+  .zh-row { cursor: default; transition: background 0.15s, padding-left 0.15s; }
+  .zh-row:hover, .zh-row.aktif-tip { background: color-mix(in oklab, var(--accent) 8%, transparent); padding-left: 6px; }
   .zh-row.sorot { background: color-mix(in oklab, var(--accent) 6%, transparent); }
+
+  /* the cursor-follow dossier card (the .pp-tip idiom, enriched) */
+  .zh-tip {
+    position: fixed; left: 0; top: 0; z-index: 145; pointer-events: none;
+    translate: -50% -100%;
+    width: 236px;
+    background: var(--bg); color: var(--ink);
+    border: 1px solid var(--ink);
+    box-shadow: 0 18px 40px -18px rgba(0, 0, 0, 0.5);
+    display: grid; grid-template-columns: 84px 1fr; gap: 0;
+  }
+  .zh-tip-img { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: #ece1c9; border-right: 1px solid var(--line); }
+  .zh-tip-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .zh-tip-plat { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; font-size: 7px; letter-spacing: 0.14em; color: var(--muted); padding: 4px; }
+  .zh-tip-badge { position: absolute; top: 4px; left: 4px; font-size: 7.5px; font-weight: 700; letter-spacing: 0.06em; padding: 1px 4px; color: var(--bg); background: var(--muted); }
+  .zh-tip-badge[data-k="CR"] { background: var(--accent); }
+  .zh-tip-badge[data-k="EN"] { background: color-mix(in oklab, var(--accent) 78%, var(--ink)); }
+  .zh-tip-teks { padding: 10px 12px; display: grid; gap: 3px; align-content: start; }
+  .zh-tip-nama { font-size: 13.5px; color: var(--ink); line-height: 1.2; }
+  .zh-tip-ilmiah { font-family: var(--font-fig); font-style: italic; font-size: 11.5px; color: var(--muted); }
+  .zh-tip-risiko { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); margin-top: 3px; }
+  .zh-tip-risiko[data-k="CR"], .zh-tip-risiko[data-k="EN"] { color: var(--accent); }
+  .zh-tip-wil { font-size: 8px; letter-spacing: 0.06em; color: var(--muted); }
+  .zh-tip-endemik { font-size: 11px; line-height: 1.45; color: var(--ink); margin-top: 5px; }
+  @media (prefers-reduced-motion: reduce) { .zh-row { transition: none; } }
   .zh-row-nama { font-size: 13.5px; color: var(--ink); }
   .zh-row-ilmiah { font-family: var(--font-fig); font-style: italic; font-size: 11px; color: var(--muted); text-align: right; }
   @media (max-width: 480px) { .zh-row-ilmiah { display: none; } }

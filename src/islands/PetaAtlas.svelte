@@ -175,7 +175,9 @@
     <span class="eyebrow pa-sumber">⊙ BIG RUPABUMI · PROYEKSI LURUS</span>
   </div>
   <canvas bind:this={cv} class:tunjuk={!diLaut} role="img" aria-label="Peta kepulauan Indonesia sebagai plat titik ukir; setiap provinsi dapat diketuk untuk membuka Lensa Wilayah"></canvas>
-  <figcaption class="pa-kaki mono">{kaki}</figcaption>
+  <!-- the live hover status line; the PLAT I plate caption is supplied by the
+       page wrapper (.plat-cap) — one caption, not two -->
+  <p class="pa-kaki mono" aria-live="polite">{kaki}</p>
 </figure>
 
 <style>

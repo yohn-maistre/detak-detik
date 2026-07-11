@@ -790,15 +790,18 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <!-- the volcano note retired 2026-07-11 (one owner: the map's MAGMA
              layer carries the field; the fact reads there, with live status) -->
 
-        <!-- RUPA: one painting a day, explained -->
+        <!-- RUPA & INGATAN: the archive register — a painting and a date share
+             one plate (merged 2026-07-11): what the islands made, and what
+             happened on this day, both quoted from their sources. -->
         <header class="bab-kepala" id="rupa">
           <span class="bab-folio ghost-num" aria-hidden="true">III</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · RUPA</span>
-            <p class="bab-dek">Satu lukisan dari khazanah Nusantara tiap hari, dengan keterangan pelukis, tahun, dan tempat ia kini disimpan.</p>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · RUPA &amp; INGATAN</span>
+            <p class="bab-dek">Satu lukisan dari khazanah Nusantara dan satu peristiwa dari hari ini dalam sejarah, masing-masing dengan keterangan dan tautan ke sumbernya.</p>
           </div>
         </header>
         <GaleriNusantara client:visible />
+        <IngatanHari client:visible />
 
         <!-- PUSTAKA & PIKIRAN: the shelf — writers & public thinkers -->
         <header class="bab-kepala" id="pustaka">
@@ -810,25 +813,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         </header>
         <PustakaPikiran client:visible />
 
-        <!-- ILMU & LANGIT: science with an Indonesian address -->
+        <!-- ALMANAK: the sciences with an Indonesian address -->
         <header class="bab-kepala" id="almanak">
           <span class="bab-folio ghost-num" aria-hidden="true">V</span>
           <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · ILMU &amp; LANGIT</span>
-            <p class="bab-dek">Pengetahuan dengan alamat Nusantara: langit khatulistiwa, dan catatan alam harian.</p>
+            <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · ALMANAK</span>
+            <p class="bab-dek">Empat rak pengetahuan berganti tiap terbit: langit khatulistiwa, bumi yang bergerak, hayati kepulauan, dan aritmetika alam.</p>
           </div>
         </header>
         <AlmanakSains client:visible />
-
-        <!-- INGATAN: today in history -->
-        <header class="bab-kepala">
-          <span class="bab-folio ghost-num" aria-hidden="true">VI</span>
-          <div class="bab-kepala-teks">
-            <span class="inkbar"><span class="dot">●</span>LAMPIRAN VI · INGATAN</span>
-            <p class="bab-dek">Satu peristiwa dari hari ini dalam sejarah, dengan tautan ke arsipnya.</p>
-          </div>
-        </header>
-        <IngatanHari client:visible />
 
         <!-- TULISAN: the essay surface the newsroom writes into — renders
              ONLY when the edition carries tulisan[] (no empty frames) -->
@@ -1255,14 +1248,15 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   /* ---------- SEAMS: the compact ribbon flip ---------- */
   .seam {
     position: relative;
-    height: 38vh;
-    height: 38svh;
+    height: 20vh;
+    height: 20svh;
+    max-height: 220px;
     display: grid;
     place-items: center;
     perspective: 1400px;
     background: var(--to);
   }
-  @media (max-width: 760px) { .seam { height: 30vh; height: 30svh; } }
+  @media (max-width: 760px) { .seam { height: 18vh; height: 18svh; } }
   .seam.is-static { height: clamp(120px, 20vh, 220px); background: linear-gradient(var(--from), var(--to)); }
   .slats { position: absolute; inset: 0; display: grid; grid-auto-rows: 1fr; }
   .slat { position: relative; transform-style: preserve-3d; will-change: transform; }
@@ -1332,12 +1326,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   }
   .atlas-sub { font-size: 15px; margin-bottom: 26px; }
   /* Act III section dividers (atlas register) */
-  .nus-sec { display: grid; grid-template-columns: auto 1fr; gap: 8px 18px; align-items: baseline; border-top: 2px solid var(--line); padding-top: 16px; margin: clamp(40px, 7vw, 80px) 0 24px; }
-  .nus-sec-no { font-size: 11px; letter-spacing: 0.3em; color: var(--accent2); grid-row: 1 / span 2; }
-  .nus-sec-judul { font-family: 'Fraunces Variable', serif; font-weight: 360; font-size: clamp(30px, 5vw, 58px); line-height: 0.95; color: var(--ink); }
-  .nus-sec-dek { grid-column: 2; font-size: clamp(14px, 1.7vw, 18px); color: var(--muted); max-width: 56ch; line-height: 1.5; }
-  .atlas-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 22px; margin-top: 46px; align-items: start; }
-  @media (max-width: 940px) { .atlas-grid { grid-template-columns: 1fr; } }
+  /* .nus-sec* / .atlas-grid removed 2026-07-11: vestigial from an earlier
+     Act III layout, superseded by .bab-kepala. */
 
   /* tarik fajar */
   #fajar {

@@ -16,6 +16,40 @@
   let live = $state(false);
   let img = $state(p.gambar?.url ?? '');
 
+  /** the full feature body: whole sections of the id.wikipedia article,
+      verbatim (Lane A by construction) — the reviewed extract stays the
+      floor and the opening paragraph; sections render beneath it. When the
+      newsroom's manusia desk ships a gated `tulisan`, it takes this slot. */
+  type Bagian = { judul: string | null; paras: string[] };
+  let bagian = $state<Bagian[]>([]);
+  const BATAS_TOTAL = 4200; // chars across all fetched sections
+  const BAGIAN_MAKS = 3;
+  const LEWATI = /^(daftar pustaka|referensi|pranala luar|catatan|lihat pula|bacaan lanjutan|galeri)$/i;
+
+  function bagiTeks(plain: string): Bagian[] {
+    // Action-API `explaintext` marks sections as "== Judul ==" lines
+    const out: Bagian[] = [];
+    let cur: Bagian = { judul: null, paras: [] };
+    let total = 0;
+    for (const blok of plain.split(/\n{2,}/)) {
+      const t = blok.trim();
+      if (!t) continue;
+      const m = t.match(/^==+\s*(.+?)\s*==+$/);
+      if (m) {
+        if (cur.paras.length) out.push(cur);
+        if (out.length >= BAGIAN_MAKS + 1 || LEWATI.test(m[1]!)) { cur = { judul: null, paras: [] }; if (out.length >= BAGIAN_MAKS + 1) break; continue; }
+        cur = { judul: m[1]!, paras: [] };
+        continue;
+      }
+      if (total >= BATAS_TOTAL) continue;
+      const potong = total + t.length > BATAS_TOTAL ? t.slice(0, BATAS_TOTAL - total).replace(/\s+\S*$/, '') + '…' : t;
+      cur.paras.push(potong);
+      total += t.length;
+    }
+    if (cur.paras.length) out.push(cur);
+    return out.filter((b) => b.judul === null || !LEWATI.test(b.judul));
+  }
+
   /* the pull-quote: the second sentence of the reviewed extract, verbatim,
      only when it reads at quote length — otherwise the feature runs unquoted */
   const kalimat = p.ringkas.split(/(?<=\.)\s+/);
@@ -41,14 +75,22 @@
   onMount(() => {
     (async () => {
       try {
-        const u = `https://id.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(p.wikipedia.judul)}`;
-        const res = await fetch(u, { signal: AbortSignal.timeout(6000) });
-        const d = await res.json();
-        // the live extract may only LENGTHEN the reviewed one, never shrink it
-        if (d?.extract && d.extract.length > extract.length) {
-          extract = d.extract.length > 900 ? d.extract.slice(0, 900).replace(/\s+\S*$/, '') + '…' : d.extract;
-          live = true;
+        // full plaintext of the article (Action API, CORS via origin=*):
+        // the lead may lengthen the reviewed extract; whole sections follow
+        const u = `https://id.wikipedia.org/w/api.php?action=query&format=json&origin=*&redirects=1&prop=extracts&explaintext=1&titles=${encodeURIComponent(p.wikipedia.judul)}`;
+        const res = await fetch(u, { signal: AbortSignal.timeout(8000) });
+        const d = (await res.json()) as { query?: { pages?: Record<string, { extract?: string }> } };
+        const plain = Object.values(d?.query?.pages ?? {})[0]?.extract;
+        if (!plain) return;
+        const semua = bagiTeks(plain);
+        const lead = semua.find((b) => b.judul === null);
+        // the live lead may only LENGTHEN the reviewed one, never shrink it
+        const leadTeks = lead?.paras.join('\n\n') ?? '';
+        if (leadTeks.length > extract.length) {
+          extract = leadTeks.length > 1400 ? leadTeks.slice(0, 1400).replace(/\s+\S*$/, '') + '…' : leadTeks;
         }
+        bagian = semua.filter((b) => b.judul !== null);
+        live = true;
       } catch { /* the reviewed registry text stands */ }
     })();
   });
@@ -62,6 +104,20 @@
       <p class="wn-extract" class:dua-kolom={extract.length > 420}>{extract}</p>
       {#if kutip}
         <blockquote class="wn-kutip fig">{kutip}</blockquote>
+      {/if}
+      {#if bagian.length}
+        <!-- the feature body: whole encyclopedia sections, verbatim + linked -->
+        <div class="wn-bagian">
+          {#each bagian as b (b.judul)}
+            <section class="wn-sec">
+              <h3 class="wn-sec-judul display">{b.judul}</h3>
+              {#each b.paras as para, i (i)}
+                <p class="wn-sec-p">{para}</p>
+              {/each}
+            </section>
+          {/each}
+          <p class="wn-fakta mono">TEKS BAGIAN APA ADANYA DARI ENSIKLOPEDIA · SELENGKAPNYA DI TAUTAN SUMBER</p>
+        </div>
       {/if}
       <p class="wn-fakta mono">BAHASA · {p.bahasa.toUpperCase()}</p>
       <p class="wn-fakta mono">{koordStr} · BERGANTI DUA KALI SEHARI · TEKS APA ADANYA DARI ENSIKLOPEDIA</p>
@@ -118,6 +174,10 @@
     font-size: clamp(18px, 2.4vw, 26px); line-height: 1.4; max-width: 44ch;
     border-left: 3px solid var(--accent); padding-left: 16px; margin: 4px 0;
   }
+  .wn-bagian { display: grid; gap: 16px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 6px; }
+  .wn-sec { display: grid; gap: 8px; }
+  .wn-sec-judul { font-family: 'Fraunces Variable', serif; font-weight: 380; font-size: clamp(17px, 2vw, 21px); color: var(--ink); }
+  .wn-sec-p { font-size: 14.5px; line-height: 1.62; color: var(--ink); max-width: 62ch; }
   .wn-fakta { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
   .wn-teks .chip { justify-self: start; margin-top: 2px; text-decoration: none; }
   .wn-img-wrap { margin: 0; display: grid; gap: 8px; }
