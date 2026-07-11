@@ -98,6 +98,7 @@ def panen() -> dict:
     arsip = {r["url"]: r for r in muat_lembaran()}
     baru = 0
     gelap = True
+    galat: str | None = None
     sisa_detail = _BUDGET_DETAIL
     tahun_ini = date.today().year
 
@@ -121,7 +122,8 @@ def panen() -> dict:
     for jid, jenis in JENIS.items():
         try:
             html = ambil(_SEARCH.format(j=jid))
-        except Exception:
+        except Exception as exc:
+            galat = f"{type(exc).__name__}: {exc}"[:160]
             continue
         gelap = False
         _serap(html, jenis)
@@ -162,7 +164,10 @@ def panen() -> dict:
             maks=SIMPAN_MAKS,
             urut=("diundangkan", "ditetapkan", "tahun"),
         )
-    return {"total_arsip": len(rows), "baru": baru, "gelap": gelap}
+    lapor = {"total_arsip": len(rows), "baru": baru, "gelap": gelap}
+    if gelap and galat:
+        lapor["galat"] = galat
+    return lapor
 
 
 async def gather_lembaran() -> tuple[list, dict]:

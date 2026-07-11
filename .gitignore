@@ -15,6 +15,3 @@ __pycache__/
 
 # local screenshot dropzone (Yose drops these for visual context; never pushed)
 docs/screenshots/
-
-# docs are local-only (preserved in backup/main-2026-07-02 + git history)
-docs/

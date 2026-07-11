@@ -3,7 +3,7 @@
  "_sumber": [
   "https://peraturan.bpk.go.id"
  ],
- "diambil": "2026-07-05T12:19:09+00:00",
+ "diambil": "2026-07-11T11:34:15+00:00",
  "peraturan": [
   {
    "id": "350096",
@@ -366,6 +366,16 @@
    "diundangkan": "2026-03-02"
   },
   {
+   "id": "347934",
+   "url": "https://peraturan.bpk.go.id/Details/347934/perpres-no-10-tahun-2026",
+   "nomor": "10",
+   "tahun": 2026,
+   "judul": "Pembukaan Konsulat Jenderal Republik Indonesia di Chengdu, Republik Rakyat Tiongkok",
+   "jenis": "Perpres",
+   "ditetapkan": "2026-03-02",
+   "diundangkan": "2026-03-02"
+  },
+  {
    "id": "347933",
    "url": "https://peraturan.bpk.go.id/Details/347933/perpres-no-9-tahun-2026",
    "nomor": "9",
@@ -402,6 +412,16 @@
    "tahun": 2026,
    "judul": "Perubahan atas Peraturan Presiden Nomor 188 Tahun 2024 tentang Kementerian Pendidikan Dasar dan Menengah",
    "jenis": "Perpres",
+   "ditetapkan": "2026-02-09",
+   "diundangkan": "2026-02-09"
+  },
+  {
+   "id": "347926",
+   "url": "https://peraturan.bpk.go.id/Details/347926/pp-no-7-tahun-2026",
+   "nomor": "7",
+   "tahun": 2026,
+   "judul": "Peraturan Pelaksanaan Undang-Undang Nomor 22 Tahun 2019 tentang Sistem Budi Daya Pertanian Berkelanjutan",
+   "jenis": "PP",
    "ditetapkan": "2026-02-09",
    "diundangkan": "2026-02-09"
   },
@@ -786,34 +806,14 @@
    "diundangkan": ""
   },
   {
-   "id": "347926",
-   "url": "https://peraturan.bpk.go.id/Details/347926/pp-no-7-tahun-2026",
-   "nomor": "7",
-   "tahun": 2026,
-   "judul": "Peraturan Pelaksanaan Undang-Undang Nomor 22 Tahun 2019 tentang Sistem Budi Daya Pertanian Berkelanjutan",
-   "jenis": "PP",
-   "ditetapkan": null,
-   "diundangkan": null
-  },
-  {
-   "id": "347934",
-   "url": "https://peraturan.bpk.go.id/Details/347934/perpres-no-10-tahun-2026",
-   "nomor": "10",
-   "tahun": 2026,
-   "judul": "Pembukaan Konsulat Jenderal Republik Indonesia di Chengdu, Republik Rakyat Tiongkok",
-   "jenis": "Perpres",
-   "ditetapkan": null,
-   "diundangkan": null
-  },
-  {
    "id": "343592",
    "url": "https://peraturan.bpk.go.id/Details/343592/keppres-no-40-tahun-2025",
    "nomor": "40",
    "tahun": 2025,
    "judul": "Pembentukan Pengadilan Agama Kabupaten Kepulauan Sula, Pengadilan Agama Kabupaten Halmahera Barat, Pengadilan Agama Kabupaten Buton Utara, Pengadilan Agama Kabupaten Buton Tengah, Pengadilan Agama Kabupaten Kepulauan Aru, Pengadilan Agama Kabupaten Kepulauan Mentawai, Pengadilan Agama Kabupaten Mamuju Tengah, Pengadilan Agama Kabupaten Bangka Selatan, dan Pengadilan Agama Kabupaten Lombok Utara",
    "jenis": "Keppres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-12-31",
+   "diundangkan": ""
   },
   {
    "id": "343566",
@@ -822,18 +822,8 @@
    "tahun": 2025,
    "judul": "Pembentukan Pengadilan Negeri Kabupaten Badung, Pengadilan Negeri Kabupaten Tangerang, Pengadilan Negeri Kabupaten Morowali, Pengadilan Negeri Kabupaten Bolaang Mongondow Utara, Pengadilan Negeri Kabupaten Sumbawa Barat, Pengadilan Negeri Kabupaten Bangka Selatan, Pengadilan Negeri Kabupaten Sukamara, Pengadilan Negeri Kota Subulussalam, Pengadilan Negeri Kabupaten Penukal Abab Lematang Ilir, Pengadilan Negeri Kabupaten Halmahera Barat, Pengadilan Negeri Kabupaten Kepulauan Mentawai, Pengadilan Negeri Kabupaten Belitung Timur, dan Pengadilan Negeri Kabupaten Gorontalo Utara",
    "jenis": "Keppres",
-   "ditetapkan": null,
-   "diundangkan": null
-  },
-  {
-   "id": "343436",
-   "url": "https://peraturan.bpk.go.id/Details/343436/keppres-no-38-tahun-2025",
-   "nomor": "38",
-   "tahun": 2025,
-   "judul": "Program Penyusunan Peraturan Presiden Tahun 2026",
-   "jenis": "Keppres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-12-31",
+   "diundangkan": ""
   },
   {
    "id": "343973",
@@ -842,8 +832,18 @@
    "tahun": 2025,
    "judul": "Percepatan Penanganan Darurat, Rehabilitasi, dan Rekonstruksi Pascabencana Alam di Provinsi Aceh, Provinsi Sumatera Utara, dan Provinsi Sumatera Barat",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-12-29",
+   "diundangkan": ""
+  },
+  {
+   "id": "343436",
+   "url": "https://peraturan.bpk.go.id/Details/343436/keppres-no-38-tahun-2025",
+   "nomor": "38",
+   "tahun": 2025,
+   "judul": "Program Penyusunan Peraturan Presiden Tahun 2026",
+   "jenis": "Keppres",
+   "ditetapkan": "2025-12-22",
+   "diundangkan": ""
   },
   {
    "id": "337872",
@@ -852,8 +852,8 @@
    "tahun": 2025,
    "judul": "Penguatan Percepatan Pembangunan Kawasan Swasembada Pangan, Energi, dan Air Nasional",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-09-19",
+   "diundangkan": ""
   },
   {
    "id": "327997",
@@ -862,8 +862,8 @@
    "tahun": 2025,
    "judul": "Pembangunan Kampung Haji Indonesia di Makkah, Kerajaan Arab Saudi",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-08-06",
+   "diundangkan": ""
   },
   {
    "id": "328144",
@@ -872,8 +872,8 @@
    "tahun": 2025,
    "judul": "Percepatan Pembangunan Kawasan Swasembada Pangan, Energi, dan Air Nasional",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-08-05",
+   "diundangkan": ""
   },
   {
    "id": "329089",
@@ -882,8 +882,8 @@
    "tahun": 2025,
    "judul": "Percepatan Pelaksanaan Pemanfaatan Rumah Susun Sewa yang Digunakan Sebagai Wisma Atlet Selama Penyelenggaraan ASIAN Games XVIII Tahun 2018 di Kompleks Kemayoran Jakarta",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-06-30",
+   "diundangkan": ""
   },
   {
    "id": "329086",
@@ -892,8 +892,8 @@
    "tahun": 2025,
    "judul": "Upaya Penanganan Keadaan Tertentu untuk Normalisasi Alur Pelayaran Pelabuhan Pulau Baai, Transportasi dan Logistik, serta Percepatan Pembangunan di Pulau Enggano",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-06-24",
+   "diundangkan": ""
   },
   {
    "id": "327916",
@@ -902,8 +902,8 @@
    "tahun": 2025,
    "judul": "Percepatan Peningkatan Konektivitas Jalan Daerah untuk Mendukung Swasembada Pangan dan Energi",
    "jenis": "Inpres",
-   "ditetapkan": null,
-   "diundangkan": null
+   "ditetapkan": "2025-06-23",
+   "diundangkan": ""
   }
  ]
 }

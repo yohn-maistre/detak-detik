@@ -1598,6 +1598,39 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-11 · HANDOFF WAVE — laptop migration + lembaran diagnosis
+
+Yose moves to a laptop; this wave makes the repo the complete memory:
+
+- **Root `CLAUDE.md` added (tracked)** — auto-loaded amnesia-reader entry:
+  read order, iron laws, machine map, ops ritual, host-reachability table.
+- **`docs/` re-tracked** (gitignore keeps only `docs/screenshots/`): the
+  wave-9/10 research cookbooks, DATA_SOURCES.md and PLAN_LOG.md updates
+  existed ONLY on the phone — a laptop clone would have lost them. Yose's
+  earlier "keep it local for now" superseded by his handoff ask ("push to
+  github… a whole folder for amnesia reader"). Secret-scan of docs/ before
+  publishing: all `token/key` hits are prose; only public email present.
+- **Lembaran lane is DARK from GitHub runners** — found by reading the
+  numbers: 12 green cron runs, archive frozen at 90 docs/68 dated since the
+  (phone-side) seeding. Run log confirms `"lembaran": {"gelap": true}`.
+  Correction for the record: wave-10's "pantau cron proven green" was true
+  of the WORKFLOW; this lane has likely never fetched from a runner IP.
+  peraturan.bpk.go.id answers the phone fine (200, 207 KB, 1.2 s).
+- **Fix shipped**: `lembaran.py` now reports `galat` (last fetch exception)
+  when dark — the next cron self-diagnoses (403 vs timeout vs reset).
+  WATCH ITEM: read the next run's `Panen semua lajur` JSON; if runner IPs
+  are hard-blocked, options are a laptop-side harvest cadence or an
+  alternative host (peraturan.go.id) — decide with data.
+- **Local re-harvest ran** (phone): lembaran `diambil` → 2026-07-11, 70/90
+  dated (+2), 0 new docs = current-year backfill has converged for
+  reachable pages; window-honesty clock reset (front-page ledger was 8 days
+  from printing ARSIP TERHENTI).
+- **Vantage complementarity noted**: BPK dark from runners / alive from
+  phone; emedia.dpr.go.id today the reverse (alive on runner, dark here);
+  antikorupsi.org (icw) dark from both — watch.
+- Archive state at handoff: agenda 50 rows (fresh), suara 235 rows / 7
+  lanes (fresh, +106 since launch), lembaran 90 docs / 70 dated (fresh).
+
 ### 2026-07-05 · WAVE 10 — PANTAU NEGARA (`1b9bd46`→`eaf185e`+10f, deploys + pantau cron green)
 
 Same day as wave 9, after Yose's "go-to platform" steer + a Termux crash
