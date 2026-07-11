@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-10T12:12:45+00:00",
+ "diambil": "2026-07-11T10:40:01+00:00",
  "acara": [
   {
    "id": "1d71b60d02b0",
@@ -32,6 +32,24 @@
    "audiens": null,
    "topik": [
     "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "68fdfcc5d8a2",
+   "url": "https://wapresri.go.id/tinjau-progres-tol-prosiwangi-wapres-dorong-konektivitas-dan-pertumbuhan-ekonomi/",
+   "judul": "Tinjau Progres Tol Prosiwangi, Wapres Dorong Konektivitas dan Pertumbuhan Ekonomi",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
    ],
    "venue": null,
    "kota": null,
