@@ -39,6 +39,7 @@
       <span class="eyebrow">KORBAN KERACUNAN · CATATAN BERJALAN</span>
       <p class="mbg-big num" bind:this={bigEl}>{reducedMotion() ? fmt.format(TOTAL) : '0'}</p>
       <p class="mbg-cap">jiwa, sebagian besar anak sekolah, hingga akhir 2025; pemantauan masih berlangsung.</p>
+      <span class="viz-cap" aria-hidden="true">DATA CONTOH</span>
       <div class="mbg-bars" aria-hidden="true">
         {#each BULAN as m (m.b)}
           <div class="mbg-col">
@@ -64,6 +65,7 @@
 </section>
 
 <style>
+  .mbg-tally { position: relative; }
   .mbg-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(20px, 4vw, 48px); align-items: start; }
   @media (max-width: 820px) { .mbg-grid { grid-template-columns: 1fr; } }
   .mbg-big { font-family: 'Fraunces Variable', serif; font-weight: 320; font-size: clamp(56px, 10vw, 116px); line-height: 0.86; color: var(--accent); font-variant-numeric: tabular-nums; }

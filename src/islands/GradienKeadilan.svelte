@@ -169,6 +169,7 @@
   </div>
   <p class="gk-sub">Kerugian negara (log) × vonis penjara. Setiap titik adalah satu putusan. <span class="mono">(data contoh)</span></p>
 
+  <span class="viz-cap" aria-hidden="true">DATA CONTOH</span>
   <svg
     bind:this={svgEl}
     viewBox="0 0 {W} {H}"
@@ -236,6 +237,7 @@
 {/if}
 
 <style>
+  .gk { position: relative; }
   .gk-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   .gk-title { font-size: clamp(22px, 3vw, 30px); }
   .gk-sub { font-size: 13px; color: var(--muted); margin: 6px 0 12px; }

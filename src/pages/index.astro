@@ -42,6 +42,7 @@ import SuaraLembaga from '../islands/SuaraLembaga.svelte';
 import LembaranNegara from '../islands/LembaranNegara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
+import DaftarIsi from '../islands/DaftarIsi.svelte';
 import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, PUTUSAN_HARIAN } from '../lib/data/edisi';
@@ -201,7 +202,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         </section>
 
         <!-- PASAR: the macro board, then the kitchen-table series — one section -->
-        <section class="pasar-blok" aria-label="Pasar">
+        <section class="pasar-blok" id="pasar" aria-label="Pasar">
           <PasarPagi client:visible />
           <div class="gelombang-blok" data-rise>
             <Gelombang client:visible />
@@ -763,7 +764,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         </figure>
 
         <!-- MANUSIA: the day's people + their tongues -->
-        <header class="bab-kepala">
+        <header class="bab-kepala" id="manusia">
           <span class="bab-folio ghost-num" aria-hidden="true">I</span>
           <div class="bab-kepala-teks">
             <!-- §13.17 B.4: the LAMPIRAN label carries the pipeline name;
@@ -778,7 +779,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <!-- HAYATI & EKOSISTEM: the Wallace/Weber lines as the control
              (§13.17 B.5). ZonaHayati absorbs the retired Daftar Merah (species
              ledger) and PetaRupa (the standalone Wallace band). -->
-        <header class="bab-kepala">
+        <header class="bab-kepala" id="hayati">
           <span class="bab-folio ghost-num" aria-hidden="true">II</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN II · HAYATI &amp; EKOSISTEM</span>
@@ -790,7 +791,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
              layer carries the field; the fact reads there, with live status) -->
 
         <!-- RUPA: one painting a day, explained -->
-        <header class="bab-kepala">
+        <header class="bab-kepala" id="rupa">
           <span class="bab-folio ghost-num" aria-hidden="true">III</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN III · RUPA</span>
@@ -800,7 +801,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <GaleriNusantara client:visible />
 
         <!-- PUSTAKA & PIKIRAN: the shelf — writers & public thinkers -->
-        <header class="bab-kepala">
+        <header class="bab-kepala" id="pustaka">
           <span class="bab-folio ghost-num" aria-hidden="true">IV</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN IV · PUSTAKA &amp; PIKIRAN</span>
@@ -810,7 +811,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         <PustakaPikiran client:visible />
 
         <!-- ILMU & LANGIT: science with an Indonesian address -->
-        <header class="bab-kepala">
+        <header class="bab-kepala" id="almanak">
           <span class="bab-folio ghost-num" aria-hidden="true">V</span>
           <div class="bab-kepala-teks">
             <span class="inkbar"><span class="dot">●</span>LAMPIRAN V · ILMU &amp; LANGIT</span>
@@ -839,7 +840,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
     </section>
 
     <!-- ============ RUANG MAIN ============ -->
-    <section class="ruang-main" data-register="atlas" aria-label="Ruang main">
+    <section class="ruang-main" id="ruang-main" data-register="atlas" aria-label="Ruang main">
       <div class="wrap">
         <div class="main-rule" aria-hidden="true"></div>
         <span class="eyebrow rak-eyebrow">RUANG MAIN · TEKA-TEKI YANG SAMA UNTUK SEMUA PEMBACA</span>
@@ -901,11 +902,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
     </footer>
   </main>
 
-  <!-- page-curl: the corner peels to the next data refresh -->
-  <div class="curl" id="curl" aria-hidden="true">
-    <div class="curl-fold"></div>
-    <p class="curl-tip mono">PEMBARUAN BERIKUTNYA <span id="curl-count">—</span><br />DATA DIPERBARUI 2× SEHARI</p>
-  </div>
+  <!-- the page curl, repurposed: the corner unfolds into the daftar isi
+       (navigation TOC); the refresh countdown rides its footer -->
+  <DaftarIsi client:idle />
 
   <Aksara client:load />
 
@@ -913,24 +912,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
     import { boot } from '../scripts/choreo';
     import '../scripts/pagi-live';
     boot();
-
-    // page-curl countdown to the next data refresh (17.00 WIB = 10.00 UTC)
-    const count = document.getElementById('curl-count');
-    if (count) {
-      const tick = () => {
-        const now = new Date();
-        const target = new Date(now);
-        target.setUTCHours(10, 0, 0, 0);
-        if (target.getTime() <= now.getTime()) target.setUTCDate(target.getUTCDate() + 1);
-        const s = Math.floor((target.getTime() - now.getTime()) / 1000);
-        const hh = String(Math.floor(s / 3600)).padStart(2, '0');
-        const mm = String(Math.floor((s % 3600) / 60)).padStart(2, '0');
-        const ss = String(s % 60).padStart(2, '0');
-        count.textContent = `${hh}.${mm}.${ss}`;
-      };
-      tick();
-      setInterval(tick, 1000);
-    }
   </script>
 </Paper>
 
@@ -1423,34 +1404,5 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   .agate b { color: var(--ink); letter-spacing: 0.14em; }
   .kolofon-bawah { font-size: 9.5px; letter-spacing: 0.16em; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
 
-  /* ---------- page curl ---------- */
-  .curl { position: fixed; right: 0; bottom: 0; z-index: 130; width: 64px; height: 64px; overflow: visible; }
-  .curl-fold {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 56px 56px;
-    border-color: transparent transparent var(--card) transparent;
-    filter: drop-shadow(-3px -3px 6px rgba(0, 0, 0, 0.18));
-    transition: border-width 0.45s var(--ease-out);
-  }
-  .curl:hover .curl-fold { border-width: 0 0 96px 96px; }
-  .curl-tip {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    width: max-content;
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    line-height: 1.5;
-    text-align: right;
-    color: var(--muted);
-    opacity: 0;
-    transform: translateX(8px);
-    transition: opacity 0.3s, transform 0.3s var(--ease-out);
-  }
-  .curl:hover .curl-tip { opacity: 1; transform: translate(-44px, -34px); }
+  /* page curl → DaftarIsi island (the corner is navigation now) */
 </style>

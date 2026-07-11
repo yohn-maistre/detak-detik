@@ -219,6 +219,7 @@
         <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tanya apa saja … atau: tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
       </form>
       <div class="term-quick">
+        <span class="term-quick-k mono">PINTASAN</span>
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Wilayah</button>
         <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Eksekutif</button>
@@ -281,29 +282,42 @@
   .term {
     position: absolute;
     left: 0;
-    bottom: calc(100% + 10px);
-    width: min(420px, calc(100vw - 40px));
+    bottom: calc(100% + 12px);
+    width: min(440px, calc(100vw - 40px));
     padding: 0;
-    overflow: hidden;
     --t-bg: #15130e; --t-ink: #ece2cb; --t-muted: #9a917f; --t-accent: #e8500a; --t-accent2: #cdb47a; --t-line: rgba(236, 226, 203, 0.16);
     color: var(--t-ink);
     background-color: var(--t-bg);
-    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--t-ink) 5%, transparent) 0 1px, transparent 1px 4px);
+    background-image: repeating-linear-gradient(0deg, color-mix(in oklab, var(--t-ink) 4%, transparent) 0 1px, transparent 1px 4px);
+    border: 1px solid var(--t-line);
     box-shadow: 0 22px 50px -28px rgba(0, 0, 0, 0.7);
+    transform-origin: bottom left;
+    animation: term-buka 0.28s var(--ease-out);
   }
+  /* the instrument-room corner marks: the terminal is a plated bench meter */
+  .term::before, .term::after {
+    content: '+'; position: absolute; z-index: 1;
+    font-family: var(--font-mono); font-size: 11px; line-height: 1; color: var(--t-muted);
+  }
+  .term::before { top: 0; left: 0; transform: translate(-50%, -50%); }
+  .term::after { bottom: 0; right: 0; transform: translate(50%, 50%); }
+  @keyframes term-buka {
+    from { opacity: 0; transform: translateY(10px) scaleY(0.96); }
+    to { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .term { animation: none; } }
   /* over the dark machine act the terminal matches the pill exactly: the
      mesin --ink (#f2efe6), so both read as the same clean white panel. */
   .term.light {
     --t-bg: #f2efe6; --t-ink: #211b13; --t-muted: #756956; --t-accent: #ad5038; --t-accent2: #8a6a2e; --t-line: rgba(33, 27, 19, 0.16);
   }
-  .term-log p { color: var(--t-ink); }
   .term-head {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    padding: 10px 14px;
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    padding: 11px 16px;
     border-bottom: 1px solid var(--t-line);
     color: var(--t-muted);
   }
@@ -311,12 +325,19 @@
   .term-dots { display: inline-flex; gap: 4px; }
   .term-dots i { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--t-muted); }
   .term-dots i:first-child { background: var(--t-accent); border-color: var(--t-accent); }
-  .term-x { background: none; border: none; cursor: pointer; color: var(--t-muted); }
-  .term-log { max-height: 200px; overflow-y: auto; padding: 12px 14px; font-size: 11.5px; line-height: 1.7; }
-  .term-log .r-in { color: var(--t-accent); }
-  .term-log .r-err { color: var(--t-accent2); font-style: italic; }
-  .term-in { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--t-line); }
-  .term-prompt { color: var(--t-accent); }
+  .term-x { background: none; border: none; cursor: pointer; color: var(--t-muted); padding: 2px 4px; }
+  .term-x:hover { color: var(--t-accent); }
+
+  /* the exchange reads as a ledger: the reader's command is an indented
+     entry with the prompt glyph; the machine answers under a hairline rule */
+  .term-log { max-height: 240px; overflow-y: auto; padding: 14px 16px; font-size: 11.5px; line-height: 1.65; display: grid; gap: 9px; }
+  .term-log p { color: var(--t-ink); margin: 0; max-width: 46ch; }
+  .term-log .r-in { color: var(--t-accent); letter-spacing: 0.04em; margin-top: 4px; }
+  .term-log .r-out { padding-left: 12px; border-left: 1px solid var(--t-line); }
+  .term-log .r-err { color: var(--t-accent2); font-style: italic; padding-left: 12px; border-left: 1px dashed var(--t-line); }
+
+  .term-in { display: flex; gap: 8px; align-items: center; padding: 11px 16px; border-top: 1px solid var(--t-line); background: color-mix(in oklab, var(--t-ink) 4%, transparent); }
+  .term-prompt { color: var(--t-accent); animation: blink 1.2s steps(1) infinite; }
   .term-in input {
     flex: 1;
     background: none;
@@ -326,7 +347,10 @@
     font-size: 12px;
   }
   .term-in input::placeholder { color: var(--t-muted); }
-  .term-quick { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 14px 14px; }
+  .term-in:focus-within { background: color-mix(in oklab, var(--t-ink) 7%, transparent); }
+
+  .term-quick { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding: 10px 16px 14px; }
+  .term-quick-k { flex-basis: 100%; font-size: 8px; letter-spacing: 0.22em; color: var(--t-muted); }
   .term-quick :global(.chip) { color: var(--t-ink); border-color: var(--t-line); background: transparent; }
   .term-quick :global(.chip:hover) { border-color: var(--t-accent); color: var(--t-accent); }
   .term-quick :global(.chip .tick) { color: var(--t-accent); }

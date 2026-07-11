@@ -35,8 +35,12 @@
 </script>
 
 <div class="ro" data-no-stempel>
+  <!-- what this block is, in one plain sentence, before any number -->
+  <p class="ro-baca fig">Empat dokumen tentang arah yang sama: kecepatan kekayaan bertumbuh, ke mana subsidi mengalir, siapa memegang tanah, dan bagaimana aturan diberlakukan. Angka dari sumber di tiap kartu; kesimpulan diserahkan kepada pembaca.</p>
+
   <!-- the live gap, set in type: the size contrast is the chart -->
   <div class="ro-tik" role="group" aria-label={`Sejak 1 Januari: 50 orang terkaya bertambah ${rpSingkat(OLIGARK_PER_HARI * hari)}, pekerja rata-rata ${rpSingkat(PEKERJA_PER_HARI * hari)}`}>
+    <span class="ro-no mono ro-tik-no">DOKUMEN 1 · LAJU KEKAYAAN</span>
     <div class="ro-tik-sisi">
       <span class="ro-tik-lbl mono">50 ORANG TERKAYA · SEJAK 1 JAN</span>
       <span class="ro-tik-val besar num">+&thinsp;{rpSingkat(OLIGARK_PER_HARI * hari)}</span>
@@ -54,6 +58,7 @@
 
   <!-- 1 · the upside-down subsidy -->
   <section class="ro-sec">
+    <span class="ro-no mono">DOKUMEN 2 · SUBSIDI</span>
     <h3 class="ro-h fig">Subsidi yang naik bersama penghasilan</h3>
     <div class="ro-sub">
       <div class="ro-sub-row">
@@ -73,6 +78,7 @@
 
   <!-- 2 · whose land -->
   <section class="ro-sec">
+    <span class="ro-no mono">DOKUMEN 3 · TANAH</span>
     <h3 class="ro-h fig">Tanah perkebunan, seratus petak</h3>
     <div class="ro-waffle" role="img" aria-label={`${TANAH_KORP} dari 100 petak dikuasai korporasi`}>
       {#each Array.from({ length: 100 }) as _, i}
@@ -85,6 +91,7 @@
 
   <!-- 3 · the asymmetric season -->
   <section class="ro-sec">
+    <span class="ro-no mono">DOKUMEN 4 · ATURAN</span>
     <h3 class="ro-h fig">Satu musim, dua perlakuan</h3>
     <div class="ro-asim">
       <div class="ro-asim-col kecil">
@@ -126,6 +133,10 @@
   .ro-tik-pivot .mono { font-size: 7.5px; letter-spacing: 0.16em; color: var(--muted); }
   .ro-tik-foot { grid-column: 1 / -1; font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 8px; margin-top: 4px; }
 
+  .ro-baca { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); line-height: 1.6; max-width: 62ch; }
+  .ro-no { display: block; font-size: 8.5px; letter-spacing: 0.2em; color: var(--accent2); margin-bottom: 8px; }
+  .ro-tik-no { grid-column: 1 / -1; margin-bottom: 0; }
+  .ro-sec { border-top: 1px solid var(--line); padding-top: 16px; }
   .ro-h { font-size: clamp(20px, 2.6vw, 28px); color: var(--ink); margin-bottom: 16px; }
   .ro-cap { font-size: 14.5px; line-height: 1.6; color: var(--muted); margin: 14px 0 12px; max-width: 60ch; }
   .ro-cap b.accent, .accent { color: var(--accent); }

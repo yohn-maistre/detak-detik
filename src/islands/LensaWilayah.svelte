@@ -244,6 +244,7 @@
   {#key d.kode}
     <div class="lw-face">
       {#if !isNas}
+        <p class="lw-crumb mono">INDONESIA › <b>{d.nama.toUpperCase()}</b></p>
         <div class="ld-hero">
           <div class="ld-hero-id">
             <span class="ld-pulau mono">{d.pulau.toUpperCase()}</span>
@@ -267,7 +268,12 @@
           {/each}
         </div>
 
-        {#if kartotekProv && apbd}
+        {#if kartotekProv && apbd && kabView}
+          <!-- while a regency card is open, the province plate folds to one
+               line so only ONE kartotek reads at a time -->
+          <p class="lw-apbd-lipat mono">KARTOTEK APBD PROVINSI TERLIPAT · tutup kartu kabupaten untuk membacanya</p>
+        {/if}
+        {#if kartotekProv && apbd && !kabView}
           <!-- KARTOTEK APBD: how the province spends, from DJPK's own ledger.
                Rows speak the spread's ld-* grammar; position is drawn from rank. -->
           <div class="lw-apbd">
@@ -371,7 +377,10 @@
     {/key}
   {/if}
 
-  <!-- comparative spread: the constant below both faces -->
+  <!-- comparative spread: the constant below both faces, its own instrument -->
+  <div class="ld-spread-head">
+    <span class="eyebrow">PERBANDINGAN NASIONAL · POSISI SETIAP UKURAN DI ANTARA {N} PROVINSI{isNas ? '' : ` · TANDA = ${d.nama.toUpperCase()}`}</span>
+  </div>
   <div class="ld-spread">
     {#each sorot as s, i (s.m.k)}
       <div class="ld-row">
@@ -428,7 +437,11 @@
 
   /* ── the regency filing (P0.4): the clicked kabupaten, nested in its province ──
      subordinate to the province hero by type scale; the share meters are the signature */
-  .lw-kab { margin: 0 0 30px; padding: 14px 0 16px 16px; border-left: 2px solid var(--accent); border-top: 1px solid var(--line-soft); position: relative; }
+  .lw-crumb { font-size: 8.5px; letter-spacing: 0.16em; color: var(--muted); margin-bottom: 10px; }
+  .lw-crumb b { color: var(--accent2); font-weight: 500; }
+  .lw-apbd-lipat { font-size: 9px; letter-spacing: 0.1em; color: var(--muted); border: 1px dashed var(--line); padding: 8px 12px; margin-top: 18px; }
+  .ld-spread-head { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 12px; }
+  .lw-kab { margin: 0 0 30px; padding: 16px 16px 18px; border: 1px solid var(--line); border-left: 2px solid var(--accent); background: color-mix(in oklab, var(--accent2) 4%, transparent); position: relative; }
   @media (prefers-reduced-motion: no-preference) { .lw-kab { animation: lwIn 0.45s var(--ease-out); } }
   .lw-kab-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
   .lw-kab-crumb { font-size: 8.5px; letter-spacing: 0.18em; color: var(--accent); }
@@ -520,7 +533,7 @@
   .ds-n { font-size: 8.5px; letter-spacing: 0.04em; color: var(--muted); }
 
   /* the comparative spread */
-  .ld-spread { display: grid; gap: 26px; border-top: 1px solid var(--line); padding-top: 24px; }
+  .ld-spread { display: grid; gap: 26px; padding-top: 18px; }
   .ld-row { display: grid; grid-template-columns: 1fr auto; column-gap: 16px; row-gap: 10px; align-items: baseline; }
   .ld-row-l { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
   .ld-label { font-family: var(--font-fig); font-style: italic; font-size: clamp(15px, 1.8vw, 19px); color: var(--ink); }

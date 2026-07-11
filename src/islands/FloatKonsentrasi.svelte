@@ -37,6 +37,8 @@
 <section class="fk" class:masuk data-no-stempel data-ref="float" bind:this={root}>
   <figure class="fk-fig">
     <figcaption class="eyebrow">SATU PENGGARIS · FLOAT NYATA EMITEN TERBESAR VS AMBANG MINIMUM TIAP BURSA</figcaption>
+    <p class="fk-baca fig">Cara membaca: balok oranye = porsi saham emiten terbesar yang benar-benar beredar di publik (±3%). Setiap patok bergaris = ambang minimum satu bursa, digambar pada penggaris yang sama.</p>
+    <span class="viz-cap" aria-hidden="true">DATA CONTOH</span>
     <svg viewBox="0 0 {W} {H}" width="100%" role="img"
       aria-label={`Pada emiten terbesar hanya ±${FLOAT}% saham beredar di publik; ambang free float minimum: Singapura 10%, IDX 15% (naik dari 7,5%), Nasdaq 20%, Hong Kong dan India 25%. Data contoh.`}>
       <!-- the ruler -->
@@ -83,7 +85,8 @@
 
 <style>
   .fk { display: grid; gap: 16px; }
-  .fk-fig { margin: 0; display: grid; gap: 12px; }
+  .fk-fig { margin: 0; display: grid; gap: 12px; position: relative; }
+  .fk-baca { font-size: 13.5px; color: var(--muted); max-width: 66ch; line-height: 1.55; }
   svg { display: block; overflow: visible; }
 
   .fk-axis { stroke: var(--ink); stroke-width: 1.5; }

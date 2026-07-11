@@ -31,6 +31,7 @@
 </script>
 
 <div class="pu" data-no-stempel>
+  <span class="viz-cap" aria-hidden="true">DATA CONTOH</span>
   <div class="pu-skala mono">
     <span>1 HARI</span><span>1 BULAN</span><span>1 TAHUN</span><span>10 TAHUN →</span>
   </div>
@@ -54,6 +55,7 @@
 </div>
 
 <style>
+  .pu { position: relative; }
   .pu-skala {
     display: flex; justify-content: space-between;
     font-size: 8.5px; letter-spacing: 0.16em; color: var(--muted);
