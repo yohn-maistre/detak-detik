@@ -14,7 +14,6 @@ import Aksara from '../islands/Aksara.svelte';
 import AlmanakSains from '../islands/AlmanakSains.svelte';
 import RimbaHidup from '../islands/RimbaHidup.svelte';
 import RepublikOligarki from '../islands/RepublikOligarki.svelte';
-import VitalCabang from '../islands/VitalCabang.svelte';
 import GaleriNusantara from '../islands/GaleriNusantara.svelte';
 import WajahNusantara from '../islands/WajahNusantara.svelte';
 import ZonaHayati from '../islands/ZonaHayati.svelte';
@@ -48,6 +47,9 @@ import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, PUTUSAN_HARIAN } from '../lib/data/edisi';
 // aparat record: one owner for the band's 602, the funnel, and these rows
 import { APARAT_ANGGARAN, APARAT_KEKERASAN } from '../lib/data/akuntabilitas';
+// the retired kartu vital's budget-share fact keeps its owner (vital_cabang.json)
+import VITAL_CABANG from '../../newsroom/data/vital_cabang.json';
+const APARAT_PORSI = VITAL_CABANG.find((v) => v.id === 'aparat-anggaran');
 // the buku besar: the SAME registry the newsroom's janji desk audits every
 // edition (single source of truth — see newsroom/sources/janji.py)
 import JANJI from '../../newsroom/data/janji_registry.json';
@@ -334,8 +336,9 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
           <CabangBand cabang="eksekutif" client:visible />
-          <!-- the chapter's vital: read against its documented healthy range -->
-          <VitalCabang id="eksekutif-kabinet" client:visible />
+          <!-- kartu vital retired 2026-07-12 (Yose: one fact family, one
+               surface) — its like-for-like count + receipt live in the band -->
+
 
           <!-- WHAT/WHERE/FOR WHOM: the office's own published record, grown
                twice daily by the keyless setkab harvest (sources/agenda.py) -->
@@ -365,7 +368,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
           <CabangBand cabang="legislatif" client:visible />
-          <VitalCabang id="legislatif-throughput" client:visible />
           <SkorCabang cabang="legislatif" client:visible />
           {pabrik && (
             <div class="bab-lembar" data-rise>
@@ -397,7 +399,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
           <CabangBand cabang="yudikatif" client:visible />
-          <VitalCabang id="yudikatif-recovery" client:visible />
           <SkorCabang cabang="yudikatif" client:visible />
           <div class="bab-lembar" data-rise>
             <h3 class="bab-subjudul display">Hukuman yang Tak Sebanding</h3>
@@ -431,7 +432,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
           <CabangBand cabang="aparat" client:visible />
-          <VitalCabang id="aparat-anggaran" client:visible />
           <SkorCabang cabang="aparat" client:visible />
           <div class="aparat-grid">
             <div class="aparat-col" data-rise>
@@ -439,8 +439,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               {APARAT_ANGGARAN.map((a) => (
                 <div class="aparat-row mono"><span>{a.k}</span><b class="num">{a.v}</b></div>
               ))}
-              <p class="aparat-note">Dua pos terbesar dalam APBN.</p>
-              <button class="chip"><span class="tick">⊙</span>apbn 2026</button>
+              {APARAT_PORSI && (
+                <div class="aparat-row mono"><span>{APARAT_PORSI.metrik}</span><b class="num">{APARAT_PORSI.nilai.toLocaleString('id-ID')}%</b></div>
+              )}
+              <p class="aparat-note">Dua pos terbesar dalam APBN.{APARAT_PORSI ? ` ${APARAT_PORSI.catatan}.` : ''}</p>
+              <button class="chip"><span class="tick">⊙</span>apbn 2026 · {APARAT_PORSI?.band.sumber ?? ''}</button>
             </div>
             <!-- the 602 total is the chapter's signature figure (band above);
                  this column holds the breakdown it alone carries -->
@@ -474,7 +477,6 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </header>
           <CabangBand cabang="daerah" client:visible />
-          <VitalCabang id="daerah-pegawai" client:visible />
           <SkorCabang cabang="daerah" client:visible />
 
           <!-- the chapter's instrument: the morphing region lens, moved here

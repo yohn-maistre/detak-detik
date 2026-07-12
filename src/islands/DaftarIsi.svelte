@@ -61,6 +61,9 @@
   let buka = $state(false);
   let aktif = $state('');
   let hitung = $state('—');
+  // the register under the corner: over the dark act the fold turns paper,
+  // over the light acts it stays ink — always the page's opposite
+  let gelap = $state(false);
   let panelEl: HTMLElement | undefined = $state();
 
   function pergi(id: string) {
@@ -80,6 +83,20 @@
     );
     els.forEach((el) => io.observe(el));
 
+    // which register owns the bottom-right corner: watch a thin band along
+    // the viewport's bottom edge; whichever [data-register] section crosses
+    // it decides the fold's face
+    const regEls = Array.from(document.querySelectorAll<HTMLElement>('[data-register]'));
+    const ioReg = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) gelap = e.target.getAttribute('data-register') === 'mesin';
+        }
+      },
+      { rootMargin: '-92% 0px -2% 0px' },
+    );
+    regEls.forEach((el) => ioReg.observe(el));
+
     // countdown to the next print run (17.00 WIB = 10.00 UTC)
     const tick = () => {
       const now = new Date();
@@ -94,7 +111,7 @@
     };
     tick();
     const t = setInterval(tick, 1000);
-    return () => { io.disconnect(); clearInterval(t); };
+    return () => { io.disconnect(); ioReg.disconnect(); clearInterval(t); };
   });
 
   $effect(() => {
@@ -102,7 +119,7 @@
   });
 </script>
 
-<div class="di">
+<div class="di" class:gelap>
   {#if buka}
     <nav class="di-panel" bind:this={panelEl} aria-label="Daftar isi edisi">
       <header class="di-kepala mono">
@@ -133,40 +150,47 @@
     onclick={() => (buka = !buka)}
   >
     <i class="di-fold" aria-hidden="true"></i>
-    <span class="di-curl-k mono" aria-hidden="true">ISI</span>
+    <span class="di-curl-k mono" aria-hidden="true">DAFTAR ISI</span>
   </button>
 </div>
 
 <svelte:window onkeydown={(e) => { if (e.key === 'Escape' && buka) buka = false; }} />
 
 <style>
-  .di { position: fixed; right: 0; bottom: 0; z-index: 141; }
+  /* the fold's two faces: over light acts an ink corner, over the dark act
+     a paper corner — always the page's opposite, so it reads as the page
+     BEHIND showing through the lifted corner */
+  .di {
+    position: fixed; right: 0; bottom: 0; z-index: 141;
+    --fold: #15130e; --fold-teks: #ece2cb;
+  }
+  .di.gelap { --fold: #ece2cb; --fold-teks: #15130e; }
 
-  /* the folded corner, now a handle: hover deepens the fold like before */
+  /* the folded corner: a lifted page wedge, flush in the true corner */
   .di-curl {
     position: relative;
-    width: 64px; height: 64px;
+    width: 88px; height: 88px;
     background: none; border: none; padding: 0; cursor: pointer;
     overflow: visible;
+    filter: drop-shadow(-4px -4px 10px rgba(0, 0, 0, 0.28));
   }
   .di-fold {
     position: absolute; right: 0; bottom: 0;
     display: block;
-    width: 0; height: 0;
-    border-style: solid;
-    border-width: 0 0 56px 56px;
-    border-color: transparent transparent color-mix(in oklab, var(--ink) 88%, transparent) transparent;
-    filter: drop-shadow(-3px -3px 6px rgba(0, 0, 0, 0.25));
-    transition: border-width 0.25s var(--ease-out);
+    width: 74px; height: 74px;
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    background: linear-gradient(315deg, var(--fold) 55%, color-mix(in oklab, var(--fold) 78%, var(--fold-teks)) 100%);
+    transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out), background 0.4s;
   }
-  .di-curl:hover .di-fold, .di-curl.buka .di-fold { border-width: 0 0 78px 78px; }
+  .di-curl:hover .di-fold, .di-curl.buka .di-fold { width: 88px; height: 88px; }
   .di-curl-k {
-    position: absolute; right: 7px; bottom: 8px;
-    font-size: 8px; letter-spacing: 0.14em; color: var(--bg);
-    opacity: 0; transform: rotate(-45deg);
-    transition: opacity 0.25s;
+    position: absolute; right: -6px; bottom: 24px;
+    width: 74px; text-align: center;
+    font-size: 6.5px; letter-spacing: 0.18em; color: var(--fold-teks);
+    transform: rotate(-45deg);
+    transition: color 0.4s;
+    pointer-events: none;
   }
-  .di-curl:hover .di-curl-k, .di-curl.buka .di-curl-k { opacity: 1; }
 
   /* the unfolded sheet: a dark plated panel, self-themed like the terminal */
   .di-panel {

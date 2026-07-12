@@ -95,6 +95,7 @@
     {/if}
 
     {#if c.side}<p class="cb-side mono">{c.side}</p>{/if}
+    {#if c.sumber}<p class="cb-sumber mono">⊙ {c.sumber}</p>{/if}
   </div>
 </article>
 
@@ -117,6 +118,8 @@
   /* the caption is the big number's label — pull it tight, never floating alone */
   .cb-cap { font-size: 13px; color: var(--muted); max-width: 44ch; line-height: 1.5; margin-top: -6px; }
   .cb-side { font-size: 9px; letter-spacing: 0.16em; color: var(--muted); }
+  /* the signature figure's own receipt (the kartu vital carried it before) */
+  .cb-sumber { font-size: 8px; letter-spacing: 0.08em; line-height: 1.6; color: var(--muted); opacity: 0.85; }
 
   /* isotype dots */
   .cb-dots { display: flex; flex-wrap: wrap; gap: 4px; max-width: 420px; margin: 4px 0; }

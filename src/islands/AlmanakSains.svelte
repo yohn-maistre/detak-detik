@@ -1,14 +1,15 @@
 <script lang="ts">
   /**
-   * Almanak: the atlas's scientific margin — LAMPIRAN V, now a full spread.
-   * Four shelves of the sciences (LANGIT · BUMI · HAYAT · ANGKA) all on one
-   * page, each turning its own leaf by the calendar (deterministic, law 5):
-   * one plate per shelf per edition, computed from published figures or
-   * quoted with a source. A computed sky band rides the header (moon phase +
-   * equatorial day length, always live). Plates that name an article pull its
-   * lead image from id.wikipedia (Lane A: the photo is the article's own; a
-   * dark fetch just leaves the plate text standing). The newsroom's almanak
-   * desk (scaffold) will add recent-research plates once the LLM lane keys in.
+   * Almanak: the atlas's scientific broadsheet — LAMPIRAN V. Not a widget
+   * shelf: a real almanac page. The day's shelf LEADS as the hero plate
+   * (image, full measure, drop cap); beside it the sky column, computed
+   * keylessly (a drawn moon with its true illuminated limb, age, and the
+   * equator's unchanging day); beneath, the other three shelves run as a
+   * ruled index, each turned to its own leaf of the day. Every plate is
+   * computed from published figures or quoted with a source (law:
+   * citation-or-silence); plates that name an article pull its lead image.
+   * Rotation is calendar-deterministic (law 5) at two levels: which shelf
+   * leads, and which plate each shelf shows.
    */
   import { onMount } from 'svelte';
   import ALMANAK from '../../newsroom/data/atlas/almanak.json';
@@ -20,29 +21,32 @@
   const sapiCo2JtTon = Math.round((18_600_000 * 99 * 28) / 1e9);
   const isi = (s: string) => s.replace('{SAPI_CO2}', String(sapiCo2JtTon));
 
-  // one plate per shelf, each rotating independently — the spread reads as
-  // four almanac columns, not a single card that changes
   const SEKSI = ['LANGIT', 'BUMI', 'HAYAT', 'ANGKA'] as const;
+  const SEKSI_LABEL: Record<string, string> = {
+    LANGIT: 'Langit khatulistiwa', BUMI: 'Bumi yang bergerak',
+    HAYAT: 'Hayati kepulauan', ANGKA: 'Aritmetika alam',
+  };
   const rak = SEKSI.map((s) => {
     const list = (ALMANAK as Plat[]).filter((e) => e.seksi === s);
     const i = list.length ? HARI % list.length : 0;
     return { seksi: s, plat: list[i]!, no: i + 1, dari: list.length };
   });
+  // the day's leading shelf; the others follow as the ruled index
+  const utamaIdx = HARI % SEKSI.length;
+  const utama = rak[utamaIdx]!;
+  const lainnya = rak.filter((_, i) => i !== utamaIdx);
 
-  // ── the computed sky band (always live: solstice-free equator) ──
-  const NEW_MOON = Date.UTC(2000, 0, 6, 18, 14); // 2000-01-06 reference new moon
-  const SYN = 29.530588853;
-  const umurBulan = (((Date.now() - NEW_MOON) / 86_400_000) % SYN + SYN) % SYN;
-  const FASE = [
-    'bulan baru', 'sabit muda', 'paruh awal', 'cembung muda', 'purnama',
-    'cembung tua', 'paruh akhir', 'sabit tua',
-  ];
-  const fase = FASE[Math.floor(((umurBulan / SYN) * 8 + 0.5) % 8)]!;
-  const terangBulan = Math.round((1 - Math.cos((umurBulan / SYN) * 2 * Math.PI)) * 50);
+  // ── the computed sky (one owner: src/lib/langit.ts; RimbaHidup hangs
+  //    the SAME moon over its flock — the two can never disagree) ──
+  import { SYN, umurBulan as hitungUmur, faseP, namaFase, terangBulan, jalurTerang } from '../lib/langit';
+  const umurBulan = hitungUmur();
+  const p = faseP(umurBulan);
+  const fase = namaFase(p);
+  const terang = terangBulan(p);
+  const R = 26, C = 30;
+  const jalur = jalurTerang(p, R, C);
 
-  // ── each shelf's plate may carry an image (its article's lead) ──
-  // Action API pageimages at a real width (the REST summary thumb is ~320px,
-  // too soft for the plate); redirects=1 so titles like “Maleo” resolve.
+  // ── plate images: the named article's lead, at a real width ──
   let imgs = $state<Record<string, string>>({});
   onMount(() => {
     for (const r of rak) {
@@ -59,43 +63,76 @@
       })();
     }
   });
-
-  const SEKSI_LABEL: Record<string, string> = {
-    LANGIT: 'Langit khatulistiwa', BUMI: 'Bumi yang bergerak',
-    HAYAT: 'Hayati kepulauan', ANGKA: 'Aritmetika alam',
-  };
 </script>
 
 <section class="alm" data-rise data-no-stempel aria-label="Almanak sains harian">
-  <header class="alm-head">
-    <span class="alm-kicker mono">ALMANAK · EMPAT RAK PENGETAHUAN · BERGANTI TIAP TERBIT</span>
-    <div class="alm-langit mono" aria-label="Keadaan langit hari ini">
-      <span class="alm-moon" aria-hidden="true" style={`--t:${terangBulan}%`}></span>
-      <span>☾ {fase.toUpperCase()} · TERANG {terangBulan}% · UMUR {umurBulan.toFixed(1)} HARI</span>
-      <span class="alm-sep">·</span>
-      <span>SIANG KHATULISTIWA ±12 JAM SEPANJANG TAHUN</span>
-    </div>
+  <header class="alm-head mono">
+    <span class="alm-kicker">ALMANAK · EMPAT RAK PENGETAHUAN · BERGANTI TIAP TERBIT</span>
+    <span class="alm-edisi">RAK UTAMA HARI INI · {utama.seksi}</span>
   </header>
 
+  <!-- ── the broadsheet: hero plate + the sky column ── -->
+  <div class="alm-utama">
+    <article class="alm-hero" data-seksi={utama.seksi}>
+      <div class="alm-hero-head mono">
+        <span class="alm-seksi-tag">{utama.seksi}</span>
+        <span class="alm-seksi-nama">{SEKSI_LABEL[utama.seksi]}</span>
+        <span class="alm-plat-no">PLAT {utama.no}/{utama.dari}</span>
+      </div>
+      {#if imgs[utama.seksi]}
+        <figure class="alm-hero-img">
+          <img src={imgs[utama.seksi]} alt={utama.plat.wikipedia} loading="lazy" />
+          <figcaption class="mono">GAMBAR DARI ARTIKELNYA DI ID.WIKIPEDIA · {utama.plat.wikipedia?.toUpperCase()}</figcaption>
+        </figure>
+      {/if}
+      <h3 class="alm-hero-judul display">{utama.plat.judul}</h3>
+      <p class="alm-hero-teks" class:tanpa-img={!imgs[utama.seksi]}>{isi(utama.plat.teks)}</p>
+      <p class="alm-rumus mono">⊙ {utama.plat.rumus}</p>
+      <div class="alm-chips">
+        {#each utama.plat.chips as c (c)}<span class="chip" data-no-link>{c}</span>{/each}
+      </div>
+    </article>
+
+    <aside class="alm-langit" aria-label="Keadaan langit, dihitung">
+      <span class="alm-langit-k mono">LANGIT MALAM INI · DIHITUNG, BUKAN DIKUTIP</span>
+      <div class="alm-bulan">
+        <svg viewBox="0 0 60 60" width="92" height="92" role="img" aria-label={`Fase bulan: ${fase}, terang ${terang} persen`}>
+          <circle cx={C} cy={C} r={R} class="alm-bulan-gelap" />
+          <path d={jalur} class="alm-bulan-terang" />
+          <circle cx={C} cy={C} r={R} class="alm-bulan-rim" />
+        </svg>
+        <div class="alm-bulan-teks">
+          <b class="alm-fase fig">{fase}</b>
+          <span class="mono">TERANG {terang}% · UMUR {umurBulan.toFixed(1)} HARI</span>
+          <span class="mono">SIKLUS SINODIS 29,53 HARI</span>
+        </div>
+      </div>
+      <dl class="alm-langit-baris mono">
+        <div><dt>SIANG KHATULISTIWA</dt><dd>±12 JAM, SEPANJANG TAHUN</dd></div>
+        <div><dt>PURNAMA BERIKUT</dt><dd>±{Math.ceil((p < 0.5 ? 0.5 - p : 1.5 - p) * SYN)} HARI LAGI</dd></div>
+        <div><dt>BULAN BARU BERIKUT</dt><dd>±{Math.ceil((1 - p) * SYN)} HARI LAGI</dd></div>
+      </dl>
+      <span class="alm-langit-cat mono">HITUNGAN FASE DARI BULAN BARU RUJUKAN 6 JAN 2000 · MEKANIKA FALAK</span>
+    </aside>
+  </div>
+
+  <!-- ── the other shelves: a ruled index, each on its own leaf ── -->
   <div class="alm-rak">
-    {#each rak as r (r.seksi)}
-      <article class="alm-plat" data-seksi={r.seksi}>
-        <div class="alm-plat-head mono">
-          <span class="alm-plat-seksi">{r.seksi}</span>
-          <span class="alm-plat-nama">{SEKSI_LABEL[r.seksi]}</span>
+    {#each lainnya as r (r.seksi)}
+      <article class="alm-row" data-seksi={r.seksi}>
+        <div class="alm-row-tag mono">
+          <span class="alm-seksi-tag">{r.seksi}</span>
+          <span class="alm-row-nama">{SEKSI_LABEL[r.seksi]}</span>
           <span class="alm-plat-no">PLAT {r.no}/{r.dari}</span>
         </div>
-        {#if imgs[r.seksi]}
-          <figure class="alm-plat-img">
-            <img src={imgs[r.seksi]} alt={r.plat.wikipedia} loading="lazy" />
-          </figure>
-        {/if}
-        <h4 class="alm-plat-judul fig">{r.plat.judul}</h4>
-        <p class="alm-plat-teks">{isi(r.plat.teks)}</p>
-        <p class="alm-plat-rumus mono">⊙ {r.plat.rumus}</p>
-        <div class="alm-plat-chips">
-          {#each r.plat.chips as c (c)}<span class="chip" data-no-link>{c}</span>{/each}
+        <div class="alm-row-isi">
+          <h4 class="alm-row-judul fig">{r.plat.judul}</h4>
+          <p class="alm-row-teks">{isi(r.plat.teks)}</p>
+          <p class="alm-rumus mono">⊙ {r.plat.rumus} · {r.plat.chips.join(' · ')}</p>
         </div>
+        {#if imgs[r.seksi]}
+          <div class="alm-row-img"><img src={imgs[r.seksi]} alt={r.plat.wikipedia} loading="lazy" /></div>
+        {/if}
       </article>
     {/each}
   </div>
@@ -104,51 +141,75 @@
 </section>
 
 <style>
-  .alm { border-top: 2px solid var(--line); padding-top: 18px; background: none; }
-
-  .alm-head { display: grid; gap: 10px; padding-bottom: 20px; border-bottom: 1px solid var(--line-soft); }
+  .alm { border-top: 2px solid var(--line); padding-top: 16px; }
+  .alm-head { display: flex; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; padding-bottom: 18px; border-bottom: 1px solid var(--line-soft); }
   .alm-kicker { font-size: 9px; letter-spacing: 0.22em; color: var(--accent); }
-  .alm-langit {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
-    font-size: 9.5px; letter-spacing: 0.12em; color: var(--accent2);
-  }
-  .alm-sep { color: var(--muted); }
-  /* a tiny inked moon that fills to the computed illumination */
-  .alm-moon {
-    width: 13px; height: 13px; border-radius: 50%; flex: none;
-    border: 1px solid var(--accent2);
-    background: linear-gradient(90deg, var(--accent2) var(--t), transparent var(--t));
-  }
+  .alm-edisi { font-size: 9px; letter-spacing: 0.18em; color: var(--muted); }
 
-  /* the spread: four columns of the sciences, generous gutters */
-  .alm-rak {
-    display: grid; grid-template-columns: repeat(2, 1fr);
-    gap: clamp(24px, 4vw, 48px) clamp(28px, 5vw, 64px);
-    margin-top: clamp(24px, 4vw, 40px);
+  /* ── the broadsheet spread ── */
+  .alm-utama {
+    display: grid; grid-template-columns: 1.35fr 0.65fr;
+    gap: clamp(26px, 5vw, 64px);
+    padding: clamp(24px, 4vw, 40px) 0 clamp(24px, 4vw, 40px);
+    align-items: start;
   }
-  @media (max-width: 720px) { .alm-rak { grid-template-columns: 1fr; gap: 34px; } }
+  @media (max-width: 820px) { .alm-utama { grid-template-columns: 1fr; } }
 
-  .alm-plat { display: grid; gap: 9px; align-content: start; }
-  .alm-plat-head {
-    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
-    border-bottom: 2px solid var(--line); padding-bottom: 7px;
-  }
-  .alm-plat-seksi { font-size: 9px; letter-spacing: 0.2em; font-weight: 700; }
-  .alm-plat[data-seksi="LANGIT"] .alm-plat-seksi { color: var(--accent2); }
-  .alm-plat[data-seksi="BUMI"] .alm-plat-seksi { color: var(--accent); }
-  .alm-plat[data-seksi="HAYAT"] .alm-plat-seksi { color: var(--accent2); }
-  .alm-plat[data-seksi="ANGKA"] .alm-plat-seksi { color: var(--accent); }
-  .alm-plat-nama { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); font-style: italic; margin-right: auto; }
+  .alm-hero { display: grid; gap: 12px; }
+  .alm-hero-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .alm-seksi-tag { font-size: 9.5px; letter-spacing: 0.22em; font-weight: 700; color: var(--accent); }
+  [data-seksi="LANGIT"] .alm-seksi-tag, [data-seksi="HAYAT"] .alm-seksi-tag { color: var(--accent2); }
+  .alm-seksi-nama { font-size: 9px; letter-spacing: 0.12em; color: var(--muted); font-style: italic; margin-right: auto; }
   .alm-plat-no { font-size: 8px; letter-spacing: 0.14em; color: var(--muted); }
+  .alm-hero-img { margin: 2px 0 0; display: grid; gap: 6px; }
+  .alm-hero-img img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; border: 1px solid var(--line); background: #ece1c9; filter: saturate(0.94); }
+  .alm-hero-img figcaption { font-size: 7.5px; letter-spacing: 0.14em; color: var(--muted); }
+  .alm-hero-judul { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.02; color: var(--ink); }
+  .alm-hero-teks { font-size: clamp(14.5px, 1.7vw, 16.5px); line-height: 1.66; color: var(--ink); max-width: 64ch; }
+  /* when the plate runs unillustrated, the writing opens with a drop cap */
+  .alm-hero-teks.tanpa-img::first-letter {
+    font-family: 'Fraunces Variable', serif; font-weight: 340;
+    font-size: 3em; line-height: 0.8; float: left;
+    padding: 3px 8px 0 0; color: var(--accent);
+  }
+  .alm-rumus { font-size: 8.5px; letter-spacing: 0.1em; color: var(--accent2); line-height: 1.6; }
+  .alm-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .alm-chips .chip { cursor: default; font-size: 8px; padding: 3px 7px; }
 
-  .alm-plat-img { margin: 4px 0 2px; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line); background: #ece1c9; }
-  .alm-plat-img img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.94); }
+  /* ── the sky column ── */
+  .alm-langit { display: grid; gap: 14px; align-content: start; border-left: 1px solid var(--line-soft); padding-left: clamp(18px, 3vw, 32px); }
+  @media (max-width: 820px) { .alm-langit { border-left: none; padding-left: 0; border-top: 1px solid var(--line-soft); padding-top: 18px; } }
+  .alm-langit-k { font-size: 8.5px; letter-spacing: 0.2em; color: var(--accent2); }
+  .alm-bulan { display: flex; gap: 16px; align-items: center; }
+  .alm-bulan-gelap { fill: color-mix(in oklab, var(--ink) 14%, transparent); }
+  .alm-bulan-terang { fill: var(--ink); }
+  .alm-bulan-rim { fill: none; stroke: var(--ink); stroke-width: 0.8; opacity: 0.55; }
+  .alm-bulan-teks { display: grid; gap: 4px; }
+  .alm-fase { font-size: clamp(19px, 2.2vw, 24px); color: var(--ink); text-transform: capitalize; }
+  .alm-bulan-teks .mono { font-size: 8px; letter-spacing: 0.14em; color: var(--muted); }
+  .alm-langit-baris { display: grid; gap: 8px; border-top: 1px solid var(--line-soft); padding-top: 12px; margin: 0; }
+  .alm-langit-baris div { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .alm-langit-baris dt { font-size: 7.5px; letter-spacing: 0.14em; color: var(--muted); }
+  .alm-langit-baris dd { font-size: 8.5px; letter-spacing: 0.08em; color: var(--ink); margin: 0; text-align: right; }
+  .alm-langit-cat { font-size: 7px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); opacity: 0.85; }
 
-  .alm-plat-judul { font-size: clamp(20px, 2.4vw, 27px); color: var(--ink); line-height: 1.08; margin-top: 2px; }
-  .alm-plat-teks { font-size: 14px; line-height: 1.64; color: var(--ink); }
-  .alm-plat-rumus { font-size: 8.5px; letter-spacing: 0.1em; color: var(--accent2); line-height: 1.6; margin-top: 2px; }
-  .alm-plat-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-  .alm-plat-chips .chip { cursor: default; font-size: 8px; padding: 3px 7px; }
+  /* ── the ruled index of the other shelves ── */
+  .alm-rak { display: grid; border-top: 2px solid var(--line); }
+  .alm-row {
+    display: grid; grid-template-columns: 170px 1fr 150px; gap: clamp(16px, 3vw, 36px);
+    align-items: start; padding: clamp(18px, 2.6vw, 26px) 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .alm-row:last-child { border-bottom: none; }
+  @media (max-width: 720px) { .alm-row { grid-template-columns: 1fr; gap: 10px; } }
+  .alm-row-tag { display: grid; gap: 4px; align-content: start; }
+  .alm-row-nama { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); font-style: italic; }
+  .alm-row-isi { display: grid; gap: 7px; min-width: 0; }
+  .alm-row-judul { font-size: clamp(18px, 2.2vw, 24px); color: var(--ink); line-height: 1.1; }
+  .alm-row-teks { font-size: 13.5px; line-height: 1.62; color: var(--ink); max-width: 66ch; }
+  .alm-row-img { overflow: hidden; border: 1px solid var(--line); background: #ece1c9; }
+  .alm-row-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: saturate(0.94); }
+  @media (max-width: 720px) { .alm-row-img { max-width: 240px; } }
 
-  .alm-foot { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 12px; margin-top: clamp(20px, 3vw, 32px); }
+  .alm-foot { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 12px; margin-top: 4px; }
 </style>

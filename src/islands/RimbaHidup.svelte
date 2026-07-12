@@ -1,20 +1,24 @@
 <script lang="ts">
   /**
-   * Rimba Hidup v2: the living understory that closes Act III. A seeded
-   * flock of ink-stroke birds drifts and flocks (Reynolds boids); an
-   * alignment pulse makes them synchronise into murmuration waves, the way
-   * Apis dorsata bees shimmer, then scatter back to noise. Order out of
-   * chaos — drawn straight on the act's paper, not on its own panel.
+   * Rimba Hidup v3: the living understory that closes Act III. A seeded
+   * flock of ink birds drifts and flocks (Reynolds boids); an alignment
+   * pulse makes them synchronise into murmuration waves, then scatter back
+   * to noise. Order out of chaos, drawn straight on the act's paper.
    *
-   * v2 fixes (2026-07-12): physics is TIME-normalized (the old build moved
-   * per-frame, so 144 Hz laptops raced and throttled phones crawled); the
-   * flock size scales with viewport area and self-culls if frames run slow;
-   * the canvas is transparent over the register's paper + hatch (the flat
-   * #ece2cb slab is gone); trails out, calligraphic strokes in.
+   * v3 (2026-07-12): the marks become BIRDS — two swept wing strokes that
+   * flap on their own phase (rate follows speed) and glide between beats;
+   * the periodic random kick becomes a HAWK crossing the field that flushes
+   * the flock; the shared coastline field (lib/nusantara, the same seed the
+   * Tugu canvas uses) prints a distant archipelago on the horizon; and the
+   * computed moon (lib/langit — the SAME arithmetic the Almanak prints)
+   * hangs above it. Physics stays time-normalized; the flock scales with
+   * area and self-culls under ~30fps. No data claims, only motion.
    */
   import { onMount } from 'svelte';
   import { reducedMotion } from '../lib/motion';
   import { rngFrom } from '../lib/seed';
+  import { field, GRID_COLS } from '../lib/nusantara';
+  import { faseP, jalurTerang } from '../lib/langit';
 
   let canvas: HTMLCanvasElement;
   let wrap: HTMLElement;
@@ -32,8 +36,19 @@
     let ink = '#15130e';
     let accent = '#e44a06';
 
-    type B = { x: number; y: number; vx: number; vy: number; m: boolean };
+    // the moon: same phase arithmetic the Almanak prints (one owner)
+    const MOON_R = 15;
+    const moonLit = new Path2D(jalurTerang(faseP(), MOON_R, MOON_R));
+
+    type B = {
+      x: number; y: number; vx: number; vy: number;
+      m: boolean;   // the accented few
+      s: number;    // depth: size + ink weight
+      ph: number;   // wing phase
+      gl: number;   // glide seconds remaining
+    };
     let flock: B[] = [];
+    const hawk = { on: false, x: 0, y: 0, vx: 0, vy: 0, ph: 0 };
 
     function resize() {
       const r = wrap.getBoundingClientRect();
@@ -48,8 +63,7 @@
       ink = css.getPropertyValue('--ink').trim() || ink;
       accent = css.getPropertyValue('--accent').trim() || accent;
       if (!flock.length && W > 0) {
-        // flock size follows the paper's area, not a flat count: a phone
-        // seats ~45 birds, a wide desktop ~110
+        // flock size follows the paper's area: a phone seats ~45, a wide desktop ~110
         const N = Math.round(Math.min(110, Math.max(42, (W * H) / 3400)));
         flock = Array.from({ length: N }, () => ({
           x: rng() * W,
@@ -57,49 +71,118 @@
           vx: (rng() - 0.5) * 1.6,
           vy: (rng() - 0.5) * 1.6,
           m: rng() < 0.1,
+          s: 0.65 + rng() * 0.75,
+          ph: rng() * Math.PI * 2,
+          gl: 0,
         }));
       }
     }
 
     const R2 = 40 * 40;
     const SEP2 = 16 * 16;
+    const HAWK2 = 110 * 110;
     const MAXV = 1.5; // px per 60fps-frame — dtn converts to real time
     const MINV = 0.5;
 
-    function draw(b: B) {
-      // a calligraphic stroke along the flight line, not a pixel block
-      const sp = Math.hypot(b.vx, b.vy) || 1;
-      const ux = b.vx / sp, uy = b.vy / sp;
-      const len = 2.6 + sp * 2.2;
-      ctx!.strokeStyle = b.m ? accent : ink;
-      ctx!.globalAlpha = b.m ? 0.72 : 0.5;
-      ctx!.lineWidth = 1.1;
+    /** one bird: two swept wing strokes meeting at the body; the flap
+        narrows the apparent span, a glide holds the wings open */
+    function drawBird(x: number, y: number, vx: number, vy: number, s: number, fw: number, warna: string, alpha: number) {
+      const sp = Math.hypot(vx, vy) || 1;
+      const ux = vx / sp, uy = vy / sp;
+      const px = -uy, py = ux;
+      const span = 3.1 * s * (0.45 + 0.55 * fw);
+      const back = 1.05 * s;
+      const tlx = x - ux * back + px * span, tly = y - uy * back + py * span;
+      const trx = x - ux * back - px * span, trY = y - uy * back - py * span;
+      const cx = x + ux * 1.15 * s, cy = y + uy * 1.15 * s;
+      ctx!.strokeStyle = warna;
+      ctx!.globalAlpha = alpha;
+      ctx!.lineWidth = Math.max(0.8, 1.05 * s);
+      ctx!.lineCap = 'round';
       ctx!.beginPath();
-      ctx!.moveTo(b.x - ux * len, b.y - uy * len);
-      ctx!.lineTo(b.x + ux * len * 0.6, b.y + uy * len * 0.6);
+      ctx!.moveTo(tlx, tly);
+      ctx!.quadraticCurveTo(cx, cy, x, y);
+      ctx!.quadraticCurveTo(cx, cy, trx, trY);
       ctx!.stroke();
+      ctx!.globalAlpha = 1;
+    }
+
+    /** the stage: a distant archipelago on the horizon (the shared coastline
+        field — the same seed the Tugu canvas grows from) + the computed moon */
+    function drawStage() {
+      const hy = H * 0.82;
+      ctx!.fillStyle = ink;
+      ctx!.globalAlpha = 0.13;
+      for (let i = 0; i < W; i += 3) {
+        const gx = ((i / W) * GRID_COLS);
+        if (field(gx, 30) > 0.45) ctx!.fillRect(i, hy, 2, 1.2);
+        if (field(gx, 34) > 0.5) ctx!.fillRect(i, hy + 4, 2, 1);
+      }
+      ctx!.globalAlpha = 1;
+      // the moon, top-right, lit exactly as tonight's phase
+      ctx!.save();
+      ctx!.translate(W - 84, 30);
+      ctx!.fillStyle = ink;
+      ctx!.globalAlpha = 0.1;
+      ctx!.beginPath();
+      ctx!.arc(MOON_R, MOON_R, MOON_R, 0, Math.PI * 2);
+      ctx!.fill();
+      ctx!.globalAlpha = 0.42;
+      ctx!.fill(moonLit);
+      ctx!.globalAlpha = 0.3;
+      ctx!.strokeStyle = ink;
+      ctx!.lineWidth = 0.7;
+      ctx!.beginPath();
+      ctx!.arc(MOON_R, MOON_R, MOON_R, 0, Math.PI * 2);
+      ctx!.stroke();
+      ctx!.restore();
       ctx!.globalAlpha = 1;
     }
 
     let last = 0;
     let emaDt = 16.7;
     let frames = 0;
+    let hawkTimer = 9; // seconds until the first crossing
 
     function step(now: number) {
       const dt = last ? Math.min(64, now - last) : 16.7;
       last = now;
-      // time-normalized step: 1.0 at 60 Hz, ~0.42 at 144 Hz, ~2 on a
-      // struggling phone — the flock covers the same ground everywhere
+      // time-normalized: 1.0 at 60 Hz — the flock covers the same ground everywhere
       const dtn = Math.max(0.25, Math.min(3, dt / 16.667));
+      const dts = dt / 1000;
       emaDt = emaDt * 0.95 + dt * 0.05;
-      // self-culling: if the device can't hold ~30fps, thin the flock
       if (++frames % 90 === 0 && emaDt > 32 && flock.length > 40) {
         flock = flock.slice(0, Math.round(flock.length * 0.86));
       }
 
-      t += dt / 1000;
+      t += dts;
       const align = 0.04 + 0.06 * (0.5 + 0.5 * Math.sin(t * 0.5)); // the shimmer
       ctx!.clearRect(0, 0, W, H);
+      drawStage();
+
+      // the hawk: enters on a timer, crosses, flushes whatever it nears
+      hawkTimer -= dts;
+      if (!hawk.on && hawkTimer <= 0) {
+        const dari = rng() < 0.5 ? -1 : 1;
+        hawk.on = true;
+        hawk.x = dari < 0 ? -20 : W + 20;
+        hawk.y = H * (0.2 + rng() * 0.5);
+        hawk.vx = -dari * (2.6 + rng() * 1.2);
+        hawk.vy = (rng() - 0.5) * 0.5;
+        hawk.ph = 0;
+      }
+      if (hawk.on) {
+        hawk.x += hawk.vx * dtn;
+        hawk.y += hawk.vy * dtn;
+        hawk.ph += 2.2 * Math.PI * dts; // slow, heavy beats
+        const fw = 0.4 + 0.6 * (0.5 + 0.5 * Math.sin(hawk.ph));
+        drawBird(hawk.x, hawk.y, hawk.vx, hawk.vy, 2.3, fw, accent, 0.8);
+        if (hawk.x < -30 || hawk.x > W + 30) {
+          hawk.on = false;
+          hawkTimer = 11 + rng() * 7;
+        }
+      }
+
       for (const b of flock) {
         let cx = 0, cy = 0, ax = 0, ay = 0, sx = 0, sy = 0, n = 0;
         for (const o of flock) {
@@ -114,6 +197,15 @@
           b.vx += ((cx / n - b.x) * 0.0009 + (ax / n - b.vx) * align + sx * 0.9) * dtn;
           b.vy += ((cy / n - b.y) * 0.0009 + (ay / n - b.vy) * align + sy * 0.9) * dtn;
         }
+        // the hawk empties the sky around itself
+        if (hawk.on) {
+          const dx = b.x - hawk.x, dy = b.y - hawk.y, d2 = dx * dx + dy * dy;
+          if (d2 < HAWK2 && d2 > 1) {
+            const f = 5.4 / Math.sqrt(d2);
+            b.vx += dx * f * 0.06 * dtn;
+            b.vy += dy * f * 0.06 * dtn;
+          }
+        }
         b.vx += (rng() - 0.5) * 0.06 * dtn;
         b.vy += (rng() - 0.5) * 0.06 * dtn;
         const sp = Math.hypot(b.vx, b.vy) || 1;
@@ -124,7 +216,13 @@
         b.y += b.vy * dtn;
         if (b.x < -6) b.x = W + 6; else if (b.x > W + 6) b.x = -6;
         if (b.y < -6) b.y = H + 6; else if (b.y > H + 6) b.y = -6;
-        draw(b);
+
+        // wings: flap rate follows speed; now and then a bird locks a glide
+        if (b.gl > 0) b.gl -= dts;
+        else if (rng() < 0.0025 * dtn) b.gl = 0.5 + rng() * 1.1;
+        b.ph += (4 + cl * 2.5) * Math.PI * 2 * 0.75 * dts;
+        const fw = b.gl > 0 ? 0.92 : 0.3 + 0.7 * (0.5 + 0.5 * Math.sin(b.ph));
+        drawBird(b.x, b.y, b.vx, b.vy, b.s, fw, b.m ? accent : ink, 0.3 + 0.3 * b.s);
       }
       raf = requestAnimationFrame(step);
     }
@@ -138,21 +236,16 @@
 
     let io: IntersectionObserver | undefined;
     if (reducedMotion()) {
+      // one still frame: the stage and the flock mid-glide
       ctx.clearRect(0, 0, W, H);
-      for (const b of flock) draw(b); // one still frame of the flock
+      drawStage();
+      for (const b of flock) drawBird(b.x, b.y, b.vx, b.vy, b.s, 0.85, b.m ? accent : ink, 0.3 + 0.3 * b.s);
     } else {
       io = new IntersectionObserver(([e]) => (e!.isIntersecting ? start() : stop()), { threshold: 0 });
       io.observe(wrap);
     }
 
-    // once in a while, a random impulse scatters the flock before it re-coheres
-    const burstIv = window.setInterval(() => {
-      if (!running) return;
-      const kick = 2.2 + rng() * 1.4;
-      for (const b of flock) { b.vx += (rng() - 0.5) * kick; b.vy += (rng() - 0.5) * kick; }
-    }, 11_000);
-
-    return () => { stop(); ro.disconnect(); io?.disconnect(); clearInterval(burstIv); };
+    return () => { stop(); ro.disconnect(); io?.disconnect(); };
   });
 </script>
 
@@ -161,7 +254,7 @@
   <div class="rimba-kepala mono" aria-hidden="true">
     <span class="rimba-eyebrow">RIMBA HIDUP · YANG TETAP BERGERAK</span>
   </div>
-  <p class="rimba-cap mono">PLAT PENUTUP · SIMULASI KAWANAN (REYNOLDS, 1987) · BENIH TETAP SATU EDISI — TANPA DATA, HANYA GERAK</p>
+  <p class="rimba-cap mono">PLAT PENUTUP · KAWANAN (BOIDS — REYNOLDS, 1987), SEEKOR ELANG LEWAT SESEKALI · BULAN MENGIKUTI FASE MALAM INI · GARIS PANTAI DARI BENIH EDISI</p>
 </section>
 
 <style>

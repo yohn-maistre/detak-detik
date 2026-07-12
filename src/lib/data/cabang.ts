@@ -47,6 +47,10 @@ export interface Cabang {
   bigAccent?: boolean;
   cap?: string;
   side?: string;
+  /** the band's printed receipt — with the kartu vital retired (2026-07-12,
+   *  Yose's call: one fact family, one surface) the signature figure carries
+   *  its own source line; citation-or-silence */
+  sumber?: string;
   viz: CabangViz;
 }
 
@@ -92,7 +96,10 @@ export const CABANG: Cabang[] = [
     ringkas: 'Presiden dan kabinet terbesar sejak 1966.',
     apa: `Presiden, ${KABINET.menteri} menteri, ${KABINET.wamen} wakil menteri, dan badan seperti Danantara dan Badan Pengarah Papua.`,
     big: String(KABINET.total),
-    cap: 'pejabat kabinet, terbanyak sejak 1966',
+    // the retired kartu vital's insight folds into the caption: the like-for-
+    // like count (menteri & setingkat, tanpa wamen) against the 2014 cabinet
+    cap: `pejabat kabinet, terbanyak sejak 1966 — menteri & pejabat setingkat: ${vital('eksekutif-kabinet')?.nilai ?? 48}, kabinet 2014: ${vital('eksekutif-kabinet')?.dulu?.nilai ?? 34}`,
+    sumber: vital('eksekutif-kabinet')?.sumber,
     // one mark per pejabat is KabinetWaffle's job below — the band keeps
     // only the anchor numeral (satu angka satu pemilik)
     viz: { type: 'none' },
@@ -105,7 +112,8 @@ export const CABANG: Cabang[] = [
     ringkas: 'Rentang waktu pengesahan undang-undang.',
     apa: 'DPR 580 kursi dan DPD: menyusun undang-undang dan anggaran negara.',
     big: `${tahunPA}+ tahun`,
-    cap: 'RUU Perampasan Aset menunggu pengesahan; Revisi UU Polri selesai dalam 20 hari. Rentang selengkapnya digambar Pabrik Undang-Undang di bawah.',
+    cap: `RUU Perampasan Aset menunggu pengesahan; Revisi UU Polri selesai dalam 20 hari — dan dari target Prolegnas 52 RUU pada 2025, ${vital('legislatif-throughput')?.nilai ?? 9} disahkan. Rentang selengkapnya digambar Pabrik Undang-Undang di bawah.`,
+    sumber: vital('legislatif-throughput')?.sumber,
     // the duration comparison is PabrikUU's chart — the band held a two-row
     // copy of the same bars; it now keeps only the stalled-bill anchor
     viz: { type: 'none' },
@@ -118,8 +126,9 @@ export const CABANG: Cabang[] = [
     ringkas: 'Porsi kerugian korupsi yang kembali ke kas negara.',
     apa: 'Mahkamah Agung, Mahkamah Konstitusi, dan KPK: menafsir hukum dan mengadili.',
     big: `${kembaliStr}%`,
-    cap: 'dari kerugian korupsi dalam vonis 2024 yang kembali ke kas negara',
+    cap: `dari kerugian korupsi dalam vonis 2024 yang kembali ke kas negara — ${vital('yudikatif-recovery')?.catatan ?? ''}`,
     side: `±${hilangStr}% TIDAK PERNAH KEMBALI`,
+    sumber: vital('yudikatif-recovery')?.sumber,
     viz: { type: 'prop', w: `${KEMBALI}%`, cls: 'kembali' },
   },
   {
@@ -133,6 +142,7 @@ export const CABANG: Cabang[] = [
     bigAccent: true,
     cap: `insiden kekerasan polisi setahun, ${APARAT_KEKERASAN.tewas} di antaranya berujung kematian`,
     side: 'SEBAGIAN BESAR BERAKHIR DI SIDANG ETIK, BUKAN PIDANA',
+    sumber: `${APARAT_KEKERASAN.sumber} · imparsial`,
     viz: { type: 'prop', w: `${ETIK_PCT}%`, cls: 'etik' },
   },
   {
@@ -144,6 +154,7 @@ export const CABANG: Cabang[] = [
     apa: '38 provinsi, ratusan pemda, plus otonomi khusus Aceh dan Papua.',
     big: `${kali}×`,
     cap: 'selisih peluang lahir miskin antara provinsi terendah dan tertinggi',
+    sumber: 'tabel provinsi edisi ini (bps susenas) · (data contoh)',
     viz: {
       type: 'range',
       lo: `${pendekkan(terkaya.nama)} ${pct(terkaya.v)}`,

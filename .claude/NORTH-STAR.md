@@ -578,7 +578,11 @@ kept for the record.
    linkable without it.
 5. **BPS WebAPI key + NFA Panel Harga account** (both free; NFA has manual
    approval lag). Unlocks: live IPM/kemiskinan in Lensa + live Harga
-   Pangan (retires that contoh label).
+   Pangan (retires that contoh label). 2026-07-12: also the key for the
+   planned PANTAU lane 4 **fiskal** (Yose asked "is daerah live?" — KAS
+   DAERAH is real DJPK realisasi 2024 but baked; a fiskal lane = BPS
+   WebAPI series + DJPK postur harvested on cron, same pattern as
+   agenda/lembaran/suara).
 5b. **ISB LKPP registration** (free account at isb.lkpp.go.id, wave 10
    probe) — unlocks the procurement open-data JSON (paket, pagu, satker):
    the PANTAU lane for "where the money goes", strictly documents-speak.
@@ -1597,6 +1601,42 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
   motion audit, PetaKabar chrome sub-wave, shader spots 2–3, SUARA v2b.
 
 ## 14. Session log (running, newest first)
+
+### 2026-07-12 · WAVE 5 — dedupe by decision + broadsheet almanak + birds + fold
+
+Yose's screenshot round after wave 4. Decisions and work, all verified by
+build + playwright shots on the production preview:
+
+- **KARTU VITAL RETIRED** (Yose chose via question: "one fact family, one
+  surface"). `VitalCabang.svelte` deleted; the five mounts removed. The
+  band (CabangBand) now carries its own `⊙ sumber` receipt line
+  (citation-or-silence: the kartu had been the only receipt for 109/4,84%/
+  602). Unique facts migrated: eksekutif cap gains the like-for-like
+  menteri count (48 vs 34 in 2014); legislatif cap gains 9-of-52 Prolegnas
+  2025; yudikatif cap gains the Rp16,9 T / Rp330,9 T detail; aparat's
+  8,7% budget share moved into the ANGGARAN 2026 column with its riwayat
+  band; daerah's rerata dropped (the 546-pemda beeswarm owns that fact).
+  `vital_cabang.json` STAYS — it is the data owner cabang.ts derives from.
+- **Almanak v3, broadsheet**: the day's shelf leads as a hero plate
+  (image, drop cap when unillustrated); a sky column beside it draws the
+  moon's true illuminated limb (SVG terminator path) + purnama/bulan-baru
+  countdowns; the other three shelves run as a ruled index. Sky math moved
+  to `src/lib/langit.ts` — ONE owner, because…
+- **Rimba v3, birds**: boids drawn as two-stroke wing glyphs that flap on
+  their own phase (rate follows speed) with glide interludes; the periodic
+  scatter is now a HAWK crossing the field; the horizon prints a distant
+  archipelago from the shared coastline field (lib/nusantara, Tugu's
+  seed); the computed moon (lib/langit, same as Almanak) hangs top-right.
+- **TOC fold v2**: flush in the true corner, clip-path wedge with a subtle
+  lift gradient, DAFTAR ISI set along the diagonal, and it INVERTS by
+  register (paper fold over the dark act, ink fold over the light ones) —
+  an IO watches a thin band along the viewport's bottom edge.
+- **Noted for later (Yose)**: DPR chapter needs its full source inventory
+  row (emedia flaky from runners, dpr.go.id blocked, KPU/Wikipedia kursi
+  tables, peraturan lane); fiskal pantau lane spec'd under ledger item 5.
+- **Flagging root cause confirmed by Yose**: endangered-species editing
+  trips the model safety layer. HAYATI content is FROZEN — do not edit
+  hayati.json or the species prose; the shipped dossier stays as-is.
 
 ### 2026-07-12 · WAVE 4 — Act III magazine polish (+ waves 1–3 pushed)
 
