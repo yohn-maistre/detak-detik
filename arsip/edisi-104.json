@@ -1,6 +1,6 @@
 {
  "edisi": 104,
- "terbit": "2026-07-12T10:10:06.429803+00:00",
+ "terbit": "2026-07-12T10:19:16.225885+00:00",
  "sesi": "petang",
  "angka": {
   "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
@@ -39,32 +39,32 @@
   },
   {
    "id": "klp-104-07",
+   "judul": "Pastikan Kopdes Merah Putih Berdiri di Seluruh Desa, Prabowo: Saya Presidennya Rakyat Indonesia",
+   "skor": 15
+  },
+  {
+   "id": "klp-104-08",
    "judul": "Menhut Sebut Masyarakat Kini Bisa Ikut Perdagangan Karbon, Perkuat Kepastian Hukum!",
    "skor": 13
   },
   {
-   "id": "klp-104-08",
-   "judul": "Omzet Koperasi Merah Putih Banjarsari Tembus Lebih dari Rp 300 Juta dalam 6 Bulan Pertama 2026",
+   "id": "klp-104-09",
+   "judul": "Prakiraan Cuaca Jawa Barat 12 Juli 2026: Cerah Seharian, Tasikmalaya Berpotensi Diguyur Hujan Ringan",
    "skor": 12
   },
   {
-   "id": "klp-104-09",
-   "judul": "Prakiraan Cuaca Jawa Barat 12 Juli 2026: Cerah Seharian, Tasikmalaya Berpotensi Diguyur Hujan Ringan",
-   "skor": 9
-  },
-  {
    "id": "klp-104-10",
-   "judul": "PNG dan Vanuatu perkuat kerja sama keamanan",
-   "skor": 9
+   "judul": "Sebut BUMN Sumber Korupsi, Prabowo: Hei Koruptor Sadar Diri, Guru Butuh Gaji yang Baik",
+   "skor": 12
   },
   {
    "id": "klp-104-11",
-   "judul": "Sebut BUMN Sumber Korupsi, Prabowo: Hei Koruptor Sadar Diri, Guru Butuh Gaji yang Baik",
-   "skor": 9
+   "judul": "Hadiri Peringatan Hari Koperasi, 5 Pimpinan Lembaga Pancarkan Semangat Kebersamaan",
+   "skor": 12
   },
   {
    "id": "klp-104-12",
-   "judul": "Tri Tito: Kolaborasi Pemda dan TP PKK Jadi Kunci Percepatan Program Prioritas Keluarga",
+   "judul": "PNG dan Vanuatu perkuat kerja sama keamanan",
    "skor": 9
   }
  ],
