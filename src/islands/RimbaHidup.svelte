@@ -48,7 +48,14 @@
       gl: number;   // glide seconds remaining
     };
     let flock: B[] = [];
-    const hawk = { on: false, x: 0, y: 0, vx: 0, vy: 0, ph: 0 };
+    // two raptors on independent clocks, and the reader's own cursor —
+    // every predator uses the same avoidance field
+    type Hawk = { on: boolean; x: number; y: number; vx: number; vy: number; ph: number; timer: number };
+    const hawks: Hawk[] = [
+      { on: false, x: 0, y: 0, vx: 0, vy: 0, ph: 0, timer: 7 },
+      { on: false, x: 0, y: 0, vx: 0, vy: 0, ph: 0, timer: 19 },
+    ];
+    const mouse = { on: false, x: 0, y: 0 };
 
     function resize() {
       const r = wrap.getBoundingClientRect();
@@ -63,8 +70,8 @@
       ink = css.getPropertyValue('--ink').trim() || ink;
       accent = css.getPropertyValue('--accent').trim() || accent;
       if (!flock.length && W > 0) {
-        // flock size follows the paper's area: a phone seats ~45, a wide desktop ~110
-        const N = Math.round(Math.min(110, Math.max(42, (W * H) / 3400)));
+        // flock size follows the paper's area: a phone seats ~55, a wide desktop ~150
+        const N = Math.round(Math.min(150, Math.max(52, (W * H) / 2600)));
         flock = Array.from({ length: N }, () => ({
           x: rng() * W,
           y: rng() * H,
@@ -81,28 +88,33 @@
     const R2 = 40 * 40;
     const SEP2 = 16 * 16;
     const HAWK2 = 110 * 110;
+    const MOUSE2 = 85 * 85;
     const MAXV = 1.5; // px per 60fps-frame — dtn converts to real time
     const MINV = 0.5;
 
-    /** one bird: two swept wing strokes meeting at the body; the flap
-        narrows the apparent span, a glide holds the wings open */
+    /** one bird, the gull mark ⌒⌒: wings arc OUT and slightly FORWARD from
+        the shoulders, bowing back at the arc (tips-behind read as bats —
+        Yose 2026-07-12). The flap narrows the span; a glide holds it open. */
     function drawBird(x: number, y: number, vx: number, vy: number, s: number, fw: number, warna: string, alpha: number) {
       const sp = Math.hypot(vx, vy) || 1;
       const ux = vx / sp, uy = vy / sp;
       const px = -uy, py = ux;
-      const span = 3.1 * s * (0.45 + 0.55 * fw);
-      const back = 1.05 * s;
-      const tlx = x - ux * back + px * span, tly = y - uy * back + py * span;
-      const trx = x - ux * back - px * span, trY = y - uy * back - py * span;
-      const cx = x + ux * 1.15 * s, cy = y + uy * 1.15 * s;
+      const span = 3.2 * s * (0.5 + 0.5 * fw);
+      const maju = 0.55 * s; // wing tips sit AHEAD of the body line
+      const tlx = x + ux * maju + px * span, tly = y + uy * maju + py * span;
+      const trx = x + ux * maju - px * span, trY = y + uy * maju - py * span;
+      // control points pulled BACK: each wing bows rearward like a gull's
+      const clx = x - ux * 1.1 * s + px * span * 0.45, cly = y - uy * 1.1 * s + py * span * 0.45;
+      const crx = x - ux * 1.1 * s - px * span * 0.45, crY = y - uy * 1.1 * s - py * span * 0.45;
       ctx!.strokeStyle = warna;
       ctx!.globalAlpha = alpha;
       ctx!.lineWidth = Math.max(0.8, 1.05 * s);
       ctx!.lineCap = 'round';
       ctx!.beginPath();
-      ctx!.moveTo(tlx, tly);
-      ctx!.quadraticCurveTo(cx, cy, x, y);
-      ctx!.quadraticCurveTo(cx, cy, trx, trY);
+      ctx!.moveTo(x, y);
+      ctx!.quadraticCurveTo(clx, cly, tlx, tly);
+      ctx!.moveTo(x, y);
+      ctx!.quadraticCurveTo(crx, crY, trx, trY);
       ctx!.stroke();
       ctx!.globalAlpha = 1;
     }
@@ -142,7 +154,6 @@
     let last = 0;
     let emaDt = 16.7;
     let frames = 0;
-    let hawkTimer = 9; // seconds until the first crossing
 
     function step(now: number) {
       const dt = last ? Math.min(64, now - last) : 16.7;
@@ -160,26 +171,28 @@
       ctx!.clearRect(0, 0, W, H);
       drawStage();
 
-      // the hawk: enters on a timer, crosses, flushes whatever it nears
-      hawkTimer -= dts;
-      if (!hawk.on && hawkTimer <= 0) {
-        const dari = rng() < 0.5 ? -1 : 1;
-        hawk.on = true;
-        hawk.x = dari < 0 ? -20 : W + 20;
-        hawk.y = H * (0.2 + rng() * 0.5);
-        hawk.vx = -dari * (2.6 + rng() * 1.2);
-        hawk.vy = (rng() - 0.5) * 0.5;
-        hawk.ph = 0;
-      }
-      if (hawk.on) {
-        hawk.x += hawk.vx * dtn;
-        hawk.y += hawk.vy * dtn;
-        hawk.ph += 2.2 * Math.PI * dts; // slow, heavy beats
-        const fw = 0.4 + 0.6 * (0.5 + 0.5 * Math.sin(hawk.ph));
-        drawBird(hawk.x, hawk.y, hawk.vx, hawk.vy, 2.3, fw, accent, 0.8);
-        if (hawk.x < -30 || hawk.x > W + 30) {
-          hawk.on = false;
-          hawkTimer = 11 + rng() * 7;
+      // the hawks: each on its own clock — enter, cross, flush, leave
+      for (const hawk of hawks) {
+        hawk.timer -= dts;
+        if (!hawk.on && hawk.timer <= 0) {
+          const dari = rng() < 0.5 ? -1 : 1;
+          hawk.on = true;
+          hawk.x = dari < 0 ? -20 : W + 20;
+          hawk.y = H * (0.15 + rng() * 0.55);
+          hawk.vx = -dari * (2.6 + rng() * 1.2);
+          hawk.vy = (rng() - 0.5) * 0.5;
+          hawk.ph = 0;
+        }
+        if (hawk.on) {
+          hawk.x += hawk.vx * dtn;
+          hawk.y += hawk.vy * dtn;
+          hawk.ph += 2.2 * Math.PI * dts; // slow, heavy beats
+          const fw = 0.4 + 0.6 * (0.5 + 0.5 * Math.sin(hawk.ph));
+          drawBird(hawk.x, hawk.y, hawk.vx, hawk.vy, 2.3, fw, accent, 0.8);
+          if (hawk.x < -30 || hawk.x > W + 30) {
+            hawk.on = false;
+            hawk.timer = 12 + rng() * 12;
+          }
         }
       }
 
@@ -197,13 +210,23 @@
           b.vx += ((cx / n - b.x) * 0.0009 + (ax / n - b.vx) * align + sx * 0.9) * dtn;
           b.vy += ((cy / n - b.y) * 0.0009 + (ay / n - b.vy) * align + sy * 0.9) * dtn;
         }
-        // the hawk empties the sky around itself
-        if (hawk.on) {
+        // every predator empties the sky around itself — hawks and the
+        // reader's cursor alike
+        for (const hawk of hawks) {
+          if (!hawk.on) continue;
           const dx = b.x - hawk.x, dy = b.y - hawk.y, d2 = dx * dx + dy * dy;
           if (d2 < HAWK2 && d2 > 1) {
             const f = 5.4 / Math.sqrt(d2);
             b.vx += dx * f * 0.06 * dtn;
             b.vy += dy * f * 0.06 * dtn;
+          }
+        }
+        if (mouse.on) {
+          const dx = b.x - mouse.x, dy = b.y - mouse.y, d2 = dx * dx + dy * dy;
+          if (d2 < MOUSE2 && d2 > 1) {
+            const f = 4.6 / Math.sqrt(d2);
+            b.vx += dx * f * 0.055 * dtn;
+            b.vy += dy * f * 0.055 * dtn;
           }
         }
         b.vx += (rng() - 0.5) * 0.06 * dtn;
@@ -234,6 +257,19 @@
     const ro = new ResizeObserver(resize);
     ro.observe(wrap);
 
+    // the reader's cursor is a predator too: the flock parts around it
+    const gerakMouse = (e: PointerEvent) => {
+      const r = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - r.left;
+      mouse.y = e.clientY - r.top;
+      mouse.on = true;
+    };
+    const pergiMouse = () => { mouse.on = false; };
+    wrap.addEventListener('pointermove', gerakMouse, { passive: true });
+    wrap.addEventListener('pointerleave', pergiMouse, { passive: true });
+    wrap.addEventListener('pointerdown', gerakMouse, { passive: true });
+    wrap.addEventListener('pointerup', pergiMouse, { passive: true });
+
     let io: IntersectionObserver | undefined;
     if (reducedMotion()) {
       // one still frame: the stage and the flock mid-glide
@@ -245,7 +281,15 @@
       io.observe(wrap);
     }
 
-    return () => { stop(); ro.disconnect(); io?.disconnect(); };
+    return () => {
+      stop();
+      ro.disconnect();
+      io?.disconnect();
+      wrap.removeEventListener('pointermove', gerakMouse);
+      wrap.removeEventListener('pointerleave', pergiMouse);
+      wrap.removeEventListener('pointerdown', gerakMouse);
+      wrap.removeEventListener('pointerup', pergiMouse);
+    };
   });
 </script>
 
@@ -254,7 +298,7 @@
   <div class="rimba-kepala mono" aria-hidden="true">
     <span class="rimba-eyebrow">RIMBA HIDUP · YANG TETAP BERGERAK</span>
   </div>
-  <p class="rimba-cap mono">PLAT PENUTUP · KAWANAN (BOIDS — REYNOLDS, 1987), SEEKOR ELANG LEWAT SESEKALI · BULAN MENGIKUTI FASE MALAM INI · GARIS PANTAI DARI BENIH EDISI</p>
+  <p class="rimba-cap mono">PLAT PENUTUP · KAWANAN (BOIDS — REYNOLDS, 1987) · ELANG LEWAT SESEKALI, KURSORMU PUN DIHINDARI · BULAN MENGIKUTI FASE MALAM INI · GARIS PANTAI DARI BENIH EDISI</p>
 </section>
 
 <style>

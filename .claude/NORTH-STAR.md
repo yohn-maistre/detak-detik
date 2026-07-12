@@ -1602,6 +1602,41 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-12 · WAVE 6 — endless-paper kliping + birds v2 + live jurnal shelf
+
+Yose's second screenshot round. All verified on the production preview:
+
+- **Kliping v3, the endless paper**: the lift-off-past-the-end dismissal is
+  GONE (it surprised more than it delighted). The sheet's torn top pins
+  near the viewport top, the paper SIZES TO ITS CONTENT (max 94dvh), and
+  a torn BOTTOM edge closes the sheet — short lembar show their foot at
+  once, long ones scroll until the foot arrives and simply stop. Exit =
+  TUTUP / backdrop / Escape. All the wheel/touch interception code was
+  deleted; the sheet is plain CSS + inner scroll now.
+- **Aksara's pen fades fast**: `SOROT_MS` 30s → 4s (a pointing gesture,
+  not a residue). The `sorot` verb + rough-notation pipeline was already
+  live; only the hold changed.
+- **TOC**: Peta Kabar/Pasar rows were in the wrong order (§2/§3 swapped
+  to match the page). The click-then-gap bug root-caused: client:visible
+  islands hydrate DURING the 1.6s lenis glide and grow the page, so the
+  captured offset lands short — `scrollToAnchor` now does one quiet
+  corrective pass at t+1.9s when drift > 32px.
+- **Rimba v4, real birds**: the wing glyph reversed — tips now arc OUT
+  and slightly FORWARD (gull ⌒⌒), control points pulled back; the old
+  tips-behind geometry read as bats (Yose). Flock densified (area/2600,
+  cap 150), TWO hawks on independent clocks, and the reader's CURSOR is
+  a predator the flock parts around (pointermove force, same field).
+- **Almanak DARI JURNAL**: a live research shelf — Crossref works API
+  (keyless, open CORS), query.bibliographic=indonesia, last 90 days,
+  titles VERBATIM in source language, every row opens its DOI. Client-side
+  relevance filter + a guard dropping garbage future-dated metadata
+  (publishers file 2150s; a published-desc sort floats them up). Dark
+  fetch prints as absence. The almanak desk (LLM) will replace this raw
+  shelf with gated summaries when keys land.
+- **Guntingan share cards**: design proposed to Yose (long-press → scissors
+  cursor → dashed cut-line → clipping lifts as stamped PNG with edition +
+  source strip). NOT built — awaiting his blessing on the interaction.
+
 ### 2026-07-12 · WAVE 5 — dedupe by decision + broadsheet almanak + birds + fold
 
 Yose's screenshot round after wave 4. Decisions and work, all verified by

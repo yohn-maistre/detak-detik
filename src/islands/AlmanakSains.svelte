@@ -46,9 +46,54 @@
   const R = 26, C = 30;
   const jalur = jalurTerang(p, R, C);
 
+  // ── DARI JURNAL: recent Indonesia-relevant papers, live from Crossref
+  //    (keyless, open CORS). Titles print VERBATIM in their source language
+  //    (Lane A); every row links to its DOI. A dark fetch prints as absence,
+  //    never as silence. The newsroom's almanak desk will replace this raw
+  //    shelf with gated summaries once the LLM lane has keys. ──
+  type Karya = { judul: string; wadah: string; tanggal: string; doi: string };
+  let jurnal = $state<Karya[]>([]);
+  let jurnalGelap = $state(false);
+  const RELEVAN = /indonesi|nusantara|jawa|java|sumatra|sumatera|borneo|kalimantan|sulawesi|papua|maluku|bali|jakarta/i;
+
+  async function ambilJurnal() {
+    try {
+      const dari = new Date(Date.now() - 90 * 86_400_000).toISOString().slice(0, 10);
+      const u = `https://api.crossref.org/works?query.bibliographic=indonesia&filter=type:journal-article,from-pub-date:${dari}&sort=published&order=desc&rows=20&select=title,container-title,DOI,issued&mailto=josejr2498@gmail.com`;
+      const res = await fetch(u, { signal: AbortSignal.timeout(8000) });
+      const d = await res.json();
+      const items = (d?.message?.items ?? []) as {
+        title?: string[]; 'container-title'?: string[]; DOI?: string;
+        issued?: { 'date-parts'?: number[][] };
+      }[];
+      const thnMaks = new Date().getUTCFullYear() + 1;
+      const semua = items
+        .map((it) => {
+          const dp = it.issued?.['date-parts']?.[0] ?? [];
+          return {
+            judul: it.title?.[0] ?? '',
+            wadah: it['container-title']?.[0] ?? '',
+            tanggal: dp.length ? dp.join('-') : '',
+            thn: dp[0] ?? 0,
+            doi: it.DOI ?? '',
+          };
+        })
+        // publishers sometimes file garbage future dates (2150…) which a
+        // published-desc sort floats to the top — those rows are metadata
+        // noise, not scholarship; they don't print
+        .filter((k) => k.judul && k.doi && k.thn <= thnMaks);
+      const tersaring = semua.filter((k) => RELEVAN.test(`${k.judul} ${k.wadah}`));
+      jurnal = (tersaring.length >= 2 ? tersaring : semua).slice(0, 5);
+      jurnalGelap = jurnal.length === 0;
+    } catch {
+      jurnalGelap = true; // absence is content: the shelf says it went dark
+    }
+  }
+
   // ── plate images: the named article's lead, at a real width ──
   let imgs = $state<Record<string, string>>({});
   onMount(() => {
+    void ambilJurnal();
     for (const r of rak) {
       const judul = r.plat?.wikipedia;
       if (!judul) continue;
@@ -137,7 +182,36 @@
     {/each}
   </div>
 
-  <p class="alm-foot mono">ANGKA DIHITUNG DARI DATA TERBIT · FAKTA DIKUTIP DENGAN SUMBER · GAMBAR DARI ARTIKELNYA DI ID.WIKIPEDIA · REDAKSI TIDAK MENGARANG BILANGAN</p>
+  <!-- ── DARI JURNAL: what the presses of science printed this quarter ── -->
+  <div class="alm-jurnal">
+    <div class="alm-jurnal-head mono">
+      <span class="alm-jurnal-k">DARI JURNAL · TERBIT TERBARU MENYEBUT INDONESIA</span>
+      <span class="alm-jurnal-s">⊙ crossref · api langsung · 90 hari terakhir</span>
+    </div>
+    {#if jurnal.length}
+      <ol class="alm-jurnal-rows">
+        {#each jurnal as k (k.doi)}
+          <li>
+            <a class="alm-jurnal-row" href={`https://doi.org/${k.doi}`} target="_blank" rel="noopener">
+              <span class="alm-jurnal-tgl mono">{k.tanggal || '—'}</span>
+              <span class="alm-jurnal-isi">
+                <b class="alm-jurnal-judul fig">{k.judul}</b>
+                {#if k.wadah}<i class="alm-jurnal-wadah">{k.wadah}</i>{/if}
+              </span>
+              <span class="alm-jurnal-panah" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        {/each}
+      </ol>
+      <p class="alm-jurnal-cat mono">JUDUL APA ADANYA DARI PENERBITNYA, BAHASA SUMBER · TIAP BARIS MEMBUKA DOI-NYA · KUERI TETAP: INDONESIA</p>
+    {:else if jurnalGelap}
+      <p class="alm-jurnal-cat mono">LAJUR JURNAL GELAP DARI SISI INI SAAT INI — SUMBERNYA TETAP API.CROSSREF.ORG; KETIADAAN DICETAK, BUKAN DISEMBUNYIKAN.</p>
+    {:else}
+      <p class="alm-jurnal-cat mono">MEMANGGIL RAK JURNAL…</p>
+    {/if}
+  </div>
+
+  <p class="alm-foot mono">ANGKA DIHITUNG DARI DATA TERBIT · FAKTA DIKUTIP DENGAN SUMBER · GAMBAR DARI ARTIKELNYA DI ID.WIKIPEDIA · JUDUL RISET LANGSUNG DARI CROSSREF · REDAKSI TIDAK MENGARANG BILANGAN</p>
 </section>
 
 <style>
@@ -210,6 +284,28 @@
   .alm-row-img { overflow: hidden; border: 1px solid var(--line); background: #ece1c9; }
   .alm-row-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: saturate(0.94); }
   @media (max-width: 720px) { .alm-row-img { max-width: 240px; } }
+
+  /* ── DARI JURNAL: the live research shelf ── */
+  .alm-jurnal { border-top: 2px solid var(--line); margin-top: clamp(20px, 3vw, 32px); padding-top: 14px; display: grid; gap: 10px; }
+  .alm-jurnal-head { display: flex; justify-content: space-between; gap: 10px 18px; flex-wrap: wrap; align-items: baseline; }
+  .alm-jurnal-k { font-size: 9px; letter-spacing: 0.2em; color: var(--accent); }
+  .alm-jurnal-s { font-size: 8px; letter-spacing: 0.12em; color: var(--muted); }
+  .alm-jurnal-rows { list-style: none; margin: 0; padding: 0; display: grid; }
+  .alm-jurnal-row {
+    display: grid; grid-template-columns: 84px 1fr auto; gap: 14px; align-items: baseline;
+    padding: 9px 0; border-bottom: 1px solid var(--line-soft);
+    text-decoration: none; color: var(--ink);
+    transition: background 0.15s, padding-left 0.15s;
+  }
+  .alm-jurnal-row:hover { background: color-mix(in oklab, var(--accent) 6%, transparent); padding-left: 6px; }
+  @media (max-width: 620px) { .alm-jurnal-row { grid-template-columns: 1fr auto; } .alm-jurnal-tgl { grid-column: 1 / -1; } }
+  .alm-jurnal-tgl { font-size: 8.5px; letter-spacing: 0.1em; color: var(--accent2); }
+  .alm-jurnal-isi { display: grid; gap: 2px; min-width: 0; }
+  .alm-jurnal-judul { font-size: 14.5px; line-height: 1.35; color: var(--ink); font-weight: 500; }
+  .alm-jurnal-wadah { font-size: 10.5px; color: var(--muted); font-style: italic; }
+  .alm-jurnal-panah { color: var(--muted); font-size: 12px; }
+  .alm-jurnal-row:hover .alm-jurnal-panah { color: var(--accent); }
+  .alm-jurnal-cat { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); }
 
   .alm-foot { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); border-top: 1px solid var(--line-soft); padding-top: 12px; margin-top: 4px; }
 </style>

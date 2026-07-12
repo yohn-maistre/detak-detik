@@ -62,8 +62,15 @@ function smoothScroll() {
 export function scrollToAnchor(anchor: string) {
   const el = document.getElementById(anchor);
   if (!el) return;
-  if (lenis) lenis.scrollTo(el, { duration: 1.6 });
-  else el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth' });
+  if (lenis) {
+    lenis.scrollTo(el, { duration: 1.6 });
+    // client:visible islands hydrate DURING the glide and grow the page, so
+    // the offset captured at call time can land with a gap above the header
+    // — one quiet corrective pass once layout has settled
+    window.setTimeout(() => {
+      if (Math.abs(el.getBoundingClientRect().top) > 32) lenis?.scrollTo(el, { duration: 0.5 });
+    }, 1900);
+  } else el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth' });
 }
 
 /* ---------- 1 · the loader ceremony ---------- */
@@ -233,7 +240,9 @@ function redPen() {
    looks like the editor's. */
 type SorotEntry = { anno: ReturnType<typeof annotate>; svgs: SVGElement[]; timer: number };
 const sorotAktif = new Map<Element, SorotEntry>();
-const SOROT_MS = 30_000; // marks are an aside, not a permanent ink — they erase
+// a pointing gesture, not a residue: the mark finishes drawing (~0.7s),
+// holds just long enough to be read, then erases itself (Yose 2026-07-12)
+const SOROT_MS = 4_000;
 
 function eraseSorot(entry: SorotEntry) {
   clearTimeout(entry.timer);

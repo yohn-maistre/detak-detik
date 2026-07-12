@@ -16,8 +16,8 @@
       label: 'PAGI · KABAR',
       rows: [
         { id: 'depan', no: '§1', judul: 'Halaman Muka' },
-        { id: 'pasar', no: '§2', judul: 'Pasar & Harga Pangan' },
-        { id: 'peta-blok', no: '§3', judul: 'Peta Kabar' },
+        { id: 'peta-blok', no: '§2', judul: 'Peta Kabar' },
+        { id: 'pasar', no: '§3', judul: 'Pasar & Harga Pangan' },
       ],
     },
     {

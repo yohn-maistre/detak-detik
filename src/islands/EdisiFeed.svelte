@@ -84,65 +84,17 @@
     return () => unlockScroll();
   });
 
-  /* ---- the scroll-away mechanic: the sheet is pinned near the top; when
-     its content bottoms out, further scroll lifts the whole clipping off
-     the desk and closes it (reduced motion: buttons only) ---- */
-  let sheetEl: HTMLElement | undefined = $state();
-  let scrollEl: HTMLElement | undefined = $state();
-  let lepas = $state(0); // px the sheet has been lifted past its end
-  let pergi = $state(false); // flying off
-  const AMBANG = 210;
-  let snapT: ReturnType<typeof setTimeout> | undefined;
-  const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  const diUjung = () => {
-    const el = scrollEl;
-    return !el || el.scrollTop + el.clientHeight >= el.scrollHeight - 2;
-  };
-  function tarik(dy: number) {
-    if (pergi) return;
-    lepas = Math.max(0, lepas + dy);
-    if (snapT) clearTimeout(snapT);
-    if (lepas >= AMBANG) {
-      pergi = true;
-      setTimeout(() => { pergi = false; lepas = 0; tutupLembar(); }, 300);
-      return;
-    }
-    // no follow-up scroll: the tear wasn't committed, the sheet settles back
-    snapT = setTimeout(() => { lepas = 0; }, 240);
-  }
-  $effect(() => {
-    const el = sheetEl;
-    if (!el || !buka) return;
-    let sentuhY = 0;
-    const roda = (e: WheelEvent) => {
-      if (reduced()) return;
-      if ((e.deltaY > 0 && diUjung()) || lepas > 0) { e.preventDefault(); tarik(e.deltaY); }
-    };
-    const awal = (e: TouchEvent) => { sentuhY = e.touches[0]?.clientY ?? 0; };
-    const geser = (e: TouchEvent) => {
-      if (reduced()) return;
-      const y = e.touches[0]?.clientY ?? 0;
-      const dy = sentuhY - y;
-      sentuhY = y;
-      if ((dy > 0 && diUjung()) || lepas > 0) { e.preventDefault(); tarik(dy); }
-    };
-    el.addEventListener('wheel', roda, { passive: false });
-    el.addEventListener('touchstart', awal, { passive: true });
-    el.addEventListener('touchmove', geser, { passive: false });
-    return () => {
-      el.removeEventListener('wheel', roda);
-      el.removeEventListener('touchstart', awal);
-      el.removeEventListener('touchmove', geser);
-    };
-  });
+  /* ---- the endless paper (v3, Yose 2026-07-12): the sheet's torn top is
+     pinned near the top of the screen and the paper sizes to its content —
+     scrolling moves the paper past you until its torn BOTTOM edge arrives,
+     and it simply stops there. No auto-dismiss; the reader leaves by TUTUP,
+     the backdrop, or Escape. (The old lift-off-past-the-end mechanic
+     surprised more than it delighted.) ---- */
 
   /* ---- hash routing: back button + share work ---- */
   const idFor = (k: LiveKliping) => k.id ?? `k${rak.indexOf(k)}`;
   function bukaLembar(k: LiveKliping) {
     buka = k;
-    lepas = 0;
-    pergi = false;
     const h = `#/kliping/${idFor(k)}`;
     if (location.hash !== h) history.pushState(null, '', h);
   }
@@ -234,9 +186,6 @@
   <button class="lk-latar" aria-label="Tutup lembar kliping" onclick={tutupLembar}></button>
   <aside
     class="lk"
-    class:pergi
-    bind:this={sheetEl}
-    style={`--lepas:${-lepas}px`}
     role="dialog"
     aria-modal="true"
     aria-label="Lembar kliping"
@@ -246,7 +195,7 @@
       <span class="lk-tag mono">LEMBAR KLIPING · MEJA {(buka.meja ?? 'nasional').toUpperCase()}</span>
       <button class="lk-tutup mono" bind:this={tutupEl} onclick={tutupLembar}>TUTUP ✕</button>
     </header>
-    <div class="lk-scroll" bind:this={scrollEl}>
+    <div class="lk-scroll">
     <div class="lk-meta mono">
       <span>{metaBaris(buka)} KEPEMILIKAN</span>
       <span class="lk-sq" role="img" aria-label={metaBaris(buka)}>
@@ -328,7 +277,7 @@
     </div>
 
     <p class="lk-kaki mono">■ INDEPENDEN · □ GRUP KONGLOMERASI · KEPEMILIKAN DICATAT DARI DOKUMEN PUBLIK · <a class="ink-link" href="/sumber#kliping">METODE →</a></p>
-    <p class="lk-habis mono" aria-hidden="true">— AKHIR LEMBAR · GULIR TERUS UNTUK MELEPASNYA ↑ —</p>
+    <p class="lk-habis mono" aria-hidden="true">— AKHIR LEMBAR — TUTUP LEWAT ✕ DI ATAS, KLIK DI LUAR KERTAS, ATAU ESC</p>
     </div>
   </aside>
 {/if}
@@ -412,25 +361,28 @@
   .lk {
     position: fixed;
     left: 50%;
-    top: 6dvh;
-    bottom: 0;
-    transform: translate(-50%, var(--lepas, 0px));
-    transition: transform 0.24s var(--ease-out);
+    top: 4dvh;
+    transform: translateX(-50%);
     z-index: 159;
     width: min(880px, 96vw);
+    /* the endless paper: the sheet sizes to its clipping — a short lembar
+       shows its torn foot immediately, a long one fills the screen and the
+       foot arrives when the reading does */
+    max-height: 94dvh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background: var(--bg);
     color: var(--ink);
-    padding: 32px clamp(16px, 4vw, 40px) 0;
+    padding: 32px clamp(16px, 4vw, 40px) 16px;
     box-shadow: 0 -16px 60px rgba(0, 0, 0, 0.4);
-    /* the torn top edge: the sheet is pulled off the newsstand */
-    clip-path: polygon(0 12px, 4% 5px, 9% 11px, 14% 3px, 19% 10px, 25% 4px, 31% 12px, 37% 6px, 43% 11px, 50% 3px, 57% 10px, 63% 5px, 69% 12px, 75% 4px, 81% 10px, 87% 3px, 93% 9px, 100% 5px, 100% 100%, 0 100%);
+    /* torn at BOTH ends: pulled off the newsstand, cut off the roll */
+    clip-path: polygon(
+      0 12px, 4% 5px, 9% 11px, 14% 3px, 19% 10px, 25% 4px, 31% 12px, 37% 6px, 43% 11px, 50% 3px, 57% 10px, 63% 5px, 69% 12px, 75% 4px, 81% 10px, 87% 3px, 93% 9px, 100% 5px,
+      100% calc(100% - 6px), 93% calc(100% - 10px), 87% calc(100% - 3px), 81% calc(100% - 11px), 75% calc(100% - 5px), 69% calc(100% - 12px), 63% calc(100% - 4px), 57% calc(100% - 10px), 50% calc(100% - 3px), 43% calc(100% - 11px), 37% calc(100% - 6px), 31% calc(100% - 12px), 25% calc(100% - 4px), 19% calc(100% - 9px), 14% calc(100% - 3px), 9% calc(100% - 11px), 4% calc(100% - 5px), 0 calc(100% - 12px)
+    );
     animation: lk-naik 0.4s var(--ease-out);
   }
-  /* the committed tear: the clipping lifts clean off the top of the desk */
-  .lk.pergi { transform: translate(-50%, -108dvh); opacity: 0.85; transition: transform 0.3s ease-in, opacity 0.3s ease-in; }
   .lk-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 30px; }
   .lk-habis { margin-top: 22px; padding: 10px 0 14px; text-align: center; font-size: 8.5px; letter-spacing: 0.2em; color: var(--muted); border-top: 1px dashed var(--line-soft); }
   @keyframes lk-naik {
