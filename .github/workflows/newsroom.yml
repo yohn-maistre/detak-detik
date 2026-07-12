@@ -37,7 +37,8 @@ jobs:
           EDISI_TOKEN: ${{ secrets.EDISI_TOKEN }}
           MODEL_PRIMARY: ${{ vars.MODEL_PRIMARY }}
           NIM_BASE_URL: ${{ vars.NIM_BASE_URL }}
-          AKSARA_URL: ${{ vars.AKSARA_URL }}
+          # the repo variable is PUBLIC_AKSARA_URL (either name satisfies main.py)
+          AKSARA_URL: ${{ vars.AKSARA_URL || vars.PUBLIC_AKSARA_URL }}
         run: python -m newsroom.main
       # the edition's slim record enters the repo: versioned, diffable,
       # citable memory. Arsip-only changes keep [skip ci]; when the run also

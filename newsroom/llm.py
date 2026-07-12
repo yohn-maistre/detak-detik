@@ -27,7 +27,9 @@ _PROVIDERS = [
      "MODEL_OPENROUTER", "deepseek/deepseek-chat"),
     ("gemini", "GEMINI_API_KEY", "GEMINI_BASE_URL",
      "https://generativelanguage.googleapis.com/v1beta/openai",
-     "MODEL_GEMINI", "gemini-2.0-flash"),
+     # 2.0-flash was retired upstream; 2.5-flash is the stable workhorse
+     # (override any time via MODEL_GEMINI)
+     "MODEL_GEMINI", "gemini-2.5-flash"),
 ]
 
 

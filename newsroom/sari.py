@@ -75,7 +75,11 @@ async def tulis_sari(kliping: list[Kliping], bukti: dict[str, list[str]],
                 alasan = "gate: angka/panjang/tautan"
         except Exception as exc:  # the lane failed; silence is the honest output
             lolos = None
-            alasan = f"lane: {type(exc).__name__}: {str(exc)[:160]}"
+            # an ExceptionGroup's str() hides its children — surface each
+            # lane's real error (401 vs 404 vs quota) so the log can diagnose
+            sub = getattr(exc, "exceptions", None)
+            rinci = "; ".join(f"{type(e).__name__}: {str(e)[:110]}" for e in sub) if sub else str(exc)[:160]
+            alasan = f"lane: {type(exc).__name__}: {rinci[:400]}"
         if lolos:
             k.sari = lolos
             ditulis += 1
