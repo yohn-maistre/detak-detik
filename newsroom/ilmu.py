@@ -32,12 +32,21 @@ _SYSTEM = (
     "Kamu kurator rak riset sebuah koran sipil Indonesia. Dari daftar judul "
     "makalah bernomor berikut, pilih maksimum {n} yang benar-benar TENTANG "
     "Indonesia — alamnya, lautnya, masyarakatnya, kebijakannya, kesehatannya, "
-    "spesiesnya, bahasanya — bukan sekadar menyebut kata. Balas HANYA JSON: "
-    '[{"i": <nomor>, "alasan": "<satu kalimat datar berbahasa Indonesia, '
-    'maksimum 140 karakter, kenapa karya ini relevan bagi pembaca Indonesia>"}]. '
-    "Tanpa opini, tanpa angka yang tidak ada di judulnya. Jika tidak ada "
-    "yang relevan, balas []."
+    "spesiesnya, bahasanya — bukan sekadar menyebut kata. Kelompokkan "
+    "pilihanmu ke dalam rak bertema; kamu yang menamai raknya. Balas HANYA "
+    'JSON: [{"i": <nomor>, "kategori": "<nama rak, 1-3 kata bahasa '
+    'Indonesia, misalnya LAUT & PESISIR>", "alasan": "<2-3 kalimat datar '
+    "berbahasa Indonesia, 200-420 karakter: apa yang diteliti, kenapa "
+    'relevan bagi pembaca Indonesia>"}]. Tanpa opini, tanpa angka yang '
+    "tidak ada di judulnya. Jika tidak ada yang relevan, balas []."
 )
+
+_ANGKA = re.compile(r"\d[\d.,]*")
+
+
+def _angka_norm(teks: str) -> set[str]:
+    return {a.strip(".,").replace(".", "").replace(",", "")
+            for a in _ANGKA.findall(teks)}
 
 
 def _ambil_crossref() -> list[dict]:
@@ -136,8 +145,9 @@ async def pilih_jurnal(edisi_no: int, catat=None) -> int:
             catat("ilmu_gugur", alasan="JSON tidak sah")
         return 0
 
-    # deterministic acceptance: the index must exist, the reason must be
-    # bounded prose with no links — a failed row is dropped, not fixed
+    # deterministic acceptance: the index must exist, the writeup must be
+    # bounded link-free prose whose every number appears in the paper's own
+    # metadata, the shelf name short — a failed row is dropped, not fixed
     dipilih: list[dict] = []
     for p in pilihan[:_MAKS_PILIH]:
         if not isinstance(p, dict):
@@ -147,13 +157,19 @@ async def pilih_jurnal(edisi_no: int, catat=None) -> int:
         except (TypeError, ValueError):
             continue
         alasan = " ".join(str(p.get("alasan", "")).split())
-        if not (0 <= i < len(kandidat)) or not alasan or len(alasan) > 180 \
+        kategori = " ".join(str(p.get("kategori", "")).split()).upper()[:30]
+        if not (0 <= i < len(kandidat)) or not alasan or len(alasan) > 460 \
                 or "http" in alasan.lower():
             continue
         r = kandidat[i]
+        if not _angka_norm(alasan) <= _angka_norm(
+                f"{r['judul']} {r['wadah']} {r['tanggal']}"):
+            continue
         if any(d["doi"] == r["doi"] for d in dipilih):
             continue
-        dipilih.append({**r, "alasan": alasan, "sejak_edisi": edisi_no})
+        dipilih.append({**r, "alasan": alasan,
+                        "kategori": kategori or "LAIN-LAIN",
+                        "sejak_edisi": edisi_no})
 
     if not dipilih:
         if catat:

@@ -33,6 +33,10 @@ class Temuan(BaseModel):
     cited_ids: list[str] = Field(min_length=1)
     skor: float = Field(ge=0, le=1)
     signature_viz: SignatureViz
+    # True while the desk reasons over a committed seed corpus rather than a
+    # live parse (window honesty: the page must say so). Flips per desk as
+    # each live scraper lands.
+    contoh: bool = False
 
 
 class AngkaEdisi(BaseModel):
@@ -112,6 +116,11 @@ class Kliping(BaseModel):
     # Feeds PARTAI & KEPENTINGAN's "disebut dalam liputan" chips. Coverage
     # mention is a documented fact; it is never a stance or a score.
     partai: list[str] | None = None
+    # the Eisenhower matrix (penting/mendesak/dampak, each 1-5) the ranking
+    # pass scored this cluster with (peringkat.py) — the model orders Lane A
+    # content, never writes it; None = the diversity order stood alone
+    matriks: dict[str, int] | None = None
+    alasan_peringkat: str | None = None
 
 
 class KlipingMeta(BaseModel):
@@ -135,6 +144,8 @@ class LiveTemuan(BaseModel):
     headline: str
     body: str
     temuan_id: str | None = None
+    # carried from Temuan.contoh; None (dropped by exclude_none) when live
+    contoh: bool | None = None
 
 
 class Janji(BaseModel):

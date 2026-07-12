@@ -32,6 +32,7 @@ from .editor import assemble
 from .gate import fact_gate
 from .ilmu import pilih_jurnal
 from .lawyer import redaktur_hukum
+from .peringkat import peringkat_kliping
 from .llm import configured_providers, model_available
 from .log import Log
 from .memory import ingat, simpan_arsip
@@ -104,6 +105,14 @@ async def run() -> int:
     sari_n = await tulis_sari(kliping, kliping_bukti, log.event)
     log.event("sari", ditulis=sari_n)
 
+    # PERINGKAT: the model scores each cluster penting/mendesak/dampak (1-5)
+    # and the rack re-orders (matrix ×10 + diversity tiebreak). The top
+    # cluster becomes №1 on the front. Failure keeps the diversity order.
+    try:
+        await peringkat_kliping(kliping, log.event)
+    except Exception as exc:
+        log.event("peringkat_gugur", alasan=f"{type(exc).__name__}: {str(exc)[:120]}")
+
     # ILMU (Lane C): the model judges the month's Crossref batch for TRUE
     # Indonesia relevance and stashes its picks (plus a one-line why) in
     # newsroom/data/atlas/jurnal.json — committed by the Actions job, baked
@@ -123,6 +132,12 @@ async def run() -> int:
         desk_papua(papua, corpus, EDISI_NO),
     )
     drafts = [t for t in drafted if t is not None]
+    # window honesty: every classic desk still reasons over a committed seed
+    # corpus (the live parses are unfilled seams) — the page must say so.
+    # Flip per desk as each live scraper lands. data_hilang stays live: its
+    # subject IS the live darkness of feeds.
+    for t in drafts:
+        t.contoh = True
 
     # data hilang is meta: it watches for dark feeds and folds the rows it cites
     # into the shared corpus so the global gate + editor stay consistent

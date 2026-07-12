@@ -7,7 +7,7 @@
  * the newsroom can publish by writing KV with no rebuild.
  */
 
-export interface LiveTemuan { lens?: string; headline?: string; body?: string; temuan_id?: string }
+export interface LiveTemuan { lens?: string; headline?: string; body?: string; temuan_id?: string; contoh?: boolean }
 export interface LiveTicker { src: string; teks: string; url?: string }
 export interface LiveAgenda { jam: string; teks: string; tag?: string }
 export interface LiveMakro { label: string; nilai: string; pre?: string; acuan?: string; chip?: string; nada?: string }
@@ -32,6 +32,11 @@ export interface LiveKliping {
   hukum?: string[];
   /** parties named in the cluster's verbatim headlines (registry alias match) */
   partai?: string[];
+  /** the Eisenhower matrix (penting/mendesak/dampak 1-5) the newsroom's
+   *  ranking pass scored this cluster with; the model orders Lane A content,
+   *  never writes it */
+  matriks?: Record<string, number>;
+  alasan_peringkat?: string;
 }
 export interface LiveKlipingMeta { judul?: number; klaster?: number; gelap?: number; disusun?: string }
 /** deep writeup (Act 3 pipeline): Lane C prose, fact-gated in the newsroom,

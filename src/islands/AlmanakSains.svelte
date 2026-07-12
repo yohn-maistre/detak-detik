@@ -54,9 +54,19 @@
   //    raw keyword shelf, live from Crossref (keyless, open CORS). Titles
   //    print VERBATIM in their source language (Lane A); every row links to
   //    its DOI. A dark fetch prints as absence, never as silence. ──
-  type Pilihan = { judul: string; wadah: string; tanggal: string; doi: string; alasan: string };
+  type Pilihan = { judul: string; wadah: string; tanggal: string; doi: string; alasan: string; kategori?: string };
   const stash: Pilihan[] = ((JURNAL as { pilihan?: Pilihan[] }).pilihan ?? []).slice(0, 8);
   const stashSejak = (JURNAL as { diperbarui?: string | null }).diperbarui?.slice(0, 10) ?? '';
+  // shelves inside the shelf: the model names the categories; we only group
+  const stashRak: { kategori: string; rows: Pilihan[] }[] = (() => {
+    const m = new Map<string, Pilihan[]>();
+    for (const p of stash) {
+      const k = p.kategori || 'LAIN-LAIN';
+      if (!m.has(k)) m.set(k, []);
+      m.get(k)!.push(p);
+    }
+    return [...m.entries()].map(([kategori, rows]) => ({ kategori, rows }));
+  })();
   type Karya = { judul: string; wadah: string; tanggal: string; doi: string };
   let jurnal = $state<Karya[]>([]);
   let jurnalGelap = $state(false);
@@ -210,22 +220,27 @@
       {/if}
     </div>
     {#if stash.length}
-      <ol class="alm-jurnal-rows">
-        {#each stash as k (k.doi)}
-          <li>
-            <a class="alm-jurnal-row" href={`https://doi.org/${k.doi}`} target="_blank" rel="noopener">
-              <span class="alm-jurnal-tgl mono">{k.tanggal || '—'}</span>
-              <span class="alm-jurnal-isi">
-                <b class="alm-jurnal-judul fig">{k.judul}</b>
-                {#if k.wadah}<i class="alm-jurnal-wadah">{k.wadah}</i>{/if}
-                {#if k.alasan}<span class="alm-jurnal-alasan">{k.alasan} <i class="mono">— penilai mesin</i></span>{/if}
-              </span>
-              <span class="alm-jurnal-panah" aria-hidden="true">↗</span>
-            </a>
-          </li>
-        {/each}
-      </ol>
-      <p class="alm-jurnal-cat mono">JUDUL APA ADANYA DARI PENERBITNYA · SATU KALIMAT ALASAN OLEH MESIN, DIPERIKSA ATURAN · TIAP BARIS MEMBUKA DOI-NYA</p>
+      {#each stashRak as rakK (rakK.kategori)}
+        <div class="alm-jurnal-rak">
+          <span class="alm-jurnal-rak-k mono">{rakK.kategori} <i>· rak dinamai mesin</i></span>
+          <ol class="alm-jurnal-rows">
+            {#each rakK.rows as k (k.doi)}
+              <li>
+                <a class="alm-jurnal-row" href={`https://doi.org/${k.doi}`} target="_blank" rel="noopener">
+                  <span class="alm-jurnal-tgl mono">{k.tanggal || '—'}</span>
+                  <span class="alm-jurnal-isi">
+                    <b class="alm-jurnal-judul fig">{k.judul}</b>
+                    {#if k.wadah}<i class="alm-jurnal-wadah">{k.wadah}</i>{/if}
+                    {#if k.alasan}<span class="alm-jurnal-alasan">{k.alasan} <i class="mono">— penilai mesin</i></span>{/if}
+                  </span>
+                  <span class="alm-jurnal-panah" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            {/each}
+          </ol>
+        </div>
+      {/each}
+      <p class="alm-jurnal-cat mono">JUDUL APA ADANYA DARI PENERBITNYA · CATATAN &amp; NAMA RAK OLEH MESIN, DIPERIKSA ATURAN · TIAP BARIS MEMBUKA DOI-NYA</p>
     {:else if jurnal.length}
       <ol class="alm-jurnal-rows">
         {#each jurnal as k (k.doi)}
@@ -351,9 +366,13 @@
   .alm-jurnal-isi { display: grid; gap: 2px; min-width: 0; }
   .alm-jurnal-judul { font-size: 14.5px; line-height: 1.35; color: var(--ink); font-weight: 500; }
   .alm-jurnal-wadah { font-size: 10.5px; color: var(--muted); font-style: italic; }
-  /* the machine's one-line why: quiet, clearly credited */
-  .alm-jurnal-alasan { font-size: 11.5px; line-height: 1.5; color: var(--ink); opacity: 0.85; margin-top: 2px; }
+  /* the machine's writeup: quiet, clearly credited */
+  .alm-jurnal-alasan { font-size: 12px; line-height: 1.55; color: var(--ink); opacity: 0.88; margin-top: 3px; max-width: 72ch; }
   .alm-jurnal-alasan .mono { font-size: 7.5px; letter-spacing: 0.1em; color: var(--muted); font-style: normal; }
+  /* shelves inside the shelf: model-named category rows */
+  .alm-jurnal-rak { display: grid; gap: 4px; margin-top: 6px; }
+  .alm-jurnal-rak-k { font-size: 9.5px; letter-spacing: 0.18em; color: var(--accent2); border-bottom: 1px solid var(--line-soft); padding-bottom: 5px; }
+  .alm-jurnal-rak-k i { font-size: 7.5px; letter-spacing: 0.1em; color: var(--muted); font-style: normal; }
   .alm-jurnal-panah { color: var(--muted); font-size: 12px; }
   .alm-jurnal-row:hover .alm-jurnal-panah { color: var(--accent); }
   .alm-jurnal-cat { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); }

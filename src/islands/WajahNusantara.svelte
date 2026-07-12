@@ -27,27 +27,39 @@
   const LEWATI = /^(daftar pustaka|referensi|pranala luar|catatan|lihat pula|bacaan lanjutan|galeri)$/i;
 
   function bagiTeks(plain: string): Bagian[] {
-    // Action-API `explaintext` marks sections as "== Judul ==" lines
+    // Action-API `explaintext` marks sections as "== Judul ==" lines, but
+    // the blank-line spacing around the markers is inconsistent (a marker
+    // can share a block with its body, printing raw "=== Judul ===" text)
+    // — so split on the markers GLOBALLY, then paragraph-split each span
     const out: Bagian[] = [];
     let cur: Bagian = { judul: null, paras: [] };
     let total = 0;
-    for (const blok of plain.split(/\n{2,}/)) {
-      const t = blok.trim();
-      if (!t) continue;
-      const m = t.match(/^==+\s*(.+?)\s*==+$/);
-      if (m) {
-        if (cur.paras.length) out.push(cur);
-        if (out.length >= BAGIAN_MAKS + 1 || LEWATI.test(m[1]!)) { cur = { judul: null, paras: [] }; if (out.length >= BAGIAN_MAKS + 1) break; continue; }
-        cur = { judul: m[1]!, paras: [] };
-        continue;
+    const isi = (teks: string) => {
+      for (const blok of teks.split(/\n{2,}/)) {
+        const t = blok.trim();
+        if (!t || total >= BATAS_TOTAL) continue;
+        const potong = total + t.length > BATAS_TOTAL ? t.slice(0, BATAS_TOTAL - total).replace(/\s+\S*$/, '') + '…' : t;
+        cur.paras.push(potong);
+        total += t.length;
       }
-      if (total >= BATAS_TOTAL) continue;
-      const potong = total + t.length > BATAS_TOTAL ? t.slice(0, BATAS_TOTAL - total).replace(/\s+\S*$/, '') + '…' : t;
-      cur.paras.push(potong);
-      total += t.length;
+    };
+    const token = /==+\s*([^=\n]+?)\s*==+/g;
+    let last = 0;
+    let m: RegExpExecArray | null;
+    while ((m = token.exec(plain))) {
+      isi(plain.slice(last, m.index));
+      last = token.lastIndex;
+      if (cur.judul !== null || cur.paras.length) out.push(cur);
+      cur = { judul: m[1]!, paras: [] };
     }
-    if (cur.paras.length) out.push(cur);
-    return out.filter((b) => b.judul === null || !LEWATI.test(b.judul));
+    isi(plain.slice(last));
+    if (cur.judul !== null || cur.paras.length) out.push(cur);
+
+    const bersih = out.filter((b) => b.judul === null || (!LEWATI.test(b.judul) && b.paras.length));
+    return [
+      ...bersih.filter((b) => b.judul === null),
+      ...bersih.filter((b) => b.judul !== null).slice(0, BAGIAN_MAKS),
+    ];
   }
 
   /* the pull-quote: the second sentence of the reviewed extract, verbatim,
@@ -106,7 +118,8 @@
         <blockquote class="wn-kutip fig">{kutip}</blockquote>
       {/if}
       {#if bagian.length}
-        <!-- the feature body: whole encyclopedia sections, verbatim + linked -->
+        <!-- the feature body: whole encyclopedia sections, verbatim + linked,
+             run as newspaper columns on a wide page -->
         <div class="wn-bagian">
           {#each bagian as b (b.judul)}
             <section class="wn-sec">
@@ -116,8 +129,8 @@
               {/each}
             </section>
           {/each}
-          <p class="wn-fakta mono">TEKS BAGIAN APA ADANYA DARI ENSIKLOPEDIA · SELENGKAPNYA DI TAUTAN SUMBER</p>
         </div>
+        <p class="wn-fakta mono">TEKS BAGIAN APA ADANYA DARI ENSIKLOPEDIA · SELENGKAPNYA DI TAUTAN SUMBER</p>
       {/if}
       <p class="wn-fakta mono">BAHASA · {p.bahasa.toUpperCase()}</p>
       <p class="wn-fakta mono">{koordStr} · BERGANTI DUA KALI SEHARI · TEKS APA ADANYA DARI ENSIKLOPEDIA</p>
@@ -174,8 +187,10 @@
     font-size: clamp(18px, 2.4vw, 26px); line-height: 1.4; max-width: 44ch;
     border-left: 3px solid var(--accent); padding-left: 16px; margin: 4px 0;
   }
-  .wn-bagian { display: grid; gap: 16px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: 6px; }
-  .wn-sec { display: grid; gap: 8px; }
+  .wn-bagian { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 6px; }
+  /* newspaper columns on a wide page; sections never break mid-heading */
+  @media (min-width: 1000px) { .wn-bagian { columns: 2; column-gap: 38px; } }
+  .wn-sec { display: grid; gap: 8px; break-inside: avoid; margin-bottom: 18px; }
   .wn-sec-judul { font-family: 'Fraunces Variable', serif; font-weight: 380; font-size: clamp(17px, 2vw, 21px); color: var(--ink); }
   .wn-sec-p { font-size: 14.5px; line-height: 1.62; color: var(--ink); max-width: 62ch; }
   .wn-fakta { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }

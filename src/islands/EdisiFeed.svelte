@@ -20,8 +20,9 @@
   const t0 = BAKED?.temuan?.[0];
   let rak = $state<LiveKliping[]>(BAKED?.kliping ?? []);
   let meta = $state<LiveKlipingMeta | null>(BAKED?.kliping_meta ?? null);
-  let liveLead = $state<{ headline: string; dek?: string; id?: string; edisi?: number } | null>(
-    t0?.headline ? { headline: t0.headline, dek: BAKED?.dek ?? t0.body, id: t0.temuan_id, edisi: BAKED?.edisi } : null,
+  type Lead = { headline: string; dek?: string; id?: string; edisi?: number; lens?: string; contoh?: boolean };
+  let liveLead = $state<Lead | null>(
+    t0?.headline ? { headline: t0.headline, dek: BAKED?.dek ?? t0.body, id: t0.temuan_id, edisi: BAKED?.edisi, lens: t0.lens, contoh: t0.contoh } : null,
   );
 
   onMount(() => onEdisi((e) => {
@@ -29,18 +30,32 @@
     if (e.kliping?.length) rak = e.kliping;
     if (e.kliping_meta) meta = e.kliping_meta;
     const t = e.temuan?.[0];
-    if (t?.headline) liveLead = { headline: t.headline, dek: e.dek ?? t.body, id: t.temuan_id, edisi: e.edisi };
+    if (t?.headline) liveLead = { headline: t.headline, dek: e.dek ?? t.body, id: t.temuan_id, edisi: e.edisi, lens: t.lens, contoh: t.contoh };
     bukaDariHash(); // a shared #/kliping/{id} link opens once the data exists
   }));
 
-  // №01 — the paper's voice: contoh until the edition lands, then live with
-  // live receipts (contoh chips must never sit beside a live claim)
+  // №01 — the top-RANKED cluster when the newsroom sends one (lens 'pers':
+  // verbatim Lane A headline, machine-ranked, click opens its lembar); a
+  // desk finding otherwise, wearing its honesty flag while its corpus is a
+  // committed seed. Contoh chips never sit beside a live claim.
+  const pers = $derived(liveLead?.lens === 'pers');
+  const leadKliping = $derived(pers && liveLead?.id ? (rak.find((k) => k.id === liveLead?.id) ?? null) : null);
   const judul = $derived(liveLead?.headline ?? lead.headline);
   const dek = $derived(liveLead ? (liveLead.dek ?? '') : lead.dek);
   const chips = $derived(liveLead ? (liveLead.id ? [liveLead.id] : []) : lead.chips);
-  const stampTeks = $derived(liveLead ? 'LOLOS PERIKSA FAKTA' : lead.stamp);
+  const stampTeks = $derived(
+    !liveLead ? lead.stamp
+    : pers ? 'JUDUL VERBATIM · LANE A'
+    : liveLead.contoh ? 'LOLOS GATE · KORPUS CONTOH'
+    : 'LOLOS PERIKSA FAKTA',
+  );
   const serial = $derived(liveLead?.edisi != null ? `EDISI #${liveLead.edisi}` : lead.serial);
-  const sumberTag = $derived(liveLead ? 'LANGSUNG · RUANG REDAKSI' : 'DATA CONTOH');
+  const sumberTag = $derived(
+    !liveLead ? 'DATA CONTOH'
+    : pers ? 'LANGSUNG · RAK PERS · PERINGKAT MESIN'
+    : liveLead.contoh ? 'KORPUS CONTOH · MENUNGGU SUMBER LANGSUNG'
+    : 'LANGSUNG · RUANG REDAKSI',
+  );
 
   // the four desks live on as filter chips over one surface
   const MEJA = [
@@ -53,7 +68,9 @@
     { id: 'dunia', label: 'DUNIA' },
   ] as const;
   let pilihMeja = $state<string>('semua');
-  const tampil = $derived(pilihMeja === 'semua' ? rak : rak.filter((k) => (k.meja ?? 'nasional') === pilihMeja));
+  // №01 already prints the top cluster: the rack below never repeats it
+  const rakSisa = $derived(pers && liveLead?.id ? rak.filter((k) => k.id !== liveLead?.id) : rak);
+  const tampil = $derived(pilihMeja === 'semua' ? rakSisa : rakSisa.filter((k) => (k.meja ?? 'nasional') === pilihMeja));
 
   const metaStrip = $derived(meta
     ? `${meta.judul ?? '?'} JUDUL · ${meta.klaster ?? rak.length} KLIPING · DISUSUN ${meta.disusun ?? '--.--'} WIB${meta.gelap ? ` · ${meta.gelap} SUMBER GELAP` : ''}`
@@ -111,11 +128,21 @@
     <span class="eyebrow">SATU PERISTIWA, SEMUA LIPUTANNYA · JUDUL VERBATIM, DIKELOMPOKKAN OTOMATIS TIAP TERBIT</span>
   </div>
 
-  <!-- №01 · the paper's own lead, first entry of the same feed -->
+  <!-- №01 · the edition's lead: the top-ranked cluster (opens its lembar)
+       or, on older payloads, the desks' own finding -->
   <article class="feed-lead">
-    <p class="feed-lead-tag mono"><span class="feed-lead-no num">№ 01</span> DARI MEJA REDAKSI</p>
-    <h2 class="feed-judul display">{judul}</h2>
+    <p class="feed-lead-tag mono"><span class="feed-lead-no num">№ 01</span> {pers ? 'DARI RAK PERS · PALING PENTING & MENDESAK' : 'DARI MEJA REDAKSI'}</p>
+    {#if leadKliping}
+      <h2 class="feed-judul display"><button class="feed-judul-buka" onclick={() => leadKliping && bukaLembar(leadKliping)} aria-label="Buka lembar kliping berita utama">{judul}</button></h2>
+    {:else}
+      <h2 class="feed-judul display">{judul}</h2>
+    {/if}
     {#if dek}<p class="feed-dek">{dek}</p>{/if}
+    {#if leadKliping?.matriks}
+      <p class="feed-matriks mono">
+        PENTING {leadKliping.matriks.penting ?? '—'}/5 · MENDESAK {leadKliping.matriks.mendesak ?? '—'}/5 · DAMPAK {leadKliping.matriks.dampak ?? '—'}/5 · DINILAI MESIN{leadKliping.alasan_peringkat ? ` — ${leadKliping.alasan_peringkat}` : ''}
+      </p>
+    {/if}
     <div class="feed-resi">
       {#each chips as c (c)}
         <button class="chip"><span class="tick">⊙</span>{c}</button>
@@ -245,7 +272,7 @@
       <ol class="lk-liputan">
         {#each lembarIsi as l}
           <li>
-            <span class="lk-media mono">{l.media}</span>
+            <span class="lk-media mono"><i class="lk-i" class:penuh={l.independen} aria-hidden="true"></i>{l.media}</span>
             <span class="lk-grup mono">{l.independen ? 'INDEPENDEN' : (l.grup ?? '')}</span>
             {#if l.url}
               <a class="lk-l-judul" href={l.url} target="_blank" rel="noopener">{l.judul} <span class="lk-luar" aria-hidden="true">↗</span></a>
@@ -276,6 +303,10 @@
   .feed-lead-tag { font-size: 10px; letter-spacing: 0.18em; color: var(--accent); }
   .feed-lead-no { margin-right: 10px; color: var(--muted); }
   .feed-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(30px, 5vw, 64px); line-height: 0.98; letter-spacing: var(--disp-track); color: var(--ink); margin: 12px 0 0; max-width: 22ch; }
+  /* the №01 headline IS the cluster: clicking opens its lembar */
+  .feed-judul-buka { display: block; background: none; border: none; padding: 0; margin: 0; text-align: left; cursor: pointer; font: inherit; color: inherit; letter-spacing: inherit; line-height: inherit; }
+  .feed-judul-buka:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+  .feed-matriks { position: relative; z-index: 1; margin-top: 10px; font-size: 9px; letter-spacing: 0.13em; color: var(--muted); max-width: 80ch; line-height: 1.7; }
   .feed-dek { font-size: clamp(14px, 1.7vw, 17px); color: var(--muted); max-width: 62ch; line-height: 1.5; margin-top: 12px; }
   .feed-resi { display: flex; align-items: center; gap: 10px 12px; flex-wrap: wrap; margin-top: 16px; }
   .feed-stamp { font-size: 9px; }
@@ -400,6 +431,9 @@
   .lk-liputan li:first-child { border-top: none; }
   @media (max-width: 640px) { .lk-liputan li { grid-template-columns: 92px 1fr; } .lk-grup { display: none; } }
   .lk-media { font-size: 10px; letter-spacing: 0.12em; }
+  /* the ownership mark rides every source row: ■ independen · □ grup */
+  .lk-i { display: inline-block; width: 8px; height: 8px; border: 1px solid var(--ink); background: transparent; margin-right: 7px; vertical-align: baseline; }
+  .lk-i.penuh { background: var(--ink); }
   .lk-grup { font-size: 9.5px; letter-spacing: 0.1em; color: var(--muted); }
   .lk-l-judul { color: var(--ink); text-decoration: none; }
   a.lk-l-judul:hover { text-decoration: underline; text-underline-offset: 3px; }

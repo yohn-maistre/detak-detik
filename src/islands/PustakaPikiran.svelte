@@ -16,14 +16,20 @@
   let extract = $state(p.ringkas);
   let live = $state(false);
 
-  // the cursor-follow tooltip over the shelf: author · work · year · note
+  // hover = a cursor-follow preview (mouse/pen only); CLICK pins the book's
+  // card under the shelf — the card holds the encyclopedia link, so a phone
+  // tap never navigates blind (Yose 2026-07-13)
   type Buku = (typeof PUSTAKA)[number];
   let tip = $state<{ b: Buku; x: number; y: number } | null>(null);
-  function tipMove(e: PointerEvent, b: Buku) { tip = { b, x: e.clientX, y: e.clientY }; }
-  function tipTap(e: PointerEvent, b: Buku) {
-    if (e.pointerType === 'touch') tip = tip?.b?.id === b.id ? null : { b, x: e.clientX, y: e.clientY };
+  let pin = $state<Buku | null>(null);
+  function tipMove(e: PointerEvent, b: Buku) {
+    if (e.pointerType === 'touch') return;
+    tip = { b, x: e.clientX, y: e.clientY };
   }
-  const wikiUrl = (b: Buku) => b.wikipedia.url;
+  function pilihBuku(b: Buku) {
+    tip = null;
+    pin = pin?.id === b.id ? null : b;
+  }
 
   // the pull-quote: the second sentence, verbatim, at quote length only
   const kal = p.ringkas.split(/(?<=\.)\s+/);
@@ -61,24 +67,36 @@
       <!-- the shelf: every spine standing; today's pulled forward -->
       <div class="pp-rak" role="list" aria-label={`Rak ${PUSTAKA.length} buku; hari ini terambil ${p.karya.judul} (${p.karya.tahun}) oleh ${p.nama}`}>
         {#each PUSTAKA as b, i (b.id)}
-          <a
+          <button
             class="pp-spine"
             class:hariIni={i === pustakaIdx}
+            class:terpin={pin?.id === b.id}
             role="listitem"
-            href={wikiUrl(b)}
-            target="_blank"
-            rel="noopener"
-            aria-label={`${b.karya.judul} oleh ${b.nama} — buka di id.wikipedia`}
+            aria-expanded={pin?.id === b.id}
+            aria-label={`${b.karya.judul} oleh ${b.nama} — buka kartunya`}
             onpointermove={(e) => tipMove(e, b)}
             onpointerleave={() => (tip = null)}
-            onpointerdown={(e) => tipTap(e, b)}
+            onclick={() => pilihBuku(b)}
           >
             <span class="pp-spine-judul">{b.karya.judul}</span>
             {#if i === pustakaIdx}<span class="pp-spine-thn mono">{b.karya.tahun}</span>{/if}
-          </a>
+          </button>
         {/each}
       </div>
       <div class="pp-papan" aria-hidden="true"></div>
+
+      {#if pin}
+        <!-- the pinned card: sits in the page, its link stays put -->
+        <div class="pp-pin">
+          <div class="pp-pin-head">
+            <b class="pp-pin-karya fig">{pin.karya.judul}</b>
+            <button class="pp-pin-x mono" onclick={() => (pin = null)} aria-label="Tutup kartu">✕</button>
+          </div>
+          <span class="pp-pin-meta mono">{pin.nama} · {pin.karya.tahun} · {pin.peran}</span>
+          <span class="pp-pin-catatan">{pin.karya.catatan}</span>
+          <a class="chip" href={pin.wikipedia.url} target="_blank" rel="noopener">⊙ buka di id.wikipedia →</a>
+        </div>
+      {/if}
 
       <div class="pp-karya">
         <span class="pp-karya-k mono">TERAMBIL HARI INI</span>
@@ -96,7 +114,7 @@
     <b class="pp-tip-karya fig">{tip.b.karya.judul}</b>
     <span class="pp-tip-meta mono">{tip.b.nama} · {tip.b.karya.tahun} · {tip.b.peran}</span>
     <span class="pp-tip-catatan">{tip.b.karya.catatan}</span>
-    <span class="pp-tip-buka mono">↗ KETUK UNTUK MEMBUKA DI ID.WIKIPEDIA</span>
+    <span class="pp-tip-buka mono">↗ KLIK — KARTUNYA TERBUKA DI BAWAH RAK</span>
   </div>
 {/if}
 
@@ -130,11 +148,21 @@
     background: color-mix(in oklab, var(--ink) 5%, transparent);
     position: relative; overflow: hidden;
     display: grid; align-content: end; justify-items: center;
-    padding-bottom: 8px;
+    padding: 0 0 8px; margin: 0; font: inherit; cursor: pointer;
     text-decoration: none;
     transition: height 0.35s var(--ease-out, ease), background 0.2s, flex-grow 0.35s var(--ease-out, ease);
   }
-  .pp-spine:hover:not(.hariIni) { background: color-mix(in oklab, var(--accent) 14%, transparent); flex-grow: 1.5; }
+  .pp-spine:hover:not(.hariIni), .pp-spine.terpin:not(.hariIni) { background: color-mix(in oklab, var(--accent) 14%, transparent); flex-grow: 1.5; }
+
+  /* the pinned card under the shelf */
+  .pp-pin { display: grid; gap: 5px; border: 1px solid var(--ink); padding: 12px 14px; margin-top: 12px; background: color-mix(in oklab, var(--ink) 3%, transparent); }
+  .pp-pin-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .pp-pin-karya { font-size: 16px; color: var(--ink); line-height: 1.15; }
+  .pp-pin-x { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 10px; padding: 2px 0; }
+  .pp-pin-x:hover { color: var(--accent); }
+  .pp-pin-meta { font-size: 8px; letter-spacing: 0.1em; color: var(--muted); }
+  .pp-pin-catatan { font-size: 12px; line-height: 1.55; color: var(--ink); }
+  .pp-pin .chip { justify-self: start; text-decoration: none; margin-top: 4px; }
   .pp-spine-judul {
     writing-mode: vertical-rl; transform: rotate(180deg);
     font-family: var(--font-fig); font-style: italic;

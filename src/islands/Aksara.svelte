@@ -215,21 +215,19 @@
         {/each}
       </div>
       <form class="term-in" onsubmit={(e) => { e.preventDefault(); jalankan(); }}>
-        <span class="mono term-prompt">&gt;</span>
+        <!-- wall-clock-anchored delay: this blinker and the pill's share a phase -->
+        <span class="mono term-prompt" style={`animation-delay: -${Date.now() % 1000}ms`}>&gt;</span>
         <input class="mono" bind:value={input} onkeydown={naikTurun} placeholder="tanya apa saja … atau: tur · fly_to 9412 · bantu" aria-label="Perintah Aksara" />
       </form>
       <div class="term-quick">
         <span class="term-quick-k mono">PINTASAN</span>
         <button class="chip hop" onclick={() => { tulis('> tur', 'in'); buka = false; void playTour(TUR_PEMBUKA); }}>▶ Tur 30 detik</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['lensa'] } })}>↓ Lensa Wilayah</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['kuasa'] } })}>↓ Eksekutif</button>
-        <button class="chip" onclick={() => dispatch({ cmd: 'highlight', params: { ids: ['hening'] } })}>↓ Yang tidak dihitung</button>
       </div>
     </div>
   {/if}
 
   <button class="pill mono" onclick={() => (buka = !buka)} aria-expanded={buka}>
-    <span class="pill-cursor">▮</span> AKSARA
+    <span class="pill-cursor" style={`animation-delay: -${Date.now() % 1000}ms`}>▮</span> AKSARA
   </button>
 </div>
 
@@ -337,7 +335,8 @@
   .term-log .r-err { color: var(--t-accent2); font-style: italic; padding-left: 12px; border-left: 1px dashed var(--t-line); }
 
   .term-in { display: flex; gap: 8px; align-items: center; padding: 11px 16px; border-top: 1px solid var(--t-line); background: color-mix(in oklab, var(--t-ink) 4%, transparent); }
-  .term-prompt { color: var(--t-accent); animation: blink 1.2s steps(1) infinite; }
+  /* same 1s clock as .pill-cursor; the wall-anchored delay keeps them in phase */
+  .term-prompt { color: var(--t-accent); animation: blink 1s steps(1) infinite; }
   .term-in input {
     flex: 1;
     background: none;

@@ -21,7 +21,6 @@ import PustakaPikiran from '../islands/PustakaPikiran.svelte';
 import TulisanPapan from '../islands/TulisanPapan.svelte';
 import YangBerubah from '../islands/YangBerubah.svelte';
 import IngatanHari from '../islands/IngatanHari.svelte';
-import Bahasa718 from '../islands/Bahasa718.svelte';
 import KasDaerah from '../islands/KasDaerah.svelte';
 import HutanHilang from '../islands/HutanHilang.svelte';
 import TuguRakyat from '../islands/TuguRakyat.svelte';
@@ -775,8 +774,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <p class="bab-dek">Satu dari ratusan suku kepulauan, berganti dua kali sehari, dan cara mereka berbicara.</p>
           </div>
         </header>
+        <!-- Bahasa718 archived 2026-07-13 (out of place standalone; the
+             profile's own BAHASA line carries the fact; a wiktionary-checked
+             kata-air inside WARISAN is the queued replacement) -->
         <WajahNusantara client:visible />
-        <Bahasa718 client:visible />
 
         <!-- HAYATI & EKOSISTEM: the Wallace/Weber lines as the control
              (§13.17 B.5). ZonaHayati absorbs the retired Daftar Merah (species

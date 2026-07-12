@@ -64,7 +64,13 @@ def assemble(
     if angka is None:
         return None
 
-    kliping_final = (sorted(kliping, key=lambda k: k.skor, reverse=True)[:_KLIPING_MAKS]
+    # rack order: the Eisenhower matrix (peringkat.py) leads, ownership
+    # diversity breaks ties; unranked runs (dead lane) keep diversity order
+    def _urut(k: Kliping) -> tuple[int, int]:
+        total = sum(v for v in (k.matriks or {}).values() if isinstance(v, int))
+        return (total * 10 + k.skor, k.skor)
+
+    kliping_final = (sorted(kliping, key=_urut, reverse=True)[:_KLIPING_MAKS]
                      if kliping else None)
     if kliping_meta is not None:
         # the meta's klaster counts what the front page actually shows, so it is
@@ -72,15 +78,35 @@ def assemble(
         kliping_meta = kliping_meta.model_copy(
             update={"klaster": len(kliping_final or [])})
 
+    # №1 (Yose, 2026-07-13): the top-ranked CLUSTER is the lead — verbatim
+    # Lane A headline, machine-ranked, clicking it opens its lembar. The desk
+    # findings follow, each carrying its honesty flag while its corpus is a
+    # committed seed.
+    temuan_live = [LiveTemuan(lens=t.lens, headline=t.headline, body=t.body,
+                              temuan_id=t.temuan_id, contoh=t.contoh or None)
+                   for t in ranked]
+    lead_id = lead.temuan_id
+    dek = "Temuan paling menonjol edisi ini, diperiksa terhadap sumbernya sebelum naik cetak."
+    if kliping_final:
+        utama = kliping_final[0]
+        temuan_live.insert(0, LiveTemuan(
+            lens="pers",
+            headline=utama.utama.judul,        # verbatim, Lane A
+            body=utama.sari or (utama.utama.ringkas or ""),
+            temuan_id=utama.id,
+        ))
+        lead_id = utama.id
+        dek = (utama.sari
+               or "Peristiwa dengan peringkat tertinggi edisi ini; judul apa adanya dari medianya.")
+
     return Edisi(
         edisi=edisi_no,
         terbit=terbit,
         sesi=sesi,  # type: ignore[arg-type]
         angka_edisi=angka,
-        lead=lead.temuan_id,
-        dek="Temuan paling menonjol edisi ini, diperiksa terhadap sumbernya sebelum naik cetak.",
-        temuan=[LiveTemuan(lens=t.lens, headline=t.headline, body=t.body,
-                           temuan_id=t.temuan_id) for t in ranked],
+        lead=lead_id,
+        dek=dek,
+        temuan=temuan_live,
         ticker=ticker,
         # kliping is Lane A pass-through (verbatim headlines, no model text), so
         # it skips the fact-gate and the lawyer by design
