@@ -35,10 +35,11 @@
   const fmt = new Intl.NumberFormat('id-ID');
 </script>
 
-<div class="sd card" data-no-stempel>
+<div class="sd" data-no-stempel>
   <div class="sd-head">
     <span class="eyebrow">SENSUS DIRI · CERMIN STATISTIK</span>
   </div>
+  <h3 class="display sd-title">Di mana kamu berdiri?</h3>
   <p class="sd-intro">Seluruh hitungan terjadi di perangkat ini; tidak ada data yang dikirim ke mana pun.</p>
 
   <div class="sd-form">
@@ -72,6 +73,10 @@
 </div>
 
 <style>
+  /* de-boxed: hairline top rule, kicker, content set on the paper —
+     the same grammar as the other three sittings on this spread */
+  .sd { border-top: var(--hairline); padding-top: 0.75rem; }
+  .sd-title { font-size: clamp(22px, 3vw, 32px); margin: 0.75rem 0 0; }
   .sd-intro { font-size: 13.5px; color: var(--muted); margin-top: 10px; max-width: 44ch; }
   .sd-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin-top: 16px; }
   .sd-field { display: grid; gap: 5px; }

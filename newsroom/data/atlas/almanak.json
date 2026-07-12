@@ -2,113 +2,119 @@
   {
     "seksi": "ANGKA",
     "judul": "Tentang ternak dan atmosfer",
-    "teks": "Indonesia memelihara sekitar 18,6 juta ekor sapi. Pencernaan mereka melepas metana setara ±{SAPI_CO2} juta ton CO₂ per tahun, kira-kira setara emisi tahunan 11 juta mobil.",
+    "teks": "Indonesia memelihara sekitar 18,6 juta ekor sapi. Pencernaan mereka melepas metana setara ±{SAPI_CO2} juta ton CO₂ per tahun, kira-kira setara emisi tahunan 11 juta mobil. Metana memerangkap panas jauh lebih kuat dari CO₂, tapi luruh lebih cepat—sehingga memangkasnya memberi kelegaan iklim paling cepat terasa.",
     "rumus": "18,6 jt ekor × 99 kg CH₄/th × GWP 28",
     "chips": ["bps · populasi ternak", "fao · faktor emisi"]
   },
   {
     "seksi": "ANGKA",
     "judul": "Tentang seluruh air tawar",
-    "teks": "Kurang dari 3 persen air di bumi adalah air tawar, dan sebagian besarnya terkunci di es. Bila seluruh air planet ini diciutkan jadi 100 gelas, air tawar yang bisa diminum manusia tak sampai satu sendok teh.",
+    "teks": "Kurang dari 3 persen air di bumi adalah air tawar, dan sebagian besarnya terkunci di es dan air tanah dalam. Bila seluruh air planet ini diciutkan jadi 100 gelas, air tawar permukaan yang bisa langsung diminum manusia—sungai dan danau—tak sampai satu tetes.",
     "rumus": "usgs water distribution · 2,5% tawar, 0,3% permukaan",
     "chips": ["usgs · siklus air"]
   },
   {
     "seksi": "ANGKA",
     "judul": "Tentang bobot yang menghangatkan",
-    "teks": "Setiap liter bensin yang dibakar melepas sekitar 2,3 kg CO₂—lebih berat dari bensinnya sendiri, karena tiap atom karbon mengikat dua atom oksigen dari udara saat terbakar.",
+    "teks": "Setiap liter bensin yang dibakar melepas sekitar 2,3 kg CO₂—lebih berat dari bensinnya sendiri. Rahasianya bukan sulap: tiap atom karbon dalam bahan bakar mengikat dua atom oksigen dari udara saat terbakar, dan oksigen itulah yang menambah bobotnya.",
     "rumus": "C₈H₁₈ + O₂ → CO₂ · faktor 2,31 kg/L",
     "chips": ["epa · emission factors"]
   },
   {
     "seksi": "ANGKA",
-    "judul": "Tentang batu dari langit",
-    "teks": "Seandainya asteroid berdiameter 500 meter jatuh di {KOTA} hari ini, radius kehancuran beratnya mencapai ±30 km, lebih luas dari kota itu sendiri. Probabilitas tahun ini: hampir nol. Almanak mencatatnya supaya angka besar punya pembanding.",
-    "rumus": "impact-scaling purdue/imperial · d=500 m, v=17 km/s",
-    "chips": ["earth impact effects program"]
+    "judul": "Tentang cahaya yang melintasi kepulauan",
+    "teks": "Cahaya menempuh bentangan Sabang–Merauke, sekitar 5.200 km, dalam ±0,017 detik. Tapi pesan internetmu butuh jauh lebih lama: di dalam serat optik cahaya melambat sekitar sepertiga, dan kabelnya tak pernah menempuh garis lurus—ia menyusuri palung, mendarat di stasiun pantai, dan berbelok mengikuti dasar laut.",
+    "rumus": "±5.200 km ÷ 299.792 km/s · indeks bias serat ~1,5",
+    "chips": ["codata · kecepatan cahaya", "geodesi bentang nusantara"]
   },
   {
     "seksi": "LANGIT",
     "judul": "Tentang siang yang nyaris tetap",
-    "teks": "Di khatulistiwa, panjang siang hampir tak berubah sepanjang tahun—sekitar 12 jam tiap hari. Kota-kota Indonesia tak pernah mengenal 'musim panas dengan malam pendek'; matahari terbit dan terbenam hampir pada jam yang sama, dari Januari sampai Desember.",
+    "teks": "Di khatulistiwa, panjang siang hampir tak berubah sepanjang tahun—sekitar 12 jam tiap hari. Kota-kota Indonesia tak pernah mengenal 'musim panas dengan malam pendek'; matahari terbit dan terbenam hampir pada jam yang sama, dari Januari sampai Desember. Yang berganti hanya musim hujan dan kemarau, bukan panjang harinya.",
     "rumus": "sudut deklinasi × lintang ≈ 0° · panjang siang ~12 jam",
     "chips": ["mekanika falak"]
   },
   {
     "seksi": "LANGIT",
     "judul": "Tentang bintang yang jadi penunjuk arah",
-    "teks": "Karena berada di dua belahan langit, pelaut Nusantara membaca Bintang Biduk di utara dan Gubug Penceng (Salib Selatan) di selatan sekaligus. Rasi Salib Selatan bahkan menghiasi banyak lambang laut, menunjuk kutub langit selatan yang tak berbintang terang.",
+    "teks": "Karena berada di dua belahan langit, pelaut Nusantara membaca Bintang Biduk di utara dan Gubug Penceng—Rasi Salib Selatan—di selatan sekaligus. Salib Selatan menghiasi banyak lambang laut karena menunjuk kutub langit selatan yang, tak seperti utara, tak punya bintang terang untuk menandainya.",
     "rumus": "crux · azimut kutub langit selatan",
-    "chips": ["navigasi bahari tradisional"]
+    "chips": ["navigasi bahari tradisional"],
+    "wikipedia": "Crux"
   },
   {
     "seksi": "LANGIT",
     "judul": "Tentang gerhana yang berulang",
-    "teks": "Gerhana matahari mengikuti siklus Saros selama 18 tahun 11 hari; gerhana yang mirip berulang di garis yang bergeser sepertiga bumi ke barat. Gerhana total 2016 yang melintasi Sumatra sampai Maluku akan 'kembali' pada 2034, tergeser jauh ke Afrika dan Asia.",
+    "teks": "Gerhana matahari mengikuti siklus Saros selama 18 tahun 11 hari; gerhana yang mirip berulang di garis yang bergeser sepertiga bumi ke barat tiap kalinya. Gerhana total 2016 yang melintasi Sumatra sampai Maluku akan 'kembali' pada 2034—tergeser jauh ke Afrika dan Asia, jejak matematis yang sama di tempat yang berbeda.",
     "rumus": "siklus saros · 6.585,32 hari",
     "chips": ["nasa eclipse catalog"]
   },
   {
     "seksi": "LANGIT",
     "judul": "Tentang satelit yang menua",
-    "teks": "Satelit di orbit rendah terus digerus sisa atmosfer dan perlahan turun; tanpa dorongan, kebanyakan jatuh dalam beberapa tahun. Di orbit yang lebih tinggi, sampah antariksa bisa bertahan berabad-abad—warisan langit yang tak terlihat dari tanah.",
+    "teks": "Satelit di orbit rendah terus digerus sisa atmosfer yang teramat tipis dan perlahan turun; tanpa dorongan berkala, kebanyakan jatuh dalam beberapa tahun. Di orbit yang lebih tinggi, sampah antariksa bisa bertahan berabad-abad—warisan langit yang tak terlihat dari tanah, tapi makin ramai tiap peluncuran.",
     "rumus": "hambatan atmosfer · orbital decay",
     "chips": ["esa space debris office"]
   },
   {
     "seksi": "BUMI",
     "judul": "Tentang lempeng yang bertumbukan",
-    "teks": "Indonesia duduk di pertemuan tiga lempeng raksasa—Indo-Australia, Eurasia, dan Pasifik—yang bergerak beberapa sentimeter tiap tahun, sekitar secepat kuku jari tumbuh. Tumbukan itulah yang menempa deret gunung api dan memicu gempa besar berkala.",
+    "teks": "Indonesia duduk di pertemuan tiga lempeng raksasa—Indo-Australia, Eurasia, dan Pasifik—yang bergerak beberapa sentimeter tiap tahun, sekitar secepat kuku jari tumbuh. Tumbukan lambat itulah yang menempa deret gunung api sepanjang kepulauan dan menyimpan tegangan yang sesekali lepas sebagai gempa besar.",
     "rumus": "tektonik lempeng · laju ~7 cm/th",
     "chips": ["badan geologi", "usgs tectonics"]
   },
   {
     "seksi": "BUMI",
     "judul": "Tentang tanah yang menyimpan karbon",
-    "teks": "Lahan gambut Indonesia menyimpan karbon puluhan kali lipat luasannya, tertimbun ribuan tahun sebagai sisa tumbuhan yang tak sempat membusuk. Bila dikeringkan dan terbakar, simpanan purba itu terlepas ke udara dalam hitungan musim.",
+    "teks": "Lahan gambut Indonesia menyimpan karbon puluhan kali lipat luasannya, tertimbun ribuan tahun sebagai sisa tumbuhan yang tergenang air sehingga tak sempat membusuk. Bila dikeringkan dan terbakar, simpanan purba itu terlepas ke udara dalam hitungan musim—melepas dalam sekejap apa yang butuh milenium untuk terkumpul.",
     "rumus": "stok karbon gambut · giga-ton per juta hektar",
-    "chips": ["brg · restorasi gambut"]
+    "chips": ["brg · restorasi gambut"],
+    "wikipedia": "Lahan gambut"
   },
   {
     "seksi": "BUMI",
     "judul": "Tentang selat yang jadi gerbang laut",
-    "teks": "Sekitar sepertiga perdagangan laut dunia melewati Selat Malaka, salah satu jalur tersibuk di planet ini. Di titik tersempit lebarnya hanya belasan kilometer—celah antara Sumatra dan Semenanjung Malaya yang menautkan Samudra Hindia dan Laut Tiongkok Selatan.",
+    "teks": "Sekitar sepertiga perdagangan laut dunia melewati Selat Malaka, salah satu jalur tersibuk di planet ini. Di titik tersempit lebarnya hanya belasan kilometer—celah antara Sumatra dan Semenanjung Malaya yang menautkan Samudra Hindia dengan Laut Tiongkok Selatan, dan menjadikan perairan ini urat nadi ekonomi dunia.",
     "rumus": "geografi maritim · ~90.000 kapal/tahun",
-    "chips": ["imo · jalur pelayaran"]
+    "chips": ["imo · jalur pelayaran"],
+    "wikipedia": "Selat Malaka"
   },
   {
     "seksi": "BUMI",
     "judul": "Tentang arus yang melintasi kepulauan",
-    "teks": "Arus Lintas Indonesia (Arlindo) mengalirkan air hangat dari Samudra Pasifik ke Hindia lewat sela-sela pulau, mengangkut panas dalam jumlah yang ikut mengatur iklim dunia. Kepulauan ini bukan sekadar peta—ia katup termostat lautan global.",
+    "teks": "Arus Lintas Indonesia (Arlindo) mengalirkan air hangat dari Samudra Pasifik ke Hindia lewat sela-sela pulau, mengangkut panas dalam jumlah yang ikut mengatur iklim dunia. Kepulauan ini bukan sekadar peta—ia katup termostat lautan global, tempat panas samudra berpindah antar belahan bumi.",
     "rumus": "indonesian throughflow · ~15 sverdrup",
     "chips": ["bmkg · oseanografi"]
   },
   {
     "seksi": "HAYAT",
     "judul": "Tentang jantung segitiga karang",
-    "teks": "Perairan Indonesia adalah pusat Segitiga Karang, menampung sekitar tiga perempat spesies karang dunia dan ribuan jenis ikan karang. Satu petak terumbu di Raja Ampat bisa memuat lebih banyak jenis ikan daripada seluruh Laut Karibia.",
+    "teks": "Perairan Indonesia adalah pusat Segitiga Karang, menampung sekitar tiga perempat spesies karang dunia dan ribuan jenis ikan karang. Satu petak terumbu di Raja Ampat bisa memuat lebih banyak jenis ikan daripada seluruh Laut Karibia—keragaman yang tak tertandingi di lautan mana pun.",
     "rumus": "coral triangle · ~76% spesies karang dunia",
-    "chips": ["lipi · biota laut", "coral triangle initiative"]
+    "chips": ["lipi · biota laut", "coral triangle initiative"],
+    "wikipedia": "Segitiga Terumbu Karang"
   },
   {
     "seksi": "HAYAT",
     "judul": "Tentang pohon yang berbunga serentak",
-    "teks": "Di hutan Kalimantan dan Sumatra, ratusan jenis pohon dari famili Dipterocarpaceae kadang berbunga dan berbuah serentak—'mast fruiting'—sekali dalam beberapa tahun, dipicu kemarau dan suhu. Seluruh hutan seakan menahan napas, lalu berbuah bersama-sama.",
+    "teks": "Di hutan Kalimantan dan Sumatra, ratusan jenis pohon dari famili Dipterocarpaceae kadang berbunga dan berbuah serentak—'mast fruiting'—sekali dalam beberapa tahun, dipicu kemarau dan turunnya suhu. Seluruh hutan seakan menahan napas bertahun-tahun, lalu berbuah bersama-sama sampai pemangsa biji kekenyangan dan sebagian benih lolos jadi pohon.",
     "rumus": "mast fruiting · siklus 2–7 tahun",
     "chips": ["biologi hutan tropis"]
   },
   {
     "seksi": "HAYAT",
     "judul": "Tentang bunga tanpa akar dan daun",
-    "teks": "Rafflesia arnoldii, bunga tunggal terbesar di dunia, tak berakar, berdaun, atau berbatang. Ia hidup sebagai parasit di dalam sulur inangnya, muncul hanya untuk mekar selebar payung selama beberapa hari, mengeluarkan bau bangkai untuk memikat lalat.",
+    "teks": "Rafflesia arnoldii, bunga tunggal terbesar di dunia, tak berakar, berdaun, atau berbatang. Ia hidup sebagai parasit di dalam sulur inangnya, muncul hanya untuk mekar selebar payung selama beberapa hari, lalu mengeluarkan bau bangkai untuk memikat lalat penyerbuk—memalsukan kematian demi meneruskan hidup.",
     "rumus": "rafflesia arnoldii · diameter hingga ~1 m",
-    "chips": ["kebun raya bogor"]
+    "chips": ["kebun raya bogor"],
+    "wikipedia": "Rafflesia arnoldii"
   },
   {
     "seksi": "HAYAT",
     "judul": "Tentang burung yang memanaskan telurnya dari bumi",
-    "teks": "Burung maleo di Sulawesi tak mengerami telurnya. Ia menguburnya di pasir pantai atau tanah bervulkanik yang hangat, membiarkan panas bumi menetaskannya. Anak maleo menetas sudah bisa terbang—tanpa pernah bertemu induknya.",
+    "teks": "Burung maleo di Sulawesi tak mengerami telurnya. Ia menguburnya di pasir pantai atau tanah bervulkanik yang hangat, membiarkan panas bumi menetaskannya. Anak maleo menetas sudah berbulu lengkap dan bisa terbang—menggali keluar dari pasir dan hidup mandiri tanpa pernah bertemu induknya.",
     "rumus": "inkubasi geotermal · macrocephalon maleo",
-    "chips": ["gbif · maleo"]
+    "chips": ["gbif · maleo"],
+    "wikipedia": "Maleo"
   }
 ]

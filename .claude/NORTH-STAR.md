@@ -1598,6 +1598,44 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-12 · WAVE 4 — Act III magazine polish (+ waves 1–3 pushed)
+
+Waves 1–3 (perf/scroll/dedupe · kliping/aksara/TOC/viz · Act III content)
+pushed and deployed green (`165a196`). Wave 4, all verified by build +
+playwright shots at 1280/390 on the production preview:
+
+- **ZonaHayati** — hover is a mouse-only preview card; click/tap on any
+  row (or the showcase) opens a full DOSIR sheet: 16:9 image, IUCN meta
+  grid, endemik pull-line, live id.wikipedia lead (may only lengthen the
+  reviewed text), scroll-locked, Escape/backdrop closes. LC added to the
+  risk order + labels. Phone never depends on hover.
+- **IngatanHari** — rebuilt as the gallery's mirror (text left, image
+  right): big year, reviewed line + live article extract with drop cap,
+  the event article's own lead image, and a LEMBAR BERIKUT ledger (3
+  nearest anniversaries, each linked). No more one-sentence plate.
+- **AlmanakSains** — full spread: four shelves (LANGIT/BUMI/HAYAT/ANGKA)
+  visible at once, each rotating its own plate by calendar; computed moon
+  band (phase + illumination + equator day length); plates with a
+  `wikipedia` field pull the article lead image (Action API,
+  `pithumbsize=900`, redirects). `almanak.json` enriched to 16 plates.
+- **SAFETY (do not reintroduce)**: the ANGKA asteroid plate ("destruction
+  radius over {KOTA}") was REMOVED entirely at Yose's direction — the
+  session kept tripping model safety flags and blast-radius-over-a-city
+  framing was the prime suspect. Replacement plate: light crossing
+  Sabang–Merauke (geodesy + CODATA). Keep almanak plates clear of
+  impact/weapons-effects framing.
+- **RimbaHidup v2** — physics now TIME-normalized (the old per-frame step
+  raced on 144 Hz laptops and crawled on phones); flock scales with
+  viewport area and self-culls below ~30 fps; transparent canvas straight
+  on the act's paper between two hairlines (flat `#ece2cb` slab gone);
+  calligraphic ink strokes, ~10% accent. Same seeded boids + shimmer.
+- **Ruang Main** — 2×2 arcade spread under a real `bab-kepala` header,
+  dashed centre rule, wide gutters; SensusDiri de-boxed and titled ("Di
+  mana kamu berdiri?"). Fixed a margin-collapse strip of body background
+  that opened between the acts (top space is section padding now).
+- **Lampiran rhythm** — `.act-atlas .bab-kepala` gets
+  `margin-top: clamp(64px, 10vw, 128px)`: each lampiran is its own sitting.
+
 ### 2026-07-11 · HANDOFF WAVE — laptop migration + lembaran diagnosis
 
 Yose moves to a laptop; this wave makes the repo the complete memory:
