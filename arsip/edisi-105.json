@@ -1,6 +1,6 @@
 {
  "edisi": 105,
- "terbit": "2026-07-12T17:51:31.125842+00:00",
+ "terbit": "2026-07-12T18:41:12.372886+00:00",
  "sesi": "pagi",
  "angka": {
   "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
@@ -8,29 +8,39 @@
  },
  "kliping": [
   {
-   "id": "klp-105-01",
-   "judul": "Eks Jampidsus Febrie Adriansyah ditetapkan sebagai tersangka kasus dugaan korupsi – Apa yang sejauh ini diketahui?",
-   "skor": 31
-  },
-  {
-   "id": "klp-105-02",
-   "judul": "Argentina tantang Inggris di semifinal Piala Dunia 2026 - Kenangan gol 'Tangan Tuhan' Maradona hingga kartu merah Beckham",
-   "skor": 28
-  },
-  {
-   "id": "klp-105-03",
-   "judul": "Cerita Prabowo Gagas Koperasi Merah Putih, karena Tak Ingin Warga Kesulitan Kebutuhan Pangan",
-   "skor": 27
-  },
-  {
    "id": "klp-105-04",
    "judul": "Iran Balas Kebiadaban AS dengan Menghancurkan Pangkalan Militernya di Kuwait, Qatar, dan Bahrain",
    "skor": 22
   },
   {
-   "id": "klp-105-05",
-   "judul": "Hasil Final HSL All-Star U-18 2026: Akademi Persib Bandung Putri Pesta Lima Gol dan Raih Gelar Juara",
-   "skor": 15
+   "id": "klp-105-02",
+   "judul": "Cerita Prabowo Gagas Koperasi Merah Putih, karena Tak Ingin Warga Kesulitan Kebutuhan Pangan",
+   "skor": 30
+  },
+  {
+   "id": "klp-105-47",
+   "judul": "Venezuela diguncang gempa magnitudo 7,5 dan 7,2, korban tewas capai puluhan jiwa",
+   "skor": 6
+  },
+  {
+   "id": "klp-105-01",
+   "judul": "Eks Jampidsus Febrie Adriansyah ditetapkan sebagai tersangka kasus dugaan korupsi – Apa yang sejauh ini diketahui?",
+   "skor": 31
+  },
+  {
+   "id": "klp-105-08",
+   "judul": "ASN Diizinkan Antar Anak di Hari Pertama Sekolah, Menteri PANRB: Tak Boleh Mengurangi Kualitas Pelayanan Publik",
+   "skor": 14
+  },
+  {
+   "id": "klp-105-17",
+   "judul": "Ledakan di Purwakarta, 5 Bangunan-1 Masjid Hancur, Satu Orang Tewas",
+   "skor": 9
+  },
+  {
+   "id": "klp-105-36",
+   "judul": "10 tanda penyakit jantung yang perlu diwaspadai, nyeri dada bukan satu-satunya gejala",
+   "skor": 6
   },
   {
    "id": "klp-105-06",
@@ -43,29 +53,19 @@
    "skor": 15
   },
   {
-   "id": "klp-105-08",
-   "judul": "ASN Diizinkan Antar Anak di Hari Pertama Sekolah, Menteri PANRB: Tak Boleh Mengurangi Kualitas Pelayanan Publik",
-   "skor": 14
-  },
-  {
-   "id": "klp-105-09",
-   "judul": "Sekda Jateng Sumarno Ajak Peserta Funwak UMKM Memperkuat Gerakan Koperasi Sebagai Pilar Ekonomi Kerakyatan",
-   "skor": 14
-  },
-  {
-   "id": "klp-105-10",
-   "judul": "Prabowo: Pemimpin yang Anjurkan Bakar-bakar, Itu Pemimpin Pengkhianat!",
-   "skor": 13
-  },
-  {
    "id": "klp-105-11",
-   "judul": "FKN-08 Gelar Konsolidasi Rakyat Organisasi Relawan Pendukung Prabowo, Sepakati 4 Hal Penting",
-   "skor": 12
-  },
-  {
-   "id": "klp-105-12",
    "judul": "Pikap Terlibat Kecelakaan Maut di Indramayu Bawa 17 Orang Rombongan Pengantin",
    "skor": 12
+  },
+  {
+   "id": "klp-105-25",
+   "judul": "Iskandar Zulkarnain Tawarkan Model Hukum Baru untuk Hubungan Dokter dan Rumah Sakit",
+   "skor": 9
+  },
+  {
+   "id": "klp-105-26",
+   "judul": "Baleg DPR Sangkal Kabar RUU Perampasan Aset Dicoret dari Prolegnas Prioritas 2026",
+   "skor": 8
   }
  ],
  "janji": [
