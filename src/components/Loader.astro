@@ -1,12 +1,12 @@
 ---
 /**
- * The press presents the paper. A short ceremony, never a wait:
- * sheets feed through, the masthead stamps in, the whole plate wipes up
- * onto a page painted the same khaki, so the reveal is seamless.
- * Skippable on click/keypress; repeat visits get the micro version;
- * reduced motion gets none at all. Logic lives in scripts/choreo.ts.
- * The plate wears the instrument chrome (registration corners, serial,
- * date) and reads its edition facts from EDISI — never a hardcoded run.
+ * The press presents the paper — one clean, weighty ceremony. A dark plate,
+ * the wordmark rising out of its own baseline, the run's paperwork in the
+ * corners, then the whole plate lifts like a theatre curtain (its orange hem
+ * sweeping up last). No ornament, no fake progress. Skippable on
+ * click/keypress; repeat visits skip it; reduced motion gets none at all.
+ * Timeline lives in scripts/choreo.ts. Edition facts read from EDISI —
+ * never a hardcoded run.
  */
 import { EDISI } from '../lib/data/edisi';
 ---
@@ -22,16 +22,12 @@ import { EDISI } from '../lib/data/edisi';
   <p class="l-serial mono">{EDISI.serial}</p>
   <p class="l-tanggal mono">{EDISI.tanggal.toUpperCase()}</p>
   <div class="l-inner">
-    <p class="l-status mono"><span id="l-status-text">MENYUSUN EDISI #{EDISI.nomor}</span><span class="l-cursor">▮</span></p>
-    <div class="l-sheets" aria-hidden="true">
-      <i class="l-sheet" data-sheet="atlas"></i>
-      <i class="l-sheet" data-sheet="dinas"></i>
-      <i class="l-sheet" data-sheet="orange"></i>
+    <div class="l-mast display" id="l-mast">
+      <span class="l-line"><span class="l-in">DETAK</span></span>
+      <span class="l-line"><span class="l-in">DETIK</span></span>
     </div>
-    <div class="l-mast display" id="l-mast"><span class="l-line">DETAK</span><span class="l-line">DETIK</span></div>
-    <p class="l-folio mono">EDISI #{EDISI.nomor} · DICETAK OTOMATIS {EDISI.dicetak} · GRATIS · TERBUKA · BERCATATAN</p>
+    <p class="l-edisi mono">EDISI #{EDISI.nomor} · DICETAK OTOMATIS {EDISI.dicetak}</p>
   </div>
-  <p class="l-kaki mono">KORAN SIPIL · DICETAK MESIN, DIPERIKSA HUKUM · TIDAK ADA PELACAK</p>
   <div class="l-stripe"></div>
 </div>
 
@@ -45,9 +41,11 @@ import { EDISI } from '../lib/data/edisi';
     display: grid;
     place-items: center;
     cursor: pointer;
+    will-change: transform;
   }
   #loader.is-done { display: none; }
   :global(html.loader-seen) #loader { display: none; }
+  :global(html.no-js) #loader { display: none; }
 
   /* the plate chrome: registration corners + the run's paperwork */
   .l-reg { position: absolute; width: 15px; height: 15px; opacity: 0.5; }
@@ -60,50 +58,28 @@ import { EDISI } from '../lib/data/edisi';
   .l-reg.br { bottom: 18px; right: 18px; transform: scale(-1); }
   .l-serial { position: absolute; top: 22px; left: 44px; font-size: 9px; letter-spacing: 0.22em; color: #8b857a; }
   .l-tanggal { position: absolute; top: 22px; right: 44px; font-size: 9px; letter-spacing: 0.22em; color: #8b857a; }
-  .l-kaki {
-    position: absolute; left: 0; right: 0; bottom: 22px;
-    text-align: center; font-size: 8px; letter-spacing: 0.26em; color: #5f594e;
-  }
   @media (max-width: 640px) { .l-serial, .l-tanggal { display: none; } }
 
   .l-inner { text-align: center; padding: 24px; }
-  .l-status {
-    font-size: 10.5px;
-    letter-spacing: 0.24em;
-    color: #8b857a;
-    margin-bottom: 28px;
-    min-height: 1.6em;
-  }
-  .l-cursor { margin-left: 6px; color: #c9b27e; animation: l-blink 0.9s steps(1) infinite; }
-  @keyframes l-blink { 50% { opacity: 0; } }
-  .l-sheets { display: flex; flex-direction: column; gap: 7px; align-items: center; margin-bottom: 32px; }
-  .l-sheet {
-    display: block;
-    height: 6px;
-    width: min(320px, 60vw);
-    transform: scaleX(0);
-    transform-origin: left center;
-  }
-  .l-sheet[data-sheet='atlas'] { background: #efe6d2; }
-  .l-sheet[data-sheet='dinas'] { background: #d8ceb2; }
-  .l-sheet[data-sheet='orange'] { background: #e8500a; }
   .l-mast {
     font-family: 'Archivo Variable', sans-serif;
     font-weight: 800;
     letter-spacing: -0.02em;
-    font-size: clamp(56px, 13vw, 150px);
-    line-height: 0.92;
+    font-size: clamp(64px, 15vw, 170px);
+    line-height: 0.9;
     color: #f2efe6;
   }
-  .l-mast :global(.glyph) { display: inline-block; }
-  .l-line { display: block; white-space: nowrap; }
-  .l-folio {
-    margin-top: 28px;
-    font-size: 9.5px;
-    letter-spacing: 0.2em;
+  /* each line is masked by its own box; the word rises out of the baseline */
+  .l-line { display: block; overflow: hidden; white-space: nowrap; }
+  .l-in { display: block; transform: translateY(112%); }
+  .l-edisi {
+    margin-top: 26px;
+    font-size: 9px;
+    letter-spacing: 0.24em;
     color: #8b857a;
     opacity: 0;
   }
+  /* the curtain's hem: rides the plate's bottom edge, sweeps up with it */
   .l-stripe {
     position: absolute;
     left: 0;
@@ -111,8 +87,6 @@ import { EDISI } from '../lib/data/edisi';
     height: 3px;
     width: 100%;
     background: #e8500a;
-    transform: scaleX(0);
-    transform-origin: left center;
   }
   @media (prefers-reduced-motion: reduce) {
     #loader { display: none; }

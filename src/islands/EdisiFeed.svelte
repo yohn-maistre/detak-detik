@@ -9,7 +9,7 @@
       titled the story (verbatim, Lane A), and the full coverage list. Only
       outlet rows link out. Deep links: #/kliping/{id}. */
   import { onMount } from 'svelte';
-  import { onEdisi, BAKED, type LiveKliping, type LiveKlipingItem, type LiveKlipingMeta } from '../lib/edition';
+  import { onEdisi, BAKED, type LiveKliping, type LiveKlipingMeta } from '../lib/edition';
   import { lockScroll, unlockScroll } from '../lib/scroll-lock';
 
   type LeadContoh = { headline: string; dek: string; chips: string[]; stamp: string; serial: string };
@@ -69,18 +69,6 @@
   let buka = $state<LiveKliping | null>(null);
   let tutupEl: HTMLButtonElement | undefined = $state();
   const lembarIsi = $derived(buka ? (buka.liputan?.length ? buka.liputan : [buka.utama]) : []);
-
-  /** SUARA (v2a): how each ownership group titled the story — a pure Lane A
-      rearrangement: one verbatim headline per group, no synthesis. */
-  const suara = $derived.by(() => {
-    if (!buka) return [];
-    const byGrup = new Map<string, LiveKlipingItem>();
-    for (const l of buka.liputan ?? []) {
-      const g = l.independen ? `INDEPENDEN · ${l.media.toUpperCase()}` : (l.grup ?? 'GRUP TIDAK TERCATAT').toUpperCase();
-      if (!byGrup.has(g)) byGrup.set(g, l);
-    }
-    return [...byGrup.entries()].map(([grup, item]) => ({ grup, item }));
-  });
 
   $effect(() => {
     if (!buka) return;
@@ -252,25 +240,6 @@
       </div>
     {/if}
 
-    {#if suara.length >= 2}
-      <div class="lk-sec">
-        <span class="lk-sec-k mono">JUDUL PER GRUP KEPEMILIKAN</span>
-        <ol class="lk-suara">
-          {#each suara as s (s.grup)}
-            <li>
-              <span class="lk-suara-grup mono" class:independen={s.item.independen}>{s.grup}</span>
-              {#if s.item.url}
-                <a class="lk-suara-judul" href={s.item.url} target="_blank" rel="noopener">“{s.item.judul}”</a>
-              {:else}
-                <span class="lk-suara-judul">“{s.item.judul}”</span>
-              {/if}
-              <span class="lk-suara-media mono">{s.item.media}</span>
-            </li>
-          {/each}
-        </ol>
-      </div>
-    {/if}
-
     <div class="lk-sec">
       <span class="lk-sec-k mono">KUMPULAN SUMBER · TAUTAN MEMBUKA SITUS ASLINYA</span>
       <ol class="lk-liputan">
@@ -425,15 +394,6 @@
   .lk-butir li { display: grid; gap: 2px; padding-left: 16px; position: relative; font-size: 14px; line-height: 1.5; max-width: 62ch; }
   .lk-butir li::before { content: '■'; position: absolute; left: 0; top: 2px; font-size: 8px; color: var(--accent); }
   .lk-butir-cite { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); }
-
-  .lk-suara { list-style: none; margin: 0; padding: 0; }
-  .lk-suara li { display: grid; gap: 3px; padding: 9px 0; border-top: 1px dashed var(--line-soft); }
-  .lk-suara li:first-child { border-top: none; }
-  .lk-suara-grup { font-size: 9px; letter-spacing: 0.14em; color: var(--muted); }
-  .lk-suara-grup.independen { color: var(--accent); }
-  .lk-suara-judul { font-size: 14.5px; line-height: 1.45; color: var(--ink); text-decoration: none; max-width: 64ch; }
-  a.lk-suara-judul:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .lk-suara-media { font-size: 8.5px; letter-spacing: 0.12em; color: var(--muted); }
 
   .lk-liputan { list-style: none; margin: 0; padding: 0; }
   .lk-liputan li { display: grid; grid-template-columns: 110px 130px 1fr; gap: 12px; align-items: baseline; padding: 9px 0; border-top: 1px dashed var(--line-soft); font-size: 13.5px; }

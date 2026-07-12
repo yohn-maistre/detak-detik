@@ -13,6 +13,7 @@
    */
   import { onMount } from 'svelte';
   import ALMANAK from '../../newsroom/data/atlas/almanak.json';
+  import JURNAL from '../../newsroom/data/atlas/jurnal.json';
 
   type Plat = (typeof ALMANAK)[number] & { wikipedia?: string };
   const HARI = Math.floor(Date.now() / 86_400_000);
@@ -46,11 +47,16 @@
   const R = 26, C = 30;
   const jalur = jalurTerang(p, R, C);
 
-  // ── DARI JURNAL: recent Indonesia-relevant papers, live from Crossref
-  //    (keyless, open CORS). Titles print VERBATIM in their source language
-  //    (Lane A); every row links to its DOI. A dark fetch prints as absence,
-  //    never as silence. The newsroom's almanak desk will replace this raw
-  //    shelf with gated summaries once the LLM lane has keys. ──
+  // ── DARI JURNAL, two tiers. Preferred: the newsroom's STASH — the model
+  //    judged the month's Crossref batch for TRUE Indonesia relevance and
+  //    left one plain line per pick saying why (Lane C, gated, committed to
+  //    the repo and baked at deploy). Fallback when the stash is empty: the
+  //    raw keyword shelf, live from Crossref (keyless, open CORS). Titles
+  //    print VERBATIM in their source language (Lane A); every row links to
+  //    its DOI. A dark fetch prints as absence, never as silence. ──
+  type Pilihan = { judul: string; wadah: string; tanggal: string; doi: string; alasan: string };
+  const stash: Pilihan[] = ((JURNAL as { pilihan?: Pilihan[] }).pilihan ?? []).slice(0, 8);
+  const stashSejak = (JURNAL as { diperbarui?: string | null }).diperbarui?.slice(0, 10) ?? '';
   type Karya = { judul: string; wadah: string; tanggal: string; doi: string };
   let jurnal = $state<Karya[]>([]);
   let jurnalGelap = $state(false);
@@ -93,7 +99,7 @@
   // ── plate images: the named article's lead, at a real width ──
   let imgs = $state<Record<string, string>>({});
   onMount(() => {
-    void ambilJurnal();
+    if (!stash.length) void ambilJurnal(); // the judged stash outranks the raw query
     for (const r of rak) {
       const judul = r.plat?.wikipedia;
       if (!judul) continue;
@@ -161,34 +167,66 @@
     </aside>
   </div>
 
-  <!-- ── the other shelves: a ruled index, each on its own leaf ── -->
+  <!-- ── the other shelves, fully unfolded: each a broadsheet band of its
+       own, image and writing at full measure, sides alternating ── -->
   <div class="alm-rak">
-    {#each lainnya as r (r.seksi)}
-      <article class="alm-row" data-seksi={r.seksi}>
-        <div class="alm-row-tag mono">
+    {#each lainnya as r, i (r.seksi)}
+      <article class="alm-band" data-seksi={r.seksi} class:balik={i % 2 === 1}>
+        <header class="alm-band-head mono">
           <span class="alm-seksi-tag">{r.seksi}</span>
-          <span class="alm-row-nama">{SEKSI_LABEL[r.seksi]}</span>
+          <span class="alm-seksi-nama">{SEKSI_LABEL[r.seksi]}</span>
           <span class="alm-plat-no">PLAT {r.no}/{r.dari}</span>
+        </header>
+        <div class="alm-band-body">
+          <div class="alm-band-teks-w">
+            <h4 class="alm-band-judul display">{r.plat.judul}</h4>
+            <p class="alm-band-teks" class:tanpa-img={!imgs[r.seksi]}>{isi(r.plat.teks)}</p>
+            <p class="alm-rumus mono">⊙ {r.plat.rumus}</p>
+            <div class="alm-chips">
+              {#each r.plat.chips as c (c)}<span class="chip" data-no-link>{c}</span>{/each}
+            </div>
+          </div>
+          {#if imgs[r.seksi]}
+            <figure class="alm-band-img">
+              <img src={imgs[r.seksi]} alt={r.plat.wikipedia} loading="lazy" />
+              <figcaption class="mono">GAMBAR DARI ARTIKELNYA DI ID.WIKIPEDIA · {r.plat.wikipedia?.toUpperCase()}</figcaption>
+            </figure>
+          {/if}
         </div>
-        <div class="alm-row-isi">
-          <h4 class="alm-row-judul fig">{r.plat.judul}</h4>
-          <p class="alm-row-teks">{isi(r.plat.teks)}</p>
-          <p class="alm-rumus mono">⊙ {r.plat.rumus} · {r.plat.chips.join(' · ')}</p>
-        </div>
-        {#if imgs[r.seksi]}
-          <div class="alm-row-img"><img src={imgs[r.seksi]} alt={r.plat.wikipedia} loading="lazy" /></div>
-        {/if}
       </article>
     {/each}
   </div>
 
-  <!-- ── DARI JURNAL: what the presses of science printed this quarter ── -->
+  <!-- ── DARI JURNAL: what the presses of science printed — the newsroom's
+       judged stash when it exists, the raw keyword shelf otherwise ── -->
   <div class="alm-jurnal">
     <div class="alm-jurnal-head mono">
-      <span class="alm-jurnal-k">DARI JURNAL · TERBIT TERBARU MENYEBUT INDONESIA</span>
-      <span class="alm-jurnal-s">⊙ crossref · api langsung · 90 hari terakhir</span>
+      {#if stash.length}
+        <span class="alm-jurnal-k">DARI JURNAL · DINILAI MESIN: BENAR-BENAR TENTANG INDONESIA</span>
+        <span class="alm-jurnal-s">⊙ crossref · dipilih lane C tiap terbit{stashSejak ? ` · diperbarui ${stashSejak}` : ''}</span>
+      {:else}
+        <span class="alm-jurnal-k">DARI JURNAL · TERBIT TERBARU MENYEBUT INDONESIA</span>
+        <span class="alm-jurnal-s">⊙ crossref · api langsung · 90 hari terakhir</span>
+      {/if}
     </div>
-    {#if jurnal.length}
+    {#if stash.length}
+      <ol class="alm-jurnal-rows">
+        {#each stash as k (k.doi)}
+          <li>
+            <a class="alm-jurnal-row" href={`https://doi.org/${k.doi}`} target="_blank" rel="noopener">
+              <span class="alm-jurnal-tgl mono">{k.tanggal || '—'}</span>
+              <span class="alm-jurnal-isi">
+                <b class="alm-jurnal-judul fig">{k.judul}</b>
+                {#if k.wadah}<i class="alm-jurnal-wadah">{k.wadah}</i>{/if}
+                {#if k.alasan}<span class="alm-jurnal-alasan">{k.alasan} <i class="mono">— penilai mesin</i></span>{/if}
+              </span>
+              <span class="alm-jurnal-panah" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        {/each}
+      </ol>
+      <p class="alm-jurnal-cat mono">JUDUL APA ADANYA DARI PENERBITNYA · SATU KALIMAT ALASAN OLEH MESIN, DIPERIKSA ATURAN · TIAP BARIS MEMBUKA DOI-NYA</p>
+    {:else if jurnal.length}
       <ol class="alm-jurnal-rows">
         {#each jurnal as k (k.doi)}
           <li>
@@ -267,23 +305,33 @@
   .alm-langit-baris dd { font-size: 8.5px; letter-spacing: 0.08em; color: var(--ink); margin: 0; text-align: right; }
   .alm-langit-cat { font-size: 7px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); opacity: 0.85; }
 
-  /* ── the ruled index of the other shelves ── */
+  /* ── the other shelves, unfolded into full broadsheet bands ── */
   .alm-rak { display: grid; border-top: 2px solid var(--line); }
-  .alm-row {
-    display: grid; grid-template-columns: 170px 1fr 150px; gap: clamp(16px, 3vw, 36px);
-    align-items: start; padding: clamp(18px, 2.6vw, 26px) 0;
+  .alm-band {
+    display: grid; gap: 14px;
+    padding: clamp(26px, 4vw, 44px) 0;
     border-bottom: 1px solid var(--line-soft);
   }
-  .alm-row:last-child { border-bottom: none; }
-  @media (max-width: 720px) { .alm-row { grid-template-columns: 1fr; gap: 10px; } }
-  .alm-row-tag { display: grid; gap: 4px; align-content: start; }
-  .alm-row-nama { font-size: 8.5px; letter-spacing: 0.1em; color: var(--muted); font-style: italic; }
-  .alm-row-isi { display: grid; gap: 7px; min-width: 0; }
-  .alm-row-judul { font-size: clamp(18px, 2.2vw, 24px); color: var(--ink); line-height: 1.1; }
-  .alm-row-teks { font-size: 13.5px; line-height: 1.62; color: var(--ink); max-width: 66ch; }
-  .alm-row-img { overflow: hidden; border: 1px solid var(--line); background: #ece1c9; }
-  .alm-row-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; filter: saturate(0.94); }
-  @media (max-width: 720px) { .alm-row-img { max-width: 240px; } }
+  .alm-band:last-child { border-bottom: none; }
+  .alm-band-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .alm-band-body { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: clamp(20px, 4vw, 56px); align-items: start; }
+  .alm-band.balik .alm-band-body { grid-template-columns: 0.75fr 1.25fr; }
+  .alm-band.balik .alm-band-teks-w { order: 2; }
+  @media (max-width: 760px) {
+    .alm-band-body, .alm-band.balik .alm-band-body { grid-template-columns: 1fr; }
+    .alm-band.balik .alm-band-teks-w { order: 0; }
+  }
+  .alm-band-teks-w { display: grid; gap: 10px; min-width: 0; align-content: start; }
+  .alm-band-judul { font-family: 'Fraunces Variable', serif; font-weight: 340; font-size: clamp(24px, 3.4vw, 38px); line-height: 1.02; color: var(--ink); max-width: 24ch; }
+  .alm-band-teks { font-size: clamp(14px, 1.6vw, 16px); line-height: 1.66; color: var(--ink); max-width: 62ch; }
+  .alm-band-teks.tanpa-img::first-letter {
+    font-family: 'Fraunces Variable', serif; font-weight: 340;
+    font-size: 3em; line-height: 0.8; float: left;
+    padding: 3px 8px 0 0; color: var(--accent);
+  }
+  .alm-band-img { margin: 0; display: grid; gap: 6px; }
+  .alm-band-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; border: 1px solid var(--line); background: #ece1c9; filter: saturate(0.94); }
+  .alm-band-img figcaption { font-size: 7.5px; letter-spacing: 0.14em; color: var(--muted); }
 
   /* ── DARI JURNAL: the live research shelf ── */
   .alm-jurnal { border-top: 2px solid var(--line); margin-top: clamp(20px, 3vw, 32px); padding-top: 14px; display: grid; gap: 10px; }
@@ -303,6 +351,9 @@
   .alm-jurnal-isi { display: grid; gap: 2px; min-width: 0; }
   .alm-jurnal-judul { font-size: 14.5px; line-height: 1.35; color: var(--ink); font-weight: 500; }
   .alm-jurnal-wadah { font-size: 10.5px; color: var(--muted); font-style: italic; }
+  /* the machine's one-line why: quiet, clearly credited */
+  .alm-jurnal-alasan { font-size: 11.5px; line-height: 1.5; color: var(--ink); opacity: 0.85; margin-top: 2px; }
+  .alm-jurnal-alasan .mono { font-size: 7.5px; letter-spacing: 0.1em; color: var(--muted); font-style: normal; }
   .alm-jurnal-panah { color: var(--muted); font-size: 12px; }
   .alm-jurnal-row:hover .alm-jurnal-panah { color: var(--accent); }
   .alm-jurnal-cat { font-size: 7.5px; letter-spacing: 0.1em; line-height: 1.7; color: var(--muted); }

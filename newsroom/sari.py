@@ -15,7 +15,9 @@ import re
 from .llm import build_model
 from .models import Kliping
 
-_SARI_MAKS_KLASTER = 6
+# every cluster on the rack gets an attempt (the rack itself is capped
+# upstream); singletons still skip — one clip is a headline, not a story
+_SARI_MAKS_KLASTER = 16
 _SARI_MAKS_CHAR = 320
 
 _SYSTEM = (

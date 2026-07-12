@@ -30,6 +30,7 @@ from .desks.janji import desk_janji
 from .desks.papua import desk_papua
 from .editor import assemble
 from .gate import fact_gate
+from .ilmu import pilih_jurnal
 from .lawyer import redaktur_hukum
 from .llm import configured_providers, model_available
 from .log import Log
@@ -102,6 +103,15 @@ async def run() -> int:
     # summary appears in that evidence. Butir/lede are Lane A, built upstream.
     sari_n = await tulis_sari(kliping, kliping_bukti, log.event)
     log.event("sari", ditulis=sari_n)
+
+    # ILMU (Lane C): the model judges the month's Crossref batch for TRUE
+    # Indonesia relevance and stashes its picks (plus a one-line why) in
+    # newsroom/data/atlas/jurnal.json — committed by the Actions job, baked
+    # into the almanak at deploy. Isolated: a dark lane keeps the old stash.
+    try:
+        await pilih_jurnal(EDISI_NO, log.event)
+    except Exception as exc:
+        log.event("ilmu_gelap", alasan=f"{type(exc).__name__}: {str(exc)[:120]}")
 
     # desks run in parallel; each gates against the full corpus
     drafted = await asyncio.gather(

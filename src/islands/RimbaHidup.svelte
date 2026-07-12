@@ -295,10 +295,8 @@
 
 <section class="rimba" data-no-stempel data-ref="rimba" bind:this={wrap}>
   <canvas bind:this={canvas} aria-hidden="true"></canvas>
-  <div class="rimba-kepala mono" aria-hidden="true">
-    <span class="rimba-eyebrow">RIMBA HIDUP · YANG TETAP BERGERAK</span>
-  </div>
-  <p class="rimba-cap mono">PLAT PENUTUP · KAWANAN (BOIDS — REYNOLDS, 1987) · ELANG LEWAT SESEKALI, KURSORMU PUN DIHINDARI · BULAN MENGIKUTI FASE MALAM INI · GARIS PANTAI DARI BENIH EDISI</p>
+  <!-- show, don't overexplain: the flock speaks for itself -->
+  <p class="rimba-cap mono">BOIDS · REYNOLDS 1987</p>
 </section>
 
 <style>
@@ -319,8 +317,6 @@
     -webkit-mask: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
     mask: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
   }
-  .rimba-kepala { position: absolute; left: clamp(16px, 4vw, 48px); top: 14px; }
-  .rimba-eyebrow { font-size: 9px; letter-spacing: 0.22em; color: var(--accent2); }
   .rimba-cap {
     position: absolute; left: 0; right: 0; bottom: 10px;
     text-align: center; font-size: 7.5px; letter-spacing: 0.2em; color: var(--muted);

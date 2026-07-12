@@ -17,10 +17,13 @@ import os
 from dataclasses import dataclass
 
 # Provider table: (label, key env, base-url env, default base, model env, default model).
-# NIM first = main; the rest are free-tier fallbacks, tried in order.
+# NIM first = main (glm-5.2, then deepseek on the same key); the rest are
+# free-tier fallbacks, tried in order.
 _PROVIDERS = [
     ("nim", "NIM_API_KEY", "NIM_BASE_URL", "https://integrate.api.nvidia.com/v1",
-     "MODEL_PRIMARY", "deepseek-ai/deepseek-v4-pro"),
+     "MODEL_PRIMARY", "z-ai/glm-5.2"),
+    ("nim-cadangan", "NIM_API_KEY", "NIM_BASE_URL", "https://integrate.api.nvidia.com/v1",
+     "MODEL_NIM_CADANGAN", "deepseek-ai/deepseek-v4-pro"),
     ("groq", "GROQ_API_KEY", "GROQ_BASE_URL", "https://api.groq.com/openai/v1",
      "MODEL_GROQ", "llama-3.3-70b-versatile"),
     ("openrouter", "OPENROUTER_API_KEY", "OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1",
@@ -63,10 +66,12 @@ def build_model():
     for _label, key_env, base_env, base_default, model_env, model_default in present:
         provider = LiteLLMProvider(
             api_key=os.environ[key_env],
-            api_base=os.environ.get(base_env, base_default),
+            # `or`, not get(default): GitHub Actions materialises an unset repo
+            # Variable as an EMPTY env var, which must still mean "use default"
+            api_base=os.environ.get(base_env) or base_default,
         )
         members.append(
-            OpenAIChatModel(os.environ.get(model_env, model_default), provider=provider)
+            OpenAIChatModel(os.environ.get(model_env) or model_default, provider=provider)
         )
 
     if len(members) == 1:

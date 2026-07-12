@@ -166,9 +166,12 @@
   }
   .di.gelap { --fold: #ece2cb; --fold-teks: #15130e; }
 
-  /* the folded corner: a lifted page wedge, flush in the true corner */
+  /* the folded corner: a lifted page wedge, flush in the true corner.
+     display:block — as an inline-block button it sat on the text baseline
+     and left ~8px of descender gap under the fold (Yose's screenshot) */
   .di-curl {
     position: relative;
+    display: block;
     width: 88px; height: 88px;
     background: none; border: none; padding: 0; cursor: pointer;
     overflow: visible;

@@ -1293,7 +1293,10 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   }
 
   /* ---------- ACT II ---------- */
-  .act-mesin .wrap { display: grid; gap: clamp(48px, 9vh, 110px); }
+  /* minmax(0,100%): an auto grid track inherits the WIDEST child's
+     min-content (a chart ruler), inflates past the wrap's padding box, and
+     every bab stretches to it — the whole act skewed right on phones */
+  .act-mesin .wrap { display: grid; grid-template-columns: minmax(0, 100%); gap: clamp(48px, 9vh, 110px); }
   .hening-blok { margin: clamp(36px, 6vw, 64px) 0 8px; }
   .hening-ledger > div { padding: 9px 0; }
   .lingk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }

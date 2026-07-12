@@ -90,27 +90,22 @@ function runLoader(onDone: () => void) {
   // loader, so an eager wheel used to move the paper under the cover).
   lockScroll();
 
-  // The masthead simply settles in (no per-glyph curtain — that read as a second
-  // reveal against the page's identical masthead), and the loader fades out once
-  // instead of clip-wiping up. One clean press intro, no double curtain.
-  const mast = document.getElementById('l-mast')!;
-  gsap.set(mast, { opacity: 0, y: 8 });
-
-  const statusEl = document.getElementById('l-status-text')!;
+  // One clean, weighty ceremony: the wordmark rises out of its own baseline
+  // (line-masked), the run's paperwork settles, then the WHOLE PLATE lifts
+  // like a theatre curtain — its orange hem sweeping up last. No fake
+  // progress, no ornament.
   const tl = gsap.timeline({
     onComplete() {
       loader.classList.add('is-done');
+      gsap.set(loader, { clearProps: 'transform' });
       unlockScroll();
       onDone();
     },
   });
 
-  tl.to('.l-sheet', { scaleX: 1, duration: 0.45, ease: EASE_PRESS, stagger: 0.08 }, 0.1)
-    .to(mast, { opacity: 1, y: 0, duration: 0.5, ease: EASE_SETTLE }, 0.4)
-    .call(() => { statusEl.textContent = 'EDISI #41 SIAP'; }, [], 0.95)
-    .to('.l-folio', { opacity: 1, duration: 0.35 }, 1.0)
-    .to('.l-stripe', { scaleX: 1, duration: 0.5, ease: EASE_PRESS }, 1.05)
-    .to(loader, { opacity: 0, duration: 0.5, ease: 'power2.inOut', delay: 0.3 });
+  tl.to('.l-in', { y: 0, duration: 0.85, ease: EASE_SETTLE, stagger: 0.11 }, 0.15)
+    .to('.l-edisi', { opacity: 1, duration: 0.45 }, 0.85)
+    .to(loader, { yPercent: -100, duration: 1.0, ease: 'power4.inOut' }, 1.55);
 
   const skip = () => tl.progress(1);
   loader.addEventListener('pointerdown', skip, { once: true });
