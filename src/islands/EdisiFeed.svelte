@@ -84,12 +84,13 @@
     return () => unlockScroll();
   });
 
-  /* ---- the endless paper (v3, Yose 2026-07-12): the sheet's torn top is
-     pinned near the top of the screen and the paper sizes to its content —
-     scrolling moves the paper past you until its torn BOTTOM edge arrives,
-     and it simply stops there. No auto-dismiss; the reader leaves by TUTUP,
-     the backdrop, or Escape. (The old lift-off-past-the-end mechanic
-     surprised more than it delighted.) ---- */
+  /* ---- the endless paper (v4, Yose's correction 2026-07-12): the CONTENT
+     is fixed onto the paper and the PAPER is what moves. One tall sheet
+     (as long as its clipping) sits in a fullscreen scroll viewport: the
+     torn top is visible first, scrolling slides the whole sheet up past
+     the reader — header and all — until the torn FOOT rises into view and
+     stops. No inner scrollbar, no auto-dismiss; leave via TUTUP (top of
+     the paper), a click on the desk around it, or Escape. ---- */
 
   /* ---- hash routing: back button + share work ---- */
   const idFor = (k: LiveKliping) => k.id ?? `k${rak.indexOf(k)}`;
@@ -183,13 +184,19 @@
 
 <!-- Lembar Kliping: the tear-off dossier for one cluster -->
 {#if buka}
-  <button class="lk-latar" aria-label="Tutup lembar kliping" onclick={tutupLembar}></button>
+  <!-- the desk: a fullscreen scroller — the paper is its only child, so
+       scrolling IS moving the paper; clicking the desk closes the lembar -->
+  <div
+    class="lk-viewport"
+    data-lenis-prevent
+    role="presentation"
+    onclick={(e) => { if (e.target === e.currentTarget) tutupLembar(); }}
+  >
   <aside
     class="lk"
     role="dialog"
     aria-modal="true"
     aria-label="Lembar kliping"
-    data-lenis-prevent
   >
     <header class="lk-kepala">
       <span class="lk-tag mono">LEMBAR KLIPING · MEJA {(buka.meja ?? 'nasional').toUpperCase()}</span>
@@ -277,9 +284,10 @@
     </div>
 
     <p class="lk-kaki mono">■ INDEPENDEN · □ GRUP KONGLOMERASI · KEPEMILIKAN DICATAT DARI DOKUMEN PUBLIK · <a class="ink-link" href="/sumber#kliping">METODE →</a></p>
-    <p class="lk-habis mono" aria-hidden="true">— AKHIR LEMBAR — TUTUP LEWAT ✕ DI ATAS, KLIK DI LUAR KERTAS, ATAU ESC</p>
+    <p class="lk-habis mono" aria-hidden="true">— AKHIR LEMBAR — KLIK MEJA DI LUAR KERTAS ATAU TEKAN ESC UNTUK MENUTUP</p>
     </div>
   </aside>
+  </div>
 {/if}
 
 <svelte:window onhashchange={bukaDariHash} onkeydown={(e) => { if (e.key === 'Escape') tutupLembar(); }} />
@@ -356,26 +364,25 @@
   .feed-kaki { margin-top: 12px; font-size: 9px; letter-spacing: 0.13em; color: var(--muted); }
   .feed-tunggu { padding: 18px 0 6px; font-size: 10px; letter-spacing: 0.14em; color: var(--muted); }
 
-  /* ---- Lembar Kliping: the tear-off dossier ---- */
-  .lk-latar { position: fixed; inset: 0; z-index: 158; background: rgba(12, 10, 8, 0.5); border: none; padding: 0; margin: 0; cursor: pointer; }
+  /* ---- Lembar Kliping: the tear-off dossier — v4, the paper moves ---- */
+  /* the desk: a fullscreen scroller; scrolling IS sliding the paper */
+  .lk-viewport {
+    position: fixed; inset: 0; z-index: 159;
+    overflow-y: auto; overscroll-behavior: contain;
+    background: rgba(12, 10, 8, 0.5);
+    cursor: pointer;
+  }
   .lk {
-    position: fixed;
-    left: 50%;
-    top: 4dvh;
-    transform: translateX(-50%);
-    z-index: 159;
+    /* one tall sheet, exactly as long as its clipping: torn top visible
+       first, the torn foot waits below the screen until you've read there */
+    position: relative;
+    margin: 4dvh auto 8dvh;
     width: min(880px, 96vw);
-    /* the endless paper: the sheet sizes to its clipping — a short lembar
-       shows its torn foot immediately, a long one fills the screen and the
-       foot arrives when the reading does */
-    max-height: 94dvh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    cursor: auto;
     background: var(--bg);
     color: var(--ink);
-    padding: 32px clamp(16px, 4vw, 40px) 16px;
-    box-shadow: 0 -16px 60px rgba(0, 0, 0, 0.4);
+    padding: 32px clamp(16px, 4vw, 40px) 18px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
     /* torn at BOTH ends: pulled off the newsstand, cut off the roll */
     clip-path: polygon(
       0 12px, 4% 5px, 9% 11px, 14% 3px, 19% 10px, 25% 4px, 31% 12px, 37% 6px, 43% 11px, 50% 3px, 57% 10px, 63% 5px, 69% 12px, 75% 4px, 81% 10px, 87% 3px, 93% 9px, 100% 5px,
@@ -383,11 +390,11 @@
     );
     animation: lk-naik 0.4s var(--ease-out);
   }
-  .lk-scroll { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 30px; }
+  .lk-scroll { padding-bottom: 8px; }
   .lk-habis { margin-top: 22px; padding: 10px 0 14px; text-align: center; font-size: 8.5px; letter-spacing: 0.2em; color: var(--muted); border-top: 1px dashed var(--line-soft); }
   @keyframes lk-naik {
-    from { transform: translate(-50%, 44px); opacity: 0; }
-    to { transform: translate(-50%, 0); opacity: 1; }
+    from { transform: translateY(44px); opacity: 0; }
+    to { transform: none; opacity: 1; }
   }
   @media (prefers-reduced-motion: reduce) { .lk { animation: none; transition: none; } }
   .lk-kepala { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; border-bottom: 2px solid var(--line); padding-bottom: 10px; margin-bottom: 12px; }

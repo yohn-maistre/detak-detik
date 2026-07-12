@@ -4,14 +4,28 @@
  * this module with artifacts from the newsroom (see /newsroom, /etl).
  * Shapes follow docs/DATA_CONTRACTS.md.
  */
+/* the masthead clock is COMPUTED at build, never a hardcoded string (the
+   site rebakes with every pantau/newsroom commit, ≥2× daily) — it names the
+   most recent print run: 05.00 WIB or 17.00 WIB, in WIB */
+const HARI7 = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+const BULAN12 = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+const ROMAWI12 = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII'];
+const wibKini = new Date(Date.now() + 7 * 3600_000); // read via getUTC* = WIB wall clock
+const jamWib = wibKini.getUTCHours();
+const SESI: 'pagi' | 'malam' = jamWib >= 5 && jamWib < 17 ? 'pagi' : 'malam';
+const cetak = new Date(wibKini);
+if (jamWib < 5) cetak.setUTCDate(cetak.getUTCDate() - 1); // before dawn: last night's print
+const CY = cetak.getUTCFullYear(), CM = cetak.getUTCMonth(), CD = cetak.getUTCDate();
+
 export const EDISI = {
   nomor: 41,
-  tanggal: 'Kamis, 11 Juni 2026',
-  sesi: 'pagi' as const,
-  dicetak: '05.00 WIB',
-  serial: 'DD/EDI/041/VI/2026',
+  tanggal: `${HARI7[cetak.getUTCDay()]}, ${CD} ${BULAN12[CM]} ${CY}`,
+  sesi: SESI,
+  dicetak: SESI === 'pagi' ? '05.00 WIB' : '17.00 WIB',
+  serial: `DD/EDI/041/${ROMAWI12[CM]}/${CY}`,
   koordinat: { label: "LS 4°05′ · BT 136°53′", wilayah: 'KABUPATEN MIMIKA · PAPUA TENGAH' },
-  terbitEpoch: Date.UTC(2026, 5, 10, 22, 0, 0), // 05.00 WIB in UTC
+  // the print moment in UTC: 05.00/17.00 WIB on the cetak date, minus 7h
+  terbitEpoch: Date.UTC(CY, CM, CD, SESI === 'pagi' ? 5 : 17) - 7 * 3600_000,
 };
 
 export const ANGKA_EDISI = {

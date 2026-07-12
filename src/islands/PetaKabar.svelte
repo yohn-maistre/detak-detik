@@ -12,7 +12,7 @@
   import { getLensa, onLensa } from '../lib/lensa';
   import { getLensaKab, onLensaKab, setLensaKab, type LensaKab } from '../lib/lensa-kab';
   import { on, dispatch } from '../lib/commands/dispatcher';
-  import { drawEngraving, ENGRAVE_DINAS } from '../lib/engrave';
+  import { loadAtlasGrid } from '../lib/atlas-dots';
   import { reducedMotion } from '../lib/motion';
   import { pulseRef } from '../lib/motion-kit';
   import LaporanLokasi from './LaporanLokasi.svelte';
@@ -158,7 +158,7 @@
       size: ['interpolate', ['linear'], ['get', 'state'], 1, 0.6, 3, 1.2] },
     { id: 'kebakaran', nama: 'TITIK API', sym: '✦', sumber: 'firms/viirs', shape: 'spark', color: '#e44a06',
       size: ['interpolate', ['linear'], ['get', 'frp'], 20, 0.55, 80, 1.25] },
-    { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'opensky', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
+    { id: 'pesawat', nama: 'PESAWAT', sym: '✈', sumber: 'adsb.lol', shape: 'plane', color: '#2f6f9f', size: 0.85, rotate: true, trail: true },
     { id: 'kapal', nama: 'KAPAL', sym: '➤', sumber: 'aisstream', shape: 'ship', color: '#2f8f78', size: 0.8, rotate: true, trail: true },
     { id: 'karbon', nama: 'EMISI CO₂ · INDUSTRI', sym: '◉', sumber: 'climate-trace', shape: 'disc', color: '#7a1410',
       size: ['interpolate', ['linear'], ['get', 'co2'], 0.5, 0.5, 20, 1.6] },
@@ -178,7 +178,7 @@
     { nama: 'Udara', src: 'WAQI', url: 'https://waqi.info', lisensi: 'atribusi', key: 'udara' },
     { nama: 'Banjir', src: 'PetaBencana', url: 'https://petabencana.id', lisensi: 'CC-BY', key: 'banjir' },
     { nama: 'Titik api', src: 'NASA FIRMS · VIIRS', url: 'https://firms.modaps.eosdis.nasa.gov', lisensi: 'publik', key: 'kebakaran' },
-    { nama: 'Pesawat', src: 'OpenSky Network', url: 'https://opensky-network.org', lisensi: 'CC-BY-NC', key: 'pesawat' },
+    { nama: 'Pesawat', src: 'adsb.lol / OpenSky', url: 'https://adsb.lol', lisensi: 'ODbL / CC-BY-NC', key: 'pesawat' },
     { nama: 'Kapal', src: 'AISStream', url: 'https://aisstream.io', lisensi: 'atribusi', key: 'kapal' },
     { nama: 'Emisi CO₂', src: 'Climate TRACE', url: 'https://climatetrace.org', lisensi: 'CC-BY', key: 'karbon' },
     { nama: 'PLTU batu bara', src: 'Global Energy Monitor', url: 'https://globalenergymonitor.org', lisensi: 'CC-BY', key: 'batubara' },
@@ -692,7 +692,7 @@
     if (f.kind === 'udara') { const a = N(p.aqi); return { judul: `Udara · AQI ${a}`, src: 'WAQI · langsung', baris: [['Stasiun', String(p.nama ?? '-')], ['Kategori', aqiBand(a)]], catatan: a > 150 ? 'Kurangi aktivitas luar ruangan.' : '' }; }
     if (f.kind === 'banjir') { const s = N(p.state); return { judul: 'Laporan banjir', src: 'PetaBencana · langsung', baris: [['Lokasi', String(p.nama ?? '-')], ['Siaga', s >= 3 ? 'tinggi' : s >= 2 ? 'sedang' : 'rendah']], catatan: '' }; }
     if (f.kind === 'kebakaran') return { judul: 'Titik panas', src: 'NASA FIRMS / VIIRS · langsung', baris: [['Daya pancar', `${Math.round(N(p.frp))} MW`]], catatan: 'Anomali termal satelit; belum tentu kebakaran.' };
-    if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'OpenSky Network · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
+    if (f.kind === 'pesawat') return { judul: String(p.flight || 'Pesawat'), src: 'relai pesawat · adsb.lol/OpenSky · langsung', baris: [['Rute', String(p.rute ?? 'menelusuri…')], ['Ketinggian', p.alt != null ? `${N(p.alt).toLocaleString('id-ID')} kaki` : '-'], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'kapal') return { judul: String(p.nama || 'Kapal'), src: 'AISStream · langsung', baris: [['Tujuan', String(p.tujuan ?? '-')], ['Jenis', String(p.jenis ?? '-')], ['Kecepatan', `${N(p.kecepatan) || 0} knot`], ['Arah', `${N(p.track) || 0}°`]], catatan: '' };
     if (f.kind === 'karbon') {
       const SEKTOR: Record<string, string> = { power: 'Pembangkit listrik', manufacturing: 'Manufaktur', 'mineral-extraction': 'Tambang mineral', 'fossil-fuel-operations': 'Operasi migas/batu bara' };
@@ -773,6 +773,10 @@
   function srcLabel(id: string, sumber: string): string {
     const src = sumber.split('/')[0].toUpperCase();
     if (id === 'gunungapi') return gunungLive ? `${src} · LANGSUNG` : `${src} · DAFTAR`;
+    // window honesty: karbon/batubara load from BAKED snapshots (Climate
+    // TRACE v6 asset, GEM geojson) — real data, but an archive, not a feed
+    if (id === 'karbon') return layerLive[id] ? `${src} · ARSIP V6` : 'CONTOH';
+    if (id === 'batubara') return layerLive[id] ? `${src} · ARSIP` : 'CONTOH';
     if (layerLive[id]) return layerKosong[id] ? `${src} · NIHIL` : `${src} · LANGSUNG`;
     return 'CONTOH';
   }
@@ -1434,8 +1438,39 @@
     let unsubs: (() => void)[] = [];
     let cancelled = false;
 
-    drawEngraving(engraveEl, { ...ENGRAVE_DINAS, caption: 'PLAT KABAR · MENUNGGU UBIN PETA' });
-    const ro = new ResizeObserver(() => { if (!petaSiap) drawEngraving(engraveEl, ENGRAVE_DINAS); });
+    // the waiting plate: the DITHERED archipelago from the real polygons
+    // (same raster as the Act III plate) — the old ellipse engraving read
+    // as comical blobs when tiles were slow (Yose 2026-07-12)
+    const gridJanji = loadAtlasGrid(190, 74).catch(() => null);
+    async function drawPlatTunggu() {
+      const el = engraveEl;
+      if (!el || petaSiap) return;
+      const g = await gridJanji;
+      if (!g || petaSiap) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+      const w = el.clientWidth, h = el.clientHeight;
+      if (!w || !h) return;
+      el.width = Math.round(w * dpr); el.height = Math.round(h * dpr);
+      const c2 = el.getContext('2d');
+      if (!c2) return;
+      c2.setTransform(dpr, 0, 0, dpr, 0, 0);
+      c2.fillStyle = '#d6cbac'; c2.fillRect(0, 0, w, h);
+      const COLS = 190, ROWS = 74;
+      const scale = Math.min((w * 0.92) / COLS, (h * 0.86) / ROWS);
+      const ox = (w - COLS * scale) / 2, oy = (h - ROWS * scale) / 2;
+      const dot = Math.max(1, scale * 0.42);
+      c2.fillStyle = '#15130e'; c2.globalAlpha = 0.6;
+      for (let gy = 0; gy < ROWS; gy++) for (let gx = 0; gx < COLS; gx++) {
+        if (g.cells[gy * COLS + gx]) c2.fillRect(ox + gx * scale + (scale - dot) / 2, oy + gy * scale + (scale - dot) / 2, dot, dot);
+      }
+      c2.globalAlpha = 0.75;
+      c2.font = '600 9px ui-monospace, monospace';
+      c2.textAlign = 'center';
+      c2.fillText('P L A T  K A B A R  ·  M E N U N G G U  U B I N  P E T A', w / 2, h - 16);
+      c2.globalAlpha = 1;
+    }
+    void drawPlatTunggu();
+    const ro = new ResizeObserver(() => { void drawPlatTunggu(); });
     ro.observe(engraveEl);
 
     // Esc steps back one tier: info card → regency → province → national.

@@ -1602,6 +1602,52 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-12 · WAVE 7 — the paper goes LIVE + masthead clock + honesty pass
+
+Keys landed (NIM rotated, NEWSROOM_ENABLED=true, PUBLIC_AKSARA_URL set,
+NASA_API_KEY in). Newsroom triggered manually: run GREEN, `/edisi` serves
+edisi №103 with temuan + cited ids, and the front page lead renders it
+(LANGSUNG). Wave 7 fixes, all build-verified:
+
+- **Masthead clock computed, never hardcoded** (`edisi.ts`): tanggal/
+  serial/sesi/dicetak/terbitEpoch derive from the most recent print run
+  (05.00/17.00 WIB) at build; the loader + kolofon consume it. Verified:
+  loader prints MINGGU, 12 JULI 2026 / DD/EDI/041/VII/2026.
+- **Loader chrome**: registration corners, serial top-left, date
+  top-right, kaki line — reads as an instrument, no more hardcoded #41
+  strings (all from EDISI).
+- **Kliping v5 — THE PAPER MOVES** (Yose's correction): no inner scroll;
+  a fullscreen `.lk-viewport` scroller holds ONE tall sheet exactly as
+  long as its clipping. Torn top visible first, the whole paper (header
+  included) slides up past the reader, torn foot arrives and stops.
+  Desk-click (outside the sheet), TUTUP, or Esc to leave.
+- **Peta waiting-plate**: the comical ellipse engraving replaced by the
+  DITHERED archipelago from the real polygon raster (atlas-dots), with a
+  mono caption — shows while OFM tiles load/fail.
+- **Legend honesty**: karbon → `CLIMATE-TRACE · ARSIP V6`, batubara →
+  `GEM · ARSIP` (they load baked snapshots, not feeds); pesawat relabeled
+  `adsb.lol` (ODbL) with OpenSky noted (worker prefers OpenSky only when
+  OPENSKY_CLIENT_ID/SECRET worker-secrets exist — research doc verdict:
+  OpenSky CC-BY-NC must NEVER feed print, live layer w/ attribution only).
+- **Danantara dedupe**: the NEGARA HARI INI wall row removed; the BAB 01
+  waffle clock is the single owner.
+- **№1 LEAD DIAGNOSIS**: the edition's hukum lead narrates
+  `newsroom/data/hukum_putusan.json` — 6 SAMPLE rows
+  (source_url `…zaeXAMPLE….html`) — yet prints LANGSUNG. NEXT WAVE:
+  file-level `contoh` flag on sample tables → desks propagate → front
+  page prints `(data contoh)` beside the stamp. The real putusan lane
+  stays blocked (MA portal); nearest honest path is ICW manual curation.
+- **OCR research** (agent, cited): born-digital assumption confirmed for
+  post-2010 gov PDFs; pipeline = pypdf extraction → Tesseract 5 +
+  `tesseract-ocr-ind` per-page fallback (`--oem 1`, tessdata_best) →
+  Google Vision (1k pages/mo free) as manual escape hatch for hard scans.
+  ~$0 and inside cron budget at expected <10% scan rate.
+- **Deferred, next wave**: guntingan share cards (design blessed),
+  `ilmu` pantau lane + almanak-desk summaries feeding Aksara picks,
+  kapal via worker Durable-Object AIS relay (browser shared-key WS caps
+  out → CONTOH), pasar dead tiles (emas/nikel/pertamax need per-source
+  decisions, NOT the BPS key; pangan needs the NFA Panel Harga key).
+
 ### 2026-07-12 · WAVE 6 — endless-paper kliping + birds v2 + live jurnal shelf
 
 Yose's second screenshot round. All verified on the production preview:

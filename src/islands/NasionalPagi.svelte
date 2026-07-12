@@ -19,7 +19,6 @@
   // meter lives on this one panel). Documented average rates, labeled as such.
   const BPJS_PER_DETIK = 24e12 / (365 * 24 * 3600); // ~Rp 24 T projected 2026 deficit
   const HUTAN_HA_PER_JAM = 433_751 / (365 * 24); // Auriga: total loss 2025
-  const DANANTARA_EPOCH = Date.UTC(2025, 1, 24); // launched, no financial report since
   const PHK_BULANAN = [
     { b: 'JAN', v: 5730 }, { b: 'FEB', v: 7443 }, { b: 'MAR', v: 5729 }, { b: 'APR', v: 3739 }, { b: 'MEI', v: 829 },
   ];
@@ -43,7 +42,6 @@
   const fmt1 = new Intl.NumberFormat('id-ID', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const rp = (n: number) => `Rp ${fmt.format(Math.round(n))}`;
   const penduduk = $derived(Math.round(PENDUDUK_DASAR + ((now - PENDUDUK_EPOCH) / 1000) * PENDUDUK_PER_DETIK));
-  const danantaraHari = $derived(Math.floor((now - DANANTARA_EPOCH) / 86_400_000));
 
   const CETAKAN: LiveMakro[] = [
     { label: 'INFLASI · TAHUNAN', nilai: '3,48%', pre: 'sasaran BI', acuan: '2,5±1%', chip: 'bps · ihk', nada: 'datar' },
@@ -157,14 +155,8 @@
       </div>
       <span class="np-chip mono">⊙ kemnaker satudata · jan–mei · hanya pekerja ter-jkp</span>
     </div>
-    <div class="np-live-card absen">
-      <div class="np-absen-teks">
-        <span class="eyebrow">HARI TANPA LAPORAN KEUANGAN DANANTARA</span>
-        <p class="np-absen-note">dana kelolaan ± US$900 miliar · belum ada laporan terbit sejak berdiri 24 feb 2025</p>
-        <span class="np-chip mono">⊙ jakarta post · 19 mei 2026 · baris ini menunggu · jam berjalan di bab 01</span>
-      </div>
-      <p class="np-live-n num np-absen-n">{fmt.format(danantaraHari)}</p>
-    </div>
+    <!-- the Danantara day-counter now lives ONLY as the clock beside the
+         waffle in BAB 01 (dedupe, Yose 2026-07-12: one fact, one surface) -->
   </div>
 
   <div class="np-gauges">
