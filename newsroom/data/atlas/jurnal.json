@@ -1,7 +1,52 @@
 {
- "diperbarui": "2026-07-12T18:46:04.423065+00:00",
+ "diperbarui": "2026-07-12T22:24:48.511032+00:00",
  "edisi": 105,
  "pilihan": [
+  {
+   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
+   "wadah": "Parasitology International",
+   "doi": "10.1016/j.parint.2026.103313",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini meneliti situasi terkini taeniasis di Bali periode 2022 hingga 2025. Relevan bagi pembaca Indonesia karena penyakit parasit bawaan daging babi ini masih menjadi masalah kesehatan masyarakat di Bali dan memerlukan pemantauan epidemiologis berkelanjutan.",
+   "kategori": "KESEHATAN & PARASITOLOGI",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Studi kasus dari Indonesia melaporkan pengobatan jamur kuku non-dermatofita langka. Temuan ini penting bagi dokter dan pembaca Indonesia karena memberi referensi terapi alternatif untuk infeksi yang resisten di negara beriklim tropis.",
+   "kategori": "KESEHATAN & PARASITOLOGI",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian fokus pada dampak ekologis produksi boksit dan tembaga di Indonesia. Sangat relevan bagi pembaca yang mengikuti isu lingkungan pertambangan, dari kerusakan habitat hingga polusi air yang akibat ekspansi tambang.",
+   "kategori": "ALAM & TAMBANG",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101961",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini membedah kerentanan masyarakat terhadap transisi batu bara di Indonesia beserta implikasi kebijakannya. Relevan karena pembaca perlu memahami dampak sosial dari pengurangan tambang batu bara pada komunitas penambang.",
+   "kategori": "ALAM & TAMBANG",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Telaah komunikasi ritual, adat, dan toleransi reflektif pada masyarakat adat Ngadas Tengger di Jawa Timur. Relevan bagi pembaca yang menekuni Kearifan lokal dan dinamika toleransi antaragama di komunitas pegunungan.",
+   "kategori": "MASYARAKAT & BUDAYA",
+   "sejak_edisi": 105
+  },
   {
    "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
    "wadah": "World Development Sustainability",
@@ -63,47 +108,6 @@
    "tanggal": "2026-11-2",
    "alasan": "Studi ini menilai potensi likuifaksi pasca-gempa 2018 di lahan irigasi Gumbasa. Relevan bagi pembaca Indonesia karena bencana alam terjadi di wilayah pertanian aktif dan memengaruhi keselamatan infrastruktur irigasi nasional.",
    "kategori": "BAHAYA GEMPA",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Feasibility Analysis of Education in Indonesian Provinces: A Machine Learning Clustering Approach for Regional Classification",
-   "wadah": "Engineering and Technology Journal",
-   "doi": "10.47191/etj/v11i02.24",
-   "tanggal": "2026-11-2",
-   "alasan": "Penelitian ini menggunakan pendekatan machine learning untuk menganalisis kelayakan pendidikan di provinsi Indonesia. Relevan bagi pembaca Indonesia karena klasifikasi daerah membantu memahami disparitas kesiapan pendidikan antarprovinsi.",
-   "kategori": "PENDIDIKAN REGIONAL",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Mengkarakterisasi produk pirolisis aspal batuan dari Buton, relevan bagi riset sumber daya mineral Indonesia.",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Membahas model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat, Indonesia.",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji reproduksi sosial pekerja nikel di Maluku Utara, relevan bagi pembaca yang memantama pertambangan dan buruh.",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Menilai keyakinan kesehatan dan keterlambatan pasien kanker payudara di Sumatera Barat, Indonesia.",
    "sejak_edisi": 105
   }
  ]
