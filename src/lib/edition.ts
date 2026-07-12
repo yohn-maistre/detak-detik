@@ -99,11 +99,18 @@ export interface LiveEdisi {
   tajuk?: { teks: string; cited_ids?: string[] };
 }
 
+import BAKED_JSON from './data/edisi-baked.json';
+
 const AKSARA_URL = (import.meta.env.PUBLIC_AKSARA_URL as string | undefined)?.replace(/\/$/, '');
 const SIMPANAN = 'dd:edisi:v1';
 
+/** the edition BAKED at deploy time (deploy.yml snapshots /edisi before the
+ *  build): first paint is the real paper even when the worker host is
+ *  unreachable from the reader's route; null in local/keyless builds */
+export const BAKED = BAKED_JSON as unknown as LiveEdisi | null;
+
 type Sub = (e: LiveEdisi | null) => void;
-let live: LiveEdisi | null = null;
+let live: LiveEdisi | null = BAKED;
 const subs = new Set<Sub>();
 let started = false;
 
@@ -130,9 +137,13 @@ async function load(): Promise<void> {
 }
 
 /** Subscribe to the live edition. Fires immediately with the current value
- *  (the stored snapshot until the network answers), then again live. */
+ *  (the baked edition, upgraded by a NEWER stored snapshot if one exists,
+ *  until the network answers), then again live. */
 export function onEdisi(fn: Sub): () => void {
-  if (live === null && !started && typeof localStorage !== 'undefined') live = ambilSimpanan();
+  if (!started && typeof localStorage !== 'undefined') {
+    const simpanan = ambilSimpanan();
+    if (simpanan && (!live || (simpanan.terbit ?? '') > (live.terbit ?? ''))) live = simpanan;
+  }
   subs.add(fn);
   fn(live);
   if (!started) { started = true; void load(); }

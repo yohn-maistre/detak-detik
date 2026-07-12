@@ -9,15 +9,20 @@
       titled the story (verbatim, Lane A), and the full coverage list. Only
       outlet rows link out. Deep links: #/kliping/{id}. */
   import { onMount } from 'svelte';
-  import { onEdisi, type LiveKliping, type LiveKlipingItem, type LiveKlipingMeta } from '../lib/edition';
+  import { onEdisi, BAKED, type LiveKliping, type LiveKlipingItem, type LiveKlipingMeta } from '../lib/edition';
   import { lockScroll, unlockScroll } from '../lib/scroll-lock';
 
   type LeadContoh = { headline: string; dek: string; chips: string[]; stamp: string; serial: string };
   let { lead }: { lead: LeadContoh } = $props();
 
-  let rak = $state<LiveKliping[]>([]);
-  let meta = $state<LiveKlipingMeta | null>(null);
-  let liveLead = $state<{ headline: string; dek?: string; id?: string; edisi?: number } | null>(null);
+  // first paint = the edition BAKED at deploy time (real headline in the
+  // prerendered HTML, no contoh flash); runtime fetch upgrades if newer
+  const t0 = BAKED?.temuan?.[0];
+  let rak = $state<LiveKliping[]>(BAKED?.kliping ?? []);
+  let meta = $state<LiveKlipingMeta | null>(BAKED?.kliping_meta ?? null);
+  let liveLead = $state<{ headline: string; dek?: string; id?: string; edisi?: number } | null>(
+    t0?.headline ? { headline: t0.headline, dek: BAKED?.dek ?? t0.body, id: t0.temuan_id, edisi: BAKED?.edisi } : null,
+  );
 
   onMount(() => onEdisi((e) => {
     if (!e) return;

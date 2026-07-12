@@ -31,11 +31,23 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # the latest published edition is BAKED into the bundle: first paint is
+      # the real paper (no contoh flash, no skeleton hang when the worker
+      # host is unreachable from a reader's ISP); the runtime fetch upgrades
+      - name: Bake latest edition into the bundle
+        env:
+          AKSARA: ${{ vars.AKSARA_URL || vars.PUBLIC_AKSARA_URL }}
+        run: |
+          if [ -n "$AKSARA" ]; then
+            curl -sf --max-time 20 "$AKSARA/edisi" -o src/lib/data/edisi-baked.json \
+              && echo "edisi terpanggang: $(head -c 80 src/lib/data/edisi-baked.json)" \
+              || echo null > src/lib/data/edisi-baked.json
+          fi
       - run: pnpm build
         env:
           # repo Variable (Settings -> Secrets and variables -> Actions -> Variables):
-          # AKSARA_URL = the worker URL, e.g. https://detak-detik-worker.<subdomain>.workers.dev
-          PUBLIC_AKSARA_URL: ${{ vars.AKSARA_URL }}
+          # the variable is PUBLIC_AKSARA_URL today; AKSARA_URL kept as legacy alias
+          PUBLIC_AKSARA_URL: ${{ vars.AKSARA_URL || vars.PUBLIC_AKSARA_URL }}
           # repo Secret AISSTREAM_KEY -> exposed to the client for the ships layer
           # (browser WebSocket; the key is necessarily visible in the bundle, so
           # use a free best-effort AISStream key).

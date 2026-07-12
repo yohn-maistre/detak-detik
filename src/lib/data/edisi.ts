@@ -4,6 +4,16 @@
  * this module with artifacts from the newsroom (see /newsroom, /etl).
  * Shapes follow docs/DATA_CONTRACTS.md.
  */
+/* the deploy bakes the latest published edition (deploy.yml → this JSON);
+   the masthead number + angka edisi derive from it, contoh only when the
+   bake is dark (local/keyless builds) */
+import BAKED_EDISI from './edisi-baked.json';
+const TERBAKAR = BAKED_EDISI as unknown as {
+  edisi?: number;
+  angka_edisi?: { nilai: number; prefix?: string; label: string };
+} | null;
+const NOMOR = TERBAKAR?.edisi ?? 41;
+
 /* the masthead clock is COMPUTED at build, never a hardcoded string (the
    site rebakes with every pantau/newsroom commit, ≥2× daily) — it names the
    most recent print run: 05.00 WIB or 17.00 WIB, in WIB */
@@ -18,22 +28,29 @@ if (jamWib < 5) cetak.setUTCDate(cetak.getUTCDate() - 1); // before dawn: last n
 const CY = cetak.getUTCFullYear(), CM = cetak.getUTCMonth(), CD = cetak.getUTCDate();
 
 export const EDISI = {
-  nomor: 41,
+  nomor: NOMOR,
   tanggal: `${HARI7[cetak.getUTCDay()]}, ${CD} ${BULAN12[CM]} ${CY}`,
   sesi: SESI,
   dicetak: SESI === 'pagi' ? '05.00 WIB' : '17.00 WIB',
-  serial: `DD/EDI/041/${ROMAWI12[CM]}/${CY}`,
+  serial: `DD/EDI/${String(NOMOR).padStart(3, '0')}/${ROMAWI12[CM]}/${CY}`,
   koordinat: { label: "LS 4°05′ · BT 136°53′", wilayah: 'KABUPATEN MIMIKA · PAPUA TENGAH' },
   // the print moment in UTC: 05.00/17.00 WIB on the cetak date, minus 7h
   terbitEpoch: Date.UTC(CY, CM, CD, SESI === 'pagi' ? 5 : 17) - 7 * 3600_000,
 };
 
-export const ANGKA_EDISI = {
-  nilai: 4_218_530_114,
-  prefix: 'Rp',
-  label: 'Total kerugian negara dalam vonis korupsi yang diputus bulan ini.',
-  chips: ['putusan_ma · 84 baris', 'edisi #41'],
-};
+export const ANGKA_EDISI = TERBAKAR?.angka_edisi
+  ? {
+      nilai: TERBAKAR.angka_edisi.nilai,
+      prefix: TERBAKAR.angka_edisi.prefix ?? 'Rp',
+      label: TERBAKAR.angka_edisi.label,
+      chips: [`edisi #${NOMOR} · langsung`, 'ruang redaksi'],
+    }
+  : {
+      nilai: 4_218_530_114,
+      prefix: 'Rp',
+      label: 'Total kerugian negara dalam vonis korupsi yang diputus bulan ini.',
+      chips: ['putusan_ma · 84 baris', 'edisi #41'],
+    };
 
 export const TICKER = [
   { src: 'BMKG', teks: 'Gempa M4,8 tercatat 38 km tenggara Halmahera Barat, 03.12 WIT', url: 'https://www.bmkg.go.id' },
