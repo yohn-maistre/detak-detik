@@ -1602,7 +1602,61 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
-### 2026-07-12 · WAVE 7 — the paper goes LIVE + masthead clock + honesty pass
+### 2026-07-13 · WAVE 8 — coherence polish + glm-5.2 chain + ilmu lane (commit c1509c4, deploy green, prod-verified)
+
+Driven by Yose's screenshot #54 review. All landed and production-verified:
+
+- **Kliping sheet deduped**: JUDUL PER GRUP KEPEMILIKAN section removed
+  (it duplicated the KUMPULAN SUMBER table, which keeps the grup column +
+  links). Sheet sections now: RINGKASAN (sari) → POIN UTAMA → KUMPULAN SUMBER.
+- **Sari for every cluster**: `_SARI_MAKS_KLASTER` 6 → 16 (the rack caps
+  upstream; singletons still skip, one clip is a headline not a story).
+- **Model chain**: NIM main is now `z-ai/glm-5.2` (verified live catalog id,
+  build.nvidia.com/z-ai/glm-5.2), second NIM lane `deepseek-ai/deepseek-v4-pro`
+  as fallback before groq/openrouter/gemini. LATENT BUG fixed in llm.py:
+  GitHub Actions materialises an unset repo Variable as an EMPTY env var, and
+  `os.environ.get(env, default)` returns "" — the nim lane may have been
+  requesting model "" all along. Now `os.environ.get(env) or default`.
+- **Fold flush**: `.di-curl` was an inline-block button on the text baseline
+  → ~8px descender gap under the fold (his "wrong frame" read). display:block.
+  Verified gapBelow/gapRight 0/0.
+- **THE right-align bug** (his phone report, "everything justified right"):
+  `.act-mesin .wrap { display:grid }` with an auto track — the track inherits
+  the widest child's min-content (a chart ruler ~369px at 390vw), inflates past
+  the wrap's padding box, and EVERY bab stretches to it → the whole act skewed
+  right (gutters 16/5). Fix: `grid-template-columns: minmax(0, 100%)`.
+  Verified 16/16 on ekonomi/oligarki/kuasa. Pasar itself measured symmetric.
+- **Loader redesigned**: dark plate, DETAK DETIK wordmark rising line-masked
+  from its own baseline, serial + date paperwork corners, then the WHOLE plate
+  lifts like a theatre curtain (orange hem sweeps last). Sheets/status/folio
+  ceremony deleted; also killed the hardcoded `EDISI #41 SIAP` in choreo.ts.
+- **RimbaHidup caption diet**: everything stripped to `BOIDS · REYNOLDS 1987`.
+  Doctrine note from Yose: SHOW, DON'T OVEREXPLAIN in hardcoded words — this is
+  the north star for every caption in the paper.
+- **ZonaHayati = profile plate, not popup** (his correction of the dossier):
+  clicking a species row swaps the main profile IN PLACE (image crossfade +
+  kicker/name/meta/endemik line/prose). Prose = registry `ringkas` first,
+  id.wikipedia exintro may only LENGTHEN it (Lane A). Dossier sheet deleted.
+  hayati.json itself untouched (STILL FROZEN, safety).
+- **Almanak unfolded**: the three non-hero shelves are full broadsheet bands
+  now (alternating image sides, drop caps when unillustrated), not 170px index
+  rows. Hero + computed sky column unchanged.
+- **ILMU lane shipped** (`newsroom/ilmu.py`, wired in main.py after sari):
+  each run pulls the month's Crossref indonesia batch (recall not precision),
+  the model judges TRUE Indonesia relevance and writes one plain line why
+  (Lane C; deterministic gate: index-exists, ≤180 chars, link-free), merged by
+  DOI into `newsroom/data/atlas/jurnal.json` (stash of 12, retires ~28
+  editions) — committed by the Actions job, baked at deploy. AlmanakSains
+  prefers the stash (labeled "DINILAI MESIN", per-row "— penilai mesin"),
+  falls back to the live keyword shelf when empty. Receipts: crossref rows
+  added to sumber.astro + DATA_SOURCES.md (was missing, iron-law catch-up).
+- **"Clusters still the same" diagnosed as cadence, not breakage**: crons are
+  21:32/09:32 UTC (04:32/16:32 WIB); at his midnight-WIB review the last print
+  was №104 petang 17:51 WIB, next at 04:32. Nothing skipped.
+
+His queue unchanged + new: guntingan (design blessed), contoh honesty flag,
+RAPOR NEGARA Act-2 restructure (plan delivered this session, awaiting his
+blessing), kapal Durable Object relay, Flipboard picks.
 
 Keys landed (NIM rotated, NEWSROOM_ENABLED=true, PUBLIC_AKSARA_URL set,
 NASA_API_KEY in). Newsroom triggered manually: run GREEN, `/edisi` serves
