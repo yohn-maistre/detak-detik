@@ -1,7 +1,16 @@
 name: Deploy Cloudflare Pages
 
+# workflow_run: pushes made with the default GITHUB_TOKEN (the newsroom's and
+# pantau's data commits) NEVER trigger push workflows — GitHub's anti-loop
+# rule — so without this the fresh edition and data rows were only baked on
+# the next human push. Now every green Newsroom/Pantau run re-deploys, which
+# also re-snapshots /edisi into the bundle even when nothing was committed.
 on:
   push:
+    branches: [main]
+  workflow_run:
+    workflows: [Newsroom, Pantau Negara]
+    types: [completed]
     branches: [main]
   workflow_dispatch:
 
@@ -12,6 +21,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     permissions:
       contents: read
     steps:
