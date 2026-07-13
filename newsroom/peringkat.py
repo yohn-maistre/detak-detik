@@ -31,10 +31,17 @@ _SYSTEM = (
 )
 
 
+# the matrix strictly dominates (skor never reaches 100): the model's
+# judgment orders the rack, ownership diversity only breaks ties
 def _nilai(k: Kliping) -> tuple[int, int]:
     m = k.matriks or {}
     total = sum(v for v in m.values() if isinstance(v, int))
-    return (total * 10 + k.skor, k.skor)
+    return (total * 100 + k.skor, k.skor)
+
+
+# rank at most 2× the printable rack: a bounded reply survives output
+# limits (a 50-row array truncated mid-JSON killed the whole pass once)
+_PERINGKAT_MAKS = 24
 
 
 async def peringkat_kliping(kliping: list[Kliping], catat=None) -> int:
@@ -47,9 +54,10 @@ async def peringkat_kliping(kliping: list[Kliping], catat=None) -> int:
     from pydantic_ai import Agent
 
     agent = Agent(model, output_type=str, system_prompt=_SYSTEM, retries=1)
+    kandidat = kliping[:_PERINGKAT_MAKS]
     daftar = "\n".join(
         f"{i + 1}. {k.utama.judul} ({k.n_media} media, {k.n_grup} grup, meja {k.meja})"
-        for i, k in enumerate(kliping)
+        for i, k in enumerate(kandidat)
     )
     try:
         hasil = await agent.run(f"KLASTER:\n{daftar}")
@@ -62,20 +70,29 @@ async def peringkat_kliping(kliping: list[Kliping], catat=None) -> int:
             catat("peringkat_gugur", alasan=f"lane: {rinci[:300]}")
         return 0
 
-    m = re.search(r"\[.*\]", mentah, re.S)
+    m = re.search(r"\[.*", mentah, re.S)
     if not m:
         if catat:
             catat("peringkat_gugur", alasan="jawaban bukan JSON")
         return 0
     try:
-        baris = json.loads(m.group(0))
+        baris = json.loads(re.sub(r"[^\]]*$", "]", m.group(0)) if not m.group(0).rstrip().endswith("]") else m.group(0))
     except Exception:
-        if catat:
+        # salvage: a truncated array still holds complete row objects —
+        # parse each individually so the cut only costs the tail
+        baris = []
+        for obj in re.findall(r"\{[^{}]*\}", m.group(0)):
+            try:
+                baris.append(json.loads(obj))
+            except Exception:
+                continue
+        if not baris and catat:
             catat("peringkat_gugur", alasan="JSON tidak sah")
-        return 0
+    if not isinstance(baris, list):
+        baris = []
 
     dinilai = 0
-    for b in baris if isinstance(baris, list) else []:
+    for b in baris:
         if not isinstance(b, dict):
             continue
         try:
@@ -84,14 +101,14 @@ async def peringkat_kliping(kliping: list[Kliping], catat=None) -> int:
         except (TypeError, ValueError):
             continue
         alasan = " ".join(str(b.get("alasan", "")).split())
-        if not (0 <= i < len(kliping)):
+        if not (0 <= i < len(kandidat)):
             continue
         if not all(1 <= v <= 5 for v in skor3.values()):
             continue
         if len(alasan) > 160 or "http" in alasan.lower():
             alasan = ""
-        kliping[i].matriks = skor3
-        kliping[i].alasan_peringkat = alasan or None
+        kandidat[i].matriks = skor3
+        kandidat[i].alasan_peringkat = alasan or None
         dinilai += 1
 
     if dinilai:

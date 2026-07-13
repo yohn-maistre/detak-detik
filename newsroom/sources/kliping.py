@@ -170,11 +170,19 @@ def _ambil(url: str) -> str:
 _CDATA = re.compile(r"^\s*<!\[CDATA\[(.*?)\]\]>\s*$", re.S)
 
 
+# feeds double-encode ("&amp;#039;") and some mangle the entity outright
+# ("amp;039;" — seen verbatim in detik titles): after unescaping, repair the
+# one broken shape that survives, the mangled apostrophe
+_AMP_RUSAK = re.compile(r"&?amp;#?0?39;")
+
+
 def _bersih_teks(teks: str) -> str:
     m = _CDATA.match(teks)
     if m:
         teks = m.group(1)
-    return html.unescape(teks).strip()
+    # unescape TWICE: idempotent on clean text, fixes double-encoded feeds
+    t = html.unescape(html.unescape(teks)).strip()
+    return _AMP_RUSAK.sub("'", t)
 
 
 _TAG = re.compile(r"<[^>]+>")
