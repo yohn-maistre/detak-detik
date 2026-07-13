@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-13T12:19:33+00:00",
+ "diambil": "2026-07-13T22:27:13+00:00",
  "acara": [
   {
    "id": "27ad0046d77f",
@@ -105,6 +105,70 @@
    "topik": [
     "ekonomi"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c8a94c5ea62c",
+   "url": "https://wapresri.go.id/peringati-hkg-ke-54-pkk-ibu-selvi-tekankan-pemberdayaan-perempuan-dan-penguatan-keluarga-harus-berjalan-beriringan/",
+   "judul": "Peringati HKG ke-54 PKK, Ibu Selvi Tekankan Pemberdayaan Perempuan dan Penguatan Keluarga Harus Berjalan Beriringan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4f5a32a88406",
+   "url": "https://wapresri.go.id/hut-ke-46-dekranas-dan-hkg-ke-54-pkk-ibu-selvi-jalan-sehat-bersama-masyarakat-sulawesi-selatan/",
+   "judul": "HUT ke-46 Dekranas dan HKG ke-54 PKK, Ibu Selvi Jalan Sehat Bersama Masyarakat Sulawesi Selatan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "005c43583096",
+   "url": "https://wapresri.go.id/semarakkan-rangkaian-hut-ke-46-dekranas-ibu-selvi-hadiri-malam-budaya-sulawesi-selatan/",
+   "judul": "Semarakkan Rangkaian HUT ke-46 Dekranas, Ibu Selvi Hadiri Malam Budaya Sulawesi Selatan",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dbca8bca25ef",
+   "url": "https://wapresri.go.id/buka-pameran-hut-ke-46-dekranas-ibu-selvi-tekankan-pentingnya-pendampingan-perajin/",
+   "judul": "Buka Pameran HUT ke-46 Dekranas, Ibu Selvi Tekankan Pentingnya Pendampingan Perajin",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
