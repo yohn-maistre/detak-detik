@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-12T22:24:48.511032+00:00",
+ "diperbarui": "2026-07-13T02:00:31.796680+00:00",
  "edisi": 105,
  "pilihan": [
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Makalah meneliti pirolisis langsung aspal batuan dari Buton, Indonesia, dan karakterisasi produk cairnya. Relevan bagi pembaca Indonesia karena Buton merupakan cadangan aspal batuan terbesar di Indonesia, sehingga kajian ini berhubungan langsung dengan pemanfaatan sumber daya alam nasional.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Penelitian merumuskan model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat. Relevan bagi pembaca Indonesia karena membahas tata kelola kawasan hutan dan mitigasi dampak lingkungan di wilayah spesifik di Indonesia.",
+   "kategori": "KEHUTANAN & DAERAH ALIRAN SUNG",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah mengkusi kontinuitas, kerangka hukum, dan transformasi digital dalam penghimpunan dana zakat di Indonesia. Relevan bagi pembaca Indonesia karena zakat merupakan instrumen keuangan syariah yang signifikan dalam perekonomian dan kesejahteraan masyarakat.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Artikel menelaah batasan dan celah pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi pembaca Indonesia karena isu perlindungan anak dan kekerasan dalam rumah tangga masih matter dalam kebijakan hukum nasional.",
+   "kategori": "HKI & PERLINDUNGAN ANAK",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian membahas reproduksi sosial pekerja nikel di North Maluku, Indonesia, serta dinamika buruh di kawasan ekstraktif. Relevan bagi pembaca Indonesia karena pertambangan nikel menjadi sektor penting dengan dampak sosial yang signifikan bagi masyarakat lokal.",
+   "kategori": "EKSTRAKTIF & KETENAGAKERJAAN",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Studi menilai keyakinan kesehatan dan keterlambatan pasien di kalangan penderita kanker payudara di West Sumatra, Indonesia. Relevan bagi pembaca Indonesia karena keterlambatan deteksi dan pengobatan kanker masih menjadi tantangan dalam sistem kesehatan nasional.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "Enhancing teachers' intercultural literacy: Examining the impact of a Fulbright-hays group projects abroad program to Indonesia",
+   "wadah": "Journal of Global Education and Research",
+   "doi": "10.5038/2577-509x.10.3.1470",
+   "tanggal": "2026-12",
+   "alasan": "Makali mengkaji dampak program Fulbright-Hays terhadap literasi lintas budaya para guru yang mengikuti program pendidikan di Indonesia. Relevan bagi pembaca Indonesia karena membahas pengembangan kompetensi guru dan pemahaman lintas budaya dalam konteks pendidikan nasional.",
+   "kategori": "PENDIDIKAN & BUDAYA",
+   "sejak_edisi": 105
+  },
+  {
+   "judul": "AI Governance Systems in Southeast Asia: A Comparative Analysis of Indonesia and Malaysia",
+   "wadah": "Emerging Technologies and Governance",
+   "doi": "10.47176/etg.2026.1008",
+   "tanggal": "2026-11-25",
+   "alasan": "Artikel membandingkan sistem tata kelola kecerdasan buatan di Asia Tenggara, dengan fokus pada Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena regulasi teknologi nasional masih berkembang dan kajian komparatif ini memberi perspektif untuk perumusan kebijakan AI.",
+   "kategori": "KEBIJAKAN TEKNOLOGI",
+   "sejak_edisi": 105
+  },
   {
    "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
    "wadah": "Parasitology International",
@@ -36,78 +108,6 @@
    "tanggal": "2026-12",
    "alasan": "Makalah ini membedah kerentanan masyarakat terhadap transisi batu bara di Indonesia beserta implikasi kebijakannya. Relevan karena pembaca perlu memahami dampak sosial dari pengurangan tambang batu bara pada komunitas penambang.",
    "kategori": "ALAM & TAMBANG",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103213",
-   "tanggal": "2026-12",
-   "alasan": "Telaah komunikasi ritual, adat, dan toleransi reflektif pada masyarakat adat Ngadas Tengger di Jawa Timur. Relevan bagi pembaca yang menekuni Kearifan lokal dan dinamika toleransi antaragama di komunitas pegunungan.",
-   "kategori": "MASYARAKAT & BUDAYA",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menelaah kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Relevan bagi pembaca Indonesia karena isu pengelolaan emisi karbon dan kerja sama regional memengaruhi kebijakan energi nasional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Pandemic-induced disruptions and digital constraints in horticultural agribusiness: A case study in Aceh, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103076",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengkaji dampak pandemi dan kendala digital pada agribisnis hortikultura di Aceh. Relevan bagi pembaca Indonesia karena merespons tantangan petani lokal dalam adopsi teknologi serta ketahanan pangan pasca-pandemi di provinsi terdampak.",
-   "kategori": "PERTANIAN & DIGITAL",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
-   "wadah": "Renewable and Sustainable Energy Transition",
-   "doi": "10.1016/j.rset.2026.100152",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini membandingkan transisi energi berbasis target pada sistem kelistrikan Indonesia, Filipina, dan Vietnam. Relevan bagi pembaca Indonesia karena perbandingan kebijakan energi terbarukan membantu memahami posisi dan strategi nasional dalam transisi listrik.",
-   "kategori": "ENERGI & TRANSISI",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menganalisis kebijakan integrasi sapi dan perkebunan kelapa sawit di Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena efisiensi lahan sawit dan peternakan adalah isu konkret yang memengaruhi produksi pangan dan ekonomi rural nasional.",
-   "kategori": "KEBIJAKAN PERTANIAN",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
-   "wadah": "Cleaner Waste Systems",
-   "doi": "10.1016/j.clwas.2026.100539",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini menganalisis aliran massa dan efisiensi pemulihan pada sistem pengelolaan sampah berbasis komunitas di Batu. Relevan bagi pembaca Indonesia karena model sampah komunitas menjadi solusi konkret untuk masalah pengelolaan limbah perkotaan.",
-   "kategori": "SAMPAH & KOMUNITAS",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "The Biodiesel Paradox: Analyzing the Multi-Dimensional Challenges of Indonesia's B50 Mandate Implementation",
-   "wadah": "Engineering and Technology Journal",
-   "doi": "10.47191/etj/v11i02.28",
-   "tanggal": "2026-11-2",
-   "alasan": "Makalah ini mengulas tantangan multidimensional dalam penerapan mandat biodiesel B50 di Indonesia. Relevan bagi pembaca Indonesia karena kebijakan campuran biodiesel berdampak pada ketahanan energi pangan dan ekonomi kelapa sawit.",
-   "kategori": "ENERGI MANDATORIS",
-   "sejak_edisi": 105
-  },
-  {
-   "judul": "Potential for Liquefaction After The 2018 Pasigala Earthquake Due to Changes in Hydraulic Conductivity Characteristics and Soil Properties in the Gumbasa Irrigation Rice Field Area",
-   "wadah": "Engineering and Technology Journal",
-   "doi": "10.47191/etj/v11i02.22",
-   "tanggal": "2026-11-2",
-   "alasan": "Studi ini menilai potensi likuifaksi pasca-gempa 2018 di lahan irigasi Gumbasa. Relevan bagi pembaca Indonesia karena bencana alam terjadi di wilayah pertanian aktif dan memengaruhi keselamatan infrastruktur irigasi nasional.",
-   "kategori": "BAHAYA GEMPA",
    "sejak_edisi": 105
   }
  ]

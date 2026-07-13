@@ -4,8 +4,28 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-11T10:40:01+00:00",
+ "diambil": "2026-07-13T01:57:19+00:00",
  "acara": [
+  {
+   "id": "27ad0046d77f",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-puncak-peringatan-hari-koperasi-ke-79-dorong-koperasi-jadi-pilar-ekonomi-kerakyatan/",
+   "judul": "Presiden Prabowo Hadiri Puncak Peringatan Hari Koperasi ke-79, Dorong Koperasi Jadi Pilar Ekonomi Kerakyatan",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-12",
+   "tanggal_terbit": "2026-07-12",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "luar-negeri",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "1d71b60d02b0",
    "url": "https://wapresri.go.id/dialog-dengan-nelayan-muncar-wapres-dorong-penguatan-tata-kelola-dan-produktivitas-sektor-perikanan/",
