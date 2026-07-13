@@ -1602,6 +1602,60 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-13 · WAVE 9 — №1 = the ranked cluster + honesty flags + Aksara revived (commits cf446b2 + c5686df)
+
+Yose's screenshot #57-63 review + his mid-turn call: "make the no 1 the same
+as the clusters... llm ranks by urgency, importance, how many people it
+affects... and no 1 still produces the klipping when clicked."
+
+- **№1 IS a kliping cluster now** (`newsroom/peringkat.py` + editor):
+  the model scores each cluster PENTING/MENDESAK/DAMPAK 1-5 (Eisenhower
+  matrix; it only ORDERS Lane A content, never writes it); final rank =
+  matrix ×100 + diversity-skor tiebreak. temuan[0] = lens 'pers' with the
+  cluster's VERBATIM headline; front renders "DARI RAK PERS · PALING PENTING
+  & MENDESAK", prints the matrix as receipts (PENTING n/5 · ... · DINILAI
+  MESIN — alasan), clicking №1 opens its lembar, and the rack below skips
+  the lead cluster. Fallback: dead lane keeps diversity order.
+  HARDENED after the first cron run failed with "JSON tidak sah": rank cap
+  24 (2× printable rack; a 53-row reply truncated mid-array), salvage parser
+  recovers complete row objects from a truncated array.
+- **Contoh honesty flag LIVE**: Temuan/LiveTemuan gain `contoh`; every
+  classic desk (hukum/harga/anggaran/hutan/janji/papua) marks its findings
+  (all still seed-corpus; flip per desk as live parses land). The №1 mystery
+  answered: the hukum desk re-phrases the same committed seed each edition —
+  it looked frozen because its corpus IS frozen. data_hilang stays live.
+  KNOWN REMAINING: Angka Edisi still derives from the hukum seed
+  ("vonis bulan ini") — address in the Act 2 RAPOR build.
+- **AKSARA REVIVED**: /ask was dead because the worker last deployed
+  2026-07-02, BEFORE the NIM key rotation — worker.yml only repushes secrets
+  when it runs. `gh workflow run worker.yml` fixed it (live-verified answer).
+  LEARNING: rotating a key = redeploy the worker too.
+- **Kliping entity bug fixed**: feeds double-encode (&amp;#039;) and detik
+  mangles outright (amp;039;) — unescape twice + targeted apostrophe repair
+  (legit "19.39;" proven untouched).
+- **ilmu v2**: LLM-titled KATEGORI shelves (≤30 chars, gated) + 2-3 sentence
+  writeups (≤460 chars, digit-gate vs the paper's own metadata); almanak
+  groups the shelf by category, "rak dinamai mesin" credited.
+- **Ownership squares** (■ independen / □ grup) now ride every KUMPULAN
+  SUMBER row in the lembar (the suara section that carried them was deduped
+  in wave 8).
+- **Pustaka**: spines are buttons now — click PINS a card under the shelf
+  (title, meta, catatan, the wikipedia link sits in it); hover preview stays
+  mouse-only. Phones never navigate blind again.
+- **Bahasa718 archived** (Yose: out of place; profile's BAHASA line stays;
+  queued: wiktionary-checked kata-air inside WARISAN).
+- **WajahNusantara**: section parser now splits == markers globally (raw
+  "=== Periode sebelum masehi ===" was printing when a marker shared a
+  block with its body); feature body runs 2 newspaper columns ≥1000px.
+- **Aksara chrome**: pintasan trimmed to Tur only; pill ▮ and terminal >
+  blink in phase (both 1s, wall-clock-anchored negative animation-delay).
+- Queued from his notes: profiles into the newsroom corpus ("let the LLM
+  know about them"), worker /ask model pin review, kartu WA for temuan.
+- **ACT 2 REDESIGN BLESSED** (his "SOUNDS FIRE"): ledger accordion for
+  Gerak I (closed strips = the rapor at a glance), rak + reading well for
+  Gerak II with janji + partai moving in, MBG counter out, hening always
+  open. NEXT BUILD.
+
 ### 2026-07-13 · WAVE 8 — coherence polish + glm-5.2 chain + ilmu lane (commit c1509c4, deploy green, prod-verified)
 
 Driven by Yose's screenshot #54 review. All landed and production-verified:
