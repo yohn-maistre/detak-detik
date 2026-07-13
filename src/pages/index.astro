@@ -41,7 +41,6 @@ import LembaranNegara from '../islands/LembaranNegara.svelte';
 import PetaAtlas from '../islands/PetaAtlas.svelte';
 import EdisiFeed from '../islands/EdisiFeed.svelte';
 import DaftarIsi from '../islands/DaftarIsi.svelte';
-import MbgKorban from '../islands/MbgKorban.svelte';
 import ObituariHutan from '../components/ObituariHutan.astro';
 import { EDISI, ANGKA_EDISI, TICKER, TEMUAN, STRUK, KEHENINGAN, PUTUSAN_HARIAN } from '../lib/data/edisi';
 // aparat record: one owner for the band's 602, the funnel, and these rows
@@ -55,6 +54,20 @@ import JANJI from '../../newsroom/data/janji_registry.json';
 import { PIECES } from '../lib/perspektif';
 
 const fmtRp = new Intl.NumberFormat('id-ID');
+
+// BERKAS (2026-07-13, Yose's blessing): each chapter is a closed dossier;
+// the strip carries the branch's signature figure — closed Act II IS the
+// rapor at a glance. CB feeds the strips from the same one-owner data.
+const CB = Object.fromEntries(CABANG.map((c) => [c.slug, c]));
+// the Gerak II shelf: six perspektif plates over one reading well
+const RAK_NEGERI = [
+  { id: 'janji', no: '06', judul: 'Janji & Program', dek: 'Buku besar yang mengingat' },
+  { id: 'partai', no: '07', judul: 'Partai & Kepentingan', dek: 'Kursi, jabatan, kepemilikan' },
+  { id: 'oligarki', no: '08', judul: 'Republik Oligarki', dek: 'Siapa memiliki apa' },
+  { id: 'ekonomi', no: '09', judul: 'Pasar yang Tipis', dek: 'Float dan pengendali bursa' },
+  { id: 'dunia', no: '10', judul: 'Dunia', dek: 'Peringkat yang tampak dari luar' },
+  { id: 'lingkungan', no: '11', judul: 'Sumber Daya Alam', dek: 'Hutan, konsesi, tambang' },
+];
 
 // janji dumbbell from the registry's EXPLICIT figures (target_angka /
 // realisasi_angka — no string parsing): a full pair draws a track (target
@@ -299,22 +312,8 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <p class="gerak-dek fig">Siapa yang memegang kuasa di republik ini, dan bagaimana ia memakainya.</p>
         </div>
 
-        <!-- the five branches, as a slim index; each band now leads its chapter -->
-        <nav class="cabang-indeks" aria-label="Lima cabang kekuasaan">
-          <span class="ci-head mono"><span class="dot">●</span>LIMA CABANG KEKUASAAN</span>
-          <ol class="ci-list">
-            {CABANG.map((c) => (
-              <li class="ci-item">
-                <a href={`#${c.anchor}`}>
-                  <span class="ci-no mono">{c.no}</span>
-                  <span class="ci-nama display">{c.nama}</span>
-                  <span class="ci-ringkas">{c.ringkas}</span>
-                  <span class="ci-panah" aria-hidden="true">↓</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
+        <!-- the slim cabang index retired 2026-07-13: the closed BERKAS strips
+             below ARE the index now (each carries its signature figure) -->
 
         {/* the aggregator's front desk (§13.19): the newest documented act
              per pantau lane — the reason to come back every morning */}
@@ -324,7 +323,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         </section>
 
         <!-- CABANG · EKSEKUTIF -->
-        <section class="bab" id="kuasa">
+        <section class="bab berkas" id="kuasa" data-berkas="cabang">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">01</span>
             <div class="bab-kepala-teks">
@@ -332,8 +331,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <h2 class="bab-tajuk display">Presiden &amp; Kabinet</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;Presiden Republik Indonesia memegang kekuasaan pemerintahan menurut Undang-Undang Dasar.&rdquo;</span> <span class="mono">UUD 1945 · PS. 4 (1)</span></p>
               <p class="bab-dek">Kabinet terbesar sejak 1966; apa yang dikerjakannya tercatat di agenda resminya sendiri.</p>
+              <div class="berkas-rapor">
+                <span class="berkas-angka display num">{CB.eksekutif?.big}</span>
+                <span class="berkas-cap mono">{CB.eksekutif?.ringkas}</span>
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="kuasa-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="kuasa-isi"><div class="berkas-isi-in">
           <CabangBand cabang="eksekutif" client:visible />
           <!-- kartu vital retired 2026-07-12 (Yose: one fact family, one
                surface) — its like-for-like count + receipt live in the band -->
@@ -353,10 +358,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             <p class="bab-kalimat fig">Satu sel tiap pejabat, tersusun menurut tingkatnya — dan di sampingnya jam Danantara terus berjalan, menunggu laporan keuangan pertama.</p>
             <KabinetWaffle client:visible />
           </div>
+          </div></div>
         </section>
 
         <!-- CABANG · LEGISLATIF -->
-        <section class="bab" id="pabrik">
+        <section class="bab berkas" id="pabrik" data-berkas="cabang">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">02</span>
             <div class="bab-kepala-teks">
@@ -364,8 +370,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <h2 class="bab-tajuk display">Wakil &amp; Undang-Undang</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;Dewan Perwakilan Rakyat memegang kekuasaan membentuk undang-undang.&rdquo;</span> <span class="mono">UUD 1945 · PS. 20 (1)</span></p>
               <p class="bab-dek">DPR 580 kursi; kecepatan mengesahkan RUU menunjukkan prioritasnya.</p>
+              <div class="berkas-rapor">
+                <span class="berkas-angka display num">{CB.legislatif?.big}</span>
+                <span class="berkas-cap mono">{CB.legislatif?.ringkas}</span>
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="pabrik-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="pabrik-isi"><div class="berkas-isi-in">
           <CabangBand cabang="legislatif" client:visible />
           <SkorCabang cabang="legislatif" client:visible />
           {pabrik && (
@@ -384,10 +396,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="bab-lembar bab-sub" data-rise>
             <SuaraLembaga cabang="legislatif" client:visible />
           </div>
+          </div></div>
         </section>
 
         <!-- CABANG · YUDIKATIF -->
-        <section class="bab" id="hukum">
+        <section class="bab berkas" id="hukum" data-berkas="cabang">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">03</span>
             <div class="bab-kepala-teks">
@@ -395,8 +408,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <h2 class="bab-tajuk display">Hukum &amp; Vonis</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;Kekuasaan kehakiman merupakan kekuasaan yang merdeka untuk menyelenggarakan peradilan guna menegakkan hukum dan keadilan.&rdquo;</span> <span class="mono">UUD 1945 · PS. 24 (1)</span></p>
               <p class="bab-dek">{TEMUAN[0].headline}. <span class="mono">(data contoh)</span></p>
+              <div class="berkas-rapor">
+                <span class="berkas-angka display num">{CB.yudikatif?.big}</span>
+                <span class="berkas-cap mono">{CB.yudikatif?.ringkas}</span>
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="hukum-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="hukum-isi"><div class="berkas-isi-in">
           <CabangBand cabang="yudikatif" client:visible />
           <SkorCabang cabang="yudikatif" client:visible />
           <div class="bab-lembar" data-rise>
@@ -417,10 +436,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="ledger lingk-absen absen-satu">
             <div><span><b class="absen-k mono">YANG BELUM DICETAK · MENUNGGU KURASI</b> Putusan langsung dari Direktori MA <span class="mono">portal berlapis tantangan untuk mesin — kurasi manual berjalan (ICW Tren Vonis)</span></span><span class="v num">—</span></div>
           </div>
+          </div></div>
         </section>
 
         <!-- BAB III · APARAT -->
-        <section class="bab" id="aparat">
+        <section class="bab berkas" id="aparat" data-berkas="cabang">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">04</span>
             <div class="bab-kepala-teks">
@@ -428,8 +448,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <h2 class="bab-tajuk display">Alat Paksa Negara</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;&hellip; bertugas melindungi, mengayomi, melayani masyarakat, serta menegakkan hukum.&rdquo;</span> <span class="mono">UUD 1945 · PS. 30 (4), TENTANG POLRI</span></p>
               <p class="bab-dek">Anggaran terbesar negara, dan pertanggungjawaban yang paling jarang sampai ke pengadilan.</p>
+              <div class="berkas-rapor">
+                <span class="berkas-angka display num">{CB.aparat?.big}</span>
+                <span class="berkas-cap mono">{CB.aparat?.ringkas}</span>
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="aparat-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="aparat-isi"><div class="berkas-isi-in">
           <CabangBand cabang="aparat" client:visible />
           <SkorCabang cabang="aparat" client:visible />
           <div class="aparat-grid">
@@ -462,10 +488,11 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
           <div class="bab-lembar bab-sub" data-rise>
             <SuaraLembaga cabang="aparat" client:visible />
           </div>
+          </div></div>
         </section>
 
         <!-- CABANG · DAERAH -->
-        <section class="bab" id="daerah">
+        <section class="bab berkas" id="daerah" data-berkas="cabang">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">05</span>
             <div class="bab-kepala-teks">
@@ -473,8 +500,14 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
               <h2 class="bab-tajuk display">Pemerintahan &amp; Anggaran</h2>
               <p class="bab-fungsi"><span class="fig">&ldquo;Pemerintahan daerah menjalankan otonomi seluas-luasnya &hellip;&rdquo;</span> <span class="mono">UUD 1945 · PS. 18 (5)</span></p>
               <p class="bab-dek">{TEMUAN[2].headline}. <span class="mono">(data contoh)</span></p>
+              <div class="berkas-rapor">
+                <span class="berkas-angka display num">{CB.daerah?.big}</span>
+                <span class="berkas-cap mono">{CB.daerah?.ringkas}</span>
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="daerah-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="daerah-isi"><div class="berkas-isi-in">
           <CabangBand cabang="daerah" client:visible />
           <SkorCabang cabang="daerah" client:visible />
 
@@ -517,36 +550,49 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
           </div>
 
+          </div></div>
         </section>
 
-        {/* BAB 06 · PARTAI & KEPENTINGAN — GERAK I's closing chapter: the
-             interests that operate across all five branches. §4.4 law:
-             documents only — kursi, jabatan, kepemilikan; never a score. */}
-        <section class="bab" id="partai">
+        {/* PARTAI & JANJI moved into GERAK II (2026-07-13, Yose's call):
+             what is promised and who holds the interests read as the state
+             of the country, beside ownership and markets. */}
+
+        <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
+        <div class="gerak" data-rise>
+          <span class="gerak-no mono">GERAK II</span>
+          <h2 class="gerak-judul display">Keadaan Negeri</h2>
+          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: siapa memiliki apa, pasar, posisi di antara bangsa, sumber daya alam — dan janji yang tercatat atasnya.</p>
+        </div>
+
+        <!-- the RAK: six perspektif plates over one reading well; a plate
+             opens its dossier below (one at a time, same berkas grammar) -->
+        <nav class="rak-negeri" aria-label="Rak keadaan negeri" data-rise>
+          {RAK_NEGERI.map((r) => (
+            <button class="rak-plat" data-rak={r.id}>
+              <span class="rak-no ghost-num num" aria-hidden="true">{r.no}</span>
+              <span class="rak-judul display">{r.judul}</span>
+              <span class="rak-dek">{r.dek}</span>
+              <span class="rak-buka mono" aria-hidden="true">BUKA ↓</span>
+            </button>
+          ))}
+        </nav>
+
+        <!-- BAB 06 · JANJI & PROGRAM: the ledger that remembers, and the
+             programs it grades. (Moved into Keadaan Negeri 2026-07-13; the
+             MBG counter block retired with the move — Yose's call.) -->
+        <section class="bab berkas" id="janji" data-berkas="negeri">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">06</span>
-            <div class="bab-kepala-teks">
-              <span class="inkbar"><span class="dot">●</span>PARTAI &amp; KEPENTINGAN</span>
-              <h2 class="bab-tajuk display">Siapa Memegang Apa</h2>
-              <p class="bab-dek">Kursi di parlemen, gubernur di daerah, grup media di tangan pengurusnya — dokumen saja, tanpa skor. Supaya jelas ke pintu siapa sebuah urusan pantas diketuk.</p>
-            </div>
-          </header>
-          <PartaiPapan client:visible />
-        </section>
-
-        <!-- BAB 07 · JANJI & PROGRAM: the ledger that remembers, and the programs
-             it grades — closes GERAK I: what the officeholders promised sits
-             right after who they are. (Moved out of Keadaan Negeri, 2026-07-11;
-             the TenggatStrip teaser died with the move — one ledger, one owner.) -->
-        <section class="bab" id="janji">
-          <header class="bab-kepala">
-            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>BUKU BESAR · JANJI</span>
               <h2 class="bab-tajuk display">Janji &amp; Program</h2>
               <p class="bab-dek">Buku besar yang mengingat: target yang diucapkan, angka yang terukur, dan ongkos program terbesarnya. Dinilai dengan aritmetika, bukan opini.</p>
+              <div class="berkas-rapor">
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="janji-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="janji-isi"><div class="berkas-isi-in">
 
           <!-- the buku besar itself: numbered ruled entries, promise beside its
                measurement, stamped mechanically from deadline × figure -->
@@ -578,53 +624,73 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </div>
           <p class="janji-foot mono">STATUS DIHITUNG DARI TENGGAT × ANGKA TERUKUR · SUMBER TIAP BARIS TERCATAT · ▌TARGET ● TERUKUR</p>
-
-          <div class="bab-lembar bab-sub" data-rise>
-            <h3 class="bab-subjudul display">Catatan Keracunan MBG</h3>
-            <p class="bab-kalimat fig">Makan Bergizi Gratis: anggaran ratusan triliun, dan insiden keracunan yang tercatat — disajikan sebagai catatan, menunggu rekap sumber resmi.</p>
-            <MbgKorban client:visible />
-          </div>
+          <!-- Catatan Keracunan MBG retired here 2026-07-13 (Yose: remove the
+               counter under janji & program) — the registry rows remain the owner -->
+          </div></div>
         </section>
 
-        <!-- ╌╌ GERAK II · KEADAAN NEGERI ╌╌ -->
-        <div class="gerak" data-rise>
-          <span class="gerak-no mono">GERAK II</span>
-          <h2 class="gerak-judul display">Keadaan Negeri</h2>
-          <p class="gerak-dek fig">Bukan lembaga, melainkan keadaan yang ditanggung bersama: siapa memiliki apa, pasar, posisi di antara bangsa, dan sumber daya alam.</p>
-        </div>
+        <!-- BAB 07 · PARTAI & KEPENTINGAN: the interests that operate across
+             all five branches. §4.4 law: documents only — kursi, jabatan,
+             kepemilikan; never a score. -->
+        <section class="bab berkas" id="partai" data-berkas="negeri">
+          <header class="bab-kepala">
+            <span class="bab-folio ghost-num" aria-hidden="true">07</span>
+            <div class="bab-kepala-teks">
+              <span class="inkbar"><span class="dot">●</span>PARTAI &amp; KEPENTINGAN</span>
+              <h2 class="bab-tajuk display">Siapa Memegang Apa</h2>
+              <p class="bab-dek">Kursi di parlemen, gubernur di daerah, grup media di tangan pengurusnya — dokumen saja, tanpa skor. Supaya jelas ke pintu siapa sebuah urusan pantas diketuk.</p>
+              <div class="berkas-rapor">
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="partai-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
+            </div>
+          </header>
+          <div class="berkas-isi" id="partai-isi"><div class="berkas-isi-in">
+          <PartaiPapan client:visible />
+          </div></div>
+        </section>
 
-        <!-- RAK 07 · KEPEMILIKAN — one header, one instrument (rack grammar) -->
+        <!-- BAB 08 · KEPEMILIKAN -->
         {oligarki && (
-          <section class="bab" id="oligarki">
+          <section class="bab berkas" id="oligarki" data-berkas="negeri">
             <header class="bab-kepala">
               <span class="bab-folio ghost-num" aria-hidden="true">08</span>
               <div class="bab-kepala-teks">
                 <span class="inkbar"><span class="dot">●</span>TEMA · KEPEMILIKAN</span>
                 <h2 class="bab-tajuk display">{oligarki.judul}</h2>
                 <p class="bab-dek">{oligarki.satuKalimat}</p>
+                <div class="berkas-rapor">
+                  <button class="berkas-buka mono" aria-expanded="false" aria-controls="oligarki-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+                </div>
               </div>
             </header>
+            <div class="berkas-isi" id="oligarki-isi"><div class="berkas-isi-in">
             <RepublikOligarki client:visible />
+            </div></div>
           </section>
         )}
 
         {/* RAK 08 · PASAR — the float ruler; measured-from-outside series
              print from real rows or not at all (two seeded charts died
              here, wave 9b — real rows or silence) */}
-        <section class="bab" id="ekonomi">
+        <section class="bab berkas" id="ekonomi" data-berkas="negeri">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">09</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · PASAR</span>
               <h2 class="bab-tajuk display">Pasar yang Tipis</h2>
               <p class="bab-dek">Pada sejumlah emiten terbesar, hampir seluruh saham dipegang segelintir pengendali; ambang free float Jakarta termasuk paling rendah di antara bursa besar.</p>
+              <div class="berkas-rapor">
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="ekonomi-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="ekonomi-isi"><div class="berkas-isi-in">
           <FloatKonsentrasi client:visible />
 
           <div class="ledger lingk-absen absen-satu">
             <div><span><b class="absen-k mono">YANG TIDAK DICETAK DI SINI · MENUNGGU SUMBER</b> Bursa &amp; rupiah harian, diukur dari luar <span class="mono">deret dicetak dari baris data sungguhan, bukan simulasi — esainya menunggu di rak arsip perspektif</span></span><span class="v num">—</span></div>
           </div>
+          </div></div>
         </section>
 
 
@@ -632,15 +698,19 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
         {/* RAK 09 · DUNIA: where the republic ranks, seen from outside.
              The two comparison essays retired to the arsip-perspektif
              shelf (wave 9b) — permalinks live on; one instrument here. */}
-        <section class="bab" id="dunia">
+        <section class="bab berkas" id="dunia" data-berkas="negeri">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">10</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · DARI LUAR</span>
               <h2 class="bab-tajuk display">Dunia</h2>
               <p class="bab-dek">Di mana republik ini berdiri di antara bangsa lain — angka peringkat yang hanya tampak dari luar.</p>
+              <div class="berkas-rapor">
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="dunia-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="dunia-isi"><div class="berkas-isi-in">
 
           <div class="dunia-board">
             {DUNIA.map((d) => (
@@ -655,18 +725,23 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             ))}
           </div>
 
+          </div></div>
         </section>
 
-        <!-- RAK 10 · LINGKUNGAN & EKSTRAKSI -->
-        <section class="bab" id="lingkungan">
+        <!-- BAB 11 · LINGKUNGAN & EKSTRAKSI -->
+        <section class="bab berkas" id="lingkungan" data-berkas="negeri">
           <header class="bab-kepala">
             <span class="bab-folio ghost-num" aria-hidden="true">11</span>
             <div class="bab-kepala-teks">
               <span class="inkbar"><span class="dot">●</span>TEMA · SUMBER DAYA ALAM</span>
               <h2 class="bab-tajuk display">Sumber Daya Alam</h2>
               <p class="bab-dek">Tanah yang menanggung pertumbuhan: hutan yang ditebang, dan — menyusul — siapa yang tergusur karenanya. Dokumen berdampingan, pembaca menyimpulkan.</p>
+              <div class="berkas-rapor">
+                <button class="berkas-buka mono" aria-expanded="false" aria-controls="lingkungan-isi"><i class="berkas-panah" aria-hidden="true">▾</i> BUKA BERKAS</button>
+              </div>
             </div>
           </header>
+          <div class="berkas-isi" id="lingkungan-isi"><div class="berkas-isi-in">
 
           <!-- retired (2026-07-03, §13.15+§13.17): Riwayat Udara Jakarta (the
                MAP owns live air), Janji yang Belum Cair (buku besar row), Sisa
@@ -698,6 +773,7 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
             </div>
             <button class="chip" data-buka-peta="udara"><span class="tick">◌</span>BUKA DI PETA · LAPISAN UDARA</button>
           </div>
+          </div></div>
         </section>
 
         <!-- archive: the perspektif permalinks live on; the shelf is one link away -->
@@ -1296,8 +1372,44 @@ if (AKSARA_BUILD) { try { lajurHost = new URL(AKSARA_BUILD).host; } catch { laju
   /* ---------- ACT II ---------- */
   /* minmax(0,100%): an auto grid track inherits the WIDEST child's
      min-content (a chart ruler), inflates past the wrap's padding box, and
-     every bab stretches to it — the whole act skewed right on phones */
-  .act-mesin .wrap { display: grid; grid-template-columns: minmax(0, 100%); gap: clamp(48px, 9vh, 110px); }
+     every bab stretches to it — the whole act skewed right on phones.
+     Gap tightened with the BERKAS ledger (closed strips read as one file
+     cabinet, not scattered posters). */
+  .act-mesin .wrap { display: grid; grid-template-columns: minmax(0, 100%); gap: clamp(34px, 5vh, 60px); }
+
+  /* ── BERKAS: chapters as closed dossiers (2026-07-13, Yose's blessing) —
+     the closed strip IS the rapor: mandate, dek, signature figure. Content
+     collapses via grid-rows (stays in DOM for print/SEO); html.no-js keeps
+     every file open. ── */
+  .berkas { padding-top: 0; }
+  .berkas .bab-kepala { margin-bottom: 0; padding-bottom: 18px; cursor: pointer; }
+  .berkas .bab-kepala:hover .berkas-buka { color: var(--accent); border-color: var(--accent); }
+  .berkas-rapor { display: flex; align-items: baseline; gap: 8px 16px; flex-wrap: wrap; margin-top: 14px; border-top: 1px solid var(--line-soft); padding-top: 12px; }
+  .berkas-angka { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(22px, 3vw, 34px); line-height: 1; letter-spacing: var(--disp-track); color: var(--ink); }
+  .berkas-cap { font-size: 9px; letter-spacing: 0.12em; color: var(--muted); max-width: 52ch; }
+  /* open file: the band below owns the figure — the strip stops repeating it */
+  .berkas.buka .berkas-angka, .berkas.buka .berkas-cap { display: none; }
+  .berkas-buka { margin-left: auto; background: none; border: 1px solid var(--line); color: var(--ink); font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.16em; padding: 6px 12px 5px; cursor: pointer; white-space: nowrap; }
+  .berkas-panah { display: inline-block; font-style: normal; transition: rotate 0.3s var(--ease-out); }
+  .berkas.buka .berkas-panah { rotate: 180deg; }
+  .berkas-isi { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.55s var(--ease-out); }
+  .berkas-isi > .berkas-isi-in { overflow: hidden; min-height: 0; }
+  .berkas.buka .berkas-isi { grid-template-rows: 1fr; }
+  .berkas.buka .berkas-isi > .berkas-isi-in { padding-top: clamp(20px, 3vw, 32px); }
+  html.no-js .berkas-isi { grid-template-rows: 1fr; }
+  @media (prefers-reduced-motion: reduce) { .berkas-isi, .berkas-panah { transition: none; } }
+
+  /* ── the Gerak II RAK: six perspektif plates over one reading well ── */
+  .rak-negeri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+  @media (max-width: 900px) { .rak-negeri { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .rak-negeri { grid-template-columns: 1fr; } }
+  .rak-plat { position: relative; display: grid; gap: 6px; align-content: start; text-align: left; background: var(--bg); border: none; padding: 16px 16px 14px; cursor: pointer; font: inherit; color: inherit; min-height: 116px; transition: background 0.2s; }
+  .rak-plat:hover, .rak-plat.aktif { background: color-mix(in oklab, var(--accent) 9%, var(--bg)); }
+  .rak-no { position: absolute; top: 10px; right: 12px; font-size: 18px; opacity: 0.35; }
+  .rak-judul { font-family: var(--font-display); font-weight: var(--disp-weight); font-size: clamp(17px, 2vw, 22px); line-height: 1.02; letter-spacing: var(--disp-track); color: var(--ink); max-width: 14ch; }
+  .rak-dek { font-size: 11.5px; line-height: 1.45; color: var(--muted); }
+  .rak-buka { font-size: 8px; letter-spacing: 0.16em; color: var(--muted); margin-top: 2px; }
+  .rak-plat:hover .rak-buka, .rak-plat.aktif .rak-buka { color: var(--accent); }
   .hening-blok { margin: clamp(36px, 6vw, 64px) 0 8px; }
   .hening-ledger > div { padding: 9px 0; }
   .lingk-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }

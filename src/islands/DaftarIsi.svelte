@@ -21,7 +21,7 @@
       ],
     },
     {
-      label: 'MALAM · GERAK I — LIMA CABANG',
+      label: 'MALAM · GERAK I — LIMA CABANG (BERKAS)',
       rows: [
         { id: 'mesin', no: '00', judul: 'Papan Angka' },
         { id: 'negara', no: '00', judul: 'Negara Hari Ini' },
@@ -30,13 +30,13 @@
         { id: 'hukum', no: '03', judul: 'Yudikatif · Hukum & Vonis' },
         { id: 'aparat', no: '04', judul: 'Aparat · Alat Paksa Negara' },
         { id: 'daerah', no: '05', judul: 'Daerah · Pemerintahan & Anggaran' },
-        { id: 'partai', no: '06', judul: 'Partai & Kepentingan' },
-        { id: 'janji', no: '07', judul: 'Janji & Program' },
       ],
     },
     {
-      label: 'MALAM · GERAK II — KEADAAN NEGERI',
+      label: 'MALAM · GERAK II — KEADAAN NEGERI (RAK)',
       rows: [
+        { id: 'janji', no: '06', judul: 'Janji & Program' },
+        { id: 'partai', no: '07', judul: 'Partai & Kepentingan' },
         { id: 'oligarki', no: '08', judul: 'Republik Oligarki' },
         { id: 'ekonomi', no: '09', judul: 'Pasar yang Tipis' },
         { id: 'dunia', no: '10', judul: 'Dunia' },

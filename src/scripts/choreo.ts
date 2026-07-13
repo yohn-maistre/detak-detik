@@ -59,18 +59,85 @@ function smoothScroll() {
   registerLenis(lenis);
 }
 
+// set by berkas(): opens the Act II dossier that holds an anchor
+let bukaBerkasUntuk: ((id: string) => boolean) | null = null;
+
 export function scrollToAnchor(anchor: string) {
   const el = document.getElementById(anchor);
   if (!el) return;
-  if (lenis) {
-    lenis.scrollTo(el, { duration: 1.6 });
-    // client:visible islands hydrate DURING the glide and grow the page, so
-    // the offset captured at call time can land with a gap above the header
-    // — one quiet corrective pass once layout has settled
-    window.setTimeout(() => {
-      if (Math.abs(el.getBoundingClientRect().top) > 32) lenis?.scrollTo(el, { duration: 0.5 });
-    }, 1900);
-  } else el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth' });
+  // a target inside a closed BERKAS opens its dossier first
+  const dibuka = bukaBerkasUntuk?.(anchor) ?? false;
+  const pergi = () => {
+    if (lenis) {
+      lenis.scrollTo(el, { duration: 1.6 });
+      // client:visible islands hydrate DURING the glide and grow the page, so
+      // the offset captured at call time can land with a gap above the header
+      // — one quiet corrective pass once layout has settled
+      window.setTimeout(() => {
+        if (Math.abs(el.getBoundingClientRect().top) > 32) lenis?.scrollTo(el, { duration: 0.5 });
+      }, 1900);
+    } else el.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth' });
+  };
+  if (dibuka) window.setTimeout(pergi, 140);
+  else pergi();
+}
+
+/* ---------- BERKAS: Act II chapters as closed dossiers (2026-07-13) ----------
+   The closed strip is the rapor; clicking rolls the file out (grid-rows),
+   one open per group ('cabang' | 'negeri'). Rak plates open their dossier
+   in the reading well. Content stays in the DOM (print/SEO); closed files
+   are inert. No-JS keeps every file open via html.no-js CSS. */
+
+function berkas() {
+  const semua = [...document.querySelectorAll<HTMLElement>('section.berkas')];
+  if (!semua.length) return;
+  const plats = [...document.querySelectorAll<HTMLElement>('.rak-plat[data-rak]')];
+
+  const setBuka = (sec: HTMLElement, on: boolean) => {
+    sec.classList.toggle('buka', on);
+    const btn = sec.querySelector<HTMLElement>('.berkas-buka');
+    if (btn) {
+      btn.setAttribute('aria-expanded', String(on));
+      btn.innerHTML = `<i class="berkas-panah" aria-hidden="true">▾</i> ${on ? 'TUTUP BERKAS' : 'BUKA BERKAS'}`;
+    }
+    const isi = sec.querySelector<HTMLElement>('.berkas-isi');
+    if (isi) isi.inert = !on; // closed content leaves tab order + a11y tree
+    plats.forEach((p) => { if (p.dataset.rak === sec.id) p.classList.toggle('aktif', on); });
+  };
+  const bukaSatu = (sec: HTMLElement) => {
+    for (const s of semua)
+      if (s !== sec && s.dataset.berkas === sec.dataset.berkas && s.classList.contains('buka')) setBuka(s, false);
+    setBuka(sec, true);
+    // heights changed: later triggers (the second seam) must re-measure
+    window.setTimeout(() => ScrollTrigger.refresh(), 620);
+  };
+
+  semua.forEach((sec) => {
+    setBuka(sec, false);
+    sec.querySelector<HTMLElement>('.bab-kepala')?.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('.chip, a')) return; // receipts keep their jobs
+      if (sec.classList.contains('buka')) {
+        setBuka(sec, false);
+        window.setTimeout(() => ScrollTrigger.refresh(), 620);
+      } else bukaSatu(sec);
+    });
+  });
+
+  plats.forEach((p) => p.addEventListener('click', () => {
+    const sec = document.getElementById(p.dataset.rak ?? '')?.closest<HTMLElement>('section.berkas');
+    if (!sec) return;
+    bukaSatu(sec);
+    window.setTimeout(() => scrollToAnchor(sec.id), 80);
+  }));
+
+  bukaBerkasUntuk = (id: string) => {
+    const sec = document.getElementById(id)?.closest<HTMLElement>('section.berkas');
+    if (!sec) return false;
+    if (!sec.classList.contains('buka')) bukaSatu(sec);
+    return true;
+  };
+  // a shared #kuasa link opens its dossier on arrival
+  if (location.hash) bukaBerkasUntuk(location.hash.slice(1).split('/')[0] ?? '');
 }
 
 /* ---------- 1 · the loader ceremony ---------- */
@@ -688,6 +755,7 @@ export function boot() {
   odometer();
   jamTri();
   denomLever();
+  berkas();
   bukaPetaChips();
   stempelPad();
   strukTear();
