@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-13T01:57:19+00:00",
+ "diambil": "2026-07-13T12:19:33+00:00",
  "acara": [
   {
    "id": "27ad0046d77f",
@@ -70,6 +70,40 @@
    "topik": [
     "ekonomi",
     "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "33841f4d98bd",
+   "url": "https://setkab.go.id/resmikan-lima-bendungan-presiden-prabowo-tegaskan-komitmen-mengabdi-kepada-bangsa-dan-rakyat/",
+   "judul": "Resmikan Lima Bendungan, Presiden Prabowo Tegaskan Komitmen Mengabdi kepada Bangsa dan Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": "Bangsa dan Rakyat",
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2cfdad0a3085",
+   "url": "https://wapresri.go.id/temui-kelompok-wanita-paotere-ibu-selvi-dorong-penguatan-pendampingan-umkm-berbasis-potensi-lokal/",
+   "judul": "Temui Kelompok Wanita Paotere, Ibu Selvi Dorong Penguatan Pendampingan UMKM Berbasis Potensi Lokal",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-10",
+   "tanggal_terbit": "2026-07-10",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
    ],
    "venue": null,
    "kota": null,
