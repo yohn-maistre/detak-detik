@@ -1602,6 +1602,38 @@ Yose's decision: `docs/research/2026-07-05-pantau-*.md`). The system:
 
 ## 14. Session log (running, newest first)
 
+### 2026-07-13 · WAVE 10 — ACT 2 = BERKAS (the blessed restructure, commit 956e602, prod-verified)
+
+The two-anatomy redesign Yose blessed ("SOUNDS FIRE"), built and
+playwright-verified end to end:
+
+- **Gerak I = a file cabinet of five berkas**: every act-2 `section.bab`
+  wears `.berkas`; the `bab-kepala` IS the closed strip (label, tajuk, UUD
+  mandate, dek + a `berkas-rapor` row: the branch's signature figure from
+  CABANG big/ringkas + BUKA BERKAS). Content wrapped in `.berkas-isi >
+  .berkas-isi-in`, collapsed via grid-template-rows 0fr→1fr (content stays
+  in the DOM for print/SEO; `html.no-js` keeps all open; reduced-motion
+  instant). One open per group; opening the next rolls the previous closed.
+  Open state: the strip figure hides (the band below owns it — satu fakta
+  satu pemilik on one screen), button flips to TUTUP BERKAS. The slim
+  cabang-indeks nav RETIRED (strips are the index). Act gap tightened
+  48-110px → 34-60px: closed Act 2 reads as one cabinet.
+- **Gerak II = rak + reading well**: six plates (janji 06, partai 07,
+  oligarki 08, ekonomi 09, dunia 10, lingkungan 11 — janji/partai moved in;
+  numbering chosen so untouched sections keep their folios) over the same
+  berkas grammar, `data-berkas="negeri"` its own one-open group. Plate
+  click opens + scrolls + marks `.aktif`. **MBG counter block retired**
+  (Yose's call; island unmounted, file stays). Hening stays always-open.
+  Well order: promised → who holds → ownership → markets → world → nature.
+- **Controller in choreo.ts** (`berkas()`): inert on closed isi,
+  ScrollTrigger.refresh after height changes, and `scrollToAnchor` now
+  auto-opens the dossier holding any target — TOC, command bus, rak plates,
+  #hash arrival all covered. Playwright-verified: 11 closed at load,
+  per-group accordion, plate open+scroll+aktif, TOC auto-opens lingkungan.
+- KNOWN QUEUE: Angka Edisi still hukum-seed (RAPOR desk later); the rapor
+  strips can go machine-written per edition (a `rapor` block in the
+  payload) — the one-pass doctrine extension.
+
 ### 2026-07-13 · WAVE 9 — №1 = the ranked cluster + honesty flags + Aksara revived (commits cf446b2 + c5686df)
 
 Yose's screenshot #57-63 review + his mid-turn call: "make the no 1 the same
