@@ -1,0 +1,121 @@
+{
+ "edisi": 108,
+ "terbit": "2026-07-14T11:02:53.922381+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-108-02",
+   "judul": "Kasus dugaan korupsi eks Jampidsus Febrie Adriansyah dilimpahkan ke Kejaksaan Agung, upaya 'melokalisir' pelaku?",
+   "skor": 25
+  },
+  {
+   "id": "klp-108-05",
+   "judul": "Pelaku Teror Bom SDN Srengseng Sawah Ternyata Orang Tua Siswa: Tersangka Terancam Seumur Hidup",
+   "skor": 16
+  },
+  {
+   "id": "klp-108-04",
+   "judul": "Iran hantam dua kapal tanker UEA di Selat Hormuz saat AS lancarkan serangan udara berturut-turut selama tiga malam",
+   "skor": 21
+  },
+  {
+   "id": "klp-108-12",
+   "judul": "Kejar Target Rampung Tahun Ini, DPR Buka Opsi Rapat RUU Perampasan Aset saat Reses",
+   "skor": 12
+  },
+  {
+   "id": "klp-108-03",
+   "judul": "Densus 88 Dalami Kasus Ledakan di MAN 3 Padang, Pelaku Terinspirasi Peristiwa Bom SMAN 72 Jakarta",
+   "skor": 21
+  },
+  {
+   "id": "klp-108-14",
+   "judul": "KPK Bakal Buka Aliran Duit Korupsi Kuota Haji ke Eks Menag Yaqut di Sidang",
+   "skor": 10
+  },
+  {
+   "id": "klp-108-09",
+   "judul": "Hari pertama sekolah – Dari ancaman bom sampai gerakan ayah antar anak",
+   "skor": 12
+  },
+  {
+   "id": "klp-108-06",
+   "judul": "Gus Ipul Tegaskan MPLS Bukan Ajang Perpeloncoan, Sekolah Wajib Ciptakan Lingkungan Aman",
+   "skor": 13
+  },
+  {
+   "id": "klp-108-07",
+   "judul": "Menhan Hadiri Rapat Terbatas Bersama Presiden Bahas Harga Khusus BBM bagi Pelaku Usaha Perikanan",
+   "skor": 13
+  },
+  {
+   "id": "klp-108-08",
+   "judul": "LRT Rawamangun-Manggarai Ditargetkan Beroperasi Agustus 2026, Pramono Harap Diresmikan Presidenamp;nbsp;",
+   "skor": 13
+  },
+  {
+   "id": "klp-108-11",
+   "judul": "LPSK Tolak Pengajuan JC Tersangka Kasus MBG Sony Sonjaya, Kejaksaan Hentikan Pendataan SPPG",
+   "skor": 12
+  },
+  {
+   "id": "klp-108-13",
+   "judul": "Aspri Bos Blueray Cargo Akui Dibekali Kartu Kredit untuk Hibur Pejabat Bea Cukai",
+   "skor": 10
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
