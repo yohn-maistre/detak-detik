@@ -1,0 +1,121 @@
+{
+ "edisi": 109,
+ "terbit": "2026-07-14T22:29:21.056373+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-109-03",
+   "judul": "Iran hantam dua kapal tanker UEA di Selat Hormuz saat AS lancarkan serangan udara berturut-turut selama tiga malam",
+   "skor": 18
+  },
+  {
+   "id": "klp-109-02",
+   "judul": "Kasus dugaan korupsi eks Jampidsus Febrie Adriansyah dilimpahkan ke Kejaksaan Agung, upaya 'melokalisir' pelaku?",
+   "skor": 19
+  },
+  {
+   "id": "klp-109-06",
+   "judul": "Arab Saudi Hapus Layanan Haji Termurah, Biaya Haji Indonesia Terancam Melonjak",
+   "skor": 13
+  },
+  {
+   "id": "klp-109-12",
+   "judul": "Gempa Magnitudo 6,2 Guncang Sulawesi Utara, Getaran Terasa hingga Manado",
+   "skor": 12
+  },
+  {
+   "id": "klp-109-04",
+   "judul": "DPR Prihatin Teror Bom saat MPLS SD, Lalu Hadrian: Sekolah Harus Jadi Tempat Paling Aman",
+   "skor": 16
+  },
+  {
+   "id": "klp-109-07",
+   "judul": "Mendagri Minta Pemda Perkuat Pasokan dan Distribusi demi Jaga Inflasi Tetap Terkendali",
+   "skor": 13
+  },
+  {
+   "id": "klp-109-13",
+   "judul": "Hari pertama sekolah – Dari ancaman bom sampai gerakan ayah antar anak",
+   "skor": 12
+  },
+  {
+   "id": "klp-109-08",
+   "judul": "Prabowo Rapat Bareng Luhut dkk di Hambalang, Update Ekonomi Nasional-GovTech",
+   "skor": 12
+  },
+  {
+   "id": "klp-109-16",
+   "judul": "Komdigi takedown tiga juta situs dan konten judol hingga Juli 2026",
+   "skor": 9
+  },
+  {
+   "id": "klp-109-05",
+   "judul": "Sejumlah Barang Disita KPK dari Rumah Anggota V BPK RI Bobby Adhityo Rizaldi",
+   "skor": 15
+  },
+  {
+   "id": "klp-109-09",
+   "judul": "Komisi III Buat Buku Anotasi KUHAP, Adian: Kepastian Hukum Kebutuhan Utama Masyarakat!",
+   "skor": 12
+  },
+  {
+   "id": "klp-109-10",
+   "judul": "Freeport Sesumber Setoran ke Negara Bisa Tembus Rp120 Triliun Dalam Satu Tahun",
+   "skor": 12
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
