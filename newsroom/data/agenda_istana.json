@@ -4,8 +4,59 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-15T11:40:35+00:00",
+ "diambil": "2026-07-15T22:29:07+00:00",
  "acara": [
+  {
+   "id": "3a14c4252ffe",
+   "url": "https://wapresri.go.id/serap-aspirasi-petani-muara-jaya-wapres-dukung-penguatan-ekosistem-singkong-untuk-swasembada-pangan/",
+   "judul": "Serap Aspirasi Petani Muara Jaya, Wapres Dukung Penguatan Ekosistem Singkong untuk Swasembada Pangan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-15",
+   "tanggal_terbit": "2026-07-15",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b75579353e99",
+   "url": "https://wapresri.go.id/tinjau-mts-muhammadiyah-i-way-bungur-wapres-tegaskan-pembangunan-sdm-harus-menjangkau-seluruh-sekolah/",
+   "judul": "Tinjau MTs Muhammadiyah I Way Bungur, Wapres Tegaskan Pembangunan SDM Harus Menjangkau Seluruh Sekolah",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-15",
+   "tanggal_terbit": "2026-07-15",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "99521e068ce2",
+   "url": "https://wapresri.go.id/wapres-dorong-percepatan-pembangunan-jembatan-way-bungur-untuk-pemerataan-akses-dan-penguatan-ekonomi-daerah/",
+   "judul": "Wapres Dorong Percepatan Pembangunan Jembatan Way Bungur untuk Pemerataan Akses dan Penguatan Ekonomi Daerah",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-15",
+   "tanggal_terbit": "2026-07-15",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "a70731fb0843",
    "url": "https://setkab.go.id/presiden-prabowo-terima-dewan-ekonomi-nasional-bahas-penguatan-ekonomi-dan-penyempurnaan-govtech/",

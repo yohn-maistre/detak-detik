@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-14T22:32:16.550254+00:00",
- "edisi": 109,
+ "diperbarui": "2026-07-15T22:31:01.459478+00:00",
+ "edisi": 111,
  "pilihan": [
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian mengukur keyakinan kesehatan dan keterlambatan pasien pada penderita kanker payudara di Sumatra Barat. Relevan untuk pembaca Indonesia karena membantu memahami faktor psikososial yang menyebabkan keterlambatan deteksi dan pengobatan kanker di komunitas lokal.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
+   "wadah": "Current Opinion in Insect Science",
+   "doi": "10.1016/j.cois.2026.101569",
+   "tanggal": "2026-12",
+   "alasan": "Makalah mengulas status resistensi serangga terhadap insektisida serta tantangan pengendalian hama pertanian di Indonesia. Relevan bagi pembaca Indonesia karena resistensi hama berdampak langsung pada ketahanan pangan dan produktivitas hasil tani nasional.",
+   "kategori": "PERTANIAN",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian menilai dampak ekologis dari aktivitas produksi bauksit dan tembaga di Indonesia. Relevan bagi pembaca Indonesia karena dampak lingkungan tambang mineral memengaruhi ekosistem, kesehatan masyarakat lokal, dan kebijakan pertambangan nasional.",
+   "kategori": "LINGKUNGAN TAMBANG",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Individual level determinants of solo and employer entrepreneurship in Indonesia and India",
+   "wadah": "Strategic Business Research",
+   "doi": "10.1016/j.sbr.2026.100106",
+   "tanggal": "2026-12",
+   "alasan": "Studi membandingkan faktor penentu kewirausahaan mandiri dan berbasis pemberi kerja di Indonesia dan India. Relevan bagi pembaca Indonesia karena memetakan dinamika pembentukan usaha yang berhubungan dengan lapangan kerja dan pertumbuhan ekonomi nasional.",
+   "kategori": "EKONOMI UMKM",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian meneliti kondisi kerja dan reproduksi sosial pekerja nikel di Maluku Utara. Relevan bagi pembaca Indonesia karena industri nikel sedang berkembang pesat di wilayah tersebut dan berdampak pada kehidupan pekerja serta masyarakat sekitarnya.",
+   "kategori": "TENAGA KERJA TAMBANG",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101961",
+   "tanggal": "2026-12",
+   "alasan": "Makalah menganalisis kerentanan masyarakat dan komunitas terhadap transisi batu bara di Indonesia beserta implikasi kebijakannya. Relevan bagi pembaca Indonesia karena transisi energi berdampak pada mata pencaharian masyarakat tambang dan arah kebijakan lingkungan nasional.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "The Biodiesel Paradox: Analyzing the Multi-Dimensional Challenges of Indonesia's B50 Mandate Implementation",
+   "wadah": "Engineering and Technology Journal",
+   "doi": "10.47191/etj/v11i02.28",
+   "tanggal": "2026-11-2",
+   "alasan": "Penelitian mengurai tantangan multidimensi dalam implementasi mandat biodiesel B50 di Indonesia. Relevan bagi pembaca Indonesia karena kebijakan campuran biodiesel nasional berdampak pada sektor pertanian, energi, dan lingkungan secara langsung.",
+   "kategori": "ENERGI HAYATI",
+   "sejak_edisi": 111
+  },
+  {
+   "judul": "Potential for Liquefaction After The 2018 Pasigala Earthquake Due to Changes in Hydraulic Conductivity Characteristics and Soil Properties in the Gumbasa Irrigation Rice Field Area",
+   "wadah": "Engineering and Technology Journal",
+   "doi": "10.47191/etj/v11i02.22",
+   "tanggal": "2026-11-2",
+   "alasan": "Studi mengkaji potensi likuifaksi pasca-gempa Pasigala 2018 akibat perubahan properti tanah di kawasan irigasi Gumbasa. Relevan bagi pembaca Indonesia karena hasil temuan membantu merancang mitigasi bencana gempa dan menjaga ketahanan pangan di Sulawesi Tengah.",
+   "kategori": "KEBAKAN & TANAH",
+   "sejak_edisi": 111
+  },
   {
    "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
    "wadah": "Parasitology International",
@@ -37,78 +109,6 @@
    "alasan": "Makalah mengkaji dampak pandemi dan kendala digital pada agribisnis hortikultura melalui studi kasus di Aceh. Studi ini relevan bagi pembaca Indonesia karena menyoroti ketahanan pangan dan adaptasi petani lokal di tengah gangguan rantai pasok dan terbatasnya teknologi digital.",
    "kategori": "PERTANIAN & AGRIBISNIS",
    "sejak_edisi": 109
-  },
-  {
-   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
-   "wadah": "Cleaner Waste Systems",
-   "doi": "10.1016/j.clwas.2026.100539",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini menganalisis aliran massa dan efisiensi pemulihan sistem manajemen sampah berbasis komunitas di Batu dengan studi kasus. Relevan bagi pembaca Indonesia karena mengkaji solusi pengelolaan sampah skala lokal sebagai potensi model replikasi untuk kota lain.",
-   "kategori": "LINGKUNGAN & SAMPAH",
-   "sejak_edisi": 109
-  },
-  {
-   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103213",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengkaji komunikasi ritual, adat istiadat, dan toleransi reflektif dalam masyarakat adat Tengger Ngadas di Jawa Timur. Studi ini relevan bagi pembaca Indonesia karena menyoroti dinamika harmoni masyarakat adat serta pelestarian tradisi dalam interaksi sosial.",
-   "kategori": "MASYARAKAT & BUDAYA",
-   "sejak_edisi": 109
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menelaah batasan dan celah pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Relevansi bagi pembaca Indonesia terletak pada evaluasi pemidanaan pengasuhan, memberi kaca bagi pembaca mengenai perlindungan anak dan kebijakannya.",
-   "kategori": "HUKUM & KEBIJAKAN",
-   "sejak_edisi": 109
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengkaji kerangka hukum lintas batas untuk perjanjian Indonesia-Singapura mengenai penangkapan dan penyimpanan karbon. Relevansi bagi pembaca Indonesia terletak pada aspek hukum internasional dalam transisi energi, menjadi tolak ukur kerja sama iknam bilateral.",
-   "kategori": "HUKUM & KEBIJAKAN",
-   "sejak_edisi": 109
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini membahas pirolisis langsung aspal batuan dari Buton, Indonesia, serta karakterisasi produk cair dan peran kalsit. Relevan bagi pembaca Indonesia karena Buton merupakan cadangan aspal batu terbesar di negeri ini, sehingga kajian ini memberi wawasan tentang pemanfaatan sumber daya geologis lokal.",
-   "kategori": "SUMBER ENERGI & GEOLOGI",
-   "sejak_edisi": 108
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Studi ini menganalisis penentu utama organisasi berkinerja tinggi dalam mempercepat pendaftaran tanah di Indonesia menggunakan analisis konfigurasional. Relevan bagi pembaca Indonesia karena percepatan sertifikasi tanah masih menjadi isu krusial dalam reforma agraria nasional.",
-   "kategori": "KEBIJAKAN TANAH & TATA KELOLA",
-   "sejak_edisi": 108
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini menyusun model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat, Indonesia. Relevan bagi pembaca Indonesia karena pengelolaan DAS berikut kawasan hutannya sangat penting untuk mencegah banjir serta menjaga ketersediaan air masyarakat setempat.",
-   "kategori": "KEHUTANAN & DAERAH ALIRAN SUNG",
-   "sejak_edisi": 108
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Artikel ini meneliti penggalangan dana zakat di Indonesia, mencakup kontinuitas, kerangka hukum, dan transformasi digital. Relevan bagi pembaca Indonesia karena zakat merupakan instrumen keuangan syariah yang krusial dalam upaya pengentasan kemiskinan di masyarakat berpenduduk Muslim terbesar dunia.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 108
   }
  ]
 }
