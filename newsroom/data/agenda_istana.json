@@ -4,8 +4,42 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-13T22:27:13+00:00",
+ "diambil": "2026-07-15T11:40:35+00:00",
  "acara": [
+  {
+   "id": "a70731fb0843",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-dewan-ekonomi-nasional-bahas-penguatan-ekonomi-dan-penyempurnaan-govtech/",
+   "judul": "Presiden Prabowo Terima Dewan Ekonomi Nasional, Bahas Penguatan Ekonomi dan Penyempurnaan GovTech",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-07-14",
+   "tanggal_terbit": "2026-07-14",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "75ab444fb458",
+   "url": "https://setkab.go.id/presiden-prabowo-perintahkan-harga-khusus-bbm-untuk-nelayan-kapal-30-200-gt-dukung-daya-saing-perikanan-tanpa-bebani-apbn/",
+   "judul": "Presiden Prabowo Perintahkan Harga Khusus BBM untuk Nelayan Kapal 30–200 GT, Dukung Daya Saing Perikanan Tanpa Bebani APBN",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-13",
+   "tanggal_terbit": "2026-07-13",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "27ad0046d77f",
    "url": "https://setkab.go.id/presiden-prabowo-hadiri-puncak-peringatan-hari-koperasi-ke-79-dorong-koperasi-jadi-pilar-ekonomi-kerakyatan/",
