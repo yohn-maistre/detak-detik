@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-15T22:29:07+00:00",
+ "diambil": "2026-07-16T11:16:14+00:00",
  "acara": [
   {
    "id": "3a14c4252ffe",
@@ -51,6 +51,24 @@
    "audiens": null,
    "topik": [
     "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c999b5959173",
+   "url": "https://wapresri.go.id/bertemu-pengurus-bela-budaya-nusantara-wapres-tegaskan-teknologi-dan-budaya-harus-berjalan-beriringan/",
+   "judul": "Bertemu Pengurus Bela Budaya Nusantara, Wapres Tegaskan Teknologi dan Budaya Harus Berjalan Beriringan",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-07-15",
+   "tanggal_terbit": "2026-07-15",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
    ],
    "venue": null,
    "kota": null,
