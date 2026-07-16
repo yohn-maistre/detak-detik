@@ -4,8 +4,44 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-16T11:16:14+00:00",
+ "diambil": "2026-07-16T22:29:09+00:00",
  "acara": [
+  {
+   "id": "5478183f740a",
+   "url": "https://wapresri.go.id/dorong-penguatan-infrastruktur-penopang-ekonomi-dan-ketahanan-pangan-wapres-tinjau-progres-pembangunan-jembatan-musi-v/",
+   "judul": "Dorong Penguatan Infrastruktur Penopang Ekonomi dan Ketahanan Pangan, Wapres Tinjau Progres Pembangunan Jembatan Musi V",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "772afefe9a60",
+   "url": "https://wapresri.go.id/wapres-tinjau-rsud-fatimah-az-zahra-palembang-pastikan-kualitas-layanan-kesehatan-di-daerah-semakin-meningkat/",
+   "judul": "Wapres Tinjau RSUD Fatimah Az Zahra Palembang, Pastikan Kualitas Layanan Kesehatan di Daerah Semakin Meningkat",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "3a14c4252ffe",
    "url": "https://wapresri.go.id/serap-aspirasi-petani-muara-jaya-wapres-dukung-penguatan-ekosistem-singkong-untuk-swasembada-pangan/",
