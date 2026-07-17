@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-16T22:29:09+00:00",
+ "diambil": "2026-07-17T11:03:40+00:00",
  "acara": [
   {
    "id": "5478183f740a",
@@ -36,6 +36,40 @@
    "audiens": null,
    "topik": [
     "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "035710757476",
+   "url": "https://wapresri.go.id/tinjau-tol-bayung-lencir-wapres-pastikan-konektivitas-sumatra-berjalan-optimal/",
+   "judul": "Tinjau Tol Bayung Lencir, Wapres Pastikan Konektivitas Sumatra Berjalan Optimal",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "794f26158e5b",
+   "url": "https://wapresri.go.id/wujudkan-kota-bersih-berenergi-hijau-wapres-tinjau-progres-pembangunan-psel-di-palembang/",
+   "judul": "Wujudkan Kota Bersih Berenergi Hijau, Wapres Tinjau Progres Pembangunan PSEL di Palembang",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
    ],
    "venue": null,
    "kota": null,
