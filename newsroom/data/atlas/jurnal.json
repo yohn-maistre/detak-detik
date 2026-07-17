@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-17T11:07:14.447763+00:00",
- "edisi": 114,
+ "diperbarui": "2026-07-17T22:16:29.838340+00:00",
+ "edisi": 115,
  "pilihan": [
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini meneliti pirolisis langsung aspal batuan dari Buton, Indonesia, termasuk karakterisasi produk cair dan peran kalsit. Relevan bagi pembaca Indonesia karena Buton merupakan salah satu sumber aspal alam terbesar di Indonesia dan kajian ini berpotensi memajukan pemanfaatan energi serta material lokal.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Kajian ini merancang model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat. Topik ini penting bagi pembaca Indonesia karena pengendalian kawasan hutan bersinggungan langsung dengan upaya konservasi, mitigasi bencana, dan keberlanjutan tata air di wilayah setempat.",
+   "kategori": "KEHUTANAN & DAERAH ALIRAN SUNG",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
+   "wadah": "Cleaner Waste Systems",
+   "doi": "10.1016/j.clwas.2026.100539",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian menganalisis aliran massa dan efisiensi pemulihan pada pengelolaan sampah berbasis komunitas di Batu, Indonesia. Relevansi terletak pada kebutuhan kota-kota Indonesia akan model pengelolaan sampah yang terukur dan partisipatif guna menekan dampak lingkungan perkotaan.",
+   "kategori": "PENGLOLAAN SAMPAH",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101961",
+   "tanggal": "2026-12",
+   "alasan": "Artikel ini menelaap kerentanan masyarakat dan komunitas terhadap transisi batu bara di Indonesia serta implikasinya terhadap kebijakan. Penting bagi pembaca karena transisi energi adil menjadi isu krusial bagi negara dengan ketergantungan tinggi pada industri batu bara ini.",
+   "kategori": "TRANSISI ENERGI & MASYARAKAT",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "The Biodiesel Paradox: Analyzing the Multi-Dimensional Challenges of Indonesia's B50 Mandate Implementation",
+   "wadah": "Engineering and Technology Journal",
+   "doi": "10.47191/etj/v11i02.28",
+   "tanggal": "2026-11-2",
+   "alasan": "Makalah ini mengevaluasi tantangan berdimensi ganda dalam penerapan mandat biodiesel B50 di Indonesia. Topik ini sangat relevan bagi calon pembaca karena kebijakan biodiesel berdampak besar terhadap ekonomi, ekosistem kelapa sawit, ketahanan energi, dan kesejahteraan petani Indonesia.",
+   "kategori": "KEBIJAKAN BIODIESEL",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Kajian ini meneliti penggalangan dana zakat di Indonesia dengan fokus pada kontinuitas, kerangka hukum, dan transformasi digital. Relevan bagi pembaca karena zakat berpotensi menjadi instrumen keuangan syariah lokal yang signifikan, dan kerangka hukum menentukan akuntabilitas dan distribusinya.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "A randomized double-blind sham-controlled preliminary study of a 5-week protocol of repetitive transcranial magnetic stimulation (rTMS) combined with cognitive behavioral therapy (CBT) for gambling disorder in Indonesia",
+   "wadah": "Addictive Behaviors Reports",
+   "doi": "10.1016/j.abrep.2026.100722",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian acak terkontrol ini menguji efektivitas stimulasi magnetik transkranial repetitif yang dikombinasikan dengan terapi perilaku kognitif untuk gangguan judi di Indonesia. Relevansi terletak pada keterbatasan data dan intervensi klinis untuk gangguan kecanduan di Indonesia.",
+   "kategori": "KESEHATAN MENTAL",
+   "sejak_edisi": 115
+  },
+  {
+   "judul": "AI Governance Systems in Southeast Asia: A Comparative Analysis of Indonesia and Malaysia",
+   "wadah": "Emerging Technologies and Governance",
+   "doi": "10.47176/etg.2026.1008",
+   "tanggal": "2026-11-25",
+   "alasan": "Makalah ini melakukan analisis perbandingan atas sistem tata kelola kecerdasan buatan di Asia Tenggara, khususnya Indonesia dan Malaysia. Relevan bagi pembaca karena tata kelola kecerdasan buatan menjadi fondasi pengaturan privasi, etika, serta adaptasi kebijakan digital nasional Indonesia.",
+   "kategori": "TATA KELOLA AI",
+   "sejak_edisi": 115
+  },
   {
    "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
    "wadah": "MethodsX",
@@ -37,78 +109,6 @@
    "alasan": "Membandingkan kebijakan integrasi peternakan sapi dan perkebunan kelapa sawit antara Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena evaluasi kebijakan agroforestri ini berkaitan dengan produktivitas lahan dan konflik penggunaan ruang agraria.",
    "kategori": "KEBIJAKAN AGROHUTAN",
    "sejak_edisi": 114
-  },
-  {
-   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100329",
-   "tanggal": "2026-12",
-   "alasan": "Menelaah dampak ekologis produksi bauksit dan tembaga serta polusi lingkungan di Indonesia. Relevan bagi pembaca Indonesia karena aktivitas pertambangan ini memengaruhi ekosistem serta memuncukan persoalan regulasi dan rancangan kebijakan lingkungan nasional.",
-   "kategori": "ALAM & TAMBANG",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis rancangan kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Relevan bagi pembaca Indonesia karena menjadi bagian penting dari arah transisi energi nasional dan perimbangan emisi industri.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
-   "wadah": "Renewable and Sustainable Energy Transition",
-   "doi": "10.1016/j.rset.2026.100152",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti transisi energi berbasis target pada sistem kelistrikan Indonesia dibandingkan Filippina dan Vietnam. Relevan bagi pembaca Indonesia sebab gambaran perbandingan kebijakan ini memandu perancangan bauran energi nasional yang sedang digenjot kenal berkelanjutan.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Menelaah batasan pertanggungjawaban pidana atas kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi pembaca Indonesia karena membahas celah hukum dalam perlindungan anak yang masih membatasi penegakan hukum tindak kekerasan dalam rumah tangga.",
-   "kategori": "HUKUM & ANAK",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Potential for Liquefaction After The 2018 Pasigala Earthquake Due to Changes in Hydraulic Conductivity Characteristics and Soil Properties in the Gumbasa Irrigation Rice Field Area",
-   "wadah": "Engineering and Technology Journal",
-   "doi": "10.47191/etj/v11i02.22",
-   "tanggal": "2026-11-2",
-   "alasan": "Makalah ini menelaah potensi likuifaksi pasca-gempa Pasigala 2018 akibat perubahan sifat tanah dan hidrolik di area irigasi Gumbasa. Relevan bagi pembaca Indonesia karena memberikan dasar teknis penanganan rawan bencana di Sulawesi.",
-   "kategori": "BAHAN & LINGKUNGAN",
-   "sejak_edisi": 113
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini memantau situasi taeniasis di Bali periode 2022-2025, termasuk prevalensi dan profil pasien. Relevan bagi pembaca Indonesia karena menjadi dasar pengendalian penyakit parasit dari daging babi yang masih menjadi masalah kesehatan.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 113
-  },
-  {
-   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
-   "wadah": "International Journal of Medical Microbiology",
-   "doi": "10.1016/j.ijmm.2026.151728",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini melaporkan pengobatan berhasil onikomikosis non-dermatofit langka dari Indonesia dengan kombinasi oral fluconazole dan topikal terbinafine. Relevan bagi pembaca di Indonesia karena memperkaya rujukan klinis pengobatan infeksi jamur.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 113
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini menelaah reproduksi sosial buruh tambang nikel di Maluku Utara dan kerentanan tenaga kerja di front ekstraktif. Relevan bagi pembaca Indonesia memahami dampak hilirisasi terhadap pekerja dan komunitas tambang.",
-   "kategori": "TAMBANG & MASYARAKAT",
-   "sejak_edisi": 113
   }
  ]
 }
