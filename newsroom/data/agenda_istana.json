@@ -4,8 +4,40 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-17T11:03:40+00:00",
+ "diambil": "2026-07-18T10:45:19+00:00",
  "acara": [
+  {
+   "id": "991e1fe6a788",
+   "url": "https://wapresri.go.id/respons-aduan-masyarakat-wapres-dorong-rehabilitasi-sdn-016-serusa-rokan-hilir/",
+   "judul": "Respons Aduan Masyarakat, Wapres Dorong Rehabilitasi SDN 016 Serusa Rokan Hilir",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-17",
+   "tanggal_terbit": "2026-07-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "04d9e41265c9",
+   "url": "https://wapresri.go.id/tinjau-rehabilitasi-min-1-rokan-hilir-wapres-dorong-pemenuhan-sarana-prasarana-pendidikan/",
+   "judul": "Tinjau Rehabilitasi MIN 1 Rokan Hilir, Wapres Dorong Pemenuhan Sarana Prasarana Pendidikan",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-17",
+   "tanggal_terbit": "2026-07-17",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "5478183f740a",
    "url": "https://wapresri.go.id/dorong-penguatan-infrastruktur-penopang-ekonomi-dan-ketahanan-pangan-wapres-tinjau-progres-pembangunan-jembatan-musi-v/",

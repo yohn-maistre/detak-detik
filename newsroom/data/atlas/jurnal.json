@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-17T22:16:29.838340+00:00",
- "edisi": 115,
+ "diperbarui": "2026-07-18T10:48:43.905875+00:00",
+ "edisi": 116,
  "pilihan": [
+  {
+   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
+   "wadah": "Parasitology International",
+   "doi": "10.1016/j.parint.2026.103313",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini meneliti situasi terkini taeniasis di Bali periode 2022-2025. Relevan bagi pembaca Indonesia karena penyakit parasit ini bersumber dari konsumsi daging babi dan masih menjadi isu kesehatan di kawasan tertentu Nusantara.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Negative Binomial tv-DINGARCH Models for Monthly DHF Cases in Surabaya, Indonesia (2015-2025)",
+   "wadah": "CAUCHY: Jurnal Matematika Murni dan Aplikasi",
+   "doi": "10.18860/cauchy.v11i2.42667",
+   "tanggal": "2026-11-30",
+   "alasan": "Studi ini memodelkan kasus bulanan demam berdarah dengue di Surabaya pada 2015-2025. Sangat relevan karena DBD merupakan penyakit endemik dengan kasus tinggi di wilayah perkotaan Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian mengkaji dampak ekologi dari produksi bauksit dan tembaga di Indonesia. Relevan bagi pembaca karena industri pertambangan berkaitan erat dengan kerusakan alam lokal serta kebijakan lingkungan nasional.",
+   "kategori": "LINGKUNGAN & TAMBANG",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Tulisan ini membahas reproduksi sosial buruh nikel di Maluku Utara. Relevansi bagi pembaca Indonesia ada pada sorotan terhadap kondisi kerja dan dampak frontir ekstraktif di kawasan timur.",
+   "kategori": "LINGKUNGAN & TAMBANG",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Makalah membantu kerangka hukum lintas batas untuk penangkapan karbon antara Indonesia dan Singapura. Relevan karena isu transisi energi menjadi prioritas kebijakan iklim nasional saat ini.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
+   "wadah": "Renewable and Sustainable Energy Transition",
+   "doi": "10.1016/j.rset.2026.100152",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini membandingkan transisi energi listrik berbasis target di Indonesia, Filipina, dan Vietnam. Relevan bagi pembaca yang memantau perjalanan kebijakan transisi sistem kelistrikan nasional.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian menelaah batasan pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Relevan karena praktik disiplin anak melalui kekerasan masih sering terjadi di masyarakat.",
+   "kategori": "HUKUM & MASYARAKAT",
+   "sejak_edisi": 116
+  },
+  {
+   "judul": "Spatial Heterogeneity of Poverty Determinants in Indonesia A Hierarchical Geographically Weighted Regression Approach",
+   "wadah": "CAUCHY: Jurnal Matematika Murni dan Aplikasi",
+   "doi": "10.18860/cauchy.v11i2.42956",
+   "tanggal": "2026-11-30",
+   "alasan": "Makalah ini memetakan heterogenitas spasial penentu kemiskinan di Indonesia menggunakan model regresi. Relevan karena pemetaan.multispasial membantu merancang kebijakan pengentasan kemiskinan yang tepat sasaran.",
+   "kategori": "HUKUM & MASYARAKAT",
+   "sejak_edisi": 116
+  },
   {
    "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
    "wadah": "Fuel",
@@ -37,78 +109,6 @@
    "alasan": "Artikel ini menelaap kerentanan masyarakat dan komunitas terhadap transisi batu bara di Indonesia serta implikasinya terhadap kebijakan. Penting bagi pembaca karena transisi energi adil menjadi isu krusial bagi negara dengan ketergantungan tinggi pada industri batu bara ini.",
    "kategori": "TRANSISI ENERGI & MASYARAKAT",
    "sejak_edisi": 115
-  },
-  {
-   "judul": "The Biodiesel Paradox: Analyzing the Multi-Dimensional Challenges of Indonesia's B50 Mandate Implementation",
-   "wadah": "Engineering and Technology Journal",
-   "doi": "10.47191/etj/v11i02.28",
-   "tanggal": "2026-11-2",
-   "alasan": "Makalah ini mengevaluasi tantangan berdimensi ganda dalam penerapan mandat biodiesel B50 di Indonesia. Topik ini sangat relevan bagi calon pembaca karena kebijakan biodiesel berdampak besar terhadap ekonomi, ekosistem kelapa sawit, ketahanan energi, dan kesejahteraan petani Indonesia.",
-   "kategori": "KEBIJAKAN BIODIESEL",
-   "sejak_edisi": 115
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Kajian ini meneliti penggalangan dana zakat di Indonesia dengan fokus pada kontinuitas, kerangka hukum, dan transformasi digital. Relevan bagi pembaca karena zakat berpotensi menjadi instrumen keuangan syariah lokal yang signifikan, dan kerangka hukum menentukan akuntabilitas dan distribusinya.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 115
-  },
-  {
-   "judul": "A randomized double-blind sham-controlled preliminary study of a 5-week protocol of repetitive transcranial magnetic stimulation (rTMS) combined with cognitive behavioral therapy (CBT) for gambling disorder in Indonesia",
-   "wadah": "Addictive Behaviors Reports",
-   "doi": "10.1016/j.abrep.2026.100722",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian acak terkontrol ini menguji efektivitas stimulasi magnetik transkranial repetitif yang dikombinasikan dengan terapi perilaku kognitif untuk gangguan judi di Indonesia. Relevansi terletak pada keterbatasan data dan intervensi klinis untuk gangguan kecanduan di Indonesia.",
-   "kategori": "KESEHATAN MENTAL",
-   "sejak_edisi": 115
-  },
-  {
-   "judul": "AI Governance Systems in Southeast Asia: A Comparative Analysis of Indonesia and Malaysia",
-   "wadah": "Emerging Technologies and Governance",
-   "doi": "10.47176/etg.2026.1008",
-   "tanggal": "2026-11-25",
-   "alasan": "Makalah ini melakukan analisis perbandingan atas sistem tata kelola kecerdasan buatan di Asia Tenggara, khususnya Indonesia dan Malaysia. Relevan bagi pembaca karena tata kelola kecerdasan buatan menjadi fondasi pengaturan privasi, etika, serta adaptasi kebijakan digital nasional Indonesia.",
-   "kategori": "TATA KELOLA AI",
-   "sejak_edisi": 115
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian mengukur keyakinan kesehatan dan keterlambatan pasien didiagnosis kanker payudara di Sumatera Barat. Relevan untuk pembaca Indonesia karena mengangkat faktor budaya dan psikososial yang memengaruhi keterlambatan pengobatan kasus onkologi di komunitas lokal.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Membahas status resistensi insektisida pada hama pertanian dan strategi pengendaliannya di Indonesia. Relevan bagi pembaca Indonesia karena ketahanan hama berdampak langsung pada produksi pangan, ekonomi petani, dan kebijakan penggunaan pestisida nasional.",
-   "kategori": "PERTANIAN & SPESIES",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103213",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji komunikasi ritual, adat istiadat, dan toleransi reflektif pada komunitas adat Tengger Ngadas di Jawa Timur.Relevan bagi pembaca Indonesia karena mendokumentasikan praktik toleransi masyarakat lokal yang dapat menjadi rujukan kerukunan antarbudaya nasional.",
-   "kategori": "MASYARAKAT & BUDAYA",
-   "sejak_edisi": 114
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Membandingkan kebijakan integrasi peternakan sapi dan perkebunan kelapa sawit antara Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena evaluasi kebijakan agroforestri ini berkaitan dengan produktivitas lahan dan konflik penggunaan ruang agraria.",
-   "kategori": "KEBIJAKAN AGROHUTAN",
-   "sejak_edisi": 114
   }
  ]
 }
