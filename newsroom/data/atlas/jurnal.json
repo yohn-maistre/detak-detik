@@ -1,7 +1,70 @@
 {
- "diperbarui": "2026-07-19T10:54:34.981252+00:00",
- "edisi": 118,
+ "diperbarui": "2026-07-19T22:27:39.433891+00:00",
+ "edisi": 119,
  "pilihan": [
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini meneliti kondisi kerja dan reproduksi sosial pekerja nikel di Maluku Utara. Topik ini relevan karena Indonesia merupakan produsen nikel terbesar dunia, sehingga implikasi sosial dari ekstraksi mineral penting dipahami pembaca Indonesia.",
+   "kategori": "TAMBANG & TENAGA KERJA",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
+   "wadah": "Parasitology International",
+   "doi": "10.1016/j.parint.2026.103313",
+   "tanggal": "2026-12",
+   "alasan": "Kajian ini menelaah situasi terkini kasus taeniasis di Bali pada periode 2022 hingga 2025. Penelitian ini penting bagi pembaca karena parasit yang ditularkan lewat babi memiliki implikasi signifikan terhadap status kesehatan dan ekonomi pariwisata lokal.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
+   "wadah": "Current Opinion in Insect Science",
+   "doi": "10.1016/j.cois.2026.101569",
+   "tanggal": "2026-12",
+   "alasan": "Artikel ini mengulas status resistensi serangga terhadap insektisida serta tantangan dalam manajemen hama pertanian di Indonesia. Hal ini sangat relevan karena ketahanan pangan dan produktivitas pertanian nasional bergantung pada pengendalian hama yang efektif.",
+   "kategori": "PESTISIDA & PERTANIAN",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini menganalisis dampak ekologis dari produksi bauksit dan tembaga di Indonesia. Isu ini krusial bagi pembaca karena aktivitas pertambangan berdampak langsung pada kelestarian lingkungan serta kesejahteraan masyarakat di sekitar wilayah tambang.",
+   "kategori": "LINGKUNGAN & EKSTRAKSI",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "Negative Binomial tv-DINGARCH Models for Monthly DHF Cases in Surabaya, Indonesia (2015-2025)",
+   "wadah": "CAUCHY: Jurnal Matematika Murni dan Aplikasi",
+   "doi": "10.18860/cauchy.v11i2.42667",
+   "tanggal": "2026-11-30",
+   "alasan": "Studi ini memodelkan kasus demam berdarah dengue bulanan di Surabaya menggunakan pendekatan statistik tingkat lanjut untuk periode 2015 hingga 2025. Model ini relevan untuk membantu otoritas kesehatan Indonesia dalam memprediksi lonjakan kasus DBD.",
+   "kategori": "EPIDEMIOLOGI",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Karya ini meneliti komunikasi ritual dan toleransi reflektif dalam masyarakat adat Tengger Ngadas di Jawa Timur. Kajian ini relevan untuk pembaca karena melestarikan pemahaman tentang keragaman budaya dan dinamika interaksi sosial masyarakat lokal.",
+   "kategori": "MASYARAKAT ADAT",
+   "sejak_edisi": 119
+  },
+  {
+   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103210",
+   "tanggal": "2026-12",
+   "alasan": "Artikel ini membandingkan kebijakan integrasi peternakan sapi dengan perkebunan sawit antara Indonesia dan Malaysia. Analisis perbandingan ini bermanfaat untuk mencari efisiensi penggunaan lahan serta peningkatan kesejahteraan peternak di Indonesia.",
+   "kategori": "KEBIJAKAN PERTANIAN",
+   "sejak_edisi": 119
+  },
   {
    "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
    "wadah": "Fuel",
@@ -46,69 +109,6 @@
    "alasan": "Studi awal acak dan tersamar menguji kombinasi rTMS dan CBT untuk gangguanjudi di Indonesia. Relevan bagi pembaca Indonesia karena menyajikan bukti awal terapi gangguan kecanduan judi, masalah kesehatan mental yang mulai mendapat perhatian nasional.",
    "kategori": "KESEHATAN MENTAL",
    "sejak_edisi": 118
-  },
-  {
-   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101961",
-   "tanggal": "2026-12",
-   "alasan": "Makalah menelaah kerentanan masyarakat, kebijakan, dan komunitas terhadap transisi batu bara di Indonesia. Penting bagi pembaca Indonesia karena membahas dampak sosial peralihan energi dari batu bara pada komunitas penambang dan kebijakan terkait.",
-   "kategori": "TRANSISI ENERGI & MASYARAKAT",
-   "sejak_edisi": 118
-  },
-  {
-   "judul": "Spatial Heterogeneity of Poverty Determinants in Indonesia A Hierarchical Geographically Weighted Regression Approach",
-   "wadah": "CAUCHY: Jurnal Matematika Murni dan Aplikasi",
-   "doi": "10.18860/cauchy.v11i2.42956",
-   "tanggal": "2026-11-30",
-   "alasan": "Studi memakai pendekatan Hierarchical Geographically Weighted Regression untuk memahami heterogenitas spasial penentu kemiskinan di Indonesia. Relevan bagi pembaca Indonesia karena memberi wawasan geografis tentang faktor kemiskinan untuk perumusan kebijakan yang tepat sasaran.",
-   "kategori": "KEMISKINAN & WILAYAH",
-   "sejak_edisi": 118
-  },
-  {
-   "judul": "AI Governance Systems in Southeast Asia: A Comparative Analysis of Indonesia and Malaysia",
-   "wadah": "Emerging Technologies and Governance",
-   "doi": "10.47176/etg.2026.1008",
-   "tanggal": "2026-11-25",
-   "alasan": "Makalah melakukan analisis perbandingan sistem tata kelola kecerdasan buatan di Asia Tenggara, khususnya Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena membahas kerangka regulasi AI nasional di tengah pesatnya adopsi teknologi digital di sektor publik dan swasta.",
-   "kategori": "TATA KELOLA AI",
-   "sejak_edisi": 118
-  },
-  {
-   "judul": "Critical success factor (CSF) relationship model of lean six sigma development in higher education institutions (HEI): a case study of private university in Indonesia",
-   "wadah": "International Journal of Management in Education",
-   "doi": "10.1504/ijmie.2027.10077699",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini mengidentifikasi faktor kunci keberhasilan penerapan Lean Six Sigma di universitas swasta Indonesia. Relevan bagi pembaca karena memberi acuan perbaikan mutu dan efisiensi pengelolaan perguruan tinggi swasta, sektor yang berkembang pesat di tanah air.",
-   "kategori": "PENDIDIKAN TINGGI",
-   "sejak_edisi": 117
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Kajian ini menganalisis penentu organisasi berkinerja tinggi dalam percepatan pendaftaran tanah di Indonesia. Relevan bagi pembaca karena sertifikasi tanah masih menjadi persoalan administratif penting bagi masyarakat luas dan menjadi prioritas kebijakan agraria nasional.",
-   "kategori": "KEBIJAKAN PUBLIK",
-   "sejak_edisi": 117
-  },
-  {
-   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
-   "wadah": "International Journal of Medical Microbiology",
-   "doi": "10.1016/j.ijmm.2026.151728",
-   "tanggal": "2026-12",
-   "alasan": "Laporan kasus ini membuktikan keberhasilan pengobatan jarang onikomikosis non-dermatofita dengan kombinasi obat di Indonesia. Relevan bagi pembaca karena menambah rujukan klinis dokter kulit dalam menangani infeksi kuku yang resisten di Indonesia.",
-   "kategori": "KESEHATAN KLINIS",
-   "sejak_edisi": 117
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini menilai keyakinan kesehatan dan keterlambatan pasien pada penderita kanker payudara di Sumatra Barat. Relevan bagi pembaca karena keterlambatan deteksi menjadi penyebab utama angka kematian kanker payudara yang tinggi di Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 117
   }
  ]
 }
