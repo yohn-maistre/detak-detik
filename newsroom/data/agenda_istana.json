@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-18T10:45:19+00:00",
+ "diambil": "2026-07-19T10:50:47+00:00",
  "acara": [
   {
    "id": "991e1fe6a788",
@@ -37,6 +37,26 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "4552a5b2a43b",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-panen-raya-serentak-tiga-komoditas-perkuat-ketahanan-pangan-nasional/",
+   "judul": "Presiden Prabowo Pimpin Panen Raya Serentak Tiga Komoditas, Perkuat Ketahanan Pangan Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-17",
+   "tanggal_terbit": "2026-07-17",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "35",
+   "prov_nama": "Jawa Timur"
   },
   {
    "id": "5478183f740a",
@@ -109,6 +129,59 @@
    "prov_nama": null
   },
   {
+   "id": "771708e9b0a4",
+   "url": "https://setkab.go.id/setelah-penantian-28-tahun-presiden-prabowo-mulai-pembangunan-lng-abadi-masela/",
+   "judul": "Setelah Penantian 28 Tahun, Presiden Prabowo Mulai Pembangunan LNG Abadi Masela",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "81",
+   "prov_nama": "Maluku"
+  },
+  {
+   "id": "7cfb07c1f24c",
+   "url": "https://setkab.go.id/investasi-hilirisasi-kian-menguat-sumbang-hampir-sepertiga-investasi-nasional/",
+   "judul": "Investasi Hilirisasi Kian Menguat, Sumbang Hampir Sepertiga Investasi Nasional",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "12f4ee9aa2cd",
+   "url": "https://setkab.go.id/istana-untuk-anak-sekolah-sambut-164-anak-disabilitas-perkuat-semangat-indonesia-inklusif/",
+   "judul": "Istana untuk Anak Sekolah Sambut 164 Anak Disabilitas, Perkuat Semangat Indonesia Inklusif",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-16",
+   "tanggal_terbit": "2026-07-16",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
    "id": "3a14c4252ffe",
    "url": "https://wapresri.go.id/serap-aspirasi-petani-muara-jaya-wapres-dukung-penguatan-ekosistem-singkong-untuk-swasembada-pangan/",
    "judul": "Serap Aspirasi Petani Muara Jaya, Wapres Dukung Penguatan Ekosistem Singkong untuk Swasembada Pangan",
@@ -171,6 +244,26 @@
    "topik": [
     "infrastruktur",
     "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "97db3c01f3fb",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-ratas-bahas-penguatan-program-makan-bergizi-gratis-koperasi-merah-putih-dan-kampung-nelayan/",
+   "judul": "Presiden Prabowo Pimpin Ratas Bahas Penguatan Program Makan Bergizi Gratis, Koperasi Merah Putih, dan Kampung Nelayan",
+   "aktor": "PRESIDEN",
+   "jenis": "SIDANG KABINET",
+   "tanggal_acara": "2026-07-15",
+   "tanggal_terbit": "2026-07-15",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur"
    ],
    "venue": null,
    "kota": null,
