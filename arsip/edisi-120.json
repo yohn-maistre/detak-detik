@@ -1,0 +1,121 @@
+{
+ "edisi": 120,
+ "terbit": "2026-07-20T12:00:38.866261+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-120-04",
+   "judul": "Polri Beberkan 4 Modus Penyimpangan dalam Korupsi Pembiayaan Batu Bara, Kerugian Negara Capai Rp38,9 Miliar",
+   "skor": 16
+  },
+  {
+   "id": "klp-120-06",
+   "judul": "Gelar Sidang Kabinet, Prabowo Tegaskan Pemerintah Tak Salah Arah, Berantas Kemiskinan Jadi Prioritas",
+   "skor": 16
+  },
+  {
+   "id": "klp-120-07",
+   "judul": "Merasa Diserang Terkait Program MBG, Prabowo: Memberi Makan Anak dan Ibu Hamil Dianggap Pemborosan",
+   "skor": 16
+  },
+  {
+   "id": "klp-120-08",
+   "judul": "AS Kirim Puluhan Pesawat Pengisi Bahan Bakar ke Israel, Isyarat Serangan Lebih Besar terhadap Iran?",
+   "skor": 12
+  },
+  {
+   "id": "klp-120-21",
+   "judul": "Krisis Air Bersih di Karawang Meluas: 7.704 Jiwa Terdampak, BPBD Salurkan 152 Ribu Liter",
+   "skor": 6
+  },
+  {
+   "id": "klp-120-10",
+   "judul": "Keterlaluan! Berkedok Tantangan, Pria di Depok Tega Siksa Anak Makan Cabai hingga Dimasukkan Freezer",
+   "skor": 9
+  },
+  {
+   "id": "klp-120-12",
+   "judul": "Cegah Retinopati Diabetik, Kemenkes Siapkan CKG Diabetes Terintegrasi dengan Skrining Retina",
+   "skor": 9
+  },
+  {
+   "id": "klp-120-05",
+   "judul": "Prabowo Sudah Terima Nama Calon Jampidsus, Pengganti Febrie Adriansyah Segera Diumumkan",
+   "skor": 16
+  },
+  {
+   "id": "klp-120-01",
+   "judul": "Top skor Piala Dunia 2026: Mbappe raih Sepatu Emas dan jadi pencetak gol terbanyak Piala Dunia sepanjang masa",
+   "skor": 34
+  },
+  {
+   "id": "klp-120-13",
+   "judul": "Jelajah SAPA Hari Anak Nasional 2026: Pemenuhan Gizi Bagian dari Hak Anak",
+   "skor": 9
+  },
+  {
+   "id": "klp-120-14",
+   "judul": "Pemerintah Dorong Kepatuhan Ketenagakerjaan, Perusahaan Tiongkok Perkuat Strategi SDM untuk Jaga Investasi di Indonesia",
+   "skor": 9
+  },
+  {
+   "id": "klp-120-18",
+   "judul": "Trump sebut akan tarik tarif 20 persen untuk kapal di Selat Hormuz",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
