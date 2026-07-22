@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-19T10:50:47+00:00",
+ "diambil": "2026-07-22T11:24:38+00:00",
  "acara": [
+  {
+   "id": "1f3b4638561e",
+   "url": "https://wapresri.go.id/hadiri-praspa-tni-polri-2026-wapres-dukung-lahirnya-perwira-berintegritas-dan-berdedikasi/",
+   "judul": "Hadiri Praspa TNI-Polri 2026, Wapres Dukung Lahirnya Perwira Berintegritas dan Berdedikasi",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "991e1fe6a788",
    "url": "https://wapresri.go.id/respons-aduan-masyarakat-wapres-dorong-rehabilitasi-sdn-016-serusa-rokan-hilir/",
