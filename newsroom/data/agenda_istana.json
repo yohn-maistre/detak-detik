@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-23T11:55:18+00:00",
+ "diambil": "2026-07-23T22:31:18+00:00",
  "acara": [
+  {
+   "id": "9adf0866b7d9",
+   "url": "https://wapresri.go.id/hadiri-ratas-koperasi-desa-merah-putih-wapres-kawal-percepatan-implementasi-di-daerah/",
+   "judul": "Hadiri Ratas Koperasi Desa Merah Putih, Wapres Kawal Percepatan Implementasi di Daerah",
+   "aktor": "WAPRES",
+   "jenis": "SIDANG KABINET",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "1f3b4638561e",
    "url": "https://wapresri.go.id/hadiri-praspa-tni-polri-2026-wapres-dukung-lahirnya-perwira-berintegritas-dan-berdedikasi/",
