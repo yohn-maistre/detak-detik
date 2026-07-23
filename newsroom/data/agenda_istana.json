@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-23T11:23:10+00:00",
+ "diambil": "2026-07-23T11:55:18+00:00",
  "acara": [
   {
    "id": "1f3b4638561e",
@@ -35,6 +35,21 @@
    "topik": [
     "ekonomi"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "36abb59d4610",
+   "url": "https://wapresri.go.id/wapres-dorong-ajbi-perkuat-ekosistem-beasiswa-untuk-sdm-unggul-indonesia-timur/",
+   "judul": "Wapres Dorong AJBI Perkuat Ekosistem Beasiswa untuk SDM Unggul Indonesia Timur",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
