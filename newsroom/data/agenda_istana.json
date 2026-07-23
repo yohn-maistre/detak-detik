@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-22T11:24:38+00:00",
+ "diambil": "2026-07-23T11:23:10+00:00",
  "acara": [
   {
    "id": "1f3b4638561e",
@@ -17,6 +17,23 @@
    "audiens": null,
    "topik": [
     "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4ecae57692c6",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-penguatan-jejaring-umkm-melalui-bazar-kreasi-bhayangkari-nusantara-2026/",
+   "judul": "Ibu Selvi Dorong Penguatan Jejaring UMKM melalui Bazar Kreasi Bhayangkari Nusantara 2026",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
    ],
    "venue": null,
    "kota": null,

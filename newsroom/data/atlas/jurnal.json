@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-22T22:37:06.369415+00:00",
- "edisi": 125,
+ "diperbarui": "2026-07-23T11:29:18.834629+00:00",
+ "edisi": 126,
  "pilihan": [
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini menyusun model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat. Relevan bagi pembaca Indonesia karena kawasan hulu sungai menjadi penjaga tata air sekaligus aplikasi praktis kebijakan kehutanan daerah dalam menanggulangi banjir dan degradasi lahan.",
+   "kategori": "DAERAH ALIRAN SUNGAI",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Laporan kasus ini menangani onikomikosis non-dermatofit langka akibat Chaetomium spp. di Indonesia dengan kombinasi fluconazole oral dan terbinafine topikal. Hasilnya bermanfaat bagi dokter dan pasien dalam menambah referensi pengobatan infeksi jamur kuku yang jarang terjadi di tanah air.",
+   "kategori": "KESEHATAN INFEKSI",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103276",
+   "tanggal": "2026-12",
+   "alasan": "Tulisan ini menelusuri warisan kolonial Belanda dan proses dekolonisasi terhadap perekonomian maritim di Indonesia. Relevansi untuk pembaca Indonesia terletak pada pelajaran sejarah tentang keterlepasan potensi bahari dan upaya membangun kemandirian laut pasca-kolonial.",
+   "kategori": "EKONOMI MARITIM",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengkaji dampak ekologis dari pertambangan bauksit dan tembaga di Indonesia, termasuk kerusakan lingkungan dan sisa pengelolaan lahan. Penting untuk pembaca karena permintaan mineral memunculkan pertanyaan nyata mengenai keberlanjutan lingkungan dan kebijakan tambang nasional.",
+   "kategori": "TAMBANG & LINGKUNGAN",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini menelaah batasan dan celah dalam pertanggungjawaban pidana atas kekerasan ketika mendisiplinkan anak di Indonesia. Hasilnya membantu pembaca memahami perlindungan anak serta rambu hukum yang membenarkan atau melarang tindakan fisik dalam keluarga.",
+   "kategori": "HUKUM KELUARGA",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini memeriksa pirolisis langsung aspal batuan dari Pulau Buton, Indonesia, beserta karakterisasi produk cair dan peranan kalsit. Penting bagi pembaca karena Buton menyimpan cadangan aspal alam besar dan pengembangannya berpengaruh terhadap energi serta perekonomian daerah.",
+   "kategori": "SUMBER DAYA ENERGI",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membahas kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Relevansi bagi pembaca terletak pada upaya pengendalian emisi karbon dari industri hingga negara tetangga serta diplomasi lingkungan Indonesia di tingkat regional.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 126
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Tulisan ini mengkusi penghimpunan dana zakat di Indonesia, mencakup kontinuitas, kerangka hukum, dan transformasi digital. Relevansi bagi pembaca kerena zakat berperan penting dalam pengentasan kemiskinan dan literasi keuangan syariah serta pemanfaatan teknologi memperluas jangkauan pengumpulan dana sosial.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 126
+  },
   {
    "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
    "wadah": "MethodsX",
@@ -37,78 +109,6 @@
    "alasan": "Artikel ini mengevaluasi kerentanan masyarakat, kebijakan, dan komunitas saat Indonesia menghadapi transisi dari energi batu bara. Hasilnya bermanfaat bagi penyusunan kebijakan transisi energi yang adil dan melindungi pekerja sektor tambang.",
    "kategori": "ENERGI & TRANSISI",
    "sejak_edisi": 125
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian membandingkan efektivitas dan efisiensi kebijakan integrasi ternak dengan perkebunan kelapa sawit di Indonesia dan Malaysia. Relevan bagi pembaca Indonesia karena integrasi sapi dan sawit berpotensi meningkatkan pendapatan petani sekaligus menekan defisit daging nasional.",
-   "kategori": "KEBIJAKAN PERTANIAN",
-   "sejak_edisi": 125
-  },
-  {
-   "judul": "Pandemic-induced disruptions and digital constraints in horticultural agribusiness: A case study in Aceh, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103076",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini meneliti dampak pandemi dan kendala digital pada usaha hortikultura di Aceh. Relevan bagi pembaca Indonesia karena mengungkat permasalahan rantai pasok agribisnis wilayah tepi dan kebutuhan adopsi teknologi digital petani lokal.",
-   "kategori": "PERTANIAN DIGITAL",
-   "sejak_edisi": 125
-  },
-  {
-   "judul": "Negative Binomial tv-DINGARCH Models for Monthly DHF Cases in Surabaya, Indonesia (2015-2025)",
-   "wadah": "CAUCHY: Jurnal Matematika Murni dan Aplikasi",
-   "doi": "10.18860/cauchy.v11i2.42667",
-   "tanggal": "2026-11-30",
-   "alasan": "Makalah ini membangun model statistik untuk memproyeksikan kasus demam berdarah dengue bulanan di Surabaya tahun 2015 hingga 2025. Hasil pemodelan ini relevan bagi pembaca Indonesia sebagai dasar peringatan dini dan alokasi sumber daya pencegahan DBD.",
-   "kategori": "EPIDEMIOLOGI DEMAM",
-   "sejak_edisi": 125
-  },
-  {
-   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
-   "wadah": "Renewable and Sustainable Energy Transition",
-   "doi": "10.1016/j.rset.2026.100152",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini membandingkan transisi energi pada sistem kelistrikan Indonesia, Filipina, dan Vietnam. Relevan bagi pembaca Indonesia karena memberi bahan perbandingan target kebijakan energi terbarukan dan kesiapan infrastruktur kelistrikan nasional.",
-   "kategori": "ENERGI LISTRIK",
-   "sejak_edisi": 125
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini meneliti reproduksi sosial pekerja nikel di Maluku Utara. Relevan bagi pembaca Indonesia karena membahas dampak ekstraksi mineral terhadap tubuh dan kehidupan buruh di kawasan frontier tambang domestik.",
-   "kategori": "TAMBANG & TENAGA KERJA",
-   "sejak_edisi": 124
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian mengukur bioakumulasi timbal pada ikan laut di Sumatera Selatan beserta risiko kesehatan konsumsi. Relevan bagi pembaca Indonesia yang memantau pencemaran pesisir dan ketahanan pangan dari laut.",
-   "kategori": "PESISIR & KESEHATAN",
-   "sejak_edisi": 124
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Tinjauan situasi taeniasis di Bali periode 2022-2025 yang menelaah status parasit dan tantangan pengendalian. Relevan bagi pembaca Indonesia karena taeniasis masih menjadi persoalan kesehatan masyarakat di kawasan Bali.",
-   "kategori": "PENYAKIT TROPIS",
-   "sejak_edisi": 124
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Ulasan menelaah status resistensi insektisida hama pertanian dan strategi pengelolaannya di Indonesia. Relevan bagi pembaca Indonesia karena resistensi hama berdampak langsung pada produktivitas pangan nasional.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 124
   }
  ]
 }
