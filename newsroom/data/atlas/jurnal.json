@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-24T22:38:40.971383+00:00",
- "edisi": 129,
+ "diperbarui": "2026-07-25T10:54:44.479443+00:00",
+ "edisi": 130,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Menelaah hambatan dan kebijakan pengembangan panas bumi di cekungan sedimen Indonesia. Relevan bagi pembaca yang mengikuti transisi energi dan pemanfaatan sumber daya alam nasional.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji dampak Revolusi Hijau terhadap individualisme masyarakat Indonesia. Relevan bagi pembaca yang meminati perubahan sosial akibat transformasi pertanian.",
+   "kategori": "MASYARAKAT & PERTANIAN",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti buruh dan reproduksi sosial di kawasan tambang nikel Maluku Utara. Relevan bagi pembaca yang memantau dampak industri pertambangan terhadap masyarakat lokal.",
+   "kategori": "EKSTRAKTIF & BURUH",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
+   "wadah": "Toxicology Reports",
+   "doi": "10.1016/j.toxrep.2026.102316",
+   "tanggal": "2026-12",
+   "alasan": "Mengukur bioakumulasi timbal dan risiko kesehatan ikan konsumsi di pesisir Sumatera Selatan. Relevan bagi pembaca yang peduli pada pencemaran laut dan ketahanan pangan pesisir.",
+   "kategori": "LAUT & PESISIR",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103321",
+   "tanggal": "2026-12",
+   "alasan": "Menyingkap makna pengalaman warga dalam pengembangan wisata pedesaan di Borobudur. Relevan bagi pembaca yang meneliti pelibatan komunitas dalam pariwisata.",
+   "kategori": "PARIWISATA KOMUNITAS",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Pandemic-induced disruptions and digital constraints in horticultural agribusiness: A case study in Aceh, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103076",
+   "tanggal": "2026-12",
+   "alasan": "Mengulas disrupsi pandemi dan kendala digital pada agribisnis hortikultura di Aceh. Relevan bagi pembaca yang mengikuti ketahanan pangan dan adaptasi teknologi petani.",
+   "kategori": "AGRIBISNIS & DIGITAL",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti komunikasi ritual, adat, dan toleransi komunitas Tengger Ngadas di Jawa Timur. Relevan bagi pembaca yang berminat pada keberagaman budaya.",
+   "kategori": "BUDAYA LOKAL",
+   "sejak_edisi": 130
+  },
+  {
+   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
+   "wadah": "Cleaner Waste Systems",
+   "doi": "10.1016/j.clwas.2026.100539",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis efisiensi pengelolaan sampah berbasis komunitas di Kota Batu. Relevan bagi pembaca yang membutuhkan bukti empiris praktik bersih lingkungan.",
+   "kategori": "MANAJEMEN SAMPAH",
+   "sejak_edisi": 130
+  },
   {
    "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
    "wadah": "International Journal of Sustainable Society",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian ini melaporkan situasi terkini taeniasis di Bali periode 2022 hingga 2025. Relevan bagi pembaca karena memetakan status parasit cacing pita pada manusia dan babi yang menjadi tantangan kesehatan masyarakat serta berdampak pada pariwisata dan ekonomi peternakan lokal.",
    "kategori": "KESEHATAN & PARASITOLOGI",
    "sejak_edisi": 129
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Tinjauan ini membahas status resistensi insektisida pada hama pertanian di Indonesia beserta tantangan pengelolaannya. Relevan bagi pembaca karena daya tahan hama menjadi ancaman ketahanan pangan dan kerugian ekonomi yang signifikan bagi petani sayur dan padi.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 129
-  },
-  {
-   "judul": "Business incubation, eco-innovation, and startup growth: A study of new and renewable energy (NRE) entrepreneurship in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103209",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengkaji inkubator bisnis, inovasi lingkungan, dan pertumbuhan rintisan energi terbarukan di Indonesia. Relevan bagi pembaca karena transisi energi memerlukan dukungan ekosistem rintisan yang kuat untuk mendorong diversifikasi pasokan kelestarian energi nasional.",
-   "kategori": "ENERGI & WIRAUSAHA",
-   "sejak_edisi": 129
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini membandingkan kebijakan integrasi ternak dan perkebunan kelapa sawit Indonesia dengan Malaysia. Relevan bagi pembaca karena integrasi sapi dan sawit berdampak pada strategi swasembada daging serta efisiensi pemanfaatan lahan perkebunan dalam menghadapi integrasi regional.",
-   "kategori": "AGRIKULTUR & KEBIJAKAN",
-   "sejak_edisi": 129
-  },
-  {
-   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100329",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menganalisis dampak ekologis dari produksi bauksit dan tembaga di Indonesia. Relevan bagi pembaca karena aktivitas pertambangan berdampak pada degradasi lingkungan dan konflik lahan, menjadi pertimbangan penting dalam kebijakan hilirisasi mineral nasional.",
-   "kategori": "LINGKUNGAN & TAMBANG",
-   "sejak_edisi": 129
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis pirolisis langsung aspal batuan dari Buton, Indonesia, beserta karakterisasi produk cairnya. Relevan untuk memahami pemanfaatan sumber daya lokal dan potensi energi alternatif di Indonesia.",
-   "kategori": "ENERGI & SUMBER DAYA",
-   "sejak_edisi": 128
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Membahas kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Penting bagi pembaca karena menyangkut kebijakan lingkungan dan kerja sama iklinternasional Indonesia.",
-   "kategori": "ENERGI & SUMBER DAYA",
-   "sejak_edisi": 128
-  },
-  {
-   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101961",
-   "tanggal": "2026-12",
-   "alasan": "Menelaah kerentanan masyarakat terhadap transisi batu bara di Indonesia serta implikasinya bagi kebijakan dan komunitas. Relevan karena membahas dampak sosial dan ekonomi dari pergeseran energi di Indonesia.",
-   "kategori": "ENERGI & SUMBER DAYA",
-   "sejak_edisi": 128
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Menilai keyakinan kesehatan dan keterlambatan pasien di antara penderita kanker payudara di Sumatera Barat, Indonesia. Relevan untuk memahami faktor sosial-budaya yang memengaruhi akses dan keterlambatan pengobatan.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 128
   }
  ]
 }

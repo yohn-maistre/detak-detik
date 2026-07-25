@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-23T22:31:18+00:00",
+ "diambil": "2026-07-25T10:51:17+00:00",
  "acara": [
   {
    "id": "9adf0866b7d9",
@@ -16,6 +16,23 @@
    "tanggal_terbit": "2026-07-23",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4fe8b8bbaab6",
+   "url": "https://wapresri.go.id/wapres-hadiri-harlah-ke-28-pkb-perkuat-sinergi-wujudkan-amanat-ekonomi-konstitusi/",
+   "judul": "Wapres Hadiri Harlah Ke-28 PKB, Perkuat Sinergi Wujudkan Amanat Ekonomi Konstitusi",
+   "aktor": "WAPRES",
+   "jenis": "AMANAT",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
