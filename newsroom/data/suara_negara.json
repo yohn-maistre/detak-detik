@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-07-25T11:17:40+00:00",
+ "diambil": "2026-07-25T22:46:29+00:00",
  "baris": [
   {
    "id": "ddafada2c8f1",
@@ -362,39 +362,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "6b8013854155",
-   "url": "https://pks.id/content/hari-anak-nasional-2026-legislator-pks-ajak-perkuat-perlindungan-anak-dari-kekerasan-seksual-dan-lgbt",
-   "judul": "Hari Anak Nasional 2026, Legislator PKS Ajak Perkuat Perlindungan Anak dari Kekerasan Seksual dan LGBT",
-   "ringkas": "Memperingati Hari Anak Nasional 2026, Anggota Komisi XIII DPR RI Fraksi PKS Daerah Pemilihan Maluku, Saadiah Uluputty, mengajak seluruh elemen bangsa untuk memperkuat perlindungan terhadap anak di tengah meningkatnya berbagai ancaman yang mengganggu tumbuh kembang generasi peneru",
-   "tanggal": "2026-07-24",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "9bd52bf2d9fc",
-   "url": "https://pks.id/content/terinspirasi-keluarga-lamine-yamal-hnw-semangati-warga-penerima-manfaat-bansos-untuk-sukses",
-   "judul": "Terinspirasi Keluarga Lamine Yamal, HNW Semangati Warga Penerima Manfaat Bansos Untuk Sukses",
-   "ringkas": "Wakil Ketua MPR RI sekaligus Anggota Komisi VIII DPR RI Hidayat Nur Wahid mengajak Keluarga Penerima Manfaat (KPM) Program Keluarga Harapan (PKH) dari Kementerian Sosial (Kemensos) untuk tidak pasif, berputus asa, tapi optimistis dan justru menjadikan kondisi ekonominya untuk ter",
-   "tanggal": "2026-07-24",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "0ea938a2ef80",
-   "url": "https://pks.id/content/pks-soroti-rendahnya-serapan-anggaran-kesehatan-primer-dorong-percepatan-transformasi-layanan",
-   "judul": "PKS Soroti Rendahnya Serapan Anggaran Kesehatan Primer, Dorong Percepatan Transformasi Layanan",
-   "ringkas": "Anggota Komisi IX DPR RI Fraksi PKS, Netty Prasetiyani, menyoroti rendahnya serapan anggaran Direktorat Jenderal Kesehatan Primer dan Komunitas yang dinilai dapat menghambat agenda transformasi layanan kesehatan nasional. Ia menegaskan bahwa keberhasilan administrasi, termasuk ra",
-   "tanggal": "2026-07-24",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "3c2a39d66614",
    "url": "https://www.kemhan.go.id/2026/07/24/menhan-ri-olahraga-bersama-keluarga-besar-kemhan-perkuat-soliditas-dan-jiwa-korsa.html",
    "judul": "Menhan RI Olahraga Bersama Keluarga Besar Kemhan, Perkuat Soliditas dan Jiwa Korsa",
@@ -665,6 +632,39 @@
    "cabang": "legislatif"
   },
   {
+   "id": "6b8013854155",
+   "url": "https://pks.id/content/hari-anak-nasional-2026-legislator-pks-ajak-perkuat-perlindungan-anak-dari-kekerasan-seksual-dan-lgbt",
+   "judul": "Hari Anak Nasional 2026, Legislator PKS Ajak Perkuat Perlindungan Anak dari Kekerasan Seksual dan LGBT",
+   "ringkas": "Memperingati Hari Anak Nasional 2026, Anggota Komisi XIII DPR RI Fraksi PKS Daerah Pemilihan Maluku, Saadiah Uluputty, mengajak seluruh elemen bangsa untuk memperkuat perlindungan terhadap anak di tengah meningkatnya berbagai ancaman yang mengganggu tumbuh kembang generasi peneru",
+   "tanggal": "2026-07-24",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "9bd52bf2d9fc",
+   "url": "https://pks.id/content/terinspirasi-keluarga-lamine-yamal-hnw-semangati-warga-penerima-manfaat-bansos-untuk-sukses",
+   "judul": "Terinspirasi Keluarga Lamine Yamal, HNW Semangati Warga Penerima Manfaat Bansos Untuk Sukses",
+   "ringkas": "Wakil Ketua MPR RI sekaligus Anggota Komisi VIII DPR RI Hidayat Nur Wahid mengajak Keluarga Penerima Manfaat (KPM) Program Keluarga Harapan (PKH) dari Kementerian Sosial (Kemensos) untuk tidak pasif, berputus asa, tapi optimistis dan justru menjadikan kondisi ekonominya untuk ter",
+   "tanggal": "2026-07-24",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "0ea938a2ef80",
+   "url": "https://pks.id/content/pks-soroti-rendahnya-serapan-anggaran-kesehatan-primer-dorong-percepatan-transformasi-layanan",
+   "judul": "PKS Soroti Rendahnya Serapan Anggaran Kesehatan Primer, Dorong Percepatan Transformasi Layanan",
+   "ringkas": "Anggota Komisi IX DPR RI Fraksi PKS, Netty Prasetiyani, menyoroti rendahnya serapan anggaran Direktorat Jenderal Kesehatan Primer dan Komunitas yang dinilai dapat menghambat agenda transformasi layanan kesehatan nasional. Ia menegaskan bahwa keberhasilan administrasi, termasuk ra",
+   "tanggal": "2026-07-24",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
    "id": "f530b9423136",
    "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
    "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
@@ -828,6 +828,56 @@
    "partai": "gerindra"
   },
   {
+   "id": "d8b1d324c184",
+   "url": "https://www.kemhan.go.id/2026/07/23/menhan-sjafrie-hadiri-pelantikan-kepala-bgn-serta-pimpinan-universitas-republik-indonesia-di-istana-negara.html",
+   "judul": "Menhan Sjafrie Hadiri Pelantikan Kepala BGN serta Pimpinan Universitas Republik Indonesia di Istana Negara",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri pelantikan Kepala Badan Gizi Nasional (BGN), Gubernur dan Wakil...",
+   "tanggal": "2026-07-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "64be584ea130",
+   "url": "https://www.kemhan.go.id/2026/07/23/menhan-sjafrie-dampingi-presiden-prabowo-pimpin-upacara-praspa-tni-polri-tahun-2026.html",
+   "judul": "Menhan Sjafrie Dampingi Presiden Prabowo Pimpin Upacara Praspa TNI-Polri Tahun 2026",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin bersama Ibu Etty Sjafrie Sjamsoeddin mendampingi Presiden RI Prabowo Subianto...",
+   "tanggal": "2026-07-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "dc9f60459781",
+   "url": "https://www.kemhan.go.id/2026/07/23/indonesia-dan-singapura-perkuat-kemitraan-strategis-pertahanan-pada-pertemuan-ke-3-defence-cooperation-committee.html",
+   "judul": "Indonesia dan Singapura Perkuat Kemitraan Strategis Pertahanan pada Pertemuan Ke-3 Defence Cooperation Committee",
+   "ringkas": "Jakarta – Kementerian Pertahanan Republik Indonesia menjadi tuan rumah Pertemuan Ke-3 Indonesia–Singapore Defence Cooperation Committee (DCC) yang diselenggarakan di Hotel...",
+   "tanggal": "2026-07-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "2d5e31c775db",
+   "url": "https://www.kemhan.go.id/2026/07/23/menhan-ri-hadiri-rapat-terbatas-bahas-percepatan-penguatan-koperasi-desa-merah-putih.html",
+   "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Percepatan Penguatan Koperasi Desa Merah Putih",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri rapat terbatas yang dipimpin Presiden Republik Indonesia Prabowo Subianto...",
+   "tanggal": "2026-07-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "64ca3a5aee92",
+   "url": "https://www.kemhan.go.id/2026/07/23/plh-ses-itjen-kemhan-pimpin-entry-meeting-pemeriksaan-kinerja-pendahuluan-bpk-ri-tahun-2026.html",
+   "judul": "Plh. Ses Itjen Kemhan Pimpin Entry Meeting Pemeriksaan Kinerja Pendahuluan BPK RI Tahun 2026",
+   "ringkas": "Jakata – Plh Sekretaris Inspektorat Jenderal (Ses Itjen) Kementerian Pertahanan (Kemhan), Marsekal Pertama TNI Lambok M. Sormin, memimpin Entry Meeting...",
+   "tanggal": "2026-07-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "aaac1cc48c9f",
    "url": "https://pks.id/content/sosialisasi-ranperda-lgbt-legislator-pks-riau-lgbt-musuh-nasional",
    "judul": "Sosialisasi Ranperda LGBT, Legislator PKS Riau: LGBT Musuh Nasional",
@@ -892,56 +942,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "d8b1d324c184",
-   "url": "https://www.kemhan.go.id/2026/07/23/menhan-sjafrie-hadiri-pelantikan-kepala-bgn-serta-pimpinan-universitas-republik-indonesia-di-istana-negara.html",
-   "judul": "Menhan Sjafrie Hadiri Pelantikan Kepala BGN serta Pimpinan Universitas Republik Indonesia di Istana Negara",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri pelantikan Kepala Badan Gizi Nasional (BGN), Gubernur dan Wakil...",
-   "tanggal": "2026-07-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "64be584ea130",
-   "url": "https://www.kemhan.go.id/2026/07/23/menhan-sjafrie-dampingi-presiden-prabowo-pimpin-upacara-praspa-tni-polri-tahun-2026.html",
-   "judul": "Menhan Sjafrie Dampingi Presiden Prabowo Pimpin Upacara Praspa TNI-Polri Tahun 2026",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin bersama Ibu Etty Sjafrie Sjamsoeddin mendampingi Presiden RI Prabowo Subianto...",
-   "tanggal": "2026-07-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "dc9f60459781",
-   "url": "https://www.kemhan.go.id/2026/07/23/indonesia-dan-singapura-perkuat-kemitraan-strategis-pertahanan-pada-pertemuan-ke-3-defence-cooperation-committee.html",
-   "judul": "Indonesia dan Singapura Perkuat Kemitraan Strategis Pertahanan pada Pertemuan Ke-3 Defence Cooperation Committee",
-   "ringkas": "Jakarta – Kementerian Pertahanan Republik Indonesia menjadi tuan rumah Pertemuan Ke-3 Indonesia–Singapore Defence Cooperation Committee (DCC) yang diselenggarakan di Hotel...",
-   "tanggal": "2026-07-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "2d5e31c775db",
-   "url": "https://www.kemhan.go.id/2026/07/23/menhan-ri-hadiri-rapat-terbatas-bahas-percepatan-penguatan-koperasi-desa-merah-putih.html",
-   "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Percepatan Penguatan Koperasi Desa Merah Putih",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri rapat terbatas yang dipimpin Presiden Republik Indonesia Prabowo Subianto...",
-   "tanggal": "2026-07-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "64ca3a5aee92",
-   "url": "https://www.kemhan.go.id/2026/07/23/plh-ses-itjen-kemhan-pimpin-entry-meeting-pemeriksaan-kinerja-pendahuluan-bpk-ri-tahun-2026.html",
-   "judul": "Plh. Ses Itjen Kemhan Pimpin Entry Meeting Pemeriksaan Kinerja Pendahuluan BPK RI Tahun 2026",
-   "ringkas": "Jakata – Plh Sekretaris Inspektorat Jenderal (Ses Itjen) Kementerian Pertahanan (Kemhan), Marsekal Pertama TNI Lambok M. Sormin, memimpin Entry Meeting...",
-   "tanggal": "2026-07-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "fd276161a135",
@@ -1074,17 +1074,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "e5234164f43d",
-   "url": "https://pks.id/content/1200-wni-berhasil-dipulangkan-dari-myanmar-legislator-pks-berantas-sindikat-tppo-hingga-ke-akar-jangan-hanya-menyelamatkan-korban",
-   "judul": "1.200 WNI Berhasil Dipulangkan dari Myanmar, Legislator PKS: Berantas Sindikat TPPO hingga ke Akar, Jangan Hanya Menyelamatkan Korban",
-   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, mengapresiasi keberhasilan pemerintah memulangkan lebih dari 1.200 Warga Negara Indonesia (WNI) yang menjadi korban sindikat online scam di Myanmar. Menurutnya, keberhasilan tersebut merupakan bentuk nyata kehadiran negara dalam m",
-   "tanggal": "2026-07-22",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "aea36c67e9c5",
    "url": "https://www.kemhan.go.id/2026/07/22/menhan-ri-terima-kunjungan-perpisahan-dubes-kanada-untuk-indonesia.html",
    "judul": "Menhan RI Terima Kunjungan Perpisahan Dubes Kanada Untuk Indonesia",
@@ -1103,6 +1092,17 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
+  },
+  {
+   "id": "e5234164f43d",
+   "url": "https://pks.id/content/1200-wni-berhasil-dipulangkan-dari-myanmar-legislator-pks-berantas-sindikat-tppo-hingga-ke-akar-jangan-hanya-menyelamatkan-korban",
+   "judul": "1.200 WNI Berhasil Dipulangkan dari Myanmar, Legislator PKS: Berantas Sindikat TPPO hingga ke Akar, Jangan Hanya Menyelamatkan Korban",
+   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, mengapresiasi keberhasilan pemerintah memulangkan lebih dari 1.200 Warga Negara Indonesia (WNI) yang menjadi korban sindikat online scam di Myanmar. Menurutnya, keberhasilan tersebut merupakan bentuk nyata kehadiran negara dalam m",
+   "tanggal": "2026-07-22",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "103350f7b2f3",
@@ -1215,39 +1215,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "c2e69c53a486",
-   "url": "https://pks.id/content/legislator-pks-dorong-riset-alat-bantu-atlet-disabilitas-jadi-prioritas-sport-science",
-   "judul": "Legislator PKS Dorong Riset Alat Bantu Atlet Disabilitas Jadi Prioritas Sport Science",
-   "ringkas": "Menanggapi rencana Badan Riset dan Inovasi Nasional (BRIN) untuk memperkuat pengembangan sport science, Anggota Komisi X DPR RI, Ledia Hanifa Amaliah, mengingatkan agar riset olahraga tidak hanya berfokus pada peningkatan peak performance atlet, tetapi juga harus bisa menjawab ke",
-   "tanggal": "2026-07-21",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "e089ffacc448",
-   "url": "https://pks.id/content/legislator-pks-apresiasi-satgas-percepatan-rehabilitasi-dan-rekonstruksi-pascabencana-sumatera-dorong-optimalisasi-dana-transfer-ke-daerah",
-   "judul": "Legislator PKS Apresiasi Satgas Percepatan Rehabilitasi dan Rekonstruksi Pascabencana Sumatera, Dorong Optimalisasi Dana Transfer ke Daerah",
-   "ringkas": "Ketua Satgas Percepatan Rehabilitasi dan Rekonstruksi Pascabencana Sumatera, Muhammad Tito Karnavian, menekankan pentingnya optimalisasi Transfer ke Daerah sebesar Rp10,6 triliun untuk mempercepat pemulihan di Aceh, Sumatera Utara, dan Sumatera Barat. Dana tambahan ini dialokasik",
-   "tanggal": "2026-07-21",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "a2d7189fdb63",
-   "url": "https://pks.id/content/legislator-pks-regulator-harus-lebih-siap-daripada-pengembang-sebelum-indonesia-bangun-pltn",
-   "judul": "Legislator PKS: Regulator Harus Lebih Siap daripada Pengembang Sebelum Indonesia Bangun PLTN",
-   "ringkas": "Anggota Komisi XII DPR RI Fraksi PKS, Ateng Sutisna, menegaskan bahwa kesiapan regulator harus menjadi prioritas sebelum Indonesia mengembangkan Pembangkit Listrik Tenaga Nuklir (PLTN). Menurutnya, pemanfaatan energi nuklir untuk memperkuat ketahanan energi nasional dan mendukung",
-   "tanggal": "2026-07-21",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "7fe1fd58a213",
    "url": "https://www.kemhan.go.id/2026/07/21/sekjen-kemhan-hadiri-pengesahan-kerja-sama-pertahanan-ri-dengan-malaysia-dan-turki-di-dpr-ri.html",
    "judul": "Sekjen Kemhan Hadiri Pengesahan Kerja Sama Pertahanan RI Dengan Malaysia dan Turki di DPR RI",
@@ -1286,6 +1253,39 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
+  },
+  {
+   "id": "c2e69c53a486",
+   "url": "https://pks.id/content/legislator-pks-dorong-riset-alat-bantu-atlet-disabilitas-jadi-prioritas-sport-science",
+   "judul": "Legislator PKS Dorong Riset Alat Bantu Atlet Disabilitas Jadi Prioritas Sport Science",
+   "ringkas": "Menanggapi rencana Badan Riset dan Inovasi Nasional (BRIN) untuk memperkuat pengembangan sport science, Anggota Komisi X DPR RI, Ledia Hanifa Amaliah, mengingatkan agar riset olahraga tidak hanya berfokus pada peningkatan peak performance atlet, tetapi juga harus bisa menjawab ke",
+   "tanggal": "2026-07-21",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "e089ffacc448",
+   "url": "https://pks.id/content/legislator-pks-apresiasi-satgas-percepatan-rehabilitasi-dan-rekonstruksi-pascabencana-sumatera-dorong-optimalisasi-dana-transfer-ke-daerah",
+   "judul": "Legislator PKS Apresiasi Satgas Percepatan Rehabilitasi dan Rekonstruksi Pascabencana Sumatera, Dorong Optimalisasi Dana Transfer ke Daerah",
+   "ringkas": "Ketua Satgas Percepatan Rehabilitasi dan Rekonstruksi Pascabencana Sumatera, Muhammad Tito Karnavian, menekankan pentingnya optimalisasi Transfer ke Daerah sebesar Rp10,6 triliun untuk mempercepat pemulihan di Aceh, Sumatera Utara, dan Sumatera Barat. Dana tambahan ini dialokasik",
+   "tanggal": "2026-07-21",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "a2d7189fdb63",
+   "url": "https://pks.id/content/legislator-pks-regulator-harus-lebih-siap-daripada-pengembang-sebelum-indonesia-bangun-pltn",
+   "judul": "Legislator PKS: Regulator Harus Lebih Siap daripada Pengembang Sebelum Indonesia Bangun PLTN",
+   "ringkas": "Anggota Komisi XII DPR RI Fraksi PKS, Ateng Sutisna, menegaskan bahwa kesiapan regulator harus menjadi prioritas sebelum Indonesia mengembangkan Pembangkit Listrik Tenaga Nuklir (PLTN). Menurutnya, pemanfaatan energi nuklir untuk memperkuat ketahanan energi nasional dan mendukung",
+   "tanggal": "2026-07-21",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "47574f1d0386",
@@ -1338,6 +1338,36 @@
    "cabang": "pengawas"
   },
   {
+   "id": "7c001cb210ed",
+   "url": "https://www.kemhan.go.id/2026/07/20/wamenhan-hadiri-raker-komisi-i-dpr-ri-bahas-persetujuan-hibah-alpalhankam.html",
+   "judul": "Wamenhan Hadiri Raker Komisi I DPR RI, Bahas Persetujuan Hibah Alpalhankam",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan menghadiri Rapat Kerja Komisi I...",
+   "tanggal": "2026-07-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "13e62ec0a523",
+   "url": "https://www.kemhan.go.id/2026/07/20/wamenhan-ri-terima-kunjungan-director-general-office-of-national-intelligence-australia-bahas-penguatan-kerja-sama-intelijen.html",
+   "judul": "Wamenhan RI Terima Kunjungan Director-General Office of National Intelligence Australia, Bahas Penguatan Kerja Sama Intelijen",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima kunjungan Director-General Office...",
+   "tanggal": "2026-07-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3a052ec180a6",
+   "url": "https://www.kemhan.go.id/2026/07/20/dirjen-renhan-kemhan-pimpin-upacara-bendera-bulanan-tekankan-peningkatan-kinerja-pegawai.html",
+   "judul": "Dirjen Renhan Kemhan Pimpin Upacara Bendera Bulanan, Tekankan Peningkatan Kinerja Pegawai",
+   "ringkas": "Jakarta – Direktur Jenderal Perencanaan Pertahanan Kementerian Pertahanan Republik Indonesia (Dirjen Renhan Kemhan RI), Mayor Jenderal TNI I Gusti Ngurah...",
+   "tanggal": "2026-07-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "55c673b341df",
    "url": "https://pks.id/content/suarakan-warga-kepulauan-terluar-legislator-pks-desak-bantuan-hukum-menjangkau-daerah-terpencil",
    "judul": "Suarakan Warga Kepulauan Terluar, Legislator PKS Desak Bantuan Hukum Menjangkau Daerah Terpencil",
@@ -1380,36 +1410,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "7c001cb210ed",
-   "url": "https://www.kemhan.go.id/2026/07/20/wamenhan-hadiri-raker-komisi-i-dpr-ri-bahas-persetujuan-hibah-alpalhankam.html",
-   "judul": "Wamenhan Hadiri Raker Komisi I DPR RI, Bahas Persetujuan Hibah Alpalhankam",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan menghadiri Rapat Kerja Komisi I...",
-   "tanggal": "2026-07-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "13e62ec0a523",
-   "url": "https://www.kemhan.go.id/2026/07/20/wamenhan-ri-terima-kunjungan-director-general-office-of-national-intelligence-australia-bahas-penguatan-kerja-sama-intelijen.html",
-   "judul": "Wamenhan RI Terima Kunjungan Director-General Office of National Intelligence Australia, Bahas Penguatan Kerja Sama Intelijen",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima kunjungan Director-General Office...",
-   "tanggal": "2026-07-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "3a052ec180a6",
-   "url": "https://www.kemhan.go.id/2026/07/20/dirjen-renhan-kemhan-pimpin-upacara-bendera-bulanan-tekankan-peningkatan-kinerja-pegawai.html",
-   "judul": "Dirjen Renhan Kemhan Pimpin Upacara Bendera Bulanan, Tekankan Peningkatan Kinerja Pegawai",
-   "ringkas": "Jakarta – Direktur Jenderal Perencanaan Pertahanan Kementerian Pertahanan Republik Indonesia (Dirjen Renhan Kemhan RI), Mayor Jenderal TNI I Gusti Ngurah...",
-   "tanggal": "2026-07-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "eca154db4fdb",
@@ -1610,6 +1610,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "0e161bc121a2",
+   "url": "https://www.kemhan.go.id/2026/07/19/menhan-ri-raih-anugerah-pemred-award-2026-kategori-menteri-terbaik-bidang-komunikasi-dan-informasi.html",
+   "judul": "Menhan RI Raih Anugerah Pemred Award 2026 Kategori Menteri Terbaik Bidang Komunikasi dan Informasi",
+   "ringkas": "Yogyakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meraih penghargaan Kategori Menteri Terbaik dalam Bidang Komunikasi dan Informasi...",
+   "tanggal": "2026-07-19",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "594727ad5f41",
    "url": "https://pks.id/content/perda-kokoh-berawal-dari-naskah-akademik-yang-kuat",
    "judul": "Perda Kokoh Berawal dari Naskah Akademik yang Kuat",
@@ -1632,11 +1642,11 @@
    "partai": "pks"
   },
   {
-   "id": "0e161bc121a2",
-   "url": "https://www.kemhan.go.id/2026/07/19/menhan-ri-raih-anugerah-pemred-award-2026-kategori-menteri-terbaik-bidang-komunikasi-dan-informasi.html",
-   "judul": "Menhan RI Raih Anugerah Pemred Award 2026 Kategori Menteri Terbaik Bidang Komunikasi dan Informasi",
-   "ringkas": "Yogyakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meraih penghargaan Kategori Menteri Terbaik dalam Bidang Komunikasi dan Informasi...",
-   "tanggal": "2026-07-19",
+   "id": "204c75621536",
+   "url": "https://www.kemhan.go.id/2026/07/18/menhan-dampingi-presiden-pimpin-panen-raya-tni-terintegrasi.html",
+   "judul": "Menhan Dampingi Presiden Pimpin Panen Raya TNI Terintegrasi",
+   "ringkas": "Jawa Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin mendampingi Presiden RI Prabowo Subianto memimpin Panen Raya TNI...",
+   "tanggal": "2026-07-18",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
@@ -1695,16 +1705,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "204c75621536",
-   "url": "https://www.kemhan.go.id/2026/07/18/menhan-dampingi-presiden-pimpin-panen-raya-tni-terintegrasi.html",
-   "judul": "Menhan Dampingi Presiden Pimpin Panen Raya TNI Terintegrasi",
-   "ringkas": "Jawa Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin mendampingi Presiden RI Prabowo Subianto memimpin Panen Raya TNI...",
-   "tanggal": "2026-07-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "c8d7bb2264d0",
@@ -1835,6 +1835,56 @@
    "cabang": "pengawas"
   },
   {
+   "id": "7102a243a7ec",
+   "url": "https://www.kemhan.go.id/2026/07/15/pusrehabkeshan-kemhan-buka-rehabilitasi-terpadu-return-to-duty-angkatan-51-gelombang-ii-tahun-2026.html",
+   "judul": "Pusrehabkeshan Kemhan Buka Rehabilitasi Terpadu Return To Duty Angkatan 51 Gelombang II Tahun 2026",
+   "ringkas": "Jakarta – Pelaksana Tugas Kepala Pusat Rehabilitasi Kesehatan Pertahanan Kementerian Pertahanan (Plt. Kapusrehabkeshan Kemhan) Brigadir Jenderal TNI dr. Sunaryo Kusumo,...",
+   "tanggal": "2026-07-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "5d2ad0cb0c0f",
+   "url": "https://www.kemhan.go.id/2026/07/15/menhan-sjafrie-terima-kunjungan-menhan-singapura.html",
+   "judul": "Menhan Sjafrie Terima Kunjungan Menhan Singapura",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin, menerima kunjungan Menteri Pertahanan Singapura, Chan Chun Sing, di Kantor...",
+   "tanggal": "2026-07-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "b51df311050d",
+   "url": "https://www.kemhan.go.id/2026/07/15/menhan-bekali-capaja-tni-polri-2026-tekankan-semangat-generasi-45-dan-integritas.html",
+   "judul": "Menhan Bekali Capaja TNI-Polri 2026, Tekankan Semangat Generasi 45 dan Integritas",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin, memberikan pembekalan kepada Calon Perwira Remaja (Capaja) TNI dan Polri...",
+   "tanggal": "2026-07-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "186cc82ebd25",
+   "url": "https://www.kemhan.go.id/2026/07/15/menhan-ri-hadiri-alumni-launch-ceremony-dan-the-saf-day-reception.html",
+   "judul": "Menhan RI Hadiri Alumni Launch Ceremony dan The SAF Day Reception",
+   "ringkas": "Jakarta – Menteri Pertahanan (Menhan RI) Sjafrie Sjamsoeddin menghadiri Alumni Launch Ceremony dan The Singapore Armed Forces (SAF) Day Reception...",
+   "tanggal": "2026-07-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9979b4a33bc8",
+   "url": "https://www.kemhan.go.id/2026/07/15/kemhan-dan-komisi-i-dpr-ri-perkuat-akuntabilitas-pengelolaan-apbn-pertahanan-tahun-2025.html",
+   "judul": "Kemhan dan Komisi I DPR RI Perkuat Akuntabilitas Pengelolaan APBN Pertahanan Tahun 2025",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menghadiri Rapat Kerja Komisi...",
+   "tanggal": "2026-07-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "da6e35a4c767",
    "url": "https://pks.id/content/kosmetik-bermerkuri-masih-beredar-pks-desak-pengawasan-lebih-agresif",
    "judul": "Kosmetik Bermerkuri Masih Beredar, PKS Desak Pengawasan Lebih Agresif",
@@ -1890,56 +1940,6 @@
    "partai": "pks"
   },
   {
-   "id": "7102a243a7ec",
-   "url": "https://www.kemhan.go.id/2026/07/15/pusrehabkeshan-kemhan-buka-rehabilitasi-terpadu-return-to-duty-angkatan-51-gelombang-ii-tahun-2026.html",
-   "judul": "Pusrehabkeshan Kemhan Buka Rehabilitasi Terpadu Return To Duty Angkatan 51 Gelombang II Tahun 2026",
-   "ringkas": "Jakarta – Pelaksana Tugas Kepala Pusat Rehabilitasi Kesehatan Pertahanan Kementerian Pertahanan (Plt. Kapusrehabkeshan Kemhan) Brigadir Jenderal TNI dr. Sunaryo Kusumo,...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "5d2ad0cb0c0f",
-   "url": "https://www.kemhan.go.id/2026/07/15/menhan-sjafrie-terima-kunjungan-menhan-singapura.html",
-   "judul": "Menhan Sjafrie Terima Kunjungan Menhan Singapura",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin, menerima kunjungan Menteri Pertahanan Singapura, Chan Chun Sing, di Kantor...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "b51df311050d",
-   "url": "https://www.kemhan.go.id/2026/07/15/menhan-bekali-capaja-tni-polri-2026-tekankan-semangat-generasi-45-dan-integritas.html",
-   "judul": "Menhan Bekali Capaja TNI-Polri 2026, Tekankan Semangat Generasi 45 dan Integritas",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin, memberikan pembekalan kepada Calon Perwira Remaja (Capaja) TNI dan Polri...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "186cc82ebd25",
-   "url": "https://www.kemhan.go.id/2026/07/15/menhan-ri-hadiri-alumni-launch-ceremony-dan-the-saf-day-reception.html",
-   "judul": "Menhan RI Hadiri Alumni Launch Ceremony dan The SAF Day Reception",
-   "ringkas": "Jakarta – Menteri Pertahanan (Menhan RI) Sjafrie Sjamsoeddin menghadiri Alumni Launch Ceremony dan The Singapore Armed Forces (SAF) Day Reception...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9979b4a33bc8",
-   "url": "https://www.kemhan.go.id/2026/07/15/kemhan-dan-komisi-i-dpr-ri-perkuat-akuntabilitas-pengelolaan-apbn-pertahanan-tahun-2025.html",
-   "judul": "Kemhan dan Komisi I DPR RI Perkuat Akuntabilitas Pengelolaan APBN Pertahanan Tahun 2025",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menghadiri Rapat Kerja Komisi...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "0ea52ebf0a3e",
    "url": "https://gerindra.id/2026/07/15/presiden-prabowo-kumpulkan-dewan-ekonomi-nasional-bahas-penguatan-ekonomi-dan-percepatan-govtech/",
    "judul": "Presiden Prabowo Kumpulkan Dewan Ekonomi Nasional, Bahas Penguatan Ekonomi dan Percepatan GovTech",
@@ -1949,6 +1949,46 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "589424c71e91",
+   "url": "https://www.kemhan.go.id/2026/07/14/menhan-ri-terima-kunjungan-dubes-republik-korea-perkuat-kerja-sama-bidang-pertahanan.html",
+   "judul": "Menhan RI Terima Kunjungan Dubes Republik Korea, Perkuat Kerja Sama Bidang Pertahanan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan dari Duta Besar Republik Korea untuk Indonesia H.E....",
+   "tanggal": "2026-07-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "de82c3d21006",
+   "url": "https://www.kemhan.go.id/2026/07/14/menhan-ri-terima-kunjungan-duta-besar-finlandia-bahas-penguatan-kerja-sama-pertahanan.html",
+   "judul": "Menhan RI Terima Kunjungan Duta Besar Finlandia, Bahas Penguatan Kerja Sama Pertahanan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Finlandia untuk Indonesia, H.E. Pekka Kaihilahti,...",
+   "tanggal": "2026-07-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "7b3ac27b26fb",
+   "url": "https://www.kemhan.go.id/2026/07/14/menhan-hadiri-rapat-terbatas-bersama-presiden-bahas-harga-khusus-bbm-bagi-pelaku-usaha-perikanan.html",
+   "judul": "Menhan Hadiri Rapat Terbatas Bersama Presiden Bahas Harga Khusus BBM bagi Pelaku Usaha Perikanan",
+   "ringkas": "Bogor – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Rapat Terbatas Pimpinan yang dipimpin Presiden Republik Indonesia Prabowo...",
+   "tanggal": "2026-07-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "5bb7be048c3d",
+   "url": "https://www.kemhan.go.id/2026/07/14/wamenhan-resmikan-apotek-farmasi-pertahanan-dan-kafe-jamu-rempah-baharwathan-kemhan-di-rsppn-sodirman.html",
+   "judul": "Wamenhan Resmikan Apotek Farmasi Pertahanan dan Kafe Jamu Rempah Baharwathan Kemhan di RSPPN Sodirman",
+   "ringkas": "Jakarta — Wakil Menteri Pertahanan RI Donny Ermawan meresmikan Apotek Farmasi Pertahanan Baharwathan atau Badan Pemeliharaan dan Perawatan Pertahanan Kementerian...",
+   "tanggal": "2026-07-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "680acc2cee54",
@@ -1993,46 +2033,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "589424c71e91",
-   "url": "https://www.kemhan.go.id/2026/07/14/menhan-ri-terima-kunjungan-dubes-republik-korea-perkuat-kerja-sama-bidang-pertahanan.html",
-   "judul": "Menhan RI Terima Kunjungan Dubes Republik Korea, Perkuat Kerja Sama Bidang Pertahanan",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan dari Duta Besar Republik Korea untuk Indonesia H.E....",
-   "tanggal": "2026-07-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "de82c3d21006",
-   "url": "https://www.kemhan.go.id/2026/07/14/menhan-ri-terima-kunjungan-duta-besar-finlandia-bahas-penguatan-kerja-sama-pertahanan.html",
-   "judul": "Menhan RI Terima Kunjungan Duta Besar Finlandia, Bahas Penguatan Kerja Sama Pertahanan",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Finlandia untuk Indonesia, H.E. Pekka Kaihilahti,...",
-   "tanggal": "2026-07-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "7b3ac27b26fb",
-   "url": "https://www.kemhan.go.id/2026/07/14/menhan-hadiri-rapat-terbatas-bersama-presiden-bahas-harga-khusus-bbm-bagi-pelaku-usaha-perikanan.html",
-   "judul": "Menhan Hadiri Rapat Terbatas Bersama Presiden Bahas Harga Khusus BBM bagi Pelaku Usaha Perikanan",
-   "ringkas": "Bogor – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Rapat Terbatas Pimpinan yang dipimpin Presiden Republik Indonesia Prabowo...",
-   "tanggal": "2026-07-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "5bb7be048c3d",
-   "url": "https://www.kemhan.go.id/2026/07/14/wamenhan-resmikan-apotek-farmasi-pertahanan-dan-kafe-jamu-rempah-baharwathan-kemhan-di-rsppn-sodirman.html",
-   "judul": "Wamenhan Resmikan Apotek Farmasi Pertahanan dan Kafe Jamu Rempah Baharwathan Kemhan di RSPPN Sodirman",
-   "ringkas": "Jakarta — Wakil Menteri Pertahanan RI Donny Ermawan meresmikan Apotek Farmasi Pertahanan Baharwathan atau Badan Pemeliharaan dan Perawatan Pertahanan Kementerian...",
-   "tanggal": "2026-07-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "54b70bd2c6d4",
@@ -2123,6 +2123,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "6e9feaa30095",
+   "url": "https://www.kemhan.go.id/2026/07/13/kemhan-gelar-rapat-satgas-pkh-perkuat-sinergi-penertiban-kawasan-hutan.html",
+   "judul": "Kemhan Gelar Rapat Satgas PKH, Perkuat Sinergi Penertiban Kawasan Hutan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memimpin rapat Satuan Tugas Penertiban Kawasan Hutan (Satgas PKH) di...",
+   "tanggal": "2026-07-13",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "4d06ca7fe18b",
    "url": "https://pks.id/content/prof-firdaus-bank-petani-nelayan-perlu-bangun-ekosistem-pembiayaan-pangan",
    "judul": "Prof. Firdaus: Bank Petani-Nelayan Perlu Bangun Ekosistem Pembiayaan Pangan",
@@ -2178,16 +2188,6 @@
    "partai": "pks"
   },
   {
-   "id": "6e9feaa30095",
-   "url": "https://www.kemhan.go.id/2026/07/13/kemhan-gelar-rapat-satgas-pkh-perkuat-sinergi-penertiban-kawasan-hutan.html",
-   "judul": "Kemhan Gelar Rapat Satgas PKH, Perkuat Sinergi Penertiban Kawasan Hutan",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memimpin rapat Satuan Tugas Penertiban Kawasan Hutan (Satgas PKH) di...",
-   "tanggal": "2026-07-13",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "094878e7b118",
    "url": "https://tniad.mil.id/kasad-dampingi-panglima-tni-terima-kunjungan-silaturahmi-kapolri-di-mabes-tni/",
    "judul": "Kasad Dampingi Panglima TNI Terima Kunjungan Silaturahmi Kapolri di Mabes TNI",
@@ -2239,6 +2239,36 @@
    "cabang": "aparat"
   },
   {
+   "id": "5a9a0b72d81e",
+   "url": "https://www.kemhan.go.id/2026/07/10/menhan-tinjau-yonif-tp-932-sunan-bonang-untuk-pastikan-kesiapan-satuan.html",
+   "judul": "Menhan Tinjau Yonif TP 932/Sunan Bonang untuk Pastikan Kesiapan Satuan",
+   "ringkas": "Tuban – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Yonif Teritorial Pembangunan (TP) 932/Sunan Bonang...",
+   "tanggal": "2026-07-10",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "ad917adeeee3",
+   "url": "https://www.kemhan.go.id/2026/07/10/menhan-sjafrie-hadiri-peluncuran-biodiesel-b50-perkuat-ketahanan-energi-nasional.html",
+   "judul": "Menhan Sjafrie Hadiri Peluncuran Biodiesel B50, Perkuat Ketahanan Energi Nasional",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri peluncuran Biodiesel B50 bertajuk “Langkah Nyata untuk Kemandirian dan...",
+   "tanggal": "2026-07-10",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "30750a425094",
+   "url": "https://www.kemhan.go.id/2026/07/11/menhan-ri-tinjau-kesiapan-yonif-tp-885-belibis-putih-di-bojonegoro.html",
+   "judul": "Menhan RI Tinjau Kesiapan Yonif TP 885/Belibis Putih di Bojonegoro",
+   "ringkas": "Jawa Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) melaksanakan kunjungan kerja ke Yonif TP 885/Belibis Putih di Kabupaten Bojonegoro,...",
+   "tanggal": "2026-07-10",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "8d8cf4850c48",
    "url": "https://pks.id/content/legislator-pks-minta-pemerintah-pikir-matang-program-komcad-napi-penerima-amnesti",
    "judul": "Legislator PKS Minta Pemerintah Pikir Matang Program Komcad Napi Penerima Amnesti",
@@ -2272,36 +2302,6 @@
    "partai": "pks"
   },
   {
-   "id": "5a9a0b72d81e",
-   "url": "https://www.kemhan.go.id/2026/07/10/menhan-tinjau-yonif-tp-932-sunan-bonang-untuk-pastikan-kesiapan-satuan.html",
-   "judul": "Menhan Tinjau Yonif TP 932/Sunan Bonang untuk Pastikan Kesiapan Satuan",
-   "ringkas": "Tuban – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Yonif Teritorial Pembangunan (TP) 932/Sunan Bonang...",
-   "tanggal": "2026-07-10",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "ad917adeeee3",
-   "url": "https://www.kemhan.go.id/2026/07/10/menhan-sjafrie-hadiri-peluncuran-biodiesel-b50-perkuat-ketahanan-energi-nasional.html",
-   "judul": "Menhan Sjafrie Hadiri Peluncuran Biodiesel B50, Perkuat Ketahanan Energi Nasional",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri peluncuran Biodiesel B50 bertajuk “Langkah Nyata untuk Kemandirian dan...",
-   "tanggal": "2026-07-10",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "30750a425094",
-   "url": "https://www.kemhan.go.id/2026/07/11/menhan-ri-tinjau-kesiapan-yonif-tp-885-belibis-putih-di-bojonegoro.html",
-   "judul": "Menhan RI Tinjau Kesiapan Yonif TP 885/Belibis Putih di Bojonegoro",
-   "ringkas": "Jawa Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) melaksanakan kunjungan kerja ke Yonif TP 885/Belibis Putih di Kabupaten Bojonegoro,...",
-   "tanggal": "2026-07-10",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "f42b7116cd80",
    "url": "https://tniad.mil.id/sertijab-ketua-korpri-unit-tni-ad-aspers-kasad-tekankan-profesionalisme-dan-netralitas-asn/",
    "judul": "Sertijab Ketua Korpri Unit TNI AD, Aspers Kasad Tekankan Profesionalisme dan Netralitas ASN",
@@ -2319,6 +2319,36 @@
    "tanggal": "2026-07-10",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "61d3e05584f7",
+   "url": "https://www.kemhan.go.id/2026/07/09/tim-petembak-setjen-kemhan-raih-juara-i-lomba-menembak-pju-pada-por-kemhan-2026.html",
+   "judul": "Tim Petembak Setjen Kemhan Raih Juara I Lomba Menembak PJU pada POR Kemhan 2026",
+   "ringkas": "Jakarta – Tim Petembak Sekretariat Jenderal Kementerian Pertahanan (Setjen Kemhan) yang dipimpin Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny...",
+   "tanggal": "2026-07-09",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "811d0f36b373",
+   "url": "https://www.kemhan.go.id/2026/07/09/menhan-ri-tinjau-marshalling-area-brigif-tp-43-muria-dan-yonif-tp-456-satria-poncowati.html",
+   "judul": "Menhan RI Tinjau Marshalling Area Brigif TP 43/Muria dan Yonif TP 456/Satria Poncowati",
+   "ringkas": "Kudus – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan kunjungan kerja dengan meninjau Marshalling Area Brigif TP 43/Muria...",
+   "tanggal": "2026-07-09",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9ee8e47884de",
+   "url": "https://www.kemhan.go.id/2026/07/09/menhan-ri-tinjau-yonif-tp-936-satria-joyokusumo-tekankan-pembangunan-satuan-yang-profesional-dan-bermanfaat-bagi-masyarakat.html",
+   "judul": "Menhan RI Tinjau Yonif TP 936/Satria Joyokusumo, Tekankan Pembangunan Satuan yang Profesional dan Bermanfaat bagi Masyarakat",
+   "ringkas": "Pati – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan kunjungan kerja ke Marshalling Area Yonif TP 936/Satria Joyokusumo,...",
+   "tanggal": "2026-07-09",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2388,36 +2418,6 @@
    "partai": "pks"
   },
   {
-   "id": "61d3e05584f7",
-   "url": "https://www.kemhan.go.id/2026/07/09/tim-petembak-setjen-kemhan-raih-juara-i-lomba-menembak-pju-pada-por-kemhan-2026.html",
-   "judul": "Tim Petembak Setjen Kemhan Raih Juara I Lomba Menembak PJU pada POR Kemhan 2026",
-   "ringkas": "Jakarta – Tim Petembak Sekretariat Jenderal Kementerian Pertahanan (Setjen Kemhan) yang dipimpin Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny...",
-   "tanggal": "2026-07-09",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "811d0f36b373",
-   "url": "https://www.kemhan.go.id/2026/07/09/menhan-ri-tinjau-marshalling-area-brigif-tp-43-muria-dan-yonif-tp-456-satria-poncowati.html",
-   "judul": "Menhan RI Tinjau Marshalling Area Brigif TP 43/Muria dan Yonif TP 456/Satria Poncowati",
-   "ringkas": "Kudus – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan kunjungan kerja dengan meninjau Marshalling Area Brigif TP 43/Muria...",
-   "tanggal": "2026-07-09",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9ee8e47884de",
-   "url": "https://www.kemhan.go.id/2026/07/09/menhan-ri-tinjau-yonif-tp-936-satria-joyokusumo-tekankan-pembangunan-satuan-yang-profesional-dan-bermanfaat-bagi-masyarakat.html",
-   "judul": "Menhan RI Tinjau Yonif TP 936/Satria Joyokusumo, Tekankan Pembangunan Satuan yang Profesional dan Bermanfaat bagi Masyarakat",
-   "ringkas": "Pati – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan kunjungan kerja ke Marshalling Area Yonif TP 936/Satria Joyokusumo,...",
-   "tanggal": "2026-07-09",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "fc60cf577fdc",
    "url": "https://tniad.mil.id/bekali-calon-perwira-masa-depan-kasad-tekankan-profesionalisme-integritas-dan-inovasi/",
    "judul": "Bekali Calon Perwira Masa Depan, Kasad Tekankan Profesionalisme, Integritas, dan Inovasi",
@@ -2436,39 +2436,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "9fb7fc226473",
-   "url": "https://pks.id/content/pks-hormati-keputusan-narji-mabruri-terima-kasih-atas-kontribusinya-sukses-di-tempat-baru",
-   "judul": "PKS Hormati Keputusan Narji, Mabruri: Terima Kasih atas Kontribusinya, Sukses di Tempat Baru",
-   "ringkas": "Ketua DPP PKS Bidang Komunikasi dan Digital, Ahmad Mabruri, menyampaikan penghormatan atas keputusan komedian Narji untuk melanjutkan perjalanan politiknya di partai lain.",
-   "tanggal": "2026-07-08",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "b48b7f023670",
-   "url": "https://pks.id/content/pernyataan-resmi-pks-terkait-pemakaman-ali-khamenei-menjunjung-kemanusiaan-hukum-internasional-dan-perdamaian-kawasan",
-   "judul": "Pernyataan Resmi PKS Terkait Pemakaman Ali Khamenei: Menjunjung Kemanusiaan, Hukum Internasional, dan Perdamaian Kawasan",
-   "ringkas": null,
-   "tanggal": "2026-07-08",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "ae4934bca656",
-   "url": "https://pks.id/content/sohibul-iman-program-kemah-bela-negara-perkuat-semangat-kebangsaan-di-tengah-dinamika-geopolitik",
-   "judul": "Sohibul Iman: Program Kemah Bela Negara Perkuat Semangat Kebangsaan di Tengah Dinamika Geopolitik",
-   "ringkas": "Ketua Majelis Syura Partai Keadilan (PKS) Mohamad Sohibul Iman, menyampaikan dukungannya terhadap penguatan semangat bela negara melalui program Kemah Bela Negara (Kembara) dan Latihan Perempuan Siaga (Latansa) yang tengah digencarkan DPP PKS. Menurutnya, kedua program tersebut r",
-   "tanggal": "2026-07-08",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "9fb25101a84f",
@@ -2521,11 +2488,33 @@
    "cabang": "aparat"
   },
   {
-   "id": "4926ef129611",
-   "url": "https://pks.id/content/fraksi-pks-soroti-apbn-2025-harus-dinilai-dari-dampaknya-bagi-rakyat-bukan-sekadar-tingkat-serapan-anggaran",
-   "judul": "Fraksi PKS Soroti APBN 2025: Harus Dinilai dari Dampaknya bagi Rakyat, Bukan Sekadar Tingkat Serapan Anggaran",
-   "ringkas": "Fraksi PKS menegaskan bahwa keberhasilan pelaksanaan Anggaran Pendapatan dan Belanja Negara (APBN) tidak boleh hanya diukur dari tingginya realisasi belanja, tetapi harus dilihat dari sejauh mana anggaran tersebut mampu meningkatkan kesejahteraan masyarakat dan memperkuat fondasi",
-   "tanggal": "2026-07-07",
+   "id": "9fb7fc226473",
+   "url": "https://pks.id/content/pks-hormati-keputusan-narji-mabruri-terima-kasih-atas-kontribusinya-sukses-di-tempat-baru",
+   "judul": "PKS Hormati Keputusan Narji, Mabruri: Terima Kasih atas Kontribusinya, Sukses di Tempat Baru",
+   "ringkas": "Ketua DPP PKS Bidang Komunikasi dan Digital, Ahmad Mabruri, menyampaikan penghormatan atas keputusan komedian Narji untuk melanjutkan perjalanan politiknya di partai lain.",
+   "tanggal": "2026-07-08",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "b48b7f023670",
+   "url": "https://pks.id/content/pernyataan-resmi-pks-terkait-pemakaman-ali-khamenei-menjunjung-kemanusiaan-hukum-internasional-dan-perdamaian-kawasan",
+   "judul": "Pernyataan Resmi PKS Terkait Pemakaman Ali Khamenei: Menjunjung Kemanusiaan, Hukum Internasional, dan Perdamaian Kawasan",
+   "ringkas": null,
+   "tanggal": "2026-07-08",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "ae4934bca656",
+   "url": "https://pks.id/content/sohibul-iman-program-kemah-bela-negara-perkuat-semangat-kebangsaan-di-tengah-dinamika-geopolitik",
+   "judul": "Sohibul Iman: Program Kemah Bela Negara Perkuat Semangat Kebangsaan di Tengah Dinamika Geopolitik",
+   "ringkas": "Ketua Majelis Syura Partai Keadilan (PKS) Mohamad Sohibul Iman, menyampaikan dukungannya terhadap penguatan semangat bela negara melalui program Kemah Bela Negara (Kembara) dan Latihan Perempuan Siaga (Latansa) yang tengah digencarkan DPP PKS. Menurutnya, kedua program tersebut r",
+   "tanggal": "2026-07-08",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -2580,6 +2569,17 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
+  },
+  {
+   "id": "4926ef129611",
+   "url": "https://pks.id/content/fraksi-pks-soroti-apbn-2025-harus-dinilai-dari-dampaknya-bagi-rakyat-bukan-sekadar-tingkat-serapan-anggaran",
+   "judul": "Fraksi PKS Soroti APBN 2025: Harus Dinilai dari Dampaknya bagi Rakyat, Bukan Sekadar Tingkat Serapan Anggaran",
+   "ringkas": "Fraksi PKS menegaskan bahwa keberhasilan pelaksanaan Anggaran Pendapatan dan Belanja Negara (APBN) tidak boleh hanya diukur dari tingginya realisasi belanja, tetapi harus dilihat dari sejauh mana anggaran tersebut mampu meningkatkan kesejahteraan masyarakat dan memperkuat fondasi",
+   "tanggal": "2026-07-07",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "5d184ab23dba",
