@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-25T10:51:17+00:00",
+ "diambil": "2026-07-26T10:57:50+00:00",
  "acara": [
+  {
+   "id": "acac0085f921",
+   "url": "https://setkab.go.id/revitalisasi-sdn-tanggirejo-dimulai-hadirkan-harapan-baru-bagi-131-siswa/",
+   "judul": "Revitalisasi SDN Tanggirejo Dimulai, Hadirkan Harapan Baru bagi 131 Siswa",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-25",
+   "tanggal_terbit": "2026-07-25",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "33",
+   "prov_nama": "Jawa Tengah"
+  },
   {
    "id": "9adf0866b7d9",
    "url": "https://wapresri.go.id/hadiri-ratas-koperasi-desa-merah-putih-wapres-kawal-percepatan-implementasi-di-daerah/",
@@ -33,6 +50,140 @@
    "topik": [
     "ekonomi"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "095974dceaf9",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-harlah-ke-28-pkb-tegaskan-arah-baru-ekonomi-berpijak-pada-amanat-konstitusi/",
+   "judul": "Presiden Prabowo Hadiri Harlah Ke-28 PKB, Tegaskan Arah Baru Ekonomi Berpijak pada Amanat Konstitusi",
+   "aktor": "PRESIDEN",
+   "jenis": "AMANAT",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": "Amanat Konstitusi",
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e435eaf95039",
+   "url": "https://setkab.go.id/presiden-prabowo-instruksikan-sinergi-nasional-percepat-penguatan-koperasi-merah-putih/",
+   "judul": "Presiden Prabowo Instruksikan Sinergi Nasional Percepat Penguatan Koperasi Merah Putih",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f3bf2698f9c1",
+   "url": "https://setkab.go.id/menjejak-istana-menumbuhkan-asa-hari-anak-nasional-hadirkan-inspirasi-bagi-pelajar-sman-55-jakarta/",
+   "judul": "Menjejak Istana, Menumbuhkan Asa: Hari Anak Nasional Hadirkan Inspirasi bagi Pelajar SMAN 55 Jakarta",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "31",
+   "prov_nama": "DKI Jakarta"
+  },
+  {
+   "id": "e8b2a69d418c",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-kunjungan-direktur-fbi-indonesia-perkuat-kerja-sama-repatriasi-artefak-budaya/",
+   "judul": "Presiden Prabowo Terima Kunjungan Direktur FBI, Indonesia Perkuat Kerja Sama Repatriasi Artefak Budaya",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f94d53567d19",
+   "url": "https://wapresri.go.id/sambut-tahun-ajaran-baru-ibu-selvi-tinjau-pembelajaran-dan-revitalisasi-sdn-009-penyengat/",
+   "judul": "Sambut Tahun Ajaran Baru, Ibu Selvi Tinjau Pembelajaran dan Revitalisasi SDN 009 Penyengat",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ecb9ed92309f",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-aksi-nyata-ekonomi-biru-untuk-jaga-kelestarian-pesisir-bintan/",
+   "judul": "Ibu Selvi Dorong Aksi Nyata Ekonomi Biru untuk Jaga Kelestarian Pesisir Bintan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2c0445b59aef",
+   "url": "https://wapresri.go.id/kunjungi-dekranasda-kepri-ibu-selvi-dorong-wastra-dan-kriya-berkelanjutan/",
+   "judul": "Kunjungi Dekranasda Kepri, Ibu Selvi Dorong Wastra dan Kriya Berkelanjutan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4f1e2df353a0",
+   "url": "https://wapresri.go.id/peringati-hari-anak-nasional-ibu-selvi-ajak-wujudkan-ruang-aman-bagi-anak/",
+   "judul": "Peringati Hari Anak Nasional, Ibu Selvi Ajak Wujudkan Ruang Aman bagi Anak",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
@@ -82,6 +233,112 @@
    "tanggal_terbit": "2026-07-22",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "551747cfcc49",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-donny-ermawan-dan-yos-sunitiyoso-sebagai-gubernur-dan-wakil-gubernur-universitas-republik-indonesia/",
+   "judul": "Presiden Prabowo Lantik Donny Ermawan dan Yos Sunitiyoso sebagai Gubernur dan Wakil Gubernur Universitas Republik Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a2ac21a85403",
+   "url": "https://setkab.go.id/presiden-prabowo-resmi-lantik-sudaryono-sebagai-kepala-bgn/",
+   "judul": "Presiden Prabowo Resmi Lantik Sudaryono sebagai Kepala BGN",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5aff7ddcddea",
+   "url": "https://setkab.go.id/pimpin-upacara-praspa-2026-presiden-prabowo-lantik-1-177-perwira-remaja-tni-polri/",
+   "judul": "Pimpin Upacara Praspa 2026, Presiden Prabowo Lantik 1.177 Perwira Remaja TNI-Polri",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-07-22",
+   "tanggal_terbit": "2026-07-22",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8113e106387c",
+   "url": "https://setkab.go.id/mensesneg-tegaskan-komitmen-pemerintah-wujudkan-ekosistem-kendaraan-listrik-nasional/",
+   "judul": "Mensesneg Tegaskan Komitmen Pemerintah Wujudkan Ekosistem Kendaraan Listrik Nasional",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-21",
+   "tanggal_terbit": "2026-07-21",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ec2cb0a3b170",
+   "url": "https://setkab.go.id/istana-jadi-ruang-belajar-inspiratif-ratusan-pelajar-rasakan-pengalaman-belajar-sejarah-secara-langsung/",
+   "judul": "Istana Jadi Ruang Belajar Inspiratif, Ratusan Pelajar Rasakan Pengalaman Belajar Sejarah Secara Langsung",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-21",
+   "tanggal_terbit": "2026-07-21",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d9c08ef9537f",
+   "url": "https://setkab.go.id/presiden-prabowo-jadikan-sidang-kabinet-paripurna-titik-evaluasi-dan-penguatan-kinerja-memasuki-tahun-kedua-pemerintahan/",
+   "judul": "Presiden Prabowo Jadikan Sidang Kabinet Paripurna Titik Evaluasi dan Penguatan Kinerja Memasuki Tahun Kedua Pemerintahan",
+   "aktor": "PRESIDEN",
+   "jenis": "SIDANG KABINET",
+   "tanggal_acara": "2026-07-20",
+   "tanggal_terbit": "2026-07-20",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
