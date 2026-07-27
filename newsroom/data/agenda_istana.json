@@ -4,8 +4,46 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-26T10:57:50+00:00",
+ "diambil": "2026-07-27T13:15:45+00:00",
  "acara": [
+  {
+   "id": "b586d0d53195",
+   "url": "https://setkab.go.id/prabowo-dorong-industri-perkapalan-indonesia/",
+   "judul": "Presiden Prabowo Dorong Sinergi Perguruan Tinggi dan PT PAL Bangun Industri Perkapalan Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-27",
+   "tanggal_terbit": "2026-07-27",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3f70a1e479a5",
+   "url": "https://setkab.go.id/pemerintah-pastikan-transisi-kepemimpinan-bank-indonesia-berjalan-sesuai-ketentuan-stabilitas-ekonomi-tetap-terjaga/",
+   "judul": "Pemerintah Pastikan Transisi Kepemimpinan Bank Indonesia Berjalan Sesuai Ketentuan, Stabilitas Ekonomi Tetap Terjaga",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-27",
+   "tanggal_terbit": "2026-07-27",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "acac0085f921",
    "url": "https://setkab.go.id/revitalisasi-sdn-tanggirejo-dimulai-hadirkan-harapan-baru-bagi-131-siswa/",
