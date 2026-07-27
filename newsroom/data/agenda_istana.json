@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-27T13:15:45+00:00",
+ "diambil": "2026-07-27T22:33:54+00:00",
  "acara": [
   {
    "id": "b586d0d53195",
@@ -38,6 +38,23 @@
     "ekonomi",
     "hukum",
     "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c969b10f5270",
+   "url": "https://setkab.go.id/prabowo-perkuat-koordinasi-kssk-stabilitas-keuangan/",
+   "judul": "Presiden Prabowo Pimpin Rapat KSSK, Perkuat Sinergi Jaga Stabilitas Keuangan dan Kepercayaan Pasar",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-27",
+   "tanggal_terbit": "2026-07-27",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
    ],
    "venue": null,
    "kota": null,
@@ -216,6 +233,53 @@
    "id": "4f1e2df353a0",
    "url": "https://wapresri.go.id/peringati-hari-anak-nasional-ibu-selvi-ajak-wujudkan-ruang-aman-bagi-anak/",
    "judul": "Peringati Hari Anak Nasional, Ibu Selvi Ajak Wujudkan Ruang Aman bagi Anak",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "1e33e8abaadb",
+   "url": "https://wapresri.go.id/kunjungi-lpka-batam-ibu-selvi-tegaskan-semua-anak-punya-kesempatan-yang-sama-untuk-sukses/",
+   "judul": "Kunjungi LPKA Batam, Ibu Selvi Tegaskan Semua Anak Punya Kesempatan yang Sama untuk Sukses",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d32485da3e46",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-umkm-perempuan-lestarikan-kuliner-dan-kerajinan-melayu-di-pulau-penyengat/",
+   "judul": "Ibu Selvi Dorong UMKM Perempuan Lestarikan Kuliner dan Kerajinan Melayu di Pulau Penyengat",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-23",
+   "tanggal_terbit": "2026-07-23",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "31a044c50f20",
+   "url": "https://wapresri.go.id/dari-pulau-penyengat-ibu-selvi-ajak-generasi-muda-jaga-akar-budaya-bahasa-indonesia/",
+   "judul": "Dari Pulau Penyengat, Ibu Selvi Ajak Generasi Muda Jaga Akar Budaya Bahasa Indonesia",
    "aktor": "ISTANA",
    "jenis": "LAINNYA",
    "tanggal_acara": "2026-07-23",
