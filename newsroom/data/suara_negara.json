@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-07-27T13:15:57+00:00",
+ "diambil": "2026-07-27T22:55:16+00:00",
  "baris": [
   {
    "id": "e4d5caf5136b",
@@ -848,26 +848,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "f530b9423136",
-   "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
-   "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaksanakan silaturahmi dengan jajaran Pengurus Pusat Persatuan Purnawirawan Angkatan Darat (PPAD) di Jakarta, Kamis (23/7/2026). Dalam pertemuan...",
-   "tanggal": "2026-07-24",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9046ffd85b8e",
-   "url": "https://tniad.mil.id/penpas-waspada-narkoba/",
-   "judul": "Waspada Narkoba",
-   "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
-   "tanggal": "2026-07-24",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "10cf8f3efe5f",
    "url": "https://gerindra.id/2026/07/24/rokhmat-ardiyan-dorong-penguatan-cadangan-bbm-demi-wujudkan-swasembada-energi/",
    "judul": "Rokhmat Ardiyan Dorong Penguatan Cadangan BBM demi Wujudkan Swasembada Energi",
@@ -1011,6 +991,26 @@
    "partai": "gerindra"
   },
   {
+   "id": "f530b9423136",
+   "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
+   "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaksanakan silaturahmi dengan jajaran Pengurus Pusat Persatuan Purnawirawan Angkatan Darat (PPAD) di Jakarta, Kamis (23/7/2026). Dalam pertemuan...",
+   "tanggal": "2026-07-24",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9046ffd85b8e",
+   "url": "https://tniad.mil.id/penpas-waspada-narkoba/",
+   "judul": "Waspada Narkoba",
+   "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
+   "tanggal": "2026-07-24",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "aaac1cc48c9f",
    "url": "https://pks.id/content/sosialisasi-ranperda-lgbt-legislator-pks-riau-lgbt-musuh-nasional",
    "judul": "Sosialisasi Ranperda LGBT, Legislator PKS Riau: LGBT Musuh Nasional",
@@ -1127,16 +1127,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "fd276161a135",
-   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
-   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
-   "tanggal": "2026-07-23",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "0204dced6b03",
    "url": "https://gerindra.id/2026/07/23/andre-rosiade-desak-bumn-karya-benahi-huntara-demi-kenyamanan-pengungsi/",
    "judul": "Andre Rosiade Desak BUMN Karya Benahi Huntara demi Kenyamanan Pengungsi",
@@ -1245,6 +1235,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "fd276161a135",
+   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
+   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
+   "tanggal": "2026-07-23",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "ebe7b99c852a",
