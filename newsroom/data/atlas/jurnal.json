@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-28T11:37:19.586522+00:00",
- "edisi": 136,
+ "diperbarui": "2026-07-28T22:37:44.654922+00:00",
+ "edisi": 137,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Makalah ini mengulas hambatan pengembangan panas bumi Indonesia melalui tinjauan kebijakan terhadap pemanfaatan cekungan sedimen. Relevan bagi pembaca Indonesia karena panas bumi adalah sumber energi terbarukan strategis untuk transisi energi nasional.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di wilayah periferal Indonesia guna menjembatani kesenjangan digital. Penting bagi pembaca karena memetakan tantangan tata kelola digital di daerah terpencil.",
+   "kategori": "PEMERINTAHAN DIGITAL",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Telaah ini membahas batasan dan celah pertanggungjawaban pidana atas kekerasan dalam mendisiplinkan anak di Indonesia. Relevansi pada kebutuhan reformasi hukum untuk melindungi anak dari praktik disiplin yang berlebihan.",
+   "kategori": "HUKUM & PERLINDUNGAN ANAK",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini melaporkan kasus pengobatan onikomikosis non-dermatofita yang jarang terjadi di Indonesia menggunakan kombinasi obat. Penting sebagai rujukan medis domestik mengenai terapi infeksi jamur kuku yang resisten.",
+   "kategori": "KESEHATAN & KEDOKTERAN",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Kajian etnografis mengenai kondisi tenaga kerja nikel di Maluku Utara menjelaskan reproduksi sosial pekerja tambang. Relevansi pada isu eksploitasi nickel yang menggerakkan ekonomi daerah timur Indonesia pasca-boleh ekspor.",
+   "kategori": "TAMBANG & TENAGA KERJA",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
+   "wadah": "Toxicology Reports",
+   "doi": "10.1016/j.toxrep.2026.102316",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini melaporkan bioakumulasi timbal pada ikan laut pesisir Sumatera Selatan serta risiko kesehatan akibat konsumsi. Relevan bagi pembaca Indonesia sebab polusi logam berat mengancam keselamatan pangan dan ekosistem laut.",
+   "kategori": "LAUT & PESISIR",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini menilai keyakinan kesehatan yang berdampak pada keterlambatan pasien kanker payudara di Sumatera Barat. Relevan untuk memahami determinan sosial budaya yang memengaruhi deteksi dini kanker di Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 137
+  },
+  {
+   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
+   "wadah": "Cleaner Waste Systems",
+   "doi": "10.1016/j.clwas.2026.100539",
+   "tanggal": "2026-12",
+   "alasan": "Analisis aliran massa efisiensi pemulihan pada manajemen sampah berbasis komunitas di Kota Batu ini memberi model pengelolaan. Penting bagi pembaca Indonesia karena sampah merupakan persoalan mendesak perkotaan yang membutuhkan solusi komunitas.",
+   "kategori": "LIMBAH & KOTA",
+   "sejak_edisi": 137
+  },
   {
    "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
    "wadah": "International Journal of Sustainable Society",
@@ -37,78 +109,6 @@
    "alasan": "Mengulas situasi terkini taeniasis di Bali periode 2022 hingga 2025. Relevan bagi pembaca yang memantau,endemisitas penyakit parasit dan kebijakan kesehatan masyarakat pariwisata.",
    "kategori": "KESEHATAN & PARASIT",
    "sejak_edisi": 136
-  },
-  {
-   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103213",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti komunikasi ritual, adat, dan toleransi reflektif pada masyarakat adat Tengger Ngadas, Jawa Timur. Relevan bagi pembaca yang mengkaji keberagaman budaya dan kohesi sosial lokal.",
-   "kategori": "MASYARAKAT & BUDAYA",
-   "sejak_edisi": 136
-  },
-  {
-   "judul": "A randomized double-blind sham-controlled preliminary study of a 5-week protocol of repetitive transcranial magnetic stimulation (rTMS) combined with cognitive behavioral therapy (CBT) for gambling disorder in Indonesia",
-   "wadah": "Addictive Behaviors Reports",
-   "doi": "10.1016/j.abrep.2026.100722",
-   "tanggal": "2026-12",
-   "alasan": "Menguji efektivitas stimulasi magnetik dan terapi perilaku untuk gangguan judi di Indonesia. Relevan bagi pembaca yang memantau inovasi penanganan kecanduan dan kesehatan mental nasional.",
-   "kategori": "KESEHATAN MENTAL",
-   "sejak_edisi": 136
-  },
-  {
-   "judul": "Understanding vulnerability to the coal transition in Indonesia: Implications for policy, people and communities",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101961",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis kerentanan masyarakat terhadap transisi batu bara di Indonesia dan implikasinya bagi kebijakan. Relevan bagi pembaca yang meneliti dampak sosial peralihan energi nasional.",
-   "kategori": "ENERGI & MASYARAKAT",
-   "sejak_edisi": 136
-  },
-  {
-   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100329",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti dampak ekologis produksi bauksit dan tembaga di Indonesia. Relevan bagi pembaca yang memantau konflik lingkungan dan dasar kebijakan pertambangan mineral nasional.",
-   "kategori": "TAMBANG & LINGKUNGAN",
-   "sejak_edisi": 136
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini meneliti pirolisis langsung aspal batuan dari Buton dan mengkarakterisasi produk cairnya, termasuk peran mineral kalsit. Relevan bagi pembaca Indonesia karena Buton merupakan sumber aspal batuan strategis nasional dan kajian ini membantu memahami potensi pengolahannya.",
-   "kategori": "SUMBER ENERGI",
-   "sejak_edisi": 135
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini membahas kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Relevansi bagi pembaca Indonesia terletak pada implikasi regulasi regional untuk proyek pengurangan emisi nasional.",
-   "kategori": "KEBIJAKAN IKLIM",
-   "sejak_edisi": 135
-  },
-  {
-   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
-   "wadah": "Renewable and Sustainable Energy Transition",
-   "doi": "10.1016/j.rset.2026.100152",
-   "tanggal": "2026-12",
-   "alasan": "Studi komparatif ini menilai transisi energi berbasis target pada sistem listrik Indonesia, Filipina, dan Vietnam. Relevan untuk pembaca Indonesia karena hasil kajiannya dapat menjadi rujukan strategi transisi sistem tenaga listrik nasional.",
-   "kategori": "TRANSISI ENERGI",
-   "sejak_edisi": 135
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Artikel ini menelaah status resistensi insektisida pada hama pertanian di Indonesia beserta tantangan dan arah pengelolaannya. Relevan bagi pembaca Indonesia karena resistensi hama memengaruhi ketahanan pangan dan produktivitas pertanian.",
-   "kategori": "PERTANIAN",
-   "sejak_edisi": 135
   }
  ]
 }
