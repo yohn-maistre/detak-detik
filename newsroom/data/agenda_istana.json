@@ -4,8 +4,41 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-27T22:33:54+00:00",
+ "diambil": "2026-07-29T11:38:29+00:00",
  "acara": [
+  {
+   "id": "a8ec214ae463",
+   "url": "https://setkab.go.id/lantik-1-204-pamong-praja-muda-ipdn-presiden-prabowo-tekankan-pengabdian-untuk-rakyat/",
+   "judul": "Lantik 1.204 Pamong Praja Muda IPDN, Presiden Prabowo Tekankan Pengabdian untuk Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-29",
+   "tanggal_terbit": "2026-07-29",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "1c2a16a3cd64",
+   "url": "https://wapresri.go.id/pertemuan-wapres-gibran-dengan-dpm-hun-many-perkuat-kemitraan-strategis-indonesia-kamboja/",
+   "judul": "Pertemuan Wapres Gibran dengan DPM Hun Many, Perkuat Kemitraan Strategis Indonesia – Kamboja",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-28",
+   "tanggal_terbit": "2026-07-28",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "b586d0d53195",
    "url": "https://setkab.go.id/prabowo-dorong-industri-perkapalan-indonesia/",
