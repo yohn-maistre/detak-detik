@@ -1,0 +1,121 @@
+{
+ "edisi": 139,
+ "terbit": "2026-07-29T22:28:32.112407+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-139-02",
+   "judul": "Koalisi MBG Watch desak pemerintah hentikan program MBG, usut dugaan korupsi hingga alihkan anggaran",
+   "skor": 18
+  },
+  {
+   "id": "klp-139-05",
+   "judul": "IRGC klaim serang pangkalan militer AS di Kuwait dan Bahrain, ancam balas jika diserang lagi",
+   "skor": 15
+  },
+  {
+   "id": "klp-139-13",
+   "judul": "Gempa Jepang tewaskan 13 orang – 'Saya kira saya akan mati'",
+   "skor": 10
+  },
+  {
+   "id": "klp-139-14",
+   "judul": "Elektabilitas Prabowo Anjlok saat Kepuasan Publik Atas Kinerja Pemerintah Merosot",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-22",
+   "judul": "Komisi III DPR Desak Polri, KP2MI, dan Imigrasi Berantas Sindikat TPPO hingga ke Akar",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-08",
+   "judul": "Aksi main hakim sendiri di Jakarta dan Tabanan Bali – Mengapa tak bisa disebut masalah sepele?",
+   "skor": 12
+  },
+  {
+   "id": "klp-139-15",
+   "judul": "Kemenko Polkam Dorong Penguatan Tata Kelola Administrasi Kependudukan dalam Dokumen Perencanaan Nasional untuk Mendukung Pemilu 2029",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-16",
+   "judul": "Gempa 5,2 Magnitudo Guncang Kepulauan Sangihe Sulawesi Utara Malam Ini, Kedalaman 10 Km",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-04",
+   "judul": "Istri Bupati Pemalang Noor Faizah Diperiksa KPK, Jabatannya Sebagai Dewan Pengawas RSUD Jadi Sorotan",
+   "skor": 16
+  },
+  {
+   "id": "klp-139-17",
+   "judul": "DKPP Beri Sanksi Peringatan Keras kepada Anggota KPU RI dan KPU Jabar karena Sewa Helikopter",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-18",
+   "judul": "KPK Selidiki Uang yang Dikembalikan Menhut Raja Juli, Alur Pengumpulan hingga Nominal Ditelusuri!",
+   "skor": 9
+  },
+  {
+   "id": "klp-139-21",
+   "judul": "KPK Periksa Geisz Chalifah terkait Kasus Mantan Bupati Kukar Rita Widyasari",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
