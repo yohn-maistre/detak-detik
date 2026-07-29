@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-07-29T12:07:10+00:00",
+ "diambil": "2026-07-29T22:56:07+00:00",
  "baris": [
   {
    "id": "135786b37157",
@@ -239,6 +239,16 @@
    "tanggal": "2026-07-29",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "956ae725c178",
+   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
+   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
+   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
+   "tanggal": "2026-07-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
