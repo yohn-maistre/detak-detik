@@ -1,0 +1,121 @@
+{
+ "edisi": 140,
+ "terbit": "2026-07-30T11:27:31.310030+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-140-03",
+   "judul": "MK: Anggaran MBG harus dipisahkan dari pendidikan paling lambat 2028 – Apa saja isi putusannya?",
+   "skor": 26
+  },
+  {
+   "id": "klp-140-16",
+   "judul": "BMKG Peringatkan Risiko Heatstroke dan ISPA Selama Musim Kemarau 2026",
+   "skor": 9
+  },
+  {
+   "id": "klp-140-23",
+   "judul": "Viral Power Bank Terbakar di Kabin Pesawat Batik Air, Ini Kronologinya",
+   "skor": 9
+  },
+  {
+   "id": "klp-140-07",
+   "judul": "AS lancarkan serbuan 'berat' ke Iran, balas upaya serangan Teheran",
+   "skor": 15
+  },
+  {
+   "id": "klp-140-09",
+   "judul": "PN Jaksel Tolak Permohonan Praperadilan Tersangka Korupsi MBG Lodewyk Pusung",
+   "skor": 13
+  },
+  {
+   "id": "klp-140-04",
+   "judul": "Gempa Jepang tewaskan 30 orang – 'Saya kira saya akan mati'",
+   "skor": 19
+  },
+  {
+   "id": "klp-140-21",
+   "judul": "Algoritma Perkuat Paparan Radikalisme di Ruang Digital, Orang tua Diminta Cermati Perubahan Komunikasi Anak",
+   "skor": 9
+  },
+  {
+   "id": "klp-140-24",
+   "judul": "Komisi Yudisial Usulkan Sanksi 121 Hakim Terkait Pelanggaran Kode Etik dan Pedoman Perilaku",
+   "skor": 9
+  },
+  {
+   "id": "klp-140-05",
+   "judul": "Fantastis! Prabowo Siapkan Hadiah Insentif Rp 20 Miliar untuk Lima Kota Terbersih di Indonesia",
+   "skor": 18
+  },
+  {
+   "id": "klp-140-06",
+   "judul": "Jaksa Agung Minta Maaf soal Eks Jampidsus Febrie, IPR: Komitmen Kuat Lakukan Perbaikan",
+   "skor": 16
+  },
+  {
+   "id": "klp-140-01",
+   "judul": "Surat terbuka! Mahfud MD minta Presiden Prabowo selamatkan Indonesia dengan hukum berkeadilan",
+   "skor": 31
+  },
+  {
+   "id": "klp-140-13",
+   "judul": "Presiden Prabowo tegaskan kereta api sebagai instrumen ekonomi rakyat",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
