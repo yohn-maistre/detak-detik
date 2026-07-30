@@ -4,8 +4,27 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-29T11:38:29+00:00",
+ "diambil": "2026-07-30T22:35:50+00:00",
  "acara": [
+  {
+   "id": "b673fdf945ef",
+   "url": "https://wapresri.go.id/dukung-ekosistem-kendaraan-listrik-wapres-dorong-link-and-match-pendidikan-industri/",
+   "judul": "Dukung Ekosistem Kendaraan Listrik, Wapres Dorong Link and Match Pendidikan–Industri",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-30",
+   "tanggal_terbit": "2026-07-30",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "a8ec214ae463",
    "url": "https://setkab.go.id/lantik-1-204-pamong-praja-muda-ipdn-presiden-prabowo-tekankan-pengabdian-untuk-rakyat/",
