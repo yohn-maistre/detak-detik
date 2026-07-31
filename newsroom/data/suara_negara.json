@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-07-31T12:05:59+00:00",
+ "diambil": "2026-07-31T22:54:18+00:00",
  "baris": [
   {
    "id": "e8d68128b938",
@@ -77,6 +77,16 @@
    "url": "https://www.kemhan.go.id/2026/07/31/sekjen-kemhan-tutup-diklat-sppi-2026-lulusan-sppi-siap-jadi-penggerak-pembangunan-desa-dan-pesisir.html",
    "judul": "Sekjen Kemhan Tutup Diklat SPPI 2026, Lulusan SPPI Siap Jadi Penggerak Pembangunan Desa dan Pesisir",
    "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia, Letnan Jenderal TNI Tri Budi Utomo, menutup secara resmi Pendidikan dan Pelatihan...",
+   "tanggal": "2026-07-31",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "abbefa9a2f1a",
+   "url": "https://www.kemhan.go.id/2026/07/31/wamenhan-ri-terima-audiensi-wali-kota-subulussalam-bahas-penguatan-pendidikan-dan-pertahanan-daerah.html",
+   "judul": "Wamenhan RI Terima Audiensi Wali Kota Subulussalam, Bahas Penguatan Pendidikan dan Pertahanan Daerah",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan (Wamenhan) Republik Indonesia Donny Ermawan Taufanto menerima audiensi Wali Kota Subulussalam, M. Rasyid Bancin, di...",
    "tanggal": "2026-07-31",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
@@ -175,6 +185,17 @@
    "url": "https://gerindra.id/2026/07/31/gerak-cepat-alimudin-kolatlena-salurkan-bantuan-air-bersih-untuk-warga-terdampak-krisis-di-kota-bula/",
    "judul": "Gerak Cepat Alimudin Kolatlena Salurkan Bantuan Air Bersih untuk Warga Terdampak Krisis di Kota Bula",
    "ringkas": "Anggota DPR RI Fraksi Partai Gerindra dari Daerah Pemilihan Maluku, F. Alimudin Kolatlena, bergerak cepat merespons krisis air bersih yang melanda Kota Bula dan sejumlah wilayah di Kabupaten Seram Bagian Timur (SBT). Ia menginstruksikan timnya di lapangan untuk segera menyalurkan",
+   "tanggal": "2026-07-31",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "42fd0769b312",
+   "url": "https://gerindra.id/2026/07/31/satrio-dimas-hampir-90-persen-bantuan-politik-gerindra-kembali-ke-masyarakat-lewat-pendidikan-politik/",
+   "judul": "Satrio Dimas: Hampir 90 Persen Bantuan Politik Gerindra Kembali ke Masyarakat Lewat Pendidikan Politik",
+   "ringkas": "Dewan Pimpinan Pusat (DPP) Partai Gerindra menegaskan komitmennya untuk mengelola bantuan keuangan partai politik secara transparan, akuntabel, dan sesuai peraturan perundang-undangan. Pada 2025, Partai Gerindra menerima bantuan keuangan dari pemerintah sebesar sekitar Rp20,1 mil",
    "tanggal": "2026-07-31",
    "kanal": "gerindra",
    "lembaga": "Partai Gerindra",
@@ -1884,17 +1905,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "c603897f3fa0",
-   "url": "https://gerindra.id/2026/07/23/habiburokhman-desak-eksekusi-putusan-inkracht-sengketa-lahan-di-makassar/",
-   "judul": "Habiburokhman Desak Eksekusi Putusan Inkracht Sengketa Lahan di Makassar",
-   "ringkas": "Komisi III DPR RI mendorong Kapolda Sulawesi Selatan, Mabes Polri, Direktorat Jenderal Kekayaan Negara (DJKN) Kementerian Keuangan, serta pihak ahli waris segera berkoordinasi untuk melaksanakan putusan pengadilan yang telah berkekuatan hukum tetap (inkracht) terkait sengketa kep",
-   "tanggal": "2026-07-23",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
    "id": "fd276161a135",
    "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
    "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
@@ -2736,16 +2746,6 @@
    "url": "https://www.kemhan.go.id/2026/07/07/menhan-sjafrie-dampingi-presiden-prabowo-sambut-kunjungan-resmi-pm-singapura.html",
    "judul": "Menhan Sjafrie Dampingi Presiden Prabowo Sambut Kunjungan Resmi PM Singapura",
    "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin mendampingi Presiden RI Prabowo Subianto dalam menerima kunjungan resmi Perdana Menteri Singapura...",
-   "tanggal": "2026-07-07",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "0c1c5d88702e",
-   "url": "https://www.kemhan.go.id/2026/07/07/wamenhan-ri-hadiri-penutupan-pendidikan-p4n-angkatan-lxix-lemhannas-ri-tahun-2026.html",
-   "judul": "Wamenhan RI Hadiri Penutupan Pendidikan P4N Angkatan LXIX Lemhannas RI Tahun 2026",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menghadiri Upacara Penutupan Pendidikan...",
    "tanggal": "2026-07-07",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
