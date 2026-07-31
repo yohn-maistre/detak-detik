@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-07-31T11:41:14.039117+00:00",
- "edisi": 142,
+ "diperbarui": "2026-07-31T22:34:54.102767+00:00",
+ "edisi": 143,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Makalah ini mengulas hambatan pengembangan panas bumi di Indonesia melalui tinjauan kebijakan naratif untuk cekungan sedimen. Relevan bagi pembaca Indonesia karena energi panas bumi bersendikan potensi geologi lokal dan penting untuk transisi energi nasional.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengkaji dampak Revolusi Hijau terhadap individualisme masyarakat Indonesia. Relevan bagi pembaca Indonesia karena transformasi pertanian membentuk struktur sosial desa, yang masih memengaruhi kebijakan agraria dan ketahanan pangan nasional.",
+   "kategori": "PERTANIAN & MASYARAKAT",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini merancang kerangka rekomendasi putusan pidana dengan graf pengetahuan untuk sistem peradilan Indonesia. Relevan bagi pembaca Indonesia karena konsistensi vonis menjadi perhatian publik dan inovasi hukum dapat mendukung transparansi pengadilan.",
+   "kategori": "HUKUM & SISTEM PIDANA",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Artikel ini menelaah batasan dan celah pertanggungjawaban pidana atas kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi pembaca Indonesia karena perlindungan anak dan pemidanaan orang tua masih memerlukan rambu hukum yang pasti.",
+   "kategori": "HUKUM & ANAK",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membahas kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Relevan bagi pembaca Indonesia karena pengurangan emisi karbon memerlukan kerja sama regional dan kejelasan regulasi laut lintas batas.",
+   "kategori": "LINGKUNGAN & PERBATASAN",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini mengungkap komunikasi ritual, adat, dan toleransi reflektif pada masyarakat adat Tengger Ngadas di Jawa Timur. Relevan bagi pembaca Indonesia karena keberagaman budaya lokal menjadi fondasi identitas nasional dan modal sosial masyarakat Indonesia.",
+   "kategori": "MASYARAKAT & BUDAYA",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini menelusuri kesenjangan sosioekonomi dalam risiko diabetes terkait ketimpangan pendapatan dan urbanisasi di Indonesia. Relevan bagi pembaca Indonesia karena beban penyakit tidak menular meningkat dan memengaruhi kebijakan kesehatan masyarakat.",
+   "kategori": "KESEHATAN & MASYARAKAT",
+   "sejak_edisi": 143
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini melaporkan pengobatan jamur kuku non-dermatofit langka asal Indonesia dan tinjauan literatur terkait. Relevan bagi pembaca Indonesia karena kasus infeksi langka perlu dokumentasi lokal sebagai rujukan klinis di wilayah tropis.",
+   "kategori": "KESEHATAN & KASUS",
+   "sejak_edisi": 143
+  },
   {
    "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
    "wadah": "International Journal of Sustainable Society",
@@ -37,78 +109,6 @@
    "alasan": "Makalah ini mengkaji keyakinan kesehatan dan keterlambatan pasien kanker payudara di Sumatera Barat. Relevan bagi pembaca Indonesia karena menyoroti hambatan psikologis dan sosial dalam deteksi dini kanker yang berdampak pada penanganan medis.",
    "kategori": "KESEHATAN MASYARAKAT",
    "sejak_edisi": 142
-  },
-  {
-   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
-   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
-   "doi": "10.1016/j.pvmrsr.2026.100038",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini mendeteksi virus diare bovin pada susu kaleng dari peternakan rakyat di Cianjur, Jawa Barat. Relevan bagi pembaca Indonesia karena membahas penyakit ternak yang signifikan bagi peternak skala kecil dan keamanan rantai pasok susu.",
-   "kategori": "PETERNAKAN & SPESIES",
-   "sejak_edisi": 142
-  },
-  {
-   "judul": "Mass flow and recovery efficiency analysis of community-based waste management in Batu, Indonesia: A case study",
-   "wadah": "Cleaner Waste Systems",
-   "doi": "10.1016/j.clwas.2026.100539",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini menganalisis efisiensi aliran massa dan pemulihan material pada sistem pengelolaan sampah berbasis komunitas di Kota Batu. Relevan bagi pembaca Indonesia karena model pengelolaan sampah komunitas penting bagi kebijakan kota berkelanjutan.",
-   "kategori": "LIMBAH & KOTA",
-   "sejak_edisi": 142
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini meneliti bagaimana modal sosial bonding, bridging, dan linking membentuk perilaku pemilih di wilayah tertinggal Indonesia. Relevan bagi pembaca Indonesia karena memberi wawasan tentang determinan relasi sosial dalam dinamika politik daerah marginal.",
-   "kategori": "MASYARAKAT & POLITIK",
-   "sejak_edisi": 142
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Studi ini mengkaji kontinuitas, kerangka hukum, dan transformasi digital dalam penghimpunan zakat di Indonesia. Relevan bagi pembaca Indonesia karena zakat adalah instrumen filantropi Islam yang penting bagi kebijakan pengentasan kemiskinan dan inklusi keuangan.",
-   "kategori": "KEBIJAKAN & SYARIAH",
-   "sejak_edisi": 142
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini meneliti pirolisis langsung aspal batu dari Buton, Indonesia, serta karakterisasi produk cair dan peran mineral kalsit. Relevan bagi pembaca Indonesia karena mengkaji potensi pemanfaatan sumber daya alam lokal untuk energi dan bahan bakar.",
-   "kategori": "SUMBER DAYA ALAM",
-   "sejak_edisi": 141
-  },
-  {
-   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103276",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini membahas warisan kolonial Belanda dan proses dekolonisasi ekonomi maritim di Indonesia sebagai peluang yang terlewatkan. Relevan bagi pembaca Indonesia karena memberikan perspektif sejarah atas kebijakan dan pembangunan ekonomi laut nasional.",
-   "kategori": "MARITIM & SEJARAH",
-   "sejak_edisi": 141
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Artikel ini menelaah situasi terkini taeniasis di Bali, Indonesia, selama periode 2022–2025. Relevan bagi pembaca Indonesia karena memetakan status penyakit parasit yang masih menjadi persoalan kesehatan di wilayah Bali.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 141
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini mengkaji status resistensi insektisida di Indonesia serta tantangan dan arah pengelolaan hama pertanian. Relevan bagi pembaca Indonesia karena resistensi hama berdampak langsung pada ketahanan pangan dan produktivitas pertanian nasional.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 141
   }
  ]
 }
