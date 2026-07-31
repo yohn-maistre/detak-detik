@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-30T22:35:50+00:00",
+ "diambil": "2026-07-31T11:37:35+00:00",
  "acara": [
+  {
+   "id": "c46b4ab683ef",
+   "url": "https://setkab.go.id/bulan-kemerdekaan-dimulai-pemerintah-siapkan-rangkaian-agenda-kenegaraan-sambut-hut-ke-81-kemerdekaan-ri/",
+   "judul": "Bulan Kemerdekaan Dimulai, Pemerintah Siapkan Rangkaian Agenda Kenegaraan Sambut HUT Ke-81 Kemerdekaan RI",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-31",
+   "tanggal_terbit": "2026-07-31",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "b673fdf945ef",
    "url": "https://wapresri.go.id/dukung-ekosistem-kendaraan-listrik-wapres-dorong-link-and-match-pendidikan-industri/",
@@ -24,6 +41,73 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "8ddf76b30f69",
+   "url": "https://setkab.go.id/presiden-prabowo-kembali-ke-jakarta-dengan-ka-nusantara-explorer-perkuat-gagasan-wisata-berbasis-kereta-api/",
+   "judul": "Presiden Prabowo Kembali ke Jakarta dengan KA Nusantara Explorer, Perkuat Gagasan Wisata Berbasis Kereta Api",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-30",
+   "tanggal_terbit": "2026-07-30",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "31",
+   "prov_nama": "DKI Jakarta"
+  },
+  {
+   "id": "b41a6a937c2a",
+   "url": "https://setkab.go.id/presiden-prabowo-resmikan-akad-massal-62-000-unit-kpr-rumah-subsidi-dan-kur-perumahan-rp880-miliar-tegaskan-komitmen-hadirkan-hunian-layak-bagi-rakyat/",
+   "judul": "Presiden Prabowo Resmikan Akad Massal 62.000 Unit KPR Rumah Subsidi dan KUR Perumahan Rp880 Miliar, Tegaskan Komitmen Hadirkan Hunian Layak bagi Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-30",
+   "tanggal_terbit": "2026-07-30",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": "33",
+   "prov_nama": "Jawa Tengah"
+  },
+  {
+   "id": "6922566ee16b",
+   "url": "https://setkab.go.id/presiden-prabowo-menuju-batang-dengan-ka-nusantara-explorer-dukung-inovasi-perkeretaapian-dan-pariwisata-nasional/",
+   "judul": "Presiden Prabowo Menuju Batang dengan KA Nusantara Explorer, Dukung Inovasi Perkeretaapian dan Pariwisata Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-30",
+   "tanggal_terbit": "2026-07-30",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "33",
+   "prov_nama": "Jawa Tengah"
+  },
+  {
+   "id": "84c070f309ee",
+   "url": "https://setkab.go.id/presiden-prabowo-resmikan-revitalisasi-stasiun-semarang-tawang-warisan-sejarah-dihidupkan-kembali-untuk-generasi-masa-depan/",
+   "judul": "Presiden Prabowo Resmikan Revitalisasi Stasiun Semarang Tawang, Warisan Sejarah Dihidupkan Kembali untuk Generasi Masa Depan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-30",
+   "tanggal_terbit": "2026-07-30",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "33",
+   "prov_nama": "Jawa Tengah"
   },
   {
    "id": "a8ec214ae463",
