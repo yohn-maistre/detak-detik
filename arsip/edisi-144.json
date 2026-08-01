@@ -1,0 +1,121 @@
+{
+ "edisi": 144,
+ "terbit": "2026-08-01T10:54:58.102308+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-144-02",
+   "judul": "Dishub DKI Siapkan Rekayasa Lalin hingga Kantong Parkir untuk Zikir dan Doa Kebangsaan di Monas",
+   "skor": 25
+  },
+  {
+   "id": "klp-144-13",
+   "judul": "Keselamatan Masyarakat dan Petugas Jadi Prioritas, Menko Polkam Ingatkan Pentingnya Penanganan Karhutla Secara Cepat dan Terpadu",
+   "skor": 12
+  },
+  {
+   "id": "klp-144-14",
+   "judul": "KM Prince Soya Terbakar di Pelabuhan Samarinda, Layanan Penumpang Dipastikan Tidak Terganggu",
+   "skor": 12
+  },
+  {
+   "id": "klp-144-03",
+   "judul": "Api Kebakaran Hotel Pullman Central Park Muncul dari P2 Parkir, 12 Mobil Pemadam Dikerahkan",
+   "skor": 21
+  },
+  {
+   "id": "klp-144-22",
+   "judul": "5 Berita Terpopuler: MBG Tak Pakai Anggaran Pendidikan, PGRI Mengaitkan dengan PPPK & P3K Paruh Waktu, Solusi soal Gaji?",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-05",
+   "judul": "Kejagung Geledah Rumah Eks Jampidsus Febrie di Jaksel, Sita Dokumen Terkait TPPU",
+   "skor": 19
+  },
+  {
+   "id": "klp-144-18",
+   "judul": "BMKG: El Niño Diprediksi Bertahan hingga Awal 2027, Waspadai Kekeringan dan Karhutla",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-19",
+   "judul": "KLH Godok Aturan Water Farming, Pengguna Air Tanah Wajib Pulihkan Cadangan Air",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-20",
+   "judul": "Menkeu Purbaya Sebut Tambahan Dana untuk Daerah Tinggal Tunggu Restu Prabowo",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-23",
+   "judul": "Dampak El Nino, Tujuh Daerah di NTB Masuk Status Awas Kekeringan",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-16",
+   "judul": "Paling Cepat 2027, Pemerintah Targetkan PLTP Sarulla Bisa Kembali Produksi Listrik 330 MW",
+   "skor": 9
+  },
+  {
+   "id": "klp-144-07",
+   "judul": "Hasan Nasbi soal Viral Mal Pasang Pagar Tinggi: Jangan Memperbesar Berita-berita yang Tidak Baik",
+   "skor": 16
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
