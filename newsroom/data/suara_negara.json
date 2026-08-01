@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-01T11:23:44+00:00",
+ "diambil": "2026-08-01T22:47:35+00:00",
  "baris": [
   {
    "id": "bb7d6d745f52",
@@ -44,6 +44,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "2fe95c499dbc",
+   "url": "https://www.kemhan.go.id/2026/08/01/wamenhan-donny-buka-turnamen-tenis-beregu-alusmanis-v-tahun-2026-di-mabesau-jakarta.html",
+   "judul": "Wamenhan Donny Buka Turnamen Tenis Beregu Alusmanis V Tahun 2026 Di Mabesau Jakarta",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia, Donny Ermawan Taufanto, secara resmi membuka Turnamen Tenis Beregu Alusmanis V Tahun 2026...",
+   "tanggal": "2026-08-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "e8d68128b938",
    "url": "https://pks.id/content/dukung-larangan-dapur-mbg-gunakan-barang-subsidi-pks-pengawasan-dan-kualitas-layanan-harus-tetap-dijaga",
    "judul": "Dukung Larangan Dapur MBG Gunakan Barang Subsidi, PKS: Pengawasan dan Kualitas Layanan Harus Tetap Dijaga",
@@ -53,6 +63,26 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "bdf5903c8b49",
+   "url": "https://www.kemhan.go.id/2026/07/31/sekjen-kemhan-tutup-diklat-sppi-2026-lulusan-sppi-siap-jadi-penggerak-pembangunan-desa-dan-pesisir.html",
+   "judul": "Sekjen Kemhan Tutup Diklat SPPI 2026, Lulusan SPPI Siap Jadi Penggerak Pembangunan Desa dan Pesisir",
+   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia, Letnan Jenderal TNI Tri Budi Utomo, menutup secara resmi Pendidikan dan Pelatihan...",
+   "tanggal": "2026-07-31",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "abbefa9a2f1a",
+   "url": "https://www.kemhan.go.id/2026/07/31/wamenhan-ri-terima-audiensi-wali-kota-subulussalam-bahas-penguatan-pendidikan-dan-pertahanan-daerah.html",
+   "judul": "Wamenhan RI Terima Audiensi Wali Kota Subulussalam, Bahas Penguatan Pendidikan dan Pertahanan Daerah",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan (Wamenhan) Republik Indonesia Donny Ermawan Taufanto menerima audiensi Wali Kota Subulussalam, M. Rasyid Bancin, di...",
+   "tanggal": "2026-07-31",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "71597da77117",
@@ -133,26 +163,6 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
-  },
-  {
-   "id": "bdf5903c8b49",
-   "url": "https://www.kemhan.go.id/2026/07/31/sekjen-kemhan-tutup-diklat-sppi-2026-lulusan-sppi-siap-jadi-penggerak-pembangunan-desa-dan-pesisir.html",
-   "judul": "Sekjen Kemhan Tutup Diklat SPPI 2026, Lulusan SPPI Siap Jadi Penggerak Pembangunan Desa dan Pesisir",
-   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia, Letnan Jenderal TNI Tri Budi Utomo, menutup secara resmi Pendidikan dan Pelatihan...",
-   "tanggal": "2026-07-31",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "abbefa9a2f1a",
-   "url": "https://www.kemhan.go.id/2026/07/31/wamenhan-ri-terima-audiensi-wali-kota-subulussalam-bahas-penguatan-pendidikan-dan-pertahanan-daerah.html",
-   "judul": "Wamenhan RI Terima Audiensi Wali Kota Subulussalam, Bahas Penguatan Pendidikan dan Pertahanan Daerah",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan (Wamenhan) Republik Indonesia Donny Ermawan Taufanto menerima audiensi Wali Kota Subulussalam, M. Rasyid Bancin, di...",
-   "tanggal": "2026-07-31",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "9eebb7e213f8",
@@ -350,6 +360,26 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "047b19ef9119",
+   "url": "https://www.kemhan.go.id/2026/07/30/bagpam-roum-setjen-kemhan-gelar-pelatihan-tactical-riding-vip-protection-tingkatkan-profesionalisme-personel-pengamanan.html",
+   "judul": "Bagpam Roum Setjen Kemhan Gelar Pelatihan Tactical Riding & VIP Protection Tingkatkan Profesionalisme Personel Pengamanan",
+   "ringkas": "Jakarta – Bagian Pengamanan Biro Umum Sekretariat Jenderal Kementerian Pertahanan Republik Indonesia (Bagpam Roum Setjen Kemhan RI) menyelenggarakan pembukaan...",
+   "tanggal": "2026-07-30",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "383cf9e4c9d6",
+   "url": "https://www.kemhan.go.id/2026/07/30/kunjungi-pusdikif-pussenif-menhan-sjafrie-dorong-pembentukan-prajurit-tni-yang-profesional.html",
+   "judul": "Kunjungi Pusdikif Pussenif, Menhan Sjafrie Dorong Pembentukan Prajurit TNI yang Profesional",
+   "ringkas": "Bandung Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Pusdikif Pussenif, Cipatat, Kab. Bandung Barat, Rabu (29/7/2026),...",
+   "tanggal": "2026-07-30",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "1650104a24d6",
@@ -642,26 +672,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "047b19ef9119",
-   "url": "https://www.kemhan.go.id/2026/07/30/bagpam-roum-setjen-kemhan-gelar-pelatihan-tactical-riding-vip-protection-tingkatkan-profesionalisme-personel-pengamanan.html",
-   "judul": "Bagpam Roum Setjen Kemhan Gelar Pelatihan Tactical Riding & VIP Protection Tingkatkan Profesionalisme Personel Pengamanan",
-   "ringkas": "Jakarta – Bagian Pengamanan Biro Umum Sekretariat Jenderal Kementerian Pertahanan Republik Indonesia (Bagpam Roum Setjen Kemhan RI) menyelenggarakan pembukaan...",
-   "tanggal": "2026-07-30",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "383cf9e4c9d6",
-   "url": "https://www.kemhan.go.id/2026/07/30/kunjungi-pusdikif-pussenif-menhan-sjafrie-dorong-pembentukan-prajurit-tni-yang-profesional.html",
-   "judul": "Kunjungi Pusdikif Pussenif, Menhan Sjafrie Dorong Pembentukan Prajurit TNI yang Profesional",
-   "ringkas": "Bandung Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Pusdikif Pussenif, Cipatat, Kab. Bandung Barat, Rabu (29/7/2026),...",
-   "tanggal": "2026-07-30",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "1098614fa611",
    "url": "https://gerindra.id/2026/07/30/andi-iwan-aras-desak-penyelesaian-lrt-city-jangan-biarkan-kepercayaan-publik-runtuh/",
    "judul": "Andi Iwan Aras Desak Penyelesaian LRT City, Jangan Biarkan Kepercayaan Publik Runtuh",
@@ -783,6 +793,56 @@
    "partai": "pks"
   },
   {
+   "id": "1076da09fbc3",
+   "url": "https://www.kemhan.go.id/2026/07/29/menhan-tinjau-marshaling-area-yonif-tp-941-singa-perbangsa-tekankan-pengabdian-prajurit-untuk-rakyat-dan-negara.html",
+   "judul": "Menhan Tinjau Marshaling Area Yonif TP 941/Singa Perbangsa, Tekankan Pengabdian Prajurit untuk Rakyat dan Negara",
+   "ringkas": "Karawang, Jawa Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshaling Area Yonif TP 941/Singa Perbangsa, Rabu...",
+   "tanggal": "2026-07-29",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "c88ac875ea41",
+   "url": "https://www.kemhan.go.id/2026/07/29/menhan-tinjau-marshaling-area-yonif-tp-939-macan-putih-dorong-pemberdayaan-wilayah-dan-kemanunggalan-tni-dengan-rakyat.html",
+   "judul": "Menhan Tinjau Marshaling Area Yonif TP 939/Macan Putih, Dorong Pemberdayaan Wilayah Dan Kemanunggalan TNI Dengan Rakyat",
+   "ringkas": "Tasikmalaya, Jawa Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshaling Area Yonif TP 939/Macan Putih, Singaparna,...",
+   "tanggal": "2026-07-29",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3893da4274c4",
+   "url": "https://www.kemhan.go.id/2026/07/29/wamenhan-ri-terima-audiensi-rektor-unhan-beserta-dpp-kipi-bahas-penguatan-ilmu-pertahanan.html",
+   "judul": "Wamenhan RI Terima Audiensi Rektor Unhan beserta DPP KIPI, Bahas Penguatan Ilmu Pertahanan",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Rektor Universitas...",
+   "tanggal": "2026-07-29",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "68e0789bf419",
+   "url": "https://www.kemhan.go.id/2026/07/29/wamenhan-terima-audiensi-ketua-dprd-provinsi-bangka-belitung.html",
+   "judul": "Wamenhan Terima Audiensi Ketua DPRD Provinsi Bangka Belitung",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menhan RI menerima kunjungan audiensi Ketua DPRD...",
+   "tanggal": "2026-07-29",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "925e6a3840bf",
+   "url": "https://www.kemhan.go.id/2026/07/29/menhan-sjafrie-hadiri-rapat-terbatas-bahas-antisipasi-dampak-el-nino-dan-bencana.html",
+   "judul": "Menhan Sjafrie Hadiri Rapat Terbatas Bahas Antisipasi Dampak El Nino Dan Bencana",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri rapat terbatas yang dipimpin Presiden RI Prabowo Subianto untuk...",
+   "tanggal": "2026-07-29",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "62bffb5bcc81",
    "url": "https://emedia.dpr.go.id/news/2026/07/29/lola-nelria-desak-usut-tuntas-kasus-tewasnya-satpam-waduk-jatiluhur",
    "judul": "Lola Nelria Desak Usut Tuntas Kasus Tewasnya Satpam Waduk Jatiluhur",
@@ -851,56 +911,6 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
-  },
-  {
-   "id": "1076da09fbc3",
-   "url": "https://www.kemhan.go.id/2026/07/29/menhan-tinjau-marshaling-area-yonif-tp-941-singa-perbangsa-tekankan-pengabdian-prajurit-untuk-rakyat-dan-negara.html",
-   "judul": "Menhan Tinjau Marshaling Area Yonif TP 941/Singa Perbangsa, Tekankan Pengabdian Prajurit untuk Rakyat dan Negara",
-   "ringkas": "Karawang, Jawa Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshaling Area Yonif TP 941/Singa Perbangsa, Rabu...",
-   "tanggal": "2026-07-29",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "c88ac875ea41",
-   "url": "https://www.kemhan.go.id/2026/07/29/menhan-tinjau-marshaling-area-yonif-tp-939-macan-putih-dorong-pemberdayaan-wilayah-dan-kemanunggalan-tni-dengan-rakyat.html",
-   "judul": "Menhan Tinjau Marshaling Area Yonif TP 939/Macan Putih, Dorong Pemberdayaan Wilayah Dan Kemanunggalan TNI Dengan Rakyat",
-   "ringkas": "Tasikmalaya, Jawa Barat — Menteri Pertahanan RI Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshaling Area Yonif TP 939/Macan Putih, Singaparna,...",
-   "tanggal": "2026-07-29",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "3893da4274c4",
-   "url": "https://www.kemhan.go.id/2026/07/29/wamenhan-ri-terima-audiensi-rektor-unhan-beserta-dpp-kipi-bahas-penguatan-ilmu-pertahanan.html",
-   "judul": "Wamenhan RI Terima Audiensi Rektor Unhan beserta DPP KIPI, Bahas Penguatan Ilmu Pertahanan",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Rektor Universitas...",
-   "tanggal": "2026-07-29",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "68e0789bf419",
-   "url": "https://www.kemhan.go.id/2026/07/29/wamenhan-terima-audiensi-ketua-dprd-provinsi-bangka-belitung.html",
-   "judul": "Wamenhan Terima Audiensi Ketua DPRD Provinsi Bangka Belitung",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menhan RI menerima kunjungan audiensi Ketua DPRD...",
-   "tanggal": "2026-07-29",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "925e6a3840bf",
-   "url": "https://www.kemhan.go.id/2026/07/29/menhan-sjafrie-hadiri-rapat-terbatas-bahas-antisipasi-dampak-el-nino-dan-bencana.html",
-   "judul": "Menhan Sjafrie Hadiri Rapat Terbatas Bahas Antisipasi Dampak El Nino Dan Bencana",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri rapat terbatas yang dipimpin Presiden RI Prabowo Subianto untuk...",
-   "tanggal": "2026-07-29",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "f2b2cd971f9a",
@@ -1144,6 +1154,16 @@
    "partai": "pks"
   },
   {
+   "id": "ff9d615d4819",
+   "url": "https://www.kemhan.go.id/2026/07/28/irjen-kemhan-hadiri-peringatan-ke-99-hari-jadi-tentara-pembebasan-rakyat-tiongkok.html",
+   "judul": "Irjen Kemhan Hadiri Peringatan Ke-99 Hari Jadi Tentara Pembebasan Rakyat Tiongkok",
+   "ringkas": "Jakarta – Mewakili Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin, Inspektur Jenderal Kementerian Pertahanan Letjen TNI Rui F.G.P. Duarte menghadiri resepsi...",
+   "tanggal": "2026-07-28",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "4a34561fe0e8",
    "url": "https://emedia.dpr.go.id/news/2026/07/28/konflik-horizontal-harus-diredam-jangan-sampai-dimanfaatkan-pihak-tak-bertanggung-jawab",
    "judul": "Konflik Horizontal Harus Diredam, Jangan Sampai Dimanfaatkan Pihak Tak Bertanggung Jawab",
@@ -1302,16 +1322,6 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
-  },
-  {
-   "id": "ff9d615d4819",
-   "url": "https://www.kemhan.go.id/2026/07/28/irjen-kemhan-hadiri-peringatan-ke-99-hari-jadi-tentara-pembebasan-rakyat-tiongkok.html",
-   "judul": "Irjen Kemhan Hadiri Peringatan Ke-99 Hari Jadi Tentara Pembebasan Rakyat Tiongkok",
-   "ringkas": "Jakarta – Mewakili Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin, Inspektur Jenderal Kementerian Pertahanan Letjen TNI Rui F.G.P. Duarte menghadiri resepsi...",
-   "tanggal": "2026-07-28",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "da208f6bf33e",
@@ -2736,16 +2746,6 @@
    "url": "https://www.kemhan.go.id/2026/07/07/sekjen-kemhan-ri-buka-por-kemhan-2026-perkuat-soliditas-dan-sportivitas-pegawai.html",
    "judul": "Sekjen Kemhan RI Buka POR Kemhan 2026, Perkuat Soliditas dan Sportivitas Pegawai",
    "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia (Sekjen Kemhan RI) Letjen TNI Tri Budi Utomo membuka Upacara Pembukaan Pekan...",
-   "tanggal": "2026-07-07",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "d21c2565a0a2",
-   "url": "https://www.kemhan.go.id/2026/07/07/menhan-sjafrie-terima-kunjungan-atase-pertahanan-amerika-serikat.html",
-   "judul": "Menhan Sjafrie Terima Kunjungan Atase Pertahanan Amerika Serikat",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin menerima kunjungan Atase Pertahanan Amerika Serikat untuk Indonesia, Col Jacky Ly, di...",
    "tanggal": "2026-07-07",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
