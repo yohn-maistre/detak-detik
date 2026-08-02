@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-07-31T11:37:35+00:00",
+ "diambil": "2026-08-02T10:57:04+00:00",
  "acara": [
+  {
+   "id": "9009a6f2f9ba",
+   "url": "https://setkab.go.id/100-000-jemaah-hadiri-zikir-dan-doa-kebangsaan-di-monas-wujud-syukur-atas-kemerdekaan-indonesia/",
+   "judul": "100.000 Jemaah Hadiri Zikir dan Doa Kebangsaan di Monas, Wujud Syukur atas Kemerdekaan Indonesia",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-01",
+   "tanggal_terbit": "2026-08-01",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "c46b4ab683ef",
    "url": "https://setkab.go.id/bulan-kemerdekaan-dimulai-pemerintah-siapkan-rangkaian-agenda-kenegaraan-sambut-hut-ke-81-kemerdekaan-ri/",
