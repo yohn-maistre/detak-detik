@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-02T11:21:49+00:00",
+ "diambil": "2026-08-02T22:48:56+00:00",
  "baris": [
   {
    "id": "fb1e8a8368ef",
@@ -61,6 +61,16 @@
    "tanggal": "2026-08-01",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "78621f0c3ed0",
+   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
+   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
+   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
+   "tanggal": "2026-07-31",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -283,16 +293,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "78621f0c3ed0",
-   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
-   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
-   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
-   "tanggal": "2026-07-31",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "47ddbe47ecda",
@@ -792,6 +792,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "956ae725c178",
+   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
+   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
+   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
+   "tanggal": "2026-07-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "135786b37157",
    "url": "https://pks.id/content/pks-dukung-langkah-mui-perkuat-keluarga-dan-cegah-lgbtq",
    "judul": "PKS Dukung Langkah MUI Perkuat Keluarga dan Cegah LGBTQ",
@@ -1020,16 +1030,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "956ae725c178",
-   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
-   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
-   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
-   "tanggal": "2026-07-29",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "303adc434d2e",
@@ -1624,6 +1624,26 @@
    "cabang": "aparat"
   },
   {
+   "id": "f530b9423136",
+   "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
+   "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaksanakan silaturahmi dengan jajaran Pengurus Pusat Persatuan Purnawirawan Angkatan Darat (PPAD) di Jakarta, Kamis (23/7/2026). Dalam pertemuan...",
+   "tanggal": "2026-07-24",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9046ffd85b8e",
+   "url": "https://tniad.mil.id/penpas-waspada-narkoba/",
+   "judul": "Waspada Narkoba",
+   "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
+   "tanggal": "2026-07-24",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "6b8013854155",
    "url": "https://pks.id/content/hari-anak-nasional-2026-legislator-pks-ajak-perkuat-perlindungan-anak-dari-kekerasan-seksual-dan-lgbt",
    "judul": "Hari Anak Nasional 2026, Legislator PKS Ajak Perkuat Perlindungan Anak dari Kekerasan Seksual dan LGBT",
@@ -1810,21 +1830,11 @@
    "partai": "gerindra"
   },
   {
-   "id": "f530b9423136",
-   "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
-   "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaksanakan silaturahmi dengan jajaran Pengurus Pusat Persatuan Purnawirawan Angkatan Darat (PPAD) di Jakarta, Kamis (23/7/2026). Dalam pertemuan...",
-   "tanggal": "2026-07-24",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9046ffd85b8e",
-   "url": "https://tniad.mil.id/penpas-waspada-narkoba/",
-   "judul": "Waspada Narkoba",
-   "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
-   "tanggal": "2026-07-24",
+   "id": "fd276161a135",
+   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
+   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
+   "tanggal": "2026-07-23",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -1957,16 +1967,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "fd276161a135",
-   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
-   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
-   "tanggal": "2026-07-23",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "ebe7b99c852a",
    "url": "https://kontras.org/rilis-pers-masyarakat-sipil-indonesia-untuk-solidaritas-kemanusiaan-palestina-mendesak-transparansi-pemerintah-indonesia-atas-deportasi-aktivis-palestina-abdul-karim-raed-miqdad/",
    "judul": "Rilis Pers Masyarakat Sipil Indonesia untuk Solidaritas Kemanusiaan Palestina Mendesak Transparansi Pemerintah Indonesia atas Deportasi Aktivis Palestina Abdul Karim Raed Miqdad",
@@ -2015,6 +2015,46 @@
    "tanggal": "2026-07-22",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "47574f1d0386",
+   "url": "https://tniad.mil.id/perkuat-kemitraan-strategis-kasad-terima-kunjungan-panglima-tentera-darat-malaysia/",
+   "judul": "Perkuat Kemitraan Strategis, Kasad Terima Kunjungan Panglima Tentera Darat Malaysia",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menerima kunjungan kehormatan Panglima Tentera Darat Malaysia, Jenderal Tan Sri Azhan Bin Hj Md Othman, di Markas...",
+   "tanggal": "2026-07-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "411c65a081f0",
+   "url": "https://tniad.mil.id/334558-2/",
+   "judul": "Lewat Pendekatan Humanis, TNI AD Antar Dua Eks Anggota OPM Kembali ke NKRI",
+   "ringkas": "Jakarta, tniad.mil.id – Pendekatan humanis yang konsisten dikedepankan TNI Angkatan Darat kembali membangun kepercayaan masyarakat di Papua. Melalui pendampingan Satgas Pamtas RI–PNG Mobile Yonif 621/Manuntung, dua eks anggota Organisasi Papua...",
+   "tanggal": "2026-07-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "5018214acdd3",
+   "url": "https://tniad.mil.id/hadapi-ancaman-masa-depan-kasad-dorong-transformasi-sishankamrata-aktif/",
+   "judul": "Hadapi Ancaman Masa Depan, Kasad Dorong Transformasi Sishankamrata Aktif",
+   "ringkas": "Bandung, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mendorong transformasi Sistem Pertahanan dan Keamanan Rakyat Semesta (Sishankamrata) menjadi Sishankamrata Aktif sebagai strategi menghadapi dinamika lingkungan...",
+   "tanggal": "2026-07-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "93723c146364",
+   "url": "https://tniad.mil.id/dukung-program-pemerintah-kasad-perbantuan-tni-kepada-kementerian-terkoordinasi-dengan-baik/",
+   "judul": "Dukung Program Pemerintah, Kasad: Tugas TNI di Lapangan Selalu Terkoordinasi dengan Baik",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan bahwa pelaksanaan tugas TNI di lapangan selalu terkoordinasi dan terintegrasi dengan seluruh instansi, kementerian, dan lembaga...",
+   "tanggal": "2026-07-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2088,46 +2128,6 @@
    "tanggal": "2026-07-21",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "47574f1d0386",
-   "url": "https://tniad.mil.id/perkuat-kemitraan-strategis-kasad-terima-kunjungan-panglima-tentera-darat-malaysia/",
-   "judul": "Perkuat Kemitraan Strategis, Kasad Terima Kunjungan Panglima Tentera Darat Malaysia",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menerima kunjungan kehormatan Panglima Tentera Darat Malaysia, Jenderal Tan Sri Azhan Bin Hj Md Othman, di Markas...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "411c65a081f0",
-   "url": "https://tniad.mil.id/334558-2/",
-   "judul": "Lewat Pendekatan Humanis, TNI AD Antar Dua Eks Anggota OPM Kembali ke NKRI",
-   "ringkas": "Jakarta, tniad.mil.id – Pendekatan humanis yang konsisten dikedepankan TNI Angkatan Darat kembali membangun kepercayaan masyarakat di Papua. Melalui pendampingan Satgas Pamtas RI–PNG Mobile Yonif 621/Manuntung, dua eks anggota Organisasi Papua...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "5018214acdd3",
-   "url": "https://tniad.mil.id/hadapi-ancaman-masa-depan-kasad-dorong-transformasi-sishankamrata-aktif/",
-   "judul": "Hadapi Ancaman Masa Depan, Kasad Dorong Transformasi Sishankamrata Aktif",
-   "ringkas": "Bandung, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mendorong transformasi Sistem Pertahanan dan Keamanan Rakyat Semesta (Sishankamrata) menjadi Sishankamrata Aktif sebagai strategi menghadapi dinamika lingkungan...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "93723c146364",
-   "url": "https://tniad.mil.id/dukung-program-pemerintah-kasad-perbantuan-tni-kepada-kementerian-terkoordinasi-dengan-baik/",
-   "judul": "Dukung Program Pemerintah, Kasad: Tugas TNI di Lapangan Selalu Terkoordinasi dengan Baik",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan bahwa pelaksanaan tugas TNI di lapangan selalu terkoordinasi dan terintegrasi dengan seluruh instansi, kementerian, dan lembaga...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2400,6 +2400,16 @@
    "partai": "pks"
   },
   {
+   "id": "e7f2490dd716",
+   "url": "https://tniad.mil.id/jelang-praspa-2026-kasad-hadiri-penutupan-pendidikan-capaja-akademi-tni/",
+   "judul": "Jelang Praspa 2026, Kasad Hadiri Penutupan Pendidikan Capaja Akademi TNI",
+   "ringkas": "Jakarta, tniad.mil.id – Menjelang Upacara Prasetya Perwira (Praspa) Tahun 2026, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Upacara Penutupan Pendidikan Calon Perwira Remaja (Capaja) Taruna Akademi...",
+   "tanggal": "2026-07-16",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "afffe93dac79",
    "url": "https://www.kemhan.go.id/2026/07/16/kemhan-peringati-tahun-baru-hijriah-1-muharam-1448-h-teguhkan-semangat-disiplin-dan-profesional.html",
    "judul": "Kemhan Peringati Tahun Baru Hijriah 1 Muharam 1448 H, Teguhkan Semangat Disiplin dan Profesional",
@@ -2417,16 +2427,6 @@
    "tanggal": "2026-07-16",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e7f2490dd716",
-   "url": "https://tniad.mil.id/jelang-praspa-2026-kasad-hadiri-penutupan-pendidikan-capaja-akademi-tni/",
-   "judul": "Jelang Praspa 2026, Kasad Hadiri Penutupan Pendidikan Capaja Akademi TNI",
-   "ringkas": "Jakarta, tniad.mil.id – Menjelang Upacara Prasetya Perwira (Praspa) Tahun 2026, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Upacara Penutupan Pendidikan Calon Perwira Remaja (Capaja) Taruna Akademi...",
-   "tanggal": "2026-07-16",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2552,16 +2552,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "6e9feaa30095",
-   "url": "https://www.kemhan.go.id/2026/07/13/kemhan-gelar-rapat-satgas-pkh-perkuat-sinergi-penertiban-kawasan-hutan.html",
-   "judul": "Kemhan Gelar Rapat Satgas PKH, Perkuat Sinergi Penertiban Kawasan Hutan",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memimpin rapat Satuan Tugas Penertiban Kawasan Hutan (Satgas PKH) di...",
-   "tanggal": "2026-07-13",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "094878e7b118",
    "url": "https://tniad.mil.id/kasad-dampingi-panglima-tni-terima-kunjungan-silaturahmi-kapolri-di-mabes-tni/",
    "judul": "Kasad Dampingi Panglima TNI Terima Kunjungan Silaturahmi Kapolri di Mabes TNI",
@@ -2569,6 +2559,16 @@
    "tanggal": "2026-07-13",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "6e9feaa30095",
+   "url": "https://www.kemhan.go.id/2026/07/13/kemhan-gelar-rapat-satgas-pkh-perkuat-sinergi-penertiban-kawasan-hutan.html",
+   "judul": "Kemhan Gelar Rapat Satgas PKH, Perkuat Sinergi Penertiban Kawasan Hutan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memimpin rapat Satuan Tugas Penertiban Kawasan Hutan (Satgas PKH) di...",
+   "tanggal": "2026-07-13",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2602,6 +2602,26 @@
    "cabang": "aparat"
   },
   {
+   "id": "f42b7116cd80",
+   "url": "https://tniad.mil.id/sertijab-ketua-korpri-unit-tni-ad-aspers-kasad-tekankan-profesionalisme-dan-netralitas-asn/",
+   "judul": "Sertijab Ketua Korpri Unit TNI AD, Aspers Kasad Tekankan Profesionalisme dan Netralitas ASN",
+   "ringkas": "Jakarta, tniad.mil.id – Asisten Personalia (Aspers) Kasad yang diwakili Paban VI/Bin ASN Spersad memimpin Upacara Serah Terima Jabatan (Sertijab) Ketua Dewan Pengurus Korps Pegawai Republik Indonesia (Korpri) Unit TNI Angkatan...",
+   "tanggal": "2026-07-10",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "8329dbbe1bdd",
+   "url": "https://tniad.mil.id/pimpin-laporan-korps-45-pati-tni-ad-kasad-tekankan-amanah-kepemimpinan/",
+   "judul": "Pimpin Laporan Korps 45 Pati TNI AD, Kasad Tekankan Amanah Kepemimpinan",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan bahwa kenaikan pangkat merupakan amanah kepemimpinan yang harus dijawab dengan peningkatan kualitas pengabdian, profesionalisme, dan integritas....",
+   "tanggal": "2026-07-10",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "5a9a0b72d81e",
    "url": "https://www.kemhan.go.id/2026/07/10/menhan-tinjau-yonif-tp-932-sunan-bonang-untuk-pastikan-kesiapan-satuan.html",
    "judul": "Menhan Tinjau Yonif TP 932/Sunan Bonang untuk Pastikan Kesiapan Satuan",
@@ -2632,21 +2652,21 @@
    "cabang": "aparat"
   },
   {
-   "id": "f42b7116cd80",
-   "url": "https://tniad.mil.id/sertijab-ketua-korpri-unit-tni-ad-aspers-kasad-tekankan-profesionalisme-dan-netralitas-asn/",
-   "judul": "Sertijab Ketua Korpri Unit TNI AD, Aspers Kasad Tekankan Profesionalisme dan Netralitas ASN",
-   "ringkas": "Jakarta, tniad.mil.id – Asisten Personalia (Aspers) Kasad yang diwakili Paban VI/Bin ASN Spersad memimpin Upacara Serah Terima Jabatan (Sertijab) Ketua Dewan Pengurus Korps Pegawai Republik Indonesia (Korpri) Unit TNI Angkatan...",
-   "tanggal": "2026-07-10",
+   "id": "fc60cf577fdc",
+   "url": "https://tniad.mil.id/bekali-calon-perwira-masa-depan-kasad-tekankan-profesionalisme-integritas-dan-inovasi/",
+   "judul": "Bekali Calon Perwira Masa Depan, Kasad Tekankan Profesionalisme, Integritas, dan Inovasi",
+   "ringkas": "Magelang, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menekankan pentingnya profesionalisme, integritas, dan inovasi sebagai bekal utama bagi calon Perwira Remaja TNI Angkatan Darat dalam...",
+   "tanggal": "2026-07-09",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
-   "id": "8329dbbe1bdd",
-   "url": "https://tniad.mil.id/pimpin-laporan-korps-45-pati-tni-ad-kasad-tekankan-amanah-kepemimpinan/",
-   "judul": "Pimpin Laporan Korps 45 Pati TNI AD, Kasad Tekankan Amanah Kepemimpinan",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan bahwa kenaikan pangkat merupakan amanah kepemimpinan yang harus dijawab dengan peningkatan kualitas pengabdian, profesionalisme, dan integritas....",
-   "tanggal": "2026-07-10",
+   "id": "43e90e4087b5",
+   "url": "https://tniad.mil.id/pastikan-kesiapan-satuan-wakasad-dampingi-menhan-dan-wapang-tni-tinjau-3-sat-tp-di-kodam-iv-diponegoro/",
+   "judul": "Pastikan Kesiapan Satuan, Wakasad Dampingi Menhan dan Wapang TNI Tinjau 3 Sat TP di Kodam IV/Diponegoro",
+   "ringkas": "Kendal, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa mendampingi Menteri Pertahanan Republik Indonesia Jenderal TNI (Hor.) (Purn.) Sjafrie Sjamsoeddin, M.B.A., bersama Wakil Panglima TNI...",
+   "tanggal": "2026-07-09",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -2679,26 +2699,6 @@
    "tanggal": "2026-07-09",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "fc60cf577fdc",
-   "url": "https://tniad.mil.id/bekali-calon-perwira-masa-depan-kasad-tekankan-profesionalisme-integritas-dan-inovasi/",
-   "judul": "Bekali Calon Perwira Masa Depan, Kasad Tekankan Profesionalisme, Integritas, dan Inovasi",
-   "ringkas": "Magelang, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menekankan pentingnya profesionalisme, integritas, dan inovasi sebagai bekal utama bagi calon Perwira Remaja TNI Angkatan Darat dalam...",
-   "tanggal": "2026-07-09",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "43e90e4087b5",
-   "url": "https://tniad.mil.id/pastikan-kesiapan-satuan-wakasad-dampingi-menhan-dan-wapang-tni-tinjau-3-sat-tp-di-kodam-iv-diponegoro/",
-   "judul": "Pastikan Kesiapan Satuan, Wakasad Dampingi Menhan dan Wapang TNI Tinjau 3 Sat TP di Kodam IV/Diponegoro",
-   "ringkas": "Kendal, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa mendampingi Menteri Pertahanan Republik Indonesia Jenderal TNI (Hor.) (Purn.) Sjafrie Sjamsoeddin, M.B.A., bersama Wakil Panglima TNI...",
-   "tanggal": "2026-07-09",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
