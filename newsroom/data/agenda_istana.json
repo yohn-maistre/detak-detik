@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-02T10:57:04+00:00",
+ "diambil": "2026-08-03T12:41:50+00:00",
  "acara": [
+  {
+   "id": "3eadfb13d3ee",
+   "url": "https://setkab.go.id/pm-tailan-anutin-charnvirakul-tiba-di-jakarta-awali-kunjungan-resmi-ke-indonesia/",
+   "judul": "PM Tailan Anutin Charnvirakul Tiba di Jakarta, Awali Kunjungan Resmi ke Indonesia",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-03",
+   "tanggal_terbit": "2026-08-03",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "31",
+   "prov_nama": "DKI Jakarta"
+  },
   {
    "id": "9009a6f2f9ba",
    "url": "https://setkab.go.id/100-000-jemaah-hadiri-zikir-dan-doa-kebangsaan-di-monas-wujud-syukur-atas-kemerdekaan-indonesia/",
@@ -32,6 +50,23 @@
    "audiens": null,
    "topik": [
     "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "205cef92c027",
+   "url": "https://setkab.go.id/presiden-prabowo-bangsa-maju-lahir-dari-elite-yang-bersatu-bukan-yang-terpecah/",
+   "judul": "Presiden Prabowo: Bangsa Maju Lahir dari Elite yang Bersatu, Bukan yang Terpecah",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-07-31",
+   "tanggal_terbit": "2026-07-31",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
    ],
    "venue": null,
    "kota": null,
