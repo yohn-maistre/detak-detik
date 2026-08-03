@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-03T12:45:26.338346+00:00",
- "edisi": 148,
+ "diperbarui": "2026-08-03T22:37:10.706558+00:00",
+ "edisi": 149,
  "pilihan": [
+  {
+   "judul": "Community-based economic adaptation to climate change: Insights from the north coast of Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103347",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengkaji adaptasi ekonomi masyarakat pesisir utara Jawa terhadap perubahan iklim. Relevan bagi pembaca Indonesia karena memberi wawasan konkret tentang ketahanan komunitas pesisir yang rentan dampak iklim.",
+   "kategori": "IKLIM & PESISIR",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103276",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini meneliti warisan kolonial Belanda dan proses dekolonisasi terhadap ekonomi maritim Indonesia. Relevan untuk memahami akar historis keterbelakangan maritim nasional.",
+   "kategori": "SEJARAH MARITIM",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
+   "wadah": "Journal for Nature Conservation",
+   "doi": "10.1016/j.jnc.2026.127392",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini melaporkan keberhasilan translokasi dan regenerasi awal Vatica javanica, meranti endemik Jawa, di Gunung Halimun. Penting bagi upaya konservasi flora spesies langka Indonesia.",
+   "kategori": "KONSERVASI FLORA",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Artikel ini mengulas hambatan pengembangan energi panas bumi Indonesia melalui tinjauan kebijakan untuk cekungan sedimen. Relevan bagi pembaca yang menekuni transisi energi dan pemanfaatan potensi panas bumi nasional.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Kajian ini mengevaluasi parameter radiologi untuk calon lokasi PLNU di Pantai Gosong. Relevan untuk pemantauan publik atas rencana energi nuklir dan dampak keselamatannya di Indonesia.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
+   "wadah": "Renewable and Sustainable Energy Transition",
+   "doi": "10.1016/j.rset.2026.100152",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membandingkan transisi energi sistem kelistrikan Indonesia dengan Filipina dan Vietnam. Relevan memberi pembanding regional bagi kebijakan energi terbarukan nasional.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103321",
+   "tanggal": "2026-12",
+   "alasan": "Studi fenomenologi ini membahas pengalaman komunitas lokal dalam pengembangan pariwisata rural di Borobudur. Relevan bagi pembaca yang menekuni dampak pariwisata berbasis masyarakat di Indonesia.",
+   "kategori": "WISATA & KOMUNITAS",
+   "sejak_edisi": 149
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah ini menelaah batasan dan celah pertanggungjawaban pidana atas kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi pembaruan kebijakan perlindungan anak dan pemahaman sosiologi hukum.",
+   "kategori": "HUKUM & ANAK",
+   "sejak_edisi": 149
+  },
   {
    "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
    "wadah": "International Journal of Sustainable Society",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian merangkum situasi terkini taeniasis di Bali periode 2022 hingga 2025, termasuk penularannya pada manusia. Relevan untuk pemantauan dan pengendalian penyakit parasit yang masih endemik di Bali.",
    "kategori": "KESEHATAN",
    "sejak_edisi": 148
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Makalah mengulas kerangka hukum lintas batas untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Penting bagi pembaca yang memantasi regulasi pengurangan emisi karbon regional Indonesia.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
-   "wadah": "Journal of Development Economics",
-   "doi": "10.1016/j.jdeveco.2026.103877",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian menganalisis dampak Revolusi Hijau terhadap individualisme di Indonesia. Bermanfaat bagi pembaca yang meneliti perubahan sosial masyarakat agraris Indonesia akibat modernisasi pertanian.",
-   "kategori": "MASYARAKAT & AGRARIA",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Studi mengkaji modal sosial dalam membentuk perilaku pemilih di daerah tertinggal Indonesia. Relevan bagi pembaca yang memahami dinamika pemilu dan pengaruh jaringan sosial pada daerah tertinggal Indonesia.",
-   "kategori": "POLITIK & MASYARAKAT",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "How government policy drives manufacturing tax revenue: Evidence from Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103378",
-   "tanggal": "2026-12",
-   "alasan": "Makalah meneliti bagaimana kebijakan pemerintah mendorong penerimaan pajak manufaktur di Indonesia. Relevan untuk evaluasi efektivitas kebijakan fiskal Indonesia terhadap sektor manufaktur dalam negeri.",
-   "kategori": "KEBIJAKAN FISKAL",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini meneliti pirolisis langsung rock asphalt dari Buton, Indonesia, serta mengkarakterisasi produk cair dan peran kalsit. Relevan karena mengkaji potensi sumber daya mineral lokal yang strategis bagi energi nasional dan pembangunan ekonomi wilayah Southeast Sulawesi.",
-   "kategori": "SUMBER DAYA MINERAL",
-   "sejak_edisi": 147
-  },
-  {
-   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
-   "wadah": "International Journal of Medical Microbiology",
-   "doi": "10.1016/j.ijmm.2026.151728",
-   "tanggal": "2026-12",
-   "alasan": "Makalah melaporkan pengobatan sukses onikomikosis non-dermatofit langka akibat Chaetomium spp. dengan kombinasi fluconazole oral dan terbinafine topikal di Indonesia. Relevan sebagai referensi klinis bagi tenaga kesehatan Indonesia menangani infeksi jamur kuku yang jarang terjadi.",
-   "kategori": "KASUS KESEHATAN",
-   "sejak_edisi": 147
-  },
-  {
-   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
-   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
-   "doi": "10.1016/j.pvmrsr.2026.100038",
-   "tanggal": "2026-12",
-   "alasan": "Studi potong lintang mendeteksi virus BVDV pada susu kumpulan dari peternakan sapi perah kecil di Cianjur, Jawa Barat, Indonesia. Relevan untuk memahami penyebaran penyakit ternak yang berdampak langsung pada produktivitas peternak susu lokal dan keamanan pangan.",
-   "kategori": "PETERNAKAN & VIROLOGI",
-   "sejak_edisi": 147
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian menilai keyakinan kesehatan dan keterlambatan pasien pada penderita kanker payudara di Sumatra Barat, Indonesia. Relevan untuk memahami hambatan perilaku masyarakat lokal dalam deteksi dini kanker yang berdampak pada keberhasilan pengobatan.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 147
   }
  ]
 }
