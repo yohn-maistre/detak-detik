@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-03T12:41:50+00:00",
+ "diambil": "2026-08-04T11:37:35+00:00",
  "acara": [
   {
    "id": "3eadfb13d3ee",
@@ -23,6 +23,24 @@
    "kota": null,
    "prov": "31",
    "prov_nama": "DKI Jakarta"
+  },
+  {
+   "id": "98d794006107",
+   "url": "https://setkab.go.id/indonesia-dan-tailan-perkuat-kemitraan-strategis-presiden-prabowo-dan-pm-anutin-saksikan-penunjukan-dokumen-kerja-sama/",
+   "judul": "Indonesia dan Tailan Perkuat Kemitraan Strategis, Presiden Prabowo dan PM Anutin Saksikan Penunjukan Dokumen Kerja Sama",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-03",
+   "tanggal_terbit": "2026-08-03",
+   "audiens": null,
+   "topik": [
+    "luar-negeri",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
   },
   {
    "id": "9009a6f2f9ba",

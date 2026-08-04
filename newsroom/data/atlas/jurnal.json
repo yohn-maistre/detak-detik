@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-03T22:37:10.706558+00:00",
- "edisi": 149,
+ "diperbarui": "2026-08-04T11:42:35.304175+00:00",
+ "edisi": 150,
  "pilihan": [
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Makalah meneliti dampak Revolusi Hijau terhadap individualisme pada masyarakat Indonesia. Relevan untuk pembaca yang ingin memahami perubahan sosial akibat modernisasi pertanian.",
+   "kategori": "PERTANIAN & MASYARAKAT",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian mengkarakterisasi produk cair dari pirolisis aspal batuan di Buton, Indonesia. Penting bagi pembaca yang tertarik pada eksplorasi sumber daya alam dan energi nasional.",
+   "kategori": "SUMBER DAYA ENERGI",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Laporan kasus membahas pengobatan berhasil onikomikosis non-dermatofit langka dari Indonesia. Bermanfaat bagi pembaca yang fokus pada kasus klinis infeksi di Indonesia.",
+   "kategori": "KESEHATAN KLINIS",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
+   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
+   "doi": "10.1016/j.pvmrsr.2026.100038",
+   "tanggal": "2026-12",
+   "alasan": "Studi menyelidiki prevalensi virus diare bovine dalam susu curah dari peternakan sapi perah Cianjur, Jawa Barat. Relevan bagi keamanan peternakan dan kesehatan hewan di Indonesia.",
+   "kategori": "VETERINER & PETERNAKAN",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Riset mengevaluasi keyakinan kesehatan dan keterlambatan pasien penderita kanker payudara di Sumatra Barat. Penting bagi pembaca yang peduli pada deteksi dini kanker di Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Artikel mengulas kerangka hukum transboundary untuk perjanjian penangkapan karbon antara Indonesia dan Singapura. Relevan bagi pembaca yang menangani kebijakan lingkungan regional perubahan iklim.",
+   "kategori": "LINGKUNGAN & KEBIJAKAN",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "Pandemic-induced disruptions and digital constraints in horticultural agribusiness: A case study in Aceh, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103076",
+   "tanggal": "2026-12",
+   "alasan": "Kasus meneliti disrupsi pandemi dan kendala digital pada agribisnis hortikultura di Aceh. Signifikan bagi pembaca tentang ketahanan pangan regional pasca pandemi.",
+   "kategori": "EKONOMI & PERTANIAN",
+   "sejak_edisi": 150
+  },
+  {
+   "judul": "How government policy drives manufacturing tax revenue: Evidence from Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103378",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian menganalisis bagaimana kebijakan pemerintah mendorong pendapatan pajak manufaktur di Indonesia. Penting bagi pembaca yang menangani perpajakan dan kebijakan industri.",
+   "kategori": "KEBIJAKAN FISKAL",
+   "sejak_edisi": 150
+  },
   {
    "judul": "Community-based economic adaptation to climate change: Insights from the north coast of Java, Indonesia",
    "wadah": "Social Sciences &amp; Humanities Open",
@@ -37,78 +109,6 @@
    "alasan": "Artikel ini mengulas hambatan pengembangan energi panas bumi Indonesia melalui tinjauan kebijakan untuk cekungan sedimen. Relevan bagi pembaca yang menekuni transisi energi dan pemanfaatan potensi panas bumi nasional.",
    "kategori": "ENERGI & KEBIJAKAN",
    "sejak_edisi": 149
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Kajian ini mengevaluasi parameter radiologi untuk calon lokasi PLNU di Pantai Gosong. Relevan untuk pemantauan publik atas rencana energi nuklir dan dampak keselamatannya di Indonesia.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 149
-  },
-  {
-   "judul": "Target-based energy transitions in the electricity systems of Southeast Asia: A comparative study of Indonesia, the Philippines, and Vietnam",
-   "wadah": "Renewable and Sustainable Energy Transition",
-   "doi": "10.1016/j.rset.2026.100152",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini membandingkan transisi energi sistem kelistrikan Indonesia dengan Filipina dan Vietnam. Relevan memberi pembanding regional bagi kebijakan energi terbarukan nasional.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 149
-  },
-  {
-   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103321",
-   "tanggal": "2026-12",
-   "alasan": "Studi fenomenologi ini membahas pengalaman komunitas lokal dalam pengembangan pariwisata rural di Borobudur. Relevan bagi pembaca yang menekuni dampak pariwisata berbasis masyarakat di Indonesia.",
-   "kategori": "WISATA & KOMUNITAS",
-   "sejak_edisi": 149
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menelaah batasan dan celah pertanggungjawaban pidana atas kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi pembaruan kebijakan perlindungan anak dan pemahaman sosiologi hukum.",
-   "kategori": "HUKUM & ANAK",
-   "sejak_edisi": 149
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Makalah ini menelaah model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Relevan bagi pembaca yang meminati pengelolaan daerah aliran sungai dan mitigasi kerusakan lingkungan di wilayah Sumatera Barat.",
-   "kategori": "ALAM & DAS",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian membahas reproduksi sosial dan kondisi kerja pekerja nikel di Maluku Utara sebagai bagian dari frontier ekstraktif. Topik ini penting bagi pembaca yang mengikuti dampak industri nikel terhadap masyarakat lokal Indonesia.",
-   "kategori": "TAMBANG & BURUH",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Studi mengukur bioakumulasi timbal pada ikan pesisir Sumatera Selatan serta risiko kesehatannya. Hasilnya memberi dasar pengawasan mutu ikan dan perlindungan kesehatan masyarakat pesisir di Indonesia.",
-   "kategori": "LAUT & PESISIR",
-   "sejak_edisi": 148
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian merangkum situasi terkini taeniasis di Bali periode 2022 hingga 2025, termasuk penularannya pada manusia. Relevan untuk pemantauan dan pengendalian penyakit parasit yang masih endemik di Bali.",
-   "kategori": "KESEHATAN",
-   "sejak_edisi": 148
   }
  ]
 }
