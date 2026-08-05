@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-04T11:37:35+00:00",
+ "diambil": "2026-08-05T11:36:14+00:00",
  "acara": [
+  {
+   "id": "d7429b3bc015",
+   "url": "https://setkab.go.id/presiden-prabowo-instruksikan-percepatan-penanganan-pemadaman-listrik-dan-jaga-stabilitas-harga-bbm/",
+   "judul": "Presiden Prabowo Instruksikan Percepatan Penanganan Pemadaman Listrik dan Jaga Stabilitas Harga BBM",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-04",
+   "tanggal_terbit": "2026-08-04",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "3eadfb13d3ee",
    "url": "https://setkab.go.id/pm-tailan-anutin-charnvirakul-tiba-di-jakarta-awali-kunjungan-resmi-ke-indonesia/",
