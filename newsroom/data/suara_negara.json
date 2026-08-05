@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-05T12:04:10+00:00",
+ "diambil": "2026-08-05T22:51:42+00:00",
  "baris": [
   {
    "id": "9dd673af4f20",
@@ -87,6 +87,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "15579d8fb4cf",
+   "url": "https://www.kemhan.go.id/2026/08/05/menhan-ri-dianugerahi-warga-kehormatan-dan-brevet-kehormatan-korps-marinir.html",
+   "judul": "Menhan RI Dianugerahi Warga Kehormatan dan Brevet Kehormatan Korps Marinir",
+   "ringkas": "Lingga, Kepulauan Riau – Menteri Pertahanan RI Sjafrie Sjamsoeddin menerima anugerah sebagai Warga Kehormatan Korps Marinir sekaligus Brevet Kehormatan Anti...",
+   "tanggal": "2026-08-05",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "c5edcae3989b",
    "url": "https://emedia.dpr.go.id/news/2026/08/05/qris-digunakan-deposit-judol-pemerintah-harus-putuskan-aliran-dana",
    "judul": "QRIS Digunakan Deposit Judol, Pemerintah Harus Putuskan Aliran Dana!",
@@ -141,6 +151,26 @@
    "url": "https://emedia.dpr.go.id/news/2026/08/05/komisi-iii-tak-ada-surpres-pergantian-kapolri-publik-jangan-terpengaruh-isu-menyesatkan",
    "judul": "Komisi III: Tak Ada Surpres Pergantian Kapolri, Publik Jangan Terpengaruh Isu Menyesatkan",
    "ringkas": "PARLEMENTARIA, Jakarta – Ketua Komisi III DPR RI Habiburokhman menegaskan bahwa informasi yang beredar mengenai adanya Surat Presiden (Surpres) kepada DPR RI terkait pergantian Kepala Kepolisian Negara Republik Indonesia (Kapolri) tidak benar. Ia meminta masyarakat tidak mudah te",
+   "tanggal": "2026-08-05",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "a86a1fca5e95",
+   "url": "https://emedia.dpr.go.id/news/2026/08/05/ansari-ajak-masyarakat-pahami-tata-kelola-dana-haji-secara-utuh",
+   "judul": "Ansari Ajak Masyarakat Pahami Tata Kelola Dana Haji secara Utuh",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VIII DPR RI Ansari mengajak masyarakat memahami secara utuh tata kelola dana haji yang dikelola Badan Pengelola Keuangan Haji (BPKH). Menurutnya, pemahaman yang baik penting agar masyarakat tidak mudah terpengaruh isu maupun disinformasi te",
+   "tanggal": "2026-08-05",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "096d7c408d3e",
+   "url": "https://emedia.dpr.go.id/news/2026/08/05/hari-tua-tetap-tenang-asn-setjen-dpr-harus-pandai-kelola-keuangan",
+   "judul": "Hari Tua Tetap Tenang, ASN Setjen DPR Harus Pandai Kelola Keuangan",
+   "ringkas": "PARLEMENTARIA, Jakarta – Badan Urusan Rumah Tangga (BURT) DPR RI mendorong aparatur sipil negara (ASN) untuk meningkatkan literasi keuangan agar mampu mengelola pendapatan secara bijak dan mempersiapkan kondisi finansial di masa depan. Hal tersebut mengemuka dalam Talkshow Financ",
    "tanggal": "2026-08-05",
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
@@ -342,6 +372,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "ce0be246b0c1",
+   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
+   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
+   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
+   "tanggal": "2026-08-04",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "26a8e78d2687",
    "url": "https://gerindra.id/2026/08/04/sriyanto-sidak-sekolah-rakyat-terintegrasi-sragen-dorong-optimalisasi-daya-tampung-1-800-siswa/",
    "judul": "Sriyanto Sidak Sekolah Rakyat Terintegrasi Sragen, Dorong Optimalisasi Daya Tampung 1.800 Siswa",
@@ -450,16 +490,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "ce0be246b0c1",
-   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
-   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
-   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
-   "tanggal": "2026-08-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "314524daba7e",
@@ -730,6 +760,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "9aec51de462d",
+   "url": "https://tniad.mil.id/pimpin-sertijab-dan-alih-kodal-tiga-yonif-kasad-tekankan-penguatan-organisasi-tni-ad/",
+   "judul": "Pimpin Sertijab dan Alih Kodal Tiga Yonif, Kasad Tekankan Penguatan Organisasi TNI AD",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan pentingnya penguatan organisasi TNI Angkatan Darat agar semakin adaptif, profesional, dan siap menghadapi perkembangan lingkungan strategis...",
+   "tanggal": "2026-08-03",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "3eee6070a223",
    "url": "https://gerindra.id/2026/08/03/habiburokhman-minta-kasus-perekaman-spg-di-giias-diproses-hukum/",
    "judul": "Habiburokhman Minta Kasus Perekaman SPG di GIIAS Diproses Hukum",
@@ -838,16 +878,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "9aec51de462d",
-   "url": "https://tniad.mil.id/pimpin-sertijab-dan-alih-kodal-tiga-yonif-kasad-tekankan-penguatan-organisasi-tni-ad/",
-   "judul": "Pimpin Sertijab dan Alih Kodal Tiga Yonif, Kasad Tekankan Penguatan Organisasi TNI AD",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan pentingnya penguatan organisasi TNI Angkatan Darat agar semakin adaptif, profesional, dan siap menghadapi perkembangan lingkungan strategis...",
-   "tanggal": "2026-08-03",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "401cefa20312",
@@ -1043,6 +1073,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "78621f0c3ed0",
+   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
+   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
+   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
+   "tanggal": "2026-07-31",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "9eebb7e213f8",
    "url": "https://gerindra.id/2026/07/31/rokhmat-ardiyan-bawa-listrik-gratis-ke-desa-jambar-siap-perjuangkan-infrastruktur-warga/",
    "judul": "Rokhmat Ardiyan Bawa Listrik Gratis ke Desa Jambar, Siap Perjuangkan Infrastruktur Warga",
@@ -1151,16 +1191,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "78621f0c3ed0",
-   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
-   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
-   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
-   "tanggal": "2026-07-31",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "47ddbe47ecda",
@@ -1410,26 +1440,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "7baa36678f7e",
-   "url": "https://emedia.dpr.go.id/news/2026/07/30/antisipasi-el-nino-dan-kemarau-komisi-iv-dorong-bnpb-orkestrasi-pendataan-ancaman-bencana",
-   "judul": "Antisipasi El Nino dan Kemarau, Komisi IV Dorong BNPB Orkestrasi Pendataan Ancaman Bencana",
-   "ringkas": "PARLEMENTARIA, Jakarta — Wakil Ketua Komisi IV DPR RI, Alex Indra Lukman menekankan pentingnya sistem yang efektif dalam menghadapi potensi dampak beserta potensi dampak fenomena El Nino. Apalagi El Nino beriringan dengan musim kemarau di tahun 2026 ini.",
-   "tanggal": "2026-07-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "6d190eb1f59d",
-   "url": "https://emedia.dpr.go.id/news/2026/07/30/prihatin-gugurnya-petugas-keamanan-jatiluhur-rofik-hananto-usut-tuntas-penuhi-hak-dan-pendidikan-anak-korban",
-   "judul": "Prihatin Gugurnya Petugas Keamanan Jatiluhur, Rofik Hananto: Usut Tuntas, Penuhi Hak dan Pendidikan Anak Korban",
-   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi XIII DPR RI, Rofik Hananto, mendesak aparat penegak hukum untuk mengusut tuntas kasus pembunuhan tragis yang menimpa Sumarna (40), seorang petugas satuan pengamanan (satpam) di kawasan objek vital nasional Waduk Jatiluhur, Kabupaten Purwaka",
-   "tanggal": "2026-07-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
    "id": "1098614fa611",
    "url": "https://gerindra.id/2026/07/30/andi-iwan-aras-desak-penyelesaian-lrt-city-jangan-biarkan-kepercayaan-publik-runtuh/",
    "judul": "Andi Iwan Aras Desak Penyelesaian LRT City, Jangan Biarkan Kepercayaan Publik Runtuh",
@@ -1601,6 +1611,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "956ae725c178",
+   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
+   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
+   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
+   "tanggal": "2026-07-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "f2b2cd971f9a",
    "url": "https://gerindra.id/2026/07/29/sufmi-dasco-ahmad-fasilitasi-penyelesaian-aspirasi-pekerja-pt-sinergi-gula-nusantara/",
    "judul": "Sufmi Dasco Ahmad Fasilitasi Penyelesaian Aspirasi Pekerja PT Sinergi Gula Nusantara",
@@ -1698,16 +1718,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "956ae725c178",
-   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
-   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
-   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
-   "tanggal": "2026-07-29",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "303adc434d2e",
@@ -2756,16 +2766,6 @@
    "url": "https://www.kemhan.go.id/2026/07/09/tim-petembak-setjen-kemhan-raih-juara-i-lomba-menembak-pju-pada-por-kemhan-2026.html",
    "judul": "Tim Petembak Setjen Kemhan Raih Juara I Lomba Menembak PJU pada POR Kemhan 2026",
    "ringkas": "Jakarta – Tim Petembak Sekretariat Jenderal Kementerian Pertahanan (Setjen Kemhan) yang dipimpin Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny...",
-   "tanggal": "2026-07-09",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "811d0f36b373",
-   "url": "https://www.kemhan.go.id/2026/07/09/menhan-ri-tinjau-marshalling-area-brigif-tp-43-muria-dan-yonif-tp-456-satria-poncowati.html",
-   "judul": "Menhan RI Tinjau Marshalling Area Brigif TP 43/Muria dan Yonif TP 456/Satria Poncowati",
-   "ringkas": "Kudus – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan kunjungan kerja dengan meninjau Marshalling Area Brigif TP 43/Muria...",
    "tanggal": "2026-07-09",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
