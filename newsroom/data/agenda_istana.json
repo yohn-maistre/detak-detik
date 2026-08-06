@@ -4,8 +4,42 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-05T11:36:14+00:00",
+ "diambil": "2026-08-06T11:39:19+00:00",
  "acara": [
+  {
+   "id": "87d2752baaee",
+   "url": "https://setkab.go.id/ratusan-ribu-masyarakat-berpartisipasi-dalam-war-undangan-upacara-hut-ke-81-kemerdekaan-ri/",
+   "judul": "Ratusan Ribu Masyarakat Berpartisipasi dalam “War” Undangan Upacara HUT ke-81 Kemerdekaan RI",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c919b4870aac",
+   "url": "https://wapresri.go.id/pastikan-pemulihan-infrastruktur-pascabencana-wapres-tinjau-progres-pembangunan-jembatan-krueng-tingkeum-bireuen/",
+   "judul": "Pastikan Pemulihan Infrastruktur Pascabencana, Wapres Tinjau Progres Pembangunan Jembatan Krueng Tingkeum Bireuen",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "d7429b3bc015",
    "url": "https://setkab.go.id/presiden-prabowo-instruksikan-percepatan-penanganan-pemadaman-listrik-dan-jaga-stabilitas-harga-bbm/",
