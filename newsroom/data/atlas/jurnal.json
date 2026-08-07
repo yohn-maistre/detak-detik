@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-07T01:11:06.569438+00:00",
- "edisi": 155,
+ "diperbarui": "2026-08-07T10:33:40.597569+00:00",
+ "edisi": 156,
  "pilihan": [
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini mengevaluasi kelayakan radiologis lokasi pantai Gosong sebagai calon pembangkit listrik tenaga nuklir. Relevan bagi pembaca Indonesia karena menyentuh perencanaan infrastruktur energi strategis nasional serta aspek keselamatan lingkungan di kawasan pesisir.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengkaji dampak Revolusi Hijau terhadap tingkah laku individualisme masyarakat Indonesia. Relevan bagi pembaca karena menelusuri transformasi sosial pedesaan akibat modernisasi pertanian yang menjadi dasar kebijakan pangan.",
+   "kategori": "MASYARAKAT & AGRARIA",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Karya ini menganalisis pirolisis aspal batuan dari Pulau Buton dan karakterisasi produk cairnya berserta peran mineral kalsit. Relevan bagi pembaca Indonesia karena memberi tajuakan pemanfaatan komoditas aspal lokal untuk diversifikasi energi.",
+   "kategori": "SUMBERDAYA ALAM",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
+   "wadah": "International Journal of Medical Microbiology",
+   "doi": "10.1016/j.ijmm.2026.151728",
+   "tanggal": "2026-12",
+   "alasan": "Laporan kasus ini membahas pengobatan infeksi jamur kuku langka asal Indonesia menggunakan kombinasi obat luar dan oral. Relevan bagi pembaca karena menambah khazanah literatur medis nasional mengenai patogen lokal yang terkonfirmasi.",
+   "kategori": "KESEHATAN KLINIS",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103222",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini meneliti bagaimana modal sosial memengaruhi perilaku pemilih di daerah tertinggal Indonesia. Relevan bagi pembaca karena memberi pemahaman mengenai dinamika politik lokal di wilayah pinggiran menjelang pemilihan umum.",
+   "kategori": "PERILAKU PEMILIH",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini membahas rancangan kerangka hukum lintas batas untuk perjanjian tangkap dan penyimpanan karbon antara Indonesia dan Singapura. Relevan bagi pembaca karena menyinggung komitmen iklim dan kerja sama regional untuk pengurangan emisi gas rumah kaca.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
+   "wadah": "Journal for Nature Conservation",
+   "doi": "10.1016/j.jnc.2026.127392",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini melaporkan keberhasilan pemindahan tumbuh Vatica javanica di kawasan Halimun untuk konservasi. Relevan bagi pembaca Indonesia karena menjadi acalan upaya restorasi ekosistem hutan tropis dalam melindungi flora endemik yang langka.",
+   "kategori": "KONSERVASI FLORA",
+   "sejak_edisi": 156
+  },
+  {
+   "judul": "Affective dimensions of perceived safety for older adults’ mobility in urban Indonesia",
+   "wadah": "Journal of Urban Mobility",
+   "doi": "10.1016/j.urbmob.2026.100264",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengkaji dimensi afektif keselamatan yang dipersepsikan lansia dalam mobilitas perkotaan di Indonesia. Relevan bagi pembaca karena menjadi bahan evaluasi perencanaan transportasi ramah lanjut usia di kota-kota besar Indonesia.",
+   "kategori": "MOBILITAS KOTA",
+   "sejak_edisi": 156
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian fenomenologis ini membuka makna pengalaman masyarakat dalam mengembangkan desa wisata di Borobudur, Indonesia. Relevan bagi pembaca karena melihat pariwisata dari kacamata komunitas lokal, bukan sekadar proyek pemerintah.",
    "kategori": "PARIWISATA & MASYARAKAT",
    "sejak_edisi": 155
-  },
-  {
-   "judul": "Pandemic-induced disruptions and digital constraints in horticultural agribusiness: A case study in Aceh, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103076",
-   "tanggal": "2026-12",
-   "alasan": "Studi kasus ini meneliti dampak pandemi dan kendala digital pada agribisnis hortikultura di Aceh, Indonesia. Relevan bagi pembaca karena mengangkat realitas petani lokal menghadapi krisis kesehatan sekaligus kesenjangan teknologi.",
-   "kategori": "PERTANIAN & EKONOMI",
-   "sejak_edisi": 155
-  },
-  {
-   "judul": "Community-based economic adaptation to climate change: Insights from the north coast of Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103347",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini memberi wawasan adaptasi ekonomi masyarakat terhadap perubahan iklim di pesisir utara Jawa, Indonesia. Relevan bagi pembaca karena pesisir utara Jawa merupakan wilayah padat penduduk yang rawan terdampak perubahan iklim.",
-   "kategori": "IKLIM & PESISIR",
-   "sejak_edisi": 155
-  },
-  {
-   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103276",
-   "tanggal": "2026-12",
-   "alasan": "Kajian ini menelusuri warisan kolonial Belanda dan dekolonisasi ekonomi maritim di Indonesia sebagai peluang yang terlewatkan. Relevan bagi pembaca sebab membingkai sejarah laut Indonesia dalam kacamata dekolonisasi dan partisipasi penduduk pribumi.",
-   "kategori": "SEJARAH & LAUT",
-   "sejak_edisi": 155
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini memaparkan situasi terkini taeniasis di Bali, Indonesia selama 2022–2025. Relevan bagi pembaca karena taeniasis merupakan penyakit parasit yang masih ditemukan di Bali dan erat kaitannya dengan tradisi konsumsi daging babi lokal.",
-   "kategori": "KESEHATAN & PARASITOLOGI",
-   "sejak_edisi": 155
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Makalah ini meneliti model pengendalian kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Relevan bagi pembaca Indonesia karena membahas mitigasi degradasi hutan dan pengelolaan daerah aliran sungai yang menjadi isu lingkungan konkret di kawasan tropis negeri ini.",
-   "kategori": "TATA RUANG & HUTAN",
-   "sejak_edisi": 154
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian membahas reproduksi sosial pekerja nikel di Maluku Utara pada zaman ekspansi smelter. Relevan untuk pembaca karena mengupas dampak frontir kerja tambang terhadap komunitas lokal di pusat industri nikel nasional.",
-   "kategori": "TAMBANG & MASYARAKAT",
-   "sejak_edisi": 154
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian mengukur bioakumulasi timbal pada ikan pesisir Sumatera Selatan serta risiko kesehatannya. Relevan bagi masyarakat pesisir Indonesia yang mengonsumsi ikan sebagian besar protein laut, sekaligus mengingatkan bahaya pencemaran logam berat.",
-   "kategori": "LAUT & PESISIR",
-   "sejak_edisi": 154
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian mengkaji keyakinan kesehatan dan keterlambatan pasien kanker payudara di Sumatera Barat. Relevan bagi Indonesia karena keterlambatan deteksi menjadi penyebab utama angka kematian tinggi pada penyakit tersebut di daerah dan pusat layanan kesehatan.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 154
   }
  ]
 }

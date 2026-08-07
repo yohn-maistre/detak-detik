@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-06T11:39:19+00:00",
+ "diambil": "2026-08-07T10:24:16+00:00",
  "acara": [
   {
    "id": "87d2752baaee",
@@ -35,6 +35,53 @@
    "topik": [
     "infrastruktur"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f972588ba3db",
+   "url": "https://wapresri.go.id/pastikan-penyelesaian-tepat-waktu-dan-berkualitas-wapres-tinjau-pembangunan-jembatan-lumut/",
+   "judul": "Pastikan Penyelesaian Tepat Waktu dan Berkualitas, Wapres Tinjau Pembangunan Jembatan Lumut",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0de3d84d7e0c",
+   "url": "https://wapresri.go.id/tinjau-jembatan-teupin-mane-wapres-tekankan-pembangunan-infrastruktur-berjalan-tepat-mutu-dan-tepat-waktu/",
+   "judul": "Tinjau Jembatan Teupin Mane, Wapres Tekankan Pembangunan Infrastruktur Berjalan Tepat Mutu dan Tepat Waktu",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "de045130cdb9",
+   "url": "https://wapresri.go.id/tinjau-renovasi-sdn-7-jangka-wapres-pastikan-para-siswa-kembali-belajar-dengan-layak-pascabencana/",
+   "judul": "Tinjau Renovasi SDN 7 Jangka, Wapres Pastikan Para Siswa Kembali Belajar dengan Layak Pascabencana",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
