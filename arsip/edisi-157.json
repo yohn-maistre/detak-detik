@@ -1,0 +1,121 @@
+{
+ "edisi": 157,
+ "terbit": "2026-08-07T22:05:34.232826+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-157-02",
+   "judul": "Pastikan Pemulihan Infrastruktur Pascabencana, Wapres Tinjau Progres Pembangunan Jembatan Krueng Tingkeum Bireuen",
+   "skor": 25
+  },
+  {
+   "id": "klp-157-17",
+   "judul": "Waka MPR Dorong Revisi UU TPPO untuk Atasi Kejahatan Perdagangan Orang di Era Digital",
+   "skor": 9
+  },
+  {
+   "id": "klp-157-12",
+   "judul": "Kementerian HAM Tegaskan BPJS Tak Boleh Jadi Dasar Perbedaan Kualitas Layanan Kesehatan",
+   "skor": 10
+  },
+  {
+   "id": "klp-157-06",
+   "judul": "Mensesneg Ungkap Destry Damayanti Masuk Radar Prabowo untuk Calon Gubernur BI Definitif",
+   "skor": 19
+  },
+  {
+   "id": "klp-157-01",
+   "judul": "Febrie Adriansyah Dicecar 20 Pertanyaan oleh Kejagung, Kuasa Hukum: Lanjutan dari Pemeriksaan Awal",
+   "skor": 26
+  },
+  {
+   "id": "klp-157-04",
+   "judul": "Akun X TMC Diretas, Direktorat Siber Polda Metro Jaya Turun Tangan Lakukan Analisis",
+   "skor": 24
+  },
+  {
+   "id": "klp-157-08",
+   "judul": "Perkuat Layanan Berpusat pada Korban, Kemenko Polkam Dukung Implementasi NRM dalam Penanganan TPPO",
+   "skor": 12
+  },
+  {
+   "id": "klp-157-14",
+   "judul": "Kejar Nilai Tambah Ekonomi, Pemerintah Haramkan Ekspor Mentah Bauksit-Tembaga",
+   "skor": 9
+  },
+  {
+   "id": "klp-157-16",
+   "judul": "BPK Dorong 11 Kementerian dan Lembaga Tingkatkan Tata Kelola Pemerintah Usai Raih Opini WTP",
+   "skor": 9
+  },
+  {
+   "id": "klp-157-15",
+   "judul": "Trump batalkan serangan ke Iran dengan syarat kesepakatan nuklir segera tercapai",
+   "skor": 9
+  },
+  {
+   "id": "klp-157-24",
+   "judul": "Bea Cukai Bongkar Siasat Licik Dua WNA India di Bali, 10,1 Kg Ganja Jadi Bukti",
+   "skor": 6
+  },
+  {
+   "id": "klp-157-03",
+   "judul": "Sekolah Adat Hugulama dan SD Jarak Jauh Diberkati, Perluas Pendidikan Papua",
+   "skor": 24
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
