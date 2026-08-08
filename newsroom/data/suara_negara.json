@@ -9,8 +9,49 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-07T22:28:11+00:00",
+ "diambil": "2026-08-08T10:40:17+00:00",
  "baris": [
+  {
+   "id": "6d904cde5736",
+   "url": "https://pks.id/content/pertumbuhan-ekonomi-529-persen-pks-beri-lima-catatan-strategis",
+   "judul": "Pertumbuhan Ekonomi 5,29 Persen, PKS Beri Lima Catatan Strategis",
+   "ringkas": "Ketua DPP PKS Bidang Ekonomi, Keuangan, dan Industri (Ekuin) Handi Risza mengapresiasi pertumbuhan ekonomi Indonesia pada Triwulan II 2026 yang mencapai 5,29 persen secara tahunan (year on year/yoy).",
+   "tanggal": "2026-08-08",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "ae467fec6739",
+   "url": "https://emedia.dpr.go.id/news/2026/08/08/ketut-kariyasa-tak-ada-alasan-lagi-tunda-pembahasan-ruu-masyarakat-adat",
+   "judul": "Ketut Kariyasa: Tak Ada Alasan Lagi Tunda Pembahasan RUU Masyarakat Adat",
+   "ringkas": "PARLEMENTARIA, Jayapura - Anggota Badan Legislasi (Baleg) DPR RI I Ketut Kariyasa Adnyana menegaskan tidak ada lagi alasan untuk menunda penyelesaian pembahasan Rancangan Undang-Undang (RUU) tentang Masyarakat Adat. Menurutnya, regulasi tersebut sangat dibutuhkan untuk memberikan",
+   "tanggal": "2026-08-08",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "490e9c54aebf",
+   "url": "https://emedia.dpr.go.id/news/2026/08/08/bromo-terbakar-legislator-soroti-karhutla-yang-sudah-capai-107-ribu-hektare",
+   "judul": "Bromo Terbakar, Legislator Soroti Karhutla yang Sudah Capai 107 Ribu Hektare",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi IV DPR RI Hindun Anisah mendesak Kementerian Kehutanan (Kemenhut) segera memperkuat langkah antisipasi untuk mencegah meluasnya kebakaran hutan dan lahan (karhutla), menyusul kebakaran yang melanda kawasan konservasi Gunung Bromo, Kabupaten",
+   "tanggal": "2026-08-08",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "134a9b60e9aa",
+   "url": "https://emedia.dpr.go.id/news/2026/08/08/titik-api-terus-berulang-legislator-desak-kemenhut-ubah-strategi-karhutla",
+   "judul": "Titik Api Terus Berulang, Legislator Desak Kemenhut Ubah Strategi Karhutla",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi IV DPR, Usman Husin, meminta Kementerian Kehutanan (Kemenhut) memperkuat langkah pencegahan kebakaran hutan dan lahan (karhutla), khususnya di Sumatera Selatan yang hampir setiap tahun mengalami kejadian serupa saat musim kemarau.",
+   "tanggal": "2026-08-08",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
   {
    "id": "9ca3cd6f7336",
    "url": "https://www.kemhan.go.id/2026/08/07/kemhan-dan-komdigi-perkuat-kolaborasi-literasi-digital-untuk-dukung-program-bela-negara.html",
@@ -758,6 +799,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "e4dca02c1f97",
+   "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
+   "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
+   "ringkas": "Dabo Singkep, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI Angkatan Laut di sela peninjauan Latihan Operasi Laut Gabungan...",
+   "tanggal": "2026-08-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "a2ef4daf5205",
    "url": "https://gerindra.id/2026/08/05/dasco-instruksikan-kader-gerindra-lawan-hoaks-dan-perkuat-konsolidasi-menuju-2029/",
    "judul": "Dasco Instruksikan Kader Gerindra Lawan Hoaks dan Perkuat Konsolidasi Menuju 2029",
@@ -811,16 +862,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "e4dca02c1f97",
-   "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
-   "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
-   "ringkas": "Dabo Singkep, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI Angkatan Laut di sela peninjauan Latihan Operasi Laut Gabungan...",
-   "tanggal": "2026-08-05",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "87c8a8e89d73",
@@ -1008,6 +1049,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "ce0be246b0c1",
+   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
+   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
+   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
+   "tanggal": "2026-08-04",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "26a8e78d2687",
    "url": "https://gerindra.id/2026/08/04/sriyanto-sidak-sekolah-rakyat-terintegrasi-sragen-dorong-optimalisasi-daya-tampung-1-800-siswa/",
    "judul": "Sriyanto Sidak Sekolah Rakyat Terintegrasi Sragen, Dorong Optimalisasi Daya Tampung 1.800 Siswa",
@@ -1116,16 +1167,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "ce0be246b0c1",
-   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
-   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
-   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
-   "tanggal": "2026-08-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "3c5da8bb401f",
@@ -1296,34 +1337,14 @@
    "cabang": "legislatif"
   },
   {
-   "id": "1b54d3ec736c",
-   "url": "https://emedia.dpr.go.id/news/2026/08/03/mercy-barends-komite-independen-penting-jaga-akuntabilitas-perampasan-aset",
-   "judul": "Mercy Barends: Komite Independen Penting Jaga Akuntabilitas Perampasan Aset",
-   "ringkas": "PARLEMENTARIA, Jakarta – Komisi III DPR RI mengkaji usulan pembentukan Komite Perampasan Aset yang bersifat independen dalam pembahasan Rancangan Undang-Undang (RUU) tentang Perampasan Aset. Usulan tersebut mengemuka dalam Rapat Dengar Pendapat Umum (RDPU) bersama para praktisi h",
+   "id": "9aec51de462d",
+   "url": "https://tniad.mil.id/pimpin-sertijab-dan-alih-kodal-tiga-yonif-kasad-tekankan-penguatan-organisasi-tni-ad/",
+   "judul": "Pimpin Sertijab dan Alih Kodal Tiga Yonif, Kasad Tekankan Penguatan Organisasi TNI AD",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan pentingnya penguatan organisasi TNI Angkatan Darat agar semakin adaptif, profesional, dan siap menghadapi perkembangan lingkungan strategis...",
    "tanggal": "2026-08-03",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "53b6f0d36f57",
-   "url": "https://emedia.dpr.go.id/news/2026/08/03/setjen-dpr-apresiasi-ajk-2026-tegaskan-peran-pers-kawal-indonesia-emas-2045",
-   "judul": "Setjen DPR Apresiasi AJK 2026, Tegaskan Peran Pers Kawal Indonesia Emas 2045",
-   "ringkas": "PARLEMENTARIA, Jakarta — ​Pelaksana Tugas (Plt) Sekretaris Jenderal DPR RI Suprihartini menegaskan bahwa pers memiliki peran strategis dalam mengawal perjalanan demokrasi dan mewujudkan visi Indonesia Emas 2045. Media massa yang independen, kritis, dan berimbang merupakan salah s",
-   "tanggal": "2026-08-03",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "65fcdef77c37",
-   "url": "https://emedia.dpr.go.id/news/2026/08/03/rieke-diah-pitaloka-foto-jurnalistik-parlemen-jadi-warisan-sejarah-demokrasi",
-   "judul": "Rieke Diah Pitaloka: Foto Jurnalistik Parlemen Jadi Warisan Sejarah Demokrasi",
-   "ringkas": "​PARLEMENTARIA, Jakarta — Anggota DPR RI Rieke Diah Pitaloka menegaskan peran strategis jurnalis parlemen dalam mengawal demokrasi dan mencatat perjalanan sejarah bangsa. Menurutnya, karya foto yang dihasilkan wartawan parlemen bukan sekadar dokumentasi visual, melainkan warisan ",
-   "tanggal": "2026-08-03",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "3eee6070a223",
@@ -1436,16 +1457,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "9aec51de462d",
-   "url": "https://tniad.mil.id/pimpin-sertijab-dan-alih-kodal-tiga-yonif-kasad-tekankan-penguatan-organisasi-tni-ad/",
-   "judul": "Pimpin Sertijab dan Alih Kodal Tiga Yonif, Kasad Tekankan Penguatan Organisasi TNI AD",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan pentingnya penguatan organisasi TNI Angkatan Darat agar semakin adaptif, profesional, dan siap menghadapi perkembangan lingkungan strategis...",
-   "tanggal": "2026-08-03",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "fb1e8a8368ef",
    "url": "https://tniad.mil.id/hadiri-olahraga-bersama-abituren-akmil-1992-1996-kasad-tekankan-dukung-program-pemerintah/",
    "judul": "Hadiri Olahraga Bersama Abituren Akmil 1992–1996, Kasad Tekankan Dukung Program Pemerintah",
@@ -1527,6 +1538,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "78621f0c3ed0",
+   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
+   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
+   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
+   "tanggal": "2026-07-31",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "9eebb7e213f8",
@@ -1637,16 +1658,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "78621f0c3ed0",
-   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
-   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
-   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
-   "tanggal": "2026-07-31",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "047b19ef9119",
@@ -1917,6 +1928,16 @@
    "partai": "pks"
   },
   {
+   "id": "956ae725c178",
+   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
+   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
+   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
+   "tanggal": "2026-07-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "f2b2cd971f9a",
    "url": "https://gerindra.id/2026/07/29/sufmi-dasco-ahmad-fasilitasi-penyelesaian-aspirasi-pekerja-pt-sinergi-gula-nusantara/",
    "judul": "Sufmi Dasco Ahmad Fasilitasi Penyelesaian Aspirasi Pekerja PT Sinergi Gula Nusantara",
@@ -2014,16 +2035,6 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
-  },
-  {
-   "id": "956ae725c178",
-   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
-   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
-   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
-   "tanggal": "2026-07-29",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "ff9d615d4819",
@@ -2509,17 +2520,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "e5234164f43d",
-   "url": "https://pks.id/content/1200-wni-berhasil-dipulangkan-dari-myanmar-legislator-pks-berantas-sindikat-tppo-hingga-ke-akar-jangan-hanya-menyelamatkan-korban",
-   "judul": "1.200 WNI Berhasil Dipulangkan dari Myanmar, Legislator PKS: Berantas Sindikat TPPO hingga ke Akar, Jangan Hanya Menyelamatkan Korban",
-   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, mengapresiasi keberhasilan pemerintah memulangkan lebih dari 1.200 Warga Negara Indonesia (WNI) yang menjadi korban sindikat online scam di Myanmar. Menurutnya, keberhasilan tersebut merupakan bentuk nyata kehadiran negara dalam m",
-   "tanggal": "2026-07-22",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "7fe1fd58a213",
