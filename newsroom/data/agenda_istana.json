@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-07T10:24:16+00:00",
+ "diambil": "2026-08-08T10:01:33+00:00",
  "acara": [
   {
    "id": "87d2752baaee",
@@ -82,6 +82,38 @@
    "tanggal_terbit": "2026-08-06",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "38b5e88c988d",
+   "url": "https://wapresri.go.id/pastikan-akses-masyarakat-pulih-pascabencana-wapres-tinjau-pembangunan-jembatan-gantung-kendawi/",
+   "judul": "Pastikan Akses Masyarakat Pulih Pascabencana, Wapres Tinjau Pembangunan Jembatan Gantung Kendawi",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "cf1c653f07d6",
+   "url": "https://wapresri.go.id/aksi-spontan-wapres-singgah-di-sd-negeri-11-jangka-sapa-siswa-dan-dorong-perbaikan-sekolah/",
+   "judul": "Aksi Spontan Wapres Singgah di SD Negeri 11 Jangka, Sapa Siswa dan Dorong Perbaikan Sekolah",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-06",
+   "tanggal_terbit": "2026-08-06",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
