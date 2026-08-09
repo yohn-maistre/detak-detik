@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-09T10:41:26+00:00",
+ "diambil": "2026-08-09T22:22:29+00:00",
  "baris": [
   {
    "id": "188d3bef2d93",
@@ -72,6 +72,16 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
+  },
+  {
+   "id": "42dbd281ce55",
+   "url": "https://www.kemhan.go.id/2026/08/09/wamenhan-ri-tinjau-sma-kemala-taruna-bhayangkara-dorong-pembentukan-sdm-unggul-dan-berkarakter.html",
+   "judul": "Wamenhan RI Tinjau SMA Kemala Taruna Bhayangkara, Dorong Pembentukan SDM Unggul dan Berkarakter",
+   "ringkas": "Bogor – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto selaku Gubernur URI mengunjungi SMA Kemala Taruna Bhayangkara...",
+   "tanggal": "2026-08-09",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "6d904cde5736",
@@ -407,6 +417,26 @@
    "cabang": "legislatif"
   },
   {
+   "id": "9460f4782201",
+   "url": "https://tniad.mil.id/tni-ad-dan-empat-pemda-sepakati-pengelolaan-sampah-berbasis-teknologi/",
+   "judul": "TNI AD dan Empat Pemda Sepakati Pengelolaan Sampah Berbasis Teknologi",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat bersama Pemerintah Kota Bekasi, Pemerintah Kota Bogor, Pemerintah Kabupaten Bogor, dan Pemerintah Kota Semarang menyepakati kerja sama pengelolaan sampah berbasis teknologi sebagai langkah mempercepat...",
+   "tanggal": "2026-08-07",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "82f0fea12f72",
+   "url": "https://tniad.mil.id/kasad-ajak-dansat-perkuat-kepedulian-dan-dukung-program-pemerintah/",
+   "judul": "Kasad Ajak Dansat Perkuat Kepedulian dan Dukung Program Pemerintah",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengajak seluruh Komandan Satuan (Dansat) TNI Angkatan Darat untuk memperkuat kepedulian terhadap prajurit, institusi, dan masyarakat, sekaligus...",
+   "tanggal": "2026-08-07",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "9ca3cd6f7336",
    "url": "https://www.kemhan.go.id/2026/08/07/kemhan-dan-komdigi-perkuat-kolaborasi-literasi-digital-untuk-dukung-program-bela-negara.html",
    "judul": "Kemhan dan Komdigi Perkuat Kolaborasi Literasi Digital untuk Dukung Program Bela Negara",
@@ -454,26 +484,6 @@
    "tanggal": "2026-08-07",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9460f4782201",
-   "url": "https://tniad.mil.id/tni-ad-dan-empat-pemda-sepakati-pengelolaan-sampah-berbasis-teknologi/",
-   "judul": "TNI AD dan Empat Pemda Sepakati Pengelolaan Sampah Berbasis Teknologi",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat bersama Pemerintah Kota Bekasi, Pemerintah Kota Bogor, Pemerintah Kabupaten Bogor, dan Pemerintah Kota Semarang menyepakati kerja sama pengelolaan sampah berbasis teknologi sebagai langkah mempercepat...",
-   "tanggal": "2026-08-07",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "82f0fea12f72",
-   "url": "https://tniad.mil.id/kasad-ajak-dansat-perkuat-kepedulian-dan-dukung-program-pemerintah/",
-   "judul": "Kasad Ajak Dansat Perkuat Kepedulian dan Dukung Program Pemerintah",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengajak seluruh Komandan Satuan (Dansat) TNI Angkatan Darat untuk memperkuat kepedulian terhadap prajurit, institusi, dan masyarakat, sekaligus...",
-   "tanggal": "2026-08-07",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -917,6 +927,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "e4dca02c1f97",
+   "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
+   "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
+   "ringkas": "Dabo Singkep, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI Angkatan Laut di sela peninjauan Latihan Operasi Laut Gabungan...",
+   "tanggal": "2026-08-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "83908a9bd793",
    "url": "https://www.kemhan.go.id/2026/08/05/wamenhan-terima-stafsus-menhan-bidang-ekonomi-pertahanan-beserta-tim-danantara.html",
    "judul": "Wamenhan Terima Stafsus Menhan Bidang Ekonomi Pertahanan beserta Tim Danantara",
@@ -944,16 +964,6 @@
    "tanggal": "2026-08-05",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e4dca02c1f97",
-   "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
-   "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
-   "ringkas": "Dabo Singkep, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI Angkatan Laut di sela peninjauan Latihan Operasi Laut Gabungan...",
-   "tanggal": "2026-08-05",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -1212,6 +1222,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "ce0be246b0c1",
+   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
+   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
+   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
+   "tanggal": "2026-08-04",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "87c8a8e89d73",
    "url": "https://www.kemhan.go.id/2026/08/04/kabacadnas-kemhan-gelar-bakti-kesehatan-hari-veteran-nasional-2026-wujud-kepedulian-kepada-para-pejuang-bangsa.html",
    "judul": "Kabacadnas Kemhan Gelar Bakti Kesehatan Hari Veteran Nasional 2026, Wujud Kepedulian Kepada Para Pejuang Bangsa",
@@ -1249,16 +1269,6 @@
    "tanggal": "2026-08-04",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "ce0be246b0c1",
-   "url": "https://tniad.mil.id/prajurit-tni-ad-sumbang-tiga-medali-di-8th-asian-taekwondo-indonesia-open-championships-2026/",
-   "judul": "Prajurit TNI AD Sumbang Tiga Medali di 8th Asian Taekwondo Indonesia Open Championships 2026",
-   "ringkas": "Jakarta, tniad.mil.id – Prajurit TNI Angkatan Darat kembali mengharumkan nama bangsa dengan menyumbangkan tiga medali pada ajang 8th Asian Taekwondo Indonesia Open Championships 2026 yang berlangsung di Tennis Indoor Gelora...",
-   "tanggal": "2026-08-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -1480,16 +1490,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "3c5da8bb401f",
-   "url": "https://www.kemhan.go.id/2026/08/03/menhan-ri-berikan-pembekalan-kepada-peserta-didik-p3md-batch-1-di-kodiklat-tni.html",
-   "judul": "Menhan RI Berikan Pembekalan kepada Peserta Didik P3MD Batch 1 di Kodiklat TNI",
-   "ringkas": "Serpong – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pembekalan kepada peserta didik Program Presiden untuk Pemimpin Masa...",
-   "tanggal": "2026-08-03",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "9aec51de462d",
    "url": "https://tniad.mil.id/pimpin-sertijab-dan-alih-kodal-tiga-yonif-kasad-tekankan-penguatan-organisasi-tni-ad/",
    "judul": "Pimpin Sertijab dan Alih Kodal Tiga Yonif, Kasad Tekankan Penguatan Organisasi TNI AD",
@@ -1497,6 +1497,16 @@
    "tanggal": "2026-08-03",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3c5da8bb401f",
+   "url": "https://www.kemhan.go.id/2026/08/03/menhan-ri-berikan-pembekalan-kepada-peserta-didik-p3md-batch-1-di-kodiklat-tni.html",
+   "judul": "Menhan RI Berikan Pembekalan kepada Peserta Didik P3MD Batch 1 di Kodiklat TNI",
+   "ringkas": "Serpong – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pembekalan kepada peserta didik Program Presiden untuk Pemimpin Masa...",
+   "tanggal": "2026-08-03",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -1673,6 +1683,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "78621f0c3ed0",
+   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
+   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
+   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
+   "tanggal": "2026-07-31",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "bdf5903c8b49",
    "url": "https://www.kemhan.go.id/2026/07/31/sekjen-kemhan-tutup-diklat-sppi-2026-lulusan-sppi-siap-jadi-penggerak-pembangunan-desa-dan-pesisir.html",
    "judul": "Sekjen Kemhan Tutup Diklat SPPI 2026, Lulusan SPPI Siap Jadi Penggerak Pembangunan Desa dan Pesisir",
@@ -1690,16 +1710,6 @@
    "tanggal": "2026-07-31",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "78621f0c3ed0",
-   "url": "https://tniad.mil.id/terima-429-perwira-remaja-dikmapa-pk-wakasad-tekankan-penguatan-sdm-tni-ad-hadapi-tantangan-modern/",
-   "judul": "Terima 429 Perwira Remaja Dikmapa PK, Wakasad Tekankan Penguatan SDM TNI AD Hadapi Tantangan Modern",
-   "ringkas": "JAKARTA, tniad.mil.id – Wakil Kepala Staf TNI Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa memimpin Tradisi Penerimaan 429 Perwira Remaja (Paja) Abituren Pendidikan Pembentukan Perwira Prajurit Karier (Dikmapa PK)...",
-   "tanggal": "2026-07-31",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2020,6 +2030,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "956ae725c178",
+   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
+   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
+   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
+   "tanggal": "2026-07-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "1076da09fbc3",
    "url": "https://www.kemhan.go.id/2026/07/29/menhan-tinjau-marshaling-area-yonif-tp-941-singa-perbangsa-tekankan-pengabdian-prajurit-untuk-rakyat-dan-negara.html",
    "judul": "Menhan Tinjau Marshaling Area Yonif TP 941/Singa Perbangsa, Tekankan Pengabdian Prajurit untuk Rakyat dan Negara",
@@ -2067,16 +2087,6 @@
    "tanggal": "2026-07-29",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "956ae725c178",
-   "url": "https://tniad.mil.id/kemampuan-menulis-di-era-digital-kadispenad-ala-bisa-karena-biasa/",
-   "judul": "Kemampuan Menulis di Era Digital, Kadispenad: Ala Bisa Karena Biasa",
-   "ringkas": "Jakarta, tniad.mil.id – Kemampuan menulis menjadi salah satu kompetensi yang harus terus diasah oleh setiap insan penerangan TNI AD di tengah derasnya arus informasi dan perkembangan teknologi digital. Keterampilan tersebut...",
-   "tanggal": "2026-07-29",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2358,16 +2368,6 @@
    "partai": "pks"
   },
   {
-   "id": "3c2a39d66614",
-   "url": "https://www.kemhan.go.id/2026/07/24/menhan-ri-olahraga-bersama-keluarga-besar-kemhan-perkuat-soliditas-dan-jiwa-korsa.html",
-   "judul": "Menhan RI Olahraga Bersama Keluarga Besar Kemhan, Perkuat Soliditas dan Jiwa Korsa",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin melaksanakan olahraga bersama keluarga besar Kementerian Pertahanan di kawasan Monumen...",
-   "tanggal": "2026-07-24",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "f530b9423136",
    "url": "https://tniad.mil.id/silaturahmi-dengan-ppad-kasad-paparkan-berbagai-inovasi-tni-ad-bagi-prajurit-dan-masyarakat/",
    "judul": "Silaturahmi dengan PPAD, Kasad Paparkan Berbagai Inovasi TNI AD bagi Prajurit dan Masyarakat",
@@ -2385,6 +2385,16 @@
    "tanggal": "2026-07-24",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3c2a39d66614",
+   "url": "https://www.kemhan.go.id/2026/07/24/menhan-ri-olahraga-bersama-keluarga-besar-kemhan-perkuat-soliditas-dan-jiwa-korsa.html",
+   "judul": "Menhan RI Olahraga Bersama Keluarga Besar Kemhan, Perkuat Soliditas dan Jiwa Korsa",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI), Sjafrie Sjamsoeddin melaksanakan olahraga bersama keluarga besar Kementerian Pertahanan di kawasan Monumen...",
+   "tanggal": "2026-07-24",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2430,6 +2440,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "fd276161a135",
+   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
+   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
+   "tanggal": "2026-07-23",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "d8b1d324c184",
@@ -2482,16 +2502,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "fd276161a135",
-   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
-   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
-   "tanggal": "2026-07-23",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "ebe7b99c852a",
    "url": "https://kontras.org/rilis-pers-masyarakat-sipil-indonesia-untuk-solidaritas-kemanusiaan-palestina-mendesak-transparansi-pemerintah-indonesia-atas-deportasi-aktivis-palestina-abdul-karim-raed-miqdad/",
    "judul": "Rilis Pers Masyarakat Sipil Indonesia untuk Solidaritas Kemanusiaan Palestina Mendesak Transparansi Pemerintah Indonesia atas Deportasi Aktivis Palestina Abdul Karim Raed Miqdad",
@@ -2527,46 +2537,6 @@
    "judul": "Wamenhan RI Dilantik sebagai Gubernur Universitas Republik Indonesia",
    "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Marsekal (Purn) Donny Ermawan Taufanto dilantik Presiden Republik Indonesia Prabowo Subianto...",
    "tanggal": "2026-07-22",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "7fe1fd58a213",
-   "url": "https://www.kemhan.go.id/2026/07/21/sekjen-kemhan-hadiri-pengesahan-kerja-sama-pertahanan-ri-dengan-malaysia-dan-turki-di-dpr-ri.html",
-   "judul": "Sekjen Kemhan Hadiri Pengesahan Kerja Sama Pertahanan RI Dengan Malaysia dan Turki di DPR RI",
-   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia, Letnan Jenderal TNI Tri Budi Utomo, mewakili Menteri Pertahanan RI menghadiri Rapat...",
-   "tanggal": "2026-07-21",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "7110db94494f",
-   "url": "https://www.kemhan.go.id/2026/07/21/menhan-ikuti-sidang-kabinet-paripurna-di-istana-negara.html",
-   "judul": "Menhan Ikuti Sidang Kabinet Paripurna di Istana Negara",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Sidang Kabinet Paripurna yang dipimpin Presiden Republik Indonesia Prabowo...",
-   "tanggal": "2026-07-21",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "8cfd51afb038",
-   "url": "https://www.kemhan.go.id/2026/07/21/menhan-tinjau-pengembangan-kawasan-industri-kendaraan-nasional-di-pabrik-mobnas-subang.html",
-   "judul": "Menhan Tinjau Pengembangan Kawasan Industri Kendaraan Nasional Di Pabrik Mobnas Subang",
-   "ringkas": "Subang – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin meninjau pengembangan Kawasan Industri Kendaraan Nasional di Pabrik Mobil Nasional Subang, Jawa...",
-   "tanggal": "2026-07-21",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "8e4a53801483",
-   "url": "https://www.kemhan.go.id/2026/07/21/menhan-ri-bekali-pasis-dikreg-lxviii-seskoad-ta-2026-tekankan-kepemimpinan-strategis.html",
-   "judul": "Menhan RI Bekali Pasis Dikreg LXVIII Seskoad TA 2026, Tekankan Kepemimpinan Strategis",
-   "ringkas": "Bandung – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pembekalan kepada Perwira Siswa Pendidikan Reguler (Pasis Dikreg) LXVIII...",
-   "tanggal": "2026-07-21",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
@@ -2609,6 +2579,46 @@
    "tanggal": "2026-07-21",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "7fe1fd58a213",
+   "url": "https://www.kemhan.go.id/2026/07/21/sekjen-kemhan-hadiri-pengesahan-kerja-sama-pertahanan-ri-dengan-malaysia-dan-turki-di-dpr-ri.html",
+   "judul": "Sekjen Kemhan Hadiri Pengesahan Kerja Sama Pertahanan RI Dengan Malaysia dan Turki di DPR RI",
+   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia, Letnan Jenderal TNI Tri Budi Utomo, mewakili Menteri Pertahanan RI menghadiri Rapat...",
+   "tanggal": "2026-07-21",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "7110db94494f",
+   "url": "https://www.kemhan.go.id/2026/07/21/menhan-ikuti-sidang-kabinet-paripurna-di-istana-negara.html",
+   "judul": "Menhan Ikuti Sidang Kabinet Paripurna di Istana Negara",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Sidang Kabinet Paripurna yang dipimpin Presiden Republik Indonesia Prabowo...",
+   "tanggal": "2026-07-21",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "8cfd51afb038",
+   "url": "https://www.kemhan.go.id/2026/07/21/menhan-tinjau-pengembangan-kawasan-industri-kendaraan-nasional-di-pabrik-mobnas-subang.html",
+   "judul": "Menhan Tinjau Pengembangan Kawasan Industri Kendaraan Nasional Di Pabrik Mobnas Subang",
+   "ringkas": "Subang – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin meninjau pengembangan Kawasan Industri Kendaraan Nasional di Pabrik Mobil Nasional Subang, Jawa...",
+   "tanggal": "2026-07-21",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "8e4a53801483",
+   "url": "https://www.kemhan.go.id/2026/07/21/menhan-ri-bekali-pasis-dikreg-lxviii-seskoad-ta-2026-tekankan-kepemimpinan-strategis.html",
+   "judul": "Menhan RI Bekali Pasis Dikreg LXVIII Seskoad TA 2026, Tekankan Kepemimpinan Strategis",
+   "ringkas": "Bandung – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pembekalan kepada Perwira Siswa Pendidikan Reguler (Pasis Dikreg) LXVIII...",
+   "tanggal": "2026-07-21",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2672,6 +2682,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "e7f2490dd716",
+   "url": "https://tniad.mil.id/jelang-praspa-2026-kasad-hadiri-penutupan-pendidikan-capaja-akademi-tni/",
+   "judul": "Jelang Praspa 2026, Kasad Hadiri Penutupan Pendidikan Capaja Akademi TNI",
+   "ringkas": "Jakarta, tniad.mil.id – Menjelang Upacara Prasetya Perwira (Praspa) Tahun 2026, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Upacara Penutupan Pendidikan Calon Perwira Remaja (Capaja) Taruna Akademi...",
+   "tanggal": "2026-07-16",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "afffe93dac79",
    "url": "https://www.kemhan.go.id/2026/07/16/kemhan-peringati-tahun-baru-hijriah-1-muharam-1448-h-teguhkan-semangat-disiplin-dan-profesional.html",
    "judul": "Kemhan Peringati Tahun Baru Hijriah 1 Muharam 1448 H, Teguhkan Semangat Disiplin dan Profesional",
@@ -2689,16 +2709,6 @@
    "tanggal": "2026-07-16",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e7f2490dd716",
-   "url": "https://tniad.mil.id/jelang-praspa-2026-kasad-hadiri-penutupan-pendidikan-capaja-akademi-tni/",
-   "judul": "Jelang Praspa 2026, Kasad Hadiri Penutupan Pendidikan Capaja Akademi TNI",
-   "ringkas": "Jakarta, tniad.mil.id – Menjelang Upacara Prasetya Perwira (Praspa) Tahun 2026, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Upacara Penutupan Pendidikan Calon Perwira Remaja (Capaja) Taruna Akademi...",
-   "tanggal": "2026-07-16",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2746,16 +2756,6 @@
    "url": "https://www.kemhan.go.id/2026/07/15/menhan-ri-hadiri-alumni-launch-ceremony-dan-the-saf-day-reception.html",
    "judul": "Menhan RI Hadiri Alumni Launch Ceremony dan The SAF Day Reception",
    "ringkas": "Jakarta – Menteri Pertahanan (Menhan RI) Sjafrie Sjamsoeddin menghadiri Alumni Launch Ceremony dan The Singapore Armed Forces (SAF) Day Reception...",
-   "tanggal": "2026-07-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9979b4a33bc8",
-   "url": "https://www.kemhan.go.id/2026/07/15/kemhan-dan-komisi-i-dpr-ri-perkuat-akuntabilitas-pengelolaan-apbn-pertahanan-tahun-2025.html",
-   "judul": "Kemhan dan Komisi I DPR RI Perkuat Akuntabilitas Pengelolaan APBN Pertahanan Tahun 2025",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menghadiri Rapat Kerja Komisi...",
    "tanggal": "2026-07-15",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
