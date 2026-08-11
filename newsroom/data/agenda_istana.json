@@ -4,8 +4,108 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-08T10:01:33+00:00",
+ "diambil": "2026-08-11T10:23:19+00:00",
  "acara": [
+  {
+   "id": "352a47acf27a",
+   "url": "https://setkab.go.id/program-magang-nasional-2026-resmi-dibuka-pemerintah-siapkan-150-ribu-kesempatan-bagi-lulusan-perguruan-tinggi/",
+   "judul": "Program Magang Nasional 2026 Resmi Dibuka, Pemerintah Siapkan 150 Ribu Kesempatan bagi Lulusan Perguruan Tinggi",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-11",
+   "tanggal_terbit": "2026-08-11",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "bc7ca8348246",
+   "url": "https://setkab.go.id/jelang-hut-ke-81-kemerdekaan-ri-tim-upacara-dan-paskibraka-laksanakan-gladi-bersama-di-istana-merdeka/",
+   "judul": "Jelang HUT ke-81 Kemerdekaan RI, Tim Upacara dan Paskibraka Laksanakan Gladi Bersama di Istana Merdeka",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-11",
+   "tanggal_terbit": "2026-08-11",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2bf856131ab2",
+   "url": "https://setkab.go.id/mensesneg-apresiasi-336-ribu-pendaftar-war-ticket-istana-tambah-undangan-hut-ke-81-kemerdekaan-ri-untuk-masyarakat/",
+   "judul": "Mensesneg Apresiasi 336 Ribu Pendaftar “War Ticket”, Istana Tambah Undangan HUT Ke-81 Kemerdekaan RI untuk Masyarakat",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-10",
+   "tanggal_terbit": "2026-08-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4f1c5b03b0a2",
+   "url": "https://setkab.go.id/presiden-prabowo-instruksikan-penanganan-maksimal-karhutla-akibat-el-nino-pemerintah-kerahkan-berbagai-upaya/",
+   "judul": "Presiden Prabowo Instruksikan Penanganan Maksimal Karhutla Akibat El Nino, Pemerintah Kerahkan Berbagai Upaya",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-10",
+   "tanggal_terbit": "2026-08-10",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0e5397ed1937",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-terima-laporan-kemajuan-b50-dan-kesiapan-mandatori-bioetanol/",
+   "judul": "Seskab Teddy: Presiden Prabowo Terima Laporan Kemajuan B50 dan Kesiapan Mandatori Bioetanol",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-08-10",
+   "tanggal_terbit": "2026-08-10",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0a4817609050",
+   "url": "https://setkab.go.id/dari-buku-ajar-hingga-budaya-membaca-presiden-prabowo-perkuat-fondasi-sdm-indonesia/",
+   "judul": "Dari Buku Ajar hingga Budaya Membaca, Presiden Prabowo Perkuat Fondasi SDM Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-07",
+   "tanggal_terbit": "2026-08-07",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "87d2752baaee",
    "url": "https://setkab.go.id/ratusan-ribu-masyarakat-berpartisipasi-dalam-war-undangan-upacara-hut-ke-81-kemerdekaan-ri/",
