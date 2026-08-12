@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-12T11:04:20+00:00",
+ "diambil": "2026-08-12T22:33:28+00:00",
  "baris": [
   {
    "id": "8b278bac3502",
@@ -172,6 +172,36 @@
    "cabang": "legislatif"
   },
   {
+   "id": "d51a85ae0615",
+   "url": "https://emedia.dpr.go.id/news/2026/08/12/puan-pastikan-sidang-14-agustus-tetap-berlangsung-khidmat-dan-penuh-suasana-kebangsaan",
+   "judul": "Puan Pastikan Sidang 14 Agustus Tetap Berlangsung Khidmat dan Penuh Suasana Kebangsaan",
+   "ringkas": "PARLEMENTARIA, Jakarta - Kekhidmatan dan suasana formal akan tetap menjadi perhatian dalam pelaksanaan Sidang Tahunan MPR RI dan Sidang Bersama DPR RI dan DPD RI pada 14 Agustus 2026. Seluruh peserta yang hadir dalam sidang tersebut juga diharapkan dapat menjaga sikap selama rang",
+   "tanggal": "2026-08-12",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "f636eec4ebf7",
+   "url": "https://emedia.dpr.go.id/news/2026/08/12/puan-parlemen-remaja-jadi-sarana-edukasi-politik-generasi-muda",
+   "judul": "Puan: Parlemen Remaja Jadi Sarana Edukasi Politik Generasi Muda",
+   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani menilai program Parlemen Remaja menjadi sarana penting bagi generasi muda untuk mengenal dan memahami kerja parlemen secara langsung. Pengalaman tersebut diharapkan menjadi bekal bagi peserta untuk memahami proses demokrasi seka",
+   "tanggal": "2026-08-12",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "47cd4e2a8f94",
+   "url": "https://emedia.dpr.go.id/news/2026/08/12/m-husni-minta-skema-wakaf-masjid-istiqlal-melalui-saham-dikaji-ketat",
+   "judul": "M. Husni Minta Skema Wakaf Masjid Istiqlal melalui Saham Dikaji Ketat",
+   "ringkas": "PARLEMENTARIA, Jakarta – Rencana pengembangan wakaf Masjid Istiqlal melalui instrumen saham dinilai perlu dikaji secara cermat agar pengelolaan dana umat tidak menghadapi risiko investasi yang berpotensi merugikan. Instrumen syariah dinilai menjadi pilihan yang lebih tepat apabil",
+   "tanggal": "2026-08-12",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
    "id": "d9775ff49d2a",
    "url": "https://gerindra.id/2026/08/12/bahtra-banong-dukung-generasi-qurani-tiga-pesantren-tahfiz-di-kolaka-terima-bantuan-beras/",
    "judul": "Bahtra Banong Dukung Generasi Qurani, Tiga Pesantren Tahfiz di Kolaka Terima Bantuan Beras",
@@ -249,6 +279,28 @@
    "partai": "gerindra"
   },
   {
+   "id": "ec5174271a4e",
+   "url": "https://gerindra.id/2026/08/12/kawal-bantuan-rumah-untuk-warga-novita-wijayanti-cek-program-bsps-di-cilacap/",
+   "judul": "Kawal Bantuan Rumah untuk Warga, Novita Wijayanti Cek Program BSPS di Cilacap",
+   "ringkas": "Anggota Komisi V DPR RI, Novita Wijayanti, meninjau langsung progres pembangunan Program Bantuan Stimulan Perumahan Swadaya (BSPS) di Desa Majingklak, Kecamatan Wanareja, Kabupaten Cilacap, Jumat (7/8/2026). Kunjungan tersebut dilakukan untuk memastikan program pemerintah berjala",
+   "tanggal": "2026-08-12",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "b9935b2f1790",
+   "url": "https://gerindra.id/2026/08/12/bantu-pesantren-di-jember-kawendra-resmikan-ruang-kelas-baru-untuk-santri/",
+   "judul": "Bantu Pesantren di Jember, Kawendra Resmikan Ruang Kelas Baru untuk Santri",
+   "ringkas": "Anggota Komisi VI DPR RI, Kawendra Lukistian, meresmikan ruang kelas baru di Yayasan Pendidikan Baitul Mukminin, Jember, Jawa Timur, Kamis (6/8/2026). Peresmian disaksikan para santri, pengurus yayasan, dan guru. Ruang kelas baru tersebut menjadi bagian dari dukungan terhadap pen",
+   "tanggal": "2026-08-12",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
    "id": "c7b1e5a465b7",
    "url": "https://pks.id/content/pks-proses-hukum-promosi-miras-pakai-hafalan-al-quran-dan-segera-sahkan-ruu-larangan-minol",
    "judul": "PKS: Proses Hukum Promosi Miras Pakai Hafalan Al Quran dan Segera Sahkan RUU Larangan Minol",
@@ -301,6 +353,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "b061711b5fe7",
+   "url": "https://www.kemhan.go.id/2026/08/12/hari-veteran-nasional-2026-menhan-sjafrie-sjamsoeddin-tekankan-nilai-kehormatan.html",
+   "judul": "Hari Veteran Nasional 2026, Menhan Sjafrie Sjamsoeddin Tekankan Nilai Kehormatan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Hari Veteran Nasional Tahun 2026 di Balai Sudirman, Jakarta,...",
+   "tanggal": "2026-08-12",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "0935afc3e99d",
@@ -717,6 +779,26 @@
    "partai": "pks"
   },
   {
+   "id": "627cbea57c7e",
+   "url": "https://kontras.org/ky-tidak-serius-martabat-ma-terancam-tergerus/",
+   "judul": "KY Tidak Serius, Martabat MA Terancam Tergerus",
+   "ringkas": "Pada Jumat, 7 Agustus 2026, Komisi Yudisial (KY) mengumumkan hasil seleksi Wawancara Terbuka Calon Hakim Agung (CHA), Calon Hakim Ad Hoc HAM, Calon Hakim Ad Hoc Tipikor di Mahkamah Agung (MA) Tahun 2026.",
+   "tanggal": "2026-08-11",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "2015dbb7580e",
+   "url": "https://kontras.org/keamanan-masyarakat-bukan-mandat-tni-hentikan-militerisasi-ruang-sipil/",
+   "judul": "Keamanan Masyarakat Bukan Mandat TNI: Hentikan Militerisasi Ruang Sipil",
+   "ringkas": "Koalisi Masyarakat Sipil untuk Reformasi Sektor Keamanan mengecam pernyataan Panglima TNI Jenderal Agus Subiyanto yang mengklaim bertanggung jawab atas keamanan masyarakat di seluruh Indonesia.",
+   "tanggal": "2026-08-11",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "1ce0077574bd",
    "url": "https://www.kemhan.go.id/2026/08/11/menhan-tinjau-yonif-tp-899-bsg-tekankan-prajurit-harus-dekat-dan-dicintai-rakyat-2.html",
    "judul": "Menhan Tinjau Yonif TP 899/BSG, Tekankan Prajurit Harus Dekat dan Dicintai Rakyat",
@@ -1046,36 +1128,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "ae467fec6739",
-   "url": "https://emedia.dpr.go.id/news/2026/08/08/ketut-kariyasa-tak-ada-alasan-lagi-tunda-pembahasan-ruu-masyarakat-adat",
-   "judul": "Ketut Kariyasa: Tak Ada Alasan Lagi Tunda Pembahasan RUU Masyarakat Adat",
-   "ringkas": "PARLEMENTARIA, Jayapura - Anggota Badan Legislasi (Baleg) DPR RI I Ketut Kariyasa Adnyana menegaskan tidak ada lagi alasan untuk menunda penyelesaian pembahasan Rancangan Undang-Undang (RUU) tentang Masyarakat Adat. Menurutnya, regulasi tersebut sangat dibutuhkan untuk memberikan",
-   "tanggal": "2026-08-08",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "490e9c54aebf",
-   "url": "https://emedia.dpr.go.id/news/2026/08/08/bromo-terbakar-legislator-soroti-karhutla-yang-sudah-capai-107-ribu-hektare",
-   "judul": "Bromo Terbakar, Legislator Soroti Karhutla yang Sudah Capai 107 Ribu Hektare",
-   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi IV DPR RI Hindun Anisah mendesak Kementerian Kehutanan (Kemenhut) segera memperkuat langkah antisipasi untuk mencegah meluasnya kebakaran hutan dan lahan (karhutla), menyusul kebakaran yang melanda kawasan konservasi Gunung Bromo, Kabupaten",
-   "tanggal": "2026-08-08",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "134a9b60e9aa",
-   "url": "https://emedia.dpr.go.id/news/2026/08/08/titik-api-terus-berulang-legislator-desak-kemenhut-ubah-strategi-karhutla",
-   "judul": "Titik Api Terus Berulang, Legislator Desak Kemenhut Ubah Strategi Karhutla",
-   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi IV DPR, Usman Husin, meminta Kementerian Kehutanan (Kemenhut) memperkuat langkah pencegahan kebakaran hutan dan lahan (karhutla), khususnya di Sumatera Selatan yang hampir setiap tahun mengalami kejadian serupa saat musim kemarau.",
-   "tanggal": "2026-08-08",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
   },
   {
    "id": "11e875d67ec8",
@@ -1471,6 +1523,16 @@
    "partai": "pks"
   },
   {
+   "id": "2ee8498993d8",
+   "url": "https://kontras.org/audiensi-dan-diseminasi-hasil-catatan-kritis-hari-bhayangkara-polri-2026-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras-dan-komisi-kepolisian-nasional-kompolnas-ri/",
+   "judul": "Audiensi dan Diseminasi Hasil Catatan Kritis Hari Bhayangkara Polri 2026: Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) dan Komisi Kepolisian Nasional (Kompolnas) RI",
+   "ringkas": "Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) melakukan audiensi dan diseminasi Catatan Kritis Hari Bhayangkara Polri 2026 bersama dengan lembaga pengawas eksternal Polri yakni Komisi Kepolisian Nasional (Kompolnas) RI yang bertempat di Kantor Kompolnas RI, Grah",
+   "tanggal": "2026-08-05",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "83908a9bd793",
    "url": "https://www.kemhan.go.id/2026/08/05/wamenhan-terima-stafsus-menhan-bidang-ekonomi-pertahanan-beserta-tim-danantara.html",
    "judul": "Wamenhan Terima Stafsus Menhan Bidang Ekonomi Pertahanan beserta Tim Danantara",
@@ -1509,16 +1571,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "2ee8498993d8",
-   "url": "https://kontras.org/audiensi-dan-diseminasi-hasil-catatan-kritis-hari-bhayangkara-polri-2026-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras-dan-komisi-kepolisian-nasional-kompolnas-ri/",
-   "judul": "Audiensi dan Diseminasi Hasil Catatan Kritis Hari Bhayangkara Polri 2026: Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) dan Komisi Kepolisian Nasional (Kompolnas) RI",
-   "ringkas": "Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) melakukan audiensi dan diseminasi Catatan Kritis Hari Bhayangkara Polri 2026 bersama dengan lembaga pengawas eksternal Polri yakni Komisi Kepolisian Nasional (Kompolnas) RI yang bertempat di Kantor Kompolnas RI, Grah",
-   "tanggal": "2026-08-05",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "26a8e78d2687",
@@ -2083,28 +2135,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "d0647bedbfe6",
-   "url": "https://gerindra.id/2026/07/31/presiden-prabowo-resmikan-akad-massal-62-000-kpr-rumah-subsidi-dan-kur-perumahan-senilai-rp880-miliar/",
-   "judul": "Presiden Prabowo Resmikan Akad Massal 62.000 KPR Rumah Subsidi dan KUR Perumahan Senilai Rp880 Miliar",
-   "ringkas": "Presiden Prabowo Subianto meresmikan Akad Massal 62.000 Unit Kredit Pemilikan Rumah (KPR) Rumah Subsidi dan Kredit Usaha Rakyat (KUR) Perumahan senilai Rp880 miliar yang digelar secara hybrid dan dipusatkan di kawasan Puri Delta City Side Batang, Kabupaten Batang, Jawa Tengah, Ka",
-   "tanggal": "2026-07-31",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
-   "id": "055aa4be4767",
-   "url": "https://gerindra.id/2026/07/31/gerak-cepat-alimudin-kolatlena-salurkan-bantuan-air-bersih-untuk-warga-terdampak-krisis-di-kota-bula/",
-   "judul": "Gerak Cepat Alimudin Kolatlena Salurkan Bantuan Air Bersih untuk Warga Terdampak Krisis di Kota Bula",
-   "ringkas": "Anggota DPR RI Fraksi Partai Gerindra dari Daerah Pemilihan Maluku, F. Alimudin Kolatlena, bergerak cepat merespons krisis air bersih yang melanda Kota Bula dan sejumlah wilayah di Kabupaten Seram Bagian Timur (SBT). Ia menginstruksikan timnya di lapangan untuk segera menyalurkan",
-   "tanggal": "2026-07-31",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
    "id": "e8d68128b938",
    "url": "https://pks.id/content/dukung-larangan-dapur-mbg-gunakan-barang-subsidi-pks-pengawasan-dan-kualitas-layanan-harus-tetap-dijaga",
    "judul": "Dukung Larangan Dapur MBG Gunakan Barang Subsidi, PKS: Pengawasan dan Kualitas Layanan Harus Tetap Dijaga",
@@ -2422,6 +2452,16 @@
    "cabang": "pengawas"
   },
   {
+   "id": "a690d8d089f0",
+   "url": "https://kontras.org/amicus-curiae-untuk-rancapinang-stop-militerisasi-di-ruang-sipil-dan-negara-harus-melindungi-hak-atas-tanah-yang-dimiliki-oleh-masyarakat/",
+   "judul": "Amicus Curiae untuk Rancapinang: Stop Militerisasi di Ruang Sipil dan Negara Harus Melindungi Hak Atas Tanah yang Dimiliki Oleh Masyarakat",
+   "ringkas": "Dalam dokumen Amicus Curiae yang diajukan kepada Pengadilan Tata Usaha Negara (PTUN) Serang, KontraS berpendapat bahwa perkara Rancapinang tidak semata-mata merupakan sengketa administrasi pertanahan, melainkan juga menyangkut pelanggaran hak asasi manusia, perlindungan ruang hid",
+   "tanggal": "2026-07-27",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "f64f16cc226a",
    "url": "https://www.kemhan.go.id/2026/07/27/menhan-sjafrie-terima-penyerahan-ppkh-lahan-batalyon-infanteri-teritorial-pembangunan.html",
    "judul": "Menhan Sjafrie Terima Penyerahan PPKH Lahan Batalyon Infanteri Teritorial Pembangunan",
@@ -2440,16 +2480,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "a690d8d089f0",
-   "url": "https://kontras.org/amicus-curiae-untuk-rancapinang-stop-militerisasi-di-ruang-sipil-dan-negara-harus-melindungi-hak-atas-tanah-yang-dimiliki-oleh-masyarakat/",
-   "judul": "Amicus Curiae untuk Rancapinang: Stop Militerisasi di Ruang Sipil dan Negara Harus Melindungi Hak Atas Tanah yang Dimiliki Oleh Masyarakat",
-   "ringkas": "Dalam dokumen Amicus Curiae yang diajukan kepada Pengadilan Tata Usaha Negara (PTUN) Serang, KontraS berpendapat bahwa perkara Rancapinang tidak semata-mata merupakan sengketa administrasi pertanahan, melainkan juga menyangkut pelanggaran hak asasi manusia, perlindungan ruang hid",
-   "tanggal": "2026-07-27",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "c62efb06292e",
@@ -2512,6 +2542,26 @@
    "cabang": "aparat"
   },
   {
+   "id": "ebe7b99c852a",
+   "url": "https://kontras.org/rilis-pers-masyarakat-sipil-indonesia-untuk-solidaritas-kemanusiaan-palestina-mendesak-transparansi-pemerintah-indonesia-atas-deportasi-aktivis-palestina-abdul-karim-raed-miqdad/",
+   "judul": "Rilis Pers Masyarakat Sipil Indonesia untuk Solidaritas Kemanusiaan Palestina Mendesak Transparansi Pemerintah Indonesia atas Deportasi Aktivis Palestina Abdul Karim Raed Miqdad",
+   "ringkas": "Koalisi Masyarakat Sipil Reformasi Sektor keamanan menyatakan penolakan keras terhadap kebijakan Direktorat Jenderal Pajak (DJP) yang membuka ruang pelibatan Bintara Pembina Desa (Babinsa) TNI dalam pengawasan kepatuhan wajib pajak melalui pembangunan jejaring informasi sampai ti",
+   "tanggal": "2026-07-23",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "dc686d8d3130",
+   "url": "https://kontras.org/putusan-pt-tun-jakarta-perkuat-infrastruktur-impunitas-atas-penyangkalan-perkosaan-massal-mei-1998-oleh-menteri-kebudayaan-koalisi-mengajukan-kasasi/",
+   "judul": "Putusan PT TUN Jakarta Perkuat Infrastruktur Impunitas atas Penyangkalan Perkosaan Massal Mei 1998 oleh Menteri Kebudayaan, Koalisi mengajukan Kasasi",
+   "ringkas": "Jakarta, 23 Juli 2026 – Koalisi Masyarakat Sipil Melawan Impunitas bersama Para Penggugat/Pembanding diantaranya; Marzuki Darusman, Fatia Nadia, Kusmiyati, I. Sandyawan Sumardi, Yayasan Lembaga Bantuan Hukum Indonesia (YLBHI), Perkumpulan Ikatan Pemuda Tionghoa Indonesia (IPTI), ",
+   "tanggal": "2026-07-23",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "d8b1d324c184",
    "url": "https://www.kemhan.go.id/2026/07/23/menhan-sjafrie-hadiri-pelantikan-kepala-bgn-serta-pimpinan-universitas-republik-indonesia-di-istana-negara.html",
    "judul": "Menhan Sjafrie Hadiri Pelantikan Kepala BGN serta Pimpinan Universitas Republik Indonesia di Istana Negara",
@@ -2572,26 +2622,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "ebe7b99c852a",
-   "url": "https://kontras.org/rilis-pers-masyarakat-sipil-indonesia-untuk-solidaritas-kemanusiaan-palestina-mendesak-transparansi-pemerintah-indonesia-atas-deportasi-aktivis-palestina-abdul-karim-raed-miqdad/",
-   "judul": "Rilis Pers Masyarakat Sipil Indonesia untuk Solidaritas Kemanusiaan Palestina Mendesak Transparansi Pemerintah Indonesia atas Deportasi Aktivis Palestina Abdul Karim Raed Miqdad",
-   "ringkas": "Koalisi Masyarakat Sipil Reformasi Sektor keamanan menyatakan penolakan keras terhadap kebijakan Direktorat Jenderal Pajak (DJP) yang membuka ruang pelibatan Bintara Pembina Desa (Babinsa) TNI dalam pengawasan kepatuhan wajib pajak melalui pembangunan jejaring informasi sampai ti",
-   "tanggal": "2026-07-23",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
-   "id": "dc686d8d3130",
-   "url": "https://kontras.org/putusan-pt-tun-jakarta-perkuat-infrastruktur-impunitas-atas-penyangkalan-perkosaan-massal-mei-1998-oleh-menteri-kebudayaan-koalisi-mengajukan-kasasi/",
-   "judul": "Putusan PT TUN Jakarta Perkuat Infrastruktur Impunitas atas Penyangkalan Perkosaan Massal Mei 1998 oleh Menteri Kebudayaan, Koalisi mengajukan Kasasi",
-   "ringkas": "Jakarta, 23 Juli 2026 – Koalisi Masyarakat Sipil Melawan Impunitas bersama Para Penggugat/Pembanding diantaranya; Marzuki Darusman, Fatia Nadia, Kusmiyati, I. Sandyawan Sumardi, Yayasan Lembaga Bantuan Hukum Indonesia (YLBHI), Perkumpulan Ikatan Pemuda Tionghoa Indonesia (IPTI), ",
-   "tanggal": "2026-07-23",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "aea36c67e9c5",
    "url": "https://www.kemhan.go.id/2026/07/22/menhan-ri-terima-kunjungan-perpisahan-dubes-kanada-untuk-indonesia.html",
    "judul": "Menhan RI Terima Kunjungan Perpisahan Dubes Kanada Untuk Indonesia",
@@ -2610,6 +2640,16 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
+  },
+  {
+   "id": "b754e846f11d",
+   "url": "https://kontras.org/rilis-pers-koalisi-masyarakat-sipil-reformasi-sektor-keamanan-hentikan-pelibatan-babinsa-dalam-pengawasan-pajak-kepatuhan-pajak-tidak-boleh-dibangun-melalui-militerisasi-ruang-sipil/",
+   "judul": "Rilis Pers Koalisi Masyarakat Sipil Reformasi sektor keamanan Hentikan Pelibatan Babinsa dalam Pengawasan Pajak: Kepatuhan Pajak Tidak Boleh Dibangun melalui Militerisasi Ruang Sipil",
+   "ringkas": "Koalisi Masyarakat Sipil Reformasi Sektor keamanan menyatakan penolakan keras terhadap kebijakan Direktorat Jenderal Pajak (DJP) yang membuka ruang pelibatan Bintara Pembina Desa (Babinsa) TNI dalam pengawasan kepatuhan wajib pajak melalui pembangunan jejaring informasi sampai ti",
+   "tanggal": "2026-07-21",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "7fe1fd58a213",
@@ -2692,16 +2732,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "b754e846f11d",
-   "url": "https://kontras.org/rilis-pers-koalisi-masyarakat-sipil-reformasi-sektor-keamanan-hentikan-pelibatan-babinsa-dalam-pengawasan-pajak-kepatuhan-pajak-tidak-boleh-dibangun-melalui-militerisasi-ruang-sipil/",
-   "judul": "Rilis Pers Koalisi Masyarakat Sipil Reformasi sektor keamanan Hentikan Pelibatan Babinsa dalam Pengawasan Pajak: Kepatuhan Pajak Tidak Boleh Dibangun melalui Militerisasi Ruang Sipil",
-   "ringkas": "Koalisi Masyarakat Sipil Reformasi Sektor keamanan menyatakan penolakan keras terhadap kebijakan Direktorat Jenderal Pajak (DJP) yang membuka ruang pelibatan Bintara Pembina Desa (Babinsa) TNI dalam pengawasan kepatuhan wajib pajak melalui pembangunan jejaring informasi sampai ti",
-   "tanggal": "2026-07-21",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "7c001cb210ed",
    "url": "https://www.kemhan.go.id/2026/07/20/wamenhan-hadiri-raker-komisi-i-dpr-ri-bahas-persetujuan-hibah-alpalhankam.html",
    "judul": "Wamenhan Hadiri Raker Komisi I DPR RI, Bahas Persetujuan Hibah Alpalhankam",
@@ -2752,14 +2782,14 @@
    "cabang": "aparat"
   },
   {
-   "id": "afffe93dac79",
-   "url": "https://www.kemhan.go.id/2026/07/16/kemhan-peringati-tahun-baru-hijriah-1-muharam-1448-h-teguhkan-semangat-disiplin-dan-profesional.html",
-   "judul": "Kemhan Peringati Tahun Baru Hijriah 1 Muharam 1448 H, Teguhkan Semangat Disiplin dan Profesional",
-   "ringkas": "Jakarta — Kementerian Pertahanan Republik Indonesia memperingati Tahun Baru Hijriah 1 Muharam 1448 H/2026 M di Kemhan RI, Jakarta, pada...",
+   "id": "40b103c519b9",
+   "url": "https://kontras.org/siaran-pers-diskusi-publik-dan-launching-catatan-kritis-draf-ruu-ham-pusat-studi-hukum-dan-kebijakan-pshk-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras/",
+   "judul": "Siaran Pers Diskusi Publik dan Launching Catatan Kritis Draf RUU HAM Pusat Studi Hukum dan Kebijakan (PSHK) & Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS)",
+   "ringkas": "Rabu, 15 Juli 2026 bertempat di STH Indonesia Jentera. Pusat Studi Hukum dan Kebijakan (PSHK) dan Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) bersama-sama menyelenggarakan Launching Catatan Kritis atas RUU HAM dirangkaikan dengan Diskusi Publik yang bertujuan ",
    "tanggal": "2026-07-16",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "e7f2490dd716",
@@ -2770,16 +2800,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "40b103c519b9",
-   "url": "https://kontras.org/siaran-pers-diskusi-publik-dan-launching-catatan-kritis-draf-ruu-ham-pusat-studi-hukum-dan-kebijakan-pshk-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras/",
-   "judul": "Siaran Pers Diskusi Publik dan Launching Catatan Kritis Draf RUU HAM Pusat Studi Hukum dan Kebijakan (PSHK) & Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS)",
-   "ringkas": "Rabu, 15 Juli 2026 bertempat di STH Indonesia Jentera. Pusat Studi Hukum dan Kebijakan (PSHK) dan Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) bersama-sama menyelenggarakan Launching Catatan Kritis atas RUU HAM dirangkaikan dengan Diskusi Publik yang bertujuan ",
-   "tanggal": "2026-07-16",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "22d7c593a8c1",
@@ -2892,16 +2912,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "2d1b2a15ff06",
-   "url": "https://tniad.mil.id/bekali-taruna-akmil-wakasad-tekankan-integritas-dan-kepemimpinan-calon-perwira/",
-   "judul": "Bekali Taruna Akmil, Wakasad Tekankan Integritas dan Kepemimpinan Calon Perwira",
-   "ringkas": "Magelang, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa menekankan pentingnya integritas, kepemimpinan, dan profesionalisme sebagai fondasi utama yang harus dimiliki setiap calon perwira TNI...",
-   "tanggal": "2026-07-01",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "94caa85515fa",
    "url": "https://kontras.org/80-tahun-mengabdi-polri-gagal-reformasi/",
    "judul": "80 Tahun Mengabdi Polri Gagal Reformasi!",
@@ -2932,11 +2942,11 @@
    "cabang": "pengawas"
   },
   {
-   "id": "6433f4635b3c",
-   "url": "https://tniad.mil.id/perkuat-ketahanan-nasional-kasad-dianugerahi-tanda-alumni-kehormatan-lemhannas-ri/",
-   "judul": "Perkuat Ketahanan Nasional, Kasad Dianugerahi Tanda Alumni Kehormatan Lemhannas RI",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dianugerahi Tanda Alumni Kehormatan Lembaga Ketahanan Nasional Republik Indonesia (Lemhannas RI) sebagai bentuk apresiasi atas dedikasi, kepemimpinan,...",
-   "tanggal": "2026-06-30",
+   "id": "2d1b2a15ff06",
+   "url": "https://tniad.mil.id/bekali-taruna-akmil-wakasad-tekankan-integritas-dan-kepemimpinan-calon-perwira/",
+   "judul": "Bekali Taruna Akmil, Wakasad Tekankan Integritas dan Kepemimpinan Calon Perwira",
+   "ringkas": "Magelang, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa menekankan pentingnya integritas, kepemimpinan, dan profesionalisme sebagai fondasi utama yang harus dimiliki setiap calon perwira TNI...",
+   "tanggal": "2026-07-01",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -2952,11 +2962,11 @@
    "cabang": "pengawas"
   },
   {
-   "id": "c53c429d6c14",
-   "url": "https://tniad.mil.id/kasad-kejurnas-judo-piala-kasad-xvi-2026-pecahkan-rekor-jumlah-peserta/",
-   "judul": "Kasad: Kejurnas Judo Piala Kasad XVI 2026 Pecahkan Rekor Jumlah Peserta",
-   "ringkas": "Cilodong, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengungkapkan bahwa Kejuaraan Nasional (Kejurnas) Judo Piala Kasad XVI Tahun 2026 berhasil mencatatkan rekor jumlah peserta terbanyak...",
-   "tanggal": "2026-06-29",
+   "id": "6433f4635b3c",
+   "url": "https://tniad.mil.id/perkuat-ketahanan-nasional-kasad-dianugerahi-tanda-alumni-kehormatan-lemhannas-ri/",
+   "judul": "Perkuat Ketahanan Nasional, Kasad Dianugerahi Tanda Alumni Kehormatan Lemhannas RI",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dianugerahi Tanda Alumni Kehormatan Lembaga Ketahanan Nasional Republik Indonesia (Lemhannas RI) sebagai bentuk apresiasi atas dedikasi, kepemimpinan,...",
+   "tanggal": "2026-06-30",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -2970,6 +2980,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "c53c429d6c14",
+   "url": "https://tniad.mil.id/kasad-kejurnas-judo-piala-kasad-xvi-2026-pecahkan-rekor-jumlah-peserta/",
+   "judul": "Kasad: Kejurnas Judo Piala Kasad XVI 2026 Pecahkan Rekor Jumlah Peserta",
+   "ringkas": "Cilodong, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengungkapkan bahwa Kejuaraan Nasional (Kejurnas) Judo Piala Kasad XVI Tahun 2026 berhasil mencatatkan rekor jumlah peserta terbanyak...",
+   "tanggal": "2026-06-29",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "27d7bba0d595",
@@ -2987,6 +3007,26 @@
    "judul": "Hentikan Militerisasi Ruang Sipil: Kematian Lima Peserta Pelatihan Manajer Koperasi Desa Merah Putih Harus Diusut Tuntas",
    "ringkas": "Koalisi Masyarakat Sipil untuk Reformasi Sektor Keamanan menyampaikan duka cita yang mendalam atas meninggalnya lima calon Manajer Koperasi Desa Merah Putih (KDMP) dalam pelaksanaan pelatihan dasar militer. Tragedi ini merupakan konsekuensi serius dari kebijakan yang sejak awal k",
    "tanggal": "2026-06-27",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "2423d33205de",
+   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-indonesia-juli-2025-juni-2026/",
+   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan Indonesia Juli 2025-Juni 2026",
+   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
+   "tanggal": "2026-06-26",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "85d2bf22b575",
+   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-di-indonesia-juli-2025-juni-2026/",
+   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan di Indonesia Juli 2025 – Juni 2026",
+   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
+   "tanggal": "2026-06-26",
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
@@ -3010,26 +3050,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "2423d33205de",
-   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-indonesia-juli-2025-juni-2026/",
-   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan Indonesia Juli 2025-Juni 2026",
-   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
-   "tanggal": "2026-06-26",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
-   "id": "85d2bf22b575",
-   "url": "https://kontras.org/masih-kejam-dan-tidak-manusiawi-situasi-penyiksaan-di-indonesia-juli-2025-juni-2026/",
-   "judul": "Masih Kejam dan Tidak Manusiawi: Situasi Penyiksaan di Indonesia Juli 2025 – Juni 2026",
-   "ringkas": "Dalam rangka memperingati Hari untuk Mendukung Korban Penyiksaan Sedunia yang jatuh pada tanggal 26 Juni, setiap tahunnya Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) merilis Laporan Penyiksaan. Laporan ini merangkum hasil pemantauan serta dokumentasi KontraS d",
-   "tanggal": "2026-06-26",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "d61c48ecf8ac",
@@ -3072,16 +3092,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "963078b4cb7b",
-   "url": "https://tniad.mil.id/kontingen-garuda-tni-ad-dominasi-kasau-cup-2026-raih-juara-umum-i-dan-iii/",
-   "judul": "Kontingen Garuda TNI AD Dominasi Kasau Cup 2026, Raih Juara Umum I dan III",
-   "ringkas": "Jakarta, tniad.mil.id – Kontingen Pencak Silat Garuda TNI Angkatan Darat kembali menorehkan prestasi membanggakan dengan meraih Juara Umum I pada Kejuaraan Nasional Pencak Silat Kasau Championship 2026 Tingkat Nasional yang...",
-   "tanggal": "2026-06-22",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "d902d9f68e26",
    "url": "https://kontras.org/menggugat-pengabaian-negara-menolak-pemutihan-sejarah-menguatkan-solidaritas-korban/",
    "judul": "Menggugat Pengabaian Negara, Menolak Pemutihan Sejarah, Menguatkan Solidaritas Korban",
@@ -3090,6 +3100,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "963078b4cb7b",
+   "url": "https://tniad.mil.id/kontingen-garuda-tni-ad-dominasi-kasau-cup-2026-raih-juara-umum-i-dan-iii/",
+   "judul": "Kontingen Garuda TNI AD Dominasi Kasau Cup 2026, Raih Juara Umum I dan III",
+   "ringkas": "Jakarta, tniad.mil.id – Kontingen Pencak Silat Garuda TNI Angkatan Darat kembali menorehkan prestasi membanggakan dengan meraih Juara Umum I pada Kejuaraan Nasional Pencak Silat Kasau Championship 2026 Tingkat Nasional yang...",
+   "tanggal": "2026-06-22",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "9599e4e8a4ff",
