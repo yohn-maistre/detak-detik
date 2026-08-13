@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-12T10:33:33+00:00",
+ "diambil": "2026-08-13T22:10:12+00:00",
  "acara": [
+  {
+   "id": "38e191b8f04a",
+   "url": "https://wapresri.go.id/wapres-dorong-usaha-desa-untuk-perluas-pasar-internasional/",
+   "judul": "Wapres Dorong Digitalisasi Usaha Desa untuk Perluas Pasar Internasional",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-13",
+   "tanggal_terbit": "2026-08-13",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "352a47acf27a",
    "url": "https://setkab.go.id/program-magang-nasional-2026-resmi-dibuka-pemerintah-siapkan-150-ribu-kesempatan-bagi-lulusan-perguruan-tinggi/",
