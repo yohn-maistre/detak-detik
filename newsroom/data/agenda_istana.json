@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-14T10:31:08+00:00",
+ "diambil": "2026-08-14T11:01:55+00:00",
  "acara": [
   {
    "id": "0e1fb6f8a879",
@@ -121,6 +121,24 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "8d9190664d89",
+   "url": "https://setkab.go.id/pidato-kenegaraan-pada-sidang-tahunan-mpr-ri-dan-sidang-bersama-dpr-dan-dpd-ri-dalam-rangka-hut-ke-81-kemerdekaan-republik-indonesia/",
+   "judul": "Pidato Kenegaraan pada Sidang Tahunan MPR RI dan Sidang Bersama DPR dan DPD RI dalam rangka HUT ke-81 Kemerdekaan Republik Indonesia, di Gedung Nusantara I Kompleks Perkantoran MPR/DPR/DPD RI, Senayan, Provinsi DKI Jakarta, 14 Agustus 2026",
+   "aktor": "ISTANA",
+   "jenis": "PIDATO",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": "Sidang Tahunan MPR RI dan Sidang Bersama DPR dan DPD RI dalam rangka HUT ke-81 Kemerdekaan Republik Indonesia",
+   "topik": [
+    "hukum"
+   ],
+   "venue": "Gedung Nusantara I Kompleks Perkantoran MPR/DPR/DPD RI",
+   "kota": "Senayan",
+   "prov": "31",
+   "prov_nama": "DKI Jakarta",
+   "lokasi_mentah": "di Gedung Nusantara I Kompleks Perkantoran MPR/DPR/DPD RI, Senayan, Provinsi DKI Jakarta"
   },
   {
    "id": "38e191b8f04a",
