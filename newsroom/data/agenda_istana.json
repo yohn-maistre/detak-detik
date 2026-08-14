@@ -4,8 +4,124 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-13T22:10:12+00:00",
+ "diambil": "2026-08-14T10:31:08+00:00",
  "acara": [
+  {
+   "id": "0e1fb6f8a879",
+   "url": "https://setkab.go.id/presiden-prabowo-sampaikan-sepuluh-langkah-besar-transformasi-indonesia/",
+   "judul": "Presiden Prabowo Sampaikan Sepuluh Langkah Besar Transformasi Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "hukum",
+    "pendidikan",
+    "kesehatan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f2b2af6c201d",
+   "url": "https://setkab.go.id/presiden-prabowo-konsolidasi-pengadaan-pemerintah-berpotensi-hemat-hingga-rp360-triliun/",
+   "judul": "Presiden Prabowo: Konsolidasi Pengadaan Pemerintah Berpotensi Hemat hingga Rp360 Triliun",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "7511b7a6fc1b",
+   "url": "https://setkab.go.id/presiden-prabowo-rapbn-2027-fokus-pada-delapan-program-kerja-prioritas-nasional/",
+   "judul": "Presiden Prabowo: RAPBN 2027 Fokus pada Delapan Program Kerja Prioritas Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": "Delapan Program Kerja Prioritas Nasional",
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0814a4fe3fd6",
+   "url": "https://setkab.go.id/presiden-prabowo-sampaikan-capaian-penguatan-pendidikan-kesehatan-dan-perlindungan-sosial/",
+   "judul": "Presiden Prabowo Sampaikan Capaian Penguatan Pendidikan, Kesehatan, dan Perlindungan Sosial",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2808c7a606db",
+   "url": "https://setkab.go.id/presiden-prabowo-pemerintah-telah-tutup-290-bumn-target-maksimal-300-bumn-akhir-2026/",
+   "judul": "Presiden Prabowo: Pemerintah Telah Tutup 290 BUMN, Target Maksimal 300 BUMN Akhir 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5bc1ecbce68e",
+   "url": "https://setkab.go.id/presiden-prabowo-pemerintah-jalankan-121-kebijakan-transformatif-dalam-21-bulan/",
+   "judul": "Presiden Prabowo: Pemerintah Jalankan 121 Kebijakan Transformatif dalam 21 Bulan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "38e191b8f04a",
    "url": "https://wapresri.go.id/wapres-dorong-usaha-desa-untuk-perluas-pasar-internasional/",

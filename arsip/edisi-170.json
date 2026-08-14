@@ -1,0 +1,121 @@
+{
+ "edisi": 170,
+ "terbit": "2026-08-14T10:30:45.544935+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-170-01",
+   "judul": "Prabowo akan sampaikan pidato kenegaraan  – 'Masyarakat tak lagi menunggu klaim keberhasilan, tapi pengakuan bahwa ada masalah'",
+   "skor": 49
+  },
+  {
+   "id": "klp-170-10",
+   "judul": "Giant Sea Wall Segera Dibangun Demi Amankan Pantura, Prabowo: Jangan Tunggu Bencana Datang",
+   "skor": 9
+  },
+  {
+   "id": "klp-170-16",
+   "judul": "Komeng soal MBG: Semua Program Presiden Bagus, Cuma yang Kerjanya Aja pada Nggak Bener",
+   "skor": 9
+  },
+  {
+   "id": "klp-170-22",
+   "judul": "Prabowo Digitalisasi Bansos, Masyarakat Tak Perlu Lagi Keluar Rp 150 Ribu",
+   "skor": 7
+  },
+  {
+   "id": "klp-170-23",
+   "judul": "Pencarian Korban KMP Putri Yasmin di Selat Lombok Diperluas, Fokus Tiga Titik",
+   "skor": 6
+  },
+  {
+   "id": "klp-170-02",
+   "judul": "Prabowo Usul Perubahan UU Atur Kewarganegaraan Ganda Bagi Diaspora Bertalenta Spesial",
+   "skor": 21
+  },
+  {
+   "id": "klp-170-13",
+   "judul": "Proyek 100 GW PLTS: Prabowo Kejar Target 30 GW Pembangkit Surya Tahun Ini",
+   "skor": 9
+  },
+  {
+   "id": "klp-170-06",
+   "judul": "Prabowo Soroti RI Krisis Dokter Gigi: Kalau Tunggu Lulus Semua, Nunggu 4 Presiden Sesudah Saya",
+   "skor": 12
+  },
+  {
+   "id": "klp-170-11",
+   "judul": "Presiden Prabowo akan Siapkan Dokter Terbang dan Ambulans Udara Bagi Wilayah Pelosok",
+   "skor": 9
+  },
+  {
+   "id": "klp-170-20",
+   "judul": "Bareskrim Gagalkan Penyelundupan 28 Ton Timah ke Malaysia, 2 Orang Tersangka",
+   "skor": 9
+  },
+  {
+   "id": "klp-170-03",
+   "judul": "Menkeu AS Siapkan Sanksi Ekonomi yang Belum Pernah Terjadi Sebelumnya untuk Iran",
+   "skor": 15
+  },
+  {
+   "id": "klp-170-05",
+   "judul": "Kejagung Periksa 6 Saksi Usut Kasus Pencucian Uang Eks Jampidsus Febrie Adriansyah",
+   "skor": 13
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
