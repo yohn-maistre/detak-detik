@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-14T21:50:02+00:00",
+ "diambil": "2026-08-14T22:15:12+00:00",
  "acara": [
   {
    "id": "0e1fb6f8a879",
@@ -150,6 +150,25 @@
    "tanggal_terbit": "2026-08-14",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4c881fca8994",
+   "url": "https://setkab.go.id/pidato-presiden-republik-indonesia-pada-penyampaian-keterangan-pemerintah-atas-ruu-tentang-apbn-tahun-anggaran-2027-beserta-nota-keuangannya-di-depan-rapat-paripurna-dpr-ri-14-agustus-2026/",
+   "judul": "Pidato Presiden Republik Indonesia pada Penyampaian Keterangan Pemerintah Atas RUU tentang APBN Tahun Anggaran 2027 Beserta Nota Keuangannya di Depan Rapat Paripurna DPR RI, 14 Agustus 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "PIDATO",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": "Penyampaian Keterangan Pemerintah Atas RUU tentang APBN Tahun Anggaran 2027 Beserta Nota Keuangannya",
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "hukum"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
