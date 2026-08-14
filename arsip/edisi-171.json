@@ -1,0 +1,121 @@
+{
+ "edisi": 171,
+ "terbit": "2026-08-14T21:49:28.662995+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-171-01",
+   "judul": "Prabowo akan sampaikan pidato kenegaraan  – 'Masyarakat tak lagi menunggu klaim keberhasilan, tapi pengakuan bahwa ada masalah'",
+   "skor": 41
+  },
+  {
+   "id": "klp-171-08",
+   "judul": "Prabowo Fokus 10 Program Tahun Depan: Bursa Komoditas hingga Renovasi Puskesmas",
+   "skor": 12
+  },
+  {
+   "id": "klp-171-16",
+   "judul": "Dana Transfer ke Daerah Naik Jadi Rp 735 T di 2027, Jauh di Bawah Alokasi 2025",
+   "skor": 9
+  },
+  {
+   "id": "klp-171-04",
+   "judul": "Bareskrim Bongkar Judi Online Internasional Modus Pulsa, Nilai Transaksi Capai Rp890 Miliar",
+   "skor": 16
+  },
+  {
+   "id": "klp-171-11",
+   "judul": "Pidato Presiden Mengecewakan PPPK Paruh Waktu, 20 Ribu GTK Siap Bergerak ke Istana",
+   "skor": 12
+  },
+  {
+   "id": "klp-171-02",
+   "judul": "NasDem Respons Prabowo Naikkan Gaji Hakim 280 Persen: Kesejahteraan Harus Sejalan dengan Integritas",
+   "skor": 28
+  },
+  {
+   "id": "klp-171-09",
+   "judul": "Pembahasan Perpres Ojol Segera Final, Dasco: Sisa Satu Pertemuan Lagi",
+   "skor": 12
+  },
+  {
+   "id": "klp-171-03",
+   "judul": "DPR Sambut Usulan Prabowo soal Dwi Kewarganegaraan, Harus Terbatas dan Selektif",
+   "skor": 23
+  },
+  {
+   "id": "klp-171-07",
+   "judul": "Salahgunakan Izin Tinggal Pria Kelahiran Israel Dideportasi dari Bali, Dicekal Selama Lima Tahun",
+   "skor": 12
+  },
+  {
+   "id": "klp-171-10",
+   "judul": "Kebakaran Kawasan Bromo Seluas 1.120 Hektare Padam, Pembukaan Wisata Masih Tunggu Evaluasi",
+   "skor": 12
+  },
+  {
+   "id": "klp-171-14",
+   "judul": "Prabowo Digitalisasi Bansos, Masyarakat Tak Perlu Lagi Keluar Biaya Rp 150 Ribu",
+   "skor": 9
+  },
+  {
+   "id": "klp-171-18",
+   "judul": "Mendikdasmen Mau Renovasi 100 Ribu Sekolah di 2027: Anggaran Masih Kita Usahakan",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

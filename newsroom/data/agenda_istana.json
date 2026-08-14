@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-14T11:01:55+00:00",
+ "diambil": "2026-08-14T21:50:02+00:00",
  "acara": [
   {
    "id": "0e1fb6f8a879",
@@ -139,6 +139,21 @@
    "prov": "31",
    "prov_nama": "DKI Jakarta",
    "lokasi_mentah": "di Gedung Nusantara I Kompleks Perkantoran MPR/DPR/DPD RI, Senayan, Provinsi DKI Jakarta"
+  },
+  {
+   "id": "c46decafaa20",
+   "url": "https://wapresri.go.id/wapres-hadiri-sidang-tahunan-mpr-perkuat-sinergi-dan-kawal-program-prioritas-presiden/",
+   "judul": "Wapres Hadiri Sidang Tahunan MPR, Perkuat Sinergi dan Kawal Program Prioritas Presiden",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-14",
+   "tanggal_terbit": "2026-08-14",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
   },
   {
    "id": "38e191b8f04a",
