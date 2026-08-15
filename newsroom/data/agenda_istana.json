@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-14T22:15:12+00:00",
+ "diambil": "2026-08-15T09:48:10+00:00",
  "acara": [
+  {
+   "id": "e09bbfa9467d",
+   "url": "https://wapresri.go.id/hadiri-pidato-kenegaraan-presiden-wapres-siap-kawal-implementasi-prioritas-rapbn-2027/",
+   "judul": "Hadiri Pidato Kenegaraan Presiden, Wapres Siap Kawal Implementasi Prioritas RAPBN 2027",
+   "aktor": "WAPRES",
+   "jenis": "PIDATO",
+   "tanggal_acara": "2026-08-15",
+   "tanggal_terbit": "2026-08-15",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "0e1fb6f8a879",
    "url": "https://setkab.go.id/presiden-prabowo-sampaikan-sepuluh-langkah-besar-transformasi-indonesia/",
