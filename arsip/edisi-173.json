@@ -1,0 +1,121 @@
+{
+ "edisi": 173,
+ "terbit": "2026-08-15T21:44:36.228867+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-173-01",
+   "judul": "Gempa berkekuatan 7,7 guncang NTT – 47 orang tewas dan 2.000 mengungsi",
+   "skor": 43
+  },
+  {
+   "id": "klp-173-20",
+   "judul": "RUU Perampasan Aset Jadi Prioritas DPR, Pengamat Soroti Pentingnya Partisipasi Publik",
+   "skor": 6
+  },
+  {
+   "id": "klp-173-23",
+   "judul": "SPAI Bantah Prabowo soal Kenaikan Pendapatan Ojol: Hoax",
+   "skor": 6
+  },
+  {
+   "id": "klp-173-05",
+   "judul": "Hamas tanggapi pengumuman Trump, setuju dilucuti asal Israel tarik pasukan dari Gaza",
+   "skor": 12
+  },
+  {
+   "id": "klp-173-21",
+   "judul": "Wapres Mahasiswa Uncen Tertembak, MPM Desak Polda Papua Bertanggungjawab",
+   "skor": 6
+  },
+  {
+   "id": "klp-173-10",
+   "judul": "Pelaku Pelempar Bom Molotov ke Pos Lantas Margorejo Surabaya Terus Diburu, Nekat Beraksi Sendirian",
+   "skor": 9
+  },
+  {
+   "id": "klp-173-17",
+   "judul": "Istana soal Kewarganegaraan Ganda Terbatas: Jika Disetujui Harus Selektif",
+   "skor": 9
+  },
+  {
+   "id": "klp-173-04",
+   "judul": "Abdullah Dukung Perintah Prabowo Berantas Tambang Timah Ilegal, Bongkar Semua Beking",
+   "skor": 12
+  },
+  {
+   "id": "klp-173-13",
+   "judul": "Iran kembali Dituding Serang Kapal BUMN UEA di Selat Hormuz",
+   "skor": 9
+  },
+  {
+   "id": "klp-173-06",
+   "judul": "Persiapan HUT Ke-81 RI, Mensesneg: Sudah 99 Persen, Sisanya Serahkan kepada yang di Atas",
+   "skor": 10
+  },
+  {
+   "id": "klp-173-12",
+   "judul": "Soroti Krisis Kemanusiaan, Massa Aksi di Makassar Tuntut Penghentian Pendropan Militer di Papua",
+   "skor": 9
+  },
+  {
+   "id": "klp-173-14",
+   "judul": "Presiden Korsel Lee Jae Myung Ingin Akhiri Perang dan Bangun Perdamaian dengan Korut",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-15T09:48:10+00:00",
+ "diambil": "2026-08-15T21:45:01+00:00",
  "acara": [
   {
    "id": "e09bbfa9467d",
@@ -18,6 +18,21 @@
    "topik": [
     "ekonomi"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "75806666acba",
+   "url": "https://wapresri.go.id/wapres-kukuhkan-paskibraka-tingkat-pusat-2026-siap-laksanakan-tugas-pada-hut-ke-81-ri/",
+   "judul": "Wapres Kukuhkan Paskibraka Tingkat Pusat 2026, Siap Laksanakan Tugas pada HUT ke-81 RI",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-15",
+   "tanggal_terbit": "2026-08-15",
+   "audiens": "HUT ke-81 RI",
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
