@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-16T10:30:05+00:00",
+ "diambil": "2026-08-16T22:13:29+00:00",
  "baris": [
   {
    "id": "c760c9fb84b4",
@@ -270,6 +270,26 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "1dc6ca10e068",
+   "url": "https://tniad.mil.id/kasad-apresiasi-penerbang-demo-udara-hut-ke-81-ri/",
+   "judul": "Kasad Apresiasi Penerbang Demo Udara HUT ke-81 RI",
+   "ringkas": "JAKARTA, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., memberikan apresiasi kepada para penerbang yang terlibat dalam demo udara rangkaian peringatan Hari Ulang Tahun (HUT) ke-81...",
+   "tanggal": "2026-08-16",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3540a1640987",
+   "url": "https://tniad.mil.id/tni-ad-dan-us-army-tingkatkan-interoperabilitas-melalui-latma-ksatria-warrior-2026/",
+   "judul": "TNI AD dan US Army Tingkatkan Interoperabilitas Melalui Latma Ksatria Warrior 2026",
+   "ringkas": "BATURAJA, tniad.mil.id – TNI Angkatan Darat (TNI AD) dan United States Army (US Army) meningkatkan interoperabilitas dan profesionalisme prajurit melalui Latihan Bersama (Latma) Ksatria Warrior 2026 yang resmi dibuka di...",
+   "tanggal": "2026-08-16",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "76b2c30a0684",
