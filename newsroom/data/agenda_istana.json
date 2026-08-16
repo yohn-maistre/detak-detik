@@ -4,8 +4,63 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-15T21:45:01+00:00",
+ "diambil": "2026-08-16T09:49:52+00:00",
  "acara": [
+  {
+   "id": "c9ed98aca57b",
+   "url": "https://setkab.go.id/pembangunan-posko-terpadu-hingga-percepatan-rehab-rekon-pemerintah-perkuat-sinergi-penanganan-pascagempa-ntt/",
+   "judul": "Pembangunan Posko Terpadu hingga Percepatan Rehab-Rekon, Pemerintah Perkuat Sinergi Penanganan Pascagempa NTT",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-16",
+   "tanggal_terbit": "2026-08-16",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "53",
+   "prov_nama": "Nusa Tenggara Timur"
+  },
+  {
+   "id": "4fd097a36770",
+   "url": "https://setkab.go.id/sejak-awal-gempa-arahan-presiden-prabowo-ditindaklanjuti-pengerahan-bantuan-dan-ribuan-personel/",
+   "judul": "Sejak Awal Gempa, Arahan Presiden Prabowo Ditindaklanjuti Pengerahan Bantuan dan Ribuan Personel",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-16",
+   "tanggal_terbit": "2026-08-16",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "199fe6f81fae",
+   "url": "https://setkab.go.id/pengiriman-logistik-hingga-kolaborasi-lintas-sektor-pemerintah-gerak-cepat-tangani-pascagempa-di-ntt/",
+   "judul": "Pengiriman Logistik Hingga Kolaborasi Lintas Sektor, Pemerintah Gerak Cepat Tangani Pascagempa di NTT",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-16",
+   "tanggal_terbit": "2026-08-16",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "luar-negeri",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "53",
+   "prov_nama": "Nusa Tenggara Timur"
+  },
   {
    "id": "e09bbfa9467d",
    "url": "https://wapresri.go.id/hadiri-pidato-kenegaraan-presiden-wapres-siap-kawal-implementasi-prioritas-rapbn-2027/",
