@@ -4,8 +4,38 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-16T09:49:52+00:00",
+ "diambil": "2026-08-17T10:03:57+00:00",
  "acara": [
+  {
+   "id": "20291e147492",
+   "url": "https://wapresri.go.id/momen-peringatan-detik-detik-proklamasi-di-istana-merdeka-wapres-motivasi-pemuda-berkontribusi-untuk-bangsa/",
+   "judul": "Momen Peringatan Detik-Detik Proklamasi di Istana Merdeka, Wapres Motivasi Pemuda Berkontribusi untuk Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "117bf249ca65",
+   "url": "https://wapresri.go.id/hadiri-upacara-peringatan-detik-detik-proklamasi-wapres-kenakan-busana-adat-ntt/",
+   "judul": "Hadiri Upacara Peringatan Detik-Detik Proklamasi, Wapres Kenakan Busana Adat NTT",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "c9ed98aca57b",
    "url": "https://setkab.go.id/pembangunan-posko-terpadu-hingga-percepatan-rehab-rekon-pemerintah-perkuat-sinergi-penanganan-pascagempa-ntt/",
@@ -60,6 +90,21 @@
    "kota": null,
    "prov": "53",
    "prov_nama": "Nusa Tenggara Timur"
+  },
+  {
+   "id": "7ee91b7942df",
+   "url": "https://wapresri.go.id/jelang-hut-ke-81-kemerdekaan-ri-wapres-gibran-hadiri-ziarah-nasional-dan-renungan-suci/",
+   "judul": "Jelang HUT Ke-81 Kemerdekaan RI, Wapres Gibran Hadiri Ziarah Nasional dan Renungan Suci",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-16",
+   "tanggal_terbit": "2026-08-16",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
   },
   {
    "id": "e09bbfa9467d",
