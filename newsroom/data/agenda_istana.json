@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-17T10:03:57+00:00",
+ "diambil": "2026-08-17T21:50:21+00:00",
  "acara": [
   {
    "id": "20291e147492",
@@ -25,6 +25,21 @@
    "id": "117bf249ca65",
    "url": "https://wapresri.go.id/hadiri-upacara-peringatan-detik-detik-proklamasi-wapres-kenakan-busana-adat-ntt/",
    "judul": "Hadiri Upacara Peringatan Detik-Detik Proklamasi, Wapres Kenakan Busana Adat NTT",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9075d6b3dd28",
+   "url": "https://wapresri.go.id/wapres-hadiri-upacara-penurunan-bendera-sang-merah-putih-momentum-perkuat-semangat-kebangsaan/",
+   "judul": "Wapres Hadiri Upacara Penurunan Bendera Sang Merah Putih, Momentum Perkuat Semangat Kebangsaan",
    "aktor": "WAPRES",
    "jenis": "KUNJUNGAN",
    "tanggal_acara": "2026-08-17",

@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-17T10:07:02.487573+00:00",
- "edisi": 176,
+ "diperbarui": "2026-08-17T21:52:32.751092+00:00",
+ "edisi": 177,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Membahas insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Penting bagi pembuat kebijakan dan pelaku bisnis untuk mendorong keberlanjutan ekonomi dan lingkungan di tanah air.",
+   "kategori": "EKONOMI HIJAU",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Mengevaluasi potensi lokasi pembangunan pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia, dari aspek radiologis. Relevan bagi masyarakat dan pembuat kebijakan dalam memahami implikasi keamanan dan lingkungan proyek energi nasional.",
+   "kategori": "ENERGI & LINGKUNGAN",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji pirolisis langsung aspal batu dari Buton, Indonesia, termasuk karakterisasi produk cairnya. Penelitian ini penting untuk optimalisasi pemanfaatan sumber daya alam Buton sebagai energi alternatif.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka penalaran berbasis kasus dengan grafik pengetahuan untuk rekomendasi putusan pidana di Indonesia. Inovasi ini berpotensi meningkatkan efisiensi dan konsistensi sistem peradilan pidana nasional.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Mengusulkan model pengendalian untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Penting untuk pengelolaan hutan yang berkelanjutan dan mitigasi bencana alam di wilayah tersebut.",
+   "kategori": "LINGKUNGAN & HUTAN",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia untuk menjembatani kesenjangan digital di daerah terpencil. Studi ini krusial untuk pemerataan akses layanan publik di seluruh wilayah.",
+   "kategori": "PEMERINTAHAN DIGITAL",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Mengembangkan strategi berbasis nexus untuk reklamasi lahan pasca-tambang menjadi sawah di Kalimantan Timur, Indonesia. Studi ini penting untuk keberlanjutan lingkungan dan ekonomi masyarakat lokal.",
+   "kategori": "REKLAMASI LAHAN",
+   "sejak_edisi": 177
+  },
+  {
+   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103321",
+   "tanggal": "2026-12",
+   "alasan": "Mengungkap pengalaman masyarakat dalam pengembangan pariwisata pedesaan di Borobudur, Indonesia. Studi ini penting untuk memahami dampak sosial pariwisata dan mendukung pembangunan berkelanjutan.",
+   "kategori": "PARIWISATA BUDAYA",
+   "sejak_edisi": 177
+  },
   {
    "judul": "Community-based economic adaptation to climate change: Insights from the north coast of Java, Indonesia",
    "wadah": "Social Sciences &amp; Humanities Open",
@@ -37,78 +109,6 @@
    "alasan": "Menjelajahi kerangka hukum transnasional untuk perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Studi ini krusial untuk pengembangan kebijakan iklim, kerja sama regional, serta potensi ekonomi rendah karbon Indonesia.",
    "kategori": "KEBIJAKAN IKLIM INTERNASIONAL",
    "sejak_edisi": 176
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji situasi terkini mengenai penyakit Taeniasis di Bali dari tahun 2022 hingga 2025. Penelitian ini sangat relevan untuk upaya pencegahan, pengendalian penyakit parasit, dan menjaga kesehatan masyarakat serta pariwisata di Bali.",
-   "kategori": "KESEHATAN REGIONAL",
-   "sejak_edisi": 176
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Mendokumentasikan keberhasilan tahap awal penanaman kembali spesies pohon langka Vatica javanica ssp. javanica di Gunung Halimun, Jawa Barat. Studi ini penting untuk strategi konservasi flora endemik Indonesia dan restorasi ekosistem hutan yang terancam.",
-   "kategori": "KONSERVASI SPESIES LANGKA",
-   "sejak_edisi": 176
-  },
-  {
-   "judul": "Proposing a literacy model for early prevention of multiplayer game addiction and cyberbullying risk in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103436",
-   "tanggal": "2026-12",
-   "alasan": "Mengusulkan model literasi untuk pencegahan dini kecanduan game daring dan risiko perundungan siber di Indonesia. Penelitian ini relevan untuk melindungi generasi muda dari dampak negatif teknologi dan mempromosikan penggunaan internet yang sehat.",
-   "kategori": "LITERASI DIGITAL",
-   "sejak_edisi": 176
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Menyelidiki bagaimana modal sosial (bonding, bridging, linking) memengaruhi perilaku pemilih di wilayah kurang berkembang di Indonesia. Studi ini penting untuk memahami dinamika partisipasi politik, pembangunan demokrasi, dan pemberdayaan masyarakat lokal.",
-   "kategori": "POLITIK LOKAL",
-   "sejak_edisi": 176
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Meneliti hambatan dan tinjauan kebijakan pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen. Ini relevan untuk memahami strategi energi bersih dan keberlanjutan nasional.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 175
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Mengidentifikasi faktor penentu organisasi berkinerja tinggi dalam mempercepat pendaftaran tanah di Indonesia. Studi ini penting untuk memahami efektivitas reformasi birokrasi dan pelayanan publik.",
-   "kategori": "KEBIJAKAN PUBLIK",
-   "sejak_edisi": 175
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti reproduksi sosial pekerja nikel di Maluku Utara, Indonesia, dalam konteks industri ekstraktif. Ini relevan untuk memahami dampak sosial dan ketenagakerjaan dari sektor pertambangan nasional.",
-   "kategori": "INDUSTRI & MASYARAKAT",
-   "sejak_edisi": 175
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Menilai kontaminasi timbal pada ikan pesisir di Sumatera Selatan, mencakup bioakumulasi dan risiko kesehatan. Relevan untuk keamanan pangan, kesehatan masyarakat, dan perlindungan lingkungan laut.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 175
   }
  ]
 }
