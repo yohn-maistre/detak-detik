@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-17T21:50:21+00:00",
+ "diambil": "2026-08-18T09:56:58+00:00",
  "acara": [
   {
    "id": "20291e147492",
@@ -41,6 +41,71 @@
    "url": "https://wapresri.go.id/wapres-hadiri-upacara-penurunan-bendera-sang-merah-putih-momentum-perkuat-semangat-kebangsaan/",
    "judul": "Wapres Hadiri Upacara Penurunan Bendera Sang Merah Putih, Momentum Perkuat Semangat Kebangsaan",
    "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0dbffadc59ed",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-upacara-penurunan-bendera-merah-putih-di-istana-merdeka-tegaskan-semangat-kebersamaan-di-hut-ke-81-kemerdekaan-ri/",
+   "judul": "Presiden Prabowo Pimpin Upacara Penurunan Bendera Merah Putih di Istana Merdeka, Tegaskan Semangat Kebersamaan di HUT ke-81 Kemerdekaan RI",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "41e79c5269cf",
+   "url": "https://setkab.go.id/di-hari-kemerdekaan-harapan-tumbuh-dari-pengungsian-reok/",
+   "judul": "Di Hari Kemerdekaan, Harapan Tumbuh dari Pengungsian Reok",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "09e9c63d5650",
+   "url": "https://setkab.go.id/di-tengah-peringatan-hut-ke-81-kemerdekaan-ri-presiden-prabowo-pimpin-doa-bagi-warga-terdampak-bencana/",
+   "judul": "Di Tengah Peringatan HUT ke-81 Kemerdekaan RI, Presiden Prabowo Pimpin Doa bagi Warga Terdampak Bencana",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-17",
+   "tanggal_terbit": "2026-08-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dee6b1eefa02",
+   "url": "https://setkab.go.id/khidmat-dan-penuh-makna-presiden-prabowo-pimpin-upacara-detik-detik-proklamasi-di-istana-merdeka/",
+   "judul": "Khidmat dan Penuh Makna, Presiden Prabowo Pimpin Upacara Detik-Detik Proklamasi di Istana Merdeka",
+   "aktor": "PRESIDEN",
    "jenis": "KUNJUNGAN",
    "tanggal_acara": "2026-08-17",
    "tanggal_terbit": "2026-08-17",
@@ -122,6 +187,23 @@
    "prov_nama": null
   },
   {
+   "id": "bb368978307f",
+   "url": "https://setkab.go.id/pimpin-ziarah-nasional-dan-renungan-suci-presiden-prabowo-teguhkan-tekad-lanjutkan-perjuangan-pahlawan/",
+   "judul": "Pimpin Ziarah Nasional dan Renungan Suci, Presiden Prabowo Teguhkan Tekad Lanjutkan Perjuangan Pahlawan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-16",
+   "tanggal_terbit": "2026-08-16",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
    "id": "e09bbfa9467d",
    "url": "https://wapresri.go.id/hadiri-pidato-kenegaraan-presiden-wapres-siap-kawal-implementasi-prioritas-rapbn-2027/",
    "judul": "Hadiri Pidato Kenegaraan Presiden, Wapres Siap Kawal Implementasi Prioritas RAPBN 2027",
@@ -152,6 +234,23 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "6fdca18d7ab6",
+   "url": "https://setkab.go.id/hari-kedua-pasca-gempa-ntt-seskab-teddy-bantuan-logistik-terus-didatangkan-pastikan-kebutuhan-masyarakat-terdampak-terpenuhi/",
+   "judul": "Hari Kedua Pasca Gempa NTT, Seskab Teddy: Bantuan Logistik Terus Didatangkan, Pastikan Kebutuhan Masyarakat Terdampak Terpenuhi",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-15",
+   "tanggal_terbit": "2026-08-15",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "53",
+   "prov_nama": "Nusa Tenggara Timur"
   },
   {
    "id": "0e1fb6f8a879",
