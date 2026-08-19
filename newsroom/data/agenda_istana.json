@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-18T09:56:58+00:00",
+ "diambil": "2026-08-19T09:56:57+00:00",
  "acara": [
+  {
+   "id": "d8643527ce9b",
+   "url": "https://setkab.go.id/253-ton-logistik-dikirim-ke-ntt/",
+   "judul": "Hari Kelima Pascabencana, Pemerintah Kirim 65 Ton Logistik ke NTT",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-19",
+   "tanggal_terbit": "2026-08-19",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "20291e147492",
    "url": "https://wapresri.go.id/momen-peringatan-detik-detik-proklamasi-di-istana-merdeka-wapres-motivasi-pemuda-berkontribusi-untuk-bangsa/",
