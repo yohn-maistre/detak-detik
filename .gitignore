@@ -15,3 +15,5 @@ __pycache__/
 
 # local screenshot dropzone (Yose drops these for visual context; never pushed)
 docs/screenshots/
+# Redundant local snapshot; source is already preserved in Git history.
+detak-detik-8-10.zip
