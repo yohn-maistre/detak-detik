@@ -4,8 +4,59 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-19T09:56:57+00:00",
+ "diambil": "2026-08-20T09:57:54+00:00",
  "acara": [
+  {
+   "id": "f6e2f1f172c6",
+   "url": "https://wapresri.go.id/tinjau-dampak-gempa-di-kabupaten-sikka-wapres-tekankan-keselamatan-dan-kebutuhan-dasar-warga-harus-jadi-prioritas/",
+   "judul": "Tinjau Dampak Gempa di Kabupaten Sikka, Wapres Tekankan Keselamatan dan Kebutuhan Dasar Warga Harus Jadi Prioritas",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-20",
+   "tanggal_terbit": "2026-08-20",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "37ba9439265e",
+   "url": "https://wapresri.go.id/pastikan-pendidikan-tetap-berjalan-pascabencana-wapres-tinjau-sd-inpres-lxxvi-wairklau/",
+   "judul": "Pastikan Pendidikan Tetap Berjalan Pascabencana, Wapres Tinjau SD Inpres LXXVI Wairklau",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-20",
+   "tanggal_terbit": "2026-08-20",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3a075c944097",
+   "url": "https://wapresri.go.id/bertolak-ke-ntt-wapres-gandeng-mahasiswa-turut-berperan-dalam-penanganan-bencana/",
+   "judul": "Bertolak ke NTT, Wapres Gandeng Mahasiswa Turut Berperan Dalam Penanganan Bencana",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-20",
+   "tanggal_terbit": "2026-08-20",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "d8643527ce9b",
    "url": "https://setkab.go.id/253-ton-logistik-dikirim-ke-ntt/",

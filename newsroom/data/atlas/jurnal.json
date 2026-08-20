@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-18T10:02:10.366548+00:00",
- "edisi": 178,
+ "diperbarui": "2026-08-20T10:15:45.317601+00:00",
+ "edisi": 182,
  "pilihan": [
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Makalah ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia. Penting bagi pembaca untuk memahami efektivitas dan tantangan pemerintah dalam menjembatani kesenjangan digital di daerah terpencil Indonesia.",
+   "kategori": "KEBIJAKAN DIGITAL",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini menelaah batasan dan celah hukum pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi masyarakat dan penegak hukum untuk memahami perlindungan anak dalam konteks hukum Indonesia.",
+   "kategori": "HUKUM & SOSIAL",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Model Kebijakan Dividen pada Bank Pembangunan Daerah di Indonesia dengan Ukuran Perusahaan Sebagai Moderasi",
+   "wadah": "Journal of Business &amp; Banking",
+   "doi": "10.14414/jbb.v15i01.5538",
+   "tanggal": "2026-12-2",
+   "alasan": "Studi ini menganalisis model kebijakan dividen pada Bank Pembangunan Daerah di Indonesia. Ini memberikan wawasan tentang praktik keuangan lembaga perbankan yang vital bagi pembangunan ekonomi di berbagai provinsi Indonesia.",
+   "kategori": "EKONOMI REGIONAL",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini menilai keyakinan kesehatan dan keterlambatan pasien kanker payudara di Sumatera Barat, Indonesia. Informasi ini krusial untuk merancang intervensi kesehatan yang sensitif budaya dan efektif di daerah tersebut.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
+   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
+   "doi": "10.1016/j.pvmrsr.2026.100038",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini menginvestigasi virus diare sapi (BVDV) pada peternakan sapi perah rakyat di Cianjur, Jawa Barat, Indonesia. Penting untuk kesehatan ternak dan ketahanan pangan nasional, khususnya di sektor peternakan kecil.",
+   "kategori": "PETERNAKAN & PANGAN",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini membahas strategi pengelolaan lahan pasca-tambang batu bara di Kalimantan Timur, Indonesia. Ini penting untuk keberlanjutan lingkungan dan ekonomi masyarakat di wilayah pertambangan.",
+   "kategori": "LINGKUNGAN & PERTAMBANGAN",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103321",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini mengungkapkan pengalaman komunitas dalam mengembangkan pariwisata pedesaan di Borobudur, Indonesia. Relevan untuk memahami model pengembangan pariwisata berkelanjutan yang melibatkan masyarakat lokal.",
+   "kategori": "PARIWISATA KOMUNITAS",
+   "sejak_edisi": 182
+  },
+  {
+   "judul": "Community-based economic adaptation to climate change: Insights from the north coast of Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103347",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini menganalisis adaptasi ekonomi berbasis komunitas terhadap perubahan iklim di pesisir utara Jawa, Indonesia. Penting untuk strategi mitigasi dan adaptasi masyarakat rentan terhadap dampak perubahan iklim.",
+   "kategori": "IKLIM & SOSIAL",
+   "sejak_edisi": 182
+  },
   {
    "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
    "wadah": "Unconventional Resources",
@@ -37,78 +109,6 @@
    "alasan": "Menyelidiki bagaimana modal sosial memengaruhi perilaku pemilih di daerah tertinggal Indonesia. Ini penting untuk memahami dinamika politik lokal dan partisipasi masyarakat dalam demokrasi Indonesia.",
    "kategori": "SOSIAL POLITIK",
    "sejak_edisi": 178
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti kontaminasi timbal pada ikan pesisir di Sumatera Selatan, termasuk akumulasi dan risiko kesehatan. Ini krusial bagi keamanan pangan laut dan kesehatan masyarakat pesisir Indonesia.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 178
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji kondisi kerja dan reproduksi sosial pekerja nikel di Maluku Utara, Indonesia, dalam industri ekstraktif. Penelitian ini penting untuk memahami dampak sosial ekonomi tambang dan kesejahteraan pekerja di Indonesia.",
-   "kategori": "SOSIAL EKONOMI",
-   "sejak_edisi": 178
-  },
-  {
-   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103276",
-   "tanggal": "2026-12",
-   "alasan": "Meninjau sejarah dan warisan kolonial Belanda terhadap dekolonisasi ekonomi maritim di Indonesia. Studi ini penting untuk memahami akar masalah dan potensi pengembangan sektor maritim Indonesia saat ini.",
-   "kategori": "SEJARAH & MARITIM",
-   "sejak_edisi": 178
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti keberhasilan pembentukan awal pohon Vatica javanica di Gunung Halimun, Jawa Barat. Ini penting untuk upaya konservasi spesies endemik dan pelestarian hutan di Indonesia.",
-   "kategori": "KEANEKARAGAMAN HAYATI",
-   "sejak_edisi": 178
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Membahas insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Penting bagi pembuat kebijakan dan pelaku bisnis untuk mendorong keberlanjutan ekonomi dan lingkungan di tanah air.",
-   "kategori": "EKONOMI HIJAU",
-   "sejak_edisi": 177
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Mengevaluasi potensi lokasi pembangunan pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia, dari aspek radiologis. Relevan bagi masyarakat dan pembuat kebijakan dalam memahami implikasi keamanan dan lingkungan proyek energi nasional.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 177
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji pirolisis langsung aspal batu dari Buton, Indonesia, termasuk karakterisasi produk cairnya. Penelitian ini penting untuk optimalisasi pemanfaatan sumber daya alam Buton sebagai energi alternatif.",
-   "kategori": "SUMBER DAYA ALAM",
-   "sejak_edisi": 177
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Mengembangkan kerangka penalaran berbasis kasus dengan grafik pengetahuan untuk rekomendasi putusan pidana di Indonesia. Inovasi ini berpotensi meningkatkan efisiensi dan konsistensi sistem peradilan pidana nasional.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 177
   }
  ]
 }
