@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-21T09:58:58+00:00",
+ "diambil": "2026-08-21T21:48:56+00:00",
  "acara": [
   {
    "id": "d45e9e2f6d17",
@@ -27,6 +27,53 @@
    "judul": "Akses Sulit Dijangkau, Wapres Tinjau Langsung Kondisi Warga Kampung Waso dengan Sepeda Motor",
    "aktor": "WAPRES",
    "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f7b8e8818e0a",
+   "url": "https://wapresri.go.id/tinjau-sman-2-sambi-rampas-wapres-minta-percepatan-pemulihan-fasilitas-pendidikan-pascagempa/",
+   "judul": "Tinjau SMAN 2 Sambi Rampas, Wapres Minta Percepatan Pemulihan Fasilitas Pendidikan Pascagempa",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2cff00a5ff74",
+   "url": "https://wapresri.go.id/pastikan-bantuan-menjangkau-seluruh-titik-terdampak-bencana-wapres-kunjungi-kabupaten-manggarai/",
+   "judul": "Pastikan Bantuan Menjangkau Seluruh Titik Terdampak Bencana, Wapres Kunjungi Kabupaten Manggarai",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f31504066035",
+   "url": "https://wapresri.go.id/salat-jumat-bersama-warga-terdampak-gempa-di-manggarai-wapres-doakan-ntt-segera-pulih/",
+   "judul": "Salat Jumat Bersama Warga Terdampak Gempa di Manggarai, Wapres Doakan NTT Segera Pulih",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
    "tanggal_acara": "2026-08-21",
    "tanggal_terbit": "2026-08-21",
    "audiens": null,

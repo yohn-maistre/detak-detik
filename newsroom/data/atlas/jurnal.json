@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-20T21:55:52.816172+00:00",
- "edisi": 183,
+ "diperbarui": "2026-08-21T21:51:00.889602+00:00",
+ "edisi": 185,
  "pilihan": [
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Mengevaluasi tapak radiologi untuk rencana pembangunan pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia. Penting untuk analisis keamanan dan kelayakan proyek infrastruktur energi besar di masa depan.",
+   "kategori": "ENERGI & KEAMANAN",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Menyelidiki hubungan antara Revolusi Hijau dan peningkatan individualisme di masyarakat Indonesia. Relevan untuk memahami perubahan sosial-budaya dan dampaknya terhadap struktur masyarakat pedesaan Indonesia.",
+   "kategori": "SOSIAL & SEJARAH",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka kerja berbasis pengetahuan untuk rekomendasi putusan pidana dalam sistem hukum Indonesia. Penting untuk inovasi di sektor peradilan, mendukung pengambilan keputusan yudisial yang lebih efisien dan konsisten.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Menganalisis pengumpulan zakat di Indonesia, termasuk kerangka hukum dan transformasi digitalnya. Relevan untuk memahami peran lembaga keagamaan dalam ekonomi, kesejahteraan sosial, dan adaptasi teknologi di Indonesia.",
+   "kategori": "AGAMA & EKONOMI",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.101968",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti kondisi pekerja nikel dan reproduksi sosial di sektor industri ekstraktif Maluku Utara, Indonesia. Studi ini menyoroti dampak sosial-ekonomi industri pertambangan terhadap komunitas dan tenaga kerja lokal.",
+   "kategori": "INDUSTRI & MASYARAKAT",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Merumuskan strategi pemanfaatan lahan pascatambang sebagai sawah di Kalimantan Timur, Indonesia. Studi ini krusial untuk rehabilitasi lingkungan, ketahanan pangan, dan pembangunan berkelanjutan di area bekas pertambangan.",
+   "kategori": "LINGKUNGAN & TATA GUNA LAHAN",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103321",
+   "tanggal": "2026-12",
+   "alasan": "Mengungkap pengalaman komunitas dalam pengembangan pariwisata pedesaan di Borobudur, Indonesia. Studi ini krusial untuk pemahaman mendalam tentang dampak pariwisata terhadap masyarakat lokal dan warisan budaya.",
+   "kategori": "PARIWISATA & BUDAYA",
+   "sejak_edisi": 185
+  },
+  {
+   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100320",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis kerangka hukum transnasional perjanjian penangkapan dan penyimpanan karbon antara Indonesia-Singapura. Penting untuk memahami diplomasi lingkungan dan upaya Indonesia dalam mitigasi perubahan iklim global.",
+   "kategori": "KEBIJAKAN & DIPLOMASI",
+   "sejak_edisi": 185
+  },
   {
    "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
    "wadah": "Toxicology Reports",
@@ -37,78 +109,6 @@
    "alasan": "Karya ini mengkarakterisasi produk cair dari pirolisis aspal batu Buton dan peran kalsit di dalamnya. Relevan bagi pembaca karena mengkaji pemanfaatan mineral lanjutan dari cadangan lokal yang banyak ditemukan di Sulawesi Tenggara.",
    "kategori": "SUMBER DAYA ENERGI",
    "sejak_edisi": 183
-  },
-  {
-   "judul": "Taeniasis in Bali, Indonesia: The current situation, 2022–2025",
-   "wadah": "Parasitology International",
-   "doi": "10.1016/j.parint.2026.103313",
-   "tanggal": "2026-12",
-   "alasan": "Artikel ini mengulas kondisi terkini taeniasis di Bali hingga 2025, mencakup penularan dan prevalensinya. Relevan bagi pembaca karena menyoroti penyakit parasit yang masih menjadi empuk kesehatan dari pola konsumsi lokal di wilayah pariwisata.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "Successful treatment of rare non-dermatophyte onychomycosis caused by Chaetomium spp. with oral fluconazole and topical terbinafine combination – A case report from Indonesia and literature review",
-   "wadah": "International Journal of Medical Microbiology",
-   "doi": "10.1016/j.ijmm.2026.151728",
-   "tanggal": "2026-12",
-   "alasan": "Laporan kasus menggambarkan pengobatan jamur kuku non-dermatofit rahasia dengan kombinasi obat yang berhasil. Relevan bagi pembaca karena menambah referensi penanganan infeksi langka yang muncul di tenaga kesehatan Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "The association between dietary patterns and depression symptoms among adolescents: A cross-sectional study in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103413",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian menganalisis pola makan remaja yang dikaitkan dengan gejala depresi lintas sektor. Relevan karena mengangkat masalah kesehatan mental remaja yang sering luput dari perhatian kebijakan gizi nasional.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103276",
-   "tanggal": "2026-12",
-   "alasan": "Tulisan ini menelusuri warisan kolonial dan peluang dekolonisasi pada ekonomi maritim Indonesia. Relevan bagi pembaca yang menarik perubahan sektor kelautan, sejarah yang membentuk dinamika kebijakan bahari nasional.",
-   "kategori": "EKONOMI MARITIM",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Makalah ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia. Penting bagi pembaca untuk memahami efektivitas dan tantangan pemerintah dalam menjembatani kesenjangan digital di daerah terpencil Indonesia.",
-   "kategori": "KEBIJAKAN DIGITAL",
-   "sejak_edisi": 182
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Penelitian ini menelaah batasan dan celah hukum pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Relevan bagi masyarakat dan penegak hukum untuk memahami perlindungan anak dalam konteks hukum Indonesia.",
-   "kategori": "HUKUM & SOSIAL",
-   "sejak_edisi": 182
-  },
-  {
-   "judul": "Model Kebijakan Dividen pada Bank Pembangunan Daerah di Indonesia dengan Ukuran Perusahaan Sebagai Moderasi",
-   "wadah": "Journal of Business &amp; Banking",
-   "doi": "10.14414/jbb.v15i01.5538",
-   "tanggal": "2026-12-2",
-   "alasan": "Studi ini menganalisis model kebijakan dividen pada Bank Pembangunan Daerah di Indonesia. Ini memberikan wawasan tentang praktik keuangan lembaga perbankan yang vital bagi pembangunan ekonomi di berbagai provinsi Indonesia.",
-   "kategori": "EKONOMI REGIONAL",
-   "sejak_edisi": 182
-  },
-  {
-   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
-   "wadah": "MethodsX",
-   "doi": "10.1016/j.mex.2026.104035",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini menilai keyakinan kesehatan dan keterlambatan pasien kanker payudara di Sumatera Barat, Indonesia. Informasi ini krusial untuk merancang intervensi kesehatan yang sensitif budaya dan efektif di daerah tersebut.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 182
   }
  ]
 }
