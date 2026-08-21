@@ -4,8 +4,38 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-20T21:53:48+00:00",
+ "diambil": "2026-08-21T09:58:58+00:00",
  "acara": [
+  {
+   "id": "d45e9e2f6d17",
+   "url": "https://wapresri.go.id/di-posko-golo-cenggo-kabupaten-manggarai-wapres-apresiasi-keterlibatan-anak-muda-dalam-penanganan-bencana-di-flores/",
+   "judul": "Di Posko Golo Cenggo Kabupaten Manggarai, Wapres Apresiasi Keterlibatan Anak Muda dalam Penanganan Bencana di Flores",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c84bc48fb1c4",
+   "url": "https://wapresri.go.id/akses-sulit-dijangkau-wapres-tinjau-langsung-kondisi-warga-kampung-waso-dengan-sepeda-motor/",
+   "judul": "Akses Sulit Dijangkau, Wapres Tinjau Langsung Kondisi Warga Kampung Waso dengan Sepeda Motor",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "f6e2f1f172c6",
    "url": "https://wapresri.go.id/tinjau-dampak-gempa-di-kabupaten-sikka-wapres-tekankan-keselamatan-dan-kebutuhan-dasar-warga-harus-jadi-prioritas/",
