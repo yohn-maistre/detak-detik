@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-21T21:48:56+00:00",
+ "diambil": "2026-08-22T09:49:21+00:00",
  "acara": [
   {
    "id": "d45e9e2f6d17",
@@ -78,6 +78,23 @@
    "tanggal_terbit": "2026-08-21",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5f6b75315bd3",
+   "url": "https://wapresri.go.id/hadiri-pembukaan-kki-2026-ibu-selvi-dorong-umkm-terdampak-bencana-bangkit-dan-perluas-pasar/",
+   "judul": "Hadiri Pembukaan KKI 2026, Ibu Selvi Dorong UMKM Terdampak Bencana Bangkit dan Perluas Pasar",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-21",
+   "tanggal_terbit": "2026-08-21",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
