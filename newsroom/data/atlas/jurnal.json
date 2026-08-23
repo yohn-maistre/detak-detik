@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-21T21:51:00.889602+00:00",
- "edisi": 185,
+ "diperbarui": "2026-08-23T09:53:19.955047+00:00",
+ "edisi": 188,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Makalah ini meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Relevan bagi pembaca untuk memahami bagaimana kebijakan fiskal dapat mendorong praktik bisnis berkelanjutan dan pertumbuhan ekonomi hijau di Tanah Air.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Studi ini menganalisis hambatan pengembangan panas bumi di Indonesia, khususnya pada cekungan sedimen. Ini penting untuk mengidentifikasi strategi kebijakan demi akselerasi pemanfaatan energi terbarukan dan mengurangi ketergantungan pada bahan bakar fosil di negara kita.",
+   "kategori": "ENERGI NASIONAL",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Makalah ini mengidentifikasi faktor-faktor penentu kinerja organisasi dalam mempercepat pendaftaran tanah di Indonesia. Sangat penting bagi masyarakat untuk memahami upaya pemerintah dalam menata administrasi pertanahan dan mengurangi sengketa lahan di negara kita.",
+   "kategori": "ADMINISTRASI PUBLIK",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia untuk menjembatani kesenjangan digital di daerah perifer. Relevan bagi pembaca untuk melihat upaya pemerataan akses layanan publik digital dan inklusi masyarakat di seluruh wilayah Indonesia.",
+   "kategori": "DIGITALISASI PEMERINTAHAN",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah ini menelaah kekerasan dalam mendisiplinkan anak serta batasan dan celah dalam pertanggungjawaban pidana di Indonesia. Sangat penting bagi masyarakat untuk memahami aspek hukum dan perlindungan anak terkait isu sensitif ini di Tanah Air.",
+   "kategori": "HUKUM & PERLINDUNGAN ANAK",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "Assessing health beliefs and patient delay among breast cancer patients in West Sumatra, Indonesia",
+   "wadah": "MethodsX",
+   "doi": "10.1016/j.mex.2026.104035",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini menilai kepercayaan kesehatan dan keterlambatan pasien kanker payudara dalam mencari pengobatan di Sumatera Barat. Informasi ini vital untuk merancang program deteksi dini dan edukasi kesehatan yang efektif di komunitas lokal Indonesia.",
+   "kategori": "KESEHATAN REGIONAL",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
+   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
+   "doi": "10.1016/j.pvmrsr.2026.100038",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini meneliti virus diare virus sapi (BVDV) pada susu massal dari peternakan sapi perah rakyat di Cianjur, Jawa Barat. Temuan ini krusial untuk upaya pencegahan dan pengendalian penyakit ternak demi menjaga ketahanan pangan serta ekonomi peternak lokal.",
+   "kategori": "PETERNAKAN & PANGAN",
+   "sejak_edisi": 188
+  },
+  {
+   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103276",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini mengulas warisan kolonial Belanda dan dekolonisasi ekonomi maritim di Indonesia. Sangat penting untuk memahami akar sejarah dan tantangan pengembangan potensi kelautan Indonesia hingga saat ini.",
+   "kategori": "SEJARAH MARITIM",
+   "sejak_edisi": 188
+  },
   {
    "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
    "wadah": "Annals of Nuclear Energy",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis pengumpulan zakat di Indonesia, termasuk kerangka hukum dan transformasi digitalnya. Relevan untuk memahami peran lembaga keagamaan dalam ekonomi, kesejahteraan sosial, dan adaptasi teknologi di Indonesia.",
    "kategori": "AGAMA & EKONOMI",
    "sejak_edisi": 185
-  },
-  {
-   "judul": "Cultivating extractive bodies: Labor frontiers and the social reproduction of nickel workers in North Maluku, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.101968",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti kondisi pekerja nikel dan reproduksi sosial di sektor industri ekstraktif Maluku Utara, Indonesia. Studi ini menyoroti dampak sosial-ekonomi industri pertambangan terhadap komunitas dan tenaga kerja lokal.",
-   "kategori": "INDUSTRI & MASYARAKAT",
-   "sejak_edisi": 185
-  },
-  {
-   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102019",
-   "tanggal": "2026-12",
-   "alasan": "Merumuskan strategi pemanfaatan lahan pascatambang sebagai sawah di Kalimantan Timur, Indonesia. Studi ini krusial untuk rehabilitasi lingkungan, ketahanan pangan, dan pembangunan berkelanjutan di area bekas pertambangan.",
-   "kategori": "LINGKUNGAN & TATA GUNA LAHAN",
-   "sejak_edisi": 185
-  },
-  {
-   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103321",
-   "tanggal": "2026-12",
-   "alasan": "Mengungkap pengalaman komunitas dalam pengembangan pariwisata pedesaan di Borobudur, Indonesia. Studi ini krusial untuk pemahaman mendalam tentang dampak pariwisata terhadap masyarakat lokal dan warisan budaya.",
-   "kategori": "PARIWISATA & BUDAYA",
-   "sejak_edisi": 185
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis kerangka hukum transnasional perjanjian penangkapan dan penyimpanan karbon antara Indonesia-Singapura. Penting untuk memahami diplomasi lingkungan dan upaya Indonesia dalam mitigasi perubahan iklim global.",
-   "kategori": "KEBIJAKAN & DIPLOMASI",
-   "sejak_edisi": 185
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengukur bioakumulasi timbal pada ikan pantai Sumatera Selatan serta menilai risiko kesehatannya. Relevan bagi pembaca Indonesia karena memetakan dampak pencemaran logam berat pada sumber protein laut sekaligus potensi bahayanya bagi konsumen lokal.",
-   "kategori": "LAUT & PESISIR",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Studi ini merancang model pengendalian kawasan hutan di daerah aliran sungai Anai, Sumatera Barat. Relevan bagi pembaca karena membahas mitigasi tekanan penggunaan lahan terhadap daerah tangkapan air yang berdampak pada kelestarian hulu dan resapan air.",
-   "kategori": "EKOSISTEM DARAT",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian melaporkan hasil pemindahan Vatica javanica di Gunung Halimun, Jawa Barat, untuk restorasi populasi endemik. Penting bagi pembaca karena memberi bukti praktik konservasi jenis meranti lokal yang terancam punah di habitat aslinya.",
-   "kategori": "EKOSISTEM DARAT",
-   "sejak_edisi": 183
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Karya ini mengkarakterisasi produk cair dari pirolisis aspal batu Buton dan peran kalsit di dalamnya. Relevan bagi pembaca karena mengkaji pemanfaatan mineral lanjutan dari cadangan lokal yang banyak ditemukan di Sulawesi Tenggara.",
-   "kategori": "SUMBER DAYA ENERGI",
-   "sejak_edisi": 183
   }
  ]
 }
