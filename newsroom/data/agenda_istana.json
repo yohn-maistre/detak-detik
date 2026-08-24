@@ -4,8 +4,143 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-22T09:49:21+00:00",
+ "diambil": "2026-08-24T10:09:34+00:00",
  "acara": [
+  {
+   "id": "5d30131c5265",
+   "url": "https://setkab.go.id/presiden-prabowo-tekankan-tindakan-dini-edukasi-dan-penegakan-hukum-dalam-pencegahan-karhutla/",
+   "judul": "Presiden Prabowo Tekankan Tindakan Dini, Edukasi, dan Penegakan Hukum dalam Pencegahan Karhutla",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-24",
+   "tanggal_terbit": "2026-08-24",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "14",
+   "prov_nama": "Riau"
+  },
+  {
+   "id": "28318f05bf7d",
+   "url": "https://setkab.go.id/presiden-prabowo-pastikan-karhutla-riau-dituntaskan-15-000-hektare-berhasil-ditangani/",
+   "judul": "Presiden Prabowo Pastikan Karhutla Riau Dituntaskan, 15.000 Hektare Berhasil Ditangani",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-24",
+   "tanggal_terbit": "2026-08-24",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "14",
+   "prov_nama": "Riau"
+  },
+  {
+   "id": "337546a4cd71",
+   "url": "https://setkab.go.id/bertolak-ke-sumatra-presiden-prabowo-kembali-turun-langsung-tangani-karhutla-seskab-teddy-pastikan-api-padam-dan-tak-berulang/",
+   "judul": "Bertolak ke Sumatra, Presiden Prabowo Kembali Turun Langsung Tangani Karhutla, Seskab Teddy: Pastikan Api Padam dan Tak Berulang",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-24",
+   "tanggal_terbit": "2026-08-24",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f6cb1e23fc61",
+   "url": "https://setkab.go.id/pemerintah-kembali-kirim-bantuan-ke-ntt-dan-perkuat-penanganan-karhutla-di-kalimantan/",
+   "judul": "Pemerintah Kembali Kirim Bantuan ke NTT dan Perkuat Penanganan Karhutla di Kalimantan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-23",
+   "tanggal_terbit": "2026-08-23",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "58bd48a9c920",
+   "url": "https://setkab.go.id/rapat-di-hambalang-presiden-prabowo-evaluasi-penanganan-karhutla-kalimantan-dan-pemulihan-pascagempa-ntt/",
+   "judul": "Rapat di Hambalang, Presiden Prabowo Evaluasi Penanganan Karhutla Kalimantan dan Pemulihan Pascagempa NTT",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-23",
+   "tanggal_terbit": "2026-08-23",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "98681f536f9a",
+   "url": "https://setkab.go.id/presiden-prabowo-susuri-lahan-terbakar-di-kubu-raya-pastikan-penanganan-karhutla-berjalan-optimal/",
+   "judul": "Presiden Prabowo Susuri Lahan Terbakar di Kubu Raya, Pastikan Penanganan Karhutla Berjalan Optimal",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-22",
+   "tanggal_terbit": "2026-08-22",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "61",
+   "prov_nama": "Kalimantan Barat"
+  },
+  {
+   "id": "59e1d8c8e3e6",
+   "url": "https://setkab.go.id/tiba-di-kalimantan-barat-presiden-prabowo-langsung-pimpin-rapat-penanganan-karhutla/",
+   "judul": "Tiba di Kalimantan Barat, Presiden Prabowo Langsung Pimpin Rapat Penanganan Karhutla",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-22",
+   "tanggal_terbit": "2026-08-22",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "61",
+   "prov_nama": "Kalimantan Barat"
+  },
   {
    "id": "d45e9e2f6d17",
    "url": "https://wapresri.go.id/di-posko-golo-cenggo-kabupaten-manggarai-wapres-apresiasi-keterlibatan-anak-muda-dalam-penanganan-bencana-di-flores/",
