@@ -4,8 +4,63 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-24T10:09:34+00:00",
+ "diambil": "2026-08-25T21:53:24+00:00",
  "acara": [
+  {
+   "id": "064a89e5f287",
+   "url": "https://setkab.go.id/presiden-prabowo-tegaskan-korupsi-harus-diberantas-hingga-ke-akar/",
+   "judul": "Presiden Prabowo Tegaskan Korupsi Harus Diberantas hingga ke Akar",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-25",
+   "tanggal_terbit": "2026-08-25",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a5d18a217f28",
+   "url": "https://setkab.go.id/presiden-prabowo-plts-100-gwp-perkuat-kemandirian-energi-indonesia/",
+   "judul": "Presiden Prabowo: PLTS 100 GWp Perkuat Kemandirian Energi Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-25",
+   "tanggal_terbit": "2026-08-25",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "90e239db4429",
+   "url": "https://setkab.go.id/presiden-prabowo-luncurkan-program-plts-100-gwp-targetkan-pembangunan-dalam-tiga-tahun/",
+   "judul": "Presiden Prabowo Luncurkan Program PLTS 100 GWp, Targetkan Pembangunan dalam Tiga Tahun",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-25",
+   "tanggal_terbit": "2026-08-25",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "5d30131c5265",
    "url": "https://setkab.go.id/presiden-prabowo-tekankan-tindakan-dini-edukasi-dan-penegakan-hukum-dalam-pencegahan-karhutla/",
