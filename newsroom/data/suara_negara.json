@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-08-25T10:39:19+00:00",
+ "diambil": "2026-08-25T22:19:19+00:00",
  "baris": [
   {
    "id": "ad6e286c2e76",
@@ -41,6 +41,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "5d3b25eabb2a",
+   "url": "https://tniad.mil.id/buka-akses-warga-pangdam-i-bb-resmikan-jembatan-perintis-tumpatan-nibung/",
+   "judul": "Buka Akses Warga, Pangdam I/BB Resmikan Jembatan Perintis Tumpatan Nibung",
+   "ringkas": "Deli Serdang, tniad.mil.id – Pangdam I/Bukit Barisan Mayjen TNI Hendy Antariksa meresmikan Jembatan Perintis di Dusun I, Desa Tumpatan Nibung, Kecamatan Batang Kuis, Kabupaten Deli Serdang, Senin (24/8/2026). Jembatan yang...",
+   "tanggal": "2026-08-25",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "8d2aba83ad32",
@@ -788,6 +798,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "105bee07cfd0",
+   "url": "https://tniad.mil.id/adri-92-tiba-di-ntt-70-ton-bantuan-dan-layanan-kesehatan-siap-disalurkan/",
+   "judul": "ADRI 92 Tiba di NTT, 70 Ton Bantuan dan Layanan Kesehatan Siap Disalurkan",
+   "ringkas": "NUSA TENGGARA TIMUR, tniad.mil.id – Kapal ADRI 92 milik TNI Angkatan Darat (TNI AD) tiba di wilayah Nusa Tenggara Timur (NTT), Minggu pagi (23/8/2026), membawa sekitar 70 ton bantuan kemanusiaan...",
+   "tanggal": "2026-08-23",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "ef1e2817f055",
    "url": "https://emedia.dpr.go.id/news/2026/08/22/penjualan-kri-ki-hajar-dewantara-harus-dilakukan-secara-transparan-dan-akuntabel",
    "judul": "Penjualan KRI Ki Hajar Dewantara Harus Dilakukan secara Transparan dan Akuntabel",
@@ -1217,6 +1237,16 @@
    "tanggal": "2026-08-21",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "522618f49e0c",
+   "url": "https://tniad.mil.id/dorong-efisiensi-fasilitas-perwakilan-kodam-kasad-resmikan-mess-tni-ad-di-senen/",
+   "judul": "Dorong Efisiensi Fasilitas Perwakilan Kodam, Kasad Resmikan Mess TNI AD di Senen",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mendorong efisiensi pengelolaan fasilitas perwakilan Komando Utama (Kotama) TNI AD di Jakarta melalui pemanfaatan sarana secara terpadu....",
+   "tanggal": "2026-08-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -3492,16 +3522,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "d9a984922320",
-   "url": "https://tniad.mil.id/jurnal-yudhagama-edisi-juni-2026/",
-   "judul": "Jurnal Yudhagama Edisi Juni 2026",
-   "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
-   "tanggal": "2026-06-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "5c2df5d39760",
    "url": "http://antikorupsi.org/id/sekolah-antikorupsi-ternate-2026-menguatkan-pengorganisiran-orang-muda-melawan-korupsi-iklim-di",
    "judul": "Sekolah Antikorupsi Ternate 2026 “Menguatkan Pengorganisiran Orang Muda Melawan Korupsi Iklim di Maluku Utara”",
@@ -3520,26 +3540,6 @@
    "kanal": "icw",
    "lembaga": "ICW · antikorupsi.org",
    "cabang": "pengawas"
-  },
-  {
-   "id": "bf056e66648a",
-   "url": "https://tniad.mil.id/kasad-lulusan-seskoad-harus-berwawasan-strategis-dan-visioner/",
-   "judul": "Kasad: Lulusan Seskoad Harus Berwawasan Strategis dan Visioner",
-   "ringkas": "Bandung, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan bahwa lulusan Sekolah Staf dan Komando Angkatan Darat (Seskoad) harus memiliki wawasan strategis yang kuat, pola...",
-   "tanggal": "2026-06-03",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "6c0a653eecd2",
-   "url": "https://tniad.mil.id/kasad-beri-penghormatan-terakhir-kepada-jenderal-tni-purn-ryamizard-ryacudu/",
-   "judul": "Kasad Beri Penghormatan Terakhir kepada Jenderal TNI (Purn) Ryamizard Ryacudu",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., memberikan penghormatan terakhir kepada Jenderal TNI (Purn) Ryamizard Ryacudu dengan menghadiri upacara pemakaman militer di Taman Makam...",
-   "tanggal": "2026-06-01",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "a29b62a30d0b",
