@@ -1,0 +1,121 @@
+{
+ "edisi": 192,
+ "terbit": "2026-08-25T09:58:42.012216+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-192-01",
+   "judul": "Presiden Prabowo Subianto Tiba di Bali untuk Groundbreaking PLTS Gilimanuk Rp6 Triliun",
+   "skor": 33
+  },
+  {
+   "id": "klp-192-02",
+   "judul": "Empat perusahaan diselidiki terkait karhutla di Kalimantan, pengamat minta 'jangan ada tebang pilih'",
+   "skor": 30
+  },
+  {
+   "id": "klp-192-03",
+   "judul": "Gempa susulan 7.029 kali guncang Flores NTT, jumlah korban tewas jadi 103 orang – Apa yang diketahui sejauh ini?",
+   "skor": 25
+  },
+  {
+   "id": "klp-192-04",
+   "judul": "Papua Harus Siaga: Gejala El Nino, Kekeringan dan Ancaman Kebakaran Hutan di Tanah Papua",
+   "skor": 24
+  },
+  {
+   "id": "klp-192-05",
+   "judul": "Komisi III DPR Pastikan RUU Perampasan Aset Disahkan Paling Lambat Desember 2026",
+   "skor": 23
+  },
+  {
+   "id": "klp-192-06",
+   "judul": "Sinode GKI-TP Salurkan Bantuan Kemanusiaan Kepada Pengungsi Yahukimo di Dekai",
+   "skor": 21
+  },
+  {
+   "id": "klp-192-07",
+   "judul": "90 Personel Damkar Dikerahkan untuk Padamkan Api yang Hanguskan 40 Bangunan du Duren Sawit Jaktim",
+   "skor": 21
+  },
+  {
+   "id": "klp-192-08",
+   "judul": "Viral Pernyataan Budi Arie soal Pemilu 2029 Dipercepat, ReJO Yakin Jokowi dan Prabowo Baik-baik Saja",
+   "skor": 16
+  },
+  {
+   "id": "klp-192-09",
+   "judul": "OJK Bicara soal Polemik Rekening Milik Koordinator AMPB: Harus Dibuka Jika Tak Ditemukan Pelanggaran",
+   "skor": 15
+  },
+  {
+   "id": "klp-192-10",
+   "judul": "Amerika Serikat Peringatkan China soal Sanksi Jika Tetap Berbisnis dengan Iran",
+   "skor": 15
+  },
+  {
+   "id": "klp-192-11",
+   "judul": "Herman Deru Paparkan Perkembangan Karhutla di Sumsel kepada Prabowo, Begini Kondisinya",
+   "skor": 15
+  },
+  {
+   "id": "klp-192-12",
+   "judul": "Periksa Bendahara Dinas PUPR Kota Bengkulu Terkait Kasus Korupsi Rejang Lebong, KPK Dalami Temuan Uang",
+   "skor": 15
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
