@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-24T10:12:45.158136+00:00",
- "edisi": 190,
+ "diperbarui": "2026-08-26T10:11:39.870090+00:00",
+ "edisi": 194,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Studi ini relevan untuk memahami bagaimana kebijakan pemerintah memengaruhi praktik keberlanjutan ekonomi di negara ini.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Menganalisis hambatan pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen. Penelitian ini penting untuk memahami tantangan transisi energi dan potensi sumber daya terbarukan nasional demi keberlanjutan.",
+   "kategori": "ENERGI TERBARUKAN",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102025",
+   "tanggal": "2026-12",
+   "alasan": "Membahas politik ketidakjelasan dan kekerasan ekstraktif yang membungkam klaim agraria di kompleks bentonit Bogor. Penelitian ini menyoroti konflik lahan dan dampaknya pada masyarakat lokal di Indonesia.",
+   "kategori": "KONFLIK AGRARIA",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Mengkaji tradisi tenun Donggala dari perspektif sejarah, sosiokultural, dan keberlanjutan di Desa Towale, Sulawesi Tengah. Studi ini penting untuk pelestarian warisan budaya dan ekonomi kreatif daerah.",
+   "kategori": "WARISAN BUDAYA",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
+   "wadah": "Results in Engineering",
+   "doi": "10.1016/j.rineng.2026.112407",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti geologi medis merkuri dan logam lain di sistem fluvial-urban yang terdampak pertambangan emas skala kecil di Gorontalo. Ini krusial untuk kesehatan masyarakat dan mitigasi pencemaran lingkungan.",
+   "kategori": "KESEHATAN LINGKUNGAN",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Mengusulkan strategi berbasis nexus untuk reklamasi lahan pasca-tambang batubara menjadi lahan persawahan di Kalimantan Timur. Ini relevan untuk keberlanjutan lahan dan ketahanan pangan di wilayah bekas tambang.",
+   "kategori": "REKLAMASI TAMBANG",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti komunikasi ritual, adat, dan toleransi reflektif dalam komunitas adat Tengger Ngadas di Jawa Timur. Studi ini krusial untuk memahami keberagaman budaya dan kearifan lokal Indonesia.",
+   "kategori": "ANTROPOLOGI SOSIAL",
+   "sejak_edisi": 194
+  },
+  {
+   "judul": "Mapping livelihood vulnerability under compulsory land acquisition: Evidence from the Yogyakarta – Bawen toll road project, Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100349",
+   "tanggal": "2026-12",
+   "alasan": "Memetakan kerentanan mata pencarian akibat pengadaan tanah wajib untuk proyek jalan tol Yogyakarta–Bawen di Indonesia. Ini krusial untuk kebijakan pembangunan infrastruktur yang adil dan mitigasi dampak sosial.",
+   "kategori": "DAMPAK PEMBANGUNAN",
+   "sejak_edisi": 194
+  },
   {
    "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
    "wadah": "Annals of Nuclear Energy",
@@ -37,78 +109,6 @@
    "alasan": "Makalah berbahasa Indonesia ini mengkaji batasan dan celah hukum terkait kekerasan dalam mendisiplinkan anak di Indonesia. Sangat relevan untuk diskusi perlindungan anak dan penegakan hukum di masyarakat.",
    "kategori": "HUKUM & SOSIAL",
    "sejak_edisi": 190
-  },
-  {
-   "judul": "A cross-sectional study on bovine viral diarrhea virus (BVDV) in bulk milk from smallholder dairy farms in Cianjur, West Java, Indonesia",
-   "wadah": "Preventive Veterinary Medicine: Regional Studies and Reports",
-   "doi": "10.1016/j.pvmrsr.2026.100038",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini mengidentifikasi keberadaan virus diare virus sapi di peternakan sapi perah rakyat di Cianjur, Jawa Barat. Relevan bagi pembaca untuk isu kesehatan hewan ternak, ketahanan pangan, dan ekonomi peternak lokal.",
-   "kategori": "PETERNAKAN & KESEHATAN",
-   "sejak_edisi": 190
-  },
-  {
-   "judul": "Toward a transboundary legal framework: The Indonesia–Singapore carbon capture and storage agreement",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100320",
-   "tanggal": "2026-12",
-   "alasan": "Artikel ini menganalisis kerangka hukum perjanjian penangkapan dan penyimpanan karbon antara Indonesia dan Singapura. Penting untuk memahami upaya Indonesia dalam mitigasi perubahan iklim dan diplomasi lingkungan regional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 190
-  },
-  {
-   "judul": "History of a ‘missed opportunity’: Dutch colonial legacy and decolonization of the maritime economy in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103276",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menganalisis dampak warisan kolonial Belanda terhadap dekolonisasi ekonomi maritim Indonesia. Memberikan perspektif kritis terhadap sejarah dan potensi ekonomi bahari Indonesia.",
-   "kategori": "SEJARAH & MARITIM",
-   "sejak_edisi": 190
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini melaporkan keberhasilan translokasi spesies tanaman endemik Vatica javanica di Gunung Halimun, Jawa Barat. Menyoroti upaya konservasi keanekaragaman hayati dan perlindungan flora langka di Indonesia.",
-   "kategori": "KONSERVASI & FLORA",
-   "sejak_edisi": 190
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengkaji aspal batuan dari Buton, Indonesia, yang merupakan sumber daya alam strategis. Karakterisasi produk cair dan peran kalsit dalam proses pirolisisnya relevan untuk pengembangan industri dan pemanfaatan sumber daya lokal di Indonesia.",
-   "kategori": "SUMBER DAYA ALAM",
-   "sejak_edisi": 189
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Studi ini mengembangkan model kontrol untuk kawasan hutan di daerah aliran sungai Anai, Sumatera Barat. Ini sangat penting untuk pengelolaan hutan yang berkelanjutan dan upaya konservasi di salah satu provinsi kunci dengan keanekaragaman hayati tinggi di Indonesia.",
-   "kategori": "KEHUTANAN & LINGKUNGAN",
-   "sejak_edisi": 189
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menganalisis bagaimana modal sosial memengaruhi perilaku pemilih di daerah tertinggal Indonesia. Pemahaman mendalam tentang dinamika ini penting untuk pengembangan kebijakan yang efektif dan peningkatan partisipasi politik di wilayah-wilayah tersebut.",
-   "kategori": "DINAMIKA POLITIK",
-   "sejak_edisi": 189
-  },
-  {
-   "judul": "Environmental lead (Pb) contamination in coastal fish: Tissue-specific bioaccumulation, histopathology, and health risk assessment in South Sumatra, Indonesia",
-   "wadah": "Toxicology Reports",
-   "doi": "10.1016/j.toxrep.2026.102316",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini meneliti kontaminasi timbal pada ikan pesisir di Sumatera Selatan, Indonesia, serta risiko kesehatannya. Ini relevan untuk kesadaran masyarakat tentang keamanan pangan, dampak polusi, dan perlindungan lingkungan maritim di Indonesia.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 189
   }
  ]
 }
