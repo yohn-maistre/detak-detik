@@ -4,8 +4,58 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-25T21:53:24+00:00",
+ "diambil": "2026-08-27T19:54:45+00:00",
  "acara": [
+  {
+   "id": "e5575d864c53",
+   "url": "https://wapresri.go.id/wapres-hadiri-muktamar-ke-35-nu-perkuat-sinergi-ulama-dan-pemerintah-untuk-kemaslahatan-bangsa/",
+   "judul": "Wapres Hadiri Muktamar ke-35 NU, Perkuat Sinergi Ulama dan Pemerintah untuk Kemaslahatan Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-08-27",
+   "tanggal_terbit": "2026-08-27",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e989108372aa",
+   "url": "https://setkab.go.id/presiden-prabowo-di-tengah-pengungsi-nagekeo-menyapa-mendengar-dan-menguatkan/",
+   "judul": "Presiden Prabowo di Tengah Pengungsi Nagekeo: Menyapa, Mendengar, dan Menguatkan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-26",
+   "tanggal_terbit": "2026-08-26",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "53",
+   "prov_nama": "Nusa Tenggara Timur"
+  },
+  {
+   "id": "dd3ffd993a18",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-rapat-penanganan-gempa-dan-pemulihan-wilayah-terdampak-di-nagekeo/",
+   "judul": "Presiden Prabowo Pimpin Rapat Penanganan Gempa dan Pemulihan Wilayah Terdampak di Nagekeo",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-26",
+   "tanggal_terbit": "2026-08-26",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "53",
+   "prov_nama": "Nusa Tenggara Timur"
+  },
   {
    "id": "064a89e5f287",
    "url": "https://setkab.go.id/presiden-prabowo-tegaskan-korupsi-harus-diberantas-hingga-ke-akar/",
