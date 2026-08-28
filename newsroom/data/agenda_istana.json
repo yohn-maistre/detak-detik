@@ -4,8 +4,78 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-27T19:54:45+00:00",
+ "diambil": "2026-08-28T20:57:47+00:00",
  "acara": [
+  {
+   "id": "5168228c8d37",
+   "url": "https://setkab.go.id/peserta-mancanegara-antusias-ikut-merdeka-run-2026-tiket-lari-ludes-dalam-hitungan-menit/",
+   "judul": "Peserta Mancanegara Antusias Ikut Merdeka Run 2026, Tiket Lari Ludes dalam Hitungan Menit",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b112d05c7ed1",
+   "url": "https://setkab.go.id/war-tiket-hingga-rela-cuti-kerja-antusiasme-peserta-sambut-merdeka-run-2026/",
+   "judul": "“War” Tiket hingga Rela Cuti Kerja, Antusiasme Peserta Sambut Merdeka Run 2026",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f9cdd1980da5",
+   "url": "https://setkab.go.id/dari-pelajar-hingga-pengemudi-ojol-merdeka-run-2026-jadi-pengalaman-baru-peserta/",
+   "judul": "Dari Pelajar hingga Pengemudi Ojol, Merdeka Run 2026 Jadi Pengalaman Baru Peserta",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "19e1125d3dc0",
+   "url": "https://setkab.go.id/merdeka-run-2026-diikuti-10-530-peserta-semangat-inklusivitas-menguat/",
+   "judul": "Merdeka Run 2026 Diikuti 10.530 Peserta, Semangat Inklusivitas Menguat",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e5575d864c53",
    "url": "https://wapresri.go.id/wapres-hadiri-muktamar-ke-35-nu-perkuat-sinergi-ulama-dan-pemerintah-untuk-kemaslahatan-bangsa/",

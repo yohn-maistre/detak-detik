@@ -1,0 +1,121 @@
+{
+ "edisi": 199,
+ "terbit": "2026-08-28T20:57:28.136373+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-199-01",
+   "judul": "Pos polisi dan dua sepeda motor dibakar massa saat demonstrasi 27 Agustus di depan Gedung DPR berakhir – Apa yang diketahui sejauh ini?",
+   "skor": 33
+  },
+  {
+   "id": "klp-199-16",
+   "judul": "Budi Arie Ungkap Insting Pemilu 2029 Dipercepat, PDIP: Tindakan Anti-Demokrasi",
+   "skor": 9
+  },
+  {
+   "id": "klp-199-22",
+   "judul": "Kemenkes: Kualitas Udara Pontianak Berbahaya Akibat Karhutla, 8 Wilayah Sangat Tidak Sehat",
+   "skor": 9
+  },
+  {
+   "id": "klp-199-04",
+   "judul": "'Tolong bantu kami menemukannya' – Fakta-fakta banjir dan longsor di Nepal yang tewaskan ratusan orang",
+   "skor": 22
+  },
+  {
+   "id": "klp-199-02",
+   "judul": "Status tersangka eks Jampidsus Febrie Adriansyah sah, menurut putusan sidang praperadilan",
+   "skor": 28
+  },
+  {
+   "id": "klp-199-06",
+   "judul": "DPR janji sahkan RUU Perampasan Aset 15 Desember 2026, tapi mengapa pegiat antikorupsi cemas dan poin-poin krusial apa saja yang hilang?",
+   "skor": 18
+  },
+  {
+   "id": "klp-199-09",
+   "judul": "MK Tetapkan 3 Indikator Penetapan Status Bencana Nasional, Jumlah Korban Diutamakan",
+   "skor": 15
+  },
+  {
+   "id": "klp-199-11",
+   "judul": "Usut Dugaan Korupsi Pengadaan, KPK Geledah Kantor Dinas Pendidikan Kabupaten Bogor",
+   "skor": 13
+  },
+  {
+   "id": "klp-199-12",
+   "judul": "Bos BGN soal Anggaran MBG 2027 Rp 240 T: Untuk Operasional hanya Rp 6 Triliun",
+   "skor": 12
+  },
+  {
+   "id": "klp-199-24",
+   "judul": "Periksa Kepala Kanim Denpasar dan Dua ASN, KPK Sita Uang Diduga Hasil Pungli Izin Tinggal",
+   "skor": 9
+  },
+  {
+   "id": "klp-199-14",
+   "judul": "BNPB Sebut Korban Meninggal Gempa NTT Tidak Bertambah, Masih Sebegini",
+   "skor": 12
+  },
+  {
+   "id": "klp-199-18",
+   "judul": "Sengkarut Masalah Pita Cukai Palsu, Purbaya Siapkan Teknologi Canggih Terkini",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
