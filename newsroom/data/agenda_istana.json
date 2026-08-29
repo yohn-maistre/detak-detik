@@ -4,8 +4,27 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-28T20:57:47+00:00",
+ "diambil": "2026-08-29T14:36:54+00:00",
  "acara": [
+  {
+   "id": "c35c81fea81c",
+   "url": "https://setkab.go.id/merdeka-run-2026-ribuan-langkah-satu-semangat-indonesia/",
+   "judul": "Merdeka Run 2026: Ribuan Langkah, Satu Semangat Indonesia",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-29",
+   "tanggal_terbit": "2026-08-29",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "5168228c8d37",
    "url": "https://setkab.go.id/peserta-mancanegara-antusias-ikut-merdeka-run-2026-tiket-lari-ludes-dalam-hitungan-menit/",
@@ -71,6 +90,21 @@
    "topik": [
     "infrastruktur"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "db50b91303c9",
+   "url": "https://setkab.go.id/seskab-teddy-bagikan-momen-hangat-presiden-prabowo-bersama-warga-relokasi-senen-di-hunian-baru/",
+   "judul": "Seskab Teddy Bagikan Momen Hangat Presiden Prabowo Bersama Warga Relokasi Senen di Hunian Baru",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,

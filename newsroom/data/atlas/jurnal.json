@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-08-28T21:00:12.869498+00:00",
- "edisi": 199,
+ "diperbarui": "2026-08-29T14:39:27.398112+00:00",
+ "edisi": 200,
  "pilihan": [
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Mengkarakterisasi produk pirolisis aspal batuan dari Buton, Indonesia. Penelitian ini krusial untuk eksplorasi potensi pemanfaatan sumber daya alam lokal sebagai energi alternatif dan material industri di Indonesia, membuka peluang baru bagi ekonomi daerah.",
+   "kategori": "SUMBER DAYA & ENERGI",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Mengevaluasi situs radiologi yang diusulkan untuk pembangunan pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia. Relevan untuk studi kelayakan, pertimbangan keamanan publik, dan diskusi kebijakan strategis terkait pengembangan energi nuklir di tanah air.",
+   "kategori": "ENERGI & LINGKUNGAN",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Mengembangkan model kontrol untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Penting untuk pengelolaan hutan yang berkelanjutan dan perlindungan ekosistem DAS di Indonesia, mendukung kebijakan lingkungan serta mitigasi bencana alam.",
+   "kategori": "LINGKUNGAN & KEHUTANAN",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Mengembangkan strategi berbasis nexus untuk reklamasi lahan pasca tambang batu bara menjadi lahan sawah di Kalimantan Timur. Sangat relevan bagi pemulihan lingkungan, ketahanan pangan, dan kesejahteraan masyarakat di daerah terdampak pertambangan di Indonesia.",
+   "kategori": "REKLAMASI & PANGAN",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Layered land rights under government-led decentralization: Implications for land value capture implementation in Jakarta, Indonesia",
+   "wadah": "Land Use Policy",
+   "doi": "10.1016/j.landusepol.2026.108270",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis hak atas tanah berlapis dalam desentralisasi di Jakarta. Relevan untuk memahami implikasi kebijakan pertanahan, penataan ruang kota, dan pengembangan perkotaan, khususnya dalam konteks ibu kota dan pertumbuhan urban di Indonesia.",
+   "kategori": "TATA KOTA & HUKUM",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Menjelajahi komunikasi ritual, adat, dan toleransi reflektif dalam masyarakat adat Tengger Ngadas di Jawa Timur. Penting untuk pelestarian kekayaan budaya, pemahaman keberagaman, dan pengakuan hak-hak masyarakat adat di Indonesia.",
+   "kategori": "BUDAYA & MASYARAKAT ADAT",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Imaging the resistivity structure of Nage Geothermal System, Flores Island, Indonesia through 3-D magnetotelluric inversion incorporating the sea effect",
+   "wadah": "Geothermics",
+   "doi": "10.1016/j.geothermics.2026.103807",
+   "tanggal": "2026-12",
+   "alasan": "Memetakan struktur resistivitas Sistem Geotermal Nage di Pulau Flores, Indonesia. Penting untuk eksplorasi dan pengembangan sumber energi panas bumi sebagai bagian dari bauran energi nasional, serta untuk keberlanjutan pasokan listrik di wilayah timur Indonesia.",
+   "kategori": "GEOTERMAL & SUMBER DAYA",
+   "sejak_edisi": 200
+  },
+  {
+   "judul": "Neonatal referral discontinuity following home birth in an Indigenous community: An interpretive ethnography in Indonesia",
+   "wadah": "Journal of Neonatal Nursing",
+   "doi": "10.1016/j.jnn.2026.101960",
+   "tanggal": "2026-12",
+   "alasan": "Meneliti diskontinuitas rujukan neonatal pasca persalinan di rumah pada komunitas adat di Indonesia. Penting untuk meningkatkan kualitas layanan kesehatan ibu dan anak, khususnya di daerah terpencil dan adat, demi menurunkan angka kematian bayi di Indonesia.",
+   "kategori": "KESEHATAN & ADAT",
+   "sejak_edisi": 200
+  },
   {
    "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
    "wadah": "The Extractive Industries and Society",
@@ -37,78 +109,6 @@
    "alasan": "Kajian ini meninjau hambatan pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen. Ini penting untuk memahami potensi energi terbarukan Indonesia dan tantangan dalam kebijakan energi nasional.",
    "kategori": "KEBIJAKAN ENERGI",
    "sejak_edisi": 199
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Analisis komparatif kebijakan perkebunan kelapa sawit dan ternak di Indonesia dan Malaysia ini bertujuan meningkatkan efektivitas dan efisiensi. Ini relevan untuk pembuat kebijakan dan pelaku industri terkait pengelolaan lahan di Indonesia.",
-   "kategori": "KEBIJAKAN AGRIBISNIS",
-   "sejak_edisi": 199
-  },
-  {
-   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103306",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengeksplorasi kesenjangan sosial ekonomi dalam risiko diabetes, ketimpangan pendapatan, dan urbanisasi di Indonesia. Ini penting untuk memahami tantangan kesehatan publik dan merumuskan kebijakan kesehatan yang lebih inklusif di Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 199
-  },
-  {
-   "judul": "Enhancing human resource quality in higher education: the role of capability maturity model and organisational training at Universitas Jambi, Indonesia",
-   "wadah": "International Journal of Management in Education",
-   "doi": "10.1504/ijmie.2027.10075511",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini membahas peningkatan kualitas SDM di pendidikan tinggi melalui model kematangan kapabilitas dan pelatihan organisasi di Universitas Jambi. Temuan ini penting untuk pengembangan sumber daya manusia di sektor pendidikan Indonesia.",
-   "kategori": "PENDIDIKAN & SDM",
-   "sejak_edisi": 199
-  },
-  {
-   "judul": "Model Kebijakan Dividen pada Bank Pembangunan Daerah di Indonesia dengan Ukuran Perusahaan Sebagai Moderasi",
-   "wadah": "Journal of Business &amp; Banking",
-   "doi": "10.14414/jbb.v15i01.5538",
-   "tanggal": "2026-12-2",
-   "alasan": "Studi ini menganalisis model kebijakan dividen pada Bank Pembangunan Daerah (BPD) di Indonesia. Ini relevan bagi pemangku kepentingan yang ingin memahami kinerja keuangan dan kebijakan dividen bank daerah di Indonesia.",
-   "kategori": "KEUANGAN DAERAH",
-   "sejak_edisi": 199
-  },
-  {
-   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
-   "wadah": "International Journal of Innovation and Learning",
-   "doi": "10.1504/ijil.2027.10076654",
-   "tanggal": "2027",
-   "alasan": "Studi ini meneliti adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia, serta peran inovasi dan dukungan organisasi. Ini relevan untuk memahami tantangan dan peluang peningkatan kualitas pendidikan digital di tanah air.",
-   "kategori": "PENDIDIKAN DIGITAL",
-   "sejak_edisi": 197
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Kajian ini menelaah kekerasan dalam mendisiplinkan anak, serta batasan dan celah dalam pertanggungjawaban pidana di Indonesia. Penelitian ini sangat penting untuk pengembangan kebijakan perlindungan anak dan reformasi hukum nasional.",
-   "kategori": "PERLINDUNGAN ANAK",
-   "sejak_edisi": 197
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Mengkaji penggalangan dana zakat di Indonesia, meliputi kesinambungan, kerangka hukum, dan transformasi digital. Penelitian ini relevan untuk pengembangan filantropi Islam dan kontribusinya pada ekonomi nasional.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 197
-  },
-  {
-   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
-   "wadah": "Results in Engineering",
-   "doi": "10.1016/j.rineng.2026.112407",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti geologi medis merkuri dan logam lain di sistem sungai-perkotaan yang terdampak pertambangan emas skala kecil di Gorontalo, Indonesia. Studi ini vital untuk mitigasi risiko kesehatan masyarakat dan lingkungan lokal.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 197
   }
  ]
 }

@@ -1,0 +1,121 @@
+{
+ "edisi": 200,
+ "terbit": "2026-08-29T14:36:33.027951+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-200-02",
+   "judul": "'Kami tidak pernah membayangkan banjir seperti ini' – Fakta-fakta banjir dan longsor di Nepal yang tewaskan ratusan orang",
+   "skor": 23
+  },
+  {
+   "id": "klp-200-12",
+   "judul": "DPR Kebut RUU Perampasan Aset, KBPP Polri: Koruptor Jangan Hanya Dibuat Takut dengan Penjara!",
+   "skor": 12
+  },
+  {
+   "id": "klp-200-17",
+   "judul": "Cara Cek Desil Bansos 2026 Online Pakai NIK KTP di Situs DTSEN BPS",
+   "skor": 9
+  },
+  {
+   "id": "klp-200-24",
+   "judul": "Kontroversi Kebijakan Pemberantasan Korupsi Dalam UU Nomor 4 Tahun 2026 P2SK dan UU Perampasan Aset Tindak Pidana",
+   "skor": 9
+  },
+  {
+   "id": "klp-200-01",
+   "judul": "Muktamar PBNU: Perdebatan Sistem Pemilihan Ketum Alot, Sidang Komisi Organisasi Diskors",
+   "skor": 25
+  },
+  {
+   "id": "klp-200-06",
+   "judul": "Titik Api Sulit Padam, Gubernur Kalteng Agustiar Sabran Minta Water Bombing untuk Padamkan Karhutla",
+   "skor": 15
+  },
+  {
+   "id": "klp-200-09",
+   "judul": "Menindaklanjuti Putusan MK, Komdigi Larang Operator Hanguskan Sisa Kuota Internet Pelanggan",
+   "skor": 12
+  },
+  {
+   "id": "klp-200-18",
+   "judul": "China Peringatkan Bencana Lanjutan Pascabanjir di Perbatasan Nepal",
+   "skor": 9
+  },
+  {
+   "id": "klp-200-08",
+   "judul": "35 Ribu Warga di 6 Kabupaten NTT Terdampak Gempa Terima Bantuan dan Layanan Kesehatan",
+   "skor": 12
+  },
+  {
+   "id": "klp-200-07",
+   "judul": "Status tersangka eks Jampidsus Febrie Adriansyah sah, menurut putusan sidang praperadilan",
+   "skor": 13
+  },
+  {
+   "id": "klp-200-04",
+   "judul": "Kepolisian Sterilisasi JIS Jelang Pertandingan Persija vs Brisbane Roar Malam Ini",
+   "skor": 18
+  },
+  {
+   "id": "klp-200-03",
+   "judul": "Merdeka Run 2026: Kisah Inklusivitas Atlet Nasional dan Pelari Kursi Roda di HUT ke-81 RI",
+   "skor": 21
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
