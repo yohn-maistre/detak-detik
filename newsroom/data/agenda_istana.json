@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-08-29T14:36:54+00:00",
+ "diambil": "2026-08-31T17:09:27+00:00",
  "acara": [
+  {
+   "id": "b6095da77ff8",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-bahas-penyesuaian-rekrutmen-prajurit-tni-hingga-penanganan-bencana/",
+   "judul": "Seskab Teddy: Presiden Prabowo Bahas Penyesuaian Rekrutmen Prajurit TNI hingga Penanganan Bencana",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-30",
+   "tanggal_terbit": "2026-08-30",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
   {
    "id": "c35c81fea81c",
    "url": "https://setkab.go.id/merdeka-run-2026-ribuan-langkah-satu-semangat-indonesia/",
@@ -19,6 +37,23 @@
     "pertahanan-keamanan",
     "infrastruktur",
     "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5deba82dec31",
+   "url": "https://setkab.go.id/seskab-teddy-lebih-dari-12-000-pelari-rayakan-kemerdekaan-dalam-merdeka-run-2026/",
+   "judul": "Seskab Teddy: Lebih dari 12.000 Pelari Rayakan Kemerdekaan dalam Merdeka Run 2026",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-08-29",
+   "tanggal_terbit": "2026-08-29",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
    ],
    "venue": null,
    "kota": null,
@@ -105,6 +140,23 @@
    "tanggal_terbit": "2026-08-28",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9765c9e9ad35",
+   "url": "https://wapresri.go.id/terima-ikapeksi-wapres-dukung-penguatan-pembekalan-calon-pemagang-indonesia-ke-jepang/",
+   "judul": "Terima IKAPEKSI, Wapres Dukung Penguatan Pembekalan Calon Pemagang Indonesia ke Jepang",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-08-28",
+   "tanggal_terbit": "2026-08-28",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
