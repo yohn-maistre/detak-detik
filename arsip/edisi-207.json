@@ -1,0 +1,121 @@
+{
+ "edisi": 207,
+ "terbit": "2026-09-01T23:28:04.121135+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-207-01",
+   "judul": "Ramalan Asmara Zodiak Capricorn Rabu, 2 September 2026: Komunikasi Terbuka Bawa Hubungan Lebih Dekat",
+   "skor": 19
+  },
+  {
+   "id": "klp-207-02",
+   "judul": "BNN Usul Tambah Anggaran Rp5 Triliun: Dukung Asta Cita dan Program Prioritas Presiden",
+   "skor": 19
+  },
+  {
+   "id": "klp-207-03",
+   "judul": "Prabowo Panggil Panglima-Kapolri soal Penanganan Karhutla di Kalimantan dan Sumatra",
+   "skor": 15
+  },
+  {
+   "id": "klp-207-04",
+   "judul": "Cegah Mahasiswa Titipan, KPK Terbitkan Surat Edaran Perketat Jalur Mandiri PTN",
+   "skor": 15
+  },
+  {
+   "id": "klp-207-05",
+   "judul": "Biaya Retribusi Pedagang di Lokbin Pasar Ikan Kramat Jati Secara Resmi Telah Dibebaskan",
+   "skor": 15
+  },
+  {
+   "id": "klp-207-06",
+   "judul": "Diduga Hendak Curi Kabel, Pria Tewas Tersengat Listrik di Gardu LRT Pancoran Jaksel",
+   "skor": 15
+  },
+  {
+   "id": "klp-207-07",
+   "judul": "8 WNI Gabung Tentara Rusia, Dasco: Diimingi Gaji Besar dan Dijanjikan Jadi Satpam oleh Negara Pihak Ketiga",
+   "skor": 13
+  },
+  {
+   "id": "klp-207-08",
+   "judul": "Pentingnya sistem keamanan lintas negara dan respons cepat komunitas internasional",
+   "skor": 12
+  },
+  {
+   "id": "klp-207-09",
+   "judul": "Bobby Siapkan Fasilitas untuk Pengungsi Erupsi Gunung Sinabung: Warga yang Utama",
+   "skor": 12
+  },
+  {
+   "id": "klp-207-10",
+   "judul": "Perbedaan Sesar Cugenang dan Sesar Cimandiri: Karakteristik, Jalur, dan Risiko Gempa di Jawa Barat",
+   "skor": 12
+  },
+  {
+   "id": "klp-207-11",
+   "judul": "'Kami tidak pernah membayangkan banjir seperti ini' – Fakta-fakta banjir dan longsor di Nepal yang tewaskan ratusan orang",
+   "skor": 12
+  },
+  {
+   "id": "klp-207-12",
+   "judul": "Persiapan Kendal Tornado FC Hadapi Liga Championship 2026/2027: Daftar Pemain dan Jadwal",
+   "skor": 12
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
