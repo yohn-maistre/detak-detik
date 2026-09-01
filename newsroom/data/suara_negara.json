@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-09-01T00:56:19+00:00",
+ "diambil": "2026-09-01T14:41:09+00:00",
  "baris": [
   {
    "id": "dcb0eb77c026",
@@ -42,70 +42,696 @@
    "cabang": "legislatif"
   },
   {
-   "id": "2135cb452c43",
-   "url": "https://pks.id/content/pks-maknai-kemerdekaan-lewat-refleksi-sejarah-olahraga-hingga-budaya",
-   "judul": "PKS Maknai Kemerdekaan Lewat Refleksi Sejarah, Olahraga, hingga Budaya",
-   "ringkas": "Ketua Panitia Rangkaian Peringatan HUT RI ke-81 Bachtiar Firdaus menjelaskan bahwa peringatan yang diselenggarakan PKS tahun ini mencoba untuk memaknai kemerdekaan dari berbagai sisi dengan semangat kolaborasi.",
-   "tanggal": "2026-08-31",
+   "id": "58efdae661aa",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/dpr-setujui-destry-damayanti-jadi-gubernur-bi-puan-harap-amanah-dijalankan-dengan-penuh-integritas",
+   "judul": "DPR Setujui Destry Damayanti Jadi Gubernur BI, Puan Harap Amanah Dijalankan dengan Penuh Integritas",
+   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani memimpin Rapat Paripurna pengesahan persetujuan DPR atas pemilihan calon Gubernur Bank Indonesia (BI), Destry Damayanti. Puan pun berharap Destry dapat memimpin BI dengan penuh integritas dan memberikan kontribusi nyata dalam me",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "027cfdb74186",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/agung-widyantoro-digitalisasi-literasi-jangan-tumpulkan-daya-analisis",
+   "judul": "Agung Widyantoro: Digitalisasi Literasi Jangan Tumpulkan Daya Analisis",
+   "ringkas": "PARLEMENTARIA, Jakarta - Perkembangan teknologi digital dinilai membawa kemudahan dalam mengakses bahan bacaan dan informasi. Namun, kemudahan tersebut perlu diimbangi dengan penguatan kemampuan membaca secara utuh, menyerap informasi, dan menganalisis persoalan agar perkembangan",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "332f23206dfe",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-x-minta-indikator-keberhasilan-perpusnas-tak-sekadar-koleksi-dan-kunjungan",
+   "judul": "Komisi X Minta Indikator Keberhasilan Perpusnas Tak Sekadar Koleksi dan Kunjungan",
+   "ringkas": "PARLEMENTARIA, Jakarta — Keberhasilan Perpustakaan Nasional (Perpusnas) dalam membangun budaya literasi masyarakat dinilai tidak cukup hanya diukur dari jumlah koleksi, tingkat kunjungan, maupun banyaknya kegiatan. Dampak nyata terhadap peningkatan minat baca dan kemampuan litera",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "8f878707806d",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/tanggapi-usulan-idi-charles-honoris-dorong-standar-penghasilan-layak-bagi-tenaga-kesehatan",
+   "judul": "Tanggapi Usulan IDI, Charles Honoris Dorong Standar Penghasilan Layak bagi Tenaga Kesehatan",
+   "ringkas": "PARLEMENTARIA, Jakarta - Wakil Ketua Komisi IX DPR RI Charles Honoris mendorong pemerintah memperkuat kebijakan kesejahteraan tenaga kesehatan, termasuk mempertimbangkan standar penghasilan yang layak bagi dokter dan tenaga kesehatan lainnya. Menurutnya, peningkatan kesejahteraan",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "a567d14d626a",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/anita-jacoba-gah-minta-tambahan-anggaran-perpusnas-berdampak-nyata-ke-daerah-3t",
+   "judul": "Anita Jacoba Gah Minta Tambahan Anggaran Perpusnas Berdampak Nyata ke Daerah 3T",
+   "ringkas": "PARLEMENTARIA, Jakarta - Peningkatan anggaran Perpustakaan Nasional (Perpusnas) RI sebesar Rp50 miliar pada 2027 diminta diarahkan untuk menghasilkan perubahan konkret terhadap tingkat literasi masyarakat, terutama di daerah tertinggal, terdepan, dan terluar (3T). Tambahan anggar",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "5533cb63e1d8",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/iplm-nasional-rendah-bonnie-triyana-soroti-efektivitas-program-literasi",
+   "judul": "IPLM Nasional Rendah, Bonnie Triyana Soroti Efektivitas Program Literasi",
+   "ringkas": "PARLEMENTARIA, Jakarta - Indeks Pembangunan Literasi Masyarakat (IPLM) nasional per Maret 2026 tercatat pada angka 40,6. Hal ini lantas menjadi catatan terhadap efektivitas berbagai program literasi yang selama ini dijalankan. Intervensi program dinilai tidak cukup hanya diukur d",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "51f6520d38f1",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/ketidakakuratan-data-desil-pemicu-polemik-bansos-hetifah-dukung-pembentukan-tim-asistensi-khusus",
+   "judul": "Ketidakakuratan Data Desil Pemicu Polemik Bansos, Hetifah Dukung Pembentukan Tim Asistensi Khusus",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi VIII DPR RI, Hetifah Sjaifudian mengungkapkan pemerintah perlu segera melakukan evaluasi terhadap metodologi pendataan bantuan sosial (bansos), khususnya penerapan sistem pengelompokan desil kesejahteraan masyarakat. Ketidakakuratan data la",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "b6cc5a7868c1",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/m-husni-apresiasi-capaian-penyelenggaraan-haji-dan-penanganan-bencana-2026",
+   "judul": "M. Husni Apresiasi Capaian Penyelenggaraan Haji dan Penanganan Bencana 2026",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VIII DPR RI, M. Husni memberikan apresiasi terhadap capaian kinerja pengawasan pada dua sektor krusial tahun ini, yakni penyelenggaraan ibadah haji 2026 dan efektivitas mitigasi bencana alam oleh Badan Nasional Penanggulangan Bencana (BNPB)",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "52124e809e5d",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/kasus-dugaan-korupsi-pmb-furtasan-ali-yusuf-setuju-jalur-mandiri-dihapus",
+   "judul": "Kasus Dugaan Korupsi PMB, Furtasan Ali Yusuf Setuju Jalur Mandiri Dihapus",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi X DPR RI Furtasan Ali Yusuf menyatakan kasus dugaan korupsi dalam proses penerimaan mahasiswa baru (PMB) di sejumlah perguruan tinggi menjadi momentum untuk mengevaluasi sistem seleksi masuk perguruan tinggi, khususnya jalur mandiri. Menuru",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "78583205449d",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/samuel-wattimena-perluasan-akses-modal-lindungi-umkm-dari-rentenir-dan-pinjol",
+   "judul": "Samuel Wattimena: Perluasan Akses Modal Lindungi UMKM dari Rentenir dan Pinjol",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VII DPR RI Samuel JD Wattimena menegaskan Komisi VII terus mendorong perluasan akses permodalan bagi pelaku usaha mikro, kecil, dan menengah (UMKM) agar tidak terjebak meminjam kepada rentenir maupun pinjaman online (pinjol) ilegal. Menurut",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "c019cfa37533",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/terima-kunjungan-dubes-sri-lanka-bksap-perkuat-gksb-dan-kerja-sama-ekonomi",
+   "judul": "Terima Kunjungan Dubes Sri Lanka, BKSAP Perkuat GKSB dan Kerja Sama Ekonomi",
+   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI Syahrul Aidi Maazat mengungkapkan hubungan diplomatik Indonesia dan Sri Lanka telah berjalan sangat baik selama lebih dari 20 tahun. Dalam paparannya saat berkunjung ke BKSAP, Dubes Sri Lanka (H.E) Sash",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "4cc8e8d43b5e",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/dpr-terima-9205-aduan-masyarakat-dalam-setahun-puan-sebut-ruang-partisipasi-publik-semakin-diperluas",
+   "judul": "DPR Terima 9.205 Aduan Masyarakat dalam Setahun, Puan Sebut Ruang Partisipasi Publik Semakin Diperluas",
+   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani mengungkap dewan menerima lebih dari 9.000 aduan masyarakat dalam setahun. Ia pun menegaskan ruang partisipasi publik terhadap kinerja DPR kini semakin diperluas.",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "61dd3abcaa3a",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/hut-ke-81-dpr-puan-sebut-kritik-jadi-pendorong-bagi-dewan-bertransformasi-lebih-baik",
+   "judul": "HUT ke-81 DPR, Puan Sebut Kritik Jadi Pendorong Bagi Dewan Bertransformasi Lebih Baik",
+   "ringkas": "PARLEMENTARIA, Jakarta — DPR RI menggelar Rapat Paripurna Khusus peringatan Hari Ulang Tahun (HUT) ke-81 DPR RI. Ketua DPR RI Puan Maharani yang memimpin Rapat Paripurna menegaskan komitmen DPR untuk terus menyempurnakan kinerja dalam menjalankan kedaulatan rakyat.",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "6fc3ad33249f",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/misbakhun-pimpinan-baru-bi-harus-dorong-pertumbuhan-ekonomi-dan-lapangan-kerja",
+   "judul": "Misbakhun: Pimpinan Baru BI Harus Dorong Pertumbuhan Ekonomi dan Lapangan Kerja",
+   "ringkas": "PARLEMENTARIA, Jakarta – Ketua Komisi XI DPR RI Mukhamad Misbakhun menegaskan, kepemimpinan baru Bank Indonesia (BI) harus mampu memperkuat peran bank sentral dalam mendorong pertumbuhan ekonomi nasional. Menurutnya, pergantian pimpinan BI harus menjadi momentum untuk menghadirka",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "3c51455a7b9c",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/dpr-setujui-tiga-calon-pimpinan-bi-hasil-fit-and-proper-test-komisi-xi",
+   "judul": "DPR Setujui Tiga Calon Pimpinan BI Hasil Fit and Proper Test Komisi XI",
+   "ringkas": "PARLEMENTARIA, Jakarta – Rapat Paripurna DPR RI menyetujui hasil uji kelayakan dan kepatutan (fit and proper test) yang dilakukan oleh Komisi XI DPR RI terhadap calon pimpinan Bank Indonesia (BI). Tiga nama yang disetujui di antaranya adalah Destry Damayanti sebagai calon Gubernu",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "0580db485ebd",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/singgih-januratmoko-soroti-keterlibatan-anak-dalam-kericuhan-pascademo-dpr",
+   "judul": "Singgih Januratmoko Soroti Keterlibatan Anak dalam Kericuhan Pascademo DPR",
+   "ringkas": "PARLEMENTARIA, Jakarta - Wakil Ketua Komisi VIII DPR RI Singgih Januratmoko menyoroti keterlibatan 153 anak dalam kericuhan yang terjadi setelah demonstrasi di depan Gedung DPR RI pada 27 Agustus 2026. Ia menekankan, pentingnya memastikan anak tidak terseret dalam kekerasan ataup",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "c0af399aa196",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/karhutla-ganggu-pembelajaran-hetifah-jangan-pertaruhkan-kesehatan-anak",
+   "judul": "Karhutla Ganggu Pembelajaran, Hetifah: Jangan Pertaruhkan Kesehatan Anak",
+   "ringkas": "PARLEMENTARIA, Jakarta - Dampak kebakaran hutan dan lahan (karhutla) di Kalimantan Timur mulai mengganggu aktivitas belajar anak-anak. Anggota Komisi VIII DPR RI, Hetifah Sjaifudian mengingatkan bahwa dalam kondisi kualitas udara yang memburuk, keselamatan dan kesehatan anak haru",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "65194368c9e6",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/apresiasi-putusan-mk-hnw-penetapan-bencana-nasional-bakal-lebih-terukur",
+   "judul": "Apresiasi Putusan MK, HNW: Penetapan Bencana Nasional Bakal Lebih Terukur",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VIII DPR RI Hidayat Nur Wahid mengapresiasi Putusan Mahkamah Konstitusi (MK) Nomor 261/PUU-XXIII/2025 yang memperjelas parameter penetapan status dan tingkat bencana nasional. Menurutnya, kepastian tersebut penting agar pemerintah dapat men",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "518c8fcea172",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-x-tekankan-anggaran-kemenpora-2027-untuk-perkuat-pembinaan-pemuda-dan-olahraga",
+   "judul": "Komisi X Tekankan Anggaran Kemenpora 2027 untuk Perkuat Pembinaan Pemuda dan Olahraga",
+   "ringkas": "PARLEMENTARIA, Jakarta - Komisi X DPR RI menekankan agar anggaran Kementerian Pemuda dan Olahraga (Kemenpora) Tahun Anggaran 2027 diarahkan untuk memperkuat pembinaan pemuda dan olahraga. Penggunaan anggaran juga diharapkan memberi dampak nyata bagi masyarakat melalui pengembanga",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "f42cb031911d",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/puteri-komarudin-dukung-dbh-yang-berkeadilan-usai-serap-aspirasi-adkasi",
+   "judul": "Puteri Komarudin Dukung DBH yang Berkeadilan Usai Serap Aspirasi ADKASI",
+   "ringkas": "PARLEMENTARIA, Jakarta – Badan Anggaran (Banggar) DPR RI menggelar agenda Rapat Audiensi dengan Asosiasi Dewan Perwakilan Rakyat Daerah Kabupaten Seluruh Indonesia (ADKASI) terkait pembahasan Rancangan Anggaran Pendapatan dan Belanja Negara (RAPBN) Tahun Anggaran 2027. Dalam rapa",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "f32729be3903",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/kenaikan-anggaran-kepemudaan-kemenpora-harus-berdampak-hingga-daerah",
+   "judul": "Kenaikan Anggaran Kepemudaan Kemenpora Harus Berdampak hingga Daerah",
+   "ringkas": "PARLEMENTARIA, Jakarta - Kenaikan anggaran kepemudaan Kementerian Pemuda dan Olahraga (Kemenpora) menjadi Rp130 miliar pada 2027 harus diikuti dengan program yang memberikan manfaat nyata bagi pemuda di seluruh Indonesia. Peningkatan anggaran tersebut diharapkan tidak hanya beror",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "4be4b1bb0941",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-setujui-pagu-anggaran-kesdm-2027-rp2737-triliun",
+   "judul": "Komisi XII Setujui Pagu Anggaran KESDM 2027 Rp27,37 Triliun",
+   "ringkas": "PARLEMENTARIA, Jakarta — Komisi XII DPR RI menyetujui Pagu Anggaran Kementerian Energi dan Sumber Daya Mineral (ESDM) Tahun Anggaran 2027 sebesar Rp27,37 triliun. Besaran tersebut meningkat dibandingkan alokasi tahun sebelumnya dan diarahkan terutama untuk mempercepat pembangunan",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "160bfb4eb3aa",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/sofyan-tan-minta-cabang-olahraga-perorangan-tak-dinomorduakan",
+   "judul": "Sofyan Tan Minta Cabang Olahraga Perorangan Tak Dinomorduakan",
+   "ringkas": "PARLEMENTARIA, Jakarta - Sejumlah cabang olahraga perorangan selama ini menjadi andalan Indonesia dalam meraih prestasi dan medali di berbagai ajang internasional. Karena itu, pembinaan cabang olahraga tersebut dinilai perlu mendapatkan perhatian yang seimbang dengan cabang olahr",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "5d5156b815a2",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-minta-kenaikan-anggaran-esdm-diikuti-perbaikan-kinerja-energi",
+   "judul": "Komisi XII Minta Kenaikan Anggaran ESDM Diikuti Perbaikan Kinerja Energi",
+   "ringkas": "PARLEMENTARIA, Jakarta — Komisi XII DPR RI meminta peningkatan dukungan anggaran kepada Kementerian Energi dan Sumber Daya Mineral (ESDM) diikuti dengan perbaikan kinerja sektor energi, khususnya minyak dan gas bumi (migas). Pihaknya menilai efektivitas anggaran perlu tercermin m",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "2951695af9d1",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-dorong-optimalisasi-infrastruktur-gas-dan-peningkatan-lifting-minyak",
+   "judul": "Komisi XII Dorong Optimalisasi Infrastruktur Gas dan Peningkatan Lifting Minyak",
+   "ringkas": "PARLEMENTARIA, Jakarta - Wakil Ketua Komisi XII DPR RI Sugeng Suparwoto menilai peningkatan anggaran Kementerian Energi dan Sumber Daya Mineral (ESDM) dalam Rencana Kerja dan Anggaran Kementerian/Lembaga (RKA-K/L) Tahun Anggaran 2027 harus dimanfaatkan untuk memperkuat pembanguna",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "803a0b0ed5d4",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-apresiasi-porsi-infrastruktur-dalam-pagu-esdm-2027-capai-82-persen",
+   "judul": "Komisi XII Apresiasi Porsi Infrastruktur dalam Pagu ESDM 2027 Capai 82 Persen",
+   "ringkas": "PARLEMENTARIA, Jakarta — Komisi XII DPR RI mengapresiasi postur Pagu Anggaran Kementerian Energi dan Sumber Daya Mineral (ESDM) Tahun Anggaran 2027 sebesar Rp27,37 triliun yang sebagian besar dialokasikan untuk program strategis dan pembangunan infrastruktur energi. Dari total pa",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "1ec3e8733b6d",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-dan-pemerintah-sepakati-target-lifting-minyak-6125-ribu-bopd",
+   "judul": "Komisi XII dan Pemerintah Sepakati Target Lifting Minyak 612,5 Ribu BOPD",
+   "ringkas": "PARLEMENTARIA, Jakarta — Komisi XII DPR RI bersama Pemerintah menyepakati kenaikan target lifting minyak bumi menjadi 612,5 ribu barel per hari (BOPD) dalam Asumsi Dasar Sektor Energi dan Sumber Daya Mineral (ESDM) RAPBN 2027. Angka tersebut meningkat dari usulan awal Pemerintah ",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "8fd2b5ce92d3",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/sebut-kendala-pelaku-ekraf-di-lapangan-tifatul-sembiring-tagih-peran-nyata-pemerintah",
+   "judul": "Sebut Kendala Pelaku Ekraf di Lapangan, Tifatul Sembiring Tagih Peran Nyata Pemerintah",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi VII DPR RI Tifatul Sembiring, menyatakan persetujuannya atas usulan tambahan anggaran Kementerian Ekonomi Kreatif/Badan Ekonomi Kreatif (Kemenekraf) sebesar Rp1,7 triliun untuk tahun anggaran 2027. Namun, ia menekankan pentingnya kejelasan ",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "294f85232791",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/ida-nurlaela-pertumbuhan-ritel-modern-jangan-gerus-pasar-tradisional",
+   "judul": "Ida Nurlaela: Pertumbuhan Ritel Modern Jangan Gerus Pasar Tradisional",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VI DPR RI Ida Nurlaela Wiradinata mengapresiasi capaian ekspor Indonesia yang mencatat pertumbuhan positif sepanjang semester I 2026. Namun, ia mengingatkan Kementerian Perdagangan agar tidak hanya berfokus pada perdagangan luar negeri, mel",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "8bb8a06d598c",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-ingatkan-risiko-kelangkaan-lpg-3-kg-menteri-esdm-buka-opsi-fleksibilitas-volume",
+   "judul": "Komisi XII Ingatkan Risiko Kelangkaan LPG 3 Kg, Menteri ESDM Buka Opsi Fleksibilitas Volume",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi XII DPR RI mengingatkan Pemerintah untuk mengevaluasi kembali alokasi kuota LPG 3 Kilogram tahun 2027 sebesar 8,00 juta metrik ton agar tidak memicu kelangkaan di masyarakat. Catatan kritis tersebut disampaikan dalam Rapat Kerja Komisi XII ",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "1a0551bde9a2",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/komisi-xii-restui-pengantar-pagu-esdm-2027-rincian-program-dikuliti-malam-ini",
+   "judul": "Komisi XII Restui Pengantar Pagu ESDM 2027, Rincian Program Dikuliti Malam Ini",
+   "ringkas": "PARLEMENTARIA, ​Jakarta — Komisi XII DPR RI menyetujui pengantar Pagu Anggaran Kementerian Energi dan Sumber Daya Mineral (KESDM) Tahun Anggaran 2027 sebesar Rp27,37 Triliun. Keputusan tersebut diambil dalam Rapat Kerja (Raker) Komisi XII DPR RI bersama Menteri ESDM Bahlil Lahada",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "17a24a159bff",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/sofyan-tan-dorong-pembinaan-atlet-berbasis-sains-untuk-dongkrak-prestasi",
+   "judul": "Sofyan Tan Dorong Pembinaan Atlet Berbasis Sains untuk Dongkrak Prestasi",
+   "ringkas": "PARLEMENTARIA, Jakarta — Pembinaan atlet nasional dinilai perlu semakin mengandalkan pendekatan berbasis sains agar potensi olahraga Indonesia dapat dipetakan secara lebih tepat dan dikembangkan menjadi prestasi di tingkat internasional. Pemetaan ilmiah dinilai penting untuk mene",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "315a9be0d564",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/ilham-permana-soroti-target-iku-kemenekraf-2027-terlalu-tinggi-dibanding-baseline-anggaran",
+   "judul": "Ilham Permana Soroti Target IKU Kemenekraf 2027: Terlalu Tinggi Dibanding Baseline Anggaran",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi VII DPR RI Ilham Permana memberikan catatan terkait penetapan Indikator Kinerja Utama (IKU) Kementerian Ekonomi Kreatif/Badan Ekonomi Kreatif (Kemenekraf) untuk Tahun Anggaran 2027. Ilham menilai target yang dipasang Kemenekraf terlalu ting",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "e26ca7e8458c",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/pemerintah-diminta-tetapkan-klb-di-wilayah-terdampak-kabut-asap-antisipasi-lonjakan-ispa",
+   "judul": "Pemerintah Diminta Tetapkan KLB di Wilayah Terdampak Kabut Asap, Antisipasi Lonjakan ISPA",
+   "ringkas": "PARLEMENTARIA, Jakarta – Wakil Ketua Komisi IX DPR RI Yahya Zaini mendorong Pemerintah menetapkan status kejadian luar biasa (KLB) di wilayah dengan dampak kesehatan paling tinggi akibat kebakaran hutan dan lahan (Karhutla). Langkah tersebut dinilai penting untuk mempercepat pena",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "5c80344032db",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/mesin-umkm-tak-optimal-hendry-munief-minta-bantuan-kementerian-sesuai-kebutuhan-riil",
+   "judul": "Mesin UMKM Tak Optimal, Hendry Munief Minta Bantuan Kementerian Sesuai Kebutuhan Riil",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VII DPR RI, Hendry Munief, mengungkapkan temuan penting terkait ketidaktepatan sasaran bantuan peralatan bagi pelaku usaha di daerah. Hasil serapan aspirasi dalam masa reses menunjukkan masih ada bantuan mesin produksi dari pemerintah berni",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "bf2850520404",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/rapat-paripurna-khusus-dalam-rangka-hut-ke-81-dpr-ri",
+   "judul": "RAPAT PARIPURNA KHUSUS DALAM RANGKA HUT KE-81 DPR RI",
+   "ringkas": "AGENDA : PIDATO KETUA DPR RI DALAM RANGKA HUT KE-81 DPR RI DAN PENYAMPAIAN LAPORAN KINERJA DPR RI TAHUN SIDANG 2025-2026 LINK: https://s.id/vSw4b",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "5c1c00742f0e",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/bksap-sambut-baik-permohonan-dukungan-azerbaijan-duduki-pimpinan-ipu",
+   "judul": "BKSAP Sambut Baik Permohonan Dukungan Azerbaijan Duduki Pimpinan IPU",
+   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI Syahrul Aidi Maazat menyambut baik permohonan dukungan dari Dubes Azerbaijan yang akan mencalonkan salah satu tokoh terkemuka Azerbaijan untuk maju sebagai kandidat pimpinan puncak di struktur kepenguru",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "919da0e36b89",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/bulan-solidaritas-palestina-akan-hadirkan-tokoh-yahudi-anti-zionis-kolaborasi-aqsa-working-group",
+   "judul": "Bulan Solidaritas Palestina Akan Hadirkan Tokoh Yahudi Anti-Zionis, Kolaborasi Aqsa Working Group",
+   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI Syahrul Aidi Maazat menyambut baik inisiatif kolaborasi dari Aqsa Working Group (AWG) dalam penyelenggaraan rangkaian kegiatan Bulan Solidaritas Palestina yang dijadwalkan berlangsung pada November mend",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "64131382d065",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/belasan-tahun-tidak-naik-ecky-awal-dukung-peningkatan-kesejahteraan-kejaksaan",
+   "judul": "Belasan Tahun Tidak Naik, Ecky Awal Dukung Peningkatan Kesejahteraan Kejaksaan",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi III DPR RI, Ecky Awal Mucharam mendorong pemerintah memberikan perhatian terhadap remunerasi dan tunjangan kinerja (tukin) bagi jajaran Kejaksaan. Persoalan tersebut dinilai perlu kembali diperjuangkan sebagai bagian dari upaya memperkuat k",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "1574fc915621",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/bksap-dukung-penuh-konferensi-internasional-oic-youth-indonesia-di-yogyakarta",
+   "judul": "BKSAP Dukung Penuh Konferensi Internasional OIC Youth Indonesia di Yogyakarta",
+   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI Syahrul Aidi Maazat secara resmi mendapatkan undangan hadir sebagai narasumber Konferensi Internasional OIC Youth Indonesia (Pemuda Organisasi Kerja Sama Islam/OKI)yang akan digelar di Yogyakarta bebera",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "d38f958da4ac",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/usulan-penambahan-anggaran-mitra-kerja-harus-berorientasi-peningkatan-pelayanan-publik",
+   "judul": "Usulan Penambahan Anggaran Mitra Kerja Harus Berorientasi Peningkatan Pelayanan Publik",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi II DPR RI Fauzan Khalid menekankan pentingnya peran strategis kementerian dan lembaga mitra kerja Komisi II sebagai ujung tombak pelayanan publik. Fauzan mengingatkan, seluruh fungsi tugas yang diemban lembaga-lembaga tersebut bermuara pada",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "b6145b94f7c1",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/ridwan-andi-wittiri-dorong-penyediaan-listrik-plts-di-pulau-liukang",
+   "judul": "Ridwan Andi Wittiri Dorong Penyediaan Listrik PLTS di Pulau Liukang",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi XII DPR RI Ridwan Andi Wittiri mendorong Kementerian Energi dan Sumber Daya Mineral (ESDM) segera menyediakan akses listrik berbasis Pembangkit Listrik Tenaga Surya (PLTS) komunal di Pulau Liukang, Kabupaten Bulukumba, Sulawesi Selatan. Men",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "9bfb81809ac6",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/modernisasi-kelembagaan-harus-seiring-penguatan-nilai",
+   "judul": "Modernisasi Kelembagaan Harus Seiring Penguatan Nilai",
+   "ringkas": "PARLEMENTARIA, Jakarta — Modernisasi kelembagaan MPR, DPR, dan DPD RI yang berjalan seiring dengan penguatan nilai-nilai kebangsaan dalam menghadapi perubahan zaman. Perkembangan teknologi dan arus informasi yang semakin cepat membawa peluang sekaligus tantangan bagi kehidupan de",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "e687f79a78f3",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/sugiat-santoso-minta-anggaran-bakom-pemerintah-rp19-triliun-dikawal-dengan-indikator-kinerja",
+   "judul": "Sugiat Santoso Minta Anggaran Bakom Pemerintah Rp1,9 Triliun Dikawal dengan Indikator Kinerja",
+   "ringkas": "PARLEMENTARIA, Jakarta – Wakil Ketua Komisi XIII DPR RI Sugiat Santoso meminta peningkatan anggaran Badan Komunikasi (Bakom) Pemerintah pada 2027 diikuti target dan indikator kinerja yang terukur. Menurutnya, besarnya dukungan anggaran harus menghasilkan komunikasi publik yang ma",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "12743ea726d5",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/yasonna-laoly-dorong-optimalisasi-aset-gbk-dan-kemayoran-untuk-tingkatkan-pnbp",
+   "judul": "Yasonna Laoly Dorong Optimalisasi Aset GBK dan Kemayoran untuk Tingkatkan PNBP",
+   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi XIII DPR RI Yasonna H. Laoly mendorong pemerintah mengoptimalkan pengelolaan aset negara di kawasan Gelora Bung Karno (GBK) dan Kemayoran demi meningkatkan penerimaan negara bukan pajak (PNBP). Menurutnya, optimalisasi tersebut penting untu",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "850d78b8eaba",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/pastikan-program-berjalan-komisi-iii-perjuangkan-tambahan-anggaran-ma-dan-ky-tahun-2027",
+   "judul": "Pastikan Program Berjalan, Komisi III Perjuangkan Tambahan Anggaran MA dan KY Tahun 2027",
+   "ringkas": "PARLEMENTARIA, Jakarta – Komisi III DPR RI berkomitmen akan memperjuangkan tambahan anggaran untuk Mahkamah Agung (MA) dan Komisi Yudisial (KY) dalam pembahasan anggaran tahun 2027. Langkah tersebut diambil setelah Komisi III menerima penjelasan kedua lembaga terkait pagu anggara",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "2eedebf8acc2",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/investor-mulai-lirik-vietnam-bambang-haryo-kondisi-di-kawasan-industri-perlu-dibenahi",
+   "judul": "Investor Mulai Lirik Vietnam, Bambang Haryo: Kondisi di Kawasan Industri Perlu dibenahi",
+   "ringkas": "PARLEMENTARIA, Karawang — Anggota Komisi VII DPR RI Bambang Haryo Soekartono mengatakan, persoalan yang disampaikan pelaku industri di KIIC pada dasarnya memiliki kesamaan dengan berbagai kawasan industri lainnya di Indonesia. Salah satu isu utama yang perlu mendapat perhatian an",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "1f0da714cc35",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/ruu-pelelangan-akan-atur-perlindungan-bagi-pemilik-dan-pemenang-barang",
+   "judul": "RUU Pelelangan Akan Atur Perlindungan bagi Pemilik dan Pemenang Barang",
+   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Legislasi (Baleg) DPR RI Bob Hasan mengatakan Rancangan Undang-Undang (RUU) tentang Pelelangan dalam rangka untuk memberikan kepastian hukum, sekaligus menjawab berbagai persoalan dalam praktik lelang di Indonesia. Diketahui, RUU Pelelangan te",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "31f4ae43f016",
+   "url": "https://emedia.dpr.go.id/news/2026/09/01/tak-sekadar-desil-kebutuhan-siswa-harus-jadi-dasar-penerima-pip-dan-kip-kuliah",
+   "judul": "Tak Sekadar Desil. Kebutuhan Siswa Harus Jadi Dasar Penerima PIP dan KIP Kuliah",
+   "ringkas": "PARLEMENTARIA, Jakarta - Wakil Ketua Komisi X DPR RI, MY Esti Wijayati menilai kebutuhan riil peserta didik harus menjadi dasar dalam menentukan penerima Program Indonesia Pintar (PIP) dan Kartu Indonesia Pintar Kuliah (KIP Kuliah). Menurutnya, penggunaan data desil sebagai tolok",
+   "tanggal": "2026-09-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "ef3ad2fb6fd5",
+   "url": "https://pks.id/content/pks-karhutla-jangan-hanya-dihitung-dari-luas-lahan-terbakar-dampak-kesehatan-harus-jadi-perhatian",
+   "judul": "PKS: Karhutla Jangan Hanya Dihitung dari Luas Lahan Terbakar, Dampak Kesehatan Harus Jadi Perhatian",
+   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, meminta pemerintah memperkuat perspektif kesehatan masyarakat dalam penanganan kebakaran hutan dan lahan (karhutla). Menurutnya, dampak karhutla tidak berhenti pada kerusakan lingkungan, tetapi juga dapat meningkatkan risiko gangg",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "f3701be1740c",
-   "url": "https://pks.id/content/pks-apresiasi-semangat-kolaborasi-meriahkan-hut-ri-ke-81",
-   "judul": "PKS Apresiasi Semangat Kolaborasi Meriahkan HUT RI ke-81",
-   "ringkas": "Sekretaris Jenderal (Sekjen) Partai Keadilan Sejahtera (PKS) Muhammad Kholid mengapresiasi seluruh panitia dan peserta yang telah menyukseskan rangkaian kegiatan peringatan HUT ke-81 Kemerdekaan Republik Indonesia yang diselenggarakan PKS.",
-   "tanggal": "2026-08-31",
+   "id": "0304a4180abd",
+   "url": "https://pks.id/content/pks-jateng-gelar-sosialisasi-konsepsi-dasar-partai-perkuat-pemahaman-ideologi-dan-tujuan-dasar-partai",
+   "judul": "PKS Jateng Gelar Sosialisasi Konsepsi Dasar Partai, Perkuat Pemahaman Ideologi dan Tujuan Dasar Partai",
+   "ringkas": "“Gerak kita akan menjadi maksimal jika secara konsep kita dapat memahami, mendalami, dan mempelajarinya secara detail. Dengan begitu, langkah kita memiliki ruh dan semangat perjuangan serta tidak terputus dari akar perjuangan dan konsep dasar kita,” ujar Ketua DPW PKS Jawa Tengah",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "03ee655ba359",
-   "url": "https://pks.id/content/legislator-pks-anomali-data-desil-jangan-memutus-akses-warga-rentan-terhadap-bansos",
-   "judul": "Legislator PKS: Anomali Data Desil Jangan Memutus Akses Warga Rentan terhadap Bansos",
-   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS, Mohd. Iqbal Romzi, meminta pemerintah segera melakukan verifikasi dan koreksi atas perubahan klasifikasi desil yang tidak sesuai dengan kondisi sosial-ekonomi masyarakat di lapangan. Anomali data berisiko membuat keluarga miskin, lansia, pen",
-   "tanggal": "2026-08-31",
+   "id": "5a1d7fe78dcc",
+   "url": "https://pks.id/content/karhutla-kalimantan-ancam-satwa-liar-pks-selamatkan-satwa-dan-habitatnya",
+   "judul": "Karhutla Kalimantan Ancam Satwa Liar, PKS: Selamatkan Satwa dan Habitatnya",
+   "ringkas": "Kebakaran hutan dan lahan (karhutla) di Kalimantan tidak hanya menimbulkan persoalan asap dan kerusakan lahan. Satwa liar turut menjadi korban, mulai dari mati terbakar, mengalami gangguan kesehatan akibat asap, hingga kehilangan habitat dan terpaksa keluar dari kawasan hutan.",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "0f1cfaf7573f",
-   "url": "https://pks.id/content/legislator-pks-tegaskan-bank-tanah-harus-menjadi-instrumen-utama-reforma-agraria-dan-mengurangi-ketimpangan-penguasaan-lahan",
-   "judul": "Legislator PKS Tegaskan Bank Tanah Harus Menjadi Instrumen Utama Reforma Agraria dan Mengurangi Ketimpangan Penguasaan Lahan",
-   "ringkas": "Dalam Rapat Dengar Pendapat (RDP) Komisi II DPR RI dengan Badan Bank Tanah, Anggota Komisi II DPR RI dari Fraksi Partai Keadilan Sejahtera (PKS), Ahmad Heryawan, menegaskan bahwa kehadiran Badan Bank Tanah harus diarahkan untuk menyelesaikan persoalan ketimpangan penguasaan lahan",
-   "tanggal": "2026-08-31",
+   "id": "a0ced9a6a864",
+   "url": "https://pks.id/content/resmikan-rumah-advokasi-hukum-pks-sumut-perkuat-layanan-untuk-masyarakat",
+   "judul": "Resmikan Rumah Advokasi Hukum, PKS Sumut Perkuat Layanan Untuk Masyarakat",
+   "ringkas": "DPW Partai Keadilan Sejahtera (PKS) Sumatera Utara meresmikan Rumah Advokasi Hukum, Ahad (30/8/2026). Peresmian tersebut dihadiri langsung Presiden PKS, Almuzzammil Yusuf. Rumah Advokasi Hukum PKS Sumut dihadirkan sebagai ruang pelayanan bagi masyarakat untuk menyampaikan persoal",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "e265c2c09c53",
-   "url": "https://pks.id/content/presiden-pks-kunjungi-sumut-resmikan-rumah-advokasi-hukum-dan-bertanding-mini-soccer-dengan-jurnalis",
-   "judul": "Presiden PKS Kunjungi Sumut, Resmikan Rumah Advokasi Hukum dan Bertanding Mini Soccer dengan Jurnalis",
-   "ringkas": "Pengurus DPW Partai Keadilan Sejahtera (PKS) Sumatera Utara siap menyambut kunjungan Presiden PKS Almuzzammil Yusuf (AMY) ke Sumatera Utara, Ahad (30/8/2026). Kunjungan tersebut akan diisi dengan sejumlah agenda, mulai dari peresmian Rumah Advokasi Hukum PKS Sumut, silaturahmi da",
-   "tanggal": "2026-08-31",
+   "id": "1b5755de5b87",
+   "url": "https://pks.id/content/hnw-apresiasi-putusan-mk-penetapan-status-bencana-nasional-kini-lebih-terukur-agar-mempercepat-aspek-perbantuan-dan-pemulihan",
+   "judul": "HNW Apresiasi Putusan MK: Penetapan Status Bencana Nasional Kini Lebih Terukur, Agar Mempercepat Aspek Perbantuan dan Pemulihan",
+   "ringkas": "Wakil Ketua MPR RI dari Fraksi Partai Keadilan Sejahtera (PKS), yang juga Anggota Komisi VIII DPR RI, Hidayat Nur Wahid (HNW), mengapresiasi Putusan Mahkamah Konstitusi (MK) Nomor 261/PUU-XXIII/2025 yang memberikan kepastian hukum terkait penetapan status bencana nasional. HNW ju",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "54f6a2349016",
-   "url": "https://pks.id/content/bobby-nasution-sambut-kedatangan-amy-safari-kebangsaan-presiden-pks-berlanjut-ke-sumatera-utara",
-   "judul": "Bobby Nasution Sambut Kedatangan AMY, Safari Kebangsaan Presiden PKS Berlanjut ke Sumatera Utara",
-   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS), Almuzzammil Yusuf Atau yang kerap disapa AMY, tiba di Sumatera Utara pada Ahad (30/8/2026). Kedatangan pimpinan PKS tersebut disambut hangat oleh Gubernur Sumatera Utara, Bobby Nasution, di Kantor Dewan Pimpinan Tingkat Wilayah (DPTW) PKS",
-   "tanggal": "2026-08-31",
+   "id": "194717d5f3f0",
+   "url": "https://pks.id/content/ketua-pks-jatim-dampingi-amy-ziarah-ke-makam-sunan-ampel-teladani-dakwah-yang-penuh-rahmat",
+   "judul": "Ketua PKS Jatim Dampingi AMY Ziarah ke Makam Sunan Ampel, Teladani Dakwah yang Penuh Rahmat",
+   "ringkas": "Ketua DPW PKS Jawa Timur Bagus Prasetia Lelana mendampingi Presiden PKS Almuzzammil Yusuf (AMY) berziarah ke makam Sunan Ampel di Surabaya, Jumat (28/8/2026).",
+   "tanggal": "2026-09-01",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "9dde5c05d431",
+   "url": "https://pks.id/content/dari-ideologi-ke-kebijakan-publik-pks-jateng-pacu-kader-hadirkan-politik-yang-berdampak",
+   "judul": "Dari Ideologi ke Kebijakan Publik, PKS Jateng Pacu Kader Hadirkan Politik yang Berdampak",
+   "ringkas": "Pemahaman terhadap ideologi dan arah kebijakan partai diharapkan mampu memperkuat kualitas keputusan politik sekaligus menjaga konsistensi antara janji perjuangan dan kinerja pelayanan kepada konstituen.",
+   "tanggal": "2026-09-01",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "3a382648addd",
+   "url": "https://www.kemhan.go.id/2026/09/01/kemhan-gelar-defence-intellectual-management-book-club-kedaulatan-energi-bagian-dari-pertahanan-negara.html",
+   "judul": "Kemhan Gelar Defence Intellectual Management Book Club: Kedaulatan Energi Bagian dari Pertahanan Negara",
+   "ringkas": "Jakarta – Kementerian Pertahanan kembali menggelar kegiatan Defence Intellectual Management Book Club yang diselenggarakan di Perpustakaan Wawasan Nusantara Kemhan, Jakarta,...",
+   "tanggal": "2026-09-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "5bb53b513eb7",
+   "url": "https://www.kemhan.go.id/2026/09/01/wamenhan-ri-terima-mgbki-bahas-ketahanan-nasional-di-bidang-kesehatan.html",
+   "judul": "Wamenhan RI Terima MGBKI, Bahas Ketahanan Nasional di Bidang Kesehatan",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto mewakili Menhan RI menerima Ketua Majelis Guru Besar...",
+   "tanggal": "2026-09-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "a5b4e6c8ad1b",
+   "url": "https://www.kemhan.go.id/2026/09/01/buka-pendidikan-tahun-akademik-2026-2027-unhan-ri-tekankan-ilmu-teknologi-dan-bela-negara-dalam-pengabdian.html",
+   "judul": "Buka Pendidikan Tahun Akademik 2026-2027, Unhan RI Tekankan Ilmu, Teknologi, dan Bela Negara dalam Pengabdian",
+   "ringkas": "Bogor – Universitas Pertahanan Republik Indonesia (Unhan RI) melaksanakan Upacara Pembukaan Pendidikan Program Doktor (S-3), Magister (S-2), Profesi, Sarjana (S-1),...",
+   "tanggal": "2026-09-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "38f0e628fa70",
+   "url": "https://www.kemhan.go.id/2026/09/01/karo-infohan-hadiri-forum-bakohumas-kemenko-polkam-perkuat-sinergi-komunikasi-pemerintah.html",
+   "judul": "Karo Infohan Hadiri Forum Bakohumas Kemenko Polkam, Perkuat Sinergi Komunikasi Pemerintah",
+   "ringkas": "Jakarta — Kepala Biro Informasi Pertahanan (Karo Infohan) Setjen Kemhan Brigjen TNI Rico Ricardo Sirait menghadiri Forum Tematik Badan Koordinasi...",
+   "tanggal": "2026-09-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "c30635fb77c7",
+   "url": "https://www.kemhan.go.id/2026/09/01/sekjen-kemhan-hadiri-peringatan-hari-kemenangan-dan-hari-angkatan-bersenjata-turki.html",
+   "judul": "Sekjen Kemhan Hadiri Peringatan Hari Kemenangan dan Hari Angkatan Bersenjata Turki",
+   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia (Sekjen Kemhan RI) Letjen TNI Tri Budi Utomo mewakili Menteri Pertahanan RI...",
+   "tanggal": "2026-09-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "21dac8742521",
+   "url": "https://gerindra.id/2026/09/01/m-husni-apresiasi-kinerja-haji-2026-dan-respons-cepat-pemerintah-tangani-bencana/",
+   "judul": "M. Husni Apresiasi Kinerja Haji 2026 dan Respons Cepat Pemerintah Tangani Bencana",
+   "ringkas": "Anggota Komisi VIII DPR RI, M. Husni, mengapresiasi capaian pengawasan pada dua sektor krusial tahun ini, yakni penyelenggaraan ibadah haji 2026 dan penanganan bencana alam oleh Badan Nasional Penanggulangan Bencana (BNPB). Legislator Fraksi Partai Gerindra itu menilai penyelengg",
+   "tanggal": "2026-09-01",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "ae8633f15b0b",
+   "url": "https://gerindra.id/2026/09/01/wardatul-asriah-dukung-sekolah-rakyat-permanen-berdiri-di-bekasi-dorong-perluasan-akses-pendidikan/",
+   "judul": "Wardatul Asriah Dukung Sekolah Rakyat Permanen Berdiri di Bekasi, Dorong Perluasan Akses Pendidikan",
+   "ringkas": "Anggota Komisi VIII DPR RI, Wardatul Asriah, mendukung pelaksanaan Sekolah Rakyat sebagai salah satu program strategis nasional pemerintahan Presiden Prabowo Subianto. Menurutnya, Komisi VIII DPR RI sebagai mitra kerja Kementerian Sosial (Kemensos) memiliki peran dalam mendukung ",
+   "tanggal": "2026-09-01",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "6e6d1e8ea679",
+   "url": "https://gerindra.id/2026/09/01/anggaran-bakom-rp19-triliun-sugiat-santoso-jangan-sampai-approval-rating-rendah/",
+   "judul": "Anggaran Bakom Rp1,9 Triliun, Sugiat Santoso: Jangan Sampai Approval Rating Rendah",
+   "ringkas": "Wakil Ketua Komisi XIII DPR RI, Sugiat Santoso, meminta peningkatan anggaran Badan Komunikasi (Bakom) Pemerintah pada 2027 diikuti target dan indikator kinerja yang terukur. Menurutnya, besarnya anggaran harus mampu meningkatkan efektivitas komunikasi pemerintah kepada masyarakat",
+   "tanggal": "2026-09-01",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "8931c03de88f",
+   "url": "https://gerindra.id/2026/09/01/investor-mulai-lirik-vietnam-bambang-haryo-dorong-insentif-energi-dan-kemudahan-perizinan/",
+   "judul": "Investor Mulai Lirik Vietnam, Bambang Haryo Dorong Insentif Energi dan Kemudahan Perizinan",
+   "ringkas": "Anggota Komisi VII DPR RI, Bambang Haryo Soekartono, mengatakan berbagai persoalan yang disampaikan pelaku industri di Karawang International Industrial City (KIIC) pada dasarnya juga dihadapi oleh kawasan industri lainnya di Indonesia. Sejumlah isu utama yang perlu mendapat perh",
+   "tanggal": "2026-09-01",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "97be556db3b8",
+   "url": "https://gerindra.id/2026/09/01/bob-hasan-ruu-pelelangan-harus-lindungi-pemilik-barang-dan-pemenang-yang-beritikad-baik/",
+   "judul": "Bob Hasan: RUU Pelelangan Harus Lindungi Pemilik Barang dan Pemenang yang Beritikad Baik",
+   "ringkas": "Ketua Badan Legislasi (Baleg) DPR RI, Bob Hasan, mengatakan Rancangan Undang-Undang (RUU) tentang Pelelangan diperlukan untuk memberikan kepastian hukum sekaligus menjawab berbagai persoalan yang muncul dalam praktik lelang di Indonesia. RUU Pelelangan diketahui telah masuk dalam",
+   "tanggal": "2026-09-01",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "4d9f19e8969a",
+   "url": "https://kontras.org/swarga-edisi-ke-5-merdeka-di-atas-kertas/",
+   "judul": "Swarga Edisi ke-5: Merdeka di Atas Kertas",
+   "ringkas": "Setiap tanggal 17 Agustus, Indonesia merayakan kemerdekaan sebagai momentum bersejarah untuk mengenang Proklamasi 1945. Narasi kemerdekaan terus diwariskan secara simbolis melalui upacara bendera, lagu kebangsaan, dan ornamen nasionalisme. Namun, di balik seremonial tersebut, mun",
+   "tanggal": "2026-09-01",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "97ba93eb0c4b",
+   "url": "https://tniad.mil.id/tni-ad-serahkan-kendaraan-kepada-pemenang-lomba-posyandu-dan-istri-danyon-berdampak/",
+   "judul": "TNI AD Serahkan Kendaraan kepada Pemenang Lomba Posyandu dan Istri Danyon Berdampak",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat (TNI AD) melalui Pengurus Pusat Persit Kartika Chandra Kirana (PP Persit KCK) menyerahkan kendaraan kepada para pemenang Lomba Posyandu dan program Istri Danyon Berdampak...",
+   "tanggal": "2026-09-01",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "6b09c864a4fd",
@@ -188,184 +814,70 @@
    "cabang": "legislatif"
   },
   {
-   "id": "99402a265ed0",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/perkuat-pengawasan-komisi-iii-kawal-ruu-perampasan-aset-tidak-jadi-alat-kekuasaan",
-   "judul": "Perkuat Pengawasan, Komisi III Kawal RUU Perampasan Aset Tidak Jadi Alat Kekuasaan",
-   "ringkas": "PARLEMENTARIA, Jakarta – Komisi III DPR RI menegaskan komitmennya untuk mengawal penerapan Undang-Undang (UU) Perampasan Aset agar tidak disalahgunakan sebagai alat kekuasaan. Pengawasan terhadap pelaksanaan aturan tersebut dinilai penting untuk memastikan kewenangan perampasan a",
+   "id": "2135cb452c43",
+   "url": "https://pks.id/content/pks-maknai-kemerdekaan-lewat-refleksi-sejarah-olahraga-hingga-budaya",
+   "judul": "PKS Maknai Kemerdekaan Lewat Refleksi Sejarah, Olahraga, hingga Budaya",
+   "ringkas": "Ketua Panitia Rangkaian Peringatan HUT RI ke-81 Bachtiar Firdaus menjelaskan bahwa peringatan yang diselenggarakan PKS tahun ini mencoba untuk memaknai kemerdekaan dari berbagai sisi dengan semangat kolaborasi.",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
-   "id": "db3b3c2931a6",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/hetifah-dorong-keselamatan-petugas-dan-relawan-jadi-prioritas-penanganan-karhutla",
-   "judul": "Hetifah Dorong Keselamatan Petugas dan Relawan Jadi Prioritas Penanganan Karhutla",
-   "ringkas": "PARLEMENTARIA, Jakarta – Anggota Komisi VIII DPR RI Hetifah Sjaifudian mendorong keselamatan petugas dan relawan menjadi prioritas dalam penanganan kebakaran hutan dan lahan (karhutla). Ia meminta pemerintah memperkuat standar keselamatan bagi personel yang berada di garis depan ",
+   "id": "f3701be1740c",
+   "url": "https://pks.id/content/pks-apresiasi-semangat-kolaborasi-meriahkan-hut-ri-ke-81",
+   "judul": "PKS Apresiasi Semangat Kolaborasi Meriahkan HUT RI ke-81",
+   "ringkas": "Sekretaris Jenderal (Sekjen) Partai Keadilan Sejahtera (PKS) Muhammad Kholid mengapresiasi seluruh panitia dan peserta yang telah menyukseskan rangkaian kegiatan peringatan HUT ke-81 Kemerdekaan Republik Indonesia yang diselenggarakan PKS.",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
-   "id": "01e64b031afb",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/hetifah-anggaran-operasional-bpbd-harus-diperkuat-hadapi-karhutla",
-   "judul": "Hetifah: Anggaran Operasional BPBD Harus Diperkuat Hadapi Karhutla",
-   "ringkas": "PARLEMENTARIA, Banjarbaru - Keterbatasan anggaran operasional menjadi salah satu kendala yang dihadapi Badan Penanggulangan Bencana Daerah (BPBD) dalam menangani kebakaran hutan dan lahan (karhutla) di sejumlah wilayah Kalimantan Selatan. Kondisi tersebut perlu menjadi perhatian ",
+   "id": "03ee655ba359",
+   "url": "https://pks.id/content/legislator-pks-anomali-data-desil-jangan-memutus-akses-warga-rentan-terhadap-bansos",
+   "judul": "Legislator PKS: Anomali Data Desil Jangan Memutus Akses Warga Rentan terhadap Bansos",
+   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS, Mohd. Iqbal Romzi, meminta pemerintah segera melakukan verifikasi dan koreksi atas perubahan klasifikasi desil yang tidak sesuai dengan kondisi sosial-ekonomi masyarakat di lapangan. Anomali data berisiko membuat keluarga miskin, lansia, pen",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
-   "id": "13fd5e07c506",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/nanang-samodra-perjuangkan-pemulihan-desa-adat-sade-secara-menyeluruh",
-   "judul": "Nanang Samodra Perjuangkan Pemulihan Desa Adat Sade secara Menyeluruh",
-   "ringkas": "PARLEMENTARIA, Lombok Tengah - Pemulihan Desa Adat Sade, Lombok Tengah, Nusa Tenggara Barat (NTB), pascakebakaran harus dilakukan secara menyeluruh. Pemulihan tidak hanya mencakup pembangunan kembali rumah dan kawasan terdampak, tetapi juga pelestarian nilai adat, pemulihan ekono",
+   "id": "0f1cfaf7573f",
+   "url": "https://pks.id/content/legislator-pks-tegaskan-bank-tanah-harus-menjadi-instrumen-utama-reforma-agraria-dan-mengurangi-ketimpangan-penguasaan-lahan",
+   "judul": "Legislator PKS Tegaskan Bank Tanah Harus Menjadi Instrumen Utama Reforma Agraria dan Mengurangi Ketimpangan Penguasaan Lahan",
+   "ringkas": "Dalam Rapat Dengar Pendapat (RDP) Komisi II DPR RI dengan Badan Bank Tanah, Anggota Komisi II DPR RI dari Fraksi Partai Keadilan Sejahtera (PKS), Ahmad Heryawan, menegaskan bahwa kehadiran Badan Bank Tanah harus diarahkan untuk menyelesaikan persoalan ketimpangan penguasaan lahan",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
-   "id": "3d16d45ecb9a",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/netty-aher-dorong-ruu-pelindungan-ketenagakerjaan-jangkau-pekerja-informal-dan-digital",
-   "judul": "Netty Aher Dorong RUU Pelindungan Ketenagakerjaan Jangkau Pekerja Informal dan Digital",
-   "ringkas": "PARLEMENTARIA, Jakarta - Persetujuan Rancangan Undang-Undang (RUU) tentang Pelindungan Ketenagakerjaan menjadi usul inisiatif DPR RI dinilai sebagai momentum penting untuk memperbarui sistem ketenagakerjaan nasional. Regulasi ini dirancang guna menjawab tantangan perubahan dunia ",
+   "id": "e265c2c09c53",
+   "url": "https://pks.id/content/presiden-pks-kunjungi-sumut-resmikan-rumah-advokasi-hukum-dan-bertanding-mini-soccer-dengan-jurnalis",
+   "judul": "Presiden PKS Kunjungi Sumut, Resmikan Rumah Advokasi Hukum dan Bertanding Mini Soccer dengan Jurnalis",
+   "ringkas": "Pengurus DPW Partai Keadilan Sejahtera (PKS) Sumatera Utara siap menyambut kunjungan Presiden PKS Almuzzammil Yusuf (AMY) ke Sumatera Utara, Ahad (30/8/2026). Kunjungan tersebut akan diisi dengan sejumlah agenda, mulai dari peresmian Rumah Advokasi Hukum PKS Sumut, silaturahmi da",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
-   "id": "46d98b642b07",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/persoalan-air-bersih-slangit-berulang-saan-tekankan-solusi-jangka-panjang",
-   "judul": "Persoalan Air Bersih Slangit Berulang, Saan Tekankan Solusi Jangka Panjang",
-   "ringkas": "PARLEMENTARIA, Cirebon - Wakil Ketua DPR RI Bidang Koordinator Industri dan Pembangunan (Korinbang) Saan Mustopa mendorong penanganan menyeluruh terhadap persoalan akses air bersih di Desa Slangit, Kecamatan Klangenan, Kabupaten Cirebon. Menurutnya, penyelesaian masalah tersebut ",
+   "id": "54f6a2349016",
+   "url": "https://pks.id/content/bobby-nasution-sambut-kedatangan-amy-safari-kebangsaan-presiden-pks-berlanjut-ke-sumatera-utara",
+   "judul": "Bobby Nasution Sambut Kedatangan AMY, Safari Kebangsaan Presiden PKS Berlanjut ke Sumatera Utara",
+   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS), Almuzzammil Yusuf Atau yang kerap disapa AMY, tiba di Sumatera Utara pada Ahad (30/8/2026). Kedatangan pimpinan PKS tersebut disambut hangat oleh Gubernur Sumatera Utara, Bobby Nasution, di Kantor Dewan Pimpinan Tingkat Wilayah (DPTW) PKS",
    "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "89f8acf7c564",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/pelaku-kreatif-sulit-akses-kur-samuel-pertanyakan-parameter-kepercayaan-perbankan",
-   "judul": "Pelaku Kreatif Sulit Akses KUR, Samuel Pertanyakan Parameter Kepercayaan Perbankan",
-   "ringkas": "PARLEMENTRIA, Bali - Anggota Komisi VII DPR, Samuel JD Wattimena, menyoroti masih perlunya kemudahan akses pembiayaan melalui Kredit Usaha Rakyat (KUR) bagi pelaku ekonomi kreatif. Hal tersebut disampaikan Samuel saat kunjungan di Nuanu Creative City, Tabanan, Provinsi Bali, Juma",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "b7c047190fa2",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/soroti-data-umkm-tabanan-samuel-wattimena-potensi-kolaborasi-dengan-nuanu-perlu-dibuka",
-   "judul": "Soroti Data UMKM Tabanan, Samuel Wattimena Potensi Kolaborasi dengan Nuanu Perlu Dibuka",
-   "ringkas": "PARLEMENTRIA, Bali - Anggota Komisi VII DPR, Samuel JD Wattimena, mendorong Pemerintah Kabupaten Tabanan dan Dewan Kerajinan Nasional Daerah (Dekranasda) untuk lebih aktif membangun sinergi dengan Nuanu Creative City dalam memperluas ruang bagi pelaku UMKM dan ekonomi kreatif lok",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "d75bcdfe0228",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/perlunya-dorong-penguatan-teknologi-dan-sumber-air-hadapi-karhutla-kalsel",
-   "judul": "Perlunya Dorong Penguatan Teknologi dan Sumber Air Hadapi Karhutla Kalsel",
-   "ringkas": "PARLEMENTARIA, Banjarbaru - Penanganan kebakaran hutan dan lahan (karhutla) di Kalimantan Selatan perlu diperkuat melalui dua pendekatan, yakni memastikan titik api dapat terdeteksi secara akurat saat kebakaran terjadi serta menjaga ketersediaan sumber air sebagai bagian dari mit",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "4c13b0e5e1b4",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/karhutla-gambut-kalsel-abdul-wachid-dorong-penggunaan-teknologi-khusus",
-   "judul": "Karhutla Gambut Kalsel, Abdul Wachid Dorong Penggunaan Teknologi Khusus",
-   "ringkas": "PARLEMENTARIA, Banjarbaru - Kebakaran hutan dan lahan (karhutla) di kawasan gambut Kalimantan Selatan membutuhkan teknologi penanganan khusus. Pasalnya, kebakaran pada lahan gambut tidak selalu terlihat di permukaan karena api dapat menjalar dan membakar lapisan di bawah tanah.",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "a66a40054c34",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/kunjungi-bea-cukai-soekarno-hatta-puteri-komarudin-dorong-pengawasan-diperketat",
-   "judul": "Kunjungi Bea Cukai Soekarno-Hatta, Puteri Komarudin Dorong Pengawasan Diperketat",
-   "ringkas": "PARLEMENTARIA, Tangerang – Anggota Komisi XI DPR RI Puteri Anetta Komarudin mendorong Direktorat Jenderal Bea dan Cukai (DJBC) memperkuat pengawasan dan penindakan terhadap potensi penyelundupan melalui Bandara Internasional Soekarno-Hatta. Penguatan tersebut dinilai penting meny",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "78e74ee8a40c",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/andi-yuliani-paris-soroti-kesiapan-kelembagaan-jelang-bursa-mineral-beroperasi",
-   "judul": "Andi Yuliani Paris Soroti Kesiapan Kelembagaan Jelang Bursa Mineral Beroperasi",
-   "ringkas": "PARLEMENTARIA, Tangerang – Anggota Komisi XI DPR RI Andi Yuliani Paris mengingatkan pemerintah dan Otoritas Jasa Keuangan (OJK) untuk memastikan kesiapan kelembagaan sebelum Bursa Mineral dan Komoditas Strategis mulai beroperasi. Menurutnya, masih terdapat sejumlah pekerjaan ruma",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "befaaec2ba32",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/kewenangan-matra-udara-makin-kompleks-legislator-dorong-optimalisasi-lanud-husein-sastranegara",
-   "judul": "Kewenangan Matra Udara Makin Kompleks, Legislator Dorong Optimalisasi Lanud Husein Sastranegara",
-   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi I DPR RI, Syamsu Rizal mendorong peningkatan kapasitas Pangkalan Udara (Lanud) Husein Sastranegara di Kota Bandung, Provinsi Jawa Barat sebagai penyokong utama operasional matra militer udara. Hal tersebut disampaikannya guna merespons tamb",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "93ca6fb3cfd8",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/empat-ribu-warga-terdampak-saan-mustopa-soroti-krisis-air-bersih-di-slangit",
-   "judul": "Empat Ribu Warga Terdampak, Saan Mustopa Soroti Krisis Air Bersih di Slangit",
-   "ringkas": "PARLEMENTARIA, Cirebon - Wakil Ketua DPR RI Bidang Koordinator Industri dan Pembangunan (Korinbang) Saan Mustopa menyoroti persoalan sulitnya akses air bersih yang dialami masyarakat Desa Slangit, Kecamatan Klangenan, Kabupaten Cirebon. Persoalan tersebut disebut telah berlangsun",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "731e105a967f",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/soroti-lending-ekraf-di-bawah-10-persen-novita-hardini-nilai-ip-bisa-jadi-jaminan",
-   "judul": "Soroti Lending Ekraf di Bawah 10 persen, Novita Hardini Nilai IP Bisa Jadi Jaminan",
-   "ringkas": "PARLEMENTARIA, Bali - Besarnya potensi ekonomi kreatif belum sepenuhnya diikuti dengan kemudahan akses pembiayaan bagi para pelakunya. Anggota Komisi VII DPR, Novita Hardini, menilai kondisi tersebut perlu menjadi perhatian agar sektor ekonomi kreatif dapat tumbuh lebih optimal. ",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "3f0156e50720",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/modifikasi-cuaca-butuh-survei-hamka-b-kady-wanti-wanti-anggaran-miliaran-terbuang",
-   "judul": "Modifikasi Cuaca Butuh Survei, Hamka B. Kady Wanti-Wanti Anggaran Miliaran Terbuang",
-   "ringkas": "PARLEMENTARIA, Tangerang Selatan – Anggota Komisi V DPR RI Hamka B. Kady mengingatkan pelaksanaan teknologi modifikasi cuaca untuk menciptakan hujan buatan tidak dapat dilakukan secara sembarangan. Sebelum penyemaian awan, diperlukan survei dan analisis oleh tenaga ahli untuk mem",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "716bcf757a7c",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/konsep-tod-harus-jamin-keselamatan-penghuni-rusun-dan-akses-disabilitas",
-   "judul": "Konsep TOD Harus Jamin Keselamatan Penghuni Rusun dan Akses Disabilitas",
-   "ringkas": "PARLEMENTARIA, Tangerang Selatan – Anggota Komisi V DPR RI Erna Sari Dewi menegaskan penerapan konsep Transit Oriented Development (TOD) harus menjamin aspek keselamatan dan aksesibilitas bagi penghuni rumah susun, termasuk penyandang disabilitas. Menurutnya, integrasi hunian dan",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "94d269181e89",
-   "url": "https://emedia.dpr.go.id/news/2026/08/31/usut-tuntas-kematian-warga-pejompongan-jangan-sampai-timbul-kesan-negara-lakukan-pembiaran",
-   "judul": "Usut Tuntas Kematian Warga Pejompongan, Jangan Sampai Timbul Kesan Negara Lakukan Pembiaran",
-   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi III DPR RI Abdullah mendesak Polri mengusut tuntas kematian Bambang Setyawan (59), warga Pejompongan, yang diduga menjadi korban pengeroyokan massa tak dikenal saat kericuhan di sekitar Gedung DPR/MPR, Kamis (27/8/2026) malam.",
-   "tanggal": "2026-08-31",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "ad270d6dca26",
@@ -554,126 +1066,6 @@
    "partai": "pks"
   },
   {
-   "id": "16933bf9c768",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/kendala-administrasi-jangan-hambat-pelayanan-peserta-jamkestama",
-   "judul": "Kendala Administrasi Jangan Hambat Pelayanan Peserta Jamkestama",
-   "ringkas": "PARLEMENTARIA, Tangerang – Badan Urusan Rumah Tangga (BURT) DPR RI mendorong penguatan kualitas pelayanan kesehatan bagi anggota DPR RI dan keluarganya melalui program Jaminan Kesehatan Utama (Jamkestama). Penguatan koordinasi antara rumah sakit sebagai provider, pihak penjamin, ",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "8706d8610eb6",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/komisi-viii-dpr-tekankan-rekonstruksi-desa-adat-sade-tetap-pertahankan-konsep-tradisional",
-   "judul": "Komisi VIII DPR Tekankan Rekonstruksi Desa Adat Sade Tetap Pertahankan Konsep Tradisional",
-   "ringkas": "PARLEMENTARIA, Lombok Tengah – Wakil Ketua Komisi VIII DPR RI Singgih Januratmoko mendorong percepatan rekonstruksi Desa Adat Sade, Lombok Tengah, Nusa Tenggara Barat (NTB), pascakebakaran yang melanda kawasan tersebut. Rekonstruksi diharapkan segera dilakukan agar masyarakat dap",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "6a5ee2cbe741",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/lisda-dorong-penguatan-sistem-peringatan-dini-dan-kesiapsiagaan-bencana",
-   "judul": "Lisda Dorong Penguatan Sistem Peringatan Dini dan Kesiapsiagaan Bencana",
-   "ringkas": "PARLEMENTARIA, Padang – Komisi VIII DPR RI mendorong penguatan mitigasi dan kesiapsiagaan bencana, baik di Sumatera Barat maupun di seluruh wilayah Indonesia. Langkah tersebut penting mengingat Indonesia merupakan negara yang memiliki tingkat kerawanan tinggi terhadap berbagai je",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "bcb4470df81b",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/lisda-hendrajoni-tekankan-percepatan-huntap-untuk-pulihkan-kehidupan-warga-terdampak-bencana",
-   "judul": "Lisda Hendrajoni Tekankan Percepatan Huntap untuk Pulihkan Kehidupan Warga Terdampak Bencana",
-   "ringkas": "PARLEMENTARIA, Padang – Komisi VIII DPR RI mendorong percepatan pembangunan hunian tetap (huntap) bagi masyarakat terdampak banjir bandang di Sumatera Barat. Pasalnya, hingga beberapa bulan setelah bencana, masih terdapat warga yang tinggal di hunian sementara (huntara) dan belum",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "8c4469c4fb12",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/sari-yuliati-serahkan-bantuan-kemanusiaan-ke-ntt-wakili-fraksi-partai-golkar",
-   "judul": "Sari Yuliati Serahkan Bantuan Kemanusiaan ke NTT, Wakili Fraksi Partai Golkar",
-   "ringkas": "PARLEMENTARIA, Jakarta – Wakil Ketua DPR RI Sari Yuliati menyerahkan bantuan kemanusiaan secara simbolis untuk masyarakat terdampak bencana gempa bumi di Flores, Nusa Tenggara Timur (NTT), di Pelabuhan Tanjung Priok, Jakarta, Sabtu (29/8/2026).",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "2866911faf71",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/668-umkm-masuk-rantai-pasok-nuanu-novita-hardini-minta-serapan-lokal-diperluas",
-   "judul": "668 UMKM Masuk Rantai Pasok Nuanu, Novita Hardini Minta Serapan Lokal Diperluas",
-   "ringkas": "PARLEMENTARIA, Bali - Anggota Komisi VII DPR, Novita Hardini, menyoroti pentingnya peningkatan keterlibatan pelaku usaha mikro, kecil, dan menengah (UMKM) dalam rantai pasok industri pariwisata di Bali. Hal tersebut disampaikan Novita saat melakukan kunjungan kerja di Nuanu Creat",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "95be3fd04064",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/tak-cukup-bangun-hunian-mbr-hamka-b-kady-soroti-akses-dan-pembiayaan",
-   "judul": "Tak Cukup Bangun Hunian MBR, Hamka B. Kady Soroti Akses dan Pembiayaan",
-   "ringkas": "PARLEMENTARIA, Tangerang Selatan - Anggota Komisi V DPR RI Hamka B. Kady menegaskan penyediaan hunian bagi Masyarakat Berpenghasilan Rendah (MBR) tidak cukup hanya sebatas membangun fisik bangunan. Menurutnya, Aksesibilitas lokasi yang terintegrasi dengan pelayanan publik serta k",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "e16c2f4621b7",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/kdkmp-harus-jadi-hub-ekonomi-desa-tanpa-korbankan-usaha-rakyat",
-   "judul": "KDKMP Harus Jadi Hub Ekonomi Desa Tanpa Korbankan Usaha Rakyat",
-   "ringkas": "PARLEMENTARIA, Surabaya — Anggota Komisi VI DPR RI Ahmad Labib mengingatkan agar keberadaan Koperasi Desa/Kelurahan Merah Putih (KDKMP) tidak justru menjadi trade-off bagi usaha-usaha rakyat yang telah berjalan. Sebaliknya, KDKMP harus mampu menjadi daya ungkit dan hub yang mempe",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "99a4633fc010",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/komisi-viii-kawal-anggaran-pemulihan-pascabencana-sumbar-rp1789-triliun",
-   "judul": "Komisi VIII Kawal Anggaran Pemulihan Pascabencana Sumbar Rp17,89 Triliun",
-   "ringkas": "PARLEMENTARIA, Padang — Komisi VIII DPR RI memastikan kebutuhan anggaran rehabilitasi dan rekonstruksi (rehab-rekon) pascabencana di Sumatera Barat menjadi bagian dari perhatian dalam pelaksanaan fungsi pengawasan DPR. Melalui kunjungan kerja spesifik, Komisi VIII menyerap lapora",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "287a3b26a60e",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/rehab-rekon-pascabencana-sumbar-jangan-berlarut",
-   "judul": "Rehab-Rekon Pascabencana Sumbar Jangan Berlarut",
-   "ringkas": "PARLEMENTARIA, Padang — Komisi VIII DPR RI meminta pemerintah mempercepat pelaksanaan rehabilitasi dan rekonstruksi (rehab-rekon) pascabencana banjir bandang di Sumatera Barat. Percepatan dinilai penting agar masyarakat terdampak segera mendapatkan kembali fasilitas dan layanan y",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "24d2052783c1",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/kebutuhan-penanganan-karhutla-kalsel-harus-segera-dipetakan",
-   "judul": "Kebutuhan Penanganan Karhutla Kalsel Harus Segera Dipetakan",
-   "ringkas": "PARLEMENTARIA, Banjarbaru — Penanganan kebakaran hutan dan lahan (karhutla) di Kalimantan Selatan membutuhkan dukungan lintas sektor, mulai dari pemerintah daerah, Badan Nasional Penanggulangan Bencana (BNPB), kementerian/lembaga, masyarakat, hingga perguruan tinggi.",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "acc48fa88263",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/atalia-dorong-pemulihan-ekonomi-warga-terdampak-kebakaran-desa-adat-sade",
-   "judul": "Atalia Dorong Pemulihan Ekonomi Warga Terdampak Kebakaran Desa Adat Sade",
-   "ringkas": "PARLEMENTARIA, Lombok Tengah — Anggota Komisi VIII DPR RI Atalia Praratya mendorong penguatan anggaran Badan Nasional Penanggulangan Bencana (BNPB) untuk meningkatkan kapasitas mitigasi, penanganan, dan pemulihan bencana di Indonesia. Menurutnya, dukungan anggaran yang memadai di",
-   "tanggal": "2026-08-30",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
    "id": "e8dcfffa67ea",
    "url": "https://www.kemhan.go.id/2026/08/30/menhan-sjafrie-tinjau-kesiapan-prajurit-tni-dalam-complex-warfare-course-di-batujajar.html",
    "judul": "Menhan Sjafrie Tinjau Kesiapan Prajurit TNI dalam Complex Warfare Course di Batujajar",
@@ -703,196 +1095,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "4cefbe1479b3",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/harris-turino-dorong-pembenahan-internal-bea-cukai",
-   "judul": "Harris Turino Dorong Pembenahan Internal Bea Cukai",
-   "ringkas": "PARLEMENTARIA, Cengkareng – Anggota Komisi XI DPR RI Harris Turino mendorong Kementerian Keuangan segera melakukan pembenahan internal Direktorat Jenderal Bea dan Cukai (DJBC), menyusul sejumlah persoalan yang mencuat, termasuk kasus dugaan suap impor yang menyeret mantan Kepala ",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "418d5b5d992d",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/komisi-xi-desak-bea-cukai-perkuat-pengawasan-usai-kasus-26-kg-mdma",
-   "judul": "Komisi XI Desak Bea Cukai Perkuat Pengawasan Usai Kasus 26 Kg MDMA",
-   "ringkas": "PARLEMENTARIA, Cengkareng – Anggota Komisi XI DPR RI Andi Yuliani Paris meminta Direktorat Jenderal Bea dan Cukai memperkuat sistem deteksi dan pengawasan di bandara menyusul terungkapnya kasus penyelundupan narkotika jenis MDMA yang dibawa seorang pilot maskapai asal Malaysia. K",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "15386e1faff9",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/achmad-stok-pangan-cukup-harga-di-pasar-justru-naik",
-   "judul": "Achmad: Stok Pangan Cukup, Harga di Pasar Justru Naik",
-   "ringkas": "PARLEMENTARIA, Yogyakarta – Anggota Komisi VI DPR RI Achmad menyoroti kenaikan harga sejumlah kebutuhan pokok di tengah laporan ketersediaan stok pangan nasional yang dinilai mencukupi. Kondisi tersebut, katanya, mendorong Komisi VI meminta Kementerian Perdagangan (Kemendag) dan ",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "2001bd2ec93e",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/komisi-xi-ingatkan-perkuat-pengawasan-hadapi-modus-baru-selundup-emas-di-soetta",
-   "judul": "Komisi XI Ingatkan Perkuat Pengawasan Hadapi Modus Baru Selundup Emas di Soetta",
-   "ringkas": "PARLEMENTARIA, Cengkareng – Wakil Ketua Komisi XI DPR RI Mohamad Hekal mendorong Direktorat Jenderal Bea dan Cukai memperkuat pengawasan di Bandara Internasional Soekarno-Hatta, menyusul maraknya pengungkapan kasus penyelundupan emas dan narkotika dengan modus yang terus berkemba",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "bb10cb58132b",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/kdkmp-tak-cukup-punya-gerai-komisi-vi-bidik-rantai-bisnis-yang-hidup",
-   "judul": "KDKMP Tak Cukup Punya Gerai, Komisi VI Bidik Rantai Bisnis yang Hidup",
-   "ringkas": "PARLEMENTARIA, Yogyakarta – Ketua Komisi VI DPR RI Anggia Erma Rini mendorong Koperasi Desa/Kelurahan Merah Putih (KDKMP) tidak berhenti sebagai kelembagaan atau sekadar membangun gerai. Koperasi tersebut, katanya, harus terhubung dengan pembiayaan, rantai pasok, dan jaringan usa",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "d6de4bdd451b",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/kesuma-kelakan-kdkmp-jangan-diseragamkan-harus-berbasis-potensi-daerah",
-   "judul": "Kesuma Kelakan: KDKMP Jangan Diseragamkan, Harus Berbasis Potensi Daerah",
-   "ringkas": "PARLEMENTARIA, Surabaya — Anggota Komisi VI DPR RI I Gusti Ngurah Kesuma Kelakan mengingatkan pemerintah agar tidak menyeragamkan model bisnis Koperasi Desa/Kelurahan Merah Putih (KDKMP). Menurutnya, karakteristik dan potensi ekonomi setiap daerah berbeda sehingga pengembangan KD",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "fc7a63207c1e",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/umkm-dan-ekraf-sulit-akses-modal-ilham-permana-negara-harus-hadir",
-   "judul": "UMKM dan Ekraf Sulit Akses Modal, Ilham Permana: Negara Harus Hadir",
-   "ringkas": "PARLEMENTARIA, Kota Bogor - Komisi VII DPR RI mendorong pemerintah memperkuat akses permodalan dan pembiayaan bagi pelaku Usaha Mikro, Kecil, dan Menengah (UMKM) serta ekonomi kreatif. Persoalan akses pembiayaan dinilai masih menjadi salah satu hambatan utama bagi dua sektor yang",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "48d71de34163",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/perkembangan-ai-bawa-perubahan-besar-bagi-profesi-hukum-jangan-dilihat-sebagai-ancaman",
-   "judul": "Perkembangan AI Bawa Perubahan Besar bagi Profesi Hukum, Jangan Dilihat sebagai Ancaman",
-   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi III DPR RI menegaskan bahwa perkembangan kecerdasan buatan (Artificial Intelligence/AI) telah membawa perubahan besar terhadap profesi hukum. Menurutnya, advokat tidak cukup hanya memahami teknologi, tetapi juga harus mampu memanfaatkannya ",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "29b811e8f088",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/ketua-bam-apresiasi-penyampaian-aspirasi-berlangsung-damai-soal-ruu-perampasan-aset",
-   "judul": "Ketua BAM Apresiasi Penyampaian Aspirasi Berlangsung Damai Soal RUU Perampasan Aset",
-   "ringkas": "PARLEMENTARIA, Jakarta - Ketua Badan Aspirasi Masyarakat (BAM) DPR RI Ahmad Heryawan, mengapresiasi aksi demonstrasi massa dengan tuntutan percepatan pengesahan Rancangan Undang-Undang (RUU) Perampasan Aset serta penguatan hukuman bagi pelaku tindak pidana korupsi.",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "7a1a6f462e9e",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/rumusan-judul-hingga-ayat-dalam-ruu-daerah-kepulauan-fokus-untuk-jawab-kebutuhan-masyarakat",
-   "judul": "Rumusan Judul hingga Ayat dalam RUU Daerah Kepulauan Fokus untuk Jawab Kebutuhan Masyarakat",
-   "ringkas": "PARLEMENTARIA, Pangkal Pinang – Ketua Tim Pansus RUU Daerah Kepulauan Mercy Chriesty Barends menerangkan rumusan judul, pasal, hingga ayat dalam RUU tersebut adalah dalam rangka dalam untuk menjawab semua kebutuhan masyarakat, khususnya yang tinggal di kepulauan.",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "9d91caad3bcb",
-   "url": "https://emedia.dpr.go.id/news/2026/08/30/kdkmp-jangan-sekadar-berdiri-khilmi-harus-punya-model-bisnis-sesuai-potensi-desa",
-   "judul": "KDKMP Jangan Sekadar Berdiri, Khilmi: Harus Punya Model Bisnis Sesuai Potensi Desa",
-   "ringkas": "PARLEMENTARIA, Surabaya — Anggota Komisi VI DPR RI Khilmi mendorong agar program Koperasi Desa/Kelurahan Merah Putih (KDKMP) tidak berhenti pada pembentukan kelembagaan dan pembangunan gerai. Menurutnya, pemerintah perlu memastikan setiap KDKMP memiliki peta jalan (roadmap) penge",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "cdca568c3f65",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/soroti-uu-perkoperasian-1992-nurdin-halid-kdkmp-perlu-ekosistem-bisnis-berbasis-teknologi",
-   "judul": "Soroti UU Perkoperasian 1992, Nurdin Halid: KDKMP Perlu Ekosistem Bisnis Berbasis Teknologi",
-   "ringkas": "PARLEMENTARIA, Makassar – Komisi VI DPR RI mendorong revisi Undang-Undang Perkoperasian diarahkan untuk memperkuat ekosistem bisnis Koperasi Desa/Kelurahan Merah Putih (KDKMP) agar lebih adaptif, transparan, dan berbasis teknologi. Hal tersebut disampaikan Wakil Ketua Komisi VI D",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "dddb6400b124",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/jadi-garda-terdepan-bencana-negara-harus-beri-dukungan-penuh-bagi-prajurit-tni",
-   "judul": "Jadi Garda Terdepan Bencana, Negara Harus Beri Dukungan Penuh bagi Prajurit TNI",
-   "ringkas": "PARLEMENTARIA, Bandung - Anggota Komisi I DPR RI, Amelia Anggraini meminta negara memberikan dukungan penuh kepada prajurit TNI yang bertugas dalam Operasi Militer Selain Perang (OMSP), khususnya pada sektor penanggulangan bencana alam.",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "eeb95319145c",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/13-kriteria-tindak-pidana-ini-jadi-sasaran-perampasan-aset-mulai-dari-korupsi-hingga-perdagangan-orang",
-   "judul": "13 Kriteria Tindak Pidana Ini Jadi Sasaran Perampasan Aset, Mulai dari Korupsi hingga Perdagangan Orang",
-   "ringkas": "PARLEMENTARIA, Jakarta – Komisi III DPR RI menerangkan beberapa hal kepada publik mengenai penyusunan RUU tentang Perampasan Aset terkait Tindak Pidana. Ketua Komisi III DPR RI, Habiburokhman, menegaskan hal tersebut khususnya menyangkut ruang lingkup jenis tindak pidana dalam RU",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "70790959db81",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/tak-sekadar-salurkan-bantuan-nurdin-halid-kdkmp-jadi-pusat-ekonomi-desa",
-   "judul": "Tak Sekadar Salurkan Bantuan, Nurdin Halid: KDKMP Jadi Pusat Ekonomi Desa",
-   "ringkas": "PARLEMENTARIA, Makassar – Wakil Ketua Komisi VI DPR RI Nurdin Halid menegaskan Koperasi Desa/Kelurahan Merah Putih (KDKMP) akan menjadi bagian penting dalam mendukung penyaluran bantuan pangan pemerintah. Hal itu disampaikannya saat meninjau penyaluran bantuan pangan beras bersam",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "16844a65dbb3",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/kecepatan-angin-tembus-80-kmjam-sudjatmiko-usulkan-arus-suramadu-dihentikan-sementara",
-   "judul": "Kecepatan Angin Tembus 80 Km/Jam, Sudjatmiko Usulkan Arus Suramadu Dihentikan Sementara",
-   "ringkas": "PARLEMENTARIA, Surabaya - Anggota Komisi V DPR RI Sudjatmiko mendorong kerja sama antara Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) dengan pemerintah daerah untuk mengantisipasi bahaya cuaca ekstrem bagi pengendara di Jembatan Suramadu. Ia mengusulkan adanya sistem peng",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "50f6486ed398",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/ateng-sutisna-desak-koreksi-dtsen-maksimal-14-hari",
-   "judul": "Ateng Sutisna Desak Koreksi DTSEN Maksimal 14 Hari",
-   "ringkas": "PARLEMENTARIA, Jakarta — Anggota DPR RI Ateng Sutisna mendorong pemerintah memperkuat mekanisme koreksi Data Tunggal Sosial dan Ekonomi Nasional (DTSEN) agar perubahan kondisi masyarakat dapat segera tercermin dalam penyaluran bantuan sosial. Ia mengusulkan setiap pengaduan memil",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "b2c751cc1990",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/fathi-bea-cukai-perlu-utamakan-sosialisasi-cukai-bagi-industri-rokok-kecil",
-   "judul": "Fathi: Bea Cukai Perlu Utamakan Sosialisasi Cukai Bagi Industri Rokok Kecil",
-   "ringkas": "PARLEMENTARIA, Surabaya – Anggota Komisi XI DPR RI Fathi mendorong Direktorat Jenderal Bea dan Cukai mengedepankan pembinaan dan edukasi kepada pelaku industri hasil tembakau, khususnya usaha kecil dan rumahan, sebelum melakukan penindakan. Pendekatan tersebut dinilai dapat menin",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "0761f498cb88",
-   "url": "https://emedia.dpr.go.id/news/2026/08/29/komisi-i-soroti-infrastruktur-lanud-husein-sastranegara-dukung-penerbangan-sipil-dan-militer",
-   "judul": "Komisi I Soroti Infrastruktur Lanud Husein Sastranegara, Dukung Penerbangan Sipil dan Militer",
-   "ringkas": "PARLEMENTARIA, Bandung - Komisi I DPR RI menyoroti kelayakan infrastruktur dan mendesak modernisasi alutsista di Pangkalan Udara (Lanud) Husein Sastranegara, seiring rencana reaktivasi pangkalan tersebut menjadi bandara komersial internasional. Perbaikan fasilitas dinilai mutlak ",
-   "tanggal": "2026-08-29",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
   },
   {
    "id": "1011946ac42b",
@@ -975,26 +1177,6 @@
    "tanggal": "2026-08-28",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "8cf8beb312f0",
-   "url": "https://tniad.mil.id/bangun-fondasi-satuan-wakasad-minta-prajurit-yonif-tp-531-dekat-dengan-rakyat/",
-   "judul": "Bangun Fondasi Satuan, Wakasad Minta Prajurit Yonif TP 531 Dekat dengan Rakyat",
-   "ringkas": "Trenggalek, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa meminta prajurit Yonif TP 531/Menak Sopal membangun fondasi satuan yang kuat sejak awal, dengan menjunjung tinggi...",
-   "tanggal": "2026-08-28",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "78cc22c84af7",
-   "url": "https://tniad.mil.id/tni-ad-dan-us-army-tuntaskan-15-hari-latihan-interoperabilitas-makin-teruji/",
-   "judul": "TNI AD dan US Army Tuntaskan 15 Hari Latihan, Interoperabilitas Makin Teruji",
-   "ringkas": "Baturaja, tniad.mil.id – TNI Angkatan Darat (TNI AD) dan United States Army (US Army) menuntaskan Latihan Bersama (Latma) Ksatria Warrior 2026 setelah 15 hari melaksanakan berbagai materi latihan. Latihan tersebut...",
-   "tanggal": "2026-08-28",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -1106,6 +1288,26 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "8cf8beb312f0",
+   "url": "https://tniad.mil.id/bangun-fondasi-satuan-wakasad-minta-prajurit-yonif-tp-531-dekat-dengan-rakyat/",
+   "judul": "Bangun Fondasi Satuan, Wakasad Minta Prajurit Yonif TP 531 Dekat dengan Rakyat",
+   "ringkas": "Trenggalek, tniad.mil.id – Wakil Kepala Staf Angkatan Darat (Wakasad) Letjen TNI Muhammad Saleh Mustafa meminta prajurit Yonif TP 531/Menak Sopal membangun fondasi satuan yang kuat sejak awal, dengan menjunjung tinggi...",
+   "tanggal": "2026-08-28",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "78cc22c84af7",
+   "url": "https://tniad.mil.id/tni-ad-dan-us-army-tuntaskan-15-hari-latihan-interoperabilitas-makin-teruji/",
+   "judul": "TNI AD dan US Army Tuntaskan 15 Hari Latihan, Interoperabilitas Makin Teruji",
+   "ringkas": "Baturaja, tniad.mil.id – TNI Angkatan Darat (TNI AD) dan United States Army (US Army) menuntaskan Latihan Bersama (Latma) Ksatria Warrior 2026 setelah 15 hari melaksanakan berbagai materi latihan. Latihan tersebut...",
+   "tanggal": "2026-08-28",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "857cb6642ac2",
@@ -1390,26 +1592,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "92b3e7aacd20",
-   "url": "https://tniad.mil.id/tni-ad-raih-tiga-gelar-juara-pada-cyber-competition-rise-the-ranger-2-tahun-2026/",
-   "judul": "TNI AD Raih Tiga Gelar Juara pada Cyber Competition Rise The Ranger-2 Tahun 2026",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat (TNI AD) menorehkan prestasi pada Cyber Competition Rise The Ranger-2 Tahun 2026 yang diselenggarakan oleh Satuan Siber TNI. Melalui Pusat Siber TNI Angkatan Darat...",
-   "tanggal": "2026-08-26",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "76c95324bf9e",
-   "url": "https://tniad.mil.id/dari-timbunan-sampah-jadi-bahan-bakar-tni-ad-siap-turun-tangan/",
-   "judul": "Dari Timbunan Sampah Jadi Bahan Bakar, TNI AD Siap Turun Tangan",
-   "ringkas": "Bekasi, tniad.mil.id – Timbunan sampah lama yang selama ini menjadi persoalan lingkungan akan diupayakan menjadi sumber energi alternatif. Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan kesiapan...",
-   "tanggal": "2026-08-26",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "824b419354b7",
    "url": "https://gerindra.id/2026/08/26/habiburokhman-minta-rekening-botok-segera-bisa-diakses-kembali/",
    "judul": "Habiburokhman Minta Rekening Botok Segera Bisa Diakses Kembali",
@@ -1518,6 +1700,26 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "92b3e7aacd20",
+   "url": "https://tniad.mil.id/tni-ad-raih-tiga-gelar-juara-pada-cyber-competition-rise-the-ranger-2-tahun-2026/",
+   "judul": "TNI AD Raih Tiga Gelar Juara pada Cyber Competition Rise The Ranger-2 Tahun 2026",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat (TNI AD) menorehkan prestasi pada Cyber Competition Rise The Ranger-2 Tahun 2026 yang diselenggarakan oleh Satuan Siber TNI. Melalui Pusat Siber TNI Angkatan Darat...",
+   "tanggal": "2026-08-26",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "76c95324bf9e",
+   "url": "https://tniad.mil.id/dari-timbunan-sampah-jadi-bahan-bakar-tni-ad-siap-turun-tangan/",
+   "judul": "Dari Timbunan Sampah Jadi Bahan Bakar, TNI AD Siap Turun Tangan",
+   "ringkas": "Bekasi, tniad.mil.id – Timbunan sampah lama yang selama ini menjadi persoalan lingkungan akan diupayakan menjadi sumber energi alternatif. Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menegaskan kesiapan...",
+   "tanggal": "2026-08-26",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "142e34455fa5",
@@ -1813,17 +2015,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "f964ccb58695",
-   "url": "https://gerindra.id/2026/08/24/rapat-di-hambalang-presiden-prabowo-evaluasi-penanganan-karhutla-kalimantan-dan-gempa-ntt/",
-   "judul": "Rapat di Hambalang, Presiden Prabowo Evaluasi Penanganan Karhutla Kalimantan dan Gempa NTT",
-   "ringkas": "Presiden Prabowo Subianto mengevaluasi tindak lanjut berbagai instruksi pemerintah dalam penanganan kebakaran hutan dan lahan (karhutla) di Kalimantan serta pemulihan pascagempa di Nusa Tenggara Timur (NTT). Evaluasi tersebut dilakukan dalam pertemuan bersama sejumlah menteri, Pa",
-   "tanggal": "2026-08-24",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
    "id": "c6d634ddbcf4",
    "url": "https://pks.id/content/karhutla-kalimantan-sekjen-pks-prioritaskan-keselamatan-warga-lindungi-satwa-tegakkan-hukum",
    "judul": "Karhutla Kalimantan, Sekjen PKS: Prioritaskan Keselamatan Warga, Lindungi Satwa, Tegakkan Hukum!",
@@ -1853,50 +2044,6 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
-  },
-  {
-   "id": "10df130e2ef4",
-   "url": "https://gerindra.id/2026/08/23/di-tengah-kabut-asap-karhutla-gerindra-kalsel-bagikan-400-paket-beras-untuk-warga/",
-   "judul": "Di Tengah Kabut Asap Karhutla, Gerindra Kalsel Bagikan 400 Paket Beras untuk Warga",
-   "ringkas": "DPD Partai Gerindra Kalimantan Selatan (Kalsel) membagikan 400 paket beras kepada warga di sekitar Sekretariat DPD Gerindra Kalsel, Jalan Ahmad Yani Km 13,2, Gambut, Kabupaten Banjar, Sabtu (22/8/2026). Masing-masing paket berisi 5 kilogram beras. Bantuan tersebut diberikan sebag",
-   "tanggal": "2026-08-23",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
-   "id": "b09e44628ab4",
-   "url": "https://gerindra.id/2026/08/23/imron-amin-sambut-wasev-tni-ad-dorong-percepatan-dan-pemerataan-pembangunan-madura/",
-   "judul": "Imron Amin Sambut Wasev TNI AD, Dorong Percepatan dan Pemerataan Pembangunan Madura",
-   "ringkas": "Anggota Komisi I DPR RI, Imron Amin, menyambut positif kunjungan Tim Pengawasan dan Evaluasi (Wasev) TNI Angkatan Darat (TNI AD) ke Madura. Ia menilai kunjungan tersebut menjadi momentum penting untuk melihat langsung kondisi masyarakat sekaligus memperkuat sinergi pembangunan di",
-   "tanggal": "2026-08-23",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
-   "id": "da6771652d7d",
-   "url": "https://gerindra.id/2026/08/23/karhutla-kalsel-meluas-mariana-dorong-penanganan-terpadu-dan-perkuat-perlindungan-warga/",
-   "judul": "Karhutla Kalsel Meluas, Mariana Dorong Penanganan Terpadu dan Perkuat Perlindungan Warga",
-   "ringkas": "Anggota Komisi IX DPR RI, Mariana, mendorong seluruh pemangku kepentingan bersama pemerintah mempercepat penanganan kebakaran hutan dan lahan (karhutla) di Kalimantan Selatan (Kalsel). Ia meminta penanganan dilakukan secara terpadu dan terkoordinasi agar kebakaran serta dampak ka",
-   "tanggal": "2026-08-23",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
-   "id": "f3011409057b",
-   "url": "https://gerindra.id/2026/08/23/ramson-ruu-migas-harus-pangkas-birokrasi-dan-dongkrak-investasi/",
-   "judul": "Ramson: RUU Migas Harus Pangkas Birokrasi dan Dongkrak Investasi",
-   "ringkas": "Rancangan Undang-Undang (RUU) Minyak dan Gas Bumi (Migas) dinilai tidak boleh sekadar menggantikan aturan lama. Regulasi baru harus mampu memangkas birokrasi yang berbelit sekaligus membuka kembali ruang investasi untuk mendorong peningkatan produksi migas nasional yang terus men",
-   "tanggal": "2026-08-23",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
   },
   {
    "id": "407e6bd7e968",
@@ -2175,17 +2322,6 @@
    "partai": "pks"
   },
   {
-   "id": "9fdf101e036b",
-   "url": "https://pks.id/content/pks-desak-pemerintah-segera-cairkan-dsp-rp5-triliun-untuk-revitalisasi-253-sekolah-rusak-di-ntt",
-   "judul": "PKS Desak Pemerintah Segera Cairkan DSP Rp5 Triliun untuk Revitalisasi 253 Sekolah Rusak di NTT",
-   "ringkas": "Anggota Komisi X DPR RI Abdul Fikri Faqih mendesak pemerintah segera mencairkan Dana Siap Pakai (DSP) bencana yang telah disiagakan sebesar Rp5 triliun untuk mendukung revitalisasi 253 sekolah yang rusak akibat gempa bumi di Nusa Tenggara Timur (NTT).",
-   "tanggal": "2026-08-19",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "952d8a962c64",
    "url": "https://www.kemhan.go.id/2026/08/19/menhan-hadiri-penyerahan-pesawat-c-130h-a-1319-hasil-modernisasi-gmf-kepada-kemhan.html",
    "judul": "Menhan Hadiri Penyerahan Pesawat C-130H A-1319 Hasil Modernisasi GMF kepada Kemhan",
@@ -2216,50 +2352,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "101c6294ed74",
-   "url": "https://pks.id/content/fraksi-pks-dorong-ruu-migas-perkuat-kedaulatan-energi-dan-hentikan-ketergantungan-impor",
-   "judul": "Fraksi PKS Dorong RUU Migas Perkuat Kedaulatan Energi dan Hentikan Ketergantungan Impor",
-   "ringkas": "Fraksi Partai Keadilan Sejahtera (PKS) DPR RI menyetujui hasil harmonisasi Rancangan Undang-Undang (RUU) tentang Perubahan Ketiga atas UU Nomor 22 Tahun 2001 tentang Minyak dan Gas Bumi untuk dilanjutkan ke tahapan pembahasan berikutnya. Sikap tersebut disampaikan Anggota Badan L",
-   "tanggal": "2026-08-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "da314652be6e",
-   "url": "https://pks.id/content/soroti-rapbn-2027-legislator-pks-kemandirian-energi-perlu-sejalan-dengan-subsidi-tepat-sasaran-dan-perlindungan-lingkungan",
-   "judul": "Soroti RAPBN 2027, Legislator PKS: Kemandirian Energi Perlu Sejalan dengan Subsidi Tepat Sasaran dan Perlindungan Lingkungan",
-   "ringkas": "Anggota Komisi XII DPR RI, Meitri Citra Wardani, menilai arah kebijakan kemandirian energi dalam RAPBN 2027 merupakan langkah strategis. Namun, menurutnya agenda tersebut harus diterjemahkan melalui kebijakan anggaran yang konsisten, terutama dengan memastikan subsidi energi sema",
-   "tanggal": "2026-08-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "352d9bf8869d",
-   "url": "https://pks.id/content/kualitas-udara-jakarta-terburuk-keenam-dunia-legislator-pks-ini-alarm-bersama-percepat-kebijakan-pengendalian-polusi",
-   "judul": "Kualitas Udara Jakarta Terburuk Keenam Dunia, Legislator PKS: Ini Alarm Bersama Percepat Kebijakan Pengendalian Polusi",
-   "ringkas": "Anggota DPRD DKI Jakarta Khoirudin menyoroti kualitas udara Jakarta yang pada Kamis (13/8/2026) pagi tercatat berada di peringkat keenam terburuk di dunia. Khoirudin menilai kondisi tersebut harus menjadi alarm bersama sekaligus momentum untuk mempercepat kebijakan pengendalian p",
-   "tanggal": "2026-08-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "5b0accf020e6",
-   "url": "https://pks.id/content/pks-rapbn-2027-harus-jaga-momentum-pertumbuhan-ekonomi-yang-sehat-dan-berkualitas",
-   "judul": "PKS: RAPBN 2027 Harus Jaga Momentum Pertumbuhan Ekonomi yang Sehat dan Berkualitas",
-   "ringkas": "Ketua Bidang Ekonomi, Keuangan, Industri (Ekuin) DPP Partai Keadilan Sejahtera (PKS) Handi Risza menilai Rancangan Anggaran Pendapatan dan Belanja Negara (RAPBN) 2027 memiliki arti strategis dalam menjaga momentum pertumbuhan ekonomi nasional sekaligus meningkatkan kesejahteraan ",
-   "tanggal": "2026-08-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "9f0d274e57e9",
    "url": "https://www.kemhan.go.id/2026/08/18/kemhan-bersama-tni-wujudkan-solidaritas-kebersamaan-dalam-karnaval-hut-ke-81-ri.html",
    "judul": "Kemhan Bersama TNI Wujudkan Solidaritas Kebersamaan dalam Karnaval HUT ke-81 RI",
@@ -2278,28 +2370,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "ea75a13910b0",
-   "url": "https://pks.id/content/pks-potong-gaji-aleg-dpr-ri-dan-kirim-relawan-tanggap-bencana-ke-ntt",
-   "judul": "PKS Potong Gaji Aleg DPR RI dan Kirim Relawan Tanggap Bencana ke NTT",
-   "ringkas": "DPP Partai Keadilan Sejahtera (PKS) akan mengirimkan satgas tanggap bencana nasional untuk membantu penanganan bencana gempa bumi Nusa Tenggara Timur setelah Upacara Peringatan Hari Kemerdekaan ke-81 Republik Indonesia, Senin, (17/08/2026).",
-   "tanggal": "2026-08-17",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "1c5a4ea5bca4",
-   "url": "https://pks.id/content/upacara-hut-ke-81-ri-pks-salurkan-bantuan-dan-lepas-relawan-bantu-korban-gempa-ntt",
-   "judul": "Upacara HUT ke-81 RI, PKS Salurkan Bantuan dan Lepas Relawan Bantu Korban Gempa NTT",
-   "ringkas": "Dalam amanatnya, AMY menyampaikan duka mendalam atas musibah gempa bumi yang melanda Nusa Tenggara Timur (NTT), dua hari menjelang peringatan kemerdekaan Indonesia. Bencana tersebut menyebabkan puluhan orang meninggal dunia dan ribuan lainnya harus mengungsi.",
-   "tanggal": "2026-08-17",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "d7b70a5f6e77",
@@ -2752,36 +2822,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "83908a9bd793",
-   "url": "https://www.kemhan.go.id/2026/08/05/wamenhan-terima-stafsus-menhan-bidang-ekonomi-pertahanan-beserta-tim-danantara.html",
-   "judul": "Wamenhan Terima Stafsus Menhan Bidang Ekonomi Pertahanan beserta Tim Danantara",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto menerima Staf Khusus (Stafsus) Menteri Pertahanan Bidang Ekonomi...",
-   "tanggal": "2026-08-05",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "b5b9a907b709",
-   "url": "https://www.kemhan.go.id/2026/08/05/menhan-sjafrie-tinjau-langsung-latihan-operasi-tni-di-dabo-singkep-kepulauan-riau.html",
-   "judul": "Menhan Sjafrie Tinjau Langsung Latihan Operasi TNI di Dabo Singkep, Kepulauan Riau",
-   "ringkas": "Lingga, Kepulauan Riau – Menteri Pertahanan RI Sjafrie Sjamsoeddin bersama jajaran Kementerian Pertahanan (Kemhan), Tentara Nasional Indonesia (TNI), dan Komisi...",
-   "tanggal": "2026-08-05",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "15579d8fb4cf",
-   "url": "https://www.kemhan.go.id/2026/08/05/menhan-ri-dianugerahi-warga-kehormatan-dan-brevet-kehormatan-korps-marinir.html",
-   "judul": "Menhan RI Dianugerahi Warga Kehormatan dan Brevet Kehormatan Korps Marinir",
-   "ringkas": "Lingga, Kepulauan Riau – Menteri Pertahanan RI Sjafrie Sjamsoeddin menerima anugerah sebagai Warga Kehormatan Korps Marinir sekaligus Brevet Kehormatan Anti...",
-   "tanggal": "2026-08-05",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "2ee8498993d8",
    "url": "https://kontras.org/audiensi-dan-diseminasi-hasil-catatan-kritis-hari-bhayangkara-polri-2026-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras-dan-komisi-kepolisian-nasional-kompolnas-ri/",
    "judul": "Audiensi dan Diseminasi Hasil Catatan Kritis Hari Bhayangkara Polri 2026: Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) dan Komisi Kepolisian Nasional (Kompolnas) RI",
@@ -2799,26 +2839,6 @@
    "tanggal": "2026-08-05",
    "kanal": "tniad",
    "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "87c8a8e89d73",
-   "url": "https://www.kemhan.go.id/2026/08/04/kabacadnas-kemhan-gelar-bakti-kesehatan-hari-veteran-nasional-2026-wujud-kepedulian-kepada-para-pejuang-bangsa.html",
-   "judul": "Kabacadnas Kemhan Gelar Bakti Kesehatan Hari Veteran Nasional 2026, Wujud Kepedulian Kepada Para Pejuang Bangsa",
-   "ringkas": "Jakarta – Kepala Badan Cadangan Nasional Kementerian Pertahanan Republik Indonesia, Letjen TNI Gabriel Lema, menghadiri kegiatan Bakti Kesehatan dalam rangka...",
-   "tanggal": "2026-08-04",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "38e664bbfe77",
-   "url": "https://www.kemhan.go.id/2026/08/04/wamenhan-pimpin-pengangkatan-sumpah-pelantikan-dan-serah-terima-jabatan-pimpinan-tinggi-kemhan.html",
-   "judul": "Wamenhan Pimpin Pengangkatan Sumpah, Pelantikan dan Serah Terima Jabatan Pimpinan Tinggi Kemhan",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto, memimpin acara pengangkatan sumpah, pelantikan, dan serah terima...",
-   "tanggal": "2026-08-04",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -3417,16 +3437,6 @@
    "judul": "Bijak Menggunakan Gaji ke-13",
    "ringkas": "#TNIAD #TNIADMengabdiDanMembangunBersamaRakyat",
    "tanggal": "2026-06-12",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "1dfeb3d4f644",
-   "url": "https://tniad.mil.id/dukung-penguatan-umkm-dan-ekonomi-nasional-kasad-hadiri-jakarta-fair-kemayoran-2026/",
-   "judul": "Dukung Penguatan UMKM dan Ekonomi Nasional, Kasad Hadiri Jakarta Fair Kemayoran 2026",
-   "ringkas": "JAKARTA, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri pembukaan Jakarta Fair Kemayoran (JFK) 2026 di Jakarta International Expo (JIExpo), Kemayoran, Jakarta Pusat, Kamis (11/6/2026)....",
-   "tanggal": "2026-06-11",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
