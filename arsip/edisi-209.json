@@ -1,0 +1,121 @@
+{
+ "edisi": 209,
+ "terbit": "2026-09-02T23:28:51.177331+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-209-01",
+   "judul": "Ratusan santri dan siswa di Sidoarjo diduga keracunan MBG – 'Pihak penanggung jawab harus diproses hukum'",
+   "skor": 22
+  },
+  {
+   "id": "klp-209-02",
+   "judul": "Putri Cempo Terbakar, Fenomena Kebakaran TPA Sepanjang 2026: Penyebab, Dampak, dan Solusi Permanen",
+   "skor": 12
+  },
+  {
+   "id": "klp-209-03",
+   "judul": "Fabio Lefundes Optimistis Java United Bungkam Garudayaksa FC di Pekan Perdana Super League",
+   "skor": 12
+  },
+  {
+   "id": "klp-209-04",
+   "judul": "Kementerian ESDM Pastikan Panas Bumi Gunung Ungaran Dikembangkan Berbasis Kajian dan Perlindungan Lingkungan",
+   "skor": 12
+  },
+  {
+   "id": "klp-209-05",
+   "judul": "Relawan Prabowo Laporkan Budi Arie soal Pernyataan Pemilu 2029 Lebih Cepat ke Bareskrim",
+   "skor": 10
+  },
+  {
+   "id": "klp-209-06",
+   "judul": "Fadli Zon Ungkap Ada Ratusan Nama yang Diusulkan ke Prabowo untuk Diberi Tanda Kehormatan",
+   "skor": 10
+  },
+  {
+   "id": "klp-209-07",
+   "judul": "Negara-negara anggota ASEAN protes kabut asap, pengamat sebut 'Indonesia dianggap tidak becus' tangani karhutla",
+   "skor": 10
+  },
+  {
+   "id": "klp-209-08",
+   "judul": "Menhan Sjafrie Terima Dubes Rusia untuk RI, Bahas Penguatan Kerja Sama Pertahanan Indonesia-Rusia",
+   "skor": 10
+  },
+  {
+   "id": "klp-209-09",
+   "judul": "Kemen PPPA dan Danone Perkuat Pemulihan Gizi dan Trauma Anak Pascagempa NTT",
+   "skor": 9
+  },
+  {
+   "id": "klp-209-10",
+   "judul": "Anggaran K/L Bidang Keamanan-Hukum 2027 Tembus Rp 184 Triliun, 75,59% buat Polri",
+   "skor": 9
+  },
+  {
+   "id": "klp-209-11",
+   "judul": "Lansia Tak Punya HP Terindikasi Judol, Kemensos Turun Tangan Cek Data",
+   "skor": 9
+  },
+  {
+   "id": "klp-209-12",
+   "judul": "Iran membalas setelah serangan AS disebut menewaskan empat orang di sebuah pesta pernikahan – Apa yang diketahui sejauh ini?",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
