@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-03T14:18:58+00:00",
+ "diambil": "2026-09-03T23:24:55+00:00",
  "acara": [
   {
    "id": "8ab05f7feed5",
@@ -19,6 +19,38 @@
     "ekonomi",
     "luar-negeri"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2f5e6f280c6c",
+   "url": "https://wapresri.go.id/pastikan-pemulihan-pasca-bencana-berjalan-optimal-wapres-kembali-ke-sumut/",
+   "judul": "Pastikan Pemulihan Pasca Bencana Berjalan Optimal, Wapres Kembali ke Sumut",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-03",
+   "tanggal_terbit": "2026-09-03",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "55e945d7a161",
+   "url": "https://wapresri.go.id/terima-pp-ipnu-wapres-dorong-peran-pemuda-dalam-menjaga-persatuan-dan-menghadapi-perkembangan-teknologi/",
+   "judul": "Terima PP IPNU, Wapres Dorong Peran Pemuda Dalam Menjaga Persatuan dan Menghadapi Perkembangan Teknologi",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-09-03",
+   "tanggal_terbit": "2026-09-03",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
