@@ -4,8 +4,109 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-03T23:24:55+00:00",
+ "diambil": "2026-09-04T13:38:46+00:00",
  "acara": [
+  {
+   "id": "885691df92e9",
+   "url": "https://setkab.go.id/jadi-tamu-kehormatan-utama-eef-ke-11-presiden-prabowo-pasifik-bukan-pemisah-tapi-jalan-raya-ekonomi-indonesia-rusia/",
+   "judul": "Jadi Tamu Kehormatan Utama EEF ke-11, Presiden Prabowo: Pasifik Bukan Pemisah, tapi Jalan Raya Ekonomi Indonesia–Rusia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "1bba11879130",
+   "url": "https://wapresri.go.id/prioritaskan-keselamatan-dan-mobilitas-masyarakat-wapres-minta-sabo-dam-hutanabolon-dan-jembatan-garoga-rampung-tepat-waktu/",
+   "judul": "Prioritaskan Keselamatan dan Mobilitas Masyarakat, Wapres Minta Sabo Dam Hutanabolon dan Jembatan Garoga Rampung Tepat Waktu",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "be53dfb2cbd9",
+   "url": "https://wapresri.go.id/tinjau-huntara-di-tapsel-wapres-minta-maaf-kepada-warga-dan-pastikan-pembangunan-huntap-dimulai-bulan-ini/",
+   "judul": "Tinjau Huntara di Tapsel, Wapres Minta Maaf kepada Warga dan Pastikan Pembangunan Huntap Dimulai Bulan Ini",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": "Warga dan Pastikan Pembangunan Huntap Dimulai Bulan Ini",
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ce717f56c8c1",
+   "url": "https://wapresri.go.id/dalam-perjalanan-menuju-sabo-dam-wapres-temui-warga-terdampak-yang-menyampaikan-aspirasi-di-pinggir-jalan/",
+   "judul": "Dalam Perjalanan Menuju Sabo Dam, Wapres Temui Warga Terdampak Yang Menyampaikan Aspirasi di Pinggir Jalan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b304ba7a51ce",
+   "url": "https://wapresri.go.id/wapres-dorong-penguatan-kolaborasi-pemerintah-pusat-dan-daerah-dalam-percepatan-pemulihan-pascabencana-sumut/",
+   "judul": "Wapres Dorong Penguatan Kolaborasi Pemerintah Pusat dan Daerah dalam Percepatan Pemulihan Pascabencana Sumut",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c785ec5dbb98",
+   "url": "https://wapresri.go.id/pastikan-layanan-pendidikan-pascabencana-berjalan-optimal-dan-fasilitas-belajar-mengajar-terpenuhi-wapres-kunjungi-sman-1-barus/",
+   "judul": "Pastikan Layanan Pendidikan Pascabencana Berjalan Optimal dan Fasilitas Belajar Mengajar Terpenuhi, Wapres Kunjungi SMAN 1 Barus",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "8ab05f7feed5",
    "url": "https://setkab.go.id/presiden-prabowo-dan-presiden-putin-bertemu-di-vladivostok-tegaskan-strategisnya-hubungan-indonesia-rusia/",
