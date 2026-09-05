@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-04T13:38:46+00:00",
+ "diambil": "2026-09-05T12:53:21+00:00",
  "acara": [
   {
    "id": "885691df92e9",
@@ -101,6 +101,23 @@
    "topik": [
     "infrastruktur",
     "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "344ce7ee146b",
+   "url": "https://wapresri.go.id/tinjau-huntap-pascabencana-di-sumut-wapres-pastikan-fasilitas-dasar-dan-pemulihan-ekonomi-warga-jadi-prioritas/",
+   "judul": "Tinjau Huntap Pascabencana di Sumut, Wapres Pastikan Fasilitas Dasar dan Pemulihan Ekonomi Warga Jadi Prioritas",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-04",
+   "tanggal_terbit": "2026-09-04",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
    ],
    "venue": null,
    "kota": null,
