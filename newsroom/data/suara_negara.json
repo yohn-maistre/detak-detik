@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-09-06T13:31:27+00:00",
+ "diambil": "2026-09-06T23:23:18+00:00",
  "baris": [
   {
    "id": "f3652d4a3bed",
@@ -1058,16 +1058,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "46761bcdab9b",
-   "url": "https://kontras.org/proses-seleksi-calon-hakim-agung-bermasalah-koalisi-masyarakat-sipil-mendesak-evaluasi-total-demi-menjaga-independensi-peradilan/",
-   "judul": "Proses Seleksi Calon Hakim Agung Bermasalah: Koalisi Masyarakat Sipil Mendesak Evaluasi Total Demi Menjaga Independensi Peradilan",
-   "ringkas": "Pernyataan tersebut mencerminkan kekhawatiran mendalam publik terhadap proses seleksi Calon Hakim Agung (CHA) yang bermasalah belakangan ini. Sayangnya, hari ini, Rabu (2/9/2026), Mahkamah Agung akan menyelenggarakan pelantikan Hakim Agung terpilih dari proses seleksi terakhir. L",
-   "tanggal": "2026-09-02",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "33a245b58013",
    "url": "https://pks.id/content/menguji-psn-tebu-merauke-antara-swasembada-dan-keadilan-ekologi",
    "judul": "Menguji PSN Tebu Merauke: Antara Swasembada dan Keadilan Ekologi",
@@ -1123,6 +1113,16 @@
    "partai": "pks"
   },
   {
+   "id": "46761bcdab9b",
+   "url": "https://kontras.org/proses-seleksi-calon-hakim-agung-bermasalah-koalisi-masyarakat-sipil-mendesak-evaluasi-total-demi-menjaga-independensi-peradilan/",
+   "judul": "Proses Seleksi Calon Hakim Agung Bermasalah: Koalisi Masyarakat Sipil Mendesak Evaluasi Total Demi Menjaga Independensi Peradilan",
+   "ringkas": "Pernyataan tersebut mencerminkan kekhawatiran mendalam publik terhadap proses seleksi Calon Hakim Agung (CHA) yang bermasalah belakangan ini. Sayangnya, hari ini, Rabu (2/9/2026), Mahkamah Agung akan menyelenggarakan pelantikan Hakim Agung terpilih dari proses seleksi terakhir. L",
+   "tanggal": "2026-09-02",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "3a382648addd",
    "url": "https://www.kemhan.go.id/2026/09/01/kemhan-gelar-defence-intellectual-management-book-club-kedaulatan-energi-bagian-dari-pertahanan-negara.html",
    "judul": "Kemhan Gelar Defence Intellectual Management Book Club: Kedaulatan Energi Bagian dari Pertahanan Negara",
@@ -1171,16 +1171,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "4d9f19e8969a",
-   "url": "https://kontras.org/swarga-edisi-ke-5-merdeka-di-atas-kertas/",
-   "judul": "Swarga Edisi ke-5: Merdeka di Atas Kertas",
-   "ringkas": "Setiap tanggal 17 Agustus, Indonesia merayakan kemerdekaan sebagai momentum bersejarah untuk mengenang Proklamasi 1945. Narasi kemerdekaan terus diwariskan secara simbolis melalui upacara bendera, lagu kebangsaan, dan ornamen nasionalisme. Namun, di balik seremonial tersebut, mun",
-   "tanggal": "2026-09-01",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "ef3ad2fb6fd5",
@@ -1315,6 +1305,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "4d9f19e8969a",
+   "url": "https://kontras.org/swarga-edisi-ke-5-merdeka-di-atas-kertas/",
+   "judul": "Swarga Edisi ke-5: Merdeka di Atas Kertas",
+   "ringkas": "Setiap tanggal 17 Agustus, Indonesia merayakan kemerdekaan sebagai momentum bersejarah untuk mengenang Proklamasi 1945. Narasi kemerdekaan terus diwariskan secara simbolis melalui upacara bendera, lagu kebangsaan, dan ornamen nasionalisme. Namun, di balik seremonial tersebut, mun",
+   "tanggal": "2026-09-01",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "97ba93eb0c4b",
    "url": "https://tniad.mil.id/tni-ad-serahkan-kendaraan-kepada-pemenang-lomba-posyandu-dan-istri-danyon-berdampak/",
    "judul": "TNI AD Serahkan Kendaraan kepada Pemenang Lomba Posyandu dan Istri Danyon Berdampak",
@@ -1333,26 +1333,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "a883fa433842",
-   "url": "https://kontras.org/segera-bebaskan-seluruh-korban-penangkapan-sewenang-wenang-dan-adili-para-pelaku-tindak-kekerasan/",
-   "judul": "Segera Bebaskan Seluruh Korban Penangkapan Sewenang-wenang  dan Adili Para Pelaku Tindak Kekerasan!",
-   "ringkas": "Senin, 31 Agustus 2026 – Aksi pada 27 Agustus 2026 direspons dengan penangkapan dan tindakan represif sebelum, selama, dan setelah aksi demonstrasi berlangsung. Alih-alih menjadi penegak hukum, aparat tidak hanya lalai dalam menjamin tetapi juga ikut menghambat hak kebebasan bere",
-   "tanggal": "2026-08-31",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
-   "id": "edc40e5ba6ef",
-   "url": "https://kontras.org/hari-korban-penghilangan-paksa-internasional-2026-kembalikan-korban-akhiri-penghilangan-paksa-hapus-impunitas/",
-   "judul": "Hari Korban Penghilangan Paksa Internasional 2026: Kembalikan Korban, Akhiri Penghilangan Paksa, Hapus Impunitas!",
-   "ringkas": "30 Agustus pada setiap tahunnya diperingati sebagai Hari Korban Penghilangan Paksa atau International Day of the Disappeared. Penghilangan paksa adalah sebuah bentuk pelanggaran hak asasi manusia (HAM) yang memiliki tiga unsur, yaitu (1) perampasan kebebasan bertentangan dengan k",
-   "tanggal": "2026-08-31",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "2135cb452c43",
@@ -1531,6 +1511,26 @@
    "partai": "gerindra"
   },
   {
+   "id": "a883fa433842",
+   "url": "https://kontras.org/segera-bebaskan-seluruh-korban-penangkapan-sewenang-wenang-dan-adili-para-pelaku-tindak-kekerasan/",
+   "judul": "Segera Bebaskan Seluruh Korban Penangkapan Sewenang-wenang  dan Adili Para Pelaku Tindak Kekerasan!",
+   "ringkas": "Senin, 31 Agustus 2026 – Aksi pada 27 Agustus 2026 direspons dengan penangkapan dan tindakan represif sebelum, selama, dan setelah aksi demonstrasi berlangsung. Alih-alih menjadi penegak hukum, aparat tidak hanya lalai dalam menjamin tetapi juga ikut menghambat hak kebebasan bere",
+   "tanggal": "2026-08-31",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "edc40e5ba6ef",
+   "url": "https://kontras.org/hari-korban-penghilangan-paksa-internasional-2026-kembalikan-korban-akhiri-penghilangan-paksa-hapus-impunitas/",
+   "judul": "Hari Korban Penghilangan Paksa Internasional 2026: Kembalikan Korban, Akhiri Penghilangan Paksa, Hapus Impunitas!",
+   "ringkas": "30 Agustus pada setiap tahunnya diperingati sebagai Hari Korban Penghilangan Paksa atau International Day of the Disappeared. Penghilangan paksa adalah sebuah bentuk pelanggaran hak asasi manusia (HAM) yang memiliki tiga unsur, yaitu (1) perampasan kebebasan bertentangan dengan k",
+   "tanggal": "2026-08-31",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "e8dcfffa67ea",
    "url": "https://www.kemhan.go.id/2026/08/30/menhan-sjafrie-tinjau-kesiapan-prajurit-tni-dalam-complex-warfare-course-di-batujajar.html",
    "judul": "Menhan Sjafrie Tinjau Kesiapan Prajurit TNI dalam Complex Warfare Course di Batujajar",
@@ -1539,16 +1539,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "f0b8a7ca7b76",
-   "url": "https://kontras.org/kesenjangan-pertanggungjawaban-penghilangan-paksa-dalam-hukum-pidana-indonesia/",
-   "judul": "KESENJANGAN PERTANGGUNGJAWABAN PENGHILANGAN PAKSA DALAM HUKUM PIDANA INDONESIA",
-   "ringkas": "Penghilangan Paksa merupakan salah satu bentuk pelanggaran HAM sekaligus kekerasan politik yang telah dipraktikkan sejak masa lampau hingga kini, termasuk di Indonesia. Hukum internasional kontemporer mengatur Penghilangan Paksa sebagai bentuk pelanggaran yang spesifik, bahkan se",
-   "tanggal": "2026-08-30",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "79852cbccd7c",
@@ -1615,6 +1605,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "f0b8a7ca7b76",
+   "url": "https://kontras.org/kesenjangan-pertanggungjawaban-penghilangan-paksa-dalam-hukum-pidana-indonesia/",
+   "judul": "KESENJANGAN PERTANGGUNGJAWABAN PENGHILANGAN PAKSA DALAM HUKUM PIDANA INDONESIA",
+   "ringkas": "Penghilangan Paksa merupakan salah satu bentuk pelanggaran HAM sekaligus kekerasan politik yang telah dipraktikkan sejak masa lampau hingga kini, termasuk di Indonesia. Hukum internasional kontemporer mengatur Penghilangan Paksa sebagai bentuk pelanggaran yang spesifik, bahkan se",
+   "tanggal": "2026-08-30",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "9e63e20083c6",
