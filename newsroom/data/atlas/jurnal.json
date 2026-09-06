@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-05T12:56:25.712303+00:00",
- "edisi": 214,
+ "diperbarui": "2026-09-06T13:02:05.473562+00:00",
+ "edisi": 216,
  "pilihan": [
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Membahas faktor penentu kinerja tinggi organisasi dalam mempercepat pendaftaran tanah di Indonesia. Ini relevan untuk memahami efisiensi birokrasi, kepastian hukum, dan hak kepemilikan lahan bagi masyarakat. Temuan bisa jadi dasar perbaikan sistem.",
+   "kategori": "ADMINISTRASI PERTANAHAN",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah perifer Indonesia. Ini krusial untuk mengatasi kesenjangan digital dan meningkatkan kualitas pelayanan publik di seluruh negeri, terutama di wilayah terpencil. Sebuah studi penting untuk pemerataan.",
+   "kategori": "PEMERINTAHAN DIGITAL",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji pirolisis langsung aspal batuan dari Buton, Indonesia, serta karakterisasi produk cair yang dihasilkan. Penelitian ini penting untuk eksplorasi, pengembangan, dan pemanfaatan sumber daya alam strategis Indonesia secara berkelanjutan dan efisien. Relevan untuk industri.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Mengevaluasi tapak radiologi untuk usulan Pembangkit Listrik Tenaga Nuklir (PLTN) di Pantai Gosong, Indonesia. Kajian ini sangat krusial untuk menilai keamanan, dampak lingkungan, dan kelayakan proyek energi strategis nasional. Penting bagi keputusan publik.",
+   "kategori": "ENERGI & LINGKUNGAN",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102025",
+   "tanggal": "2026-12",
+   "alasan": "Mengungkap politik invisibilitas, kekerasan ekstraktif sehari-hari, dan pembungkaman klaim agraria di Kompleks Bentonit Bogor, Indonesia. Studi ini penting untuk memahami konflik agraria, dampak pertambangan, dan isu keadilan sosial di daerah-daerah tersebut. Relevan untuk advokasi.",
+   "kategori": "SOSIAL & LINGKUNGAN",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis disparitas sosioekonomi dalam risiko diabetes, dengan eksplorasi ketimpangan pendapatan dan urbanisasi di Indonesia. Studi ini relevan untuk memahami tantangan kesehatan publik dan merumuskan kebijakan kesehatan yang lebih inklusif dan merata secara nasional. Data penting bagi pemerintah.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
+   "wadah": "Current Opinion in Insect Science",
+   "doi": "10.1016/j.cois.2026.101569",
+   "tanggal": "2026-12",
+   "alasan": "Membahas resistensi insektisida di Indonesia, tantangan, dan langkah ke depan dalam manajemen hama pertanian. Penelitian ini sangat penting bagi ketahanan pangan nasional, keberlanjutan sektor pertanian, dan pengembangan praktik pertanian yang lebih efektif dan ramah lingkungan. Petani akan terbantu.",
+   "kategori": "PERTANIAN & PANGAN",
+   "sejak_edisi": 216
+  },
+  {
+   "judul": "Affective dimensions of perceived safety for older adults’ mobility in urban Indonesia",
+   "wadah": "Journal of Urban Mobility",
+   "doi": "10.1016/j.urbmob.2026.100264",
+   "tanggal": "2026-12",
+   "alasan": "Mengkaji dimensi afektif dari persepsi keamanan untuk mobilitas lansia di perkotaan Indonesia. Ini penting untuk pengembangan kota ramah lansia, perbaikan infrastruktur, serta kebijakan transportasi publik yang lebih inklusif dan aman bagi semua kelompok umur di perkotaan. Sangat humanis.",
+   "kategori": "KOTA & MASYARAKAT",
+   "sejak_edisi": 216
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis tradisi tenun Donggala dari perspektif sejarah, sosial budaya, dan keberlanjutan di Desa Towale, Sulawesi Tengah. Studi ini penting untuk pelestarian warisan budaya Indonesia yang kaya, serta pemberdayaan ekonomi pengrajin lokal.",
    "kategori": "WARISAN BUDAYA",
    "sejak_edisi": 214
-  },
-  {
-   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102019",
-   "tanggal": "2026-12",
-   "alasan": "Mengusulkan strategi tata kelola berbasis nexus untuk mengubah lahan pascatambang menjadi sawah di Kalimantan Timur. Ini sangat relevan untuk pemulihan lingkungan, peningkatan ketahanan pangan, dan pembangunan berkelanjutan di daerah bekas tambang di Indonesia.",
-   "kategori": "REKLAMASI LAHAN",
-   "sejak_edisi": 214
-  },
-  {
-   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103213",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji komunikasi ritual, adat istiadat, dan toleransi reflektif dalam komunitas adat Tengger Ngadas di Jawa Timur. Penelitian ini penting untuk memahami keragaman budaya, kearifan lokal, dan nilai-nilai koeksistensi masyarakat adat di Indonesia.",
-   "kategori": "MASYARAKAT ADAT",
-   "sejak_edisi": 214
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti keberhasilan pembentukan awal Vatica javanica ssp. javanica yang ditranslokasi di Gunung Halimun, Jawa Barat. Studi ini krusial untuk upaya konservasi keanekaragaman hayati, pemulihan spesies langka, dan pelestarian ekosistem hutan hujan tropis Indonesia.",
-   "kategori": "KONSERVASI FLORA",
-   "sejak_edisi": 214
-  },
-  {
-   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103321",
-   "tanggal": "2026-12",
-   "alasan": "Mengungkap makna pengalaman masyarakat dalam mengembangkan pariwisata pedesaan di kawasan Borobudur. Penelitian ini relevan untuk strategi pengembangan pariwisata berkelanjutan, pemberdayaan ekonomi lokal, dan peningkatan kesejahteraan komunitas di Indonesia.",
-   "kategori": "PARIWISATA LOKAL",
-   "sejak_edisi": 214
-  },
-  {
-   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
-   "wadah": "Results in Engineering",
-   "doi": "10.1016/j.rineng.2026.112407",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengeksplorasi komunikasi ritual, adat istiadat, dan toleransi dalam komunitas adat Tengger Ngadas di Jawa Timur, Indonesia. Ini krusial untuk memahami kekayaan budaya dan nilai-nilai kearifan lokal masyarakat adat Indonesia.",
-   "kategori": "BUDAYA & MASYARAKAT",
-   "sejak_edisi": 212
-  },
-  {
-   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100329",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini menganalisis dampak ekologis produksi bauksit dan tembaga di Indonesia. Ini sangat penting untuk memahami konsekuensi lingkungan dari industri pertambangan dan merumuskan kebijakan keberlanjutan yang lebih baik di negara ini.",
-   "kategori": "DAMPAK LINGKUNGAN",
-   "sejak_edisi": 212
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Studi ini mengulas hambatan pengembangan energi panas bumi di Indonesia, khususnya pada cekungan sedimen. Ini penting untuk memahami potensi dan tantangan energi terbarukan Indonesia, serta implikasinya bagi kebijakan energi nasional.",
-   "kategori": "ENERGI TERBARUKAN",
-   "sejak_edisi": 212
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini menganalisis perbandingan kebijakan perkebunan kelapa sawit dan ternak di Indonesia dan Malaysia. Ini relevan untuk memahami kompleksitas kebijakan pertanian Indonesia, dampaknya terhadap lingkungan, dan ekonomi domestik.",
-   "kategori": "KEBIJAKAN AGRIBISNIS",
-   "sejak_edisi": 212
   }
  ]
 }
