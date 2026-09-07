@@ -4,8 +4,99 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-05T12:53:21+00:00",
+ "diambil": "2026-09-07T15:08:26+00:00",
  "acara": [
+  {
+   "id": "52a9a0cf8abe",
+   "url": "https://setkab.go.id/presiden-prabowo-setiap-bencana-harus-menjadi-pelajaran-untuk-memperkuat-kesiapsiagaan/",
+   "judul": "Presiden Prabowo: Setiap Bencana Harus Menjadi Pelajaran untuk Memperkuat Kesiapsiagaan!",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-07",
+   "tanggal_terbit": "2026-09-07",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2e4b527c3ef1",
+   "url": "https://setkab.go.id/presiden-prabowo-pastikan-penanganan-bencana-berjalan-pemulihan-masyarakat-terus-dipercepat/",
+   "judul": "Presiden Prabowo Pastikan Penanganan Bencana Berjalan, Pemulihan Masyarakat Terus Dipercepat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-07",
+   "tanggal_terbit": "2026-09-07",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2b8adbc35153",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-dubes-as-untuk-asean-perkuat-kemitraan-strategis-dan-stabilitas-kawasan/",
+   "judul": "Presiden Prabowo Terima Dubes AS untuk ASEAN, Perkuat Kemitraan Strategis dan Stabilitas Kawasan",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-09-05",
+   "tanggal_terbit": "2026-09-05",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d05005e73994",
+   "url": "https://setkab.go.id/gelar-pertemuan-di-hambalang-presiden-prabowo-dorong-percepatan-hilirisasi-dan-penataan-bumn/",
+   "judul": "Gelar Pertemuan di Hambalang, Presiden Prabowo Dorong Percepatan Hilirisasi dan Penataan BUMN",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-05",
+   "tanggal_terbit": "2026-09-05",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "70c1dd1db5a0",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-perintahkan-penertiban-kawasan-hutan-dilakukan-tegas-transparan-dan-akuntabel/",
+   "judul": "Seskab Teddy: Presiden Prabowo Perintahkan Penertiban Kawasan Hutan Dilakukan Tegas, Transparan, dan Akuntabel",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-05",
+   "tanggal_terbit": "2026-09-05",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
   {
    "id": "885691df92e9",
    "url": "https://setkab.go.id/jadi-tamu-kehormatan-utama-eef-ke-11-presiden-prabowo-pasifik-bukan-pemisah-tapi-jalan-raya-ekonomi-indonesia-rusia/",
@@ -165,6 +256,38 @@
    "judul": "Terima PP IPNU, Wapres Dorong Peran Pemuda Dalam Menjaga Persatuan dan Menghadapi Perkembangan Teknologi",
    "aktor": "WAPRES",
    "jenis": "MENERIMA",
+   "tanggal_acara": "2026-09-03",
+   "tanggal_terbit": "2026-09-03",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a4f2b1fbf43d",
+   "url": "https://wapresri.go.id/perluas-akses-listrik-dan-sanitasi-ibu-selvi-tinjau-bantuan-pemerintah-di-desa-kanuna-sigi/",
+   "judul": "Perluas Akses Listrik dan Sanitasi, Ibu Selvi Tinjau Bantuan Pemerintah di Desa Kanuna Sigi",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-03",
+   "tanggal_terbit": "2026-09-03",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "1875ecdfc9ef",
+   "url": "https://wapresri.go.id/kunjungi-sd-negeri-tondo-g-ibu-selvi-dorong-penguatan-literasi-dan-kualitas-pembelajaran-siswa/",
+   "judul": "Kunjungi SD Negeri Tondo G, Ibu Selvi Dorong Penguatan Literasi dan Kualitas Pembelajaran Siswa",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
    "tanggal_acara": "2026-09-03",
    "tanggal_terbit": "2026-09-03",
    "audiens": null,
