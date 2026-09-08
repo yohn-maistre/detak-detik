@@ -1,0 +1,121 @@
+{
+ "edisi": 221,
+ "terbit": "2026-09-08T23:31:17.138237+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-221-01",
+   "judul": "Erupsi Gunung Anak Krakatau – Apa saja dampaknya dan kenapa mitigasi bencana di Indonesia selalu 'reaktif'?",
+   "skor": 40
+  },
+  {
+   "id": "klp-221-02",
+   "judul": "Hasil Liga Champions: Borussia Dortmund vs Villarreal, Brace Serhou Guirassy Pastikan Kemenangan Die Borussen",
+   "skor": 21
+  },
+  {
+   "id": "klp-221-03",
+   "judul": "Ramalan Zodiak Aquarius dan Pisces 9 September 2026: Mulai dari Cinta, Karir, Kesehatan dan Keuangan",
+   "skor": 21
+  },
+  {
+   "id": "klp-221-04",
+   "judul": "Prabowo Ingin Gabungkan Badan Geologi, BMKG: Siap Laksanakan Arahan Presiden",
+   "skor": 14
+  },
+  {
+   "id": "klp-221-05",
+   "judul": "Anggota DPR Heran Masuk Desil 4, Minta BPS Perbaiki-Tegaskan Tak Terima Bansos",
+   "skor": 13
+  },
+  {
+   "id": "klp-221-06",
+   "judul": "Gempa Magnitudo 5,2 Guncang 60 km Timur Laut RUTENG-MANGGARAI-NTT",
+   "skor": 12
+  },
+  {
+   "id": "klp-221-07",
+   "judul": "Sido Muncul Kembali Salurkan Bantuan Rp510 Juta untuk Masyarakat Terdampak Gempa NTT",
+   "skor": 12
+  },
+  {
+   "id": "klp-221-08",
+   "judul": "Berompi Tahanan, Febrie Adriansyah kembali Jalani Pemeriksaan di Kejagung",
+   "skor": 10
+  },
+  {
+   "id": "klp-221-09",
+   "judul": "Peringatan Hari Aksara Internasional 2026, Kemendikdasmen Hidupkan Bulan Literasi",
+   "skor": 10
+  },
+  {
+   "id": "klp-221-10",
+   "judul": "Menhan Sjafrie Hadiri Rapat Paripurna DPR RI, Penjualan Eks KRI Ki Hajar Dewantara Disetujui",
+   "skor": 9
+  },
+  {
+   "id": "klp-221-11",
+   "judul": "Kebakaran Lahan di TPAS Galuga, 450 Ton Sampah Kota Bogor Tertahan di Truk",
+   "skor": 9
+  },
+  {
+   "id": "klp-221-12",
+   "judul": "Lewat Pawai Ta’aruf MTQ Nasional, Agustina Wilujeng Hadirkan Keragaman Semarang",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
