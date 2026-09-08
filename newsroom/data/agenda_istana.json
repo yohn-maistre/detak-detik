@@ -4,8 +4,44 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-07T15:08:26+00:00",
+ "diambil": "2026-09-08T13:44:49+00:00",
  "acara": [
+  {
+   "id": "dd6323006295",
+   "url": "https://setkab.go.id/pemerintah-perkuat-kesiapan-hadapi-el-nino-dan-pantau-dampak-erupsi-gunung-berapi/",
+   "judul": "Pemerintah Perkuat Kesiapan Hadapi El Nino dan Pantau Dampak Erupsi Gunung Berapi",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-08",
+   "tanggal_terbit": "2026-09-08",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "12b721c22662",
+   "url": "https://setkab.go.id/pemerintah-perkuat-inklusi-keuangan-melalui-penyediaan-rekening-bagi-masyarakat/",
+   "judul": "Pemerintah Perkuat Inklusi Keuangan melalui Penyediaan Rekening bagi Masyarakat",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-08",
+   "tanggal_terbit": "2026-09-08",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "52a9a0cf8abe",
    "url": "https://setkab.go.id/presiden-prabowo-setiap-bencana-harus-menjadi-pelajaran-untuk-memperkuat-kesiapsiagaan/",
