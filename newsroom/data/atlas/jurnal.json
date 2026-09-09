@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-08T13:48:14.980690+00:00",
- "edisi": 220,
+ "diperbarui": "2026-09-09T13:52:35.278132+00:00",
+ "edisi": 222,
  "pilihan": [
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Studi ini mengidentifikasi faktor-faktor kunci yang mempengaruhi kinerja organisasi dalam mempercepat pendaftaran tanah di Indonesia. Penemuan ini sangat relevan untuk peningkatan efisiensi birokrasi, kepastian hukum kepemilikan tanah, dan mendukung program reforma agraria nasional yang penting bagi masyarakat luas.",
+   "kategori": "REFORMASI AGRARIA",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Makalah ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik (e-gov) di wilayah perifer Indonesia. Ini sangat relevan untuk mengatasi kesenjangan digital, meningkatkan akses masyarakat terhadap pelayanan publik, serta memastikan inklusi seluruh lapisan masyarakat dalam era digitalisasi nasional.",
+   "kategori": "INKLUSI DIGITAL",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini menganalisis pirolisis langsung aspal batu dari Buton, Indonesia, serta karakterisasi produk cairnya. Ini sangat relevan untuk eksplorasi dan pemanfaatan sumber daya alam strategis Indonesia, memberikan nilai tambah pada komoditas lokal, serta potensi pengembangan energi alternatif di masa depan.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini membahas ekonomi politik di balik transisi energi bersih di Indonesia, merefleksikan dinamika kepentingan dalam perubahan kebijakan energi. Ini sangat relevan bagi pemahaman pembaca mengenai tantangan dan peluang menuju energi berkelanjutan, serta dampaknya pada perekonomian dan masyarakat Indonesia.",
+   "kategori": "ENERGIE BERSIH",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Studi ini menganalisis penggalangan zakat di Indonesia, mencakup kerangka hukum dan transformasi digitalnya. Ini sangat relevan untuk memahami perkembangan ekonomi syariah dan filantropi Islam di Indonesia, serta kontribusinya terhadap kesejahteraan sosial umat melalui sistem pengumpulan dana zakat yang efisien.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
+   "wadah": "Results in Engineering",
+   "doi": "10.1016/j.rineng.2026.112407",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membahas geologi medis merkuri dan logam lain di sistem sungai-perkotaan yang terpengaruh pertambangan emas skala kecil di Gorontalo, Indonesia. Ini krusial bagi kesehatan masyarakat, mitigasi dampak lingkungan, serta perumusan kebijakan pengelolaan limbah dan perlindungan ekosistem perairan di Indonesia.",
+   "kategori": "KESEHATAN LINGKUNGAN",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Ritual communication, custom, and reflective tolerance in the Tengger Ngadas indigenous community of East Java, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103213",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini mengkaji komunikasi ritual, adat istiadat, dan toleransi reflektif dalam komunitas adat Tengger Ngadas di Jawa Timur, Indonesia. Ini sangat relevan untuk memperkaya pemahaman kita tentang keberagaman budaya, kearifan lokal, serta upaya menjaga harmoni sosial di tengah masyarakat Indonesia yang multikultural.",
+   "kategori": "BUDAYA LOKAL",
+   "sejak_edisi": 222
+  },
+  {
+   "judul": "Affective dimensions of perceived safety for older adults’ mobility in urban Indonesia",
+   "wadah": "Journal of Urban Mobility",
+   "doi": "10.1016/j.urbmob.2026.100264",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membahas dimensi afektif dari persepsi keselamatan yang memengaruhi mobilitas lansia di perkotaan Indonesia. Temuan ini relevan bagi perencanaan kota yang inklusif, perbaikan fasilitas transportasi publik, dan peningkatan kualitas hidup lansia di berbagai kota besar di Indonesia.",
+   "kategori": "KOTA & LANSIA",
+   "sejak_edisi": 222
+  },
   {
    "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
    "wadah": "Journal of Sharia and Legal Science",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis hak-hak tanah berlapis dalam konteks desentralisasi dan implikasinya pada penangkapan nilai tanah di Jakarta. Penelitian ini relevan untuk tata ruang kota, kebijakan agraria, dan keadilan sosial di Indonesia.",
    "kategori": "TATA KOTA & AGRARIA",
    "sejak_edisi": 220
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Membangun model pengendalian kawasan hutan di daerah aliran sungai Anai, Sumatera Barat. Studi ini penting untuk konservasi hutan, mitigasi bencana, dan pengelolaan sumber daya alam lokal di Indonesia.",
-   "kategori": "KONSERVASI HUTAN",
-   "sejak_edisi": 220
-  },
-  {
-   "judul": "Successful early establishment of translocated Vatica javanica ssp. javanica in Mount Halimun, West Java, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127392",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti keberhasilan transplantasi spesies pohon endemik Vatica javanica di Gunung Halimun, Jawa Barat. Studi ini penting untuk upaya konservasi flora asli Indonesia dan restorasi ekosistem.",
-   "kategori": "KONSERVASI FLORA",
-   "sejak_edisi": 220
-  },
-  {
-   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103306",
-   "tanggal": "2026-12",
-   "alasan": "Mengeksplorasi kesenjangan sosial-ekonomi terkait risiko diabetes di Indonesia, dengan fokus pada ketimpangan pendapatan dan urbanisasi. Penelitian ini krusial untuk perumusan kebijakan kesehatan masyarakat dan penanganan penyakit tidak menular.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 220
-  },
-  {
-   "judul": "Unveiling the meaning of communities' experience in developing rural tourism in Borobudur, Indonesia: A phenomenology study",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103321",
-   "tanggal": "2026-12",
-   "alasan": "Mengungkap makna pengalaman masyarakat dalam pengembangan pariwisata pedesaan di Borobudur. Studi ini relevan untuk strategi pariwisata berbasis komunitas dan pelestarian budaya lokal di Indonesia.",
-   "kategori": "PARIWISATA PEDESAAN",
-   "sejak_edisi": 220
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Penelitian ini mengkaji hambatan kebijakan dalam pengembangan energi panas bumi di Indonesia. Hal ini relevan untuk transisi energi nasional yang berkelanjutan dan pemanfaatan sumber daya terbarukan secara optimal di masa depan.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 219
-  },
-  {
-   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102019",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini mengusulkan strategi reklamasi lahan pasca-tambang batubara di Kalimantan Timur untuk dijadikan sawah. Pendekatan ini penting bagi keberlanjutan lingkungan dan ketahanan pangan nasional di daerah bekas pertambangan.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 219
-  },
-  {
-   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
-   "wadah": "International Journal of Innovation and Learning",
-   "doi": "10.1504/ijil.2027.10076654",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini menganalisis adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Temuan ini relevan untuk modernisasi pendidikan nasional, peningkatan literasi digital pengajar, dan efektivitas proses belajar mengajar.",
-   "kategori": "PENDIDIKAN & INOVASI",
-   "sejak_edisi": 219
-  },
-  {
-   "judul": "Digital literacy and technology adoption readiness of vocational school teachers: An extended UTAUT model in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103501",
-   "tanggal": "2026-12",
-   "alasan": "Studi ini mengevaluasi kesiapan literasi digital guru SMK di Indonesia dalam mengadopsi teknologi. Hal ini krusial untuk peningkatan kualitas pendidikan kejuruan dan mempersiapkan lulusan menghadapi tantangan dunia kerja digital.",
-   "kategori": "PENDIDIKAN & INOVASI",
-   "sejak_edisi": 219
   }
  ]
 }
