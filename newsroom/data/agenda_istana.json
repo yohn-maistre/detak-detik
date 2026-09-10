@@ -4,8 +4,159 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-08T13:44:49+00:00",
+ "diambil": "2026-09-10T13:43:56+00:00",
  "acara": [
+  {
+   "id": "68b5845a96db",
+   "url": "https://setkab.go.id/seskab-teddy-sejak-dinyatakan-hilang-presiden-prabowo-langsung-intruksikan-ksal-laksanakan-pencarian-11-kapal-gabungan-dikerahkan/",
+   "judul": "Seskab Teddy: Sejak Dinyatakan Hilang, Presiden Prabowo Langsung Intruksikan KSAL Laksanakan Pencarian, 11 Kapal Gabungan Dikerahkan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a7b02fd6ffbe",
+   "url": "https://wapresri.go.id/gandeng-pejuang-satwa-wapres-kawal-perlindungan-satwa-dan-habitatnya-dalam-penanganan-karhutla-di-kalimantan/",
+   "judul": "Gandeng Pejuang Satwa, Wapres Kawal Perlindungan Satwa dan Habitatnya dalam Penanganan Karhutla di Kalimantan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d4383edae42d",
+   "url": "https://wapresri.go.id/wapres-kunjungi-pusat-rehabilitasi-orangutan-di-kalteng-pastikan-pemulihan-satwa-dan-habitatnya-dari-dampak-karhutla/",
+   "judul": "Wapres Kunjungi Pusat Rehabilitasi Orangutan di Kalteng, Pastikan Pemulihan Satwa dan Habitatnya dari Dampak Karhutla",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9c5e494daff1",
+   "url": "https://wapresri.go.id/pastikan-kesiapan-layanan-kesehatan-hadapi-dampak-karhutla-wapres-tekankan-prioritas-perlindungan-kelompok-rentan/",
+   "judul": "Pastikan Kesiapan Layanan Kesehatan Hadapi Dampak Karhutla, Wapres Tekankan Prioritas Perlindungan Kelompok Rentan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ba86ea25de6f",
+   "url": "https://wapresri.go.id/tinjau-penanganan-kebakaran-hutan-dan-lahan-di-tiga-provinsi-kalimantan-wapres-kawal-penanganan-agar-optimal-di-lapangan/",
+   "judul": "Tinjau Penanganan Kebakaran Hutan dan Lahan di Tiga Provinsi Kalimantan, Wapres Kawal Penanganan agar Optimal di Lapangan",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e6f8730711ae",
+   "url": "https://setkab.go.id/presiden-prabowo-siapkan-bonus-rp3-miliar-bagi-peraih-emas-asian-games-2026/",
+   "judul": "Presiden Prabowo Siapkan Bonus Rp3 Miliar bagi Peraih Emas Asian Games 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-09",
+   "tanggal_terbit": "2026-09-09",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f6976caf5b1d",
+   "url": "https://setkab.go.id/presiden-prabowo-lepas-kontingen-indonesia-ke-asian-games-tekankan-semangat-pantang-menyerah/",
+   "judul": "Presiden Prabowo Lepas Kontingen Indonesia ke Asian Games, Tekankan Semangat Pantang Menyerah",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-09",
+   "tanggal_terbit": "2026-09-09",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5bf9447c869f",
+   "url": "https://wapresri.go.id/wapres-hadiri-hut-ke-25-partai-demokrat-perkuat-sinergi-pemerintah-dan-parpol/",
+   "judul": "Wapres Hadiri HUT ke-25 Partai Demokrat, Perkuat Sinergi Pemerintah dan Parpol",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-09",
+   "tanggal_terbit": "2026-09-09",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "68da60ab7f9d",
+   "url": "https://wapresri.go.id/apresiasi-inovasi-drone-pendeteksi-asap-wapres-dorong-teknologi-mahasiswa-itb-berdampak-lebih-luas/",
+   "judul": "Apresiasi Inovasi Drone Pendeteksi Asap, Wapres Dorong Teknologi Mahasiswa ITB Berdampak Lebih Luas",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-09",
+   "tanggal_terbit": "2026-09-09",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "dd6323006295",
    "url": "https://setkab.go.id/pemerintah-perkuat-kesiapan-hadapi-el-nino-dan-pantau-dampak-erupsi-gunung-berapi/",

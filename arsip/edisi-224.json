@@ -1,0 +1,121 @@
+{
+ "edisi": 224,
+ "terbit": "2026-09-10T13:43:36.588259+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-224-01",
+   "judul": "Lima tewas dan 86 orang hilang, akibat kebakaran feri di Filipina - 'Jika pertolongan datang terlambat, saya pasti sudah meninggal'",
+   "skor": 40
+  },
+  {
+   "id": "klp-224-20",
+   "judul": "Kemenkes Sebut Ada 113 Ribu Kasus ISPA Akibat Karhutla dan 26 Ribu Korban Diantaranya Balita",
+   "skor": 9
+  },
+  {
+   "id": "klp-224-02",
+   "judul": "Tinjau Penanganan Kebakaran Hutan dan Lahan di Tiga Provinsi Kalimantan, Wapres Kawal Penanganan agar Optimal di Lapangan",
+   "skor": 27
+  },
+  {
+   "id": "klp-224-16",
+   "judul": "Tim Penyelamat Nepal Masih Berupaya Mencari Korban yang Selamat dari Banjir Bandang",
+   "skor": 9
+  },
+  {
+   "id": "klp-224-13",
+   "judul": "KPK Terbitkan Sprindik Kembangkan Kasus Bupati Bekasi Ade Kuswara, Anggota Polri Dipanggil",
+   "skor": 12
+  },
+  {
+   "id": "klp-224-03",
+   "judul": "Fantastis! Kejagung Pamer Uang Rp1,003 Triliun dari Kasus Korupsi Pemanfaatan Kawasan Hutan Inhutani V",
+   "skor": 20
+  },
+  {
+   "id": "klp-224-15",
+   "judul": "KPK Geledah Kantor Dinas PUPR dan PBJ Muara Enim, Sita Dokumen dan Barang Bukti Elektronik",
+   "skor": 10
+  },
+  {
+   "id": "klp-224-22",
+   "judul": "421 Hektare Karhutla Dipadamkan, Kalbar-Sumsel Masih Jadi Prioritas Pemadaman",
+   "skor": 9
+  },
+  {
+   "id": "klp-224-23",
+   "judul": "UK umumkan rangkaian sanksi terhadap permukiman Israel di Tepi Barat – 'Telah terjadi pembersihan etnis warga Palestina'",
+   "skor": 9
+  },
+  {
+   "id": "klp-224-12",
+   "judul": "Mahasiswi Ditemukan Tewas di Hotel Cengkareng Usai Dicekoki Ekstasi saat Karaoke di PIK",
+   "skor": 12
+  },
+  {
+   "id": "klp-224-18",
+   "judul": "Program Rekening Rp50 Ribu Ditargetkan Mulai Sebelum Akhir 2026, Anggaran Sekitar Rp11 Triliun",
+   "skor": 9
+  },
+  {
+   "id": "klp-224-24",
+   "judul": "Pengamat Dorong Aparat Jalin Koordinasi Respons Wacana Aksi 'Black September'",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
