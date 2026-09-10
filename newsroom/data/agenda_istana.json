@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-10T13:43:56+00:00",
+ "diambil": "2026-09-10T23:19:35+00:00",
  "acara": [
   {
    "id": "68b5845a96db",
@@ -83,6 +83,39 @@
     "pangan",
     "energi-sda"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3852cdf9f4f2",
+   "url": "https://wapresri.go.id/tinjau-fasilitas-pendidikan-di-tengah-situasi-karhutla-wapres-pastikan-keselamatan-dan-kesehatan-siswa-jadi-prioritas/",
+   "judul": "Tinjau Fasilitas Pendidikan di Tengah Situasi Karhutla, Wapres Pastikan Keselamatan dan Kesehatan Siswa Jadi Prioritas",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [
+    "pendidikan",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d286092ab1de",
+   "url": "https://wapresri.go.id/temui-keluarga-petugas-yang-gugur-saat-penanganan-karhutla-wapres-sampaikan-duka-cita-dan-penghormatan/",
+   "judul": "Temui Keluarga Petugas yang Gugur Saat Penanganan Karhutla, Wapres Sampaikan Duka Cita dan Penghormatan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
