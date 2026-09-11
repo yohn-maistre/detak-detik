@@ -4,8 +4,42 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-10T23:19:35+00:00",
+ "diambil": "2026-09-11T13:41:59+00:00",
  "acara": [
+  {
+   "id": "979bd49406ef",
+   "url": "https://wapresri.go.id/wapres-minta-dokter-pribadi-tinggal-dulu-di-karo-pastikan-anak-korban-keracunan-mendapat-perawatan-terbaik-hingga-rujukan-perawatan-ke-jakarta/",
+   "judul": "Wapres Minta Dokter Pribadi Tinggal Dulu di Karo, Pastikan Anak Korban Keracunan Mendapat Perawatan Terbaik Hingga Rujukan Perawatan ke Jakarta",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-11",
+   "tanggal_terbit": "2026-09-11",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "31",
+   "prov_nama": "DKI Jakarta"
+  },
+  {
+   "id": "a4555533eea2",
+   "url": "https://wapresri.go.id/pastikan-penanganan-maksimal-wapres-kunjungi-anak-anak-yang-dirawat-di-rs-efarina-etaham-dan-rsu-amanda-berastagi/",
+   "judul": "Pastikan Penanganan Maksimal, Wapres Kunjungi Anak-anak yang Dirawat di RS Efarina Etaham dan RSU Amanda Berastagi",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-11",
+   "tanggal_terbit": "2026-09-11",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "68b5845a96db",
    "url": "https://setkab.go.id/seskab-teddy-sejak-dinyatakan-hilang-presiden-prabowo-langsung-intruksikan-ksal-laksanakan-pencarian-11-kapal-gabungan-dikerahkan/",
@@ -110,6 +144,36 @@
    "id": "d286092ab1de",
    "url": "https://wapresri.go.id/temui-keluarga-petugas-yang-gugur-saat-penanganan-karhutla-wapres-sampaikan-duka-cita-dan-penghormatan/",
    "judul": "Temui Keluarga Petugas yang Gugur Saat Penanganan Karhutla, Wapres Sampaikan Duka Cita dan Penghormatan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "19d1af92c9bd",
+   "url": "https://wapresri.go.id/tinjau-karhutla-di-lahan-gambut-kubu-raya-wapres-tekankan-pentingnya-pengawasan-berkelanjutan/",
+   "judul": "Tinjau Karhutla di Lahan Gambut Kubu Raya, Wapres Tekankan Pentingnya Pengawasan Berkelanjutan",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-10",
+   "tanggal_terbit": "2026-09-10",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "82b0af6c47b4",
+   "url": "https://wapresri.go.id/lihat-antrean-panjang-wapres-mendadak-sambangi-spbu-pertamina-di-palangka-raya/",
+   "judul": "Lihat Antrean Panjang, Wapres Mendadak Sambangi SPBU Pertamina di Palangka Raya",
    "aktor": "WAPRES",
    "jenis": "LAINNYA",
    "tanggal_acara": "2026-09-10",

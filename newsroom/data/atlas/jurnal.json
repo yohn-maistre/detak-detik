@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-10T13:46:35.224253+00:00",
- "edisi": 224,
+ "diperbarui": "2026-09-11T13:44:48.067234+00:00",
+ "edisi": 226,
  "pilihan": [
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Meneliti faktor penentu kinerja organisasi dalam mempercepat pendaftaran tanah di Indonesia. Studi ini penting untuk memahami dan memperbaiki efisiensi layanan pertanahan bagi masyarakat, mendukung kepastian hukum hak milik.",
+   "kategori": "TATA KELOLA TANAH",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di wilayah terpencil Indonesia untuk menjembatani kesenjangan digital. Studi ini krusial bagi upaya pemerataan akses layanan publik dan informasi.",
+   "kategori": "PEMERINTAHAN DIGITAL",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji pirolisis langsung aspal batuan dari Buton, Indonesia, termasuk karakterisasi produk cair dan peran kalsit. Penelitian ini penting untuk potensi pemanfaatan dan pengembangan sumber daya alam strategis Indonesia secara optimal.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka penalaran berbasis kasus yang diperkaya ahli dengan grafik pengetahuan untuk rekomendasi putusan pidana di Indonesia. Ini relevan untuk inovasi dan peningkatan efisiensi serta akurasi sistem peradilan nasional.",
+   "kategori": "SISTEM HUKUM",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji ekonomi politik transisi energi bersih di Indonesia, merefleksikan dinamika dan tantangan dari ketergantungan pada batu bara. Penting untuk memahami arah kebijakan energi nasional menuju keberlanjutan.",
+   "kategori": "TRANSISI ENERGI",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Mengeksplorasi disparitas sosioekonomi dalam risiko diabetes di Indonesia, terkait dengan ketimpangan pendapatan dan urbanisasi. Studi ini krusial untuk perumusan kebijakan kesehatan publik yang lebih inklusif dan merata.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102019",
+   "tanggal": "2026-12",
+   "alasan": "Mengusulkan strategi berbasis nexus untuk reklamasi lahan pascatambang batu bara menjadi lahan sawah di Kalimantan Timur, Indonesia. Studi ini penting untuk keberlanjutan lingkungan, ketahanan pangan, dan pengembangan wilayah.",
+   "kategori": "REKLAMASI TAMBANG",
+   "sejak_edisi": 226
+  },
+  {
+   "judul": "Affective dimensions of perceived safety for older adults’ mobility in urban Indonesia",
+   "wadah": "Journal of Urban Mobility",
+   "doi": "10.1016/j.urbmob.2026.100264",
+   "tanggal": "2026-12",
+   "alasan": "Menjelajahi dimensi afektif dari persepsi keamanan bagi mobilitas lansia di perkotaan Indonesia. Ini relevan untuk pengembangan kota yang lebih inklusif, aman, dan ramah bagi penduduk lanjut usia.",
+   "kategori": "MOBILITAS URBAN",
+   "sejak_edisi": 226
+  },
   {
    "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
    "wadah": "Journal of Sharia and Legal Science",
@@ -37,78 +109,6 @@
    "alasan": "Membangun model pengendalian untuk area hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat. Krusial untuk menjaga kelestarian lingkungan dan sumber daya air di wilayah tersebut.",
    "kategori": "EKOLOGI & LINGKUNGAN",
    "sejak_edisi": 224
-  },
-  {
-   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100329",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis dampak ekologis dari produksi bauksit dan tembaga di Indonesia. Studi ini penting untuk pengembangan kebijakan pertambangan berkelanjutan dan perlindungan lingkungan nasional.",
-   "kategori": "EKOLOGI & LINGKUNGAN",
-   "sejak_edisi": 224
-  },
-  {
-   "judul": "The role of energy policies in promoting the transition to sustainable renewable energy systems: a case study of Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100355",
-   "tanggal": "2026-12",
-   "alasan": "Meneliti peran kebijakan energi dalam mendorong transisi menuju sistem energi terbarukan yang berkelanjutan di Indonesia. Krusial untuk masa depan energi nasional dan komitmen lingkungan.",
-   "kategori": "KEBIJAKAN ENERGI",
-   "sejak_edisi": 224
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Menganalisis penggalangan dana zakat di Indonesia, termasuk kerangka hukum dan transformasi digitalnya. Studi ini penting untuk pengembangan filantropi Islam dan kesejahteraan sosial nasional.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 224
-  },
-  {
-   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
-   "wadah": "Results in Engineering",
-   "doi": "10.1016/j.rineng.2026.112407",
-   "tanggal": "2026-12",
-   "alasan": "Menyelidiki dampak geologi medis merkuri dan logam lainnya di Gorontalo akibat penambangan emas skala kecil. Krusial untuk kesehatan masyarakat dan mitigasi pencemaran lingkungan setempat.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 224
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Makalah ini meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Ini relevan untuk memahami dampak kebijakan fiskal terhadap keberlanjutan ekonomi dan praktik bisnis ramah lingkungan di tanah air, serta mendorong pembangunan berkelanjutan.",
-   "kategori": "EKONOMI HIJAU",
-   "sejak_edisi": 223
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Makalah ini membahas hambatan pengembangan panas bumi di Indonesia, khususnya pada cekungan sedimen. Ini penting untuk memahami tantangan dan merumuskan kebijakan yang efektif dalam memanfaatkan potensi energi terbarukan domestik guna memenuhi kebutuhan energi nasional.",
-   "kategori": "ENERGI TERBARUKAN",
-   "sejak_edisi": 223
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini melakukan evaluasi situs radiologi untuk lokasi calon Pembangkit Listrik Tenaga Nuklir di Pantai Gosong, Indonesia. Ini penting untuk memahami potensi lokasi, aspek keamanan, dan implikasi lingkungan dari pengembangan energi nuklir nasional.",
-   "kategori": "ENERGI NUKLIR",
-   "sejak_edisi": 223
-  },
-  {
-   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103210",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini membandingkan kebijakan perkebunan sawit dan peternakan sapi di Indonesia dan Malaysia. Analisis ini relevan untuk merumuskan kebijakan yang lebih efektif dan efisien guna mengoptimalkan integrasi sektor pertanian dan peternakan nasional.",
-   "kategori": "KEBIJAKAN AGRIBISNIS",
-   "sejak_edisi": 223
   }
  ]
 }
