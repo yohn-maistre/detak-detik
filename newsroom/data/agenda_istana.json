@@ -4,8 +4,60 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-11T13:41:59+00:00",
+ "diambil": "2026-09-14T15:57:34+00:00",
  "acara": [
+  {
+   "id": "7e3ad640a7fa",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-bawa-tiga-pesan-utama-indonesia-untuk-dunia-di-ktt-brics-2026/",
+   "judul": "Seskab Teddy: Presiden Prabowo Bawa Tiga Pesan Utama Indonesia untuk Dunia di KTT BRICS 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-14",
+   "tanggal_terbit": "2026-09-14",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "luar-negeri",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8660fe07b559",
+   "url": "https://wapresri.go.id/wapres-hadiri-pelantikan-menteri-keuangan-dukung-penguatan-tata-kelola-keuangan-negara/",
+   "judul": "Wapres Hadiri Pelantikan Menteri Keuangan, Dukung Penguatan Tata Kelola Keuangan Negara",
+   "aktor": "WAPRES",
+   "jenis": "PELANTIKAN",
+   "tanggal_acara": "2026-09-14",
+   "tanggal_terbit": "2026-09-14",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "65e49527c065",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-ktt-brics-2026-tegaskan-peran-aktif-indonesia-dalam-tata-kelola-global/",
+   "judul": "Presiden Prabowo Hadiri KTT BRICS 2026, Tegaskan Peran Aktif Indonesia dalam Tata Kelola Global",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-12",
+   "tanggal_terbit": "2026-09-12",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "979bd49406ef",
    "url": "https://wapresri.go.id/wapres-minta-dokter-pribadi-tinggal-dulu-di-karo-pastikan-anak-korban-keracunan-mendapat-perawatan-terbaik-hingga-rujukan-perawatan-ke-jakarta/",

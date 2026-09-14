@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-13T13:53:14.246260+00:00",
- "edisi": 230,
+ "diperbarui": "2026-09-14T15:59:18.847311+00:00",
+ "edisi": 232,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Menjelaskan tantangan kebijakan dalam pengembangan panas bumi di Indonesia, sumber energi terbarukan penting untuk ketahanan energi nasional. Relevan untuk pemahaman kebijakan energi dan potensi sumber daya alam Indonesia.",
+   "kategori": "ENERGI TERBARUKAN",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka kerja berbasis kecerdasan buatan untuk rekomendasi putusan pidana di Indonesia. Relevan untuk inovasi sistem hukum dan peradilan pidana di Indonesia.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Mengusulkan model pengendalian untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Penting untuk upaya pelestarian lingkungan dan manajemen sumber daya hutan di wilayah Indonesia.",
+   "kategori": "LINGKUNGAN & HUTAN",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
+   "wadah": "Journal of Development Economics",
+   "doi": "10.1016/j.jdeveco.2026.103877",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis dampak Revolusi Hijau terhadap individualisme dengan bukti dari Indonesia. Relevan untuk memahami perubahan sosial dan ekonomi masyarakat pedesaan Indonesia.",
+   "kategori": "SEJARAH SOSIAL",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Mengkaji penggalangan dana zakat di Indonesia, termasuk kerangka hukum dan transformasi digitalnya. Penting untuk memahami perkembangan ekonomi syariah dan filantropi Islam di Indonesia.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Menjelajahi disparitas sosioekonomi dalam risiko diabetes, ketimpangan pendapatan, dan urbanisasi di Indonesia. Relevan untuk pemahaman kesehatan masyarakat dan kebijakan kesehatan di Indonesia.",
+   "kategori": "KESEHATAN PUBLIK",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Mengkaji tradisi tenun Donggala dari perspektif sejarah, sosiokultural, dan keberlanjutan di Desa Towale, Donggala. Relevan untuk pelestarian warisan budaya dan kearifan lokal Indonesia.",
+   "kategori": "BUDAYA LOKAL",
+   "sejak_edisi": 232
+  },
+  {
+   "judul": "Layered land rights under government-led decentralization: Implications for land value capture implementation in Jakarta, Indonesia",
+   "wadah": "Land Use Policy",
+   "doi": "10.1016/j.landusepol.2026.108270",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis hak atas tanah berlapis dalam desentralisasi di Jakarta dan implikasinya terhadap nilai tanah. Relevan untuk kebijakan tata ruang dan pengelolaan pertanahan perkotaan di Indonesia.",
+   "kategori": "TATA KOTA JAKARTA",
+   "sejak_edisi": 232
+  },
   {
    "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
    "wadah": "International Journal of Management Practice",
@@ -37,78 +109,6 @@
    "alasan": "Makalah ini mengungkap aliran naik tersembunyi di lapangan panas bumi Dieng, Indonesia, melalui analisis geokimia fluida. Ini relevan karena meneliti potensi dan karakteristik energi geotermal sebagai sumber daya terbarukan penting bagi ketahanan energi Indonesia.",
    "kategori": "ENERGI GEOTERMAL",
    "sejak_edisi": 230
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengevaluasi tapak radiologi untuk lokasi pembangkit listrik tenaga nuklir yang diusulkan di Pantai Gosong, Indonesia. Relevan karena membahas aspek keamanan dan dampak lingkungan dari proyek energi strategis yang sedang dipertimbangkan di Indonesia.",
-   "kategori": "ENERGI & INFRASTRUKTUR",
-   "sejak_edisi": 230
-  },
-  {
-   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
-   "wadah": "Results in Engineering",
-   "doi": "10.1016/j.rineng.2026.112407",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini meneliti geologi medis merkuri dan logam terkait di Gorontalo, Indonesia, akibat penambangan emas skala kecil. Ini relevan karena mengulas dampak lingkungan dan kesehatan serius yang ditimbulkan oleh aktivitas pertambangan rakyat di Indonesia.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 230
-  },
-  {
-   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102019",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini membahas strategi reklamasi lahan pascatambang batu bara di Kalimantan Timur untuk dijadikan sawah. Ini relevan karena menyoroti upaya pemulihan lingkungan dan pemanfaatan lahan bekas tambang yang berkelanjutan di Indonesia.",
-   "kategori": "REKLAMASI LINGKUNGAN",
-   "sejak_edisi": 230
-  },
-  {
-   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
-   "wadah": "Current Opinion in Insect Science",
-   "doi": "10.1016/j.cois.2026.101569",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini mengulas status resistensi insektisida pada hama pertanian di Indonesia. Ini relevan karena membahas tantangan besar dalam ketahanan pangan nasional dan strategi pengelolaan hama yang efektif di sektor pertanian Indonesia.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 230
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Meneliti insentif pajak lingkungan dan investasi hijau pada perusahaan multinasional di Indonesia. Penting untuk memahami arah kebijakan ekonomi dan dampaknya terhadap keberlanjutan bisnis nasional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 229
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Laporan pertama penyakit busuk buah kakao yang disebabkan oleh jamur di Sulawesi Selatan. Temuan ini sangat penting bagi pertanian kakao Indonesia untuk pemahaman dan penanganan efektif terhadap hama dan penyakit tanaman.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 229
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia, khususnya terkait dengan penggantian batu bara. Relevan untuk memahami tantangan dan arah kebijakan energi nasional.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 229
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Menelaah batasan dan celah pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Penting untuk perlindungan anak dan penegakan hukum di masyarakat.",
-   "kategori": "HUKUM & ANAK",
-   "sejak_edisi": 229
   }
  ]
 }
