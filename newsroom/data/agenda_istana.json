@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-14T15:57:34+00:00",
+ "diambil": "2026-09-15T14:23:27+00:00",
  "acara": [
   {
    "id": "7e3ad640a7fa",
@@ -36,6 +36,41 @@
    "tanggal_terbit": "2026-09-14",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "45eba262f1a7",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-suahasil-nazara-sebagai-menteri-keuangan/",
+   "judul": "Presiden Prabowo Lantik Suahasil Nazara sebagai Menteri Keuangan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-14",
+   "tanggal_terbit": "2026-09-14",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "66a661b30262",
+   "url": "https://wapresri.go.id/terima-kunjungan-dpm-bulgaria-wapres-dorong-penguatan-kemitraan-strategis-jelang-70-tahun-hubungan-diplomatik/",
+   "judul": "Terima Kunjungan DPM Bulgaria, Wapres Dorong Penguatan Kemitraan Strategis Jelang 70 Tahun Hubungan Diplomatik",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-14",
+   "tanggal_terbit": "2026-09-14",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,

@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-14T23:59:02.099063+00:00",
- "edisi": 233,
+ "diperbarui": "2026-09-15T14:30:25.033935+00:00",
+ "edisi": 234,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Penelitian ini mengkaji insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Informasinya sangat relevan untuk merancang kebijakan ekonomi dan lingkungan yang efektif, guna mendorong praktik bisnis berkelanjutan di negara ini.",
+   "kategori": "LINGKUNGAN & EKONOMI",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Studi ini menganalisis faktor-faktor kunci dalam organisasi berkinerja tinggi untuk mempercepat pendaftaran tanah di Indonesia. Hasilnya penting untuk meningkatkan efisiensi birokrasi, menjamin kepastian hukum, dan melindungi hak atas tanah bagi masyarakat di seluruh wilayah.",
+   "kategori": "ADMINISTRASI PUBLIK",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini melakukan karakterisasi produk cair dari pirolisis langsung aspal alam asal Buton, Indonesia, serta peran kalsit. Penelitian ini krusial untuk memahami potensi, nilai tambah, dan pemanfaatan berkelanjutan sumber daya mineral spesifik Indonesia.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Unveiling a hidden upflow in the Nagasari Area, Dieng geothermal field, Indonesia: Fluid geochemical constraints",
+   "wadah": "Geothermics",
+   "doi": "10.1016/j.geothermics.2026.103834",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengungkapkan keberadaan arus naik tersembunyi di lapangan panas bumi Dieng, Indonesia, berdasarkan analisis geokimia fluida. Temuan ini sangat vital untuk eksplorasi, pengembangan energi terbarukan, dan pemahaman geologi panas bumi di Indonesia.",
+   "kategori": "ENERGI GEOTERMAL",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Artikel ini menganalisis ekonomi politik transisi energi bersih di Indonesia, merefleksikan dinamika kepentingan dalam perpindahan dari penggunaan batu bara. Ini penting untuk memahami tantangan dan merumuskan kebijakan energi berkelanjutan yang efektif bagi masa depan Indonesia.",
+   "kategori": "TRANSISI ENERGI",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini mengeksplorasi disparitas sosial-ekonomi dalam risiko diabetes, menyoroti dampak ketimpangan pendapatan dan urbanisasi di Indonesia. Informasi ini krusial untuk pengembangan kebijakan kesehatan masyarakat dan program pencegahan penyakit yang lebih merata dan tepat sasaran.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengulas tradisi tenun Donggala dari perspektif sejarah, sosial-budaya, dan keberlanjutan di Sulawesi Tengah. Studi kasus ini sangat relevan untuk upaya pelestarian warisan budaya, pemberdayaan ekonomi lokal, dan promosi industri kreatif di Indonesia.",
+   "kategori": "BUDAYA TRADISIONAL",
+   "sejak_edisi": 234
+  },
+  {
+   "judul": "Insecticide resistance in Indonesia: status, challenges, and way forward in management of agricultural pests",
+   "wadah": "Current Opinion in Insect Science",
+   "doi": "10.1016/j.cois.2026.101569",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini membahas status, tantangan, dan strategi masa depan resistensi insektisida dalam pengelolaan hama pertanian di Indonesia. Ini merupakan informasi penting untuk menjamin ketahanan pangan, meningkatkan produktivitas pertanian, dan mendukung praktik pertanian berkelanjutan di seluruh negeri.",
+   "kategori": "PERTANIAN BERKELANJUTAN",
+   "sejak_edisi": 234
+  },
   {
    "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
    "wadah": "Crop Protection",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis politik ketidakjelasan, kekerasan ekstraktif, dan pembungkaman klaim agraria di kompleks bentonit Bogor, Indonesia. Relevan untuk memahami isu keadilan sosial dan lingkungan di daerah pertambangan.",
    "kategori": "KONFLIK AGRARIA & LINGKUNGAN",
    "sejak_edisi": 233
-  },
-  {
-   "judul": "The role of energy policies in promoting the transition to sustainable renewable energy systems: a case study of Indonesia",
-   "wadah": "World Development Sustainability",
-   "doi": "10.1016/j.wds.2026.100355",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji peran kebijakan energi dalam mendorong transisi ke sistem energi terbarukan yang berkelanjutan di Indonesia. Riset ini krusial bagi upaya mitigasi perubahan iklim dan ketahanan energi nasional.",
-   "kategori": "KEBIJAKAN ENERGI",
-   "sejak_edisi": 233
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis bagaimana modal sosial membentuk perilaku pemilih di daerah tertinggal di Indonesia. Studi ini penting untuk memahami dinamika politik dan pembangunan demokrasi di tingkat lokal.",
-   "kategori": "POLITIK & MASYARAKAT",
-   "sejak_edisi": 233
-  },
-  {
-   "judul": "Medical geology of mercury and Co-occurring metals in an ASGM-affected fluvial-urban system, Gorontalo, Indonesia",
-   "wadah": "Results in Engineering",
-   "doi": "10.1016/j.rineng.2026.112407",
-   "tanggal": "2026-12",
-   "alasan": "Mempelajari geologi medis merkuri dan logam lain di sistem sungai-perkotaan yang terdampak pertambangan emas skala kecil di Gorontalo. Riset ini vital untuk kesehatan masyarakat dan pengelolaan lingkungan di Indonesia.",
-   "kategori": "KESEHATAN LINGKUNGAN",
-   "sejak_edisi": 233
-  },
-  {
-   "judul": "Governing post-mining land as paddy fields: A nexus-based strategy for coal mining reclamation in East Kalimantan, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102019",
-   "tanggal": "2026-12",
-   "alasan": "Mengkaji strategi reklamasi lahan pasca-tambang batubara menjadi sawah di Kalimantan Timur, Indonesia. Studi ini penting untuk keberlanjutan lingkungan dan ketahanan pangan di daerah terdampak pertambangan.",
-   "kategori": "REKLAMASI TAMBANG & PERTANIAN",
-   "sejak_edisi": 233
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Menjelaskan tantangan kebijakan dalam pengembangan panas bumi di Indonesia, sumber energi terbarukan penting untuk ketahanan energi nasional. Relevan untuk pemahaman kebijakan energi dan potensi sumber daya alam Indonesia.",
-   "kategori": "ENERGI TERBARUKAN",
-   "sejak_edisi": 232
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Mengembangkan kerangka kerja berbasis kecerdasan buatan untuk rekomendasi putusan pidana di Indonesia. Relevan untuk inovasi sistem hukum dan peradilan pidana di Indonesia.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 232
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Mengusulkan model pengendalian untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Penting untuk upaya pelestarian lingkungan dan manajemen sumber daya hutan di wilayah Indonesia.",
-   "kategori": "LINGKUNGAN & HUTAN",
-   "sejak_edisi": 232
-  },
-  {
-   "judul": "The Green Revolution and individualism: Evidence from Indonesia",
-   "wadah": "Journal of Development Economics",
-   "doi": "10.1016/j.jdeveco.2026.103877",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis dampak Revolusi Hijau terhadap individualisme dengan bukti dari Indonesia. Relevan untuk memahami perubahan sosial dan ekonomi masyarakat pedesaan Indonesia.",
-   "kategori": "SEJARAH SOSIAL",
-   "sejak_edisi": 232
   }
  ]
 }

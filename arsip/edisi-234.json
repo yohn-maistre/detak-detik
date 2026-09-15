@@ -1,0 +1,121 @@
+{
+ "edisi": 234,
+ "terbit": "2026-09-15T14:23:10.109502+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-234-02",
+   "judul": "KPK Tetapkan Dirjen ATR/BPN, Fahd A Rafiq dan Presdir Summarecon (SMRA) Tersangka Kasus Suap HGB",
+   "skor": 32
+  },
+  {
+   "id": "klp-234-04",
+   "judul": "Prabowo copot Menkeu Purbaya, tunjuk Suahasil Nazara sebagai penggantinya – Mengapa dihubungkan dengan kredibilitas APBN?",
+   "skor": 25
+  },
+  {
+   "id": "klp-234-03",
+   "judul": "Puluhan korban KM Virgo yang selamat tiba di pelabuhan setelah satu hari tertahan di laut – Apa saja fakta terakhir yang sudah diketahui?",
+   "skor": 27
+  },
+  {
+   "id": "klp-234-10",
+   "judul": "Harga Pangan 14 September 2026: Beras dan Bawang Naik, Cabai Keriting Tembus Rp80.950",
+   "skor": 13
+  },
+  {
+   "id": "klp-234-16",
+   "judul": "Saudi Rilis Peringatan Singkat Ancaman Serangan di Mekkah dan Jeddah",
+   "skor": 9
+  },
+  {
+   "id": "klp-234-20",
+   "judul": "Kekeringan Mulai Ganggu Warga Jakarta, Pramono: Distribusi Air Tetap Dilakukan",
+   "skor": 9
+  },
+  {
+   "id": "klp-234-01",
+   "judul": "Memasuki hari ketujuh, tim SAR memperpanjang waktu pencarian lima jurnalis yang hilang di sekitar Gunung Anak Krakatau",
+   "skor": 32
+  },
+  {
+   "id": "klp-234-15",
+   "judul": "Daftar Lengkap PLF Kategori Risiko Tinggi PP Tunas, Ada YouTube dan Telegram",
+   "skor": 9
+  },
+  {
+   "id": "klp-234-06",
+   "judul": "Wamen ATR/BPN Bakal Evaluasi Semua Kantor usai OTT KPK, Pelayanan Tetap Jalan",
+   "skor": 18
+  },
+  {
+   "id": "klp-234-09",
+   "judul": "Tetapkan 26 Hari Libur Nasional dan Cuti Bersama, Pratikno: Paling Banyak Bulan Maret",
+   "skor": 14
+  },
+  {
+   "id": "klp-234-05",
+   "judul": "Soroti Ketimpangan Penguasaan Lahan, Azis Subekti DPR: Perlu Terobosan Melalui RUU Reforma Agraria",
+   "skor": 18
+  },
+  {
+   "id": "klp-234-07",
+   "judul": "Tim 9 Kejagung, Kortas Tipikor Polri, hingga KPK Sepakat Febrie Adriansyah Segera Disidang",
+   "skor": 17
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
