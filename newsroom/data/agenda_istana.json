@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-17T14:22:21+00:00",
+ "diambil": "2026-09-17T23:37:06+00:00",
  "acara": [
   {
    "id": "3d3504c45b59",
@@ -16,6 +16,23 @@
    "tanggal_terbit": "2026-09-17",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "bf54b6bc23b8",
+   "url": "https://wapresri.go.id/terima-kunjungan-dpm-malaysia-wapres-dorong-percepatan-kerja-sama-ekosistem-halal-pembangunan-desa-hingga-pelindungan-pmi/",
+   "judul": "Terima Kunjungan DPM Malaysia, Wapres Dorong Percepatan Kerja Sama Ekosistem Halal, Pembangunan Desa, hingga Pelindungan PMI",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-17",
+   "tanggal_terbit": "2026-09-17",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
