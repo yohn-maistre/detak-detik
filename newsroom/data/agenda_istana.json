@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-15T14:23:27+00:00",
+ "diambil": "2026-09-17T14:22:21+00:00",
  "acara": [
+  {
+   "id": "3d3504c45b59",
+   "url": "https://wapresri.go.id/kriyanusa-2026-ibu-selvi-dorong-perluasan-pasar-bagi-perajin-daerah/",
+   "judul": "Kriyanusa 2026, Ibu Selvi Dorong Perluasan Pasar bagi Perajin Daerah",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-17",
+   "tanggal_terbit": "2026-09-17",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "7e3ad640a7fa",
    "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-bawa-tiga-pesan-utama-indonesia-untuk-dunia-di-ktt-brics-2026/",
