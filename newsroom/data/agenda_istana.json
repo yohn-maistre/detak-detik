@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-17T23:37:06+00:00",
+ "diambil": "2026-09-18T13:42:27+00:00",
  "acara": [
   {
    "id": "3d3504c45b59",
@@ -37,6 +37,95 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "2768f4a76276",
+   "url": "https://setkab.go.id/seskab-teddy-ungkap-enam-langkah-presiden-prabowo-menuju-kemandirian-energi/",
+   "judul": "Seskab Teddy Ungkap Enam Langkah Presiden Prabowo Menuju Kemandirian Energi",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-17",
+   "tanggal_terbit": "2026-09-17",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3288a99ca47a",
+   "url": "https://setkab.go.id/presiden-prabowo-perintahkan-investigasi-menyeluruh-kmp-virgo-transport-8-pastikan-hak-keluarga-korban-terpenuhi/",
+   "judul": "Presiden Prabowo Perintahkan Investigasi Menyeluruh KMP Virgo Transport 8, Pastikan Hak Keluarga Korban Terpenuhi",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-16",
+   "tanggal_terbit": "2026-09-16",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "92b90f2c5c54",
+   "url": "https://setkab.go.id/tidak-ada-toleransi-presiden-prabowo-perintahkan-cabut-izin-dan-usut-pidana-korporasi-pelaku-karhutla/",
+   "judul": "Tidak Ada Toleransi, Presiden Prabowo Perintahkan Cabut Izin dan Usut Pidana Korporasi Pelaku Karhutla",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-16",
+   "tanggal_terbit": "2026-09-16",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "89c4782c371a",
+   "url": "https://setkab.go.id/pemerintah-siapkan-produksi-e20-dalam-dua-tahun-tebu-jadi-sumber-etanol/",
+   "judul": "Pemerintah Siapkan Produksi E20 Dalam Dua Tahun, Tebu Jadi Sumber Etanol",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-16",
+   "tanggal_terbit": "2026-09-16",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "738ab3208af9",
+   "url": "https://setkab.go.id/resmikan-lrt-jakarta-presiden-prabowo-tekankan-pentingnya-pembangunan-dan-transformasi-bangsa/",
+   "judul": "Resmikan LRT Jakarta, Presiden Prabowo Tekankan Pentingnya Pembangunan dan Transformasi Bangsa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-16",
+   "tanggal_terbit": "2026-09-16",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": "31",
+   "prov_nama": "DKI Jakarta"
   },
   {
    "id": "7e3ad640a7fa",
