@@ -1,0 +1,121 @@
+{
+ "edisi": 242,
+ "terbit": "2026-09-19T13:15:17.978259+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-242-03",
+   "judul": "Tim penyelam TNI AL evakuasi tiga jenazah dari dalam KM Virgo, total korban meninggal jadi sembilan orang – Apa saja fakta terakhir yang sudah diketahui?",
+   "skor": 24
+  },
+  {
+   "id": "klp-242-01",
+   "judul": "Duta Besar Abdalfatah Al-Sattari di Depan Prabowo: Indonesia Berdiri Bersama Palestina, Kami Tidak Sendiri",
+   "skor": 28
+  },
+  {
+   "id": "klp-242-24",
+   "judul": "Halusinasi AI Nyaris Picu Perang AS-Tiongkok di Timur Tengah",
+   "skor": 6
+  },
+  {
+   "id": "klp-242-13",
+   "judul": "Prabowo Sebut 95 Korporasi Terindikasi Terlibat Kebakaran Hutan dan Lahan",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-15",
+   "judul": "Apa respons Nusron Wahid setelah 'orang-orang kepercayaannya' dan seorang pejabat Kementerian ATR/BPN diduga menerima suap terkait HGB?",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-17",
+   "judul": "Gerakan Rakyat Tolak Ambang Batas Parlemen 5 Persen: Suara Rakyat Jangan Diamputasi",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-23",
+   "judul": "PJT II Lanjutkan Operasi Modifikasi Cuaca untuk Jaga Ketersediaan Air di DAS Citarum",
+   "skor": 6
+  },
+  {
+   "id": "klp-242-11",
+   "judul": "AS dan Denmark Sepakati Kerja Sama Keamanan Greenland, Perkuat Militer di Arktik",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-12",
+   "judul": "Legalitas Larangan Media di Gedung Putih, Tinjauan Hukum dan Amandemen Pertama",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-14",
+   "judul": "39 Kerja Sama Ditandatangani di Hari Pertama H20, Ekosistem Halal Diperkuat",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-18",
+   "judul": "Resmi Tiba di Jakarta, Indonesia Sambut Hibah Kapal Induk ITS Giuseppe Garibaldi dari Italia",
+   "skor": 9
+  },
+  {
+   "id": "klp-242-21",
+   "judul": "Prabowo di Gontor: Jangan Percaya Antek-antek Asing, Mereka Bayar Buzzer!",
+   "skor": 7
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

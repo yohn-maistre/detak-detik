@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-18T23:30:12.770454+00:00",
- "edisi": 241,
+ "diperbarui": "2026-09-19T13:20:43.827294+00:00",
+ "edisi": 242,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Studi ini mengulas hambatan dalam pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen, dari tinjauan kebijakan. Pemahaman ini krusial untuk mendorong kemandirian energi dan mengurangi ketergantungan pada bahan bakar fosil di Indonesia.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Makalah ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di wilayah pinggiran Indonesia. Ini penting untuk mempersempit kesenjangan digital dan memastikan akses layanan publik yang merata bagi seluruh warga negara.",
+   "kategori": "DIGITAL & REGIONAL",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini mengusulkan kerangka kerja berbasis kecerdasan buatan untuk rekomendasi putusan pidana di Indonesia. Inovasi ini berpotensi meningkatkan efisiensi dan konsistensi dalam sistem peradilan pidana Indonesia.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini mengembangkan model kontrol untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat, Indonesia. Model ini penting untuk konservasi lingkungan, pengelolaan sumber daya air, dan keberlanjutan ekosistem di wilayah tersebut.",
+   "kategori": "LINGKUNGAN & HUTAN",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini mengkaji penggalangan dana zakat di Indonesia, meliputi kontinuitas, kerangka hukum, dan transformasi digital. Ini penting untuk pengembangan ekonomi syariah dan pemberdayaan masyarakat melalui distribusi zakat.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Studi kasus ini meneliti tradisi tenun Donggala dari perspektif sejarah, sosiokultural, dan keberlanjutan di Desa Towale, Donggala, Sulawesi Tengah. Ini penting untuk pelestarian warisan budaya dan kearifan lokal Indonesia.",
+   "kategori": "BUDAYA LOKAL",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Predicting measles elimination through surveillance-response and health system determinants: a village-level structural equation modeling study in Cirebon Regency, Indonesia",
+   "wadah": "IJID Regions",
+   "doi": "10.1016/j.ijregi.2026.100986",
+   "tanggal": "2026-12",
+   "alasan": "Studi ini memprediksi eliminasi campak melalui determinan sistem kesehatan dan respons surveilans di Kabupaten Cirebon, Indonesia. Temuan ini penting untuk strategi kesehatan masyarakat dalam menanggulangi penyakit menular.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 242
+  },
+  {
+   "judul": "Mining and environment: The ecological impact of bauxite and copper production in Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100329",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini membahas dampak ekologis produksi bauksit dan tembaga di Indonesia. Informasi ini penting untuk merumuskan kebijakan pertambangan yang bertanggung jawab dan berkelanjutan demi menjaga kelestarian lingkungan Indonesia.",
+   "kategori": "LINGKUNGAN PERTAMBANGAN",
+   "sejak_edisi": 242
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia, khususnya dinamika dari penggunaan batu bara. Sangat relevan untuk memahami tantangan dan peluang kebijakan energi berkelanjutan.",
    "kategori": "TRANSISI ENERGI",
    "sejak_edisi": 241
-  },
-  {
-   "judul": "THE ROLE OF IKATAN KELUARGA MUSLIM INDONESIA (IKMI) IN THE RESILIENCE OF MUSLIM MIGRANT FAMILIES IN SEOUL: A PERSPECTIVE BASED ON FROMA WALSH'S THEORY",
-   "wadah": "Jurnal Al-Ijtimaiyyah",
-   "doi": "10.22373/al-ijtimaiyyah.v12i2.35602",
-   "tanggal": "2026-12-30",
-   "alasan": "Meneliti peran Ikatan Keluarga Muslim Indonesia (IKMI) dalam ketahanan keluarga migran Muslim di Seoul. Penting untuk memahami dukungan komunitas diaspora Indonesia di luar negeri.",
-   "kategori": "DIASPORA INDONESIA",
-   "sejak_edisi": 241
-  },
-  {
-   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102025",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis politik ketidakjelasan dan kekerasan ekstraktif serta pembungkaman klaim agraria di kompleks bentonit Bogor, Indonesia. Relevan untuk memahami isu-isu sosial-lingkungan dan hak-hak masyarakat lokal.",
-   "kategori": "KONFLIK AGRARIA",
-   "sejak_edisi": 241
-  },
-  {
-   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103306",
-   "tanggal": "2026-12",
-   "alasan": "Mengeksplorasi disparitas sosioekonomi dalam risiko diabetes, ketimpangan pendapatan, dan urbanisasi di Indonesia. Penting untuk pemahaman dan penanganan masalah kesehatan publik yang kompleks.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 241
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Menjelaskan bagaimana modal sosial membentuk perilaku pemilih di daerah tertinggal Indonesia. Penting untuk memahami dinamika politik lokal dan partisipasi masyarakat.",
-   "kategori": "POLITIK LOKAL",
-   "sejak_edisi": 241
-  },
-  {
-   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
-   "wadah": "International Journal of Innovation and Learning",
-   "doi": "10.1504/ijil.2027.10076654",
-   "tanggal": "2027",
-   "alasan": "Membahas adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia, relevan untuk memahami tantangan dan peluang digitalisasi pendidikan di tanah air. Penting bagi pembuat kebijakan dan praktisi pendidikan.",
-   "kategori": "PENDIDIKAN DIGITAL",
-   "sejak_edisi": 240
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Melaporkan penemuan jenis jamur penyebab busuk buah kakao di Sulawesi Selatan, Indonesia. Informasi ini vital bagi petani kakao dan ahli pertanian untuk mengendalikan hama dan penyakit tanaman.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 240
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Menelaah batasan dan celah hukum terkait kekerasan dalam mendisiplinkan anak serta pertanggungjawaban pidana di Indonesia. Penting untuk perlindungan anak dan penegakan hukum di tanah air.",
-   "kategori": "HUKUM & ANAK",
-   "sejak_edisi": 240
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Menjelaskan kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Relevan untuk perumusan kebijakan energi yang inklusif dan merata bagi masyarakat Indonesia.",
-   "kategori": "ENERGI & MASYARAKAT",
-   "sejak_edisi": 240
   }
  ]
 }
