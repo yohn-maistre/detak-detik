@@ -1,0 +1,121 @@
+{
+ "edisi": 245,
+ "terbit": "2026-09-20T23:21:15.536721+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-245-01",
+   "judul": "Basarnas perpanjang waktu pencarian korban KM Virgo, 126 orang belum ditemukan – Apa saja fakta terakhir yang sudah diketahui?",
+   "skor": 27
+  },
+  {
+   "id": "klp-245-14",
+   "judul": "AS Hampir Picu Perang dengan China Gara-Gara Laporan Intelijen yang Disusun AI",
+   "skor": 9
+  },
+  {
+   "id": "klp-245-02",
+   "judul": "Petugas Damkar Evakuasi 53 Orang yang Sempat Terjebak Kebakaran Apartemen Teluk Intan",
+   "skor": 21
+  },
+  {
+   "id": "klp-245-13",
+   "judul": "Ratusan Drone Sasar Moskow saat Pemilu Parlemen Rusia Digelar, 2 Orang Tewas",
+   "skor": 9
+  },
+  {
+   "id": "klp-245-05",
+   "judul": "Prakiraan Cuaca Jakarta Senin 21 September 2026: Hujan Ringan di Jaksel dan Jaktim",
+   "skor": 18
+  },
+  {
+   "id": "klp-245-11",
+   "judul": "Bantah klaim Trump, Zelenskyy tegaskan Rusia masih serang infrastruktur energi Ukraine",
+   "skor": 12
+  },
+  {
+   "id": "klp-245-24",
+   "judul": "Mayjen Febriel Buyung Pastikan 4 Korban Penembakan KKB Bukan Intel TNI",
+   "skor": 9
+  },
+  {
+   "id": "klp-245-07",
+   "judul": "Jadwal Asian Games 2026 Hari Ini: Indonesia Berburu Medali dari Wushu hingga Triathlon",
+   "skor": 15
+  },
+  {
+   "id": "klp-245-08",
+   "judul": "Road to Pertamina Eco RunFest 2026: Mengajak Masyarakat Wujudkan Aksi Nyata Jaga Lingkungan",
+   "skor": 15
+  },
+  {
+   "id": "klp-245-10",
+   "judul": "Bukan Copet, Ini Motif Pria Pengangguran Tendang Wanita saat Beli Makan di Senayan City",
+   "skor": 12
+  },
+  {
+   "id": "klp-245-12",
+   "judul": "Pramono Paparkan Pertumbuhan Ekonomi dan Investasi Jakarta di U20 Mayors Summit 2026",
+   "skor": 12
+  },
+  {
+   "id": "klp-245-16",
+   "judul": "Buntut Kasus Viral Karyawan SPPG di Bantul, BGN DIY Keluarkan Instruksi Tegas",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
