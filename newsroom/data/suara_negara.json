@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-09-20T14:04:21+00:00",
+ "diambil": "2026-09-20T23:46:21+00:00",
  "baris": [
   {
    "id": "a6f698b607c8",
@@ -195,6 +195,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "c8042cf40414",
+   "url": "https://www.kemhan.go.id/2026/09/19/kemhan-dukung-tni-fair-2026-hadirkan-edukasi-pertahanan-dan-inovasi-militer-untuk-masyarakat.html",
+   "judul": "Kemhan Dukung TNI Fair 2026, Hadirkan Edukasi Pertahanan dan Inovasi Militer untuk Masyarakat",
+   "ringkas": "Jakarta – Kementerian Pertahanan (Kemhan) turut berpartisipasi dan mendukung penuh gelaran TNI Fair 2026 yang diselenggarakan di kawasan Monumen Nasional...",
+   "tanggal": "2026-09-19",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "c12537c97bf9",
@@ -467,16 +477,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "c8042cf40414",
-   "url": "https://www.kemhan.go.id/2026/09/19/kemhan-dukung-tni-fair-2026-hadirkan-edukasi-pertahanan-dan-inovasi-militer-untuk-masyarakat.html",
-   "judul": "Kemhan Dukung TNI Fair 2026, Hadirkan Edukasi Pertahanan dan Inovasi Militer untuk Masyarakat",
-   "ringkas": "Jakarta – Kementerian Pertahanan (Kemhan) turut berpartisipasi dan mendukung penuh gelaran TNI Fair 2026 yang diselenggarakan di kawasan Monumen Nasional...",
-   "tanggal": "2026-09-19",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "0a9ae18cb57e",
    "url": "https://tniad.mil.id/tni-ad-fair-2026-alutsista-dan-inovasi-tni-ad-jadi-magnet-pengunjung/",
    "judul": "TNI AD Fair 2026, Alutsista dan Inovasi TNI AD Jadi Magnet Pengunjung",
@@ -518,6 +518,58 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "055f099ebad0",
+   "url": "https://www.kemhan.go.id/2026/09/18/wamenhan-ri-terima-audiensi-deputi-iv-kemenko-pmk-bahas-penguatan-karakter-dan-jati-diri-bangsa.html",
+   "judul": "Wamenhan RI Terima Audiensi Deputi IV Kemenko PMK, Bahas Penguatan Karakter dan Jati Diri Bangsa",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto menerima audiensi Deputi IV Bidang Koordinasi Penguatan Karakter...",
+   "tanggal": "2026-09-18",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "c55658251c71",
+   "url": "https://www.kemhan.go.id/2026/09/18/menhan-sjafrie-sambut-dan-tinjau-kelayakan-kapal-its-giuseppe-garibaldi.html",
+   "judul": "Menhan Sjafrie Sambut dan Tinjau Kelayakan Kapal ITS Giuseppe Garibaldi",
+   "ringkas": "Jakarta – Menteri Pertahanan RI Sjafrie Sjamsoeddin menghadiri penyambutan Kapal ITS Giuseppe Garibaldi di Pelabuhan Tanjung Priok, Jakarta, Jumat (18/9/2026)....",
+   "tanggal": "2026-09-18",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "1de6e75369bc",
+   "url": "https://www.kemhan.go.id/2026/09/18/plt-kapuskeshan-kemhan-tutup-rehabilitasi-medik-paripurna-rtc-angkatan-vii-tingkatkan-kapasitas-dan-profesionalisme-sdm.html",
+   "judul": "Plt. Kapuskeshan Kemhan Tutup Rehabilitasi Medik Paripurna RTC Angkatan VII, Tingkatkan Kapasitas dan Profesionalisme SDM",
+   "ringkas": "Jakarta – Plt. Kepala Pusat Kesehatan Pertahanan Kementerian Pertahanan (Kapuskeshan Kemhan) Brigjen TNI Sunaryo Kusumo memimpin upacara penutupan Rehabilitasi Medik...",
+   "tanggal": "2026-09-18",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "5b25eb01763c",
+   "url": "https://pks.id/content/legislator-pks-dukung-bantuan-rp175-miliar-untuk-700-pesantren-minta-tepat-sasaran-dan-terukur",
+   "judul": "Legislator PKS Dukung Bantuan Rp17,5 Miliar untuk 700 Pesantren, Minta Tepat Sasaran dan Terukur",
+   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS Mohd. Iqbal Romzi, mengapresiasi kolaborasi Badan Amil Zakat Nasional Republik Indonesia dan Kementerian Agama dalam menyalurkan bantuan Rp17,5 miliar melalui Program Pesantren Nyaman Belajar 2026 kepada 700 pesantren di seluruh Indonesia.",
+   "tanggal": "2026-09-18",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "a3a8dd5bbb73",
+   "url": "https://pks.id/content/fgd-ruu-kewarganegaraan-legislator-pks-pastikan-tak-ada-anak-indonesia-tanpa-kewarganegaraan",
+   "judul": "FGD RUU Kewarganegaraan, Legislator PKS: Pastikan Tak Ada Anak Indonesia Tanpa Kewarganegaraan",
+   "ringkas": "Ketua Kelompok Fraksi (Kapoksi) XIII DPR RI Fraksi PKS, Yanuar Arif Wibowo, menegaskan revisi Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia harus menghadirkan kepastian hukum sekaligus memastikan tidak ada anak yang memiliki keterikatan kewarganegar",
+   "tanggal": "2026-09-18",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "276edb4248f4",
@@ -820,58 +872,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "055f099ebad0",
-   "url": "https://www.kemhan.go.id/2026/09/18/wamenhan-ri-terima-audiensi-deputi-iv-kemenko-pmk-bahas-penguatan-karakter-dan-jati-diri-bangsa.html",
-   "judul": "Wamenhan RI Terima Audiensi Deputi IV Kemenko PMK, Bahas Penguatan Karakter dan Jati Diri Bangsa",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto menerima audiensi Deputi IV Bidang Koordinasi Penguatan Karakter...",
-   "tanggal": "2026-09-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "c55658251c71",
-   "url": "https://www.kemhan.go.id/2026/09/18/menhan-sjafrie-sambut-dan-tinjau-kelayakan-kapal-its-giuseppe-garibaldi.html",
-   "judul": "Menhan Sjafrie Sambut dan Tinjau Kelayakan Kapal ITS Giuseppe Garibaldi",
-   "ringkas": "Jakarta – Menteri Pertahanan RI Sjafrie Sjamsoeddin menghadiri penyambutan Kapal ITS Giuseppe Garibaldi di Pelabuhan Tanjung Priok, Jakarta, Jumat (18/9/2026)....",
-   "tanggal": "2026-09-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "1de6e75369bc",
-   "url": "https://www.kemhan.go.id/2026/09/18/plt-kapuskeshan-kemhan-tutup-rehabilitasi-medik-paripurna-rtc-angkatan-vii-tingkatkan-kapasitas-dan-profesionalisme-sdm.html",
-   "judul": "Plt. Kapuskeshan Kemhan Tutup Rehabilitasi Medik Paripurna RTC Angkatan VII, Tingkatkan Kapasitas dan Profesionalisme SDM",
-   "ringkas": "Jakarta – Plt. Kepala Pusat Kesehatan Pertahanan Kementerian Pertahanan (Kapuskeshan Kemhan) Brigjen TNI Sunaryo Kusumo memimpin upacara penutupan Rehabilitasi Medik...",
-   "tanggal": "2026-09-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "5b25eb01763c",
-   "url": "https://pks.id/content/legislator-pks-dukung-bantuan-rp175-miliar-untuk-700-pesantren-minta-tepat-sasaran-dan-terukur",
-   "judul": "Legislator PKS Dukung Bantuan Rp17,5 Miliar untuk 700 Pesantren, Minta Tepat Sasaran dan Terukur",
-   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS Mohd. Iqbal Romzi, mengapresiasi kolaborasi Badan Amil Zakat Nasional Republik Indonesia dan Kementerian Agama dalam menyalurkan bantuan Rp17,5 miliar melalui Program Pesantren Nyaman Belajar 2026 kepada 700 pesantren di seluruh Indonesia.",
-   "tanggal": "2026-09-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "a3a8dd5bbb73",
-   "url": "https://pks.id/content/fgd-ruu-kewarganegaraan-legislator-pks-pastikan-tak-ada-anak-indonesia-tanpa-kewarganegaraan",
-   "judul": "FGD RUU Kewarganegaraan, Legislator PKS: Pastikan Tak Ada Anak Indonesia Tanpa Kewarganegaraan",
-   "ringkas": "Ketua Kelompok Fraksi (Kapoksi) XIII DPR RI Fraksi PKS, Yanuar Arif Wibowo, menegaskan revisi Undang-Undang Nomor 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia harus menghadirkan kepastian hukum sekaligus memastikan tidak ada anak yang memiliki keterikatan kewarganegar",
-   "tanggal": "2026-09-18",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "bae899e2eca2",
    "url": "https://gerindra.id/2026/09/17/gerindra-mempawah-gerak-cepat-8-000-liter-air-bersih-diberikan-untuk-warga-terdampak-kemarau/",
    "judul": "Gerindra Mempawah Gerak Cepat, 8.000 Liter Air Bersih Diberikan untuk Warga Terdampak Kemarau",
@@ -982,36 +982,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "694b549294c8",
-   "url": "https://emedia.dpr.go.id/news/2026/09/17/ruu-daerah-kepulauan-harus-jawab-mahalnya-distribusi-logistik-antarpulau",
-   "judul": "RUU Daerah Kepulauan Harus Jawab Mahalnya Distribusi Logistik Antarpulau",
-   "ringkas": "PARLEMENTARIA, Jakarta — Tingginya biaya logistik menjadi salah satu persoalan yang perlu dijawab melalui Rancangan Undang-Undang (RUU) tentang Daerah Kepulauan. Kondisi geografis yang membuat distribusi harus melalui sejumlah tahapan dinilai turut meningkatkan biaya dan menghamb",
-   "tanggal": "2026-09-17",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "3f4c5de31175",
-   "url": "https://emedia.dpr.go.id/news/2026/09/17/hetifah-tekankan-deteksi-dini-dan-kanal-pengaduan-aman-bagi-anak",
-   "judul": "Hetifah Tekankan Deteksi Dini dan Kanal Pengaduan Aman bagi Anak",
-   "ringkas": "PARLEMENTARIA, Jakarta – Sejumlah kasus kekerasan terhadap anak yang terjadi di lingkungan keluarga, sekolah, hingga lembaga pendidikan keagamaan menjadi perhatian Anggota Komisi VIII DPR RI Hetifah Sjaifudian. Menurutnya, berbagai kasus tersebut menunjukkan pentingnya memperkuat",
-   "tanggal": "2026-09-17",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "cc4b9d3bf1ab",
-   "url": "https://emedia.dpr.go.id/news/2026/09/17/shm-dibuka-setelah-41-tahun-diblokir-bam-soroti-penerbitan-shgb-situ-rompong",
-   "judul": "SHM Dibuka Setelah 41 Tahun Diblokir, BAM Soroti Penerbitan SHGB Situ Rompong",
-   "ringkas": "PARLEMENTARIA, Tangerang Selatan – Badan Aspirasi Masyarakat (BAM) DPR RI menyoroti dugaan persoalan dalam proses penerbitan Sertifikat Hak Guna Bangunan (SHGB) pada lahan sengketa Situ Rompong, Tangerang Selatan. Persoalan tersebut mengemuka dalam rapat BAM bersama sejumlah piha",
-   "tanggal": "2026-09-17",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
    "id": "3ebafb42316b",
    "url": "https://www.kemhan.go.id/2026/09/17/menhan-ri-lakukan-pertemuan-bilateral-dengan-vice-chairman-cmc-tiongkok-tegaskan-komitmen-kemitraan-strategis-dan-bebas-aktif.html",
    "judul": "Menhan RI Lakukan Pertemuan Bilateral dengan Vice Chairman CMC Tiongkok: Tegaskan Komitmen Kemitraan Strategis dan Bebas Aktif",
@@ -1095,6 +1065,36 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "694b549294c8",
+   "url": "https://emedia.dpr.go.id/news/2026/09/17/ruu-daerah-kepulauan-harus-jawab-mahalnya-distribusi-logistik-antarpulau",
+   "judul": "RUU Daerah Kepulauan Harus Jawab Mahalnya Distribusi Logistik Antarpulau",
+   "ringkas": "PARLEMENTARIA, Jakarta — Tingginya biaya logistik menjadi salah satu persoalan yang perlu dijawab melalui Rancangan Undang-Undang (RUU) tentang Daerah Kepulauan. Kondisi geografis yang membuat distribusi harus melalui sejumlah tahapan dinilai turut meningkatkan biaya dan menghamb",
+   "tanggal": "2026-09-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "3f4c5de31175",
+   "url": "https://emedia.dpr.go.id/news/2026/09/17/hetifah-tekankan-deteksi-dini-dan-kanal-pengaduan-aman-bagi-anak",
+   "judul": "Hetifah Tekankan Deteksi Dini dan Kanal Pengaduan Aman bagi Anak",
+   "ringkas": "PARLEMENTARIA, Jakarta – Sejumlah kasus kekerasan terhadap anak yang terjadi di lingkungan keluarga, sekolah, hingga lembaga pendidikan keagamaan menjadi perhatian Anggota Komisi VIII DPR RI Hetifah Sjaifudian. Menurutnya, berbagai kasus tersebut menunjukkan pentingnya memperkuat",
+   "tanggal": "2026-09-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "cc4b9d3bf1ab",
+   "url": "https://emedia.dpr.go.id/news/2026/09/17/shm-dibuka-setelah-41-tahun-diblokir-bam-soroti-penerbitan-shgb-situ-rompong",
+   "judul": "SHM Dibuka Setelah 41 Tahun Diblokir, BAM Soroti Penerbitan SHGB Situ Rompong",
+   "ringkas": "PARLEMENTARIA, Tangerang Selatan – Badan Aspirasi Masyarakat (BAM) DPR RI menyoroti dugaan persoalan dalam proses penerbitan Sertifikat Hak Guna Bangunan (SHGB) pada lahan sengketa Situ Rompong, Tangerang Selatan. Persoalan tersebut mengemuka dalam rapat BAM bersama sejumlah piha",
+   "tanggal": "2026-09-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
   },
   {
    "id": "f5ab976010f3",
