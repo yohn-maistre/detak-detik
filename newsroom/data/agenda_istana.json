@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-18T13:42:27+00:00",
+ "diambil": "2026-09-21T15:58:38+00:00",
  "acara": [
+  {
+   "id": "2b870784571d",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-resepsi-kesyukuran-100-tahun-pondok-modern-darussalam-gontor/",
+   "judul": "Presiden Prabowo Hadiri Resepsi Kesyukuran 100 Tahun Pondok Modern Darussalam Gontor",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-20",
+   "tanggal_terbit": "2026-09-20",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "35",
+   "prov_nama": "Jawa Timur"
+  },
   {
    "id": "3d3504c45b59",
    "url": "https://wapresri.go.id/kriyanusa-2026-ibu-selvi-dorong-perluasan-pasar-bagi-perajin-daerah/",
