@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-21T15:58:38+00:00",
+ "diambil": "2026-09-22T14:35:55+00:00",
  "acara": [
+  {
+   "id": "a6a49b1614ac",
+   "url": "https://setkab.go.id/pemerintah-lunasi-utang-obligasi-blbi-rp2183-triliun/",
+   "judul": "Pemerintah Lunasi Utang Obligasi BLBI Rp218,3 Triliun",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-22",
+   "tanggal_terbit": "2026-09-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "2b870784571d",
    "url": "https://setkab.go.id/presiden-prabowo-hadiri-resepsi-kesyukuran-100-tahun-pondok-modern-darussalam-gontor/",
