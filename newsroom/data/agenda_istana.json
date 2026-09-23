@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-22T14:35:55+00:00",
+ "diambil": "2026-09-23T14:18:42+00:00",
  "acara": [
   {
    "id": "a6a49b1614ac",
@@ -18,6 +18,58 @@
    "topik": [
     "ekonomi",
     "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "aa358e7c0532",
+   "url": "https://setkab.go.id/presiden-prabowo-perkuat-industri-tekstil-lindungi-jutaan-pekerja-dan-produk-dalam-negeri/",
+   "judul": "Presiden Prabowo Perkuat Industri Tekstil, Lindungi Jutaan Pekerja dan Produk Dalam Negeri",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-22",
+   "tanggal_terbit": "2026-09-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "708f7c3aff48",
+   "url": "https://setkab.go.id/presiden-prabowo-perintahkan-ieu-cepa-segera-tuntas-perluas-akses-indonesia-ke-pasar-eropa/",
+   "judul": "Presiden Prabowo Perintahkan IEU-CEPA Segera Tuntas, Perluas Akses Indonesia ke Pasar Eropa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-22",
+   "tanggal_terbit": "2026-09-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8c19b16a2294",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-tegaskan-komitmen-pendidikan-negeri-gratis-dari-sd-hingga-perguruan-tinggi/",
+   "judul": "Seskab Teddy: Presiden Prabowo Tegaskan Komitmen Pendidikan Negeri Gratis dari SD hingga Perguruan Tinggi",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-21",
+   "tanggal_terbit": "2026-09-21",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
    ],
    "venue": null,
    "kota": null,
