@@ -4,8 +4,41 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-23T14:18:42+00:00",
+ "diambil": "2026-09-24T14:17:09+00:00",
  "acara": [
+  {
+   "id": "9a863583572e",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-percepat-pendidikan-gratis-rencana-kuliah-bebas-biaya-dimatangkan/",
+   "judul": "Seskab Teddy: Presiden Prabowo Percepat Pendidikan Gratis, Rencana Kuliah Bebas Biaya Dimatangkan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-23",
+   "tanggal_terbit": "2026-09-23",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "56866ddb78ea",
+   "url": "https://wapresri.go.id/wapres-terima-dpp-prajaniti-hindu-indonesia-bahas-percepatan-pemulihan-pascabencana-hingga-kerukunan-umat-beragama/",
+   "judul": "Wapres Terima DPP Prajaniti Hindu Indonesia, Bahas Percepatan Pemulihan Pascabencana Hingga Kerukunan Umat Beragama",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-09-23",
+   "tanggal_terbit": "2026-09-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "a6a49b1614ac",
    "url": "https://setkab.go.id/pemerintah-lunasi-utang-obligasi-blbi-rp2183-triliun/",
@@ -70,6 +103,24 @@
    "audiens": null,
    "topik": [
     "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4a95ef7749a2",
+   "url": "https://setkab.go.id/pemerintah-kerahkan-64-pesawat-dan-54-394-personel-tangani-karhutla/",
+   "judul": "Pemerintah Kerahkan 64 Pesawat dan 54.394 Personel Tangani Karhutla",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-21",
+   "tanggal_terbit": "2026-09-21",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "energi-sda"
    ],
    "venue": null,
    "kota": null,
