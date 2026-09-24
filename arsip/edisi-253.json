@@ -1,0 +1,121 @@
+{
+ "edisi": 253,
+ "terbit": "2026-09-24T23:57:11.544135+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-253-01",
+   "judul": "Galeri foto: Indonesia raih emas pertama Asian Games 2026 dari bulu tangkis",
+   "skor": 35
+  },
+  {
+   "id": "klp-253-02",
+   "judul": "El Nino Sangat Kuat Ancam Produksi dan Harga Pangan hingga 2027",
+   "skor": 34
+  },
+  {
+   "id": "klp-253-03",
+   "judul": "Ombudsman temukan 'klaster rumah mewah' di area Lapas Cibinong, siapa saja penghuninya?",
+   "skor": 25
+  },
+  {
+   "id": "klp-253-04",
+   "judul": "Hukuman eks-Mendikbudristek Nadiem Makarim berkurang jadi 9 tahun penjara, uang pengganti Rp548 miliar, dalam putusan banding kasus Chromebook",
+   "skor": 21
+  },
+  {
+   "id": "klp-253-05",
+   "judul": "Badan Pengelola Gambut dan Mangrove Nasional untuk Cegah Karhutla Dibentuk, Langsung di Bawah Presiden",
+   "skor": 20
+  },
+  {
+   "id": "klp-253-06",
+   "judul": "Sebanyak 14 korban meninggal dievakuasi dari dalam bangkai KM Virgo, lebih dari 90 orang belum ditemukan – Apa saja fakta terakhir yang sudah diketahui?",
+   "skor": 18
+  },
+  {
+   "id": "klp-253-07",
+   "judul": "Delegasi Indonesia dan Berbagai Negara Lakukan Aksi Walk Out saat Netanyahu Hendak Pidato",
+   "skor": 18
+  },
+  {
+   "id": "klp-253-08",
+   "judul": "Jasad anak buah kapal yang membawa lima jurnalis ditemukan di Pulau Enggano Bengkulu, sekitar 345km dari Gunung Anak Krakatau",
+   "skor": 17
+  },
+  {
+   "id": "klp-253-09",
+   "judul": "KPK Geledah Kanwil BPN Jaktim Terkait Dugaan Suap HGB Summarecon di Kabupaten Bogor",
+   "skor": 16
+  },
+  {
+   "id": "klp-253-10",
+   "judul": "Wacana kenaikan ambang batas parlemen, apa dampaknya bagi publik?",
+   "skor": 15
+  },
+  {
+   "id": "klp-253-11",
+   "judul": "Gairah dan Gelisah Petani di Balik Pengesahan UU Reforma Agraria",
+   "skor": 15
+  },
+  {
+   "id": "klp-253-12",
+   "judul": "Prabowo Minta Biaya SD-Kuliah Gratis, Menkeu Evaluasi Efektivitas 20 Persen Anggaran Pendidikan",
+   "skor": 13
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
