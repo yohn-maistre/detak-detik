@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-25T14:40:24+00:00",
+ "diambil": "2026-09-26T13:48:28+00:00",
  "acara": [
   {
    "id": "62344d3c4a03",
@@ -108,6 +108,38 @@
    "judul": "Tinjau Sejumlah Infrastrukur Terdampak Bencana di Solok, Wapres Dorong Percepatan Perbaikan Akses dan Layanan Publik",
    "aktor": "WAPRES",
    "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-09-25",
+   "tanggal_terbit": "2026-09-25",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3b13894b3300",
+   "url": "https://wapresri.go.id/wapres-perintahkan-langsung-dokter-pribadinya-tangani-warga-yang-sakit-di-posko-pengungsian-solok/",
+   "judul": "Wapres Perintahkan Langsung Dokter Pribadinya, Tangani Warga yang Sakit di Posko Pengungsian Solok",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-25",
+   "tanggal_terbit": "2026-09-25",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dd2a04d1153a",
+   "url": "https://wapresri.go.id/kunjungi-keluarga-korban-banjir-bandang-solok-wapres-sampaikan-duka-cita/",
+   "judul": "Kunjungi Keluarga Korban Banjir Bandang Solok, Wapres Sampaikan Duka Cita",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
    "tanggal_acara": "2026-09-25",
    "tanggal_terbit": "2026-09-25",
    "audiens": null,

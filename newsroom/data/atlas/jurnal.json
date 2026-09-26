@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-25T14:43:04.531888+00:00",
- "edisi": 254,
+ "diperbarui": "2026-09-26T13:50:34.379579+00:00",
+ "edisi": 256,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Makalah ini mengulas hambatan dan kebijakan dalam pengembangan energi panas bumi berbasis cekungan sedimen di Indonesia. Ini relevan untuk memahami strategi energi nasional dan keberlanjutan sumber daya.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Studi ini menganalisis efektivitas biaya regimen Dolutegravir dan Efavirenz untuk pengobatan HIV di Indonesia. Informasi ini penting bagi pembuat kebijakan kesehatan dalam alokasi anggaran dan strategi penanganan HIV.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini mengidentifikasi faktor penentu organisasi berkinerja tinggi dalam mempercepat pendaftaran tanah di Indonesia. Temuan ini krusial untuk meningkatkan administrasi pertanahan dan kepastian hukum bagi masyarakat.",
+   "kategori": "TATA KELOLA PERTANAHAN",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini mengkaji pirolisis langsung aspal Buton dari Indonesia dan karakterisasi produk cairnya. Riset ini penting untuk potensi pemanfaatan sumber daya alam lokal sebagai energi alternatif dan material industri.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan ini merupakan temuan pertama Lasiodiplodia mahajangana dan Lasiodiplodia theobromae penyebab busuk buah kakao di Sulawesi Selatan. Ini vital untuk perlindungan tanaman dan keberlanjutan produksi komoditas perkebunan utama Indonesia.",
+   "kategori": "PERTANIAN & HAMA",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Studi ini mengembangkan model kontrol untuk kawasan hutan di Daerah Aliran Sungai Anai, Provinsi Sumatera Barat. Model ini penting untuk pengelolaan lingkungan, konservasi hutan, dan mitigasi bencana di wilayah tersebut.",
+   "kategori": "LINGKUNGAN & KEHUTANAN",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini mengulas penggalangan dana zakat di Indonesia, mencakup aspek keberlanjutan, kerangka hukum, dan transformasi digital. Ini relevan untuk memahami perkembangan filantropi Islam dan ekonomi syariah nasional.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 256
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Makalah ini membahas tradisi tenun Donggala dari perspektif sejarah, sosiokultural, dan keberlanjutan di Desa Towale, Sulawesi Tengah. Ini penting untuk pelestarian warisan budaya dan kearifan lokal Indonesia.",
+   "kategori": "BUDAYA & WARISAN",
+   "sejak_edisi": 256
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Studi ini penting untuk merumuskan kebijakan energi yang inklusif dan berkelanjutan bagi seluruh lapisan masyarakat Indonesia.",
    "kategori": "KESENJANGAN ENERGI",
    "sejak_edisi": 254
-  },
-  {
-   "judul": "Leveraging Entrepreneurial Orientation for QBL-Based Sustainable Women Entrepreneurship in South Sulawesi, Indonesia:",
-   "wadah": "Vifada Management and Social Sciences",
-   "doi": "10.70184/7abyts10",
-   "tanggal": "2026-12-28",
-   "alasan": "Mengkaji orientasi kewirausahaan untuk pengembangan wirausaha perempuan berkelanjutan di Sulawesi Selatan, Indonesia. Studi ini penting untuk pemberdayaan ekonomi perempuan dan pertumbuhan ekonomi regional.",
-   "kategori": "KEWIRAUSAHAAN PEREMPUAN",
-   "sejak_edisi": 254
-  },
-  {
-   "judul": "Crypto-asset functional dichotomy and segmented tax policy: NARDL-ECM evidence from Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103652",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis dikotomi fungsional aset kripto dan kebijakan pajak tersegmentasi dengan bukti dari Indonesia. Ini penting untuk pengembangan regulasi dan penerimaan pajak atas aset digital di Indonesia.",
-   "kategori": "EKONOMI DIGITAL",
-   "sejak_edisi": 254
-  },
-  {
-   "judul": "How bonding, bridging, and linking social capital shape voter behavior in underdeveloped regions of Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103222",
-   "tanggal": "2026-12",
-   "alasan": "Menyelidiki bagaimana modal sosial memengaruhi perilaku pemilih di daerah tertinggal di Indonesia. Penelitian ini krusial untuk memahami dinamika politik dan partisipasi masyarakat dalam pemilu di Indonesia.",
-   "kategori": "POLITIK & DEMOKRASI",
-   "sejak_edisi": 254
-  },
-  {
-   "judul": "Predicting measles elimination through surveillance-response and health system determinants: a village-level structural equation modeling study in Cirebon Regency, Indonesia",
-   "wadah": "IJID Regions",
-   "doi": "10.1016/j.ijregi.2026.100986",
-   "tanggal": "2026-12",
-   "alasan": "Memprediksi eliminasi campak melalui respons surveilans dan determinan sistem kesehatan di Kabupaten Cirebon, Indonesia. Studi ini penting untuk strategi pengendalian penyakit menular dan penguatan sistem kesehatan di tingkat desa.",
-   "kategori": "KESEHATAN PUBLIK",
-   "sejak_edisi": 254
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Makalah ini meneliti implementasi sistem pemerintahan berbasis elektronik di Indonesia, khususnya di daerah terpencil. Ini penting untuk memahami efektivitas upaya pemerintah dalam mengatasi kesenjangan digital dan meningkatkan pelayanan publik bagi masyarakat Indonesia.",
-   "kategori": "TATA KELOLA DIGITAL",
-   "sejak_edisi": 252
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengevaluasi situs yang diusulkan untuk pembangunan pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia, dari perspektif radiologi. Studi ini krusial untuk pertimbangan keamanan lingkungan dan dampak potensial proyek infrastruktur energi skala besar di Indonesia.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 252
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini membahas ekonomi politik transisi energi bersih di Indonesia, termasuk tantangan dan motivasi di baliknya. Relevan untuk memahami dinamika kebijakan energi, dampak lingkungan, dan arah pembangunan ekonomi Indonesia di masa depan.",
-   "kategori": "TRANSISI ENERGI",
-   "sejak_edisi": 252
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menganalisis batasan dan celah dalam pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Penting untuk pemahaman hukum, perlindungan anak, dan pengembangan kebijakan di Indonesia.",
-   "kategori": "HUKUM & ANAK",
-   "sejak_edisi": 252
   }
  ]
 }
