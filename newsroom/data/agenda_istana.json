@@ -4,8 +4,70 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-26T13:48:28+00:00",
+ "diambil": "2026-09-28T17:45:28+00:00",
  "acara": [
+  {
+   "id": "2f51629649cb",
+   "url": "https://wapresri.go.id/memahami-kekhawatiran-orang-tua-siswa-wapres-pastikan-penanganan-optimal-bagi-korban-keracunan-makanan-di-batang/",
+   "judul": "Memahami Kekhawatiran Orang Tua Siswa, Wapres Pastikan Penanganan Optimal Bagi Korban Keracunan Makanan di Batang",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "6d4ab94638cd",
+   "url": "https://wapresri.go.id/sampaikan-permintaan-maaf-wapres-pastikan-pasien-dugaan-keracunan-makanan-di-batang-tertangani-hingga-pulih/",
+   "judul": "Sampaikan Permintaan Maaf, Wapres Pastikan Pasien Dugaan Keracunan Makanan di Batang Tertangani hingga Pulih",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "017d9c2e4a5c",
+   "url": "https://wapresri.go.id/bertolak-ke-batang-wapres-pastikan-penanganan-korban-dan-investigasi-dugaan-keracunan-makanan-dituntaskan/",
+   "judul": "Bertolak ke Batang, Wapres Pastikan Penanganan Korban dan Investigasi Dugaan Keracunan Makanan Dituntaskan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2779ff323951",
+   "url": "https://wapresri.go.id/buka-kriyanusa-2026-ibu-selvi-tekankan-inovasi-dan-daya-saing-produk-kerajinan/",
+   "judul": "Buka Kriyanusa 2026, Ibu Selvi Tekankan Inovasi dan Daya Saing Produk Kerajinan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-26",
+   "tanggal_terbit": "2026-09-26",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "62344d3c4a03",
    "url": "https://setkab.go.id/seskab-teddy-ungkap-momen-presiden-prabowo-telepon-tim-bulu-tangkis-usai-raih-emas-asian-games-2026/",
