@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-28T17:47:47.859705+00:00",
- "edisi": 261,
+ "diperbarui": "2026-09-29T16:04:12.694844+00:00",
+ "edisi": 262,
  "pilihan": [
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Menjelajahi potensi energi geotermal di Solok Selatan, penelitian ini penting untuk pengembangan sumber daya terbarukan di Indonesia dan pemenuhan kebutuhan energi nasional di daerah vulkanik.",
+   "kategori": "SUMBER DAYA GEOTERMAL",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji metode deteksi patogen pernapasan pada pasien SARI di Indonesia, makalah ini relevan untuk meningkatkan diagnostik dan penanganan penyakit pernapasan yang menjadi isu kesehatan penting bagi masyarakat.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah terpencil Indonesia, penelitian ini krusial untuk memperbaiki pelayanan publik dan mengurangi kesenjangan digital di seluruh negeri.",
+   "kategori": "TATA KELOLA DIGITAL",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
+   "wadah": "Annals of Nuclear Energy",
+   "doi": "10.1016/j.anucene.2026.112702",
+   "tanggal": "2027-1",
+   "alasan": "Menilai kelayakan lokasi pembangkit listrik tenaga nuklir di Pantai Gosong, studi ini sangat relevan bagi perencanaan energi jangka panjang dan pertimbangan keamanan lingkungan di Indonesia.",
+   "kategori": "INFRASTRUKTUR ENERGI",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia, artikel ini penting untuk memahami tantangan dan peluang dalam mencapai keberlanjutan energi serta dampaknya pada masyarakat luas.",
+   "kategori": "TRANSISI ENERGI",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "A comparative analysis of cattle-oil palm plantation policies in Indonesia and Malaysia: Towards greater effectiveness and efficiency",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103210",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis kebijakan perkebunan sawit dan peternakan di Indonesia secara komparatif, penelitian ini relevan untuk mencari solusi peningkatan efektivitas dan efisiensi sektor pertanian strategis negara.",
+   "kategori": "KEBIJAKAN PERTANIAN",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Mendalami tradisi tenun Donggala di Sulawesi Tengah, studi ini memberikan wawasan tentang pelestarian warisan budaya lokal dan signifikansinya bagi identitas sosial ekonomi masyarakat Indonesia.",
+   "kategori": "WARISAN BUDAYA",
+   "sejak_edisi": 262
+  },
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Menjelajahi disparitas sosial ekonomi dalam risiko diabetes di Indonesia, makalah ini relevan untuk merumuskan kebijakan kesehatan yang lebih inklusif dan mengatasi kesenjangan kesehatan masyarakat.",
+   "kategori": "KESEHATAN SOSIAL",
+   "sejak_edisi": 262
+  },
   {
    "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
    "wadah": "Journal of Sharia and Legal Science",
@@ -37,78 +109,6 @@
    "alasan": "Mengungkap politik invisibilitas dan kekerasan ekstraktif terhadap klaim agraria di kompleks bentonit Bogor, Indonesia. Relevan untuk isu keadilan sosial, lingkungan, dan hak-hak petani.",
    "kategori": "AGRARIA & LINGKUNGAN",
    "sejak_edisi": 261
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Membahas penggalangan dana zakat di Indonesia, meliputi keberlanjutan, kerangka hukum, dan transformasi digital. Penting untuk pengembangan ekonomi syariah dan filantropi Islam di Indonesia.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 261
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Mengidentifikasi faktor-faktor kunci yang mendorong kinerja tinggi organisasi dalam mempercepat pendaftaran tanah di Indonesia. Studi ini penting untuk perbaikan birokrasi dan layanan publik terkait pertanahan.",
-   "kategori": "ADMINISTRASI PUBLIK",
-   "sejak_edisi": 261
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Mengembangkan model kontrol untuk kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat, Indonesia. Relevan untuk pengelolaan sumber daya hutan dan mitigasi bencana di wilayah tersebut.",
-   "kategori": "KONSERVASI HUTAN",
-   "sejak_edisi": 261
-  },
-  {
-   "judul": "THE ROLE OF IKATAN KELUARGA MUSLIM INDONESIA (IKMI) IN THE RESILIENCE OF MUSLIM MIGRANT FAMILIES IN SEOUL: A PERSPECTIVE BASED ON FROMA WALSH'S THEORY",
-   "wadah": "Jurnal Al-Ijtimaiyyah",
-   "doi": "10.22373/al-ijtimaiyyah.v12i2.35602",
-   "tanggal": "2026-12-30",
-   "alasan": "Meneliti peran Ikatan Keluarga Muslim Indonesia (IKMI) dalam ketahanan keluarga migran Muslim Indonesia di Seoul. Penting untuk memahami pengalaman dan dukungan diaspora Indonesia di luar negeri.",
-   "kategori": "DIASPORA INDONESIA",
-   "sejak_edisi": 261
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Penelitian ini mengkaji insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Ini relevan bagi pembaca untuk memahami upaya negara dalam mendorong praktik bisnis berkelanjutan dan dampaknya terhadap lingkungan serta ekonomi nasional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 258
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Laporan ini adalah yang pertama mengenai identifikasi jamur penyebab busuk buah kakao di Sulawesi Selatan, Indonesia. Ini penting bagi petani dan peneliti pertanian untuk mengembangkan strategi pengendalian hama guna menjaga produktivitas perkebunan kakao nasional.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 258
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengembangkan kerangka rekomendasi putusan pidana berbasis kecerdasan buatan untuk Indonesia. Ini relevan bagi pembaca untuk memahami potensi inovasi teknologi dalam mendukung proses peradilan di Indonesia dan meningkatkan konsistensi hukum.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 258
-  },
-  {
-   "judul": "Unveiling a hidden upflow in the Nagasari Area, Dieng geothermal field, Indonesia: Fluid geochemical constraints",
-   "wadah": "Geothermics",
-   "doi": "10.1016/j.geothermics.2026.103834",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengungkapkan aliran panas bumi tersembunyi di area Nagasari, lapangan Dieng, Indonesia. Temuan ini krusial untuk pengembangan potensi energi panas bumi sebagai salah satu sumber energi terbarukan utama di Indonesia.",
-   "kategori": "ENERGI TERBARUKAN",
-   "sejak_edisi": 258
   }
  ]
 }
