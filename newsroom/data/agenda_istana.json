@@ -4,8 +4,40 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-30T00:40:43+00:00",
+ "diambil": "2026-09-30T16:02:05+00:00",
  "acara": [
+  {
+   "id": "319206fa0516",
+   "url": "https://wapresri.go.id/wapres-bahas-akselerasi-pendidikan-di-indonesia-timur-bersama-rapi/",
+   "judul": "Wapres Bahas Akselerasi Pendidikan di Indonesia Timur Bersama RAPI",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-30",
+   "tanggal_terbit": "2026-09-30",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a01816e12739",
+   "url": "https://wapresri.go.id/terima-jemaat-gkpi-rajeg-wapres-tekankan-kerukunan-dan-kebebasan-beribadah/",
+   "judul": "Terima Jemaat GKPI Rajeg, Wapres Tekankan Kerukunan dan Kebebasan Beribadah",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-09-30",
+   "tanggal_terbit": "2026-09-30",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "2f51629649cb",
    "url": "https://wapresri.go.id/memahami-kekhawatiran-orang-tua-siswa-wapres-pastikan-penanganan-optimal-bagi-korban-keracunan-makanan-di-batang/",
