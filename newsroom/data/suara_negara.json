@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-09-29T16:27:00+00:00",
+ "diambil": "2026-09-30T00:56:50+00:00",
  "baris": [
   {
    "id": "58adb2c0ea0b",
@@ -432,6 +432,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "748227076d03",
+   "url": "https://emedia.dpr.go.id/news/2026/09/29/tuntutan-serikat-pekerja-mengemuka-dpr-siapkan-ruang-dialog-cari-titik-temu",
+   "judul": "Tuntutan Serikat Pekerja Mengemuka, DPR Siapkan Ruang Dialog Cari Titik Temu",
+   "ringkas": "PARLEMENTARIA, Jakarta - Wakil Ketua DPR RI Saan Mustopa menegaskan komitmen DPR RI untuk menindaklanjuti berbagai tuntutan dan aspirasi yang disampaikan sejumlah serikat pekerja. Aspirasi tersebut mencakup persoalan pesangon, sanksi ketenagakerjaan, Perjanjian Kerja Waktu Terten",
+   "tanggal": "2026-09-29",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
    "id": "1656c7f6f6ca",
    "url": "https://www.kemhan.go.id/2026/09/29/menhan-sjafrie-hadiri-penutupan-latsarmil-komcad-asn-gelombang-ii-2026.html",
    "judul": "Menhan Sjafrie Hadiri Penutupan Latsarmil Komcad ASN Gelombang II 2026",
@@ -781,16 +791,6 @@
    "url": "https://emedia.dpr.go.id/news/2026/09/28/komisi-xiii-dpr-ri-rdp-dengan-dirjen-pemasyarakatan-kemenimipas-and-kepala-lembaga-pemasyarakatan",
    "judul": "KOMISI XIII DPR RI - RDP DENGAN DIRJEN PEMASYARAKATAN KEMENIMIPAS & KEPALA LEMBAGA PEMASYARAKATAN",
    "ringkas": "KOMISI XIII DPR RI - RDP DENGAN DIRJEN PEMASYARAKATAN KEMENIMIPAS & KEPALA LEMBAGA PEMASYARAKATAN",
-   "tanggal": "2026-09-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "dbf09a03876c",
-   "url": "https://emedia.dpr.go.id/news/2026/09/28/komisi-iii-dpr-ri-rdpu-menerima-masukan-terkait-ruu-tentang-perampasan-aset-terkait-tindak-pidana",
-   "judul": "KOMISI III DPR RI - RDPU MENERIMA MASUKAN TERKAIT RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA",
-   "ringkas": "KOMISI III DPR RI - RDPU MENERIMA MASUKAN TERKAIT RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA",
    "tanggal": "2026-09-28",
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
@@ -1900,6 +1900,16 @@
    "cabang": "pengawas"
   },
   {
+   "id": "afca7e1db35e",
+   "url": "https://kontras.org/22-tahun-peristiwa-munir-menagih-akuntabilitas-dan-pertanggungjawaban-negara/",
+   "judul": "22 Tahun Peristiwa Munir: Menagih Akuntabilitas dan Pertanggungjawaban Negara",
+   "ringkas": "Jakarta, 23 September 2026 - KontraS bersama Komite Aksi Solidaritas untuk Munir (KASUM) dan jaringan masyarakat sipil lainnya kembali mendesak penyelesaian kasus pembunuhan Munir Said Thalib yang telah berlangsung selama 22 tahun. Dalam konferensi pers bertema “22 Tahun Peristiw",
+   "tanggal": "2026-09-22",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "b2f7a60b8af2",
    "url": "https://www.kemhan.go.id/2026/09/21/menhan-ri-terima-kunjungan-kehormatan-dubes-jepang-bahas-penguatan-kemitraan-pertahanan.html",
    "judul": "Menhan RI Terima Kunjungan Kehormatan Dubes Jepang, Bahas Penguatan Kemitraan Pertahanan",
@@ -2686,6 +2696,16 @@
    "url": "https://kontras.org/ketika-cerita-dan-gambar-menjadi-ruang-ingatan-di-restat-ruang-temu-warga/",
    "judul": "Ketika Cerita dan Gambar Menjadi Ruang Ingatan di REST(AT): Ruang Temu Warga",
    "ringkas": "Dalam rangkaian kegiatan REST(AT): Ruang Temu Warga, KontraS menghadirkan “Stories in Line: Storytelling and Live Drawing” pada 9 September 2026 di Live House M Bloc Space, Jakarta Selatan. Melalui kegiatan ini, REST(AT) sendiri menjadi bagian dari upaya menghadirkan Living Knowl",
+   "tanggal": "2026-09-09",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "6517d1bcae69",
+   "url": "https://kontras.org/diskusi-publik-urgensi-reformasi-peradilan-militer-di-tengah-kasus-andrie-yunus-dan-putusan-mahkamah-konstitusi/",
+   "judul": "Diskusi Publik Urgensi Reformasi Peradilan Militer di Tengah Kasus Andrie Yunus dan Putusan Mahkamah Konstitusi",
+   "ringkas": "Jakarta, 09 September 2026 – Diskusi dengan tema “Urgensi Reformasi Peradilan Militer di Tengah Kasus Andrie Yunus dan Putusan MK” membahas kembali persoalan reformasi peradilan militer yang hingga kini belum menunjukkan kepastian. Diskusi yang dipandu Anisa dari Imparsial memper",
    "tanggal": "2026-09-09",
    "kanal": "kontras",
    "lembaga": "KontraS",
