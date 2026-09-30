@@ -1,0 +1,121 @@
+{
+ "edisi": 263,
+ "terbit": "2026-09-30T00:40:19.058507+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-263-01",
+   "judul": "Asian Games 2026, Indonesia raih emas ketiga dari ganda putra bulu tangkis",
+   "skor": 31
+  },
+  {
+   "id": "klp-263-02",
+   "judul": "Komisi II DPR Ungkap Alasan Tak Beri Izin Ombudsman Rapat Bareng Komisi XIII dan Kementerian Imipas",
+   "skor": 25
+  },
+  {
+   "id": "klp-263-03",
+   "judul": "Masinis KA Argo Bromo Anggrek menjadi tersangka kecelakaan kereta di Bekasi Timur",
+   "skor": 24
+  },
+  {
+   "id": "klp-263-04",
+   "judul": "Hakim kabulkan praperadilan: Penetapan tersangka Yonex Carter tidak sah",
+   "skor": 16
+  },
+  {
+   "id": "klp-263-05",
+   "judul": "KPK Kembali Sita Aset Anggota DPRD Bengkulu Vinna Ledy, Kali Ini Apartemen di Tebet",
+   "skor": 16
+  },
+  {
+   "id": "klp-263-06",
+   "judul": "Ikut Pantau Liga Inggris, Presiden La Liga Javier Tebas Ingin Manchester City Dihukum Berat",
+   "skor": 15
+  },
+  {
+   "id": "klp-263-07",
+   "judul": "Operasi SAR Bawah Laut Terus Berlanjut Tiga Korban KM Virgo Transport 8 Berhasil Ditemukan",
+   "skor": 12
+  },
+  {
+   "id": "klp-263-08",
+   "judul": "Lapas Kelebihan Kapasitas, Prabowo Minta Pemerintah Siapkan Kebijakan Rehabilitasi Pengguna Narkoba",
+   "skor": 12
+  },
+  {
+   "id": "klp-263-09",
+   "judul": "Hasil UEFA Nations League: Spanyol vs Kroasia, Brace Lamine Yamal Pastikan Kemenangan La Furia Roja",
+   "skor": 12
+  },
+  {
+   "id": "klp-263-10",
+   "judul": "Tarif LRT Kelapa Gading-Manggarai Juga Bakal Naik Mulai 1 Januari 2027",
+   "skor": 12
+  },
+  {
+   "id": "klp-263-11",
+   "judul": "Mobil Damkar Terbalik di Sulsel saat Hendak Padamkan Kebakaran, 2 Petugas Tewas",
+   "skor": 9
+  },
+  {
+   "id": "klp-263-12",
+   "judul": "El Nino Mundurkan Musim Tanam, Diversifikasi Pangan Jadi Pilihan",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

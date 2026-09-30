@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-09-28T17:45:28+00:00",
+ "diambil": "2026-09-30T00:40:43+00:00",
  "acara": [
   {
    "id": "2f51629649cb",
@@ -47,6 +47,58 @@
    "audiens": null,
    "topik": [
     "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "00e539f16d37",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-bertakziah-ke-kediaman-megawati-sampaikan-duka-atas-berpulangnya-guruh-soekarnoputra/",
+   "judul": "Seskab Teddy: Presiden Prabowo Bertakziah ke Kediaman Megawati, Sampaikan Duka atas Berpulangnya Guruh Soekarnoputra",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "6642b22eaaef",
+   "url": "https://setkab.go.id/presiden-prabowo-bahas-penguatan-bpjs-kesehatan-pemerintah-siapkan-tambahan-rp20-triliun/",
+   "judul": "Presiden Prabowo Bahas Penguatan BPJS Kesehatan, Pemerintah Siapkan Tambahan Rp20 Triliun",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "952574ce6b57",
+   "url": "https://setkab.go.id/tindak-lanjut-arahan-presiden-prabowo-antrean-faktual-haji-turun-jadi-14-tahun/",
+   "judul": "Tindak Lanjut Arahan Presiden Prabowo, Antrean Faktual Haji Turun Jadi 14 Tahun",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-09-28",
+   "tanggal_terbit": "2026-09-28",
+   "audiens": null,
+   "topik": [
+    "agama"
    ],
    "venue": null,
    "kota": null,
