@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-09-30T16:05:16.272028+00:00",
- "edisi": 264,
+ "diperbarui": "2026-10-01T00:42:39.406940+00:00",
+ "edisi": 265,
  "pilihan": [
+  {
+   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103306",
+   "tanggal": "2026-12",
+   "alasan": "Menjelajahi disparitas sosioekonomi dalam risiko diabetes di Indonesia. Penting untuk memahami dampak ketimpangan pendapatan dan urbanisasi terhadap kesehatan publik dan kebijakan preventif.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia. Sangat relevan untuk memahami dinamika kebijakan energi dan tantangan dekarbonisasi nasional, serta dampaknya pada masyarakat.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Mengidentifikasi faktor-faktor kunci percepatan pendaftaran tanah di Indonesia. Berkontribusi pada peningkatan layanan publik dan kepastian hukum atas kepemilikan tanah bagi masyarakat.",
+   "kategori": "REFORMASI BIROKRASI",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102025",
+   "tanggal": "2026-12",
+   "alasan": "Mengungkap kekerasan ekstraktif dan pembungkaman klaim agraria di Bogor. Relevan untuk memahami konflik sosial-lingkungan, keadilan agraria, dan dampaknya pada komunitas lokal di Indonesia.",
+   "kategori": "SOSIAL & LINGKUNGAN",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Menelaah kekerasan dalam mendisiplinkan anak serta implikasi pidananya di Indonesia. Penelitian ini sangat penting untuk meningkatkan perlindungan anak dan mendukung penegakan hukum yang adil di masyarakat Indonesia.",
+   "kategori": "HUKUM & SOSIAL",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Mengembangkan model kontrol untuk kawasan hutan di DAS Anai, Sumatera Barat. Relevan untuk pengelolaan lingkungan, konservasi hutan, dan keberlanjutan sumber daya air di Indonesia.",
+   "kategori": "LINGKUNGAN & SUMBERDAYA",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
+   "wadah": "International Journal of Innovation and Learning",
+   "doi": "10.1504/ijil.2027.10076654",
+   "tanggal": "2027",
+   "alasan": "Meneliti adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Relevan untuk memahami integrasi teknologi dalam pendidikan dan peningkatan kualitas pengajaran nasional.",
+   "kategori": "PENDIDIKAN & TEKNOLOGI",
+   "sejak_edisi": 265
+  },
+  {
+   "judul": "Crypto-asset functional dichotomy and segmented tax policy: NARDL-ECM evidence from Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103652",
+   "tanggal": "2026-12",
+   "alasan": "Menganalisis kebijakan pajak aset kripto di Indonesia. Penelitian ini sangat relevan untuk pengembangan regulasi keuangan digital dan potensi penerimaan negara di era ekonomi baru nasional.",
+   "kategori": "EKONOMI & REGULASI",
+   "sejak_edisi": 265
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Ini adalah laporan pertama mengenai jamur Lasiodiplodia penyebab busuk buah kakao di Sulawesi Selatan, Indonesia, penting untuk pertanian dan ekonomi lokal. Informasi ini sangat relevan bagi petani kakao dan kebijakan pertanian untuk mitigasi hama.",
    "kategori": "PERTANIAN & HAMA",
    "sejak_edisi": 264
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengkaji kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan, memberikan gambaran ketimpangan akses. Informasi ini krusial bagi pembaca untuk memahami isu sosial-ekonomi terkait energi dan kebijakan pemerintah.",
-   "kategori": "SOSIAL ENERGI",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "A district-level screening framework to prioritize decentralized food-waste recovery for landfill methane mitigation in Indonesia",
-   "wadah": "Waste Management",
-   "doi": "10.1016/j.wasman.2026.115888",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengembangkan kerangka kerja untuk memprioritaskan pemulihan sampah makanan terdesentralisasi guna mitigasi metana TPA di Indonesia. Ini relevan bagi pembaca yang peduli lingkungan dan ingin mengetahui solusi pengelolaan sampah berkelanjutan.",
-   "kategori": "PENGELOLAAN SAMPAH",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Penelitian ini membahas keberlanjutan, kerangka hukum, dan transformasi digital pengumpulan zakat di Indonesia. Ini relevan bagi pembaca untuk memahami peran zakat dalam ekonomi syariah dan filantropi di masyarakat.",
-   "kategori": "FILANTROPI ISLAM",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "THE ROLE OF IKATAN KELUARGA MUSLIM INDONESIA (IKMI) IN THE RESILIENCE OF MUSLIM MIGRANT FAMILIES IN SEOUL: A PERSPECTIVE BASED ON FROMA WALSH'S THEORY",
-   "wadah": "Jurnal Al-Ijtimaiyyah",
-   "doi": "10.22373/al-ijtimaiyyah.v12i2.35602",
-   "tanggal": "2026-12-30",
-   "alasan": "Makalah ini mengkaji peran Ikatan Keluarga Muslim Indonesia (IKMI) dalam ketahanan keluarga migran Muslim Indonesia di Seoul. Relevan untuk memahami dinamika dan dukungan sosial bagi warga negara Indonesia di perantauan.",
-   "kategori": "DIASPORA INDONESIA",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
-   "wadah": "Geosystems and Geoenvironment",
-   "doi": "10.1016/j.geogeo.2026.100570",
-   "tanggal": "2027-2",
-   "alasan": "Menjelajahi potensi energi geotermal di Solok Selatan, penelitian ini penting untuk pengembangan sumber daya terbarukan di Indonesia dan pemenuhan kebutuhan energi nasional di daerah vulkanik.",
-   "kategori": "SUMBER DAYA GEOTERMAL",
-   "sejak_edisi": 262
-  },
-  {
-   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
-   "wadah": "Diagnostic Microbiology and Infectious Disease",
-   "doi": "10.1016/j.diagmicrobio.2026.117663",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji metode deteksi patogen pernapasan pada pasien SARI di Indonesia, makalah ini relevan untuk meningkatkan diagnostik dan penanganan penyakit pernapasan yang menjadi isu kesehatan penting bagi masyarakat.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 262
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah terpencil Indonesia, penelitian ini krusial untuk memperbaiki pelayanan publik dan mengurangi kesenjangan digital di seluruh negeri.",
-   "kategori": "TATA KELOLA DIGITAL",
-   "sejak_edisi": 262
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Menilai kelayakan lokasi pembangkit listrik tenaga nuklir di Pantai Gosong, studi ini sangat relevan bagi perencanaan energi jangka panjang dan pertimbangan keamanan lingkungan di Indonesia.",
-   "kategori": "INFRASTRUKTUR ENERGI",
-   "sejak_edisi": 262
   }
  ]
 }
