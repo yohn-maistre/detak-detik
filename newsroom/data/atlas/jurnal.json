@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-01T00:42:39.406940+00:00",
- "edisi": 265,
+ "diperbarui": "2026-10-01T16:38:16.370459+00:00",
+ "edisi": 266,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Makalah ini meninjau hambatan pengembangan panas bumi di Indonesia, khususnya pada cekungan sedimen, dari sisi kebijakan. Hasilnya relevan bagi pemerintah dan pemangku kepentingan untuk merumuskan kebijakan energi terbarukan yang lebih efektif di Indonesia.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Penelitian ini menganalisis efektivitas biaya pengobatan HIV di Indonesia, membandingkan dua rejimen obat. Temuan ini penting untuk pengambil kebijakan kesehatan dalam mengoptimalkan alokasi sumber daya dan meningkatkan akses pengobatan HIV yang efisien bagi masyarakat Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Studi ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik Indonesia di daerah-daerah terpencil. Ini relevan untuk memahami efektivitas program digitalisasi pemerintah dalam menjangkau seluruh masyarakat dan mengatasi kesenjangan digital di Indonesia.",
+   "kategori": "PEMERINTAHAN DIGITAL",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Enhancing human resource quality in higher education: the role of capability maturity model and organisational training at Universitas Jambi, Indonesia",
+   "wadah": "International Journal of Management in Education",
+   "doi": "10.1504/ijmie.2027.10075511",
+   "tanggal": "2027",
+   "alasan": "Makalah ini menganalisis peran model kematangan kapabilitas dan pelatihan di Universitas Jambi dalam meningkatkan kualitas sumber daya manusia. Penelitian ini relevan untuk pengembangan strategi peningkatan mutu pendidikan dan SDM di perguruan tinggi Indonesia.",
+   "kategori": "PENDIDIKAN TINGGI",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengusulkan kerangka kerja kecerdasan buatan untuk rekomendasi putusan pidana di Indonesia. Ini relevan bagi sistem peradilan untuk meningkatkan konsistensi dan efisiensi dalam pengambilan keputusan hukum serta mendukung modernisasi proses yudisial di Indonesia.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102136",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini mengkaji kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Temuan ini krusial untuk perumusan kebijakan energi yang inklusif dan berkelanjutan, memastikan akses energi yang adil bagi seluruh masyarakat Indonesia.",
+   "kategori": "KESENJANGAN ENERGI",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah ini menganalisis pengumpulan zakat di Indonesia, meliputi keberlanjutan, kerangka hukum, dan transformasi digitalnya. Studi ini sangat relevan untuk pengembangan ekonomi syariah dan filantropi Islam di Indonesia, serta modernisasi pengelolaannya.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 266
+  },
+  {
+   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
+   "wadah": "Social Sciences &amp; Humanities Open",
+   "doi": "10.1016/j.ssaho.2026.103330",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengkaji tradisi tenun Donggala di Sulawesi Tengah dari perspektif sejarah, sosiokultural, dan keberlanjutan. Ini relevan untuk pelestarian warisan budaya, pengembangan ekonomi lokal, dan identitas masyarakat di Indonesia.",
+   "kategori": "BUDAYA LOKAL",
+   "sejak_edisi": 266
+  },
   {
    "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
    "wadah": "Social Sciences &amp; Humanities Open",
@@ -37,78 +109,6 @@
    "alasan": "Mengungkap kekerasan ekstraktif dan pembungkaman klaim agraria di Bogor. Relevan untuk memahami konflik sosial-lingkungan, keadilan agraria, dan dampaknya pada komunitas lokal di Indonesia.",
    "kategori": "SOSIAL & LINGKUNGAN",
    "sejak_edisi": 265
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Menelaah kekerasan dalam mendisiplinkan anak serta implikasi pidananya di Indonesia. Penelitian ini sangat penting untuk meningkatkan perlindungan anak dan mendukung penegakan hukum yang adil di masyarakat Indonesia.",
-   "kategori": "HUKUM & SOSIAL",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Mengembangkan model kontrol untuk kawasan hutan di DAS Anai, Sumatera Barat. Relevan untuk pengelolaan lingkungan, konservasi hutan, dan keberlanjutan sumber daya air di Indonesia.",
-   "kategori": "LINGKUNGAN & SUMBERDAYA",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
-   "wadah": "International Journal of Innovation and Learning",
-   "doi": "10.1504/ijil.2027.10076654",
-   "tanggal": "2027",
-   "alasan": "Meneliti adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Relevan untuk memahami integrasi teknologi dalam pendidikan dan peningkatan kualitas pengajaran nasional.",
-   "kategori": "PENDIDIKAN & TEKNOLOGI",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "Crypto-asset functional dichotomy and segmented tax policy: NARDL-ECM evidence from Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103652",
-   "tanggal": "2026-12",
-   "alasan": "Menganalisis kebijakan pajak aset kripto di Indonesia. Penelitian ini sangat relevan untuk pengembangan regulasi keuangan digital dan potensi penerimaan negara di era ekonomi baru nasional.",
-   "kategori": "EKONOMI & REGULASI",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Makalah ini meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia, relevan untuk memahami arah kebijakan ekonomi dan keberlanjutan. Ini penting bagi pembaca untuk mengetahui dampak kebijakan terhadap lingkungan dan ekonomi nasional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
-   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
-   "doi": "10.37373/jenius.v8i1.2344",
-   "tanggal": "2027-5-31",
-   "alasan": "Penelitian ini menganalisis ketahanan manajemen industri pertahanan Indonesia pasca-MEF dalam Holding Defend ID, memberikan wawasan penting tentang kapabilitas strategis negara. Ini relevan bagi pembaca yang ingin memahami perkembangan sektor keamanan dan kemandirian bangsa.",
-   "kategori": "PERTAHANAN NASIONAL",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengkarakterisasi produk cair dari pirolisis langsung aspal batu dari Buton, Indonesia, termasuk peran kalsit. Ini penting untuk penelitian dan pengembangan potensi sumber daya alam lokal sebagai energi alternatif.",
-   "kategori": "SUMBER DAYA ENERGI",
-   "sejak_edisi": 264
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Ini adalah laporan pertama mengenai jamur Lasiodiplodia penyebab busuk buah kakao di Sulawesi Selatan, Indonesia, penting untuk pertanian dan ekonomi lokal. Informasi ini sangat relevan bagi petani kakao dan kebijakan pertanian untuk mitigasi hama.",
-   "kategori": "PERTANIAN & HAMA",
-   "sejak_edisi": 264
   }
  ]
 }
