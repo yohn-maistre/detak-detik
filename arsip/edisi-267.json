@@ -1,0 +1,121 @@
+{
+ "edisi": 267,
+ "terbit": "2026-10-02T00:59:16.287052+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-267-01",
+   "judul": "Kapolri baru Suyudi Ario Seto di antara 'jejak-jejak kelam pelanggaran HAM' pada era Listyo dan kultur kekerasan di tubuh kepolisian",
+   "skor": 32
+  },
+  {
+   "id": "klp-267-02",
+   "judul": "Ramalan Zodiak Sagitarius dan Capricorn 2 Oktober 2026: Mulai dari Cinta, Karir, Kesehatan dan Keuan",
+   "skor": 31
+  },
+  {
+   "id": "klp-267-03",
+   "judul": "Asian Games 2026: Raih emas dari panahan, atlet Nurisa Dian Ashrifah torehkan sejarah untuk Indonesia",
+   "skor": 24
+  },
+  {
+   "id": "klp-267-04",
+   "judul": "Apa saja kejanggalan dari temuan fasilitas mewah di Lapas Cibinong? – Dari pejabat bermasalah, pungutan liar, barang-barang yang hilang, sampai akhirnya dirobohkan",
+   "skor": 19
+  },
+  {
+   "id": "klp-267-05",
+   "judul": "Denmark vs Portugal: Selecao Das Quinas Menang 4-2 Tanpa Cristiano Ronaldo",
+   "skor": 15
+  },
+  {
+   "id": "klp-267-06",
+   "judul": "Menhan Sjafrie Hadiri Pelantikan Pejabat Kabinet Merah Putih dan Penganugerahan Tanda Kehormatan",
+   "skor": 15
+  },
+  {
+   "id": "klp-267-07",
+   "judul": "MK uji sengketa ijazah SMA Gibran yang dituding 'cacat administratif dan manipulatif' – Apa yang diketahui sejauh ini?",
+   "skor": 13
+  },
+  {
+   "id": "klp-267-08",
+   "judul": "Dilantik Jadi Menlu, Arrmanatha Nasir: Tantangan yang Kita Hadapi Sangat Besar",
+   "skor": 12
+  },
+  {
+   "id": "klp-267-09",
+   "judul": "Koalisi Saudi: Houthi Serang Gardu Listrik di Madinah yang Pasok Masjid Nabawi",
+   "skor": 12
+  },
+  {
+   "id": "klp-267-10",
+   "judul": "Sambut Pertamina Grand Prix of Indonesia 2026, Pertamina Siapkan Layanan Energi hingga Akomodasi",
+   "skor": 12
+  },
+  {
+   "id": "klp-267-11",
+   "judul": "Dedi Prasetyo Dilantik Menjadi Kepala Badan Reforma Agraria Nasional, Ini Langkah Awal yang Dilakukannya",
+   "skor": 11
+  },
+  {
+   "id": "klp-267-12",
+   "judul": "Hari Kesaktian Pancasila 2026, Menhan Sjafrie Hadiri Upacara dan Peresmian Renovasi Museum",
+   "skor": 10
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
