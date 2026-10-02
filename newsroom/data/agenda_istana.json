@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-01T16:35:47+00:00",
+ "diambil": "2026-10-02T15:55:06+00:00",
  "acara": [
   {
    "id": "b2d6fa33b3b8",
@@ -16,6 +16,78 @@
    "tanggal_terbit": "2026-10-01",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f4c363f1cea6",
+   "url": "https://setkab.go.id/presiden-prabowo-saksikan-pengucapan-sumpah-ketua-dan-anggota-ombudsman-ri/",
+   "judul": "Presiden Prabowo Saksikan Pengucapan Sumpah Ketua dan Anggota Ombudsman RI",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-01",
+   "tanggal_terbit": "2026-10-01",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "76d71079f6d5",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-suyudi-ario-seto-dan-wahyu-hadiningrat-sebagai-kapolri-dan-wakapolri/",
+   "judul": "Presiden Prabowo Lantik Suyudi Ario Seto dan Wahyu Hadiningrat sebagai Kapolri dan Wakapolri",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-01",
+   "tanggal_terbit": "2026-10-01",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a040d09bfb9d",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-menteri-dan-wakil-menteri-kabinet-merah-putih-di-istana-negara/",
+   "judul": "Presiden Prabowo Lantik Menteri dan Wakil Menteri Kabinet Merah Putih di Istana Negara",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-01",
+   "tanggal_terbit": "2026-10-01",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "968d3e249996",
+   "url": "https://setkab.go.id/penuh-khidmat-presiden-prabowo-pimpin-upacara-hari-kesaktian-pancasila-tahun-2026/",
+   "judul": "Penuh Khidmat, Presiden Prabowo Pimpin Upacara Hari Kesaktian Pancasila Tahun 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-01",
+   "tanggal_terbit": "2026-10-01",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
