@@ -1,0 +1,121 @@
+{
+ "edisi": 270,
+ "terbit": "2026-10-03T14:23:06.655192+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-270-01",
+   "judul": "Kapolri baru Suyudi Ario Seto di antara 'jejak-jejak kelam pelanggaran HAM' pada era Listyo dan kultur kekerasan di tubuh kepolisian",
+   "skor": 35
+  },
+  {
+   "id": "klp-270-12",
+   "judul": "Denny Indrayana Harap MK Kabulkan Permohonan Diskualifikasi Gibran: Persidangan Membuktikan Tak Punya Ijazah SMA",
+   "skor": 10
+  },
+  {
+   "id": "klp-270-23",
+   "judul": "Heboh Data Pribadi Menkomdigi Meutya Hafid Diduga Bocor, Komdigi-BSSN Usut Jual Beli Data Ilegal",
+   "skor": 7
+  },
+  {
+   "id": "klp-270-16",
+   "judul": "BMKG: Indonesia Masih Didominasi Kemarau, Hujan Lebat di Berpotensi Turun Awal Oktober",
+   "skor": 9
+  },
+  {
+   "id": "klp-270-17",
+   "judul": "Komisi III DPR Ungkap 3 PR Utama Kapolri Baru, Termasuk Kepercayaan Publik",
+   "skor": 9
+  },
+  {
+   "id": "klp-270-18",
+   "judul": "Ibu Siswa SD di Pemalang Ungkap Anak Sempat Mengaku Dipukul dan Ditendang Kakak Kelas",
+   "skor": 9
+  },
+  {
+   "id": "klp-270-03",
+   "judul": "Suporter Wajib Tahu! Ini Ciri Tiket Palsu Timnas Indonesia vs Thailand di Final FIFA ASEAN Cup 2026",
+   "skor": 24
+  },
+  {
+   "id": "klp-270-07",
+   "judul": "Dampaknya Belum Dikaji, Proyek Data Center di Jatiluhur Ditunda",
+   "skor": 12
+  },
+  {
+   "id": "klp-270-14",
+   "judul": "Trump Ancam Kenakan Tarif Tambahan ke Korsel Jika Tak Dukung Proyek LNG Alaska",
+   "skor": 9
+  },
+  {
+   "id": "klp-270-15",
+   "judul": "Dampak Kasus Manchester City: UEA Ancam Tarik Investasi Miliaran Pound dari Inggris",
+   "skor": 9
+  },
+  {
+   "id": "klp-270-08",
+   "judul": "Bingkai Sepekan: Klaster Mewah Lapas Cibinong Dibongkar hingga Prabowo Reshuffle Kabinet",
+   "skor": 12
+  },
+  {
+   "id": "klp-270-19",
+   "judul": "Perkuat Perlindungan Pekerja Rentan, Kemenko PM bersama BPJS Ketenagakerjaan dan BAZNAS Sasar 100.000 Pekerja",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

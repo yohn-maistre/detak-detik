@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-01T16:38:16.370459+00:00",
- "edisi": 266,
+ "diperbarui": "2026-10-03T14:25:46.466138+00:00",
+ "edisi": 270,
  "pilihan": [
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengkaji metode deteksi patogen pernapasan pada pasien SARI yang dirawat di rumah sakit Indonesia, membandingkannya dengan tes rutin. Riset ini relevan untuk meningkatkan akurasi diagnosis dan penanganan penyakit pernapasan yang menjadi isu kesehatan masyarakat di Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah ini menelaah batasan dan celah dalam pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Pemahaman ini krusial untuk perlindungan anak serta pengembangan kerangka hukum yang lebih efektif di negara kita.",
+   "kategori": "HUKUM & SOSIAL",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Studi ini menyelidiki zona permeabel potensial dalam sistem geotermal vulkanik di Solok Selatan, Indonesia, untuk memahami struktur geologi. Riset ini penting untuk pengembangan energi terbarukan dan pemanfaatan sumber daya geotermal di Indonesia.",
+   "kategori": "GEOTERMAL & SUMBER DAYA",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan ini merupakan yang pertama mengidentifikasi jamur Lasiodiplodia mahajangana dan Lasiodiplodia theobromae sebagai penyebab busuk buah kakao di Sulawesi Selatan, Indonesia. Temuan ini sangat relevan untuk petani kakao dan strategi pengendalian penyakit tanaman nasional.",
+   "kategori": "PERTANIAN & PANGAN",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "The role of energy policies in promoting the transition to sustainable renewable energy systems: a case study of Indonesia",
+   "wadah": "World Development Sustainability",
+   "doi": "10.1016/j.wds.2026.100355",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengkaji peran kebijakan energi dalam mendorong transisi menuju sistem energi terbarukan yang berkelanjutan di Indonesia. Riset ini relevan bagi pembuat kebijakan dan masyarakat dalam mewujudkan masa depan energi nasional yang ramah lingkungan.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
+   "wadah": "International Journal of Innovation and Learning",
+   "doi": "10.1504/ijil.2027.10076654",
+   "tanggal": "2027",
+   "alasan": "Studi kasus ini menganalisis difusi inovasi dan dukungan organisasi dalam adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Ini penting untuk memahami dinamika implementasi teknologi pendidikan dan peningkatan kualitas pembelajaran digital nasional.",
+   "kategori": "PENDIDIKAN & TEKNOLOGI",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
+   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
+   "doi": "10.37373/jenius.v8i1.2344",
+   "tanggal": "2027-5-31",
+   "alasan": "Penelitian ini melakukan asesmen terhadap resiliensi manajemen industri pertahanan Indonesia pasca-MEF dalam Holding Defend ID. Riset ini relevan untuk menganalisis ketahanan dan strategi pengembangan sektor industri strategis nasional yang penting bagi kedaulatan.",
+   "kategori": "INDUSTRI PERTAHANAN",
+   "sejak_edisi": 270
+  },
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Studi ini menganalisis efektivitas insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Hasilnya relevan untuk merumuskan kebijakan yang lebih baik guna mendorong praktik bisnis berkelanjutan dan menjaga kelestarian lingkungan di Tanah Air.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 270
+  },
   {
    "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
    "wadah": "Unconventional Resources",
@@ -37,78 +109,6 @@
    "alasan": "Makalah ini menganalisis peran model kematangan kapabilitas dan pelatihan di Universitas Jambi dalam meningkatkan kualitas sumber daya manusia. Penelitian ini relevan untuk pengembangan strategi peningkatan mutu pendidikan dan SDM di perguruan tinggi Indonesia.",
    "kategori": "PENDIDIKAN TINGGI",
    "sejak_edisi": 266
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengusulkan kerangka kerja kecerdasan buatan untuk rekomendasi putusan pidana di Indonesia. Ini relevan bagi sistem peradilan untuk meningkatkan konsistensi dan efisiensi dalam pengambilan keputusan hukum serta mendukung modernisasi proses yudisial di Indonesia.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 266
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini mengkaji kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Temuan ini krusial untuk perumusan kebijakan energi yang inklusif dan berkelanjutan, memastikan akses energi yang adil bagi seluruh masyarakat Indonesia.",
-   "kategori": "KESENJANGAN ENERGI",
-   "sejak_edisi": 266
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menganalisis pengumpulan zakat di Indonesia, meliputi keberlanjutan, kerangka hukum, dan transformasi digitalnya. Studi ini sangat relevan untuk pengembangan ekonomi syariah dan filantropi Islam di Indonesia, serta modernisasi pengelolaannya.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 266
-  },
-  {
-   "judul": "Donggala weaving tradition from historical, sociocultural, and sustainability perspectives: A case study of Towale Village, Donggala Regency, Central Sulawesi, Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103330",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengkaji tradisi tenun Donggala di Sulawesi Tengah dari perspektif sejarah, sosiokultural, dan keberlanjutan. Ini relevan untuk pelestarian warisan budaya, pengembangan ekonomi lokal, dan identitas masyarakat di Indonesia.",
-   "kategori": "BUDAYA LOKAL",
-   "sejak_edisi": 266
-  },
-  {
-   "judul": "Socioeconomic disparities in diabetes risk: An exploration of income inequality and urbanization in Indonesia",
-   "wadah": "Social Sciences &amp; Humanities Open",
-   "doi": "10.1016/j.ssaho.2026.103306",
-   "tanggal": "2026-12",
-   "alasan": "Menjelajahi disparitas sosioekonomi dalam risiko diabetes di Indonesia. Penting untuk memahami dampak ketimpangan pendapatan dan urbanisasi terhadap kesehatan publik dan kebijakan preventif.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia. Sangat relevan untuk memahami dinamika kebijakan energi dan tantangan dekarbonisasi nasional, serta dampaknya pada masyarakat.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Mengidentifikasi faktor-faktor kunci percepatan pendaftaran tanah di Indonesia. Berkontribusi pada peningkatan layanan publik dan kepastian hukum atas kepemilikan tanah bagi masyarakat.",
-   "kategori": "REFORMASI BIROKRASI",
-   "sejak_edisi": 265
-  },
-  {
-   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102025",
-   "tanggal": "2026-12",
-   "alasan": "Mengungkap kekerasan ekstraktif dan pembungkaman klaim agraria di Bogor. Relevan untuk memahami konflik sosial-lingkungan, keadilan agraria, dan dampaknya pada komunitas lokal di Indonesia.",
-   "kategori": "SOSIAL & LINGKUNGAN",
-   "sejak_edisi": 265
   }
  ]
 }
