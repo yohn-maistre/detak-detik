@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-02T15:55:06+00:00",
+ "diambil": "2026-10-05T18:40:12+00:00",
  "acara": [
+  {
+   "id": "99b00bb35328",
+   "url": "https://setkab.go.id/presiden-prabowo-angkat-26-anggota-wantimpres-di-istana-negara/",
+   "judul": "Presiden Prabowo Angkat 26 Anggota Wantimpres di Istana Negara",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-02",
+   "tanggal_terbit": "2026-10-02",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "b2d6fa33b3b8",
    "url": "https://setkab.go.id/usai-pimpin-upacara-presiden-prabowo-resmikan-renovasi-museum-kesaktian-pancasila/",
