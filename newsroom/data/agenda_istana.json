@@ -4,8 +4,62 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-05T18:40:12+00:00",
+ "diambil": "2026-10-06T16:05:23+00:00",
  "acara": [
+  {
+   "id": "9afe24b271ff",
+   "url": "https://setkab.go.id/cetak-sejarah-di-hadapan-presiden-prabowo-indonesia-juara-perdana-fifa-asean-cup/",
+   "judul": "Cetak Sejarah di Hadapan Presiden Prabowo, Indonesia Juara Perdana FIFA ASEAN Cup",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-06",
+   "tanggal_terbit": "2026-10-06",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "55088de2799f",
+   "url": "https://setkab.go.id/terima-presiden-fifa-presiden-prabowo-sepak-bola-bangun-prestasi-dan-karakter-bangsa/",
+   "judul": "Terima Presiden FIFA, Presiden Prabowo: Sepak Bola Bangun Prestasi dan Karakter Bangsa",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-05",
+   "tanggal_terbit": "2026-10-05",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9b9bbc83ad1e",
+   "url": "https://setkab.go.id/presiden-prabowo-pimpin-upacara-peringatan-hut-ke-81-tni-di-cilangkap/",
+   "judul": "Presiden Prabowo Pimpin Upacara Peringatan HUT ke-81 TNI di Cilangkap",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-05",
+   "tanggal_terbit": "2026-10-05",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "99b00bb35328",
    "url": "https://setkab.go.id/presiden-prabowo-angkat-26-anggota-wantimpres-di-istana-negara/",
