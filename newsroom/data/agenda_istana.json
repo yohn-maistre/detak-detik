@@ -4,8 +4,72 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-07T01:10:14+00:00",
+ "diambil": "2026-10-07T16:44:13+00:00",
  "acara": [
+  {
+   "id": "987c6e293312",
+   "url": "https://setkab.go.id/presiden-prabowo-sampaikan-taklimat-kepada-800-perwira-tinggi-tni-polri/",
+   "judul": "Presiden Prabowo Sampaikan Taklimat kepada 800 Perwira Tinggi TNI-Polri",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": "800 Perwira Tinggi TNI-Polri",
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "44a7c67e84a0",
+   "url": "https://wapresri.go.id/terima-asosiasi-pendeta-indonesia-wapres-dorong-penguatan-persatuan-di-tengah-keberagaman/",
+   "judul": "Terima Asosiasi Pendeta Indonesia, Wapres Dorong Penguatan Persatuan di Tengah Keberagaman",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "df70e71a8bed",
+   "url": "https://wapresri.go.id/wapres-hormati-putusan-mk-terkait-phpu-syarat-pendidikan-tegaskan-fokus-bekerja-untuk-masyarakat/",
+   "judul": "Wapres Hormati Putusan MK Terkait PHPU Syarat Pendidikan, Tegaskan Fokus Bekerja untuk Masyarakat",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e0745777a9f0",
+   "url": "https://wapresri.go.id/tinjau-pameran-inacraft-2026-youthpreneurs-wapres-dukung-pengembangan-produk-kreatif-para-wirausahawan-muda/",
+   "judul": "Tinjau Pameran INACRAFT 2026 Youthpreneurs, Wapres Dukung Pengembangan Produk Kreatif Para Wirausahawan Muda",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "9afe24b271ff",
    "url": "https://setkab.go.id/cetak-sejarah-di-hadapan-presiden-prabowo-indonesia-juara-perdana-fifa-asean-cup/",
