@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-07T16:44:13+00:00",
+ "diambil": "2026-10-08T16:41:57+00:00",
  "acara": [
+  {
+   "id": "192fc7c10c0f",
+   "url": "https://wapresri.go.id/buka-kongres-nasional-ke-v-api-wapres-tekankan-penguatan-toleransi-untuk-jaga-persatuan-bangsa/",
+   "judul": "Buka Kongres Nasional ke-V API, Wapres Tekankan Penguatan Toleransi untuk Jaga Persatuan Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-08",
+   "tanggal_terbit": "2026-10-08",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "987c6e293312",
    "url": "https://setkab.go.id/presiden-prabowo-sampaikan-taklimat-kepada-800-perwira-tinggi-tni-polri/",
@@ -60,6 +77,36 @@
    "url": "https://wapresri.go.id/tinjau-pameran-inacraft-2026-youthpreneurs-wapres-dukung-pengembangan-produk-kreatif-para-wirausahawan-muda/",
    "judul": "Tinjau Pameran INACRAFT 2026 Youthpreneurs, Wapres Dukung Pengembangan Produk Kreatif Para Wirausahawan Muda",
    "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3914b08fc4f5",
+   "url": "https://wapresri.go.id/songsong-masa-depan-wapres-dorong-percepatan-literasi-teknologi-generasi-muda-maluku/",
+   "judul": "Songsong Masa Depan, Wapres Dorong Percepatan Literasi Teknologi Generasi Muda Maluku",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-07",
+   "tanggal_terbit": "2026-10-07",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "29b2e6d6d4f3",
+   "url": "https://wapresri.go.id/hadiri-inacraft-vol-5-2026-ibu-selvi-dorong-penguatan-kriya-indonesia-melalui-inovasi-dan-teknologi/",
+   "judul": "Hadiri INACRAFT Vol. 5 2026, Ibu Selvi Dorong Penguatan Kriya Indonesia melalui Inovasi dan Teknologi",
+   "aktor": "ISTANA",
    "jenis": "KUNJUNGAN",
    "tanggal_acara": "2026-10-07",
    "tanggal_terbit": "2026-10-07",

@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-07T16:46:58.395990+00:00",
- "edisi": 278,
+ "diperbarui": "2026-10-08T16:45:04.678263+00:00",
+ "edisi": 280,
  "pilihan": [
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Penelitian ini mengidentifikasi potensi zona permeabel di sistem panas bumi Solok Selatan, Sumatera Barat. Relevan bagi Indonesia untuk pengembangan energi terbarukan dan pemanfaatan sumber daya alam secara berkelanjutan di wilayah tersebut.",
+   "kategori": "SUMBER DAYA & ENERGI",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini berfokus pada deteksi patogen pernapasan pada pasien SARI di rumah sakit Indonesia. Penting untuk memahami pola penyakit, meningkatkan diagnosis, dan merumuskan strategi kesehatan publik yang lebih efektif di seluruh negeri.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
+   "wadah": "International Journal of Innovation and Learning",
+   "doi": "10.1504/ijil.2027.10076654",
+   "tanggal": "2027",
+   "alasan": "Makalah ini meneliti adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Ini relevan untuk memahami tantangan dan keberhasilan implementasi teknologi pendidikan, serta mendukung peningkatan kualitas pembelajaran di sekolah-sekolah Indonesia.",
+   "kategori": "PENDIDIKAN & TEKNOLOGI",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengkarakterisasi aspal batuan dari Buton, Indonesia, untuk produksi produk cair melalui pirolisis. Ini relevan untuk eksplorasi dan pengembangan potensi sumber daya alam lokal, serta diversifikasi energi di Indonesia.",
+   "kategori": "SUMBER DAYA & ENERGI",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
+   "wadah": "Journal of Substance Use and Addiction Treatment",
+   "doi": "10.1016/j.josat.2026.210129",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini meninjau beban ekonomi dan tantangan rehabilitasi bagi penyalahguna narkoba di Sulawesi Selatan. Sangat penting bagi Indonesia untuk merancang kebijakan yang mendukung pemulihan, integrasi sosial, dan mengurangi dampak narkoba pada masyarakat.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Artikel ini menganalisis ekonomi politik transisi energi bersih di Indonesia. Relevan bagi pembuat kebijakan dan masyarakat untuk memahami hambatan serta peluang dalam upaya Indonesia beralih dari energi fosil ke energi yang lebih berkelanjutan.",
+   "kategori": "LINGKUNGAN & KEBIJAKAN",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Makalah ini menelaah kekerasan dalam mendisiplinkan anak serta implikasi pidananya di Indonesia. Sangat penting bagi perlindungan anak, penegakan hukum, dan edukasi masyarakat mengenai batasan yang jelas dalam praktik pengasuhan di Indonesia.",
+   "kategori": "SOSIAL & HUKUM",
+   "sejak_edisi": 280
+  },
+  {
+   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102025",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengungkap kekerasan ekstraktif dan penolakan klaim agraria di kompleks bentonit Bogor. Relevan untuk memahami konflik sumber daya, keadilan lingkungan, dan dampak industri ekstraktif terhadap masyarakat adat di Indonesia.",
+   "kategori": "LINGKUNGAN & KEBIJAKAN",
+   "sejak_edisi": 280
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia dengan membandingkan dua regimen obat. Studi ini sangat relevan untuk membuat keputusan kebijakan kesehatan yang tepat guna dan efisien bagi masyarakat.",
    "kategori": "KESEHATAN PUBLIK",
    "sejak_edisi": 278
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik Indonesia untuk menjembatani kesenjangan digital di daerah terpencil. Riset ini vital untuk optimalisasi layanan publik dan pemerataan akses teknologi.",
-   "kategori": "TATA KELOLA DIGITAL",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Studi ini relevan untuk merancang strategi mitigasi guna memastikan pasokan energi yang stabil dan berkelanjutan.",
-   "kategori": "KETAHANAN ENERGI",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Mengkaji penggalangan zakat di Indonesia, meliputi keberlanjutan, kerangka hukum, dan transformasi digital. Penelitian ini relevan untuk memahami peran dan perkembangan ekonomi syariah dalam masyarakat Indonesia.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Secondary data review on humanitarian logistics in Aceh - Indonesia: Problems mapping, cause, and recommendation",
-   "wadah": "Progress in Disaster Science",
-   "doi": "10.1016/j.pdisas.2026.100746",
-   "tanggal": "2026-12",
-   "alasan": "Meninjau logistik kemanusiaan di Aceh, Indonesia, mengidentifikasi masalah dan penyebabnya. Studi ini vital untuk meningkatkan efektivitas respons bencana dan bantuan kemanusiaan di Indonesia.",
-   "kategori": "LOGISTIK KEMANUSIAAN",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Makalah ini meneliti faktor-faktor penentu kinerja tinggi organisasi dalam percepatan pendaftaran tanah di Indonesia. Penelitian ini relevan bagi pembaca Indonesia karena membahas efisiensi kebijakan agraria dan dampaknya pada masyarakat.",
-   "kategori": "KEBIJAKAN PUBLIK",
-   "sejak_edisi": 272
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini mengembangkan kerangka kerja untuk rekomendasi putusan pidana di Indonesia menggunakan penalaran berbasis kasus. Relevan bagi pembaca Indonesia karena berpotensi meningkatkan konsistensi dan efisiensi sistem peradilan pidana nasional.",
-   "kategori": "HUKUM & PENGADILAN",
-   "sejak_edisi": 272
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini menganalisis kemiskinan energi multidimensional di Indonesia, dengan fokus pada perspektif perkotaan dan pedesaan. Relevan bagi pembaca Indonesia untuk memahami tantangan akses energi dan implikasinya terhadap kesejahteraan sosial.",
-   "kategori": "ENERGI & MASYARAKAT",
-   "sejak_edisi": 272
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengevaluasi lokasi potensial pembangkit listrik tenaga nuklir di Pantai Gosong, Indonesia, dari aspek radiologi. Relevan bagi pembaca Indonesia untuk memahami pertimbangan keamanan dan dampak lingkungan proyek energi besar.",
-   "kategori": "ENERGI & LINGKUNGAN",
-   "sejak_edisi": 272
   }
  ]
 }
