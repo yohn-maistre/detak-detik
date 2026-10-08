@@ -1,0 +1,121 @@
+{
+ "edisi": 279,
+ "terbit": "2026-10-08T01:10:06.494978+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-279-01",
+   "judul": "Tak temukan bukti ijazah setara SMA, mengapa MK tak bisa diskualifikasi Gibran sebagai wapres?",
+   "skor": 37
+  },
+  {
+   "id": "klp-279-02",
+   "judul": "Febrie Adriansyah Diduga Terima Uang Rp20,6 Miliar dari PT OBP, Perusahaan yang Disidik Terkait Blackout Sumatera",
+   "skor": 28
+  },
+  {
+   "id": "klp-279-03",
+   "judul": "Lionel Messi Pensiun dari Timnas Argentina, Cristiano Ronaldo Beri Pesan Penghormatan",
+   "skor": 24
+  },
+  {
+   "id": "klp-279-04",
+   "judul": "Disaksikan Presiden, Menhan Hadiri Penyerahan Rp13,2 Triliun dan 259 Ribu Hektare Kawasan Hutan Kepada Negara",
+   "skor": 24
+  },
+  {
+   "id": "klp-279-05",
+   "judul": "Ramalan Zodiak Aquarius dan Pisces 8 Oktober 2026, Mulai dari Cinta, Karir, Kesehatan dan Keuangan",
+   "skor": 22
+  },
+  {
+   "id": "klp-279-06",
+   "judul": "Di Tengah Ketidakpastian Global, Komitmen Presiden Prabowo Berikan Subsidi Biaya Haji 2027 hingga ONH Turun",
+   "skor": 22
+  },
+  {
+   "id": "klp-279-07",
+   "judul": "Video pesta narkoba di Rutan Depok viral, petugas rutan diduga bantu sediakan narkoba",
+   "skor": 18
+  },
+  {
+   "id": "klp-279-08",
+   "judul": "Warga Israel Gelar Peringatan 3 Tahun Tragedi 7 Oktober di Tengah Tuntutan Penyelidikan Nasional",
+   "skor": 15
+  },
+  {
+   "id": "klp-279-09",
+   "judul": "Pertamina Grand Prix of Indonesia 2026 Siap Digelar,  Begini Semarak Penyambutan di Bandara Lombok",
+   "skor": 15
+  },
+  {
+   "id": "klp-279-10",
+   "judul": "Persebaya Surabaya Target Libas PSBS Biak dan Kendal Tornado FC di League Cup 2026/2027",
+   "skor": 9
+  },
+  {
+   "id": "klp-279-11",
+   "judul": "TikTok dan Instagram Nonaktifkan Jutaan Akun Anak, Komdigi Sebut Belum Cukup",
+   "skor": 9
+  },
+  {
+   "id": "klp-279-12",
+   "judul": "Hasil Autopsi Napi Lapas Balikpapan: Tewas akibat Kekerasan Tumpul",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
