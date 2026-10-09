@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-09T01:21:02.438844+00:00",
- "edisi": 281,
+ "diperbarui": "2026-10-09T16:28:00.420452+00:00",
+ "edisi": 282,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Penelitian ini menganalisis insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Ini penting untuk memahami bagaimana kebijakan ekonomi dapat mendorong praktik bisnis berkelanjutan di negara ini, relevan bagi pembuat kebijakan dan pengusaha Indonesia.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
+   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
+   "doi": "10.37373/jenius.v8i1.2344",
+   "tanggal": "2027-5-31",
+   "alasan": "Makalah ini mengevaluasi dampak Modernisasi Kekuatan Esensial (MEF) terhadap ketahanan manajemen di holding industri pertahanan Indonesia, Defend ID. Ini krusial untuk pengembangan kapasitas pertahanan negara dan kemandirian teknologi pertahanan dalam negeri.",
+   "kategori": "INDUSTRI NASIONAL",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Studi ini mengulas hambatan pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen, melalui tinjauan kebijakan. Ini sangat relevan bagi Indonesia yang kaya akan potensi panas bumi dan berupaya mencapai target energi terbarukan.",
+   "kategori": "ENERGI & SUMBER DAYA",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Penelitian ini membandingkan efektivitas biaya rejimen pengobatan HIV di Indonesia, khususnya dolutegravir versus efavirenz, dalam pengaturan layanan kesehatan primer. Informasi ini vital bagi Kementerian Kesehatan untuk merumuskan kebijakan pengadaan obat yang paling efisien dan efektif bagi pasien HIV di Indonesia.",
+   "kategori": "KESEHATAN PUBLIK",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Artikel ini menelaah batasan dan celah dalam pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Ini krusial bagi perbaikan kerangka hukum perlindungan anak dan edukasi masyarakat mengenai hak anak di negara ini.",
+   "kategori": "HUKUM & PERLINDUNGAN ANAK",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini membahas penggalangan zakat di Indonesia, mencakup kesinambungan, kerangka hukum, dan transformasi digital. Ini memberikan pemahaman komprehensif tentang peran zakat dalam ekonomi syariah Indonesia dan potensinya untuk kesejahteraan masyarakat.",
+   "kategori": "EKONOMI SYARIAH",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102025",
+   "tanggal": "2026-12",
+   "alasan": "Penelitian ini mengungkap politik tak terlihat, kekerasan ekstraktif harian, dan pembungkaman klaim agraria di Kompleks Bentonit Bogor, Indonesia. Ini krusial untuk memahami konflik sumber daya alam, keadilan sosial, dan hak-hak masyarakat adat di wilayah pertambangan Indonesia.",
+   "kategori": "POLITIK LINGKUNGAN",
+   "sejak_edisi": 282
+  },
+  {
+   "judul": "Secondary data review on humanitarian logistics in Aceh - Indonesia: Problems mapping, cause, and recommendation",
+   "wadah": "Progress in Disaster Science",
+   "doi": "10.1016/j.pdisas.2026.100746",
+   "tanggal": "2026-12",
+   "alasan": "Tinjauan data sekunder ini memetakan masalah, penyebab, dan rekomendasi terkait logistik kemanusiaan di Aceh, Indonesia. Ini relevan untuk meningkatkan efektivitas respons bencana dan bantuan kemanusiaan di wilayah yang rawan bencana alam di Indonesia.",
+   "kategori": "LOGISTIK KEMANUSIAAN",
+   "sejak_edisi": 282
+  },
   {
    "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
    "wadah": "International Journal of Management Practice",
@@ -37,78 +109,6 @@
    "alasan": "Laporan pertama mengenai jamur Lasiodiplodia mahajangana dan Lasiodiplodia theobromae penyebab busuk buah kakao di Sulawesi Selatan. Penting bagi petani kakao dan upaya pengendalian hama penyakit perkebunan di Indonesia untuk menjaga produktivitas dan kualitas hasil panen.",
    "kategori": "PERTANIAN & PANGAN",
    "sejak_edisi": 281
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Mengembangkan kerangka rekomendasi putusan pidana di Indonesia menggunakan AI dan knowledge graph. Penting untuk modernisasi sistem peradilan dan peningkatan objektivitas putusan hukum.",
-   "kategori": "HUKUM & KEADILAN",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "Unveiling a hidden upflow in the Nagasari Area, Dieng geothermal field, Indonesia: Fluid geochemical constraints",
-   "wadah": "Geothermics",
-   "doi": "10.1016/j.geothermics.2026.103834",
-   "tanggal": "2027-1",
-   "alasan": "Menjelaskan temuan aliran naik tersembunyi di Area Nagasari, lapangan panas bumi Dieng, Indonesia. Informasi ini penting untuk pemetaan potensi energi geotermal dan pengembangan energi terbarukan nasional yang berkelanjutan.",
-   "kategori": "SUMBER DAYA GEOTERMAL",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Relevan untuk kebijakan pemerataan akses energi dan peningkatan kesejahteraan masyarakat.",
-   "kategori": "KEMISKINAN ENERGI",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "A district-level screening framework to prioritize decentralized food-waste recovery for landfill methane mitigation in Indonesia",
-   "wadah": "Waste Management",
-   "doi": "10.1016/j.wasman.2026.115888",
-   "tanggal": "2027-1",
-   "alasan": "Mengusulkan kerangka prioritas pengelolaan sampah makanan di tingkat kabupaten Indonesia untuk mitigasi metana TPA. Ini relevan untuk pengurangan emisi gas rumah kaca dan manajemen sampah yang lebih efektif di daerah.",
-   "kategori": "LINGKUNGAN & SAMPAH",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
-   "wadah": "Geosystems and Geoenvironment",
-   "doi": "10.1016/j.geogeo.2026.100570",
-   "tanggal": "2027-2",
-   "alasan": "Penelitian ini mengidentifikasi potensi zona permeabel di sistem panas bumi Solok Selatan, Sumatera Barat. Relevan bagi Indonesia untuk pengembangan energi terbarukan dan pemanfaatan sumber daya alam secara berkelanjutan di wilayah tersebut.",
-   "kategori": "SUMBER DAYA & ENERGI",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
-   "wadah": "Diagnostic Microbiology and Infectious Disease",
-   "doi": "10.1016/j.diagmicrobio.2026.117663",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini berfokus pada deteksi patogen pernapasan pada pasien SARI di rumah sakit Indonesia. Penting untuk memahami pola penyakit, meningkatkan diagnosis, dan merumuskan strategi kesehatan publik yang lebih efektif di seluruh negeri.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "The role of innovation diffusion and organisational support in teachers adoption of a learning management system: a case study of Kejar.id in Indonesia",
-   "wadah": "International Journal of Innovation and Learning",
-   "doi": "10.1504/ijil.2027.10076654",
-   "tanggal": "2027",
-   "alasan": "Makalah ini meneliti adopsi sistem manajemen pembelajaran Kejar.id oleh guru di Indonesia. Ini relevan untuk memahami tantangan dan keberhasilan implementasi teknologi pendidikan, serta mendukung peningkatan kualitas pembelajaran di sekolah-sekolah Indonesia.",
-   "kategori": "PENDIDIKAN & TEKNOLOGI",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengkarakterisasi aspal batuan dari Buton, Indonesia, untuk produksi produk cair melalui pirolisis. Ini relevan untuk eksplorasi dan pengembangan potensi sumber daya alam lokal, serta diversifikasi energi di Indonesia.",
-   "kategori": "SUMBER DAYA & ENERGI",
-   "sejak_edisi": 280
   }
  ]
 }

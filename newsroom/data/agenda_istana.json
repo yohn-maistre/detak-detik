@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-08T16:41:57+00:00",
+ "diambil": "2026-10-09T16:24:33+00:00",
  "acara": [
   {
    "id": "192fc7c10c0f",
@@ -148,6 +148,21 @@
     "hukum",
     "energi-sda"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a696d77b963f",
+   "url": "https://wapresri.go.id/berkunjung-ke-istana-wapres-siswa-smp-islam-athirah-belajar-kepemimpinan-dan-public-speaking/",
+   "judul": "Berkunjung ke Istana Wapres, Siswa SMP Islam Athirah Belajar Kepemimpinan dan Public Speaking",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-06",
+   "tanggal_terbit": "2026-10-06",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
