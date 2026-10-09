@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-09T16:24:33+00:00",
+ "diambil": "2026-10-09T16:55:05+00:00",
  "acara": [
   {
    "id": "192fc7c10c0f",
@@ -22,6 +22,25 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "b861540b1e69",
+   "url": "https://setkab.go.id/presiden-prabowo-luncurkan-11-proyek-hilirisasi-dengan-total-investasi-senilai-rp180-triliun-di-maluku-utara/",
+   "judul": "Presiden Prabowo Luncurkan 11 Proyek Hilirisasi dengan Total Investasi Senilai Rp180 Triliun di Maluku Utara",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-08",
+   "tanggal_terbit": "2026-10-08",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "82",
+   "prov_nama": "Maluku Utara"
   },
   {
    "id": "987c6e293312",
