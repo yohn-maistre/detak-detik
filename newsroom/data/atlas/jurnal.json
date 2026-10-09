@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-08T16:45:04.678263+00:00",
- "edisi": 280,
+ "diperbarui": "2026-10-09T01:21:02.438844+00:00",
+ "edisi": 281,
  "pilihan": [
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Meneliti faktor penentu percepatan pendaftaran tanah di Indonesia. Penting bagi pemangku kebijakan untuk meningkatkan efisiensi tata kelola pertanahan dan kepastian hukum kepemilikan.",
+   "kategori": "KEBIJAKAN PERTANAHAN",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia, khususnya daerah pinggiran. Relevan untuk peningkatan layanan publik dan pemerataan akses digital di seluruh wilayah.",
+   "kategori": "TATA KELOLA DIGITAL",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102147",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji kerentanan sistem tenaga listrik Indonesia terhadap tekanan iklim dan guncangan. Studi ini krusial untuk menjaga ketahanan energi nasional dan merencanakan adaptasi terhadap perubahan iklim demi keberlanjutan pasokan listrik.",
+   "kategori": "ENERGI & IKLIM",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan pertama mengenai jamur Lasiodiplodia mahajangana dan Lasiodiplodia theobromae penyebab busuk buah kakao di Sulawesi Selatan. Penting bagi petani kakao dan upaya pengendalian hama penyakit perkebunan di Indonesia untuk menjaga produktivitas dan kualitas hasil panen.",
+   "kategori": "PERTANIAN & PANGAN",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka rekomendasi putusan pidana di Indonesia menggunakan AI dan knowledge graph. Penting untuk modernisasi sistem peradilan dan peningkatan objektivitas putusan hukum.",
+   "kategori": "HUKUM & KEADILAN",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "Unveiling a hidden upflow in the Nagasari Area, Dieng geothermal field, Indonesia: Fluid geochemical constraints",
+   "wadah": "Geothermics",
+   "doi": "10.1016/j.geothermics.2026.103834",
+   "tanggal": "2027-1",
+   "alasan": "Menjelaskan temuan aliran naik tersembunyi di Area Nagasari, lapangan panas bumi Dieng, Indonesia. Informasi ini penting untuk pemetaan potensi energi geotermal dan pengembangan energi terbarukan nasional yang berkelanjutan.",
+   "kategori": "SUMBER DAYA GEOTERMAL",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102136",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Relevan untuk kebijakan pemerataan akses energi dan peningkatan kesejahteraan masyarakat.",
+   "kategori": "KEMISKINAN ENERGI",
+   "sejak_edisi": 281
+  },
+  {
+   "judul": "A district-level screening framework to prioritize decentralized food-waste recovery for landfill methane mitigation in Indonesia",
+   "wadah": "Waste Management",
+   "doi": "10.1016/j.wasman.2026.115888",
+   "tanggal": "2027-1",
+   "alasan": "Mengusulkan kerangka prioritas pengelolaan sampah makanan di tingkat kabupaten Indonesia untuk mitigasi metana TPA. Ini relevan untuk pengurangan emisi gas rumah kaca dan manajemen sampah yang lebih efektif di daerah.",
+   "kategori": "LINGKUNGAN & SAMPAH",
+   "sejak_edisi": 281
+  },
   {
    "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
    "wadah": "Geosystems and Geoenvironment",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian ini mengkarakterisasi aspal batuan dari Buton, Indonesia, untuk produksi produk cair melalui pirolisis. Ini relevan untuk eksplorasi dan pengembangan potensi sumber daya alam lokal, serta diversifikasi energi di Indonesia.",
    "kategori": "SUMBER DAYA & ENERGI",
    "sejak_edisi": 280
-  },
-  {
-   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
-   "wadah": "Journal of Substance Use and Addiction Treatment",
-   "doi": "10.1016/j.josat.2026.210129",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini meninjau beban ekonomi dan tantangan rehabilitasi bagi penyalahguna narkoba di Sulawesi Selatan. Sangat penting bagi Indonesia untuk merancang kebijakan yang mendukung pemulihan, integrasi sosial, dan mengurangi dampak narkoba pada masyarakat.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Artikel ini menganalisis ekonomi politik transisi energi bersih di Indonesia. Relevan bagi pembuat kebijakan dan masyarakat untuk memahami hambatan serta peluang dalam upaya Indonesia beralih dari energi fosil ke energi yang lebih berkelanjutan.",
-   "kategori": "LINGKUNGAN & KEBIJAKAN",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menelaah kekerasan dalam mendisiplinkan anak serta implikasi pidananya di Indonesia. Sangat penting bagi perlindungan anak, penegakan hukum, dan edukasi masyarakat mengenai batasan yang jelas dalam praktik pengasuhan di Indonesia.",
-   "kategori": "SOSIAL & HUKUM",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102025",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengungkap kekerasan ekstraktif dan penolakan klaim agraria di kompleks bentonit Bogor. Relevan untuk memahami konflik sumber daya, keadilan lingkungan, dan dampak industri ekstraktif terhadap masyarakat adat di Indonesia.",
-   "kategori": "LINGKUNGAN & KEBIJAKAN",
-   "sejak_edisi": 280
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Ini relevan untuk memahami kebijakan ekonomi yang mendorong keberlanjutan dan dampaknya pada lingkungan bisnis nasional.",
-   "kategori": "EKONOMI LINGKUNGAN",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
-   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
-   "doi": "10.37373/jenius.v8i1.2344",
-   "tanggal": "2027-5-31",
-   "alasan": "Mengkaji dampak pasca-MEF Holding Defend ID terhadap ketahanan manajemen industri pertahanan Indonesia. Studi ini penting untuk mengetahui efektivitas pengelolaan dan kekuatan sektor strategis nasional.",
-   "kategori": "INDUSTRI PERTAHANAN",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Meninjau hambatan pengembangan energi geotermal di Indonesia, khususnya dari cekungan sedimen. Riset ini krusial untuk mengidentifikasi solusi dalam memaksimalkan potensi energi terbarukan di tanah air.",
-   "kategori": "ENERGI GEOTERMAL",
-   "sejak_edisi": 278
-  },
-  {
-   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
-   "wadah": "Value in Health Regional Issues",
-   "doi": "10.1016/j.vhri.2026.101676",
-   "tanggal": "2027-3",
-   "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia dengan membandingkan dua regimen obat. Studi ini sangat relevan untuk membuat keputusan kebijakan kesehatan yang tepat guna dan efisien bagi masyarakat.",
-   "kategori": "KESEHATAN PUBLIK",
-   "sejak_edisi": 278
   }
  ]
 }
