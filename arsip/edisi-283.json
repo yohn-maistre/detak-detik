@@ -1,0 +1,121 @@
+{
+ "edisi": 283,
+ "terbit": "2026-10-10T01:04:57.277253+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-283-01",
+   "judul": "Ronaldo Cetak Gol ke-980, Suporter Al Nassr Tetap Setia Dukung CR7 di Tengah Konflik dengan Portugal",
+   "skor": 18
+  },
+  {
+   "id": "klp-283-02",
+   "judul": "Usai Putusan MK, Denny Indrayana Bakal Sowan ke DPR hingga Parpol Dorong Pemakzulan Gibran",
+   "skor": 18
+  },
+  {
+   "id": "klp-283-03",
+   "judul": "Bechi kembali dipenjara – Pembebasan bersyarat terpidana kasus kekerasan seksual di pesantren Jombang dicabut",
+   "skor": 18
+  },
+  {
+   "id": "klp-283-04",
+   "judul": "Kapolri Jenderal Suyudi Resmi Lantik Kapolda Baru, dari Komjen Dadang Hartanto hingga Irjen Pasma Royce",
+   "skor": 16
+  },
+  {
+   "id": "klp-283-05",
+   "judul": "Rakor Tingkat Menteri Bahas Persoalan Lapas, Yusril: Korban Narkotika Bakal Direhabilitasi",
+   "skor": 16
+  },
+  {
+   "id": "klp-283-06",
+   "judul": "Prakiraan Cuaca Sabtu, 10 Oktober 2026: Jakarta Berawan Tebal, Banda Aceh Berpotensi Hujan Sedang",
+   "skor": 15
+  },
+  {
+   "id": "klp-283-07",
+   "judul": "Pemerintah Akan Manfaatkan Pulau Kosong Jadi Lokasi Rehabilitasi Narapidana Narkoba",
+   "skor": 15
+  },
+  {
+   "id": "klp-283-08",
+   "judul": "Polda Sulteng Pimpin Operasi Narkoba Skala Nasional di Kampung Narkoba Tatanga",
+   "skor": 12
+  },
+  {
+   "id": "klp-283-09",
+   "judul": "BULOG Cetak Sejarah Pengadaan 4 Juta Ton, Gelar Tasyakuran Bersama Komisi IV DPR di Ambon",
+   "skor": 12
+  },
+  {
+   "id": "klp-283-10",
+   "judul": "Jasa Marga Jelaskan Jalan Tol Bukan Cuma Infrastruktur, P3MD Diminta Beri Kontribusi Nyata",
+   "skor": 12
+  },
+  {
+   "id": "klp-283-11",
+   "judul": "Ahai! Duet Bahlil-Ara Siapkan Perumahan Hijau Berbasis PLTS: Ada Lahan Hibah 30 Hektare di Meikarta",
+   "skor": 12
+  },
+  {
+   "id": "klp-283-12",
+   "judul": "Resmi Dilantik, 13 Pengurus DPD Peradi Profesional Se-Sulsel Siap Kawal Penegakan Hukum yang Berkeadilan",
+   "skor": 12
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
