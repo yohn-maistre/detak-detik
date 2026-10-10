@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-09T16:28:00.420452+00:00",
- "edisi": 282,
+ "diperbarui": "2026-10-10T15:31:58.680802+00:00",
+ "edisi": 284,
  "pilihan": [
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Riset ini menginvestigasi zona-zona potensial yang permeabel dalam sistem panas bumi vulkanik di Kabupaten Solok Selatan, Sumatera Barat. Pemahaman ini sangat penting untuk pengembangan energi terbarukan di Indonesia, mendukung ketahanan energi nasional, dan pemanfaatan sumber daya alam secara berkelanjutan.",
+   "kategori": "ENERGI GEOTERMAL",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini meneliti deteksi patogen pernapasan pada pasien SARI yang dirawat di rumah sakit di Indonesia menggunakan sekuensing metagenomik. Temuan ini relevan untuk peningkatan kapasitas diagnosis dini dan strategi penanganan penyakit infeksi pernapasan yang efektif bagi kesehatan masyarakat Indonesia.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini menganalisis proses pirolisis langsung aspal batuan dari Buton, Indonesia, serta karakterisasi produk cairnya dan peran kalsit. Studi ini sangat penting untuk potensi pemanfaatan optimal sumber daya alam lokal sebagai alternatif energi atau bahan baku industri, mendukung kemandirian energi dan ekonomi.",
+   "kategori": "SUMBER DAYA ALAM",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini mengembangkan kerangka kerja berbasis penalaran kasus dengan augmented expert dan grafik pengetahuan untuk rekomendasi putusan pidana di Indonesia. Pendekatan ini relevan untuk modernisasi sistem peradilan, meningkatkan efisiensi proses hukum, dan potensi mendukung konsistensi putusan di Indonesia.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
+   "wadah": "Journal of Substance Use and Addiction Treatment",
+   "doi": "10.1016/j.josat.2026.210129",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengkaji beban ekonomi rumah tangga, keterjangkauan rehabilitasi, dan reintegrasi pemulihan bagi individu yang terdampak penggunaan narkoba di Sulawesi Selatan. Data ini penting untuk merumuskan kebijakan sosial dan kesehatan yang lebih efektif dan manusiawi dalam mengatasi masalah narkoba di Indonesia.",
+   "kategori": "SOSIAL & KESEHATAN",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102136",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini menganalisis kemiskinan energi multidimensional di Indonesia, dengan fokus pada perbedaan perspektif perkotaan dan pedesaan. Temuan ini sangat relevan untuk perumusan kebijakan energi yang inklusif, memastikan akses energi yang adil dan berkelanjutan bagi seluruh lapisan masyarakat di Indonesia.",
+   "kategori": "KEMISKINAN ENERGI",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "A district-level screening framework to prioritize decentralized food-waste recovery for landfill methane mitigation in Indonesia",
+   "wadah": "Waste Management",
+   "doi": "10.1016/j.wasman.2026.115888",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini menyusun kerangka kerja skrining tingkat distrik untuk memprioritaskan pemulihan sampah makanan terdesentralisasi di Indonesia. Upaya ini penting untuk mitigasi emisi metana dari TPA, mendukung pengelolaan limbah yang lebih baik, dan mempromosikan pembangunan berkelanjutan secara nasional.",
+   "kategori": "LINGKUNGAN & LIMBAH",
+   "sejak_edisi": 284
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini menganalisis ekonomi politik transisi energi bersih di Indonesia, dengan menyoroti dinamika dan tantangan yang ada. Riset ini relevan untuk memahami arah kebijakan energi nasional, implikasinya terhadap pembangunan berkelanjutan, serta upaya mencapai target iklim Indonesia.",
+   "kategori": "KEBIJAKAN ENERGI",
+   "sejak_edisi": 284
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian ini membandingkan efektivitas biaya rejimen pengobatan HIV di Indonesia, khususnya dolutegravir versus efavirenz, dalam pengaturan layanan kesehatan primer. Informasi ini vital bagi Kementerian Kesehatan untuk merumuskan kebijakan pengadaan obat yang paling efisien dan efektif bagi pasien HIV di Indonesia.",
    "kategori": "KESEHATAN PUBLIK",
    "sejak_edisi": 282
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Artikel ini menelaah batasan dan celah dalam pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Ini krusial bagi perbaikan kerangka hukum perlindungan anak dan edukasi masyarakat mengenai hak anak di negara ini.",
-   "kategori": "HUKUM & PERLINDUNGAN ANAK",
-   "sejak_edisi": 282
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Penelitian ini membahas penggalangan zakat di Indonesia, mencakup kesinambungan, kerangka hukum, dan transformasi digital. Ini memberikan pemahaman komprehensif tentang peran zakat dalam ekonomi syariah Indonesia dan potensinya untuk kesejahteraan masyarakat.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 282
-  },
-  {
-   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102025",
-   "tanggal": "2026-12",
-   "alasan": "Penelitian ini mengungkap politik tak terlihat, kekerasan ekstraktif harian, dan pembungkaman klaim agraria di Kompleks Bentonit Bogor, Indonesia. Ini krusial untuk memahami konflik sumber daya alam, keadilan sosial, dan hak-hak masyarakat adat di wilayah pertambangan Indonesia.",
-   "kategori": "POLITIK LINGKUNGAN",
-   "sejak_edisi": 282
-  },
-  {
-   "judul": "Secondary data review on humanitarian logistics in Aceh - Indonesia: Problems mapping, cause, and recommendation",
-   "wadah": "Progress in Disaster Science",
-   "doi": "10.1016/j.pdisas.2026.100746",
-   "tanggal": "2026-12",
-   "alasan": "Tinjauan data sekunder ini memetakan masalah, penyebab, dan rekomendasi terkait logistik kemanusiaan di Aceh, Indonesia. Ini relevan untuk meningkatkan efektivitas respons bencana dan bantuan kemanusiaan di wilayah yang rawan bencana alam di Indonesia.",
-   "kategori": "LOGISTIK KEMANUSIAAN",
-   "sejak_edisi": 282
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Meneliti faktor penentu percepatan pendaftaran tanah di Indonesia. Penting bagi pemangku kebijakan untuk meningkatkan efisiensi tata kelola pertanahan dan kepastian hukum kepemilikan.",
-   "kategori": "KEBIJAKAN PERTANAHAN",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia, khususnya daerah pinggiran. Relevan untuk peningkatan layanan publik dan pemerataan akses digital di seluruh wilayah.",
-   "kategori": "TATA KELOLA DIGITAL",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji kerentanan sistem tenaga listrik Indonesia terhadap tekanan iklim dan guncangan. Studi ini krusial untuk menjaga ketahanan energi nasional dan merencanakan adaptasi terhadap perubahan iklim demi keberlanjutan pasokan listrik.",
-   "kategori": "ENERGI & IKLIM",
-   "sejak_edisi": 281
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Laporan pertama mengenai jamur Lasiodiplodia mahajangana dan Lasiodiplodia theobromae penyebab busuk buah kakao di Sulawesi Selatan. Penting bagi petani kakao dan upaya pengendalian hama penyakit perkebunan di Indonesia untuk menjaga produktivitas dan kualitas hasil panen.",
-   "kategori": "PERTANIAN & PANGAN",
-   "sejak_edisi": 281
   }
  ]
 }

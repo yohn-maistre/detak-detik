@@ -1,0 +1,121 @@
+{
+ "edisi": 284,
+ "terbit": "2026-10-10T15:29:12.310670+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-284-03",
+   "judul": "Akses Padang–Solok pulih usai banjir bandang, penanganan berlanjut hingga kawasan hulu",
+   "skor": 21
+  },
+  {
+   "id": "klp-284-20",
+   "judul": "Berikan Jaminan Kesehatan Masyarakat, Pemprov Jabar Jalin Kerja Sama dengan 76 Rumah Sakit",
+   "skor": 9
+  },
+  {
+   "id": "klp-284-07",
+   "judul": "Bechi kembali dipenjara – Pembebasan bersyarat terpidana kasus kekerasan seksual di pesantren Jombang dicabut",
+   "skor": 16
+  },
+  {
+   "id": "klp-284-14",
+   "judul": "Wajib Halal Tetap Berlaku 18 Oktober, BPJPH Siapkan Aturan Khusus dan Pastikan Tak Ada Sweeping",
+   "skor": 12
+  },
+  {
+   "id": "klp-284-19",
+   "judul": "Kejagung Limpahkan 5 Tersangka Kasus Korupsi Pengadaan Motor Listrik MBG, Kerugian Negara Rp863,8 Miliar",
+   "skor": 10
+  },
+  {
+   "id": "klp-284-09",
+   "judul": "Gempa bumi di Panama memicu kekhawatiran akan tsunami Pasifik",
+   "skor": 15
+  },
+  {
+   "id": "klp-284-17",
+   "judul": "Dua Pelajar Tewas Tabrak Trotoar di Alam Sutera Saat Hindari Rombongan Bersenjata Tajam",
+   "skor": 12
+  },
+  {
+   "id": "klp-284-02",
+   "judul": "Menkum di Depan Forum Jurnalis ASEAN: Teknologi Berkembang, Nilai Karya Jurnalistik Harus Terlindungi",
+   "skor": 22
+  },
+  {
+   "id": "klp-284-06",
+   "judul": "Kemensos Perkuat Pengasuhan dan Perlindungan Siswa Sekolah Rakyat Usai Insiden di Pati",
+   "skor": 18
+  },
+  {
+   "id": "klp-284-11",
+   "judul": "Kabar Baik, Pramono Anung Buka Peluang Anak Disabilitas Ikut Program LPDP Jakarta",
+   "skor": 15
+  },
+  {
+   "id": "klp-284-16",
+   "judul": "Erupsi Anak Krakatau Sempat Ganggu Penerbangan, Menhub Sebut Jadi Ujian Kesiapsiagaan Transportasi",
+   "skor": 12
+  },
+  {
+   "id": "klp-284-12",
+   "judul": "Konser Avenged Sevenfold di JIS Hari Ini, Simak Rekayasa Lalu Lintasnya",
+   "skor": 15
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
