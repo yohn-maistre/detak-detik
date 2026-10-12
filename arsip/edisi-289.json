@@ -1,0 +1,121 @@
+{
+ "edisi": 289,
+ "terbit": "2026-10-12T19:10:58.575741+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-289-01",
+   "judul": "Kabut asap karhutla kepung Kota Jayapura dan Kabupaten Jayapura",
+   "skor": 30
+  },
+  {
+   "id": "klp-289-08",
+   "judul": "Cegah Warga Terisolasi, Pemulihan Akses di 8 Titik Tapan–Jambi Akibat Longsor Dipercepat",
+   "skor": 12
+  },
+  {
+   "id": "klp-289-09",
+   "judul": "'Anak-anak diikat, bahkan ada yang ditenggelamkan kepalanya' – Ketua yayasan daycare Little Aresha di Yogyakarta dituntut 10 tahun penjara",
+   "skor": 12
+  },
+  {
+   "id": "klp-289-17",
+   "judul": "Serangan udara tewaskan 72 penambang emas di perbatasan Sudan-Mesir, siapa yang bertanggung jawab?",
+   "skor": 9
+  },
+  {
+   "id": "klp-289-02",
+   "judul": "Trump buka peluang turut menyerang Houthi setelah 12 orang tewas dalam serangan di bandara Arab Saudi",
+   "skor": 26
+  },
+  {
+   "id": "klp-289-04",
+   "judul": "Presiden PKS Minta Fraksi DPR Kaji dan Komunikasi dengan Pimpinan Dewan soal Hak Angket Ijazah Gibran",
+   "skor": 22
+  },
+  {
+   "id": "klp-289-12",
+   "judul": "KPK Geledah Tiga Lokasi Terkait Kasus Bupati Pemalang, Sita Dokumen hingga Barbuk Elektronik",
+   "skor": 10
+  },
+  {
+   "id": "klp-289-21",
+   "judul": "Nasib Ganjil Genap Jakarta Ditentukan Setelah MRT Rampung hingga Kota Tua",
+   "skor": 9
+  },
+  {
+   "id": "klp-289-07",
+   "judul": "Polisi Tangkap 2 Pembunuh Sopir Taksi Online yang Dikubur di Kebun Teh, 1 Pelaku Pelajar",
+   "skor": 12
+  },
+  {
+   "id": "klp-289-11",
+   "judul": "Bantah Hasyim Eks Ketua KPU, Doli Kurnia Klaim Kantongi Bukti Pasal amp;quot;Ijazah Gibranamp;quot; Diselundupkan",
+   "skor": 10
+  },
+  {
+   "id": "klp-289-18",
+   "judul": "Kapolri Gencarkan Pemberantasan Narkoba, Akademisi Dorong Penindakan hingga Bandar",
+   "skor": 9
+  },
+  {
+   "id": "klp-289-19",
+   "judul": "Polri-BNN Tangkap 4 Orang di Kampung Boncos: 15 Bong hingga Sajam Disita",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

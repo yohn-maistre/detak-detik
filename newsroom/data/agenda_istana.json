@@ -4,8 +4,116 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-09T16:55:05+00:00",
+ "diambil": "2026-10-12T19:11:20+00:00",
  "acara": [
+  {
+   "id": "14a371b403fb",
+   "url": "https://setkab.go.id/indonesia-mesir-tegaskan-dukungan-bagi-palestina-dan-dorong-deeskalasi-di-timur-tengah/",
+   "judul": "Indonesia–Mesir Tegaskan Dukungan bagi Palestina dan Dorong Deeskalasi di Timur Tengah",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-11",
+   "tanggal_terbit": "2026-10-11",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0f520cfea3a6",
+   "url": "https://setkab.go.id/presiden-prabowo-perkuat-kerja-sama-indonesia-mesir-di-bidang-ekonomi-kelautan-hingga-pertahanan/",
+   "judul": "Presiden Prabowo Perkuat Kerja Sama Indonesia–Mesir di Bidang Ekonomi, Kelautan, hingga Pertahanan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-11",
+   "tanggal_terbit": "2026-10-11",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "5ba1accb0649",
+   "url": "https://setkab.go.id/pertemuan-presiden-prabowo-dan-presiden-el-sisi-hasilkan-empat-kesepakatan-kerja-sama/",
+   "judul": "Pertemuan Presiden Prabowo dan Presiden El-Sisi Hasilkan Empat Kesepakatan Kerja Sama",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-11",
+   "tanggal_terbit": "2026-10-11",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "cd3747cd7609",
+   "url": "https://setkab.go.id/presiden-prabowo-sambut-presiden-mesir-el-sisi-dengan-upacara-kenegaraan-di-istana-merdeka/",
+   "judul": "Presiden Prabowo Sambut Presiden Mesir El-Sisi dengan Upacara Kenegaraan di Istana Merdeka",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-11",
+   "tanggal_terbit": "2026-10-11",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "35ea89a797ed",
+   "url": "https://setkab.go.id/seskab-teddy-setelah-kesuksesan-fifa-asean-cup-minggu-lalu-motogp-indonesia-2026-siap-mendunia/",
+   "judul": "Seskab Teddy: Setelah Kesuksesan FIFA ASEAN Cup Minggu Lalu, MotoGP Indonesia 2026 Siap Mendunia!!",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-10",
+   "tanggal_terbit": "2026-10-10",
+   "audiens": null,
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "76d6724f5d86",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-instruksikan-percepatan-pembangunan-100-kampung-nelayan-target-beroperasi-akhir-2026/",
+   "judul": "Seskab Teddy: Presiden Prabowo Instruksikan Percepatan Pembangunan 100 Kampung Nelayan, Target Beroperasi Akhir 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-09",
+   "tanggal_terbit": "2026-10-09",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
   {
    "id": "192fc7c10c0f",
    "url": "https://wapresri.go.id/buka-kongres-nasional-ke-v-api-wapres-tekankan-penguatan-toleransi-untuk-jaga-persatuan-bangsa/",

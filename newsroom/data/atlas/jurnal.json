@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-11T15:54:29.001181+00:00",
- "edisi": 286,
+ "diperbarui": "2026-10-12T19:13:31.993525+00:00",
+ "edisi": 289,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Membahas hambatan pengembangan panas bumi di Indonesia, relevan untuk pemanfaatan sumber energi terbarukan lokal dan implikasi kebijakan energinya demi kemandirian energi.",
+   "kategori": "ENERGI NASIONAL",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia, penting untuk perencanaan kebijakan kesehatan, alokasi sumber daya yang efisien, dan kesejahteraan masyarakat.",
+   "kategori": "KESEHATAN PUBLIK",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
+   "wadah": "Journal of Substance Use and Addiction Treatment",
+   "doi": "10.1016/j.josat.2026.210129",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji beban ekonomi rumah tangga dan rehabilitasi bagi individu terdampak narkoba di Sulawesi Selatan, penting untuk kebijakan sosial, kesehatan masyarakat, dan reintegrasi sosial.",
+   "kategori": "SOSIAL & REHABILITASI",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Mengembangkan model kontrol untuk area hutan di DAS Anai, Sumatera Barat, penting untuk pengelolaan lingkungan yang berkelanjutan, mitigasi bencana, dan konservasi ekosistem.",
+   "kategori": "LINGKUNGAN & BENCANA",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "A district-level screening framework to prioritize decentralized food-waste recovery for landfill methane mitigation in Indonesia",
+   "wadah": "Waste Management",
+   "doi": "10.1016/j.wasman.2026.115888",
+   "tanggal": "2027-1",
+   "alasan": "Mengusulkan kerangka kerja untuk penanganan sampah makanan terdesentralisasi di Indonesia, relevan untuk mitigasi emisi metana dari TPA dan pengelolaan limbah berkelanjutan di tingkat daerah.",
+   "kategori": "PENGELOLAAN LIMBAH",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis ekonomi politik transisi energi bersih di Indonesia, penting untuk memahami tantangan dan peluang dalam peralihan ke sumber energi terbarukan serta implikasi sosial-ekonominya.",
+   "kategori": "EKONOMI & ENERGI",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "&lt;b&gt;Reconfiguring islamic criminal law in contemporary Indonesia: &lt;/b&gt;&lt;b&gt;a socio-legal analysis through the maqāṣid al-sharīʿah framework&lt;/b&gt;&lt;b&gt;&lt;/b&gt;",
+   "wadah": "Otoritas : Jurnal Ilmu Pemerintahan",
+   "doi": "10.26618/ojip.v16i2.21613",
+   "tanggal": "2026-12-30",
+   "alasan": "Menganalisis rekonfigurasi hukum pidana Islam di Indonesia kontemporer, penting untuk pemahaman sistem hukum, dinamika sosial keagamaan, dan pluralisme hukum di negara ini.",
+   "kategori": "HUKUM & AGAMA",
+   "sejak_edisi": 289
+  },
+  {
+   "judul": "Leveraging Entrepreneurial Orientation for QBL-Based Sustainable Women Entrepreneurship in South Sulawesi, Indonesia:",
+   "wadah": "Vifada Management and Social Sciences",
+   "doi": "10.70184/7abyts10",
+   "tanggal": "2026-12-28",
+   "alasan": "Mengkaji orientasi kewirausahaan untuk kewirausahaan perempuan berkelanjutan di Sulawesi Selatan, relevan untuk pengembangan ekonomi lokal, inovasi, dan pemberdayaan perempuan di daerah.",
+   "kategori": "PEMBERDAYAAN PEREMPUAN",
+   "sejak_edisi": 289
+  },
   {
    "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
    "wadah": "International Journal of Management Practice",
@@ -37,78 +109,6 @@
    "alasan": "Laporan ini mengidentifikasi penyakit busuk buah kakao yang disebabkan oleh jamur tertentu di Sulawesi Selatan, Indonesia. Ini krusial bagi petani dan peneliti pertanian untuk mengembangkan strategi pengendalian, melindungi komoditas kakao yang penting bagi ekonomi daerah.",
    "kategori": "PERTANIAN SULAWESI",
    "sejak_edisi": 286
-  },
-  {
-   "judul": "Radiological site evaluation of the proposed Gosong Beach nuclear power plant site in Indonesia",
-   "wadah": "Annals of Nuclear Energy",
-   "doi": "10.1016/j.anucene.2026.112702",
-   "tanggal": "2027-1",
-   "alasan": "Evaluasi situs radiologi ini dilakukan untuk lokasi PLTN Gosong Beach yang diusulkan di Indonesia. Informasi ini fundamental bagi pengambil keputusan dan masyarakat dalam menilai kelayakan dan keamanan proyek energi nuklir, menjamin keselamatan lingkungan dan warga.",
-   "kategori": "ENERGI NUKLIR",
-   "sejak_edisi": 286
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menelaah batasan dan celah pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Ini sangat relevan untuk advokasi perlindungan anak, perbaikan hukum, dan edukasi masyarakat mengenai hak-hak anak.",
-   "kategori": "PERLINDUNGAN ANAK",
-   "sejak_edisi": 286
-  },
-  {
-   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
-   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
-   "doi": "10.15408/aiq.v17i2.50032",
-   "tanggal": "2026-12-31",
-   "alasan": "Penelitian ini membahas penggalangan zakat di Indonesia, meliputi kerangka hukum dan transformasi digitalnya. Ini relevan bagi pengembangan ekonomi syariah dan sistem kesejahteraan sosial Islam, memperkuat peran zakat bagi masyarakat.",
-   "kategori": "EKONOMI SYARIAH",
-   "sejak_edisi": 286
-  },
-  {
-   "judul": "The Politics of Invisibility: Everyday Extractive Violence and the Silencing of Agrarian Claims in the Bogor Bentonite Complex, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102025",
-   "tanggal": "2026-12",
-   "alasan": "Makalah ini mengkaji politik ketidakjelasan dan kekerasan ekstraktif di kompleks bentonit Bogor, Indonesia. Ini krusial untuk memahami konflik agraria, dampak industri terhadap masyarakat lokal, dan advokasi hak-hak petani di Indonesia.",
-   "kategori": "KONFLIK AGRARIA",
-   "sejak_edisi": 286
-  },
-  {
-   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
-   "wadah": "Geosystems and Geoenvironment",
-   "doi": "10.1016/j.geogeo.2026.100570",
-   "tanggal": "2027-2",
-   "alasan": "Riset ini menginvestigasi zona-zona potensial yang permeabel dalam sistem panas bumi vulkanik di Kabupaten Solok Selatan, Sumatera Barat. Pemahaman ini sangat penting untuk pengembangan energi terbarukan di Indonesia, mendukung ketahanan energi nasional, dan pemanfaatan sumber daya alam secara berkelanjutan.",
-   "kategori": "ENERGI GEOTERMAL",
-   "sejak_edisi": 284
-  },
-  {
-   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
-   "wadah": "Diagnostic Microbiology and Infectious Disease",
-   "doi": "10.1016/j.diagmicrobio.2026.117663",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini meneliti deteksi patogen pernapasan pada pasien SARI yang dirawat di rumah sakit di Indonesia menggunakan sekuensing metagenomik. Temuan ini relevan untuk peningkatan kapasitas diagnosis dini dan strategi penanganan penyakit infeksi pernapasan yang efektif bagi kesehatan masyarakat Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 284
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini menganalisis proses pirolisis langsung aspal batuan dari Buton, Indonesia, serta karakterisasi produk cairnya dan peran kalsit. Studi ini sangat penting untuk potensi pemanfaatan optimal sumber daya alam lokal sebagai alternatif energi atau bahan baku industri, mendukung kemandirian energi dan ekonomi.",
-   "kategori": "SUMBER DAYA ALAM",
-   "sejak_edisi": 284
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengembangkan kerangka kerja berbasis penalaran kasus dengan augmented expert dan grafik pengetahuan untuk rekomendasi putusan pidana di Indonesia. Pendekatan ini relevan untuk modernisasi sistem peradilan, meningkatkan efisiensi proses hukum, dan potensi mendukung konsistensi putusan di Indonesia.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 284
   }
  ]
 }
