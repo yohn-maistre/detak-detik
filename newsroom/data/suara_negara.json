@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-11T16:14:13+00:00",
+ "diambil": "2026-10-12T00:53:51+00:00",
  "baris": [
   {
    "id": "bc96e1a5eab0",
@@ -180,16 +180,6 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
-  },
-  {
-   "id": "f6bfcd14ce39",
-   "url": "https://www.kemhan.go.id/2026/10/10/wamenhan-terima-audiensi-ketua-departemen-hi-fisip-ui-dan-sasakawa-peace-foundation-bahas-persiapan-the-sudirman-dialogue-2027.html",
-   "judul": "Wamenhan Terima Audiensi Ketua Departemen HI FISIP UI dan Sasakawa Peace Foundation, Bahas Persiapan The Sudirman Dialogue 2027",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan RI Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Ketua Departemen Hubungan Internasional FISIP...",
-   "tanggal": "2026-10-10",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "22da5671fed3",
@@ -612,6 +602,16 @@
    "cabang": "legislatif"
   },
   {
+   "id": "f6bfcd14ce39",
+   "url": "https://www.kemhan.go.id/2026/10/10/wamenhan-terima-audiensi-ketua-departemen-hi-fisip-ui-dan-sasakawa-peace-foundation-bahas-persiapan-the-sudirman-dialogue-2027.html",
+   "judul": "Wamenhan Terima Audiensi Ketua Departemen HI FISIP UI dan Sasakawa Peace Foundation, Bahas Persiapan The Sudirman Dialogue 2027",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan RI Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Ketua Departemen Hubungan Internasional FISIP...",
+   "tanggal": "2026-10-10",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "a0878c5ea22c",
    "url": "https://pks.id/content/mpp-pks-dorong-penguatan-platform-pembangunan-banten-yang-komprehensif-dan-berkelanjutan",
    "judul": "MPP PKS Dorong Penguatan Platform Pembangunan Banten yang Komprehensif dan Berkelanjutan",
@@ -632,6 +632,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "7c623985354e",
+   "url": "https://emedia.dpr.go.id/news/2026/10/09/puan-bicara-tatanan-global-yang-manusiawi-dan-demokrasi-berdayakan-rakyat",
+   "judul": "Puan: Bicara Tatanan Global yang Manusiawi dan Demokrasi Berdayakan Rakyat",
+   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani menghadiri Sidang Umum Inter-Parliamentary Union (IPU) ke-153 di Arusha, Tanzania. Saat berbicara di forum parlemen dunia itu, Puan menyinggung demokrasi yang seharusnya dapat memberdayakan rakyat.",
+   "tanggal": "2026-10-09",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
   },
   {
    "id": "65a4a4091de2",
@@ -672,16 +682,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "7c623985354e",
-   "url": "https://emedia.dpr.go.id/news/2026/10/09/puan-bicara-tatanan-global-yang-manusiawi-dan-demokrasi-berdayakan-rakyat",
-   "judul": "Puan: Bicara Tatanan Global yang Manusiawi dan Demokrasi Berdayakan Rakyat",
-   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani menghadiri Sidang Umum Inter-Parliamentary Union (IPU) ke-153 di Arusha, Tanzania. Saat berbicara di forum parlemen dunia itu, Puan menyinggung demokrasi yang seharusnya dapat memberdayakan rakyat.",
-   "tanggal": "2026-10-09",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
   },
   {
    "id": "a68609588b9b",
