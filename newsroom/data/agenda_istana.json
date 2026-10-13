@@ -4,8 +4,57 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-12T19:11:20+00:00",
+ "diambil": "2026-10-13T17:03:00+00:00",
  "acara": [
+  {
+   "id": "07489d672ecc",
+   "url": "https://wapresri.go.id/hadiri-wisuda-institut-pariwisata-trisakti-wapres-dorong-pemanfaatan-teknologi-untuk-tingkatkan-nilai-tambah-pariwisata-indonesia/",
+   "judul": "Hadiri Wisuda Institut Pariwisata Trisakti, Wapres Dorong Pemanfaatan Teknologi untuk Tingkatkan Nilai Tambah Pariwisata Indonesia",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-13",
+   "tanggal_terbit": "2026-10-13",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "42cd78e5042b",
+   "url": "https://setkab.go.id/seskab-teddy-ungkap-arahan-presiden-prabowo-untuk-percepat-revitalisasi-museum-dan-aset-budaya-di-seluruh-indonesia/",
+   "judul": "Seskab Teddy Ungkap Arahan Presiden Prabowo untuk Percepat Revitalisasi Museum dan Aset Budaya di Seluruh Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-12",
+   "tanggal_terbit": "2026-10-12",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "485ab4b03247",
+   "url": "https://setkab.go.id/penanganan-karhutla-di-enam-provinsi-berlanjut-presiden-prabowo-instruksikan-optimalisasi-upaya-pemadaman/",
+   "judul": "Penanganan Karhutla di Enam Provinsi Berlanjut, Presiden Prabowo Instruksikan Optimalisasi Upaya Pemadaman",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-12",
+   "tanggal_terbit": "2026-10-12",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "14a371b403fb",
    "url": "https://setkab.go.id/indonesia-mesir-tegaskan-dukungan-bagi-palestina-dan-dorong-deeskalasi-di-timur-tengah/",
