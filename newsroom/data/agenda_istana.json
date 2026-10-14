@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-14T14:35:48+00:00",
+ "diambil": "2026-10-14T14:58:20+00:00",
  "acara": [
   {
    "id": "b6be2b73936e",
@@ -12,8 +12,8 @@
    "judul": "Bekali Siswa Gorontalo untuk Berkarier Global, Ibu Selvi Ingatkan Pentingnya Migrasi Aman",
    "aktor": "ISTANA",
    "jenis": "LAINNYA",
-   "tanggal_acara": "2026-10-14",
-   "tanggal_terbit": "2026-10-14",
+   "tanggal_acara": "2026-10-13",
+   "tanggal_terbit": "2026-10-13",
    "audiens": null,
    "topik": [],
    "venue": null,
@@ -61,6 +61,23 @@
    "tanggal_terbit": "2026-10-13",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e111e92700f0",
+   "url": "https://wapresri.go.id/kreasi-menu-bergizi-berbasis-pangan-lokal-jadi-perhatian-ibu-selvi/",
+   "judul": "Kreasi Menu Bergizi Berbasis Pangan Lokal Jadi Perhatian Ibu Selvi",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-13",
+   "tanggal_terbit": "2026-10-13",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
