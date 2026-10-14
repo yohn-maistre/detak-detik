@@ -9,8 +9,19 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-13T17:29:25+00:00",
+ "diambil": "2026-10-14T00:48:02+00:00",
  "baris": [
+  {
+   "id": "4a7323a3145c",
+   "url": "https://pks.id/content/rahmatan-lil-alamin-visi-dan-misi-pks-lintas-waktu",
+   "judul": "Rahmatan Lil 'Alamin: Visi dan Misi PKS Lintas Waktu",
+   "ringkas": null,
+   "tanggal": "2026-10-14",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
   {
    "id": "61c3aa38f773",
    "url": "https://emedia.dpr.go.id/news/2026/10/13/yahya-zaini-minta-pemerintah-perkuat-layanan-kesehatan-bagi-korban-karhutla",
@@ -536,6 +547,16 @@
    "url": "https://www.kemhan.go.id/2026/10/13/menhan-ri-hadiri-rapat-terbatas-bahas-penanganan-karhutla.html",
    "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Penanganan Karhutla",
    "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) menghadiri Rapat Terbatas bersama Presiden Republik Indonesia Prabowo Subianto yang membahas penanganan...",
+   "tanggal": "2026-10-13",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "99f22b1fbe6a",
+   "url": "https://www.kemhan.go.id/2026/10/14/menhan-ri-terima-kunjungan-duta-besar-ri-untuk-persatuan-emirat-arab-pea-bahas-penguatan-kerja-sama-pertahanan.html",
+   "judul": "Menhan RI Terima Kunjungan Duta Besar RI untuk Persatuan Emirat Arab (PEA), Bahas Penguatan Kerja Sama Pertahanan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Republik Indonesia untuk Persatuan Emirat Arab...",
    "tanggal": "2026-10-13",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
@@ -2301,17 +2322,6 @@
    "partai": "pks"
   },
   {
-   "id": "3de5e50194a5",
-   "url": "https://pks.id/content/pemimpin-yang-disiapkan-bukan-sekadar-dicalonkan",
-   "judul": "Pemimpin yang Disiapkan, Bukan Sekadar Dicalonkan",
-   "ringkas": null,
-   "tanggal": "2026-09-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "b9f0433b1dce",
    "url": "https://tniad.mil.id/bekali-calon-dansat-kasad-sishankamrata-di-perbatasan-harus-diperkuat/",
    "judul": "Bekali Calon Dansat, Kasad: Sishankamrata di Perbatasan Harus Diperkuat!",
@@ -2726,16 +2736,6 @@
    "url": "https://www.kemhan.go.id/2026/09/18/menhan-sjafrie-sambut-dan-tinjau-kelayakan-kapal-its-giuseppe-garibaldi.html",
    "judul": "Menhan Sjafrie Sambut dan Tinjau Kelayakan Kapal ITS Giuseppe Garibaldi",
    "ringkas": "Jakarta – Menteri Pertahanan RI Sjafrie Sjamsoeddin menghadiri penyambutan Kapal ITS Giuseppe Garibaldi di Pelabuhan Tanjung Priok, Jakarta, Jumat (18/9/2026)....",
-   "tanggal": "2026-09-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "1de6e75369bc",
-   "url": "https://www.kemhan.go.id/2026/09/18/plt-kapuskeshan-kemhan-tutup-rehabilitasi-medik-paripurna-rtc-angkatan-vii-tingkatkan-kapasitas-dan-profesionalisme-sdm.html",
-   "judul": "Plt. Kapuskeshan Kemhan Tutup Rehabilitasi Medik Paripurna RTC Angkatan VII, Tingkatkan Kapasitas dan Profesionalisme SDM",
-   "ringkas": "Jakarta – Plt. Kepala Pusat Kesehatan Pertahanan Kementerian Pertahanan (Kapuskeshan Kemhan) Brigjen TNI Sunaryo Kusumo memimpin upacara penutupan Rehabilitasi Medik...",
    "tanggal": "2026-09-18",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
