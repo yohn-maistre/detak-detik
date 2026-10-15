@@ -1,0 +1,121 @@
+{
+ "edisi": 295,
+ "terbit": "2026-10-15T23:45:19.814568+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-295-01",
+   "judul": "KPK tetapkan adik Kepala BNPB dan empat lainnya jadi tersangka terkait OTT kasus dugaan korupsi dana kebencanaan BNPB",
+   "skor": 35
+  },
+  {
+   "id": "klp-295-02",
+   "judul": "Hamenang Wajar Ismoyo Diperiksa oleh KPK di Mapolresta Klaten, Kapolresta Jamin Tak Ada 'Gangguan'",
+   "skor": 25
+  },
+  {
+   "id": "klp-295-03",
+   "judul": "KSAD Tandyo Ungkap Arahan Prabowo Percepat Program Pemerintah hingga soal Papua",
+   "skor": 22
+  },
+  {
+   "id": "klp-295-04",
+   "judul": "Luar Biasa! Pertamina Kerahkan 108 Mobil Tangki, Terminal BBM di Bali Beroperasi 24 Jam untuk Urai Antrean SPBU",
+   "skor": 18
+  },
+  {
+   "id": "klp-295-05",
+   "judul": "Ramalan Zodiak Cancer Jumat, 16 Oktober 2026: Karier Menjanjikan, Waspadai Pengeluaran Rumah Tangga",
+   "skor": 18
+  },
+  {
+   "id": "klp-295-06",
+   "judul": "Hasil Liga Europa: Lech Poznan vs Bayer Leverkusen, Dua Gol Penalti Patrik Schick Pastikan Kemenangan Die Werkself",
+   "skor": 15
+  },
+  {
+   "id": "klp-295-07",
+   "judul": "Bertambah Satu Korban Jiwa, Relawan Meninggal Akibat Karhutla Bromo Jadi 4 Orang",
+   "skor": 15
+  },
+  {
+   "id": "klp-295-08",
+   "judul": "Gempa Beruntun Guncang Sukabumi dan Bogor, BMKG Catat Magnitudo hingga 4,1",
+   "skor": 12
+  },
+  {
+   "id": "klp-295-09",
+   "judul": "Terima Audiensi Komunitas Aku Menari, Wapres Dukung Ruang Ekspresi bagi Anak-Anak Disabilitas",
+   "skor": 12
+  },
+  {
+   "id": "klp-295-10",
+   "judul": "Denmark Open 2026: Alwi Farhan Hadapi Anders Antonsen, Ancaman Home Crowd Jadi Ujian",
+   "skor": 12
+  },
+  {
+   "id": "klp-295-11",
+   "judul": "Harga Galaxy Tab S12 Series Mulai Rp 21 Juta, Ini Keuntungan Pembelian",
+   "skor": 9
+  },
+  {
+   "id": "klp-295-12",
+   "judul": "Lapak Narkoba Kampung Ambon Terbakar usai Dibongkar, Polisi Duga \"Perlawanan\" dari Para Bandar",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
