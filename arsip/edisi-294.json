@@ -1,0 +1,121 @@
+{
+ "edisi": 294,
+ "terbit": "2026-10-15T14:16:23.750080+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-294-01",
+   "judul": "KPK tetapkan adik Kepala BNPB dan empat lainnya jadi tersangka terkait OTT kasus dugaan korupsi dana kebencanaan BNPB",
+   "skor": 48
+  },
+  {
+   "id": "klp-294-02",
+   "judul": "Rekam Jejak Bupati Klaten Hamenang, Politikus PDIP, Meniti Karier dari DPRD, Kini Kena OTT KPK",
+   "skor": 31
+  },
+  {
+   "id": "klp-294-14",
+   "judul": "Iran tegaskan pelayaran di Selat Hormuz harus seizin Teheran",
+   "skor": 9
+  },
+  {
+   "id": "klp-294-17",
+   "judul": "'Tiga hari saya tidak narik ojol' – Antrean panjang SPBU di Bali, mengapa kelangkaan BBM di berbagai daerah terus berulang?",
+   "skor": 9
+  },
+  {
+   "id": "klp-294-06",
+   "judul": "Luar Biasa! Pertamina Kerahkan 108 Mobil Tangki, Terminal BBM di Bali Beroperasi 24 Jam untuk Urai Antrean SPBU",
+   "skor": 15
+  },
+  {
+   "id": "klp-294-04",
+   "judul": "Polisi Selidiki Motif Penyerangan OTK Bersenjata Api dan Sajam di Kampung Ambon",
+   "skor": 18
+  },
+  {
+   "id": "klp-294-05",
+   "judul": "Gempa Magnitudo 4,1 Guncang Wilayah Bogor, Dirasakan di Pamijahan dan Kabandungan",
+   "skor": 15
+  },
+  {
+   "id": "klp-294-11",
+   "judul": "Pemkot Sibolga percepat pemulihan infrastruktur pengendali banjir dan layanan kesehatan",
+   "skor": 12
+  },
+  {
+   "id": "klp-294-18",
+   "judul": "Wamendagri Wiyagus Tekankan Peran Penting Forkopimda Tangani Karhutla di Kaltim",
+   "skor": 9
+  },
+  {
+   "id": "klp-294-22",
+   "judul": "Tanggapi Isu Akuisisi BCA Oleh Haji Isam, OJK Awasi Risiko dan Stabilitas Perbankan",
+   "skor": 6
+  },
+  {
+   "id": "klp-294-08",
+   "judul": "Polisi Beber Kronologi Tewasnya Tiga Orang saat Memadamkan Karhutla Gunung Bromo",
+   "skor": 12
+  },
+  {
+   "id": "klp-294-10",
+   "judul": "Olah TKP Ledakan Pasar Cimanggis, Polisi Temukan Gas Etilen untuk Matangkan Buah",
+   "skor": 12
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

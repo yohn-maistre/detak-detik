@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-14T14:38:06.173311+00:00",
- "edisi": 292,
+ "diperbarui": "2026-10-15T14:19:36.374934+00:00",
+ "edisi": 294,
  "pilihan": [
+  {
+   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
+   "wadah": "Marine Policy",
+   "doi": "10.1016/j.marpol.2026.107325",
+   "tanggal": "2027-2",
+   "alasan": "Makalah ini meneliti penurunan sektor perikanan skala kecil di Indonesia dari sudut pandang ekologi politik. Studi ini relevan untuk memahami dampak kebijakan dan tekanan lingkungan terhadap mata pencarian nelayan serta ketahanan pangan di Indonesia.",
+   "kategori": "KELAUTAN & MASYARAKAT",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Riset ini menyelidiki penggunaan sekuensing metagenomik untuk mendeteksi patogen pernapasan pada pasien SARI yang dirawat di rumah sakit Indonesia. Temuan ini penting untuk meningkatkan diagnosis penyakit infeksi dan memperkuat respons kesehatan publik di tingkat nasional.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102147",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini menganalisis kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan yang diakibatkan oleh perubahan iklim. Hasilnya sangat relevan untuk perencanaan infrastruktur energi yang tangguh dan adaptasi terhadap dampak iklim di seluruh wilayah Indonesia.",
+   "kategori": "ENERGI & LINGKUNGAN",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengembangkan kerangka kerja berbasis kecerdasan buatan untuk rekomendasi putusan pidana dalam sistem hukum Indonesia. Ini menunjukkan potensi inovasi teknologi dalam bidang hukum dan upaya peningkatan efisiensi serta konsistensi proses peradilan nasional.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102136",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini membahas kemiskinan energi multidimensional di Indonesia, dengan membandingkan perspektif perkotaan dan pedesaan. Temuan ini krusial untuk perumusan kebijakan energi yang lebih adil dan inklusif, memastikan akses energi merata bagi seluruh lapisan masyarakat.",
+   "kategori": "KEMISKINAN ENERGI",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini menganalisis aspek ekonomi politik di balik transisi energi bersih di Indonesia, khususnya terkait dengan peran sektor batubara. Sangat relevan untuk memahami tantangan dan peluang dalam mencapai target energi terbarukan serta keberlanjutan ekonomi nasional.",
+   "kategori": "TRANSISI ENERGI",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "Zakat Fundraising in Indonesia: Continuity, Legal Framework, and Digital Transformation",
+   "wadah": "Al-Iqtishad: Jurnal Ilmu Ekonomi Syariah",
+   "doi": "10.15408/aiq.v17i2.50032",
+   "tanggal": "2026-12-31",
+   "alasan": "Penelitian ini menelusuri praktik pengumpulan zakat di Indonesia dari aspek keberlanjutan, kerangka hukum, dan adaptasi digital. Sangat relevan untuk memahami peran institusi keagamaan dalam mendukung ekonomi syariah dan kesejahteraan masyarakat Indonesia.",
+   "kategori": "SOSIAL & AGAMA",
+   "sejak_edisi": 294
+  },
+  {
+   "judul": "&lt;b&gt;Reconfiguring islamic criminal law in contemporary Indonesia: &lt;/b&gt;&lt;b&gt;a socio-legal analysis through the maqāṣid al-sharīʿah framework&lt;/b&gt;&lt;b&gt;&lt;/b&gt;",
+   "wadah": "Otoritas : Jurnal Ilmu Pemerintahan",
+   "doi": "10.26618/ojip.v16i2.21613",
+   "tanggal": "2026-12-30",
+   "alasan": "Makalah ini menganalisis rekonfigurasi hukum pidana Islam dalam konteks Indonesia kontemporer melalui pendekatan sosio-legal. Studi ini penting untuk memahami dinamika antara hukum, agama, dan masyarakat dalam sistem peradilan yang majemuk di Indonesia.",
+   "kategori": "HUKUM ISLAM",
+   "sejak_edisi": 294
+  },
   {
    "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
    "wadah": "Unconventional Resources",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian ini mengeksplorasi bagaimana guncangan bencana alam memengaruhi pola pinjaman online di Indonesia. Memberikan wawasan berharga tentang resiliensi keuangan masyarakat dan respons pasar setelah bencana.",
    "kategori": "EKONOMI BENCANA",
    "sejak_edisi": 292
-  },
-  {
-   "judul": "Intergenerational eco-craft, women's agency, and climate adaptation in Telaga Biru Coastal Village, Madura, Indonesia",
-   "wadah": "Women's Studies International Forum",
-   "doi": "10.1016/j.wsif.2026.103450",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini menyoroti kerajinan ramah lingkungan antar generasi, pemberdayaan perempuan, dan adaptasi iklim di desa pesisir Madura. Ini memberikan perspektif unik tentang solusi lokal dan peran perempuan dalam menghadapi perubahan iklim.",
-   "kategori": "MASYARAKAT PESISIR",
-   "sejak_edisi": 292
-  },
-  {
-   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
-   "wadah": "Journal of Substance Use and Addiction Treatment",
-   "doi": "10.1016/j.josat.2026.210129",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengkaji beban ekonomi rumah tangga, keterjangkauan rehabilitasi, dan reintegrasi sosial bagi individu yang terkena dampak penyalahgunaan narkoba di Sulawesi Selatan. Penting untuk pengembangan kebijakan dan program penanganan masalah narkoba.",
-   "kategori": "KESEHATAN SOSIAL",
-   "sejak_edisi": 292
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini mengembangkan model kontrol untuk pengelolaan kawasan hutan di Daerah Aliran Sungai Anai, Sumatera Barat. Penting untuk pelestarian lingkungan, pengelolaan sumber daya alam, dan keberlanjutan ekosistem hutan.",
-   "kategori": "KONSERVASI HUTAN",
-   "sejak_edisi": 292
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Makalah ini menelaah batasan dan celah dalam pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Studi ini krusial untuk reformasi hukum dan peningkatan perlindungan anak.",
-   "kategori": "HUKUM PERLINDUNGAN ANAK",
-   "sejak_edisi": 292
-  },
-  {
-   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
-   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
-   "doi": "10.37373/jenius.v8i1.2344",
-   "tanggal": "2027-5-31",
-   "alasan": "Menilai ketahanan manajemen industri pertahanan Indonesia setelah program MEF dan pembentukan Holding Defend ID. Studi ini relevan untuk memahami strategi kemandirian pertahanan negara.",
-   "kategori": "INDUSTRI PERTAHANAN",
-   "sejak_edisi": 291
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia, khususnya untuk mengurangi kesenjangan digital di daerah terpencil. Ini penting bagi pemerataan akses layanan publik.",
-   "kategori": "LAYANAN PUBLIK DIGITAL",
-   "sejak_edisi": 291
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Menyelidiki pirolisis langsung aspal batu dari Buton, Indonesia, serta karakteristik produk cair dan peran kalsit. Penelitian ini krusial untuk pemanfaatan sumber daya alam strategis Indonesia.",
-   "kategori": "SUMBER DAYA ALAM",
-   "sejak_edisi": 291
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Laporan pertama tentang dua spesies Lasiodiplodia penyebab busuk buah kakao di Sulawesi Selatan, Indonesia. Studi ini penting untuk perlindungan tanaman dan ketahanan pangan di sektor pertanian.",
-   "kategori": "PERTANIAN & PANGAN",
-   "sejak_edisi": 291
   }
  ]
 }

@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-14T14:58:20+00:00",
+ "diambil": "2026-10-15T14:16:54+00:00",
  "acara": [
+  {
+   "id": "405da947875b",
+   "url": "https://wapresri.go.id/terima-audiensi-komunitas-aku-menari-wapres-dukung-ruang-ekspresi-bagi-anak-anak-disabilitas/",
+   "judul": "Terima Audiensi Komunitas Aku Menari, Wapres Dukung Ruang Ekspresi bagi Anak-Anak Disabilitas",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-15",
+   "tanggal_terbit": "2026-10-15",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "b6be2b73936e",
    "url": "https://wapresri.go.id/bekali-siswa-gorontalo-untuk-berkarier-global-ibu-selvi-ingatkan-pentingnya-migrasi-aman/",
@@ -77,6 +92,23 @@
    "audiens": null,
    "topik": [
     "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e398c3cff94e",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-umkm-dan-pelestarian-budaya-melalui-perlindungan-kekayaan-intelektual/",
+   "judul": "Ibu Selvi Dorong UMKM dan Pelestarian Budaya melalui Perlindungan Kekayaan Intelektual",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-13",
+   "tanggal_terbit": "2026-10-13",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
    ],
    "venue": null,
    "kota": null,
