@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-16T14:42:50+00:00",
+ "diambil": "2026-10-16T23:45:45+00:00",
  "acara": [
   {
    "id": "ab6a0cb1a8e1",
@@ -64,6 +64,100 @@
    "tanggal_terbit": "2026-10-15",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "93e3b7c96dd6",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-jenderal-tandyo-budi-revita-sebagai-ksad-di-istana-negara/",
+   "judul": "Presiden Prabowo Lantik Jenderal Tandyo Budi Revita sebagai KSAD di Istana Negara",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-15",
+   "tanggal_terbit": "2026-10-15",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "c40f11f0fe59",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-maruli-simanjuntak-sebagai-wakil-panglima-tni-merangkap-kepala-badan-nasional-pengelola-perbatasan-dan-daerah-terpencil/",
+   "judul": "Presiden Prabowo Lantik Maruli Simanjuntak sebagai Wakil Panglima TNI merangkap Kepala Badan Nasional Pengelola Perbatasan dan Daerah Terpencil",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-15",
+   "tanggal_terbit": "2026-10-15",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a46ace7d3db7",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-kepala-bnpb-serta-kepala-dan-wakil-kepala-bpgmn/",
+   "judul": "Presiden Prabowo Lantik Kepala BNPB serta Kepala dan Wakil Kepala BPGMN",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-15",
+   "tanggal_terbit": "2026-10-15",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "hukum",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dec4827ccfa2",
+   "url": "https://setkab.go.id/presiden-prabowo-lantik-empat-wakil-menteri-kabinet-merah-putih-di-istana-negara/",
+   "judul": "Presiden Prabowo Lantik Empat Wakil Menteri Kabinet Merah Putih di Istana Negara",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-15",
+   "tanggal_terbit": "2026-10-15",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e27d9247397a",
+   "url": "https://setkab.go.id/panggil-menko-bahlil-presiden-prabowo-terima-laporan-tentang-penguatan-tata-kelola-migas-dan-peningkatan-layanan-energi/",
+   "judul": "Panggil Menko Bahlil, Presiden Prabowo Terima Laporan Tentang Penguatan Tata Kelola Migas dan Peningkatan Layanan Energi",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-14",
+   "tanggal_terbit": "2026-10-14",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "energi-sda"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
