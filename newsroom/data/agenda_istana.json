@@ -4,8 +4,56 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-15T14:16:54+00:00",
+ "diambil": "2026-10-16T14:42:50+00:00",
  "acara": [
+  {
+   "id": "ab6a0cb1a8e1",
+   "url": "https://wapresri.go.id/wapres-dorong-penyelarasan-pendidikan-vokasi-dan-kebutuhan-industri-untuk-perkuat-sdm-muda/",
+   "judul": "Wapres Dorong Penyelarasan Pendidikan Vokasi dan Kebutuhan Industri untuk Perkuat SDM Muda",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-16",
+   "tanggal_terbit": "2026-10-16",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "abed1f6c44b6",
+   "url": "https://wapresri.go.id/silaturahmi-dengan-para-kiai-pp-dalwa-pasuruan-wapres-mohon-doa-untuk-kebaikan-bangsa/",
+   "judul": "Silaturahmi dengan Para Kiai PP Dalwa Pasuruan, Wapres Mohon Doa untuk Kebaikan Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-16",
+   "tanggal_terbit": "2026-10-16",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0eab0ef09174",
+   "url": "https://wapresri.go.id/perkuat-kemandirian-santri-wapres-tinjau-pelatihan-ai-dan-robotik-di-pasuruan/",
+   "judul": "Perkuat Kemandirian Santri di Era Digital, Wapres Tinjau Pelatihan AI dan Robotik di Pasuruan",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-16",
+   "tanggal_terbit": "2026-10-16",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "405da947875b",
    "url": "https://wapresri.go.id/terima-audiensi-komunitas-aku-menari-wapres-dukung-ruang-ekspresi-bagi-anak-anak-disabilitas/",
