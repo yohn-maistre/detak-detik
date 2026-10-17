@@ -1,0 +1,121 @@
+{
+ "edisi": 298,
+ "terbit": "2026-10-17T13:04:23.904838+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-298-01",
+   "judul": "Bandara Internasional Sentani lakukan penyesuaian jadwal penerbangan akibat cuaca",
+   "skor": 43
+  },
+  {
+   "id": "klp-298-02",
+   "judul": "Refleksi Dua Tahun Pemerintahan dan HUT ke-75 Prabowo Subianto,  Kemandirian Energi Jadi Kunci Kedaulatan Indonesia",
+   "skor": 29
+  },
+  {
+   "id": "klp-298-03",
+   "judul": "Pengkondisian Audit BPK, Bupati Klaten Hamenang Sanggupi Bayar Rp400 Juta dari Rp600 Juta",
+   "skor": 20
+  },
+  {
+   "id": "klp-298-04",
+   "judul": "Antrean panjang SPBU di Bali, Pertamina terapkan sistem pembelian ganjil-genap",
+   "skor": 18
+  },
+  {
+   "id": "klp-298-05",
+   "judul": "Adik eks Kepala BNPB diduga gunakan dana bencana untuk beli saham – 'Dana itu untuk menangani banjir Sumatra, gempa NTT dan karhutla'",
+   "skor": 15
+  },
+  {
+   "id": "klp-298-06",
+   "judul": "Ajukan Kasasi ke MA, Nadiem Soroti 5 Kekeliruan Putusan Banding Kasus Chromebook",
+   "skor": 15
+  },
+  {
+   "id": "klp-298-07",
+   "judul": "Satgas PRR Bikin Sumur Bor untuk Warga Terdampak Banjir Aceh Utara",
+   "skor": 15
+  },
+  {
+   "id": "klp-298-08",
+   "judul": "Rekor Buruk PSIM Berlanjut, Lini Depan Tumpul, Van Gastel Pasrah Suporter Marah",
+   "skor": 12
+  },
+  {
+   "id": "klp-298-09",
+   "judul": "Kongres Ke-42, Hamdan Zoelva Dorong SI Tinggalkan Model Organisasi ala Partai Politik",
+   "skor": 12
+  },
+  {
+   "id": "klp-298-10",
+   "judul": "OJK jatuhkan denda Rp2,1 triliun saat pasar saham Indonesia terancam turun kelas setara Zimbabwe",
+   "skor": 12
+  },
+  {
+   "id": "klp-298-11",
+   "judul": "Empat Orang Tewas saat Padamkan Karhutla Bromo, DPR Desak Penanganan Diperkuat",
+   "skor": 11
+  },
+  {
+   "id": "klp-298-12",
+   "judul": "Menko Zulhas Jamin Penyaluran Pupuk Subsidi Tak Lewat Perantara, Langsung Masuk Kopdes Merah Putih",
+   "skor": 10
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
