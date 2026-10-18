@@ -9,13 +9,24 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-17T23:41:37+00:00",
+ "diambil": "2026-10-18T13:53:32+00:00",
  "baris": [
   {
    "id": "1d8fdd2a0f77",
    "url": "https://pks.id/content/penghargaan-dan-sanksi-pilar-tata-kelola-partai-modern",
    "judul": "Penghargaan dan Sanksi: Pilar Tata Kelola Partai Modern",
    "ringkas": null,
+   "tanggal": "2026-10-18",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "e52b2088c992",
+   "url": "https://pks.id/content/lewat-influencer-muda-club-pks-dorong-kader-muda-hadirkan-konten-berdampak",
+   "judul": "Lewat Influencer Muda Club, PKS Dorong Kader Muda Hadirkan Konten Berdampak",
+   "ringkas": "Ketua DPP PKS Bidang Kepemudaan Aang Kunaifi menegaskan bahwa kader muda Partai Keadilan Sejahtera (PKS) memiliki tanggung jawab menjadi juru bicara partai dalam menyebarluaskan nilai-nilai PKS kepada masyarakat, baik melalui ruang publik maupun platform digital.",
    "tanggal": "2026-10-18",
    "kanal": "pks",
    "lembaga": "PKS",
@@ -121,6 +132,80 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
+  },
+  {
+   "id": "e604af941cc8",
+   "url": "https://emedia.dpr.go.id/news/2026/10/17/empat-orang-meninggal-padamkan-kawasan-bromo-legislator-desak-evaluasi-komprehensif",
+   "judul": "Empat Orang Meninggal Padamkan Kawasan Bromo, Legislator Desak Evaluasi Komprehensif",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota DPR RI dari Daerah Pemilihan Jawa Timur II, Dini Rahmania, menyampaikan duka cita mendalam atas meninggalnya empat orang dalam upaya pemadaman kebakaran hutan di kawasan Taman Nasional Bromo Tengger Semeru (TNBTS).",
+   "tanggal": "2026-10-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "acffe45b1fc2",
+   "url": "https://emedia.dpr.go.id/news/2026/10/17/hampir-empat-bulan-dikepung-asap-pemerintah-harus-sediakan-tempat-khusus-bagi-warga-rentan",
+   "judul": "Hampir Empat Bulan Dikepung Asap, Pemerintah Harus Sediakan Tempat Khusus bagi Warga Rentan",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi IV DPR RI Daniel Johan mendesak pemerintah mempercepat penanganan kebakaran hutan dan lahan (karhutla) yang telah berlangsung hampir empat bulan. Ia menegaskan, keselamatan masyarakat terdampak harus menjadi prioritas, terutama anak-anak da",
+   "tanggal": "2026-10-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "fa2c565fa735",
+   "url": "https://emedia.dpr.go.id/news/2026/10/17/pergantian-kepala-bnpb-wakil-rakyat-dapil-kaltim-hetifah-marah-dana-kebencanaan-dikorupsi",
+   "judul": "Pergantian Kepala BNPB, Wakil Rakyat Dapil Kaltim Hetifah Marah Dana Kebencanaan Dikorupsi!",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi VIII DPR RI Hetifah Sjaifudian, menanggapi pergantian Kepala Badan Nasional Penanggulangan Bencana (BNPB) dari Letjen TNI Suharyanto kepada Letjen TNI Kristomei Sianturi. Hetifah menegaskan pergantian kepemimpinan ini harus menjadi momentum",
+   "tanggal": "2026-10-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "8be5a97dafbe",
+   "url": "https://pks.id/content/kantor-jadi-rumah-pelayanan-pks-kalteng-bantu-warga-hadapi-dampak-karhutla",
+   "judul": "Kantor Jadi Rumah Pelayanan, PKS Kalteng Bantu Warga Hadapi Dampak Karhutla",
+   "ringkas": "DPW PKS Kalimantan Tengah (Kalteng) menghadirkan berbagai layanan bagi masyarakat yang terdampak kebakaran hutan dan lahan (karhutla), mulai dari pembagian masker, pemeriksaan kesehatan, pelayanan oksigen gratis, hingga penyediaan Rumah Aman Asap. Sejak September 2026, kantor PKS",
+   "tanggal": "2026-10-16",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "39af93eba3bb",
+   "url": "https://pks.id/content/legislator-pks-dorong-percepatan-penyelesaian-tpg-guru-perlu-mendapat-kepastian-atas-haknya",
+   "judul": "Legislator PKS Dorong Percepatan Penyelesaian TPG: Guru Perlu Mendapat Kepastian atas Haknya",
+   "ringkas": "Wakil Ketua Komisi X DPR RI sekaligus Ketua DPP PKS Bidang Pendidikan dan Kesehatan, Kurniasih Mufidayati, mendorong Kementerian Pendidikan Dasar dan Menengah (Kemendikdasmen) mempercepat penyelesaian pembayaran Tunjangan Profesi Guru (TPG) yang masih tertunda bagi sebagian guru.",
+   "tanggal": "2026-10-16",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "c0cea4bddb28",
+   "url": "https://pks.id/content/legislator-pks-apresiasi-langkah-bnpp-matangkan-operasional-plbn-sebatik-untuk-perkuat-konektivitas-perbatasan-indonesiamalaysia",
+   "judul": "Legislator PKS Apresiasi Langkah BNPP Matangkan Operasional PLBN Sebatik untuk Perkuat Konektivitas Perbatasan Indonesia–Malaysia",
+   "ringkas": "Badan Nasional Pengelola Perbatasan RI (BNPP) mematangkan kebijakan tata kelola keimigrasian dan konsep operasional pelabuhan internasional pada Pos Lintas Batas Negara (PLBN) Sebatik, Kabupaten Nunukan, Kalimantan Utara (Kaltara). Pembahasan diarahkan untuk mempercepat operasion",
+   "tanggal": "2026-10-16",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "906382bfc39d",
+   "url": "https://pks.id/content/karhutla-terus-berulang-pks-jangan-biarkan-keluarga-indonesia-menanggung-akibat-kelalaian-pencegahan",
+   "judul": "Karhutla Terus Berulang, PKS: Jangan Biarkan Keluarga Indonesia Menanggung Akibat Kelalaian Pencegahan",
+   "ringkas": "Ketua DPP PKS Bidang Perempuan dan Keluarga (Bipeka) Eko Yuliarti Siroj menyampaikan keprihatinan mendalam sekaligus mendesak pemerintah melakukan evaluasi serius terhadap sistem pencegahan dan penanganan kebakaran hutan dan lahan (karhutla) yang masih terjadi di berbagai wilayah",
+   "tanggal": "2026-10-16",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "69b8e584667e",
@@ -438,44 +523,44 @@
    "cabang": "aparat"
   },
   {
-   "id": "8be5a97dafbe",
-   "url": "https://pks.id/content/kantor-jadi-rumah-pelayanan-pks-kalteng-bantu-warga-hadapi-dampak-karhutla",
-   "judul": "Kantor Jadi Rumah Pelayanan, PKS Kalteng Bantu Warga Hadapi Dampak Karhutla",
-   "ringkas": "DPW PKS Kalimantan Tengah (Kalteng) menghadirkan berbagai layanan bagi masyarakat yang terdampak kebakaran hutan dan lahan (karhutla), mulai dari pembagian masker, pemeriksaan kesehatan, pelayanan oksigen gratis, hingga penyediaan Rumah Aman Asap. Sejak September 2026, kantor PKS",
-   "tanggal": "2026-10-16",
+   "id": "18a0ae829a0a",
+   "url": "https://pks.id/content/pks-pendidikan-dan-kesehatan-anak-didik-harus-dilindungi-dari-efek-karhutla",
+   "judul": "PKS: Pendidikan dan Kesehatan Anak Didik Harus Dilindungi dari Efek Karhutla",
+   "ringkas": "Ketua DPP PKS Bidang Pendidikan dan Kesehatan Kurniasih Mufidayati mengingatkan pentingnya perlindungan kesehatan dan keberlanjutan pendidikan anak-anak di tengah kebakaran hutan dan lahan (karhutla) yang masih melanda sejumlah wilayah Indonesia. Penanganan karhutla tidak cukup h",
+   "tanggal": "2026-10-15",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "39af93eba3bb",
-   "url": "https://pks.id/content/legislator-pks-dorong-percepatan-penyelesaian-tpg-guru-perlu-mendapat-kepastian-atas-haknya",
-   "judul": "Legislator PKS Dorong Percepatan Penyelesaian TPG: Guru Perlu Mendapat Kepastian atas Haknya",
-   "ringkas": "Wakil Ketua Komisi X DPR RI sekaligus Ketua DPP PKS Bidang Pendidikan dan Kesehatan, Kurniasih Mufidayati, mendorong Kementerian Pendidikan Dasar dan Menengah (Kemendikdasmen) mempercepat penyelesaian pembayaran Tunjangan Profesi Guru (TPG) yang masih tertunda bagi sebagian guru.",
-   "tanggal": "2026-10-16",
+   "id": "46097e15c2f6",
+   "url": "https://pks.id/content/legislator-pks-putusan-mk-harus-jadi-momentum-pembenahan-verifikasi-calon-pejabat-publik",
+   "judul": "Legislator PKS: Putusan MK Harus Jadi Momentum Pembenahan Verifikasi Calon Pejabat Publik",
+   "ringkas": "Anggota Komisi II DPR RI Fraksi PKS dari Daerah Pemilihan Kalimantan Timur, Aus Hidayat Nur, menyatakan menghormati putusan Mahkamah Konstitusi (MK) atas perkara Nomor 01/PHPU.PRES-XXIV/2026. Ia menilai putusan tersebut harus dibaca sebagai momentum untuk memperbaiki sistem pener",
+   "tanggal": "2026-10-15",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "c0cea4bddb28",
-   "url": "https://pks.id/content/legislator-pks-apresiasi-langkah-bnpp-matangkan-operasional-plbn-sebatik-untuk-perkuat-konektivitas-perbatasan-indonesiamalaysia",
-   "judul": "Legislator PKS Apresiasi Langkah BNPP Matangkan Operasional PLBN Sebatik untuk Perkuat Konektivitas Perbatasan Indonesia–Malaysia",
-   "ringkas": "Badan Nasional Pengelola Perbatasan RI (BNPP) mematangkan kebijakan tata kelola keimigrasian dan konsep operasional pelabuhan internasional pada Pos Lintas Batas Negara (PLBN) Sebatik, Kabupaten Nunukan, Kalimantan Utara (Kaltara). Pembahasan diarahkan untuk mempercepat operasion",
-   "tanggal": "2026-10-16",
+   "id": "f3dc3aaae675",
+   "url": "https://pks.id/content/legislator-pks-imbau-pemerintah-tolak-konser-andrea-bocelli-solidaritas-palestina-jangan-diabaikan",
+   "judul": "Legislator PKS Imbau Pemerintah Tolak Konser Andrea Bocelli, Solidaritas Palestina Jangan Diabaikan",
+   "ringkas": "Menjelang rencana konser Andrea Bocelli di Indonesia pada akhir Oktober 2026, Anggota DPR RI Fraksi PKS dari Daerah Pemilihan Jawa Barat II, Ahmad Heryawan, menegaskan bahwa penyelenggaraan konser musisi internasional di Indonesia tidak seharusnya dilepaskan dari pertimbangan kem",
+   "tanggal": "2026-10-15",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "906382bfc39d",
-   "url": "https://pks.id/content/karhutla-terus-berulang-pks-jangan-biarkan-keluarga-indonesia-menanggung-akibat-kelalaian-pencegahan",
-   "judul": "Karhutla Terus Berulang, PKS: Jangan Biarkan Keluarga Indonesia Menanggung Akibat Kelalaian Pencegahan",
-   "ringkas": "Ketua DPP PKS Bidang Perempuan dan Keluarga (Bipeka) Eko Yuliarti Siroj menyampaikan keprihatinan mendalam sekaligus mendesak pemerintah melakukan evaluasi serius terhadap sistem pencegahan dan penanganan kebakaran hutan dan lahan (karhutla) yang masih terjadi di berbagai wilayah",
-   "tanggal": "2026-10-16",
+   "id": "7e2b135a8c40",
+   "url": "https://pks.id/content/legislator-pks-penghentian-ekspor-bbl-harus-prioritaskan-perlindungan-nelayan-kecil",
+   "judul": "Legislator PKS: Penghentian Ekspor BBL Harus Prioritaskan Perlindungan Nelayan Kecil",
+   "ringkas": "Anggota Komisi IV DPR RI dari Fraksi PKS, Riyono, menanggapi pernyataan Menteri Kelautan dan Perikanan Sakti Wahyu Trenggono yang menghentikan izin ekspor Benih Bening Lobster (BBL) “selamanya”. Pernyataan itu disampaikan saat peluncuran Satgas Pemberantasan Pengeluaran BBL, Seni",
+   "tanggal": "2026-10-15",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -697,50 +782,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "18a0ae829a0a",
-   "url": "https://pks.id/content/pks-pendidikan-dan-kesehatan-anak-didik-harus-dilindungi-dari-efek-karhutla",
-   "judul": "PKS: Pendidikan dan Kesehatan Anak Didik Harus Dilindungi dari Efek Karhutla",
-   "ringkas": "Ketua DPP PKS Bidang Pendidikan dan Kesehatan Kurniasih Mufidayati mengingatkan pentingnya perlindungan kesehatan dan keberlanjutan pendidikan anak-anak di tengah kebakaran hutan dan lahan (karhutla) yang masih melanda sejumlah wilayah Indonesia. Penanganan karhutla tidak cukup h",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "46097e15c2f6",
-   "url": "https://pks.id/content/legislator-pks-putusan-mk-harus-jadi-momentum-pembenahan-verifikasi-calon-pejabat-publik",
-   "judul": "Legislator PKS: Putusan MK Harus Jadi Momentum Pembenahan Verifikasi Calon Pejabat Publik",
-   "ringkas": "Anggota Komisi II DPR RI Fraksi PKS dari Daerah Pemilihan Kalimantan Timur, Aus Hidayat Nur, menyatakan menghormati putusan Mahkamah Konstitusi (MK) atas perkara Nomor 01/PHPU.PRES-XXIV/2026. Ia menilai putusan tersebut harus dibaca sebagai momentum untuk memperbaiki sistem pener",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "f3dc3aaae675",
-   "url": "https://pks.id/content/legislator-pks-imbau-pemerintah-tolak-konser-andrea-bocelli-solidaritas-palestina-jangan-diabaikan",
-   "judul": "Legislator PKS Imbau Pemerintah Tolak Konser Andrea Bocelli, Solidaritas Palestina Jangan Diabaikan",
-   "ringkas": "Menjelang rencana konser Andrea Bocelli di Indonesia pada akhir Oktober 2026, Anggota DPR RI Fraksi PKS dari Daerah Pemilihan Jawa Barat II, Ahmad Heryawan, menegaskan bahwa penyelenggaraan konser musisi internasional di Indonesia tidak seharusnya dilepaskan dari pertimbangan kem",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "7e2b135a8c40",
-   "url": "https://pks.id/content/legislator-pks-penghentian-ekspor-bbl-harus-prioritaskan-perlindungan-nelayan-kecil",
-   "judul": "Legislator PKS: Penghentian Ekspor BBL Harus Prioritaskan Perlindungan Nelayan Kecil",
-   "ringkas": "Anggota Komisi IV DPR RI dari Fraksi PKS, Riyono, menanggapi pernyataan Menteri Kelautan dan Perikanan Sakti Wahyu Trenggono yang menghentikan izin ekspor Benih Bening Lobster (BBL) “selamanya”. Pernyataan itu disampaikan saat peluncuran Satgas Pemberantasan Pengeluaran BBL, Seni",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "70605fc1c884",
    "url": "https://kontras.org/rilis-pers-ahli-bongkar-problem-gelar-pahlawan-soeharto-konflik-kepentingan-dan-pengkhianatan-reformasi/",
    "judul": "Rilis Pers Ahli Bongkar Problem Gelar Pahlawan Soeharto: Konflik Kepentingan dan Pengkhianatan Reformasi!",
@@ -759,6 +800,28 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "4a7323a3145c",
+   "url": "https://pks.id/content/rahmatan-lil-alamin-visi-dan-misi-pks-lintas-waktu",
+   "judul": "Rahmatan Lil 'Alamin: Visi dan Misi PKS Lintas Waktu",
+   "ringkas": null,
+   "tanggal": "2026-10-14",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "e40773f1872c",
+   "url": "https://pks.id/content/kutuk-serangan-houthi-di-bandara-riyadh-legislator-pks-minta-kbri-terus-pantau-kondisi-wni",
+   "judul": "Kutuk Serangan Houthi di Bandara Riyadh, Legislator PKS Minta KBRI Terus Pantau Kondisi WNI",
+   "ringkas": "Wakil Ketua Komisi I DPR RI, Sukamta, meminta Pemerintah menjamin keamanan Warga Negara Indonesia (WNI) buntut serangan kelompok Houthi di Bandara Internasional King Khalid, Riyadh, Arab Saudi. Ia juga mendorong Pemerintah memfasilitasi jemaah Indonesia yang batal menjalankan umr",
+   "tanggal": "2026-10-14",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "e56c7480fd13",
@@ -875,36 +938,6 @@
    "url": "https://emedia.dpr.go.id/news/2026/10/14/rikwanto-polisi-harus-jadi-pelindung-bukan-sosok-yang-ditakuti-masyarakat",
    "judul": "Rikwanto: Polisi Harus Jadi Pelindung, Bukan Sosok yang Ditakuti Masyarakat",
    "ringkas": "PARLEMENTARIA, Semarang — Anggota Komisi III DPR RI Rikwanto mendorong Polri mewujudkan slogan “Polisi Bersama Masyarakat” melalui perubahan sikap dan pola pelayanan aparat di lapangan. Menurutnya, slogan yang diusung Kapolri tersebut harus tercermin dalam tindakan nyata agar mas",
-   "tanggal": "2026-10-14",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "b0a5a54ba3d4",
-   "url": "https://emedia.dpr.go.id/news/2026/10/14/soedeson-tandra-dorong-rehabilitasi-pengguna-narkoba-untuk-kurangi-overkapasitas-lapas",
-   "judul": "Soedeson Tandra Dorong Rehabilitasi Pengguna Narkoba untuk Kurangi Overkapasitas Lapas",
-   "ringkas": "PARLEMENTARIA, Semarang — Komisi III DPR RI mendorong penguatan asesmen dan rehabilitasi bagi pengguna narkotika sebagai salah satu upaya mengatasi kelebihan kapasitas lembaga pemasyarakatan (lapas). Penanganan yang membedakan pengguna yang membutuhkan rehabilitasi dari pelaku pe",
-   "tanggal": "2026-10-14",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "ac6a7d1a057c",
-   "url": "https://emedia.dpr.go.id/news/2026/10/14/edy-minta-pemda-kalsel-perkuat-ekosistem-penyiapan-tenaga-kerja-global",
-   "judul": "Edy Minta Pemda Kalsel Perkuat Ekosistem Penyiapan Tenaga Kerja Global",
-   "ringkas": "PARLEMENTARIA, Banjarbaru — Anggota Komisi IX DPR RI Edy Wuryanto menyoroti rendahnya partisipasi Provinsi Kalimantan Selatan (Kalsel) dalam program SMK Go Global yang disiapkan pemerintah untuk memperluas peluang kerja tenaga kerja Indonesia di luar negeri. Ia mendorong pemerint",
-   "tanggal": "2026-10-14",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "8e350d8712c8",
-   "url": "https://emedia.dpr.go.id/news/2026/10/14/kunker-reses-ke-jateng-komisi-iii-awasi-implementasi-kuhp-kuhap-baru",
-   "judul": "Kunker Reses ke Jateng, Komisi III Awasi Implementasi KUHP-KUHAP Baru",
-   "ringkas": "PARLEMENTARIA, Semarang — Wakil Ketua Komisi III DPR RI Dede Indra Permana Soediro menegaskan pentingnya pengawasan terhadap implementasi Kitab Undang-Undang Hukum Pidana (KUHP) dan Kitab Undang-Undang Hukum Acara Pidana (KUHAP) yang baru. Melalui kunjungan kerja reses ke Jawa Te",
    "tanggal": "2026-10-14",
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
@@ -1040,28 +1073,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "4a7323a3145c",
-   "url": "https://pks.id/content/rahmatan-lil-alamin-visi-dan-misi-pks-lintas-waktu",
-   "judul": "Rahmatan Lil 'Alamin: Visi dan Misi PKS Lintas Waktu",
-   "ringkas": null,
-   "tanggal": "2026-10-14",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "e40773f1872c",
-   "url": "https://pks.id/content/kutuk-serangan-houthi-di-bandara-riyadh-legislator-pks-minta-kbri-terus-pantau-kondisi-wni",
-   "judul": "Kutuk Serangan Houthi di Bandara Riyadh, Legislator PKS Minta KBRI Terus Pantau Kondisi WNI",
-   "ringkas": "Wakil Ketua Komisi I DPR RI, Sukamta, meminta Pemerintah menjamin keamanan Warga Negara Indonesia (WNI) buntut serangan kelompok Houthi di Bandara Internasional King Khalid, Riyadh, Arab Saudi. Ia juga mendorong Pemerintah memfasilitasi jemaah Indonesia yang batal menjalankan umr",
-   "tanggal": "2026-10-14",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "019eb470d32e",
    "url": "https://kontras.org/more-numerous-yet-invisible-the-situation-of-people-sentenced-to-death-in-indonesia/",
    "judul": "More Numerous, Yet Invisible: The Situation of People Sentenced to Death in Indonesia",
@@ -1080,6 +1091,50 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "0eab6e990d7c",
+   "url": "https://pks.id/content/legislator-pks-salurkan-bantuan-beras-dan-dana-untuk-korban-banjir",
+   "judul": "Legislator PKS Salurkan Bantuan Beras dan Dana untuk Korban Banjir",
+   "ringkas": "Anggota DPR RI asal Sumatera Barat dari Fraksi PKS Rahmat Saleh turun langsung memberikan bantuan untuk warga yang terdampak banjir. Bantuan darurat yang disalurkan tersebut berupa 40 karung beras dan sejumlah uang tunai.",
+   "tanggal": "2026-10-13",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "61696ffa13e1",
+   "url": "https://pks.id/content/pks-sumut-hadirkan-layanan-cek-kesehatan-gratis-bagi-masyarakat",
+   "judul": "PKS Sumut Hadirkan Layanan Cek Kesehatan Gratis bagi Masyarakat",
+   "ringkas": "DPW Partai Keadilan Sejahtera (PKS) Sumatera Utara bekerja sama dengan Pemerintah Kota Medan menghadirkan layanan Cek Kesehatan Gratis (CKG) bagi masyarakat di Kantor DPTW PKS Sumatera Utara, Sabtu (10/10/2026). Kegiatan yang dikurasi oleh BAKP DPW PKS Sumut ini menjadi salah sat",
+   "tanggal": "2026-10-13",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "901494d91250",
+   "url": "https://pks.id/content/warga-bertaruh-kesehatan-di-tengah-asap-pks-minta-pejabat-lebih-peka-terhadap-korban-karhutla",
+   "judul": "Warga Bertaruh Kesehatan di Tengah Asap, PKS Minta Pejabat Lebih Peka terhadap Korban Karhutla",
+   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS dari Daerah Pemilihan Jawa Timur VII, Riyono, menyampaikan keprihatinan mendalam atas kebakaran hutan dan lahan (karhutla) yang terjadi di Kalimantan Tengah dan Kalimantan Barat. Ia meminta pemerintah daerah bersama aparat terkait memperkuat si",
+   "tanggal": "2026-10-13",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "fd4d3bb2ccb1",
+   "url": "https://pks.id/content/banjir-kembali-landa-sumatera-barat-legislator-pks-desak-penanganan-komprehensif",
+   "judul": "Banjir Kembali Landa Sumatera Barat, Legislator PKS Desak Penanganan Komprehensif",
+   "ringkas": "Anggota DPR RI asal Sumatera Barat dari Fraksi PKS, Nevi Zuairina, menyampaikan duka cita mendalam atas musibah banjir bandang yang kembali melanda Kota Padang, Sumatera Barat.",
+   "tanggal": "2026-10-13",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "c3736cb79ab2",
@@ -1212,44 +1267,99 @@
    "partai": "gerindra"
   },
   {
-   "id": "0eab6e990d7c",
-   "url": "https://pks.id/content/legislator-pks-salurkan-bantuan-beras-dan-dana-untuk-korban-banjir",
-   "judul": "Legislator PKS Salurkan Bantuan Beras dan Dana untuk Korban Banjir",
-   "ringkas": "Anggota DPR RI asal Sumatera Barat dari Fraksi PKS Rahmat Saleh turun langsung memberikan bantuan untuk warga yang terdampak banjir. Bantuan darurat yang disalurkan tersebut berupa 40 karung beras dan sejumlah uang tunai.",
-   "tanggal": "2026-10-13",
+   "id": "cd938bec17d5",
+   "url": "https://pks.id/content/amy-pks-jembatani-aspirasi-masyarakat-sipil-soal-polemik-ijazah-gate-ke-dpr",
+   "judul": "AMY: PKS Jembatani Aspirasi Masyarakat Sipil soal Polemik Ijazah Gate ke DPR",
+   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS) Almuzzammil Yusuf (AMY) menegaskan bahwa polemik Ijazah Gate yang berkembang di publik perlu diselesaikan melalui mekanisme hukum dan konstitusional. DPR RI dinilai perlu mengkaji dan menindaklanjuti temuan Mahkamah Konstitusi (MK) sesuai ",
+   "tanggal": "2026-10-12",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "61696ffa13e1",
-   "url": "https://pks.id/content/pks-sumut-hadirkan-layanan-cek-kesehatan-gratis-bagi-masyarakat",
-   "judul": "PKS Sumut Hadirkan Layanan Cek Kesehatan Gratis bagi Masyarakat",
-   "ringkas": "DPW Partai Keadilan Sejahtera (PKS) Sumatera Utara bekerja sama dengan Pemerintah Kota Medan menghadirkan layanan Cek Kesehatan Gratis (CKG) bagi masyarakat di Kantor DPTW PKS Sumatera Utara, Sabtu (10/10/2026). Kegiatan yang dikurasi oleh BAKP DPW PKS Sumut ini menjadi salah sat",
-   "tanggal": "2026-10-13",
+   "id": "8124dee95e27",
+   "url": "https://pks.id/content/ketua-dpw-pks-sumbar-terjun-langsung-evakuasi-warga-terdampak-banjir-di-ikua-koto",
+   "judul": "Ketua DPW PKS Sumbar Terjun Langsung Evakuasi Warga Terdampak Banjir di Ikua Koto",
+   "ringkas": "Bencana banjir akibat luapan air deras menerjang sejumlah kawasan di Kota Padang pada Sabtu, (10/10/2026). Menyikapi situasi darurat ini, Ketua DPW PKS Sumatera Barat Ulyadi terjun langsung ke lokasi untuk membantu mengevakuasi warga terdampak di sepanjang Jl. Kp. Apar, Kelurahan",
+   "tanggal": "2026-10-12",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "901494d91250",
-   "url": "https://pks.id/content/warga-bertaruh-kesehatan-di-tengah-asap-pks-minta-pejabat-lebih-peka-terhadap-korban-karhutla",
-   "judul": "Warga Bertaruh Kesehatan di Tengah Asap, PKS Minta Pejabat Lebih Peka terhadap Korban Karhutla",
-   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS dari Daerah Pemilihan Jawa Timur VII, Riyono, menyampaikan keprihatinan mendalam atas kebakaran hutan dan lahan (karhutla) yang terjadi di Kalimantan Tengah dan Kalimantan Barat. Ia meminta pemerintah daerah bersama aparat terkait memperkuat si",
-   "tanggal": "2026-10-13",
+   "id": "25182143de83",
+   "url": "https://pks.id/content/aksi-cepat-tanggap-pks-koto-tangah-bagikan-makan-malam-untuk-korban-banjir",
+   "judul": "Aksi Cepat Tanggap PKS Koto Tangah Bagikan Makan Malam untuk Korban Banjir",
+   "ringkas": "DPC PKS Kecamatan Koto Tangah bergerak cepat membantu warga terdampak musibah banjir pada Sabtu, (10/10/2026). Ketua DPC PKS Koto Tangah memimpin langsung aksi tanggap darurat ini bersama tim relawan di bawah komando Wiky Rahmad Putra.",
+   "tanggal": "2026-10-12",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "fd4d3bb2ccb1",
-   "url": "https://pks.id/content/banjir-kembali-landa-sumatera-barat-legislator-pks-desak-penanganan-komprehensif",
-   "judul": "Banjir Kembali Landa Sumatera Barat, Legislator PKS Desak Penanganan Komprehensif",
-   "ringkas": "Anggota DPR RI asal Sumatera Barat dari Fraksi PKS, Nevi Zuairina, menyampaikan duka cita mendalam atas musibah banjir bandang yang kembali melanda Kota Padang, Sumatera Barat.",
-   "tanggal": "2026-10-13",
+   "id": "4f1e298ba977",
+   "url": "https://pks.id/content/parlemen-indonesia-kecam-keras-diskriminasi-muslim-di-india-desak-parlemen-oki-bersuara-lantang-di-ipu",
+   "judul": "Parlemen Indonesia Kecam Keras Diskriminasi Muslim di India, Desak Parlemen OKI Bersuara Lantang di IPU",
+   "ringkas": "Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI, Syahrul Aidi Maazat, menyampaikan pernyataan tegas dalam pertemuan Parliamentary Union of the OIC Member States (PUIC) di sela-sela Sidang Umum Inter-Parliamentary Union (IPU) ke-153 di Arusha, Tanzania, pada 5–9 Oktober 2026.",
+   "tanggal": "2026-10-12",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "18d52b99eada",
+   "url": "https://pks.id/content/jagung-pasar-rp8000-sphp-rp5000-legislator-pks-pastikan-selisih-harga-dinikmati-peternak-rakyat",
+   "judul": "Jagung Pasar Rp8.000, SPHP Rp5.000, Legislator PKS: Pastikan Selisih Harga Dinikmati Peternak Rakyat",
+   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS, Johan Rosihan, mendorong pemerintah memastikan percepatan penyaluran jagung Stabilisasi Pasokan dan Harga Pangan (SPHP) benar-benar memberikan manfaat bagi peternak rakyat. Menurutnya, selisih harga antara jagung di pasar yang mencapai sekitar",
+   "tanggal": "2026-10-12",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "68d4fc1154df",
+   "url": "https://pks.id/content/33-masyarakat-dki-jakarta-buta-huruf-al-quran-hnw-luncurkan-program-pemberantasan-buta-huruf-al-quran",
+   "judul": "33% Masyarakat DKI Jakarta Buta Huruf Al-Qur’an, HNW Luncurkan Program Pemberantasan Buta Huruf Al-Qur’an",
+   "ringkas": "Wakil Ketua MPR RI sekaligus Anggota Komisi VIII DPR RI, Hidayat Nur Wahid, meluncurkan Program Pemberantasan Buta Huruf Al-Qur’an setelah survei terbaru di DKI Jakarta menemukan 33,2% responden masuk kategori buta huruf Al-Qur’an. Jika digabungkan dengan kategori pembaca dasar, ",
+   "tanggal": "2026-10-12",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "928c0463127d",
+   "url": "https://pks.id/content/pendidikan-gratis-yang-berkeadilan-untuk-indonesia-emas-2045",
+   "judul": "Pendidikan Gratis Yang Berkeadilan Untuk Indonesia Emas 2045",
+   "ringkas": "Oleh Kurniasih Mufidayati Ketua DPP PKS Bidang Pendidikan dan Kesehatan",
+   "tanggal": "2026-10-12",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "4163195cedf3",
+   "url": "https://pks.id/content/4-daya-kader-muda-pks",
+   "judul": "4 DAYA KADER MUDA PKS",
+   "ringkas": "Oleh Muhammad Kholid Sekretaris Jenderal DPP PKS",
+   "tanggal": "2026-10-12",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "4509e111b6ad",
+   "url": "https://pks.id/content/membangun-kepemimpinan-yang-berkelanjutan",
+   "judul": "Membangun Kepemimpinan yang Berkelanjutan",
+   "ringkas": null,
+   "tanggal": "2026-10-12",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -1386,115 +1496,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "cd938bec17d5",
-   "url": "https://pks.id/content/amy-pks-jembatani-aspirasi-masyarakat-sipil-soal-polemik-ijazah-gate-ke-dpr",
-   "judul": "AMY: PKS Jembatani Aspirasi Masyarakat Sipil soal Polemik Ijazah Gate ke DPR",
-   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS) Almuzzammil Yusuf (AMY) menegaskan bahwa polemik Ijazah Gate yang berkembang di publik perlu diselesaikan melalui mekanisme hukum dan konstitusional. DPR RI dinilai perlu mengkaji dan menindaklanjuti temuan Mahkamah Konstitusi (MK) sesuai ",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "8124dee95e27",
-   "url": "https://pks.id/content/ketua-dpw-pks-sumbar-terjun-langsung-evakuasi-warga-terdampak-banjir-di-ikua-koto",
-   "judul": "Ketua DPW PKS Sumbar Terjun Langsung Evakuasi Warga Terdampak Banjir di Ikua Koto",
-   "ringkas": "Bencana banjir akibat luapan air deras menerjang sejumlah kawasan di Kota Padang pada Sabtu, (10/10/2026). Menyikapi situasi darurat ini, Ketua DPW PKS Sumatera Barat Ulyadi terjun langsung ke lokasi untuk membantu mengevakuasi warga terdampak di sepanjang Jl. Kp. Apar, Kelurahan",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "25182143de83",
-   "url": "https://pks.id/content/aksi-cepat-tanggap-pks-koto-tangah-bagikan-makan-malam-untuk-korban-banjir",
-   "judul": "Aksi Cepat Tanggap PKS Koto Tangah Bagikan Makan Malam untuk Korban Banjir",
-   "ringkas": "DPC PKS Kecamatan Koto Tangah bergerak cepat membantu warga terdampak musibah banjir pada Sabtu, (10/10/2026). Ketua DPC PKS Koto Tangah memimpin langsung aksi tanggap darurat ini bersama tim relawan di bawah komando Wiky Rahmad Putra.",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "4f1e298ba977",
-   "url": "https://pks.id/content/parlemen-indonesia-kecam-keras-diskriminasi-muslim-di-india-desak-parlemen-oki-bersuara-lantang-di-ipu",
-   "judul": "Parlemen Indonesia Kecam Keras Diskriminasi Muslim di India, Desak Parlemen OKI Bersuara Lantang di IPU",
-   "ringkas": "Ketua Badan Kerja Sama Antar-Parlemen (BKSAP) DPR RI, Syahrul Aidi Maazat, menyampaikan pernyataan tegas dalam pertemuan Parliamentary Union of the OIC Member States (PUIC) di sela-sela Sidang Umum Inter-Parliamentary Union (IPU) ke-153 di Arusha, Tanzania, pada 5–9 Oktober 2026.",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "18d52b99eada",
-   "url": "https://pks.id/content/jagung-pasar-rp8000-sphp-rp5000-legislator-pks-pastikan-selisih-harga-dinikmati-peternak-rakyat",
-   "judul": "Jagung Pasar Rp8.000, SPHP Rp5.000, Legislator PKS: Pastikan Selisih Harga Dinikmati Peternak Rakyat",
-   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS, Johan Rosihan, mendorong pemerintah memastikan percepatan penyaluran jagung Stabilisasi Pasokan dan Harga Pangan (SPHP) benar-benar memberikan manfaat bagi peternak rakyat. Menurutnya, selisih harga antara jagung di pasar yang mencapai sekitar",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "68d4fc1154df",
-   "url": "https://pks.id/content/33-masyarakat-dki-jakarta-buta-huruf-al-quran-hnw-luncurkan-program-pemberantasan-buta-huruf-al-quran",
-   "judul": "33% Masyarakat DKI Jakarta Buta Huruf Al-Qur’an, HNW Luncurkan Program Pemberantasan Buta Huruf Al-Qur’an",
-   "ringkas": "Wakil Ketua MPR RI sekaligus Anggota Komisi VIII DPR RI, Hidayat Nur Wahid, meluncurkan Program Pemberantasan Buta Huruf Al-Qur’an setelah survei terbaru di DKI Jakarta menemukan 33,2% responden masuk kategori buta huruf Al-Qur’an. Jika digabungkan dengan kategori pembaca dasar, ",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "928c0463127d",
-   "url": "https://pks.id/content/pendidikan-gratis-yang-berkeadilan-untuk-indonesia-emas-2045",
-   "judul": "Pendidikan Gratis Yang Berkeadilan Untuk Indonesia Emas 2045",
-   "ringkas": "Oleh Kurniasih Mufidayati Ketua DPP PKS Bidang Pendidikan dan Kesehatan",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "4163195cedf3",
-   "url": "https://pks.id/content/4-daya-kader-muda-pks",
-   "judul": "4 DAYA KADER MUDA PKS",
-   "ringkas": "Oleh Muhammad Kholid Sekretaris Jenderal DPP PKS",
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "4509e111b6ad",
-   "url": "https://pks.id/content/membangun-kepemimpinan-yang-berkelanjutan",
-   "judul": "Membangun Kepemimpinan yang Berkelanjutan",
-   "ringkas": null,
-   "tanggal": "2026-10-12",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "f6bfcd14ce39",
-   "url": "https://www.kemhan.go.id/2026/10/10/wamenhan-terima-audiensi-ketua-departemen-hi-fisip-ui-dan-sasakawa-peace-foundation-bahas-persiapan-the-sudirman-dialogue-2027.html",
-   "judul": "Wamenhan Terima Audiensi Ketua Departemen HI FISIP UI dan Sasakawa Peace Foundation, Bahas Persiapan The Sudirman Dialogue 2027",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan RI Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Ketua Departemen Hubungan Internasional FISIP...",
-   "tanggal": "2026-10-10",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "a0878c5ea22c",
    "url": "https://pks.id/content/mpp-pks-dorong-penguatan-platform-pembangunan-banten-yang-komprehensif-dan-berkelanjutan",
    "judul": "MPP PKS Dorong Penguatan Platform Pembangunan Banten yang Komprehensif dan Berkelanjutan",
@@ -1511,6 +1512,38 @@
    "judul": "FGD Platform PKS dalam Pembangunan Provinsi Banten, Satukan Gagasan untuk Kesejahteraan Masyarakat",
    "ringkas": "FGD menghadirkan Baran Wirawan, Sekretaris Majelis Pertimbangan Pusat (MPP) PKS, dan Memed Sosiawan, Ketua Kebijakan Publik MPP PKS. Kehadiran kedua narasumber diharapkan memperkuat proses pendalaman gagasan, penyelarasan arah kebijakan, serta penajaman perspektif pembangunan dae",
    "tanggal": "2026-10-10",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "f6bfcd14ce39",
+   "url": "https://www.kemhan.go.id/2026/10/10/wamenhan-terima-audiensi-ketua-departemen-hi-fisip-ui-dan-sasakawa-peace-foundation-bahas-persiapan-the-sudirman-dialogue-2027.html",
+   "judul": "Wamenhan Terima Audiensi Ketua Departemen HI FISIP UI dan Sasakawa Peace Foundation, Bahas Persiapan The Sudirman Dialogue 2027",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan RI Donny Ermawan Taufanto mewakili Menteri Pertahanan RI menerima audiensi Ketua Departemen Hubungan Internasional FISIP...",
+   "tanggal": "2026-10-10",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "a68609588b9b",
+   "url": "https://pks.id/content/pks-membaca-dorong-budaya-literasi-lewat-berbagi-cerita",
+   "judul": "PKS Membaca Dorong Budaya Literasi Lewat Berbagi Cerita",
+   "ringkas": "Bidang Seni dan Budaya DPP PKS kembali menggelar kegiatan PKS Membaca sebagai ruang berbagi gagasan, memperluas wawasan, dan menumbuhkan budaya literasi di kalangan anggota PKS pada Jumat (9/10/2026).",
+   "tanggal": "2026-10-09",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "76d0e8129d5c",
+   "url": "https://pks.id/content/asap-karhutla-meluas-pks-dorong-perlindungan-warga-dan-kepemimpinan-ri-di-asean",
+   "judul": "Asap Karhutla Meluas, PKS Dorong Perlindungan Warga dan Kepemimpinan RI di ASEAN",
+   "ringkas": "Sekretaris Jenderal Partai Keadilan Sejahtera (PKS) dan Anggota DPR RI Muhammad Kholid menyampaikan keprihatinan atas meluasnya dampak kabut asap kebakaran hutan dan lahan (karhutla) terhadap kesehatan warga di Sumatra dan Kalimantan. Ia mendorong agar penanganan tidak hanya berf",
+   "tanggal": "2026-10-09",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -1567,28 +1600,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "a68609588b9b",
-   "url": "https://pks.id/content/pks-membaca-dorong-budaya-literasi-lewat-berbagi-cerita",
-   "judul": "PKS Membaca Dorong Budaya Literasi Lewat Berbagi Cerita",
-   "ringkas": "Bidang Seni dan Budaya DPP PKS kembali menggelar kegiatan PKS Membaca sebagai ruang berbagi gagasan, memperluas wawasan, dan menumbuhkan budaya literasi di kalangan anggota PKS pada Jumat (9/10/2026).",
-   "tanggal": "2026-10-09",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "76d0e8129d5c",
-   "url": "https://pks.id/content/asap-karhutla-meluas-pks-dorong-perlindungan-warga-dan-kepemimpinan-ri-di-asean",
-   "judul": "Asap Karhutla Meluas, PKS Dorong Perlindungan Warga dan Kepemimpinan RI di ASEAN",
-   "ringkas": "Sekretaris Jenderal Partai Keadilan Sejahtera (PKS) dan Anggota DPR RI Muhammad Kholid menyampaikan keprihatinan atas meluasnya dampak kabut asap kebakaran hutan dan lahan (karhutla) terhadap kesehatan warga di Sumatra dan Kalimantan. Ia mendorong agar penanganan tidak hanya berf",
-   "tanggal": "2026-10-09",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "f1b28bf8c28a",
    "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
    "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
@@ -1597,46 +1608,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "4110172264b0",
-   "url": "https://www.kemhan.go.id/2026/10/08/wamenhan-tinjau-area-gudang-utara-kodam-iii-siliwangi.html",
-   "judul": "Wamenhan Tinjau Area Gudang Utara Kodam III/Siliwangi",
-   "ringkas": "Bandung – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto meninjau Area Gudang Utara, Kodam III/Siliwangi, Bandung, Jawa...",
-   "tanggal": "2026-10-08",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "96769b4a1c58",
-   "url": "https://www.kemhan.go.id/2026/10/08/menhan-tekankan-bela-negara-dan-patriotisme-kepada-siswa-latsarmil-komcad.html",
-   "judul": "Menhan Tekankan Bela Negara dan Patriotisme kepada Siswa Latsarmil Komcad",
-   "ringkas": "Bandung – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pengarahan kepada Siswa Latihan Dasar Kemiliteran (Latsarmil) Komponen Cadangan...",
-   "tanggal": "2026-10-08",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "05659b38d320",
-   "url": "https://www.kemhan.go.id/2026/10/08/wamenhan-bersama-wamenkes-tinjau-kesiapan-rs-tk-ii-dustira-layani-prajurit-dan-masyarakat.html",
-   "judul": "Wamenhan Bersama Wamenkes Tinjau Kesiapan RS Tk. II Dustira Layani Prajurit dan Masyarakat",
-   "ringkas": "Cimahi, Bandung – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto bersama Wakil Menteri Kesehatan Republik Indonesia (Wamenkes...",
-   "tanggal": "2026-10-08",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "97c1d43a2552",
-   "url": "https://tniad.mil.id/wisuda-1-944-prabahtar-kasad-tekankan-pentingnya-sinergi-tni-polri/",
-   "judul": "Wisuda 1.944 Prabahtar, Kasad Tekankan Pentingnya Sinergi TNI-Polri",
-   "ringkas": "Magelang, tniad.mil.id – Sebanyak 1.944 Prajurit Taruna Akademi TNI dan Bhayangkara Taruna Akademi Kepolisian (Prabahtar) Tahun 2026 menyelesaikan pendidikan dasar keprajuritan integratif dan mengikuti upacara wisuda di Magelang, Jawa Tengah,...",
-   "tanggal": "2026-10-08",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "66e20f6f45c3",
@@ -1703,6 +1674,46 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "4110172264b0",
+   "url": "https://www.kemhan.go.id/2026/10/08/wamenhan-tinjau-area-gudang-utara-kodam-iii-siliwangi.html",
+   "judul": "Wamenhan Tinjau Area Gudang Utara Kodam III/Siliwangi",
+   "ringkas": "Bandung – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto meninjau Area Gudang Utara, Kodam III/Siliwangi, Bandung, Jawa...",
+   "tanggal": "2026-10-08",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "96769b4a1c58",
+   "url": "https://www.kemhan.go.id/2026/10/08/menhan-tekankan-bela-negara-dan-patriotisme-kepada-siswa-latsarmil-komcad.html",
+   "judul": "Menhan Tekankan Bela Negara dan Patriotisme kepada Siswa Latsarmil Komcad",
+   "ringkas": "Bandung – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin memberikan pengarahan kepada Siswa Latihan Dasar Kemiliteran (Latsarmil) Komponen Cadangan...",
+   "tanggal": "2026-10-08",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "05659b38d320",
+   "url": "https://www.kemhan.go.id/2026/10/08/wamenhan-bersama-wamenkes-tinjau-kesiapan-rs-tk-ii-dustira-layani-prajurit-dan-masyarakat.html",
+   "judul": "Wamenhan Bersama Wamenkes Tinjau Kesiapan RS Tk. II Dustira Layani Prajurit dan Masyarakat",
+   "ringkas": "Cimahi, Bandung – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto bersama Wakil Menteri Kesehatan Republik Indonesia (Wamenkes...",
+   "tanggal": "2026-10-08",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "97c1d43a2552",
+   "url": "https://tniad.mil.id/wisuda-1-944-prabahtar-kasad-tekankan-pentingnya-sinergi-tni-polri/",
+   "judul": "Wisuda 1.944 Prabahtar, Kasad Tekankan Pentingnya Sinergi TNI-Polri",
+   "ringkas": "Magelang, tniad.mil.id – Sebanyak 1.944 Prajurit Taruna Akademi TNI dan Bhayangkara Taruna Akademi Kepolisian (Prabahtar) Tahun 2026 menyelesaikan pendidikan dasar keprajuritan integratif dan mengikuti upacara wisuda di Magelang, Jawa Tengah,...",
+   "tanggal": "2026-10-08",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "d866fb6d03b5",
@@ -1811,6 +1822,28 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "8793c16526db",
+   "url": "https://pks.id/content/meneguhkan-politik-sebagai-jalan-pengabdian",
+   "judul": "Meneguhkan Politik sebagai Jalan Pengabdian",
+   "ringkas": null,
+   "tanggal": "2026-10-06",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "8e8eabaf33b6",
+   "url": "https://pks.id/content/pks-alarm-keras-rentetan-kekerasan-di-sekolah-pendidikan-karakter-pancasila-dan-agama-harus-jadi-praktik-keseharian",
+   "judul": "PKS: Alarm Keras Rentetan Kekerasan di Sekolah, Pendidikan Karakter, Pancasila dan Agama Harus Jadi Praktik Keseharian",
+   "ringkas": "Ketua DPP PKS Bidang Pendidikan dan Kesehatan Kurniasih Mufidayati prihatin terhadap rangkaian kasus kekerasan yang melibatkan peserta didik maupun tenaga pendidik di sejumlah daerah. Kurniasih menyebut rangkaian kasus ini menjadi alarm jika pendidikan karakter, penanaman nilai P",
+   "tanggal": "2026-10-06",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "9c86f837f839",
@@ -1943,22 +1976,77 @@
    "cabang": "aparat"
   },
   {
-   "id": "8793c16526db",
-   "url": "https://pks.id/content/meneguhkan-politik-sebagai-jalan-pengabdian",
-   "judul": "Meneguhkan Politik sebagai Jalan Pengabdian",
-   "ringkas": null,
-   "tanggal": "2026-10-06",
+   "id": "5fcce47de110",
+   "url": "https://pks.id/content/keluarga-jadi-kunci-pembentukan-karakter-nilai-dan-kualitas-generasi",
+   "judul": "Keluarga Jadi Kunci Pembentukan Karakter, Nilai, dan Kualitas Generasi",
+   "ringkas": "“Ketahanan keluarga merupakan bagian penting dari ketahanan masyarakat. Karena itu, perhatian terhadap keluarga perlu ditempatkan sebagai bagian dari agenda pembangunan manusia dan kehidupan sosial yang berkelanjutan.” ujar Reti.",
+   "tanggal": "2026-10-05",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
   },
   {
-   "id": "8e8eabaf33b6",
-   "url": "https://pks.id/content/pks-alarm-keras-rentetan-kekerasan-di-sekolah-pendidikan-karakter-pancasila-dan-agama-harus-jadi-praktik-keseharian",
-   "judul": "PKS: Alarm Keras Rentetan Kekerasan di Sekolah, Pendidikan Karakter, Pancasila dan Agama Harus Jadi Praktik Keseharian",
-   "ringkas": "Ketua DPP PKS Bidang Pendidikan dan Kesehatan Kurniasih Mufidayati prihatin terhadap rangkaian kasus kekerasan yang melibatkan peserta didik maupun tenaga pendidik di sejumlah daerah. Kurniasih menyebut rangkaian kasus ini menjadi alarm jika pendidikan karakter, penanaman nilai P",
-   "tanggal": "2026-10-06",
+   "id": "39b706d4767c",
+   "url": "https://pks.id/content/mpw-pks-dki-jakarta-sampaikan-pentingnya-pemahaman-konsepsi-dasar-partai",
+   "judul": "MPW PKS DKI Jakarta Sampaikan Pentingnya Pemahaman Konsepsi Dasar Partai",
+   "ringkas": "Ketua Majelis Pertimbangan Wilayah (MPW) PKS DKI Jakarta Muhammad Taufik Zoekifli (MTZ) menyampaikan pentingnya pemahaman konsepsi dasar partai oleh seluruh pmpinan, anggota dan pejabat publik PKS termasuk didalamnya Anggota DPRD DKI Jakarta, yang diselenggarakan sejak 3 sampai 4",
+   "tanggal": "2026-10-05",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "b1cb5f7d4f1f",
+   "url": "https://pks.id/content/skdp-pks-perkuat-wanantara-perkokoh-soliditas-organisasi",
+   "judul": "SKDP PKS Perkuat Wanantara, Perkokoh Soliditas Organisasi",
+   "ringkas": "\"Keamanan organisasi bukan hanya persoalan menghadapi ancaman, tetapi juga kemampuan membangun ketahanan. Organisasi yang memiliki wawasan keamanan akan lebih siap mengenali perubahan, mengantisipasi risiko, dan mengambil langkah yang tepat.” ujar Sapto.",
+   "tanggal": "2026-10-05",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "5ee871947007",
+   "url": "https://pks.id/content/relawan-pks-lanjutkan-pembersihan-kantor-bpmn-solok-13-hari-pascagalodo",
+   "judul": "Relawan PKS Lanjutkan Pembersihan Kantor BPMN Solok 13 Hari Pascagalodo",
+   "ringkas": "Relawan kemanusiaan PKS masih terus bergerak di Kabupaten Solok. Mereka konsisten bekerja membantu warga dan pemerintah daerah. Penanganan pascabencana galodo ini sudah memasuki hari ketiga belas.",
+   "tanggal": "2026-10-05",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "fa2240a9c2b8",
+   "url": "https://pks.id/content/sambut-menlu-baru-legislator-pks-dorong-kemlu-perkuat-kemandirian-politik-luar-negeri-indonesia",
+   "judul": "Sambut Menlu Baru, Legislator PKS Dorong Kemlu Perkuat Kemandirian Politik Luar Negeri Indonesia",
+   "ringkas": "Wakil Ketua Komisi I DPR RI Fraksi PKS Sukamta menyampaikan selamat atas amanah baru Arrmanatha Nasir sebagai Menteri Luar Negeri. Ia berharap pengalaman panjang Arrmanatha sebagai diplomat karier dapat memperkuat diplomasi Indonesia di tengah dinamika global yang semakin komplek",
+   "tanggal": "2026-10-05",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "b975979c4665",
+   "url": "https://pks.id/content/legislator-pks-dorong-penguatan-perlindungan-atlet-perempuan-dari-kejahatan-seksual",
+   "judul": "Legislator PKS Dorong Penguatan Perlindungan Atlet Perempuan dari Kejahatan Seksual",
+   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS, Surahman Hidayat, menyampaikan keprihatinan mendalam atas penderitaan yang dialami atlet putri panjat tebing korban kekerasan seksual oleh mantan pelatih Pelatnas. Kasus ini mencederai martabat olahraga nasional dan menunjukkan betapa lemahn",
+   "tanggal": "2026-10-05",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "d190afabaae4",
+   "url": "https://pks.id/content/fraksi-pks-rp10-t-mbg-harus-kembali-ke-piring-anak-jangan-hilang-di-tengah-jalan",
+   "judul": "Fraksi PKS: Rp10 T MBG Harus Kembali ke Piring Anak, Jangan Hilang di Tengah Jalan",
+   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, meminta penguatan tata kelola Program MBG dilakukan secara menyeluruh, mulai dari keamanan pangan hingga transparansi angaran.",
+   "tanggal": "2026-10-05",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -2038,83 +2126,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "5fcce47de110",
-   "url": "https://pks.id/content/keluarga-jadi-kunci-pembentukan-karakter-nilai-dan-kualitas-generasi",
-   "judul": "Keluarga Jadi Kunci Pembentukan Karakter, Nilai, dan Kualitas Generasi",
-   "ringkas": "“Ketahanan keluarga merupakan bagian penting dari ketahanan masyarakat. Karena itu, perhatian terhadap keluarga perlu ditempatkan sebagai bagian dari agenda pembangunan manusia dan kehidupan sosial yang berkelanjutan.” ujar Reti.",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "39b706d4767c",
-   "url": "https://pks.id/content/mpw-pks-dki-jakarta-sampaikan-pentingnya-pemahaman-konsepsi-dasar-partai",
-   "judul": "MPW PKS DKI Jakarta Sampaikan Pentingnya Pemahaman Konsepsi Dasar Partai",
-   "ringkas": "Ketua Majelis Pertimbangan Wilayah (MPW) PKS DKI Jakarta Muhammad Taufik Zoekifli (MTZ) menyampaikan pentingnya pemahaman konsepsi dasar partai oleh seluruh pmpinan, anggota dan pejabat publik PKS termasuk didalamnya Anggota DPRD DKI Jakarta, yang diselenggarakan sejak 3 sampai 4",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "b1cb5f7d4f1f",
-   "url": "https://pks.id/content/skdp-pks-perkuat-wanantara-perkokoh-soliditas-organisasi",
-   "judul": "SKDP PKS Perkuat Wanantara, Perkokoh Soliditas Organisasi",
-   "ringkas": "\"Keamanan organisasi bukan hanya persoalan menghadapi ancaman, tetapi juga kemampuan membangun ketahanan. Organisasi yang memiliki wawasan keamanan akan lebih siap mengenali perubahan, mengantisipasi risiko, dan mengambil langkah yang tepat.” ujar Sapto.",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "5ee871947007",
-   "url": "https://pks.id/content/relawan-pks-lanjutkan-pembersihan-kantor-bpmn-solok-13-hari-pascagalodo",
-   "judul": "Relawan PKS Lanjutkan Pembersihan Kantor BPMN Solok 13 Hari Pascagalodo",
-   "ringkas": "Relawan kemanusiaan PKS masih terus bergerak di Kabupaten Solok. Mereka konsisten bekerja membantu warga dan pemerintah daerah. Penanganan pascabencana galodo ini sudah memasuki hari ketiga belas.",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "fa2240a9c2b8",
-   "url": "https://pks.id/content/sambut-menlu-baru-legislator-pks-dorong-kemlu-perkuat-kemandirian-politik-luar-negeri-indonesia",
-   "judul": "Sambut Menlu Baru, Legislator PKS Dorong Kemlu Perkuat Kemandirian Politik Luar Negeri Indonesia",
-   "ringkas": "Wakil Ketua Komisi I DPR RI Fraksi PKS Sukamta menyampaikan selamat atas amanah baru Arrmanatha Nasir sebagai Menteri Luar Negeri. Ia berharap pengalaman panjang Arrmanatha sebagai diplomat karier dapat memperkuat diplomasi Indonesia di tengah dinamika global yang semakin komplek",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "b975979c4665",
-   "url": "https://pks.id/content/legislator-pks-dorong-penguatan-perlindungan-atlet-perempuan-dari-kejahatan-seksual",
-   "judul": "Legislator PKS Dorong Penguatan Perlindungan Atlet Perempuan dari Kejahatan Seksual",
-   "ringkas": "Anggota Komisi VIII DPR RI Fraksi PKS, Surahman Hidayat, menyampaikan keprihatinan mendalam atas penderitaan yang dialami atlet putri panjat tebing korban kekerasan seksual oleh mantan pelatih Pelatnas. Kasus ini mencederai martabat olahraga nasional dan menunjukkan betapa lemahn",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "d190afabaae4",
-   "url": "https://pks.id/content/fraksi-pks-rp10-t-mbg-harus-kembali-ke-piring-anak-jangan-hilang-di-tengah-jalan",
-   "judul": "Fraksi PKS: Rp10 T MBG Harus Kembali ke Piring Anak, Jangan Hilang di Tengah Jalan",
-   "ringkas": "Anggota Komisi IX DPR RI, Netty Prasetiyani Aher, meminta penguatan tata kelola Program MBG dilakukan secara menyeluruh, mulai dari keamanan pangan hingga transparansi angaran.",
-   "tanggal": "2026-10-05",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "1c6c1cbebac0",
    "url": "https://kontras.org/peringatan-hari-tni-ke-81-hilang-arah-reformasi-militer-di-institusi-tni/",
    "judul": "Peringatan Hari TNI Ke-81: Hilang Arah Reformasi Militer di Institusi TNI",
@@ -2177,36 +2188,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "b726ccab8d8b",
-   "url": "https://www.kemhan.go.id/2026/10/03/menhan-beri-motivasi-prajurit-yonif-tp-922-ut-dalam-mengemban-tugas-di-perbatasan.html",
-   "judul": "Menhan Beri Motivasi Prajurit Yonif TP 922/UT dalam Mengemban Tugas di Perbatasan",
-   "ringkas": "Tana Tidung, Kalimantan Utara – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshalling Area Batalyon...",
-   "tanggal": "2026-10-03",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "03d44002a1d8",
-   "url": "https://www.kemhan.go.id/2026/10/03/kunker-ke-malinau-menhan-sjafrie-tinjau-yonif-tp-921-alang-impang-dan-tegaskan-peran-prajurit-di-perbatasan.html",
-   "judul": "Kunker ke Malinau, Menhan Sjafrie Tinjau Yonif TP 921/Alang Impang dan Tegaskan Peran Prajurit di Perbatasan",
-   "ringkas": "Malinau, Kalimantan Utara – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
-   "tanggal": "2026-10-03",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "99a9ced6a128",
-   "url": "https://www.kemhan.go.id/2026/10/03/tinjau-yonif-tp-881-baratama-dharma-di-sebuku-nunukan-menhan-sjafrie-prajurit-perbatasan-harus-siap-hadapi-ancaman-dan-mengawal-kedaulatan-nkri.html",
-   "judul": "Tinjau Yonif TP 881/Baratama Dharma di Sebuku Nunukan, Menhan Sjafrie: Prajurit Perbatasan Harus Siap Hadapi Ancaman dan Mengawal Kedaulatan NKRI",
-   "ringkas": "Sebuku, Nunukan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
-   "tanggal": "2026-10-03",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "8f0170f25f8a",
@@ -2286,6 +2267,36 @@
    "partai": "pks"
   },
   {
+   "id": "b726ccab8d8b",
+   "url": "https://www.kemhan.go.id/2026/10/03/menhan-beri-motivasi-prajurit-yonif-tp-922-ut-dalam-mengemban-tugas-di-perbatasan.html",
+   "judul": "Menhan Beri Motivasi Prajurit Yonif TP 922/UT dalam Mengemban Tugas di Perbatasan",
+   "ringkas": "Tana Tidung, Kalimantan Utara – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja ke Marshalling Area Batalyon...",
+   "tanggal": "2026-10-03",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "03d44002a1d8",
+   "url": "https://www.kemhan.go.id/2026/10/03/kunker-ke-malinau-menhan-sjafrie-tinjau-yonif-tp-921-alang-impang-dan-tegaskan-peran-prajurit-di-perbatasan.html",
+   "judul": "Kunker ke Malinau, Menhan Sjafrie Tinjau Yonif TP 921/Alang Impang dan Tegaskan Peran Prajurit di Perbatasan",
+   "ringkas": "Malinau, Kalimantan Utara – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
+   "tanggal": "2026-10-03",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "99a9ced6a128",
+   "url": "https://www.kemhan.go.id/2026/10/03/tinjau-yonif-tp-881-baratama-dharma-di-sebuku-nunukan-menhan-sjafrie-prajurit-perbatasan-harus-siap-hadapi-ancaman-dan-mengawal-kedaulatan-nkri.html",
+   "judul": "Tinjau Yonif TP 881/Baratama Dharma di Sebuku Nunukan, Menhan Sjafrie: Prajurit Perbatasan Harus Siap Hadapi Ancaman dan Mengawal Kedaulatan NKRI",
+   "ringkas": "Sebuku, Nunukan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
+   "tanggal": "2026-10-03",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "d129e5ae09b3",
    "url": "https://kontras.org/laporan-situasi-ham-caturwulan-kedua-2026-gempuran-kekerasan/",
    "judul": "Laporan Situasi HAM Caturwulan kedua 2026: Gempuran Kekerasan",
@@ -2294,26 +2305,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "b0b7a6215586",
-   "url": "https://www.kemhan.go.id/2026/10/02/kunker-ke-kaltara-menhan-sjafrie-tinjau-yonif-tp-880-banuanta-di-bulungan-tegaskan-kemampuan-tempur-dan-teritorial-pembangunan-untuk-kedaulatan-perbatasan.html",
-   "judul": "Kunker ke Kaltara, Menhan Sjafrie Tinjau Yonif TP 880/Banuanta di Bulungan: Tegaskan Kemampuan Tempur dan Teritorial Pembangunan untuk Kedaulatan Perbatasan",
-   "ringkas": "Tanjung Selor, Bulungan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
-   "tanggal": "2026-10-02",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "96b7bab0a0d8",
-   "url": "https://tniad.mil.id/pendekatan-prajurit-berbuah-kepercayaan-masyarakat-sukarela-serahkan-75-senjata/",
-   "judul": "Pendekatan Prajurit Berbuah Kepercayaan, Masyarakat Sukarela Serahkan 75 Senjata",
-   "ringkas": "Ternate, tniad.mil.id – Pendekatan persuasif dan komunikasi yang dibangun prajurit jajaran Korem 152/Baabullah berhasil menumbuhkan kepercayaan di hati masyarakat Ternate. Hasilnya, masyarakat secara sukarela menyerahkan 75 pucuk senjata api, 1.111...",
-   "tanggal": "2026-10-02",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "5a587e7b3c80",
@@ -2371,6 +2362,26 @@
    "partai": "pks"
   },
   {
+   "id": "b0b7a6215586",
+   "url": "https://www.kemhan.go.id/2026/10/02/kunker-ke-kaltara-menhan-sjafrie-tinjau-yonif-tp-880-banuanta-di-bulungan-tegaskan-kemampuan-tempur-dan-teritorial-pembangunan-untuk-kedaulatan-perbatasan.html",
+   "judul": "Kunker ke Kaltara, Menhan Sjafrie Tinjau Yonif TP 880/Banuanta di Bulungan: Tegaskan Kemampuan Tempur dan Teritorial Pembangunan untuk Kedaulatan Perbatasan",
+   "ringkas": "Tanjung Selor, Bulungan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
+   "tanggal": "2026-10-02",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "96b7bab0a0d8",
+   "url": "https://tniad.mil.id/pendekatan-prajurit-berbuah-kepercayaan-masyarakat-sukarela-serahkan-75-senjata/",
+   "judul": "Pendekatan Prajurit Berbuah Kepercayaan, Masyarakat Sukarela Serahkan 75 Senjata",
+   "ringkas": "Ternate, tniad.mil.id – Pendekatan persuasif dan komunikasi yang dibangun prajurit jajaran Korem 152/Baabullah berhasil menumbuhkan kepercayaan di hati masyarakat Ternate. Hasilnya, masyarakat secara sukarela menyerahkan 75 pucuk senjata api, 1.111...",
+   "tanggal": "2026-10-02",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "3be625355c2f",
    "url": "https://www.kemhan.go.id/2026/10/01/menhan-sjafrie-hadiri-pelantikan-pejabat-kabinet-merah-putih-dan-penganugerahan-tanda-kehormatan.html",
    "judul": "Menhan Sjafrie Hadiri Pelantikan Pejabat Kabinet Merah Putih dan Penganugerahan Tanda Kehormatan",
@@ -2409,17 +2420,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "d329f7dd967e",
-   "url": "https://pks.id/content/nurisa-persembahkan-emas-kelima-pks-terima-kasih-atlet-indonesia",
-   "judul": "Nurisa Persembahkan Emas Kelima, PKS: Terima Kasih Atlet Indonesia",
-   "ringkas": "Capaian tersebut mendapat apresiasi dari Ketua DPP PKS Bidang Pengembangan dan Pembinaan Olahraga Defrizal Siregar. Ia menyampaikan penghargaan kepada seluruh atlet, pelatih, ofisial, dan pihak-pihak yang telah bekerja keras mengharumkan nama Indonesia di kancah olahraga Asia.",
-   "tanggal": "2026-10-01",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "6829ad727bc1",
