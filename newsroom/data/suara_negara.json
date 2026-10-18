@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-18T13:53:32+00:00",
+ "diambil": "2026-10-18T23:50:37+00:00",
  "baris": [
   {
    "id": "1d8fdd2a0f77",
@@ -32,6 +32,16 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
+  },
+  {
+   "id": "cb4c98795f39",
+   "url": "https://www.kemhan.go.id/2026/10/18/kunker-ke-jembrana-bali-menhan-sjafrie-tinjau-yonif-tp-928-brata-sena-yudha.html",
+   "judul": "Kunker ke Jembrana Bali, Menhan Sjafrie Tinjau Yonif TP 928/Brata Sena Yudha",
+   "ringkas": "Gilimanuk, Jembrana – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja dalam rangka meninjau Marshalling Area Batalyon...",
+   "tanggal": "2026-10-18",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "c4baf12322f2",
@@ -2766,16 +2776,6 @@
    "url": "https://www.kemhan.go.id/2026/09/22/tinjau-yonif-tp-337-sutajaya-di-cirebon-menhan-sjafrie-tegaskan-peran-strategis-yonif-tp-dalam-sishankamrata.html",
    "judul": "Tinjau Yonif TP 337/Sutajaya di Cirebon, Menhan Sjafrie Tegaskan Peran Strategis Yonif TP dalam Sishankamrata",
    "ringkas": "Cirebon – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area Batalyon Infanteri...",
-   "tanggal": "2026-09-22",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "ebce82efada5",
-   "url": "https://www.kemhan.go.id/2026/09/22/menhan-sjafrie-tinjau-marshalling-area-yonif-tp-331-sanca-manggala-kemampuan-menembak-bela-diri-dan-patroli-adalah-kewajiban-prajurit.html",
-   "judul": "Menhan Sjafrie Tinjau Marshalling Area Yonif TP 331/Sanca Manggala: Kemampuan Menembak, Bela Diri dan Patroli adalah Kewajiban Prajurit",
-   "ringkas": "Sukabumi – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin didampingi Wakil Panglima TNI (Wapang TNI) Jenderal TNI Tandyo Budi...",
    "tanggal": "2026-09-22",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
