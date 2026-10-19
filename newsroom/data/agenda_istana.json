@@ -4,8 +4,46 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-16T23:45:45+00:00",
+ "diambil": "2026-10-19T16:34:22+00:00",
  "acara": [
+  {
+   "id": "8d716024002d",
+   "url": "https://setkab.go.id/presiden-prabowo-sambut-kunjungan-sekjen-pbb-antonio-guterres-di-hambalang/",
+   "judul": "Presiden Prabowo Sambut Kunjungan Sekjen PBB António Guterres di Hambalang",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-18",
+   "tanggal_terbit": "2026-10-18",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9b4d0c531caa",
+   "url": "https://setkab.go.id/kepuasan-publik-dari-hasil-survei-terbaru-ppi-terhadap-kinerja-pemerintah-dan-presiden-prabowo-berada-di-atas-65-persen/",
+   "judul": "Kepuasan Publik dari Hasil Survei Terbaru PPI terhadap Kinerja Pemerintah dan Presiden Prabowo Berada di Atas 65 Persen",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-18",
+   "tanggal_terbit": "2026-10-18",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "ab6a0cb1a8e1",
    "url": "https://wapresri.go.id/wapres-dorong-penyelarasan-pendidikan-vokasi-dan-kebutuhan-industri-untuk-perkuat-sdm-muda/",
@@ -157,6 +195,39 @@
    "topik": [
     "hukum",
     "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2d6bdba59296",
+   "url": "https://wapresri.go.id/ibu-selvi-kunjungi-penerima-bantuan-bedah-rumah-dan-usaha-di-gorontalo/",
+   "judul": "Ibu Selvi Kunjungi Penerima Bantuan Bedah Rumah dan Usaha di Gorontalo",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-14",
+   "tanggal_terbit": "2026-10-14",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b007533e59c4",
+   "url": "https://wapresri.go.id/dari-gizi-balita-hingga-kesehatan-nelayan-ibu-selvi-kunjungi-layanan-kesehatan-di-gorontalo/",
+   "judul": "Dari Gizi Balita hingga Kesehatan Nelayan, Ibu Selvi Kunjungi Layanan Kesehatan di Gorontalo",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-14",
+   "tanggal_terbit": "2026-10-14",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "kesehatan"
    ],
    "venue": null,
    "kota": null,
