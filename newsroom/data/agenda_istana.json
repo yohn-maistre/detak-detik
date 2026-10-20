@@ -4,8 +4,129 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-19T16:34:22+00:00",
+ "diambil": "2026-10-20T14:24:43+00:00",
  "acara": [
+  {
+   "id": "e7a1f767b515",
+   "url": "https://wapresri.go.id/wapres-terima-audiensi-majelis-pekerja-sinode-gereja-kristen-sulbar-di-istana-wapres/",
+   "judul": "Wapres Terima Audiensi Majelis Pekerja Sinode Gereja Kristen Sulbar di Istana Wapres",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "83bf5371a148",
+   "url": "https://wapresri.go.id/terima-walubi-wapres-dorong-penguatan-aksi-kemanusiaan-dan-persatuan-bangsa/",
+   "judul": "Terima WALUBI, Wapres Dorong Penguatan Aksi Kemanusiaan dan Persatuan Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b64b4e0b43f4",
+   "url": "https://setkab.go.id/dua-tahun-pemerintahan-presiden-prabowo-investasi-rp3-9232-triliun-serap-548-juta-tenaga-kerja-lebih-separuh-di-luar-jawa/",
+   "judul": "Dua Tahun Pemerintahan Presiden Prabowo, Investasi Rp3.923,2 Triliun Serap 5,48 Juta Tenaga Kerja, Lebih Separuh di Luar Jawa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-19",
+   "tanggal_terbit": "2026-10-19",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a6e25b24458d",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-laporan-ekonomi-ekspor-dipacu-dan-belanja-apbn-rp1-300-triliun-disiapkan-pada-triwulan-iv/",
+   "judul": "Presiden Prabowo Terima Laporan Ekonomi, Ekspor Dipacu dan Belanja APBN Rp1.300 Triliun Disiapkan pada Triwulan IV",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-19",
+   "tanggal_terbit": "2026-10-19",
+   "audiens": "Triwulan IV",
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3010b5fd6876",
+   "url": "https://setkab.go.id/presiden-prabowo-instruksikan-penanganan-karhutla-lebih-masif-dan-terpadu/",
+   "judul": "Presiden Prabowo Instruksikan Penanganan Karhutla Lebih Masif dan Terpadu",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-19",
+   "tanggal_terbit": "2026-10-19",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f021edafdf2b",
+   "url": "https://setkab.go.id/jelang-dua-tahun-pemerintahan-presiden-prabowo-instruksikan-ksp-kawal-program-prioritas-nasional/",
+   "judul": "Jelang Dua Tahun Pemerintahan, Presiden Prabowo Instruksikan KSP Kawal Program Prioritas Nasional",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-19",
+   "tanggal_terbit": "2026-10-19",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "dd7388e3d554",
+   "url": "https://setkab.go.id/presiden-prabowo-tekankan-aparatur-profesional-dan-berintegritas-pelayanan-harus-menjawab-kebutuhan-rakyat/",
+   "judul": "Presiden Prabowo Tekankan Aparatur Profesional dan Berintegritas, Pelayanan Harus Menjawab Kebutuhan Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-19",
+   "tanggal_terbit": "2026-10-19",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "8d716024002d",
    "url": "https://setkab.go.id/presiden-prabowo-sambut-kunjungan-sekjen-pbb-antonio-guterres-di-hambalang/",
