@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-20T14:24:43+00:00",
+ "diambil": "2026-10-21T14:59:53+00:00",
  "acara": [
   {
    "id": "e7a1f767b515",
@@ -33,6 +33,116 @@
    "tanggal_terbit": "2026-10-20",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e166aa9fa3c6",
+   "url": "https://setkab.go.id/presiden-prabowo-bahas-rekomendasi-den-dan-perkuat-ekonomi-di-tengah-dinamika-global/",
+   "judul": "Presiden Prabowo Bahas Rekomendasi DEN dan Perkuat  Ekonomi di Tengah Dinamika Global",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "777a0ae48d90",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-apresiasi-sekjen-pbb-atas-dukungan-indonesia/",
+   "judul": "Presiden Prabowo Terima Apresiasi Sekjen PBB atas Dukungan Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "37fe4e693ef1",
+   "url": "https://setkab.go.id/presiden-prabowo-beri-penghormatan-terakhir-kepada-almarhum-subagyo-h-s-di-mabesad/",
+   "judul": "Presiden Prabowo Beri Penghormatan Terakhir kepada Almarhum Subagyo H. S. di Mabesad",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": "Almarhum Subagyo H. S.",
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "518917466a01",
+   "url": "https://setkab.go.id/seskab-teddy-bagikan-sekilas-cuplikan-hasil-nyata-2-tahun-pemerintahan/",
+   "judul": "Seskab Teddy Bagikan Sekilas Cuplikan Hasil Nyata 2 Tahun Pemerintahan",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pangan",
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d56c6dc548a9",
+   "url": "https://setkab.go.id/survei-poltracking-kepercayaan-publik-kepada-pemerintahan-prabowo-gibran-648-persen-mayoritas-yakini-kebijakan-berpihak-kepada-rakyat-kecil/",
+   "judul": "Survei Poltracking: Kepercayaan Publik kepada Pemerintahan Prabowo-Gibran 64,8 Persen, Mayoritas Yakini Kebijakan Berpihak kepada Rakyat Kecil",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": "Pemerintahan Prabowo-Gibran 64",
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "cee0202e5394",
+   "url": "https://setkab.go.id/pemerintah-jaga-pasokan-energi-dan-dorong-penguatan-hilirisasi-nasional/",
+   "judul": "Pemerintah Jaga Pasokan Energi dan Dorong Penguatan Hilirisasi Nasional",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-20",
+   "tanggal_terbit": "2026-10-20",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
