@@ -4,8 +4,43 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-21T14:59:53+00:00",
+ "diambil": "2026-10-22T14:36:03+00:00",
  "acara": [
+  {
+   "id": "0487072acdc8",
+   "url": "https://setkab.go.id/seskab-teddy-ungkap-arahan-presiden-prabowo-dalam-sidang-kabinet-paripurna-perkuat-ketahanan-nasional-hingga-tindak-tegas-karhutla/",
+   "judul": "Seskab Teddy Ungkap Arahan Presiden Prabowo dalam Sidang Kabinet Paripurna: Perkuat Ketahanan Nasional hingga Tindak Tegas Karhutla",
+   "aktor": "PRESIDEN",
+   "jenis": "SIDANG KABINET",
+   "tanggal_acara": "2026-10-22",
+   "tanggal_terbit": "2026-10-22",
+   "audiens": null,
+   "topik": [
+    "hukum",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "87327973efec",
+   "url": "https://wapresri.go.id/terima-jajaran-universitas-teknologi-wapres-dukung-program-penguatan-literasi-santri/",
+   "judul": "Terima Jajaran Universitas Teknologi Digital Indonesia, Wapres Dukung Program Penguatan Literasi Digital Santri",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-22",
+   "tanggal_terbit": "2026-10-22",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e7a1f767b515",
    "url": "https://wapresri.go.id/wapres-terima-audiensi-majelis-pekerja-sinode-gereja-kristen-sulbar-di-istana-wapres/",

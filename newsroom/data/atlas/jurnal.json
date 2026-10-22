@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-21T14:37:19.292661+00:00",
- "edisi": 306,
+ "diperbarui": "2026-10-22T14:39:00.817998+00:00",
+ "edisi": 308,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Penelitian ini mengkaji insentif pajak lingkungan dan investasi hijau perusahaan multinasional di Indonesia. Relevan bagi pembuat kebijakan untuk mendorong pembangunan berkelanjutan dan ekonomi hijau di Indonesia.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Analisis biaya-manfaat regimen pengobatan HIV di Indonesia sangat penting untuk efisiensi sistem kesehatan. Hasil studi ini dapat menjadi dasar rekomendasi kebijakan kesehatan nasional.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Assessing seagrass climate risk and biodiversity vulnerability to support marine spatial planning in Indonesia",
+   "wadah": "Marine Policy",
+   "doi": "10.1016/j.marpol.2026.107326",
+   "tanggal": "2027-2",
+   "alasan": "Studi ini mengevaluasi risiko iklim dan kerentanan keanekaragaman hayati lamun di Indonesia. Relevan untuk perencanaan tata ruang laut dan konservasi ekosistem pesisir Indonesia yang kaya.",
+   "kategori": "KELAUTAN & PESISIR",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Penelitian ini mengidentifikasi zona potensial sistem panas bumi di Solok Selatan, Indonesia. Sangat relevan untuk pengembangan sumber energi terbarukan dan eksplorasi panas bumi di Indonesia.",
+   "kategori": "GEOLOGI & ENERGI",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan pertama penyakit busuk buah kakao di Sulawesi Selatan ini penting bagi petani dan industri perkakaoan. Relevan untuk pencegahan kerugian dan peningkatan ketahanan pangan di Indonesia.",
+   "kategori": "PERTANIAN & PANGAN",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Studi ini menelaah batasan dan celah hukum terkait kekerasan dalam mendisiplinkan anak di Indonesia. Sangat relevan untuk perlindungan anak dan reformasi sistem hukum di Indonesia.",
+   "kategori": "PERLINDUNGAN ANAK",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Non-stationary generalised extreme value modeling of extreme rainfall in Makassar, Indonesia",
+   "wadah": "Kuwait Journal of Science",
+   "doi": "10.1016/j.kjs.2026.100696",
+   "tanggal": "2027-1",
+   "alasan": "Pemodelan curah hujan ekstrem di Makassar ini penting untuk mitigasi bencana banjir dan perencanaan kota. Relevan bagi pemerintah daerah dan masyarakat dalam menghadapi perubahan iklim.",
+   "kategori": "IKLIM & BENCANA",
+   "sejak_edisi": 308
+  },
+  {
+   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
+   "wadah": "International Journal of Sustainable Society",
+   "doi": "10.1504/ijssoc.2027.10075235",
+   "tanggal": "2027",
+   "alasan": "Penelitian ini mengembangkan model kontrol area hutan di DAS Anai, Sumatera Barat. Relevan untuk kebijakan konservasi dan pengelolaan hutan berkelanjutan di wilayah Indonesia.",
+   "kategori": "KEHUTANAN & LINGKUNGAN",
+   "sejak_edisi": 308
+  },
   {
    "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
    "wadah": "The Extractive Industries and Society",
@@ -37,78 +109,6 @@
    "alasan": "Karakterisasi produk cair dari pirolisis langsung aspal batuan Buton, Indonesia. Penelitian ini sangat penting untuk memahami potensi pemanfaatan sumber daya alam lokal ini sebagai bahan bakar alternatif atau produk bernilai tambah di Indonesia.",
    "kategori": "SUMBER DAYA MINERAL",
    "sejak_edisi": 306
-  },
-  {
-   "judul": "Intergenerational eco-craft, women's agency, and climate adaptation in Telaga Biru Coastal Village, Madura, Indonesia",
-   "wadah": "Women's Studies International Forum",
-   "doi": "10.1016/j.wsif.2026.103450",
-   "tanggal": "2027-1",
-   "alasan": "Menyelidiki kerajinan ramah lingkungan, peran perempuan, dan adaptasi iklim di Desa Pesisir Telaga Biru, Madura. Studi ini menyoroti strategi masyarakat lokal dalam menghadapi perubahan iklim dan pemberdayaan perempuan di daerah pesisir Indonesia.",
-   "kategori": "ADAPTASI MASYARAKAT",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis kemiskinan energi multidimensional di Indonesia, dengan perbandingan perspektif perkotaan dan pedesaan. Studi ini penting untuk merancang kebijakan energi yang inklusif dan merata, memastikan akses energi bagi seluruh lapisan masyarakat.",
-   "kategori": "KETIMPANGAN ENERGI",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji ekonomi politik transisi energi bersih di Indonesia, merefleksikan dinamika kepentingan antara keuntungan dan keberlanjutan. Penelitian ini esensial untuk memahami tantangan dan peluang menuju energi terbarukan nasional.",
-   "kategori": "TRANSISI ENERGI",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Land meets sea: How upland clearing threatens coral reef health in Ambon Bay, Maluku Province, Indonesia",
-   "wadah": "Marine Pollution Bulletin",
-   "doi": "10.1016/j.marpolbul.2026.120475",
-   "tanggal": "2027-1",
-   "alasan": "Menjelaskan bagaimana pembukaan lahan di daratan mengancam kesehatan terumbu karang di Teluk Ambon, Maluku. Studi ini krusial untuk pengelolaan pesisir dan laut terpadu, melindungi keanekaragaman hayati dan mata pencarian masyarakat pesisir Indonesia.",
-   "kategori": "EKOSISTEM LAUT",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Makalah ini meninjau hambatan pengembangan panas bumi di Indonesia, khususnya di cekungan sedimen. Hasilnya relevan untuk memahami dan mengatasi tantangan energi terbarukan di negara ini.",
-   "kategori": "ENERGI & KEBIJAKAN",
-   "sejak_edisi": 304
-  },
-  {
-   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107325",
-   "tanggal": "2027-2",
-   "alasan": "Penelitian ini mengkaji ekologi politik di balik penurunan perikanan skala kecil di Indonesia. Pemahaman ini penting untuk melindungi mata pencarian nelayan dan keberlanjutan sumber daya laut kita.",
-   "kategori": "KELAUTAN & MASYARAKAT",
-   "sejak_edisi": 304
-  },
-  {
-   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
-   "wadah": "Diagnostic Microbiology and Infectious Disease",
-   "doi": "10.1016/j.diagmicrobio.2026.117663",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini membandingkan metode deteksi patogen pernapasan pada pasien SARI di Indonesia. Ini berpotensi meningkatkan diagnosis penyakit infeksi pernapasan dan respons kesehatan masyarakat.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 304
-  },
-  {
-   "judul": "Lending in Need: Natural Disaster Shocks and Online Borrowing in Indonesia",
-   "wadah": "Journal of Business Research",
-   "doi": "10.1016/j.jbusres.2026.116587",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini menyelidiki dampak guncangan bencana alam terhadap pinjaman daring di Indonesia. Temuan ini membantu memahami perilaku finansial masyarakat dan kebutuhan akan dukungan pasca-bencana.",
-   "kategori": "EKONOMI & BENCANA",
-   "sejak_edisi": 304
   }
  ]
 }
