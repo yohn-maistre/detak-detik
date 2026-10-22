@@ -9,8 +9,19 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-21T15:00:07+00:00",
+ "diambil": "2026-10-22T00:21:02+00:00",
  "baris": [
+  {
+   "id": "00df1d5bb6a6",
+   "url": "https://pks.id/content/fgd-pks-banten-rumuskan-platform-pembangunan-untuk-banten-yang-adil-dan-merata",
+   "judul": "FGD PKS Banten Rumuskan Platform Pembangunan untuk Banten yang Adil dan Merata",
+   "ringkas": "Ketua DPW PKS Banten, Najib Hamas, mengatakan FGD menjadi ruang kolaborasi antara kader dan pakar untuk merumuskan gagasan terbaik bagi kemajuan Banten. Menurutnya, pembangunan daerah harus dilandasi kecintaan yang diwujudkan melalui tindakan nyata dan kepedulian berkelanjutan.",
+   "tanggal": "2026-10-22",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
   {
    "id": "4d07e1829e2f",
    "url": "https://pks.id/content/membangun-ekosistem-pemimpin-masa-depan",
@@ -305,6 +316,16 @@
    "cabang": "pengawas"
   },
   {
+   "id": "f422223b5c6a",
+   "url": "https://tniad.mil.id/hadapi-ancaman-hukum-modern-kasad-dorong-penguatan-kompetensi-prajurit-hukum/",
+   "judul": "Hadapi Ancaman Hukum Modern, Kasad Dorong Penguatan Kompetensi Prajurit Hukum",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. mendorong penguatan kompetensi prajurit hukum TNI AD agar mampu menghadapi tantangan hukum modern, mulai dari perkembangan teknologi...",
+   "tanggal": "2026-10-21",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "91ccb48bec98",
    "url": "https://pks.id/content/bimteknas-pks-2026-bekali-pejabat-publik-strategi-komunikasi-anak-muda-dan-digital",
    "judul": "Bimteknas PKS 2026 Bekali Pejabat Publik Strategi Komunikasi Anak Muda dan Digital",
@@ -413,46 +434,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "dd8f88b16c8f",
-   "url": "https://www.kemhan.go.id/2026/10/20/wamenhan-ri-richard-tampubolon-emban-amanah-sebagai-sekretaris-dewan-pertahanan-nasional.html",
-   "judul": "Wamenhan RI Richard Tampubolon Emban Amanah sebagai Sekretaris Dewan Pertahanan Nasional",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Bidang Strategi, Doktrin, dan Pembangunan Kekuatan, Jenderal TNI Richard Taruli Horja...",
-   "tanggal": "2026-10-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "cd60ee527e1b",
-   "url": "https://www.kemhan.go.id/2026/10/20/akhiri-eksplorasi-indhan-hari-pertama-di-pt-dirgantara-indonesia-kemhan-dan-media-tinjau-n219-untuk-konektivitas-indonesia.html",
-   "judul": "Akhiri Eksplorasi Indhan Hari Pertama di PT Dirgantara Indonesia, Kemhan dan Media Tinjau N219 untuk Konektivitas Indonesia",
-   "ringkas": "Bandung — Mengakhiri rangkaian kunjungan hari pertama kegiatan Eksplorasi Industri Pertahanan DEFEND ID, Kemhan bersama perwakilan media mengunjungi PT Dirgantara...",
-   "tanggal": "2026-10-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "2c339718f05d",
-   "url": "https://www.kemhan.go.id/2026/10/20/menhan-sjafrie-dampingi-presiden-prabowo-berikan-penghormatan-terakhir-kepada-almarhum-jenderal-tni-purn-subagyo-hadi-siswoyo.html",
-   "judul": "Menhan Sjafrie Dampingi Presiden Prabowo Berikan Penghormatan Terakhir kepada Almarhum Jenderal TNI (Purn.) Subagyo Hadi Siswoyo",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin mendampingi Presiden Republik Indonesia Prabowo Subianto dalam memberikan penghormatan terakhir kepada almarhum...",
-   "tanggal": "2026-10-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "1bdfcb258bd5",
-   "url": "https://www.kemhan.go.id/2026/10/20/menhan-sjafrie-sampaikan-belasungkawa-atas-wafatnya-jenderal-tni-purn-subagyo-hadi-siswoyo.html",
-   "judul": "Menhan Sjafrie Sampaikan Belasungkawa atas Wafatnya Jenderal TNI (Purn.) Subagyo Hadi Siswoyo",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menyambut dengan duka kedatangan jenazah Kepala Staf TNI Angkatan Darat...",
-   "tanggal": "2026-10-20",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "e68935b709b0",
@@ -679,6 +660,46 @@
    "cabang": "pengawas"
   },
   {
+   "id": "dd8f88b16c8f",
+   "url": "https://www.kemhan.go.id/2026/10/20/wamenhan-ri-richard-tampubolon-emban-amanah-sebagai-sekretaris-dewan-pertahanan-nasional.html",
+   "judul": "Wamenhan RI Richard Tampubolon Emban Amanah sebagai Sekretaris Dewan Pertahanan Nasional",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Bidang Strategi, Doktrin, dan Pembangunan Kekuatan, Jenderal TNI Richard Taruli Horja...",
+   "tanggal": "2026-10-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "cd60ee527e1b",
+   "url": "https://www.kemhan.go.id/2026/10/20/akhiri-eksplorasi-indhan-hari-pertama-di-pt-dirgantara-indonesia-kemhan-dan-media-tinjau-n219-untuk-konektivitas-indonesia.html",
+   "judul": "Akhiri Eksplorasi Indhan Hari Pertama di PT Dirgantara Indonesia, Kemhan dan Media Tinjau N219 untuk Konektivitas Indonesia",
+   "ringkas": "Bandung — Mengakhiri rangkaian kunjungan hari pertama kegiatan Eksplorasi Industri Pertahanan DEFEND ID, Kemhan bersama perwakilan media mengunjungi PT Dirgantara...",
+   "tanggal": "2026-10-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "2c339718f05d",
+   "url": "https://www.kemhan.go.id/2026/10/20/menhan-sjafrie-dampingi-presiden-prabowo-berikan-penghormatan-terakhir-kepada-almarhum-jenderal-tni-purn-subagyo-hadi-siswoyo.html",
+   "judul": "Menhan Sjafrie Dampingi Presiden Prabowo Berikan Penghormatan Terakhir kepada Almarhum Jenderal TNI (Purn.) Subagyo Hadi Siswoyo",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia Sjafrie Sjamsoeddin mendampingi Presiden Republik Indonesia Prabowo Subianto dalam memberikan penghormatan terakhir kepada almarhum...",
+   "tanggal": "2026-10-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "1bdfcb258bd5",
+   "url": "https://www.kemhan.go.id/2026/10/20/menhan-sjafrie-sampaikan-belasungkawa-atas-wafatnya-jenderal-tni-purn-subagyo-hadi-siswoyo.html",
+   "judul": "Menhan Sjafrie Sampaikan Belasungkawa atas Wafatnya Jenderal TNI (Purn.) Subagyo Hadi Siswoyo",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menyambut dengan duka kedatangan jenazah Kepala Staf TNI Angkatan Darat...",
+   "tanggal": "2026-10-20",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "9b5bba18e5c5",
    "url": "https://tniad.mil.id/rangkaian-penghormatan-terakhir-tni-ad-untuk-mantan-kasad-subagyo-hadi-siswoyo/",
    "judul": "Rangkaian Penghormatan Terakhir TNI AD untuk Mantan Kasad Subagyo Hadi Siswoyo",
@@ -709,16 +730,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "3b1f3553e0b6",
-   "url": "https://www.kemhan.go.id/2026/10/19/menhan-sjafrie-tinjau-yonif-tp-929-mmm-di-soe-tekankan-kesiapan-tempur-dan-pembangunan-teritorial.html",
-   "judul": "Menhan Sjafrie Tinjau Yonif TP 929/MMM di Soe, Tekankan Kesiapan Tempur dan Pembangunan Teritorial",
-   "ringkas": "Soe, Timor Tengah Selatan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meninjau Marshalling Area Batalyon Infanteri Teritorial Pembangunan...",
-   "tanggal": "2026-10-19",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "af2dbd98d163",
@@ -919,6 +930,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "3b1f3553e0b6",
+   "url": "https://www.kemhan.go.id/2026/10/19/menhan-sjafrie-tinjau-yonif-tp-929-mmm-di-soe-tekankan-kesiapan-tempur-dan-pembangunan-teritorial.html",
+   "judul": "Menhan Sjafrie Tinjau Yonif TP 929/MMM di Soe, Tekankan Kesiapan Tempur dan Pembangunan Teritorial",
+   "ringkas": "Soe, Timor Tengah Selatan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meninjau Marshalling Area Batalyon Infanteri Teritorial Pembangunan...",
+   "tanggal": "2026-10-19",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
   },
   {
    "id": "aca7f2d896c4",
@@ -1137,26 +1158,6 @@
    "partai": "pks"
   },
   {
-   "id": "67755c12e808",
-   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-kunjungi-yonif-tp-876-palatana-di-sumba-timur-tegaskan-peran-prajurit.html",
-   "judul": "Menhan Sjafrie Kunjungi Yonif TP 876/Palatana di Sumba Timur, Tegaskan Peran Prajurit",
-   "ringkas": "Umalulu, Sumba Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
-   "tanggal": "2026-10-16",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9ea95a585d74",
-   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-tinjau-yonif-tp-930-toda-tebi-kalian-adalah-prajurit-bhinneka-tunggal-ika-pengawal-kedaulatan-di-tanah-sumba.html",
-   "judul": "Menhan Sjafrie Tinjau Yonif TP 930/Toda Tebi: “Kalian Adalah Prajurit Bhinneka Tunggal Ika, Pengawal Kedaulatan di Tanah Sumba”",
-   "ringkas": "Katikutama, Sumba Tengah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) peninjauan ke Marshalling Area...",
-   "tanggal": "2026-10-16",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "69b8e584667e",
    "url": "https://emedia.dpr.go.id/news/2026/10/16/jakarta-terus-berbenah-saleh-daulay-kolaborasi-jadi-kunci-pembangunan",
    "judul": "Jakarta Terus Berbenah, Saleh Daulay: Kolaborasi Jadi Kunci Pembangunan",
@@ -1292,6 +1293,26 @@
    "cabang": "pengawas"
   },
   {
+   "id": "67755c12e808",
+   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-kunjungi-yonif-tp-876-palatana-di-sumba-timur-tegaskan-peran-prajurit.html",
+   "judul": "Menhan Sjafrie Kunjungi Yonif TP 876/Palatana di Sumba Timur, Tegaskan Peran Prajurit",
+   "ringkas": "Umalulu, Sumba Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
+   "tanggal": "2026-10-16",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9ea95a585d74",
+   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-tinjau-yonif-tp-930-toda-tebi-kalian-adalah-prajurit-bhinneka-tunggal-ika-pengawal-kedaulatan-di-tanah-sumba.html",
+   "judul": "Menhan Sjafrie Tinjau Yonif TP 930/Toda Tebi: “Kalian Adalah Prajurit Bhinneka Tunggal Ika, Pengawal Kedaulatan di Tanah Sumba”",
+   "ringkas": "Katikutama, Sumba Tengah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) peninjauan ke Marshalling Area...",
+   "tanggal": "2026-10-16",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "7e493bcce2fb",
    "url": "https://tniad.mil.id/tata-struktur-komando-kasad-pimpin-sertijab-dan-alih-kodal-enam-korem/",
    "judul": "Tata Struktur Komando, Kasad Pimpin Sertijab dan Alih Kodal Enam Korem",
@@ -1354,26 +1375,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "665480129dd2",
-   "url": "https://www.kemhan.go.id/2026/10/15/keluarga-besar-kemhan-sambut-kedatangan-dua-wakil-menteri-pertahanan-ri.html",
-   "judul": "Keluarga Besar Kemhan Sambut Kedatangan Dua Wakil Menteri Pertahanan RI",
-   "ringkas": "Jakarta – Keluarga besar Kementerian Pertahanan Republik Indonesia (Kemhan RI) menyambut kedatangan dua Wakil Menteri Pertahanan (Wamenhan) RI yang baru...",
-   "tanggal": "2026-10-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "d47bbb4dd80d",
-   "url": "https://www.kemhan.go.id/2026/10/15/menhan-sjafrie-terima-kunjungan-duta-besar-luar-biasa-dan-berkuasa-penuh-republik-indonesia-untuk-belgia-luksemburg-dan-uni-eropa-bahas-forum-pertahanan-dan-kerja-sama-bilateral.html",
-   "judul": "Menhan Sjafrie Terima Kunjungan Duta Besar Luar Biasa dan Berkuasa Penuh Republik Indonesia untuk Belgia, Luksemburg, dan Uni Eropa, Bahas Forum Pertahanan dan Kerja Sama Bilateral",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Luar Biasa dan Berkuasa Penuh Republik...",
-   "tanggal": "2026-10-15",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "2f40c8ddafa8",
@@ -1451,6 +1452,26 @@
    "cabang": "pengawas"
   },
   {
+   "id": "665480129dd2",
+   "url": "https://www.kemhan.go.id/2026/10/15/keluarga-besar-kemhan-sambut-kedatangan-dua-wakil-menteri-pertahanan-ri.html",
+   "judul": "Keluarga Besar Kemhan Sambut Kedatangan Dua Wakil Menteri Pertahanan RI",
+   "ringkas": "Jakarta – Keluarga besar Kementerian Pertahanan Republik Indonesia (Kemhan RI) menyambut kedatangan dua Wakil Menteri Pertahanan (Wamenhan) RI yang baru...",
+   "tanggal": "2026-10-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "d47bbb4dd80d",
+   "url": "https://www.kemhan.go.id/2026/10/15/menhan-sjafrie-terima-kunjungan-duta-besar-luar-biasa-dan-berkuasa-penuh-republik-indonesia-untuk-belgia-luksemburg-dan-uni-eropa-bahas-forum-pertahanan-dan-kerja-sama-bilateral.html",
+   "judul": "Menhan Sjafrie Terima Kunjungan Duta Besar Luar Biasa dan Berkuasa Penuh Republik Indonesia untuk Belgia, Luksemburg, dan Uni Eropa, Bahas Forum Pertahanan dan Kerja Sama Bilateral",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Luar Biasa dan Berkuasa Penuh Republik...",
+   "tanggal": "2026-10-15",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "e108c263eacf",
    "url": "https://tniad.mil.id/bakti-tni-ad-untuk-pesantren-53-truk-bantuan-disalurkan-ke-30-ponpes/",
    "judul": "Bakti TNI AD untuk Pesantren, 53 Truk Bantuan Disalurkan ke 30 Ponpes",
@@ -1481,36 +1502,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "6d077dcffbc3",
-   "url": "https://www.kemhan.go.id/2026/10/14/menhan-ri-terima-kunjungan-wakil-direktur-fsmtc-federasi-rusia.html",
-   "judul": "Menhan RI Terima Kunjungan Wakil Direktur FSMTC Federasi Rusia",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Wakil Direktur Federal Service for Military-Technical Cooperation (FSMTC)...",
-   "tanggal": "2026-10-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "dc19d941dec1",
-   "url": "https://www.kemhan.go.id/2026/10/14/sekjen-kemhan-resmi-tutup-mtc-ke-17-ri-rusia-dorong-penguatan-kerja-sama-teknik-militer-dan-industri-pertahanan.html",
-   "judul": "Sekjen Kemhan Resmi Tutup MTC ke-17 RI–Rusia, Dorong Penguatan Kerja Sama Teknik Militer dan Industri Pertahanan",
-   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia (Sekjen Kemhan RI) Letnan Jenderal TNI Tri Budi Utomo secara resmi menutup...",
-   "tanggal": "2026-10-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "2d48113dafac",
-   "url": "https://www.kemhan.go.id/2026/10/14/kemhan-dorong-penguatan-kerja-sama-teknik-militer-dan-industri-pertahanan-pada-mtc-ke-17-ri-rusia.html",
-   "judul": "Kemhan Dorong Penguatan Kerja Sama Teknik Militer dan Industri Pertahanan pada MTC Ke-17 RI–Rusia",
-   "ringkas": "Jakarta – Direktur Jenderal Potensi Pertahanan Kementerian Pertahanan Republik Indonesia (Dirjen Pothan Kemhan RI), Laksamana Muda TNI Sri Yanto, mewakili...",
-   "tanggal": "2026-10-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "978014a0a83f",
@@ -1632,6 +1623,36 @@
    "cabang": "pengawas"
   },
   {
+   "id": "6d077dcffbc3",
+   "url": "https://www.kemhan.go.id/2026/10/14/menhan-ri-terima-kunjungan-wakil-direktur-fsmtc-federasi-rusia.html",
+   "judul": "Menhan RI Terima Kunjungan Wakil Direktur FSMTC Federasi Rusia",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Wakil Direktur Federal Service for Military-Technical Cooperation (FSMTC)...",
+   "tanggal": "2026-10-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "dc19d941dec1",
+   "url": "https://www.kemhan.go.id/2026/10/14/sekjen-kemhan-resmi-tutup-mtc-ke-17-ri-rusia-dorong-penguatan-kerja-sama-teknik-militer-dan-industri-pertahanan.html",
+   "judul": "Sekjen Kemhan Resmi Tutup MTC ke-17 RI–Rusia, Dorong Penguatan Kerja Sama Teknik Militer dan Industri Pertahanan",
+   "ringkas": "Jakarta – Sekretaris Jenderal Kementerian Pertahanan Republik Indonesia (Sekjen Kemhan RI) Letnan Jenderal TNI Tri Budi Utomo secara resmi menutup...",
+   "tanggal": "2026-10-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "2d48113dafac",
+   "url": "https://www.kemhan.go.id/2026/10/14/kemhan-dorong-penguatan-kerja-sama-teknik-militer-dan-industri-pertahanan-pada-mtc-ke-17-ri-rusia.html",
+   "judul": "Kemhan Dorong Penguatan Kerja Sama Teknik Militer dan Industri Pertahanan pada MTC Ke-17 RI–Rusia",
+   "ringkas": "Jakarta – Direktur Jenderal Potensi Pertahanan Kementerian Pertahanan Republik Indonesia (Dirjen Pothan Kemhan RI), Laksamana Muda TNI Sri Yanto, mewakili...",
+   "tanggal": "2026-10-14",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "0eab6e990d7c",
    "url": "https://pks.id/content/legislator-pks-salurkan-bantuan-beras-dan-dana-untuk-korban-banjir",
    "judul": "Legislator PKS Salurkan Bantuan Beras dan Dana untuk Korban Banjir",
@@ -1674,26 +1695,6 @@
    "lembaga": "PKS",
    "cabang": "partai",
    "partai": "pks"
-  },
-  {
-   "id": "c3736cb79ab2",
-   "url": "https://www.kemhan.go.id/2026/10/13/menhan-ri-hadiri-rapat-terbatas-bahas-penanganan-karhutla.html",
-   "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Penanganan Karhutla",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) menghadiri Rapat Terbatas bersama Presiden Republik Indonesia Prabowo Subianto yang membahas penanganan...",
-   "tanggal": "2026-10-13",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "99f22b1fbe6a",
-   "url": "https://www.kemhan.go.id/2026/10/14/menhan-ri-terima-kunjungan-duta-besar-ri-untuk-persatuan-emirat-arab-pea-bahas-penguatan-kerja-sama-pertahanan.html",
-   "judul": "Menhan RI Terima Kunjungan Duta Besar RI untuk Persatuan Emirat Arab (PEA), Bahas Penguatan Kerja Sama Pertahanan",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Republik Indonesia untuk Persatuan Emirat Arab...",
-   "tanggal": "2026-10-13",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "2595ce341d73",
@@ -1806,6 +1807,26 @@
    "partai": "gerindra"
   },
   {
+   "id": "c3736cb79ab2",
+   "url": "https://www.kemhan.go.id/2026/10/13/menhan-ri-hadiri-rapat-terbatas-bahas-penanganan-karhutla.html",
+   "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Penanganan Karhutla",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) menghadiri Rapat Terbatas bersama Presiden Republik Indonesia Prabowo Subianto yang membahas penanganan...",
+   "tanggal": "2026-10-13",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "99f22b1fbe6a",
+   "url": "https://www.kemhan.go.id/2026/10/14/menhan-ri-terima-kunjungan-duta-besar-ri-untuk-persatuan-emirat-arab-pea-bahas-penguatan-kerja-sama-pertahanan.html",
+   "judul": "Menhan RI Terima Kunjungan Duta Besar RI untuk Persatuan Emirat Arab (PEA), Bahas Penguatan Kerja Sama Pertahanan",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan Duta Besar Republik Indonesia untuk Persatuan Emirat Arab...",
+   "tanggal": "2026-10-13",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "cd938bec17d5",
    "url": "https://pks.id/content/amy-pks-jembatani-aspirasi-masyarakat-sipil-soal-polemik-ijazah-gate-ke-dpr",
    "judul": "AMY: PKS Jembatani Aspirasi Masyarakat Sipil soal Polemik Ijazah Gate ke DPR",
@@ -1905,26 +1926,6 @@
    "partai": "pks"
   },
   {
-   "id": "2d52cb7f8454",
-   "url": "https://www.kemhan.go.id/2026/10/12/wamenhan-buka-turnamen-tenis-lapangan-kemhan-ri-dan-tni-dalam-rangka-hut-ke-81-tni.html",
-   "judul": "Wamenhan Buka Turnamen Tenis Lapangan Kemhan RI dan TNI dalam Rangka HUT ke-81 TNI",
-   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto membuka Turnamen Tenis Lapangan Kementerian Pertahanan Republik Indonesia...",
-   "tanggal": "2026-10-12",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "424bd2be70e4",
-   "url": "https://www.kemhan.go.id/2026/10/12/menhan-dampingi-presiden-dalam-pertemuan-bilateral-dengan-presiden-republik-arab-mesir.html",
-   "judul": "Menhan Dampingi Presiden Dalam Pertemuan Bilateral dengan Presiden Republik Arab Mesir",
-   "ringkas": "Jakarta – Menteri Pertahanan RI Sjafrie Sjamsoeddin mendampingi Presiden Republik Indonesia Prabowo Subianto dalam pertemuan bilateral dengan Presiden Republik Arab...",
-   "tanggal": "2026-10-12",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "043b8d52d906",
    "url": "https://gerindra.id/2026/10/12/novita-wijayanti-infrastruktur-air-dan-pengelolaan-sampah-penting-bagi-masa-depan-labuan-bajo/",
    "judul": "Novita Wijayanti: Infrastruktur Air dan Pengelolaan Sampah Penting bagi Masa Depan Labuan Bajo",
@@ -2002,6 +2003,26 @@
    "partai": "gerindra"
   },
   {
+   "id": "2d52cb7f8454",
+   "url": "https://www.kemhan.go.id/2026/10/12/wamenhan-buka-turnamen-tenis-lapangan-kemhan-ri-dan-tni-dalam-rangka-hut-ke-81-tni.html",
+   "judul": "Wamenhan Buka Turnamen Tenis Lapangan Kemhan RI dan TNI dalam Rangka HUT ke-81 TNI",
+   "ringkas": "Jakarta – Wakil Menteri Pertahanan Republik Indonesia (Wamenhan RI) Donny Ermawan Taufanto membuka Turnamen Tenis Lapangan Kementerian Pertahanan Republik Indonesia...",
+   "tanggal": "2026-10-12",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "424bd2be70e4",
+   "url": "https://www.kemhan.go.id/2026/10/12/menhan-dampingi-presiden-dalam-pertemuan-bilateral-dengan-presiden-republik-arab-mesir.html",
+   "judul": "Menhan Dampingi Presiden Dalam Pertemuan Bilateral dengan Presiden Republik Arab Mesir",
+   "ringkas": "Jakarta – Menteri Pertahanan RI Sjafrie Sjamsoeddin mendampingi Presiden Republik Indonesia Prabowo Subianto dalam pertemuan bilateral dengan Presiden Republik Arab...",
+   "tanggal": "2026-10-12",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "a0878c5ea22c",
    "url": "https://pks.id/content/mpp-pks-dorong-penguatan-platform-pembangunan-banten-yang-komprehensif-dan-berkelanjutan",
    "judul": "MPP PKS Dorong Penguatan Platform Pembangunan Banten yang Komprehensif dan Berkelanjutan",
@@ -2056,6 +2077,16 @@
    "partai": "pks"
   },
   {
+   "id": "f1b28bf8c28a",
+   "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
+   "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
+   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) secara konsisten terus bergerak dalam kerja-kerja penghormatan hak asasi manusia (HAM) di Indonesia, khususnya dalam mendorong terpenuhi hak atas hidup serta penghapusan penghukuman yang kejam dan tidak manusiawi sep",
+   "tanggal": "2026-10-09",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "65a4a4091de2",
    "url": "https://www.kemhan.go.id/2026/10/09/kunker-ke-bengkayang-menhan-sjafrie-tinjau-yonif-tp-926-pl-minta-prajurit-kuasai-kemampuan-tempur-dan-teritorial-pembangunan-untuk-amankan-perbatasan.html",
    "judul": "Kunker ke Bengkayang, Menhan Sjafrie Tinjau Yonif TP 926/PL: Minta Prajurit Kuasai Kemampuan Tempur dan Teritorial Pembangunan untuk Amankan Perbatasan",
@@ -2094,16 +2125,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "f1b28bf8c28a",
-   "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
-   "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
-   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) secara konsisten terus bergerak dalam kerja-kerja penghormatan hak asasi manusia (HAM) di Indonesia, khususnya dalam mendorong terpenuhi hak atas hidup serta penghapusan penghukuman yang kejam dan tidak manusiawi sep",
-   "tanggal": "2026-10-09",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "85996b8d6157",
@@ -2361,6 +2382,26 @@
    "partai": "pks"
   },
   {
+   "id": "1c6c1cbebac0",
+   "url": "https://kontras.org/peringatan-hari-tni-ke-81-hilang-arah-reformasi-militer-di-institusi-tni/",
+   "judul": "Peringatan Hari TNI Ke-81: Hilang Arah Reformasi Militer di Institusi TNI",
+   "ringkas": "Bertepatan dengan hari peringatan Hari Ulang Tahun Tentara Nasional Indonesia (TNI) yang Ke-81, Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) sebagai salah satu organisasi masyarakat sipil yang berfokus pada isu reformasi sektor keamanan secara rutin setiap tahu",
+   "tanggal": "2026-10-05",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
+   "id": "328c24c0e27b",
+   "url": "https://kontras.org/catatan-hari-tni-ke-81-hilang-arah-reformasi-militer-di-institusi-tni/",
+   "judul": "Catatan Hari TNI Ke-81: Hilang Arah Reformasi Militer di Institusi TNI",
+   "ringkas": "Bertepatan dengan hari peringatan Hari Ulang Tahun Tentara Nasional Indonesia (TNI) yang Ke-81, Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) sebagai salah satu organisasi masyarakat sipil yang berfokus pada isu reformasi sektor keamanan secara rutin setiap tahu",
+   "tanggal": "2026-10-05",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "70c5e1615924",
    "url": "https://www.kemhan.go.id/2026/10/05/peringatan-hut-ke-81-tni-jadi-momentum-perkenalan-pdu-1-trimatra-terbaru-padukan-filosofi-budaya-dan-jati-diri-tni.html",
    "judul": "Peringatan HUT ke-81 TNI Jadi Momentum Perkenalan PDU 1 Trimatra Terbaru, Padukan Filosofi Budaya dan Jati Diri TNI",
@@ -2401,35 +2442,14 @@
    "cabang": "aparat"
   },
   {
-   "id": "1c6c1cbebac0",
-   "url": "https://kontras.org/peringatan-hari-tni-ke-81-hilang-arah-reformasi-militer-di-institusi-tni/",
-   "judul": "Peringatan Hari TNI Ke-81: Hilang Arah Reformasi Militer di Institusi TNI",
-   "ringkas": "Bertepatan dengan hari peringatan Hari Ulang Tahun Tentara Nasional Indonesia (TNI) yang Ke-81, Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) sebagai salah satu organisasi masyarakat sipil yang berfokus pada isu reformasi sektor keamanan secara rutin setiap tahu",
-   "tanggal": "2026-10-05",
+   "id": "d129e5ae09b3",
+   "url": "https://kontras.org/laporan-situasi-ham-caturwulan-kedua-2026-gempuran-kekerasan/",
+   "judul": "Laporan Situasi HAM Caturwulan kedua 2026: Gempuran Kekerasan",
+   "ringkas": "Pada Caturwulan Kedua Tahun 2026 (Mei-Agustus 2026), situasi HAM di Indonesia tidak kunjung mengalami perbaikan berarti. Berbagai kasus kekerasan dan pelanggaran HAM masih terjadi secara berulang. Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) mencoba untuk memot",
+   "tanggal": "2026-10-03",
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "328c24c0e27b",
-   "url": "https://kontras.org/catatan-hari-tni-ke-81-hilang-arah-reformasi-militer-di-institusi-tni/",
-   "judul": "Catatan Hari TNI Ke-81: Hilang Arah Reformasi Militer di Institusi TNI",
-   "ringkas": "Bertepatan dengan hari peringatan Hari Ulang Tahun Tentara Nasional Indonesia (TNI) yang Ke-81, Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) sebagai salah satu organisasi masyarakat sipil yang berfokus pada isu reformasi sektor keamanan secara rutin setiap tahu",
-   "tanggal": "2026-10-05",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
-   "id": "5d16a3012df2",
-   "url": "https://pks.id/content/fkw-pks-kalteng-perkuat-pembinaan-pejabat-publik-dan-bangun-sistem",
-   "judul": "FKW PKS Kalteng Perkuat Pembinaan Pejabat Publik dan Bangun Sistem",
-   "ringkas": "Ketua DPW PKS Kalimantan Tengah, Sirajul Rahman, S.Hut., M.I.Kom., mengatakan pembinaan pejabat publik harus menjadi bagian dari upaya meningkatkan kualitas organisasi sekaligus kualitas pengabdian kepada masyarakat.“Pejabat publik berada di ruang yang langsung bersentuhan dengan",
-   "tanggal": "2026-10-04",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "b726ccab8d8b",
@@ -2462,16 +2482,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "d129e5ae09b3",
-   "url": "https://kontras.org/laporan-situasi-ham-caturwulan-kedua-2026-gempuran-kekerasan/",
-   "judul": "Laporan Situasi HAM Caturwulan kedua 2026: Gempuran Kekerasan",
-   "ringkas": "Pada Caturwulan Kedua Tahun 2026 (Mei-Agustus 2026), situasi HAM di Indonesia tidak kunjung mengalami perbaikan berarti. Berbagai kasus kekerasan dan pelanggaran HAM masih terjadi secara berulang. Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) mencoba untuk memot",
-   "tanggal": "2026-10-03",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "b0b7a6215586",
    "url": "https://www.kemhan.go.id/2026/10/02/kunker-ke-kaltara-menhan-sjafrie-tinjau-yonif-tp-880-banuanta-di-bulungan-tegaskan-kemampuan-tempur-dan-teritorial-pembangunan-untuk-kedaulatan-perbatasan.html",
    "judul": "Kunker ke Kaltara, Menhan Sjafrie Tinjau Yonif TP 880/Banuanta di Bulungan: Tegaskan Kemampuan Tempur dan Teritorial Pembangunan untuk Kedaulatan Perbatasan",
@@ -2490,6 +2500,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "6829ad727bc1",
+   "url": "https://kontras.org/4-tahun-kasus-kanjuruhan-laga-terus-dimainkan-keadilan-terus-dikesampingkan/",
+   "judul": "4 Tahun Kasus Kanjuruhan: Laga Terus Dimainkan, Keadilan Terus Dikesampingkan",
+   "ringkas": "Pada 1 Oktober 2022, telah terjadi peristiwa kelam bagi sejarah persepakbolaan Indonesia. Sebanyak setidaknya 135+ suporter Arema FC meninggal dunia dan ribuan lainnya mengalami luka-luka akibat kekerasan aparat keamanan di Stadion Kanjuruhan, Malang, Jawa Timur. Peristiwa terseb",
+   "tanggal": "2026-10-01",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "3be625355c2f",
@@ -2532,11 +2552,11 @@
    "cabang": "aparat"
   },
   {
-   "id": "6829ad727bc1",
-   "url": "https://kontras.org/4-tahun-kasus-kanjuruhan-laga-terus-dimainkan-keadilan-terus-dikesampingkan/",
-   "judul": "4 Tahun Kasus Kanjuruhan: Laga Terus Dimainkan, Keadilan Terus Dikesampingkan",
-   "ringkas": "Pada 1 Oktober 2022, telah terjadi peristiwa kelam bagi sejarah persepakbolaan Indonesia. Sebanyak setidaknya 135+ suporter Arema FC meninggal dunia dan ribuan lainnya mengalami luka-luka akibat kekerasan aparat keamanan di Stadion Kanjuruhan, Malang, Jawa Timur. Peristiwa terseb",
-   "tanggal": "2026-10-01",
+   "id": "61c02226a273",
+   "url": "https://kontras.org/negara-dalam-pusaran-kekerasan-laporan-investigasi-mobilisasi-represi-dalam-demonstrasi-27-agustus-2026/",
+   "judul": "Negara dalam Pusaran Kekerasan: Laporan Investigasi Mobilisasi Represi dalam Demonstrasi 27 Agustus 2026",
+   "ringkas": "Belum selesai negara menunaikan pertanggungjawabannya terhadap 13 orang yang meninggal pada demonstrasi besar di Agustus 2025 lalu, pada tahun ini di bulan yang sama, korban kembali berjatuhan. Demonstrasi yang salah satunya digagas oleh Aliansi Masyarakat Pati Bersatu (AMPB) yan",
+   "tanggal": "2026-09-30",
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
@@ -2550,16 +2570,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "61c02226a273",
-   "url": "https://kontras.org/negara-dalam-pusaran-kekerasan-laporan-investigasi-mobilisasi-represi-dalam-demonstrasi-27-agustus-2026/",
-   "judul": "Negara dalam Pusaran Kekerasan: Laporan Investigasi Mobilisasi Represi dalam Demonstrasi 27 Agustus 2026",
-   "ringkas": "Belum selesai negara menunaikan pertanggungjawabannya terhadap 13 orang yang meninggal pada demonstrasi besar di Agustus 2025 lalu, pada tahun ini di bulan yang sama, korban kembali berjatuhan. Demonstrasi yang salah satunya digagas oleh Aliansi Masyarakat Pati Bersatu (AMPB) yan",
-   "tanggal": "2026-09-30",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "bddc2751d07d",
@@ -2602,6 +2612,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "16d724202a58",
+   "url": "https://kontras.org/menggugatgelarpahlawansoeharto-saksi-bongkar-jejak-kejahatan-ham-dan-kasus-korupsi-soeharto-di-ptun-jakarta/",
+   "judul": "#MenggugatGelarPahlawanSoeharto: Saksi Bongkar Jejak Kejahatan HAM dan Kasus Korupsi Soeharto di PTUN Jakarta",
+   "ringkas": "Senin, 28 September 2026 - Gerakan Masyarakat Sipil Adili Soeharto (GEMAS) mendampingi korban dan keluarga korban pelanggaran HAM yang berat yaitu kasus 1965-1966, kasus Tanjung Priok 1984, kasus Mei 1998, serta kasus penculikan dan penghilangan aktivis 1998, menjalani sidang pem",
+   "tanggal": "2026-09-28",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
+  },
+  {
    "id": "3f521615c8a3",
    "url": "https://www.kemhan.go.id/2026/09/28/menhan-ri-beri-pengarahan-kepada-peserta-komcad-asn-kementerian-dan-lembaga-gelombang-ii-tahun-2026.html",
    "judul": "Menhan RI Beri Pengarahan kepada Peserta Komcad ASN Kementerian dan Lembaga Gelombang II Tahun 2026",
@@ -2620,16 +2640,6 @@
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
-  },
-  {
-   "id": "16d724202a58",
-   "url": "https://kontras.org/menggugatgelarpahlawansoeharto-saksi-bongkar-jejak-kejahatan-ham-dan-kasus-korupsi-soeharto-di-ptun-jakarta/",
-   "judul": "#MenggugatGelarPahlawanSoeharto: Saksi Bongkar Jejak Kejahatan HAM dan Kasus Korupsi Soeharto di PTUN Jakarta",
-   "ringkas": "Senin, 28 September 2026 - Gerakan Masyarakat Sipil Adili Soeharto (GEMAS) mendampingi korban dan keluarga korban pelanggaran HAM yang berat yaitu kasus 1965-1966, kasus Tanjung Priok 1984, kasus Mei 1998, serta kasus penculikan dan penghilangan aktivis 1998, menjalani sidang pem",
-   "tanggal": "2026-09-28",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
   },
   {
    "id": "b70a3c7df165",
@@ -3576,16 +3586,6 @@
    "url": "https://tniad.mil.id/334558-2/",
    "judul": "Lewat Pendekatan Humanis, TNI AD Antar Dua Eks Anggota OPM Kembali ke NKRI",
    "ringkas": "Jakarta, tniad.mil.id – Pendekatan humanis yang konsisten dikedepankan TNI Angkatan Darat kembali membangun kepercayaan masyarakat di Papua. Melalui pendampingan Satgas Pamtas RI–PNG Mobile Yonif 621/Manuntung, dua eks anggota Organisasi Papua...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "5018214acdd3",
-   "url": "https://tniad.mil.id/hadapi-ancaman-masa-depan-kasad-dorong-transformasi-sishankamrata-aktif/",
-   "judul": "Hadapi Ancaman Masa Depan, Kasad Dorong Transformasi Sishankamrata Aktif",
-   "ringkas": "Bandung, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mendorong transformasi Sistem Pertahanan dan Keamanan Rakyat Semesta (Sishankamrata) menjadi Sishankamrata Aktif sebagai strategi menghadapi dinamika lingkungan...",
    "tanggal": "2026-07-21",
    "kanal": "tniad",
    "lembaga": "TNI AD",
