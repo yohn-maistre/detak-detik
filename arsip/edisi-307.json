@@ -1,0 +1,121 @@
+{
+ "edisi": 307,
+ "terbit": "2026-10-22T00:05:53.394234+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-307-01",
+   "judul": "Imigrasi sebut Nusron Wahid telah kembali ke Indonesia setelah ke Malaysia dan Singapura – Apakah KPK bakal jemput paksa Nusron setelah dua kali mangkir pemeriksaan?",
+   "skor": 49
+  },
+  {
+   "id": "klp-307-07",
+   "judul": "Airlangga Prediksi Rata-rata Harga Minyak Mentah RI Melonjak Jadi US$95",
+   "skor": 12
+  },
+  {
+   "id": "klp-307-12",
+   "judul": "Bareskrim Sita 1.194 Kemasan Beras Fortifikasi Senilai Rp155 Juta, Kandungan Gizi Diduga Tak Sesuai Label",
+   "skor": 12
+  },
+  {
+   "id": "klp-307-14",
+   "judul": "Kebakaran Hutan hingga Banjir, Praktisi Soroti Kelalaian Negara Sejak Hulu",
+   "skor": 9
+  },
+  {
+   "id": "klp-307-20",
+   "judul": "BNPB: Indonesia Terbuka Bantuan Asing Tangani Karhutla, Ada Jepang hingga Singapura",
+   "skor": 7
+  },
+  {
+   "id": "klp-307-05",
+   "judul": "Kirim Surat ke Panglima TNI, KPK: 2 Prajurit Aktif Diduga Terlibat Korupsi di BNPB",
+   "skor": 13
+  },
+  {
+   "id": "klp-307-09",
+   "judul": "Kejati Jabar Tahan Wabup Indramayu Terkait Dugaan Korupsi Tunjangan Perumahan",
+   "skor": 12
+  },
+  {
+   "id": "klp-307-11",
+   "judul": "Rumah dinas TNI jadi sarang judol, Letkol Arman jadi tersangka – 'Memalukan bagi garda terdepan kedaulatan bangsa'",
+   "skor": 12
+  },
+  {
+   "id": "klp-307-16",
+   "judul": "Jarak Pandang Sempat 400 Meter, Sejumlah Penerbangan di Bandara SMB II Palembang Terdampak Kabut Asap",
+   "skor": 9
+  },
+  {
+   "id": "klp-307-17",
+   "judul": "Bupati Pati nonaktif Sudewo divonis 8,5 tahun penjara dan bayar uang pengganti Rp3,5 miliar – Bagaimana perjalanan kasus jual beli jabatan dan gratifikasi proyek?",
+   "skor": 9
+  },
+  {
+   "id": "klp-307-04",
+   "judul": "Ibam Dampingi Gus Yaqut di Persidangan, Berharap Hakim Pertimbangkan Usulan DEN soal Definisi Korupsi",
+   "skor": 13
+  },
+  {
+   "id": "klp-307-23",
+   "judul": "Komdigi Buka Suara soal Ramai Keluhan Dugaan Shadowban Konten Karhutla di Medsos",
+   "skor": 6
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
