@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-22T14:39:00.817998+00:00",
- "edisi": 308,
+ "diperbarui": "2026-10-23T00:06:22.336503+00:00",
+ "edisi": 309,
  "pilihan": [
+  {
+   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
+   "wadah": "Marine Policy",
+   "doi": "10.1016/j.marpol.2026.107325",
+   "tanggal": "2027-2",
+   "alasan": "Penelitian ini mengkaji faktor-faktor politik dan ekologi yang menyebabkan penurunan perikanan skala kecil di Indonesia. Hal ini relevan untuk memahami tantangan mata pencarian nelayan tradisional dan dampak kebijakan terhadap keberlanjutan sumber daya laut kita.",
+   "kategori": "KELAUTAN & MASYARAKAT",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Makalah ini meneliti faktor penentu keberhasilan organisasi dalam mempercepat pendaftaran tanah di Indonesia. Temuan ini penting untuk meningkatkan layanan publik dan kepastian hukum hak atas tanah bagi masyarakat.",
+   "kategori": "TATA KELOLA PERTANAHAN",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini membandingkan metode deteksi patogen pernapasan pada pasien SARI yang dirawat di rumah sakit di Indonesia. Ini relevan untuk meningkatkan diagnosis penyakit pernapasan akut dan penanganan kesehatan masyarakat.",
+   "kategori": "KESEHATAN PUBLIK",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Intergenerational eco-craft, women's agency, and climate adaptation in Telaga Biru Coastal Village, Madura, Indonesia",
+   "wadah": "Women's Studies International Forum",
+   "doi": "10.1016/j.wsif.2026.103450",
+   "tanggal": "2027-1",
+   "alasan": "Riset ini mengeksplorasi peran kerajinan eko, agensi perempuan, dan adaptasi iklim di Desa Pesisir Telaga Biru, Madura. Ini menyoroti strategi komunitas lokal dalam menghadapi perubahan iklim dan pemberdayaan perempuan.",
+   "kategori": "ADAPTASI IKLIM LOKAL",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
+   "wadah": "Journal of Substance Use and Addiction Treatment",
+   "doi": "10.1016/j.josat.2026.210129",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini mengupas beban ekonomi rumah tangga, keterjangkauan rehabilitasi, dan reintegrasi sosial bagi individu terdampak narkoba di Sulawesi Selatan. Temuan ini krusial untuk perumusan kebijakan penanganan narkoba dan dukungan sosial yang lebih efektif.",
+   "kategori": "ISU SOSIAL KESEHATAN",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102136",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini menganalisis kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Riset ini penting untuk merumuskan kebijakan energi yang inklusif dan berkelanjutan bagi seluruh lapisan masyarakat.",
+   "kategori": "KEMISKINAN ENERGI",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
+   "wadah": "Energy Policy",
+   "doi": "10.1016/j.enpol.2026.115592",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini membahas ekonomi politik transisi energi bersih di Indonesia, merefleksikan dinamika kepentingan dalam peralihan dari batu bara. Ini relevan untuk memahami tantangan dan peluang dalam mencapai target energi terbarukan nasional.",
+   "kategori": "TRANSISI ENERGI",
+   "sejak_edisi": 309
+  },
+  {
+   "judul": "Land meets sea: How upland clearing threatens coral reef health in Ambon Bay, Maluku Province, Indonesia",
+   "wadah": "Marine Pollution Bulletin",
+   "doi": "10.1016/j.marpolbul.2026.120475",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini menunjukkan bagaimana pembukaan lahan di daratan mengancam kesehatan terumbu karang di Teluk Ambon, Maluku. Ini penting untuk kebijakan konservasi laut dan pengelolaan lingkungan terpadu di wilayah pesisir.",
+   "kategori": "LINGKUNGAN BAHARI",
+   "sejak_edisi": 309
+  },
   {
    "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
    "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
@@ -37,78 +109,6 @@
    "alasan": "Penelitian ini mengidentifikasi zona potensial sistem panas bumi di Solok Selatan, Indonesia. Sangat relevan untuk pengembangan sumber energi terbarukan dan eksplorasi panas bumi di Indonesia.",
    "kategori": "GEOLOGI & ENERGI",
    "sejak_edisi": 308
-  },
-  {
-   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
-   "wadah": "Crop Protection",
-   "doi": "10.1016/j.cropro.2026.107867",
-   "tanggal": "2027-1",
-   "alasan": "Laporan pertama penyakit busuk buah kakao di Sulawesi Selatan ini penting bagi petani dan industri perkakaoan. Relevan untuk pencegahan kerugian dan peningkatan ketahanan pangan di Indonesia.",
-   "kategori": "PERTANIAN & PANGAN",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
-   "wadah": "Journal of Sharia and Legal Science",
-   "doi": "10.61994/jsls.v3i3.1448",
-   "tanggal": "2026-12-31",
-   "alasan": "Studi ini menelaah batasan dan celah hukum terkait kekerasan dalam mendisiplinkan anak di Indonesia. Sangat relevan untuk perlindungan anak dan reformasi sistem hukum di Indonesia.",
-   "kategori": "PERLINDUNGAN ANAK",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Non-stationary generalised extreme value modeling of extreme rainfall in Makassar, Indonesia",
-   "wadah": "Kuwait Journal of Science",
-   "doi": "10.1016/j.kjs.2026.100696",
-   "tanggal": "2027-1",
-   "alasan": "Pemodelan curah hujan ekstrem di Makassar ini penting untuk mitigasi bencana banjir dan perencanaan kota. Relevan bagi pemerintah daerah dan masyarakat dalam menghadapi perubahan iklim.",
-   "kategori": "IKLIM & BENCANA",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Control Model for Forest Areas In Anai Watershed, West Sumatera Province, Indonesia",
-   "wadah": "International Journal of Sustainable Society",
-   "doi": "10.1504/ijssoc.2027.10075235",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini mengembangkan model kontrol area hutan di DAS Anai, Sumatera Barat. Relevan untuk kebijakan konservasi dan pengelolaan hutan berkelanjutan di wilayah Indonesia.",
-   "kategori": "KEHUTANAN & LINGKUNGAN",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102072",
-   "tanggal": "2027-3",
-   "alasan": "Mengkaji kendali operasional yang terfragmentasi dalam penambangan timah lepas pantai di Pulau Bangka. Penelitian ini menyoroti tantangan pengelolaan sumber daya kelautan dan dampaknya terhadap masyarakat lokal serta lingkungan pesisir Indonesia.",
-   "kategori": "SUMBER DAYA PESISIR",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia, dengan fokus pada upaya menjembatani kesenjangan digital di daerah terpencil. Riset ini penting untuk efisiensi birokrasi dan akses layanan publik bagi seluruh masyarakat Indonesia.",
-   "kategori": "PEMERINTAHAN DIGITAL",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Studi ini krusial untuk perencanaan infrastruktur energi yang tangguh dan adaptasi terhadap perubahan iklim di seluruh wilayah Indonesia.",
-   "kategori": "ENERGI & IKLIM",
-   "sejak_edisi": 306
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Karakterisasi produk cair dari pirolisis langsung aspal batuan Buton, Indonesia. Penelitian ini sangat penting untuk memahami potensi pemanfaatan sumber daya alam lokal ini sebagai bahan bakar alternatif atau produk bernilai tambah di Indonesia.",
-   "kategori": "SUMBER DAYA MINERAL",
-   "sejak_edisi": 306
   }
  ]
 }
