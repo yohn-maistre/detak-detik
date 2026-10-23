@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-22T14:36:03+00:00",
+ "diambil": "2026-10-23T14:19:44+00:00",
  "acara": [
   {
    "id": "0487072acdc8",
@@ -35,6 +35,24 @@
    "audiens": null,
    "topik": [
     "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2f3e67cbc285",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-rakornas-tpakd-2026-apresiasi-perluasan-akses-keuangan-hingga-seluruh-daerah/",
+   "judul": "Presiden Prabowo Hadiri Rakornas TPAKD 2026, Apresiasi Perluasan Akses Keuangan hingga Seluruh Daerah",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-22",
+   "tanggal_terbit": "2026-10-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
    ],
    "venue": null,
    "kota": null,

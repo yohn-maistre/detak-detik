@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-10-23T00:06:22.336503+00:00",
- "edisi": 309,
+ "diperbarui": "2026-10-23T14:23:18.719652+00:00",
+ "edisi": 310,
  "pilihan": [
+  {
+   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
+   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
+   "doi": "10.37373/jenius.v8i1.2344",
+   "tanggal": "2027-5-31",
+   "alasan": "Meneliti ketahanan manajemen industri pertahanan Indonesia setelah pembentukan holding Defend ID. Hasil studi ini relevan untuk memperkuat kemandirian dan kapabilitas pertahanan nasional di tengah tantangan geopolitik.",
+   "kategori": "INDUSTRI PERTAHANAN",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Membahas hambatan pengembangan energi panas bumi di Indonesia dan tinjauan kebijakannya. Studi ini sangat relevan untuk mendorong pemanfaatan optimal sumber energi terbarukan Indonesia yang melimpah dan strategis.",
+   "kategori": "ENERGI GEOTERMAL",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102072",
+   "tanggal": "2027-3",
+   "alasan": "Mengkaji kontrol operasional penambangan timah lepas pantai yang terfragmentasi di Pulau Bangka, Indonesia. Relevan untuk memahami dinamika pengelolaan sumber daya, dampak lingkungan, dan konflik kepentingan di wilayah pesisir.",
+   "kategori": "PERTAMBANGAN MARITIM",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Lending in Need: Natural Disaster Shocks and Online Borrowing in Indonesia",
+   "wadah": "Journal of Business Research",
+   "doi": "10.1016/j.jbusres.2026.116587",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis bagaimana guncangan bencana alam memengaruhi pinjaman daring di Indonesia. Studi ini penting untuk memahami ketahanan finansial masyarakat dan mengembangkan kebijakan perlindungan sosial yang responsif bencana.",
+   "kategori": "BENCANA & KEUANGAN",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia, khususnya di daerah terpencil. Ini penting untuk mengatasi kesenjangan digital, meningkatkan pelayanan publik yang inklusif, dan mendorong good governance.",
+   "kategori": "TATA KELOLA DIGITAL",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102147",
+   "tanggal": "2027-1",
+   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Studi ini krusial untuk memastikan ketahanan energi, mitigasi risiko, dan keberlanjutan infrastruktur penting di tengah perubahan iklim.",
+   "kategori": "KETAHANAN ENERGI",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan pertama tentang dua spesies jamur yang menyebabkan busuk buah kakao di Sulawesi Selatan. Sangat penting untuk identifikasi, pencegahan, dan penanganan penyakit tanaman yang mengancam komoditas ekspor utama Indonesia ini.",
+   "kategori": "PERTANIAN KAKAO",
+   "sejak_edisi": 310
+  },
+  {
+   "judul": "Kekerasan dalam Mendisiplinkan Anak: Telaah Batasan dan Celah dalam Pertanggungjawaban Pidana di Indonesia",
+   "wadah": "Journal of Sharia and Legal Science",
+   "doi": "10.61994/jsls.v3i3.1448",
+   "tanggal": "2026-12-31",
+   "alasan": "Menelaah batasan dan celah pertanggungjawaban pidana terkait kekerasan dalam mendisiplinkan anak di Indonesia. Penelitian ini sangat krusial untuk melindungi hak anak, memperkuat kerangka hukum, dan edukasi publik.",
+   "kategori": "PERLINDUNGAN ANAK",
+   "sejak_edisi": 310
+  },
   {
    "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
    "wadah": "Marine Policy",
@@ -37,78 +109,6 @@
    "alasan": "Riset ini mengeksplorasi peran kerajinan eko, agensi perempuan, dan adaptasi iklim di Desa Pesisir Telaga Biru, Madura. Ini menyoroti strategi komunitas lokal dalam menghadapi perubahan iklim dan pemberdayaan perempuan.",
    "kategori": "ADAPTASI IKLIM LOKAL",
    "sejak_edisi": 309
-  },
-  {
-   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
-   "wadah": "Journal of Substance Use and Addiction Treatment",
-   "doi": "10.1016/j.josat.2026.210129",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini mengupas beban ekonomi rumah tangga, keterjangkauan rehabilitasi, dan reintegrasi sosial bagi individu terdampak narkoba di Sulawesi Selatan. Temuan ini krusial untuk perumusan kebijakan penanganan narkoba dan dukungan sosial yang lebih efektif.",
-   "kategori": "ISU SOSIAL KESEHATAN",
-   "sejak_edisi": 309
-  },
-  {
-   "judul": "Multidimensional energy poverty in Indonesia: Urban-rural perspectives",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102136",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini menganalisis kemiskinan energi multidimensional di Indonesia dari perspektif perkotaan dan pedesaan. Riset ini penting untuk merumuskan kebijakan energi yang inklusif dan berkelanjutan bagi seluruh lapisan masyarakat.",
-   "kategori": "KEMISKINAN ENERGI",
-   "sejak_edisi": 309
-  },
-  {
-   "judul": "“We love money, not coal”: The political economy of the clean energy transition in Indonesia",
-   "wadah": "Energy Policy",
-   "doi": "10.1016/j.enpol.2026.115592",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini membahas ekonomi politik transisi energi bersih di Indonesia, merefleksikan dinamika kepentingan dalam peralihan dari batu bara. Ini relevan untuk memahami tantangan dan peluang dalam mencapai target energi terbarukan nasional.",
-   "kategori": "TRANSISI ENERGI",
-   "sejak_edisi": 309
-  },
-  {
-   "judul": "Land meets sea: How upland clearing threatens coral reef health in Ambon Bay, Maluku Province, Indonesia",
-   "wadah": "Marine Pollution Bulletin",
-   "doi": "10.1016/j.marpolbul.2026.120475",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini menunjukkan bagaimana pembukaan lahan di daratan mengancam kesehatan terumbu karang di Teluk Ambon, Maluku. Ini penting untuk kebijakan konservasi laut dan pengelolaan lingkungan terpadu di wilayah pesisir.",
-   "kategori": "LINGKUNGAN BAHARI",
-   "sejak_edisi": 309
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Penelitian ini mengkaji insentif pajak lingkungan dan investasi hijau perusahaan multinasional di Indonesia. Relevan bagi pembuat kebijakan untuk mendorong pembangunan berkelanjutan dan ekonomi hijau di Indonesia.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
-   "wadah": "Value in Health Regional Issues",
-   "doi": "10.1016/j.vhri.2026.101676",
-   "tanggal": "2027-3",
-   "alasan": "Analisis biaya-manfaat regimen pengobatan HIV di Indonesia sangat penting untuk efisiensi sistem kesehatan. Hasil studi ini dapat menjadi dasar rekomendasi kebijakan kesehatan nasional.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Assessing seagrass climate risk and biodiversity vulnerability to support marine spatial planning in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107326",
-   "tanggal": "2027-2",
-   "alasan": "Studi ini mengevaluasi risiko iklim dan kerentanan keanekaragaman hayati lamun di Indonesia. Relevan untuk perencanaan tata ruang laut dan konservasi ekosistem pesisir Indonesia yang kaya.",
-   "kategori": "KELAUTAN & PESISIR",
-   "sejak_edisi": 308
-  },
-  {
-   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
-   "wadah": "Geosystems and Geoenvironment",
-   "doi": "10.1016/j.geogeo.2026.100570",
-   "tanggal": "2027-2",
-   "alasan": "Penelitian ini mengidentifikasi zona potensial sistem panas bumi di Solok Selatan, Indonesia. Sangat relevan untuk pengembangan sumber energi terbarukan dan eksplorasi panas bumi di Indonesia.",
-   "kategori": "GEOLOGI & ENERGI",
-   "sejak_edisi": 308
   }
  ]
 }
