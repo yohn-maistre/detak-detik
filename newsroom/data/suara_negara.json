@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-10-23T14:51:00+00:00",
+ "diambil": "2026-10-24T00:10:37+00:00",
  "baris": [
   {
    "id": "f01ec53a1db8",
@@ -860,16 +860,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "353a1f269f0e",
-   "url": "https://kontras.org/hari-anti-hukuman-mati-peluncuran-laporan-situasi-pidana-mati-2026-mandala-dan-diskusi-buku-cerita-pendek-antologi-hukuman-mati/",
-   "judul": "Hari Anti Hukuman Mati: Peluncuran Laporan Situasi Pidana Mati 2026, Mandala, dan Diskusi Buku Cerita Pendek Antologi Hukuman Mati",
-   "ringkas": "Jakarta, 9 Oktober 2026 – Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) menyelenggarakan kegiatan Hari Anti Hukuman Mati melalui peluncuran Laporan Situasi Hukuman Mati Indonesia Tahun 2026, peluncuran web Mandala, serta diskusi buku antologi cerita pendek hukum",
-   "tanggal": "2026-10-21",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "f422223b5c6a",
    "url": "https://tniad.mil.id/hadapi-ancaman-hukum-modern-kasad-dorong-penguatan-kompetensi-prajurit-hukum/",
    "judul": "Hadapi Ancaman Hukum Modern, Kasad Dorong Penguatan Kompetensi Prajurit Hukum",
@@ -878,6 +868,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "353a1f269f0e",
+   "url": "https://kontras.org/hari-anti-hukuman-mati-peluncuran-laporan-situasi-pidana-mati-2026-mandala-dan-diskusi-buku-cerita-pendek-antologi-hukuman-mati/",
+   "judul": "Hari Anti Hukuman Mati: Peluncuran Laporan Situasi Pidana Mati 2026, Mandala, dan Diskusi Buku Cerita Pendek Antologi Hukuman Mati",
+   "ringkas": "Jakarta, 9 Oktober 2026 – Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) menyelenggarakan kegiatan Hari Anti Hukuman Mati melalui peluncuran Laporan Situasi Hukuman Mati Indonesia Tahun 2026, peluncuran web Mandala, serta diskusi buku antologi cerita pendek hukum",
+   "tanggal": "2026-10-21",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "91ccb48bec98",
@@ -1244,16 +1244,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "6a0410b8c334",
-   "url": "https://kontras.org/rilis-dua-tahun-prabowo-gibran-impunitas-merajalela-kekerasan-terus-berulang/",
-   "judul": "Rilis  Dua Tahun Prabowo-Gibran: Impunitas Merajalela, Kekerasan Terus Berulang",
-   "ringkas": "20 Oktober 2026 menandai dua tahun sejak Prabowo Subianto dan Gibran Rakabuming Raka dilantik sebagai Presiden dan Wakil Presiden Republik Indonesia. Namun, selama dua tahun kepemimpinan ini justru memperlihatkan semakin buruknya situasi hak asasi manusia di Indonesia. Komisi Unt",
-   "tanggal": "2026-10-20",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "9b5bba18e5c5",
    "url": "https://tniad.mil.id/rangkaian-penghormatan-terakhir-tni-ad-untuk-mantan-kasad-subagyo-hadi-siswoyo/",
    "judul": "Rangkaian Penghormatan Terakhir TNI AD untuk Mantan Kasad Subagyo Hadi Siswoyo",
@@ -1262,6 +1252,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "6a0410b8c334",
+   "url": "https://kontras.org/rilis-dua-tahun-prabowo-gibran-impunitas-merajalela-kekerasan-terus-berulang/",
+   "judul": "Rilis  Dua Tahun Prabowo-Gibran: Impunitas Merajalela, Kekerasan Terus Berulang",
+   "ringkas": "20 Oktober 2026 menandai dua tahun sejak Prabowo Subianto dan Gibran Rakabuming Raka dilantik sebagai Presiden dan Wakil Presiden Republik Indonesia. Namun, selama dua tahun kepemimpinan ini justru memperlihatkan semakin buruknya situasi hak asasi manusia di Indonesia. Komisi Unt",
+   "tanggal": "2026-10-20",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "a397f2f5a9ab",
@@ -1627,16 +1627,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "14f903ef1ab7",
-   "url": "https://kontras.org/61-tahun-peristiwa-1965-1966-sejarah-diputihkan-korban-diabaikan-impunitas-dipertahankan/",
-   "judul": "61 Tahun Peristiwa 1965 – 1966: Sejarah Diputihkan, Korban Diabaikan, Impunitas Dipertahankan!",
-   "ringkas": "Enam puluh satu tahun berlalu, tetapi negara masih belum selesai dengan sejarah kekerasan 1965–1966. Alih-alih memastikan kebenaran, keadilan, dan pemulihan bagi korban, negara justru terus mempertahankan impunitas dan menghadirkan kebijakan-kebijakan yang berisiko mengaburkan fa",
-   "tanggal": "2026-10-16",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "7e493bcce2fb",
    "url": "https://tniad.mil.id/tata-struktur-komando-kasad-pimpin-sertijab-dan-alih-kodal-enam-korem/",
    "judul": "Tata Struktur Komando, Kasad Pimpin Sertijab dan Alih Kodal Enam Korem",
@@ -1655,6 +1645,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "14f903ef1ab7",
+   "url": "https://kontras.org/61-tahun-peristiwa-1965-1966-sejarah-diputihkan-korban-diabaikan-impunitas-dipertahankan/",
+   "judul": "61 Tahun Peristiwa 1965 – 1966: Sejarah Diputihkan, Korban Diabaikan, Impunitas Dipertahankan!",
+   "ringkas": "Enam puluh satu tahun berlalu, tetapi negara masih belum selesai dengan sejarah kekerasan 1965–1966. Alih-alih memastikan kebenaran, keadilan, dan pemulihan bagi korban, negara justru terus mempertahankan impunitas dan menghadirkan kebijakan-kebijakan yang berisiko mengaburkan fa",
+   "tanggal": "2026-10-16",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "18a0ae829a0a",
@@ -1776,6 +1776,16 @@
    "partai": "gerindra"
   },
   {
+   "id": "e108c263eacf",
+   "url": "https://tniad.mil.id/bakti-tni-ad-untuk-pesantren-53-truk-bantuan-disalurkan-ke-30-ponpes/",
+   "judul": "Bakti TNI AD untuk Pesantren, 53 Truk Bantuan Disalurkan ke 30 Ponpes",
+   "ringkas": "Tasikmalaya, tniad.mil.id – TNI Angkatan Darat menyalurkan bantuan untuk mendukung kebutuhan pendidikan dan kehidupan sehari-hari santri di 30 pondok pesantren (Ponpes) wilayah Garut dan Tasikmalaya, Jawa Barat. Sebanyak 53 truk...",
+   "tanggal": "2026-10-15",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "70605fc1c884",
    "url": "https://kontras.org/rilis-pers-ahli-bongkar-problem-gelar-pahlawan-soeharto-konflik-kepentingan-dan-pengkhianatan-reformasi/",
    "judul": "Rilis Pers Ahli Bongkar Problem Gelar Pahlawan Soeharto: Konflik Kepentingan dan Pengkhianatan Reformasi!",
@@ -1794,16 +1804,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "e108c263eacf",
-   "url": "https://tniad.mil.id/bakti-tni-ad-untuk-pesantren-53-truk-bantuan-disalurkan-ke-30-ponpes/",
-   "judul": "Bakti TNI AD untuk Pesantren, 53 Truk Bantuan Disalurkan ke 30 Ponpes",
-   "ringkas": "Tasikmalaya, tniad.mil.id – TNI Angkatan Darat menyalurkan bantuan untuk mendukung kebutuhan pendidikan dan kehidupan sehari-hari santri di 30 pondok pesantren (Ponpes) wilayah Garut dan Tasikmalaya, Jawa Barat. Sebanyak 53 truk...",
-   "tanggal": "2026-10-15",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "4a7323a3145c",
@@ -2276,16 +2276,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "f1b28bf8c28a",
-   "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
-   "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
-   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) secara konsisten terus bergerak dalam kerja-kerja penghormatan hak asasi manusia (HAM) di Indonesia, khususnya dalam mendorong terpenuhi hak atas hidup serta penghapusan penghukuman yang kejam dan tidak manusiawi sep",
-   "tanggal": "2026-10-09",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "85996b8d6157",
    "url": "https://tniad.mil.id/bangun-komunikasi-terbuka-kasad-undang-pemred-media-nasional-ke-mabesad/",
    "judul": "Bangun Komunikasi Terbuka, Kasad Undang Pemred Media Nasional ke Mabesad",
@@ -2294,6 +2284,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "f1b28bf8c28a",
+   "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
+   "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
+   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) secara konsisten terus bergerak dalam kerja-kerja penghormatan hak asasi manusia (HAM) di Indonesia, khususnya dalam mendorong terpenuhi hak atas hidup serta penghapusan penghukuman yang kejam dan tidak manusiawi sep",
+   "tanggal": "2026-10-09",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "66e20f6f45c3",
@@ -2622,16 +2622,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "61c02226a273",
-   "url": "https://kontras.org/negara-dalam-pusaran-kekerasan-laporan-investigasi-mobilisasi-represi-dalam-demonstrasi-27-agustus-2026/",
-   "judul": "Negara dalam Pusaran Kekerasan: Laporan Investigasi Mobilisasi Represi dalam Demonstrasi 27 Agustus 2026",
-   "ringkas": "Belum selesai negara menunaikan pertanggungjawabannya terhadap 13 orang yang meninggal pada demonstrasi besar di Agustus 2025 lalu, pada tahun ini di bulan yang sama, korban kembali berjatuhan. Demonstrasi yang salah satunya digagas oleh Aliansi Masyarakat Pati Bersatu (AMPB) yan",
-   "tanggal": "2026-09-30",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "bddc2751d07d",
    "url": "https://tniad.mil.id/buku-publikasi-unggulan-yonzipur-1-dhira-dharma/",
    "judul": "Buku Publikasi Unggulan Yonzipur 1/Dhira Dharma",
@@ -2650,6 +2640,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "61c02226a273",
+   "url": "https://kontras.org/negara-dalam-pusaran-kekerasan-laporan-investigasi-mobilisasi-represi-dalam-demonstrasi-27-agustus-2026/",
+   "judul": "Negara dalam Pusaran Kekerasan: Laporan Investigasi Mobilisasi Represi dalam Demonstrasi 27 Agustus 2026",
+   "ringkas": "Belum selesai negara menunaikan pertanggungjawabannya terhadap 13 orang yang meninggal pada demonstrasi besar di Agustus 2025 lalu, pada tahun ini di bulan yang sama, korban kembali berjatuhan. Demonstrasi yang salah satunya digagas oleh Aliansi Masyarakat Pati Bersatu (AMPB) yan",
+   "tanggal": "2026-09-30",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "1656c7f6f6ca",
@@ -2692,16 +2692,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "16d724202a58",
-   "url": "https://kontras.org/menggugatgelarpahlawansoeharto-saksi-bongkar-jejak-kejahatan-ham-dan-kasus-korupsi-soeharto-di-ptun-jakarta/",
-   "judul": "#MenggugatGelarPahlawanSoeharto: Saksi Bongkar Jejak Kejahatan HAM dan Kasus Korupsi Soeharto di PTUN Jakarta",
-   "ringkas": "Senin, 28 September 2026 - Gerakan Masyarakat Sipil Adili Soeharto (GEMAS) mendampingi korban dan keluarga korban pelanggaran HAM yang berat yaitu kasus 1965-1966, kasus Tanjung Priok 1984, kasus Mei 1998, serta kasus penculikan dan penghilangan aktivis 1998, menjalani sidang pem",
-   "tanggal": "2026-09-28",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "b70a3c7df165",
    "url": "https://tniad.mil.id/sukses-gagalkan-penyelundupan-narkoba-di-perbatasan-tni-ad-serahkan-164-kg-sabu-ke-bnnp-kalbar/",
    "judul": "Sukses Gagalkan Penyelundupan Narkoba di Perbatasan, TNI AD Serahkan 16,4 Kg Sabu ke BNNP Kalbar",
@@ -2710,6 +2700,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "16d724202a58",
+   "url": "https://kontras.org/menggugatgelarpahlawansoeharto-saksi-bongkar-jejak-kejahatan-ham-dan-kasus-korupsi-soeharto-di-ptun-jakarta/",
+   "judul": "#MenggugatGelarPahlawanSoeharto: Saksi Bongkar Jejak Kejahatan HAM dan Kasus Korupsi Soeharto di PTUN Jakarta",
+   "ringkas": "Senin, 28 September 2026 - Gerakan Masyarakat Sipil Adili Soeharto (GEMAS) mendampingi korban dan keluarga korban pelanggaran HAM yang berat yaitu kasus 1965-1966, kasus Tanjung Priok 1984, kasus Mei 1998, serta kasus penculikan dan penghilangan aktivis 1998, menjalani sidang pem",
+   "tanggal": "2026-09-28",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "e33a9de111b3",
@@ -2972,16 +2972,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "037df738555c",
-   "url": "https://kontras.org/september-hitam-2026-indonesia-darurat-impunitas-dan-kekerasan-negara/",
-   "judul": "September Hitam 2026: Indonesia Darurat Impunitas dan Kekerasan Negara",
-   "ringkas": "Pekatnya kegelapan dalam September Hitam semakin meningkat pada tahun 2026. Sebelumnya, dari tahun ke tahun, September Hitam diperingati untuk merawat ingatan mengenai berbagai peristiwa kekerasan negara dan pelanggaran hak asasi manusia (HAM) yang banyak terjadi di bulan Septemb",
-   "tanggal": "2026-09-08",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "124b9a73b5ed",
    "url": "https://tniad.mil.id/penpas-waspada-abu-vulkanik/",
    "judul": "Waspada Abu Vulkanik",
@@ -2990,6 +2980,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "037df738555c",
+   "url": "https://kontras.org/september-hitam-2026-indonesia-darurat-impunitas-dan-kekerasan-negara/",
+   "judul": "September Hitam 2026: Indonesia Darurat Impunitas dan Kekerasan Negara",
+   "ringkas": "Pekatnya kegelapan dalam September Hitam semakin meningkat pada tahun 2026. Sebelumnya, dari tahun ke tahun, September Hitam diperingati untuk merawat ingatan mengenai berbagai peristiwa kekerasan negara dan pelanggaran hak asasi manusia (HAM) yang banyak terjadi di bulan Septemb",
+   "tanggal": "2026-09-08",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "7edac06ee19a",
@@ -3042,6 +3042,16 @@
    "cabang": "pengawas"
   },
   {
+   "id": "fa13f65f0ce6",
+   "url": "https://tniad.mil.id/dari-energi-hingga-sampah-kasad-dorong-solusi-nyata-tni-ad-untuk-masyarakat/",
+   "judul": "Dari Energi hingga Sampah, Kasad Dorong Solusi Nyata TNI AD untuk Masyarakat",
+   "ringkas": "Garut, tniad.mil.id – Dalam kunjungan kerja di wilayah Kodam III/Siliwangi, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., meninjau sejumlah program TNI Angkatan Darat yang menyentuh kebutuhan masyarakat...",
+   "tanggal": "2026-09-04",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "772c338d53e4",
    "url": "https://kontras.org/awaiting-their-returns-impunity-and-the-states-failure-to-resolve-enforced-disappearances/",
    "judul": "“Awaiting Their Returns: Impunity and the State’s Failure to Resolve Enforced Disappearances”",
@@ -3070,16 +3080,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "fa13f65f0ce6",
-   "url": "https://tniad.mil.id/dari-energi-hingga-sampah-kasad-dorong-solusi-nyata-tni-ad-untuk-masyarakat/",
-   "judul": "Dari Energi hingga Sampah, Kasad Dorong Solusi Nyata TNI AD untuk Masyarakat",
-   "ringkas": "Garut, tniad.mil.id – Dalam kunjungan kerja di wilayah Kodam III/Siliwangi, Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., meninjau sejumlah program TNI Angkatan Darat yang menyentuh kebutuhan masyarakat...",
-   "tanggal": "2026-09-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "a1165827dbad",
@@ -3112,16 +3112,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "4d9f19e8969a",
-   "url": "https://kontras.org/swarga-edisi-ke-5-merdeka-di-atas-kertas/",
-   "judul": "Swarga Edisi ke-5: Merdeka di Atas Kertas",
-   "ringkas": "Setiap tanggal 17 Agustus, Indonesia merayakan kemerdekaan sebagai momentum bersejarah untuk mengenang Proklamasi 1945. Narasi kemerdekaan terus diwariskan secara simbolis melalui upacara bendera, lagu kebangsaan, dan ornamen nasionalisme. Namun, di balik seremonial tersebut, mun",
-   "tanggal": "2026-09-01",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "97ba93eb0c4b",
    "url": "https://tniad.mil.id/tni-ad-serahkan-kendaraan-kepada-pemenang-lomba-posyandu-dan-istri-danyon-berdampak/",
    "judul": "TNI AD Serahkan Kendaraan kepada Pemenang Lomba Posyandu dan Istri Danyon Berdampak",
@@ -3130,6 +3120,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "4d9f19e8969a",
+   "url": "https://kontras.org/swarga-edisi-ke-5-merdeka-di-atas-kertas/",
+   "judul": "Swarga Edisi ke-5: Merdeka di Atas Kertas",
+   "ringkas": "Setiap tanggal 17 Agustus, Indonesia merayakan kemerdekaan sebagai momentum bersejarah untuk mengenang Proklamasi 1945. Narasi kemerdekaan terus diwariskan secara simbolis melalui upacara bendera, lagu kebangsaan, dan ornamen nasionalisme. Namun, di balik seremonial tersebut, mun",
+   "tanggal": "2026-09-01",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "a883fa433842",
@@ -3322,6 +3322,26 @@
    "cabang": "aparat"
   },
   {
+   "id": "e396309849d2",
+   "url": "https://tniad.mil.id/laporkan-capaian-tni-ad-kepada-presiden-kasad-2-500-jembatan-dan-3-000-titik-air-tuntas/",
+   "judul": "Laporkan Capaian TNI AD kepada Presiden, Kasad: 2.500 Jembatan dan 3.000 Titik Air Tuntas",
+   "ringkas": "Bekasi, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaporkan capaian pembangunan infrastruktur TNI Angkatan Darat kepada Presiden Republik Indonesia Jenderal TNI (Purn.) Prabowo Subianto melalui...",
+   "tanggal": "2026-08-13",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "4f137b441e6a",
+   "url": "https://tniad.mil.id/dukung-semangat-juang-veteran-terus-diwariskan-kasad-hadiri-peringatan-hari-veteran-nasional/",
+   "judul": "Dukung Semangat Juang Veteran Terus Diwariskan, Kasad Hadiri Peringatan Hari Veteran Nasional",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Peringatan Hari Veteran Nasional Tahun 2026 di Balai Sudirman, Jakarta, Rabu (12/8/2026). Kehadiran Kasad menjadi bentuk...",
+   "tanggal": "2026-08-13",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "118bf2462bbb",
    "url": "https://kontras.org/lima-bulan-pasca-serangan-andrie-yunus-negara-gagal-melindungi-jangan-gagal-mengusut-tuntas-dan-mengadili/",
    "judul": "Lima Bulan Pasca Serangan Andrie Yunus: Negara Gagal Melindungi, Jangan Gagal  Mengusut Tuntas dan Mengadili!",
@@ -3350,26 +3370,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "e396309849d2",
-   "url": "https://tniad.mil.id/laporkan-capaian-tni-ad-kepada-presiden-kasad-2-500-jembatan-dan-3-000-titik-air-tuntas/",
-   "judul": "Laporkan Capaian TNI AD kepada Presiden, Kasad: 2.500 Jembatan dan 3.000 Titik Air Tuntas",
-   "ringkas": "Bekasi, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., melaporkan capaian pembangunan infrastruktur TNI Angkatan Darat kepada Presiden Republik Indonesia Jenderal TNI (Purn.) Prabowo Subianto melalui...",
-   "tanggal": "2026-08-13",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "4f137b441e6a",
-   "url": "https://tniad.mil.id/dukung-semangat-juang-veteran-terus-diwariskan-kasad-hadiri-peringatan-hari-veteran-nasional/",
-   "judul": "Dukung Semangat Juang Veteran Terus Diwariskan, Kasad Hadiri Peringatan Hari Veteran Nasional",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menghadiri Peringatan Hari Veteran Nasional Tahun 2026 di Balai Sudirman, Jakarta, Rabu (12/8/2026). Kehadiran Kasad menjadi bentuk...",
-   "tanggal": "2026-08-13",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "9644157bb0cd",
@@ -3432,16 +3432,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "2ee8498993d8",
-   "url": "https://kontras.org/audiensi-dan-diseminasi-hasil-catatan-kritis-hari-bhayangkara-polri-2026-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras-dan-komisi-kepolisian-nasional-kompolnas-ri/",
-   "judul": "Audiensi dan Diseminasi Hasil Catatan Kritis Hari Bhayangkara Polri 2026: Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) dan Komisi Kepolisian Nasional (Kompolnas) RI",
-   "ringkas": "Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) melakukan audiensi dan diseminasi Catatan Kritis Hari Bhayangkara Polri 2026 bersama dengan lembaga pengawas eksternal Polri yakni Komisi Kepolisian Nasional (Kompolnas) RI yang bertempat di Kantor Kompolnas RI, Grah",
-   "tanggal": "2026-08-05",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "e4dca02c1f97",
    "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
    "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
@@ -3450,6 +3440,16 @@
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
+  },
+  {
+   "id": "2ee8498993d8",
+   "url": "https://kontras.org/audiensi-dan-diseminasi-hasil-catatan-kritis-hari-bhayangkara-polri-2026-komisi-untuk-orang-hilang-dan-korban-tindak-kekerasan-kontras-dan-komisi-kepolisian-nasional-kompolnas-ri/",
+   "judul": "Audiensi dan Diseminasi Hasil Catatan Kritis Hari Bhayangkara Polri 2026: Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) dan Komisi Kepolisian Nasional (Kompolnas) RI",
+   "ringkas": "Komisi Untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) melakukan audiensi dan diseminasi Catatan Kritis Hari Bhayangkara Polri 2026 bersama dengan lembaga pengawas eksternal Polri yakni Komisi Kepolisian Nasional (Kompolnas) RI yang bertempat di Kantor Kompolnas RI, Grah",
+   "tanggal": "2026-08-05",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "ce0be246b0c1",
@@ -3542,6 +3542,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "fd276161a135",
+   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
+   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
+   "tanggal": "2026-07-23",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "ebe7b99c852a",
    "url": "https://kontras.org/rilis-pers-masyarakat-sipil-indonesia-untuk-solidaritas-kemanusiaan-palestina-mendesak-transparansi-pemerintah-indonesia-atas-deportasi-aktivis-palestina-abdul-karim-raed-miqdad/",
    "judul": "Rilis Pers Masyarakat Sipil Indonesia untuk Solidaritas Kemanusiaan Palestina Mendesak Transparansi Pemerintah Indonesia atas Deportasi Aktivis Palestina Abdul Karim Raed Miqdad",
@@ -3562,11 +3572,11 @@
    "cabang": "pengawas"
   },
   {
-   "id": "fd276161a135",
-   "url": "https://tniad.mil.id/terima-514-perwira-remaja-akmil-kasad-tekankan-kepemimpinan-dan-pengabdian/",
-   "judul": "Terima 514 Perwira Remaja Akmil, Kasad Tekankan Kepemimpinan dan Pengabdian",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., secara resmi menerima 514 Perwira Remaja (Paja) Akademi Militer (Akmil) di Markas Besar Angkatan Darat (Mabesad), Jakarta,...",
-   "tanggal": "2026-07-23",
+   "id": "47574f1d0386",
+   "url": "https://tniad.mil.id/perkuat-kemitraan-strategis-kasad-terima-kunjungan-panglima-tentera-darat-malaysia/",
+   "judul": "Perkuat Kemitraan Strategis, Kasad Terima Kunjungan Panglima Tentera Darat Malaysia",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menerima kunjungan kehormatan Panglima Tentera Darat Malaysia, Jenderal Tan Sri Azhan Bin Hj Md Othman, di Markas...",
+   "tanggal": "2026-07-21",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
@@ -3580,16 +3590,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "47574f1d0386",
-   "url": "https://tniad.mil.id/perkuat-kemitraan-strategis-kasad-terima-kunjungan-panglima-tentera-darat-malaysia/",
-   "judul": "Perkuat Kemitraan Strategis, Kasad Terima Kunjungan Panglima Tentera Darat Malaysia",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., menerima kunjungan kehormatan Panglima Tentera Darat Malaysia, Jenderal Tan Sri Azhan Bin Hj Md Othman, di Markas...",
-   "tanggal": "2026-07-21",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
   },
   {
    "id": "40b103c519b9",
