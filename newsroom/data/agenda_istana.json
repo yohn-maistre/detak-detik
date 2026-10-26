@@ -4,8 +4,110 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-23T14:19:44+00:00",
+ "diambil": "2026-10-26T16:14:22+00:00",
  "acara": [
+  {
+   "id": "30c24414aae4",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-terima-laporan-perkembangan-program-pendidikan-kepemimpinan-uri/",
+   "judul": "Seskab Teddy: Presiden Prabowo Terima Laporan Perkembangan Program Pendidikan Kepemimpinan URI",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "1aabe737ddeb",
+   "url": "https://wapresri.go.id/dukung-pengembangan-ekonomi-kerakyatan-dan-potensi-produk-lokal-wapres-dorong-penguatan-pendampingan-umkm-cilacap/",
+   "judul": "Dukung Pengembangan Ekonomi Kerakyatan dan Potensi Produk Lokal, Wapres Dorong Penguatan Pendampingan UMKM Cilacap",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "bc243a691f58",
+   "url": "https://wapresri.go.id/jaga-lingkungan-dan-ciptakan-nilai-ekonomi-wapres-apresiasi-peran-ibu-ibu-pengelola-bank-sampah/",
+   "judul": "Jaga Lingkungan dan Ciptakan Nilai Ekonomi, Wapres Apresiasi Peran Ibu-Ibu Pengelola Bank Sampah",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2d95e6c797a2",
+   "url": "https://wapresri.go.id/tinjau-pengembangan-saf-di-cilacap-wapres-dorong-inovasi-energi-ramah-lingkungan-dan-pemberdayaan-perempuan/",
+   "judul": "Tinjau Pengembangan SAF di Cilacap, Wapres Dorong Inovasi Energi Ramah Lingkungan dan Pemberdayaan Perempuan",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8f162443d2d4",
+   "url": "https://wapresri.go.id/tindak-lanjuti-keluhan-nelayan-wapres-tinjau-langsung-pendangkalan-sungai-di-cilacap/",
+   "judul": "Tindak Lanjuti Keluhan Nelayan, Wapres Tinjau Langsung Pendangkalan Sungai di Cilacap",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "aac0fa59e715",
+   "url": "https://wapresri.go.id/serap-aspirasi-nelayan-cilacap-wapres-pastikan-kendala-lapangan-segera-dituntaskan/",
+   "judul": "Serap Aspirasi Nelayan Cilacap, Wapres Pastikan Kendala Lapangan Segera Dituntaskan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "0487072acdc8",
    "url": "https://setkab.go.id/seskab-teddy-ungkap-arahan-presiden-prabowo-dalam-sidang-kabinet-paripurna-perkuat-ketahanan-nasional-hingga-tindak-tegas-karhutla/",
