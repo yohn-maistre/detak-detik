@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-26T16:14:22+00:00",
+ "diambil": "2026-10-27T15:28:52+00:00",
  "acara": [
   {
    "id": "30c24414aae4",
@@ -109,6 +109,21 @@
    "prov_nama": null
   },
   {
+   "id": "d2b978ab112d",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-regenerasi-perajin-muda-tenun-gringsing-di-tenganan/",
+   "judul": "Ibu Selvi Dorong Regenerasi Perajin Muda Tenun Gringsing di Tenganan",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-23",
+   "tanggal_terbit": "2026-10-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
    "id": "0487072acdc8",
    "url": "https://setkab.go.id/seskab-teddy-ungkap-arahan-presiden-prabowo-dalam-sidang-kabinet-paripurna-perkuat-ketahanan-nasional-hingga-tindak-tegas-karhutla/",
    "judul": "Seskab Teddy Ungkap Arahan Presiden Prabowo dalam Sidang Kabinet Paripurna: Perkuat Ketahanan Nasional hingga Tindak Tegas Karhutla",
@@ -156,6 +171,36 @@
     "ekonomi",
     "luar-negeri"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "66efc7721784",
+   "url": "https://wapresri.go.id/tinjau-posyandu-mandala-sari-di-denpasar-ibu-selvi-apresiasi-integrasi-enam-bidang-spm/",
+   "judul": "Tinjau Posyandu Mandala Sari di Denpasar, Ibu Selvi Apresiasi Integrasi Enam Bidang SPM",
+   "aktor": "ISTANA",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-10-22",
+   "tanggal_terbit": "2026-10-22",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4eca65c1ff59",
+   "url": "https://wapresri.go.id/ibu-selvi-dorong-program-dekranas-tp-pkk-dan-tp-posyandu-lebih-tepat-sasaran/",
+   "judul": "Ibu Selvi Dorong Program Dekranas, TP PKK, dan TP Posyandu Lebih Tepat Sasaran",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-22",
+   "tanggal_terbit": "2026-10-22",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
