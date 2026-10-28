@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-28T00:39:32+00:00",
+ "diambil": "2026-10-28T00:51:30+00:00",
  "acara": [
+  {
+   "id": "6c06f824664f",
+   "url": "https://wapresri.go.id/serap-aspirasi-jemaat-gkpmi-wapres-dukung-transformasi-pelayanan-agar-berdampak-lebih-luas/",
+   "judul": "Serap Aspirasi Jemaat GKPMI, Wapres Dukung Transformasi Pelayanan Agar Berdampak Lebih Luas",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-27",
+   "tanggal_terbit": "2026-10-27",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "30c24414aae4",
    "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-terima-laporan-perkembangan-program-pendidikan-kepemimpinan-uri/",
