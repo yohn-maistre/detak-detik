@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-27T15:28:52+00:00",
+ "diambil": "2026-10-28T00:39:32+00:00",
  "acara": [
   {
    "id": "30c24414aae4",
@@ -107,6 +107,24 @@
    "kota": null,
    "prov": null,
    "prov_nama": null
+  },
+  {
+   "id": "60a8cf3fdd7d",
+   "url": "https://setkab.go.id/seskab-teddy-sekolah-rakyat-buka-harapan-bagi-45-ribu-anak-jalanan/",
+   "judul": "Seskab Teddy: Sekolah Rakyat Buka Harapan bagi 45 Ribu Anak Jalanan",
+   "aktor": "SESKAB",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
   },
   {
    "id": "d2b978ab112d",
