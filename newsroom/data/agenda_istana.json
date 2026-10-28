@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-28T00:51:30+00:00",
+ "diambil": "2026-10-28T16:11:33+00:00",
  "acara": [
   {
    "id": "6c06f824664f",
@@ -16,6 +16,26 @@
    "tanggal_terbit": "2026-10-27",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "6a5b38826d68",
+   "url": "https://setkab.go.id/265-sekolah-rakyat-berdiri-45-ribu-anak-kembali-bersekolah-seskab-teddy-komitmen-presiden-prabowo-putus-rantai-kemiskinan-lewat-pendidikan/",
+   "judul": "265 Sekolah Rakyat Berdiri, 45 Ribu Anak Kembali Bersekolah, Seskab Teddy: Komitmen Presiden Prabowo Putus Rantai Kemiskinan Lewat Pendidikan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-27",
+   "tanggal_terbit": "2026-10-27",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
@@ -140,6 +160,21 @@
    "kota": null,
    "prov": "32",
    "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "244eb363a49c",
+   "url": "https://wapresri.go.id/setwapres-dorong-pemerataan-akses-teknologi-bagi-santri-dan-siswa-melalui-program-robotika-untuk-negeri/",
+   "judul": "Setwapres Dorong Pemerataan Akses Teknologi bagi Santri dan Siswa melalui Program Robotika untuk Negeri",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-26",
+   "tanggal_terbit": "2026-10-26",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
   },
   {
    "id": "d2b978ab112d",
