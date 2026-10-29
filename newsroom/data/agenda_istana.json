@@ -4,8 +4,73 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-28T16:11:33+00:00",
+ "diambil": "2026-10-29T16:17:46+00:00",
  "acara": [
+  {
+   "id": "e0bec9f2ac09",
+   "url": "https://setkab.go.id/terima-tim-perumus-uu-satu-data-indonesia-presiden-prabowo-tekankan-kedaulatan-data-sebagai-fondasi-keutuhan-bangsa/",
+   "judul": "Terima Tim Perumus UU Satu Data Indonesia, Presiden Prabowo Tekankan Kedaulatan Data sebagai Fondasi Keutuhan Bangsa",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-29",
+   "tanggal_terbit": "2026-10-29",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "a7c655299b02",
+   "url": "https://setkab.go.id/presiden-prabowo-beri-bonus-kepada-atlet-peraih-medali-asian-games-dan-asian-para-games-aichi-nagoya-2026/",
+   "judul": "Presiden Prabowo Beri Bonus kepada Atlet Peraih Medali Asian Games dan Asian Para Games Aichi-Nagoya 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-29",
+   "tanggal_terbit": "2026-10-29",
+   "audiens": "Atlet Peraih Medali Asian Games dan Asian Para Games Aichi-Nagoya 2026",
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "44eb41b552be",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-permohonan-pertemuan-menlu-singapura-di-hambalang/",
+   "judul": "Presiden Prabowo Terima Permohonan Pertemuan Menlu Singapura di Hambalang",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-28",
+   "tanggal_terbit": "2026-10-28",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "5a1dfcb2b9b4",
+   "url": "https://wapresri.go.id/terima-father-of-asian-ev-asal-magelang-wapres-dorong-inovasi-kendaraan-listrik-karya-anak-bangsa/",
+   "judul": "Terima Father of Asian EV Asal Magelang, Wapres Dorong Inovasi Kendaraan Listrik Karya Anak Bangsa",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-10-28",
+   "tanggal_terbit": "2026-10-28",
+   "audiens": null,
+   "topik": [
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "6c06f824664f",
    "url": "https://wapresri.go.id/serap-aspirasi-jemaat-gkpmi-wapres-dukung-transformasi-pelayanan-agar-berdampak-lebih-luas/",
