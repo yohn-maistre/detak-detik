@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-29T16:17:46+00:00",
+ "diambil": "2026-10-30T01:13:40+00:00",
  "acara": [
   {
    "id": "e0bec9f2ac09",
@@ -33,6 +33,21 @@
    "tanggal_acara": "2026-10-29",
    "tanggal_terbit": "2026-10-29",
    "audiens": "Atlet Peraih Medali Asian Games dan Asian Para Games Aichi-Nagoya 2026",
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "180ce87c01bf",
+   "url": "https://wapresri.go.id/dengar-aspirasi-komunitas-pedagang-bakso-wapres-dorong-ekosistem-usaha-yang-mandiri-dan-berkelanjutan/",
+   "judul": "Dengar Aspirasi Komunitas Pedagang Bakso, Wapres Dorong Ekosistem Usaha yang Mandiri dan Berkelanjutan",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-29",
+   "tanggal_terbit": "2026-10-29",
+   "audiens": null,
    "topik": [],
    "venue": null,
    "kota": null,
