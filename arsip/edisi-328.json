@@ -1,0 +1,121 @@
+{
+ "edisi": 328,
+ "terbit": "2026-11-01T16:11:01.890396+00:00",
+ "sesi": "petang",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-328-01",
+   "judul": "Polri Akui Insiden Penggerebekan Pesantren Hamalatul Quran Sukoharjo Sebagai Bahan Perbaikan dan Evaluasi",
+   "skor": 28
+  },
+  {
+   "id": "klp-328-02",
+   "judul": "Surat Keterangan ijazah Gibran tidak sah dan dibatalkan MA, apa konsekuensinya?",
+   "skor": 28
+  },
+  {
+   "id": "klp-328-03",
+   "judul": "Bulan Solidaritas Palestina 2026, AWG Serukan Peran Advokasi Global untuk Pembebasan Masjid Al-Aqsa",
+   "skor": 25
+  },
+  {
+   "id": "klp-328-04",
+   "judul": "Kronologi Penggerebekan Narkoba Besar-besaran di Kampung Bahari, Polisi Naik KRL Tangkap Puluhan Orang",
+   "skor": 24
+  },
+  {
+   "id": "klp-328-05",
+   "judul": "Dua Desa di Aceh Selatan Dilanda Banjir, Ratusan Warga Terpaksa Dievakuasi ke Posko Pengungsian",
+   "skor": 24
+  },
+  {
+   "id": "klp-328-06",
+   "judul": "Korban Kecelakaan Truk Molen di Bekasi Jadi 12 Orang: 6 Tewas, 6 Luka-luka",
+   "skor": 18
+  },
+  {
+   "id": "klp-328-07",
+   "judul": "Saat Prabowo Terima Anggota KADIN-Peserta P3MDI di Hambalang: Bahas Investasi-Ekonomi",
+   "skor": 15
+  },
+  {
+   "id": "klp-328-08",
+   "judul": "Asisten Pelatih Persib Puji Kualitas dan Mentalitas Penggawa Maung Bandung Usai Kalahkan Isenmulang",
+   "skor": 15
+  },
+  {
+   "id": "klp-328-09",
+   "judul": "Menteri Ekonomi Kreatif Dorong UMKM Desa Wonosobo Manfaatkan AI untuk Perluas Pasar",
+   "skor": 15
+  },
+  {
+   "id": "klp-328-10",
+   "judul": "Peretasan Kripto Rp114 Triliun di Binance, Presiden AS Donald Trump Buka Penyelidikan",
+   "skor": 12
+  },
+  {
+   "id": "klp-328-11",
+   "judul": "Kerusuhan Pecah di Jerman, 200 Orang Ditangkap Usai Demo Gen Z Disusupi Kelompok Radikal",
+   "skor": 12
+  },
+  {
+   "id": "klp-328-12",
+   "judul": "Bamsoet Ingatkan KADIN, Investasi Harus Buka Lapangan Kerja dan Libatkan UMKM",
+   "skor": 12
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
