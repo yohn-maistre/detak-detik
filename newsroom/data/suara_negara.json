@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-11-01T00:36:42+00:00",
+ "diambil": "2026-11-01T16:42:50+00:00",
  "baris": [
   {
    "id": "9d5c444fafbf",
@@ -17,6 +17,119 @@
    "judul": "Lewat Indonesia Muda Bicara, PKS Buka Ruang Kolaborasi dan Kontribusi bagi Generasi Muda",
    "ringkas": "Ketua DPP Partai Keadilan Sejahtera (PKS) Bidang Kepemudaan, Aang Kunaifi, mengajak generasi muda untuk tidak sekadar mempersiapkan diri menjadi pemimpin masa depan, tetapi juga mengambil tanggung jawab dan berkontribusi nyata bagi bangsa sejak hari ini.",
    "tanggal": "2026-11-01",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "6c8fe1d05895",
+   "url": "https://pks.id/content/menuju-pemilu-2029-pks-matangkan-konsolidasi-relawan-dan-manajemen-saksi",
+   "judul": "Menuju Pemilu 2029, PKS Matangkan Konsolidasi Relawan dan Manajemen Saksi",
+   "ringkas": "Partai Keadilan Sejahtera (PKS) melalui Bidang Relawan dan Saksi Nasional (BRSN) terus memperkuat konsolidasi organisasi dan manajemen saksi sebagai bagian dari persiapan menghadapi Pemilu 2029.",
+   "tanggal": "2026-11-01",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "a542b3c77c8c",
+   "url": "https://pks.id/content/konsolidasi-brsn-pks-perkuat-kapasitas-relawan-dan-saksi-hadapi-dinamika-pemilu",
+   "judul": "Konsolidasi BRSN, PKS Perkuat Kapasitas Relawan dan Saksi Hadapi Dinamika Pemilu",
+   "ringkas": "Dalam sambutannya, Ketua DPP PKS Bidang Relawan dan Saksi Nasional (BRSN) Bachtiar Firdaus menegaskan pentingnya membangun organisasi relawan dan saksi yang profesional, adaptif, serta memiliki kapasitas dalam menghadapi dinamika Pemilu",
+   "tanggal": "2026-11-01",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "c152c4d19cdb",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/abdullah-ingatkan-kepatuhan-sop-kepolisian-terkait-kasus-ponpes-sukoharjo",
+   "judul": "Abdullah Ingatkan Kepatuhan SOP Kepolisian terkait Kasus Ponpes Sukoharjo",
+   "ringkas": "PARLEMENTARIA, Jakarta— Anggota Komisi III DPR RI Abdullah memberikan tanggapan terkait klarifikasi penanganan perkara oleh Polda Jawa Tengah dan jajaran Kepolisian Resor (Polres) Sukoharjo atas penggeledahan di Pondok Pesantren Hamalatul Qur'an, Sukoharjo, Jawa Tengah. Ia mengin",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "ec7d50d93456",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/soroti-penggerebekan-ponpes-atalia-penegakan-hukum-jangan-abaikan-anak-dan-perempuan",
+   "judul": "Soroti Penggerebekan Ponpes, Atalia: Penegakan Hukum Jangan Abaikan Anak dan Perempuan",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi VIII DPR RI Atalia Praratya memberikan tanggapan tegas terkait insiden penggerebekan dan penyitaan barang di Pondok Pesantren Hamalatul Qur'an, Laban, Mojolaban, Kabupaten Sukoharjo, Jawa Tengah. Ia mengingatkan agar aparat penegak hukum se",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "be0a9659770c",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/ibas-dorong-anak-muda-ponorogo-ubah-kreativitas-jadi-sumber-penghasilan",
+   "judul": "Ibas Dorong Anak Muda Ponorogo Ubah Kreativitas Jadi Sumber Penghasilan",
+   "ringkas": "PARLEMENTARIA, Jakarta - Potensi seni budaya, kuliner, hingga industri digital di Kabupaten Ponorogo dapat menjadi sumber penghasilan baru bagi generasi muda jika dikembangkan melalui kreativitas dan inovasi. Pengembangan ekonomi kreatif pun dinilai membuka peluang usaha sekaligu",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "d422c79299e7",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/dugaan-kecurangan-tka-sma-fikri-faqih-minta-pengawasan-diperketat",
+   "judul": "Dugaan Kecurangan TKA SMA, Fikri Faqih Minta Pengawasan Diperketat",
+   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi X DPR RI Abdul Fikri Faqih menyoroti dugaan kecurangan pada hari pertama pelaksanaan Tes Kemampuan Akademik (TKA) tingkat SMA. Temuan tersebut, menurutnya, menunjukkan perlunya evaluasi terhadap kesiapan panitia dan sistem pengawasan agar p",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "21335a125193",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/adang-daradjatun-perang-lawan-narkoba-harus-dilakukan-konsisten-dan-berkelanjutan",
+   "judul": "Adang Daradjatun: Perang Lawan Narkoba Harus Dilakukan Konsisten dan Berkelanjutan",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi III DPR RI Adang Daradjatun, menyampaikan apresiasi dan penghargaan kepada jajaran Kepolisian Negara Republik Indonesia (Polri), khususnya Polda Metro Jaya, atas langkah tegas melakukan penggerebekan kawasan Kampung Bahari, Tanjung Priok, J",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "575b69107b41",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/m-kholid-keuntungan-korporasi-dari-tindak-pidana-karhutla-harus-dirampas",
+   "judul": "M. Kholid: Keuntungan Korporasi dari Tindak Pidana Karhutla Harus Dirampas",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota DPR RI Muhammad Kholid, menegaskan keuntungan dari korporasi pelaku tindak pidana Kebakaran Hutan dan Lahan (Karhutla) harus dirampas. Hal ini sejalan dengan langkah Kepolisian Negara Republik Indonesia (Polri) yang telah menetapkan 20 korporasi s",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "d349d3c30eab",
+   "url": "https://emedia.dpr.go.id/news/2026/11/01/polda-kalteng-harus-ungkap-pihak-lain-pelaku-karhutla-jangan-berhenti-pada-dua-korporasi",
+   "judul": "Polda Kalteng Harus Ungkap Pihak Lain Pelaku Karhutla, Jangan Berhenti pada Dua Korporasi",
+   "ringkas": "PARLEMENTARIA, Jakarta - Anggota Komisi II DPR RI Iwan Kurniawan mengapresiasi langkah Polda Kalimantan Tengah (Kalteng) yang telah menetapkan dua korporasi sebagai tersangka dalam perkara Kebakaran Hutan dan Lahan (Karhutla). Menurutnya, penanganan hukum tersebut menunjukkan bah",
+   "tanggal": "2026-11-01",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "4e5b912cee44",
+   "url": "https://www.kemhan.go.id/2026/11/01/menhan-hadiri-taklimat-presiden-kepada-peserta-p3mdi-dan-anggota-kadin-di-hambalang.html",
+   "judul": "Menhan Hadiri Taklimat Presiden kepada Peserta P3MDI dan Anggota Kadin di Hambalang",
+   "ringkas": "Bogor – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Taklimat Presiden RI Prabowo Subianto kepada sekitar 400 peserta...",
+   "tanggal": "2026-11-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "aff71fd2cda0",
+   "url": "https://pks.id/content/desak-polri-klarifikasi-penggerebekan-pesantren-sukoharjo-sekjen-pks-lindungi-martabat-santriwati",
+   "judul": "Desak Polri Klarifikasi Penggerebekan Pesantren Sukoharjo, Sekjen PKS: Lindungi Martabat Santriwati",
+   "ringkas": "Sekretaris Jenderal Partai Keadilan Sejahtera (PKS), Muhammad Kholid, menyampaikan keprihatinan mendalam atas pemberitaan penggerebekan Pondok Pesantren Hamalatul Qur’an di Sukoharjo, Jawa Tengah, khususnya terkait pengaduan dugaan tindakan intimidatif terhadap santriwati.",
+   "tanggal": "2026-10-31",
    "kanal": "pks",
    "lembaga": "PKS",
    "cabang": "partai",
@@ -63,15 +176,14 @@
    "cabang": "legislatif"
   },
   {
-   "id": "aff71fd2cda0",
-   "url": "https://pks.id/content/desak-polri-klarifikasi-penggerebekan-pesantren-sukoharjo-sekjen-pks-lindungi-martabat-santriwati",
-   "judul": "Desak Polri Klarifikasi Penggerebekan Pesantren Sukoharjo, Sekjen PKS: Lindungi Martabat Santriwati",
-   "ringkas": "Sekretaris Jenderal Partai Keadilan Sejahtera (PKS), Muhammad Kholid, menyampaikan keprihatinan mendalam atas pemberitaan penggerebekan Pondok Pesantren Hamalatul Qur’an di Sukoharjo, Jawa Tengah, khususnya terkait pengaduan dugaan tindakan intimidatif terhadap santriwati.",
+   "id": "83b6be666a65",
+   "url": "https://emedia.dpr.go.id/news/2026/10/31/pendidikan-jadi-kunci-memutus-rantai-kemiskinan",
+   "judul": "Pendidikan Jadi Kunci Memutus Rantai Kemiskinan",
+   "ringkas": "PARLEMENTARIA, Sumedang — Pendidikan menjadi salah satu jalan utama untuk memutus rantai kemiskinan sekaligus meningkatkan kualitas kehidupan masyarakat. Karena itu, setiap anak harus mendapatkan kesempatan untuk mengenyam pendidikan setinggi mungkin, terlepas dari kondisi ekonom",
    "tanggal": "2026-10-31",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
   },
   {
    "id": "ba85e96bd438",
@@ -82,6 +194,50 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "e598b0a48f4b",
+   "url": "https://pks.id/content/pks-gelar-sarasehan-seni-budaya-2026-perkuat-gerakan-budaya-dari-komunitas",
+   "judul": "PKS Gelar Sarasehan Seni Budaya 2026, Perkuat Gerakan Budaya dari Komunitas",
+   "ringkas": "Bidang Seni dan Budaya DPP PKS menyelenggarakan Sarasehan Seni Budaya DPP PKS 2026 dengan tema \"Dari Talenta ke Karya, Dari Komunitas ke Gerakan Budaya\" selama pada Jumat-Sabtu, (30-31/10/2026) di Jakarta.",
+   "tanggal": "2026-10-30",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "ba39d4be07b3",
+   "url": "https://pks.id/content/pks-umumkan-pemenang-lomba-cover-lagu-daerah-wadah-generasi-muda-lestarikan-budaya-nusantara",
+   "judul": "PKS Umumkan Pemenang Lomba Cover Lagu Daerah, Wadah Generasi Muda Lestarikan Budaya Nusantara",
+   "ringkas": "Bidang Seni dan Budaya DPP PKS menyelenggarakan Lomba Cover Lagu Daerah 2026 dengan mengusung tema \"Melestarikan Budaya Nusantara melalui Musik dan Kreativitas Generasi Indonesia\" yang terbuka untuk umum pada sejak awal Oktober ini.",
+   "tanggal": "2026-10-30",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "c77520e4c4ac",
+   "url": "https://pks.id/content/pks-dorong-seni-budaya-jadi-gerakan-pelestarian-identitas-bangsa",
+   "judul": "PKS Dorong Seni Budaya Jadi Gerakan Pelestarian Identitas Bangsa",
+   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS) Almuzzammil Yusuf yang diwakili Wakil Sekretaris Jenderal Bidang Protokoler dan Pengamanan Pimpinan Iman Firmansyah mendorong pengembangan seni dan budaya sebagai gerakan kolektif untuk melestarikan identitas bangsa sekaligus memperkuat ka",
+   "tanggal": "2026-10-30",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "580137595b79",
+   "url": "https://pks.id/content/dukung-polri-tetapkan-20-korporasi-tersangka-karhutla-sekjen-pks-hukum-seberat-beratnya-siapa-pun-pemiliknya",
+   "judul": "Dukung Polri Tetapkan 20 Korporasi Tersangka Karhutla, Sekjen PKS: Hukum Seberat-beratnya, Siapa Pun Pemiliknya!",
+   "ringkas": "Sekretaris Jenderal PKS sekaligus Anggota DPR RI, Muhammad Kholid, mendukung langkah Kepolisian Negara Republik Indonesia (Polri) menetapkan 20 korporasi sebagai tersangka kasus kebakaran hutan dan lahan (karhutla).",
+   "tanggal": "2026-10-30",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "b81d04ca7517",
@@ -174,50 +330,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "e598b0a48f4b",
-   "url": "https://pks.id/content/pks-gelar-sarasehan-seni-budaya-2026-perkuat-gerakan-budaya-dari-komunitas",
-   "judul": "PKS Gelar Sarasehan Seni Budaya 2026, Perkuat Gerakan Budaya dari Komunitas",
-   "ringkas": "Bidang Seni dan Budaya DPP PKS menyelenggarakan Sarasehan Seni Budaya DPP PKS 2026 dengan tema \"Dari Talenta ke Karya, Dari Komunitas ke Gerakan Budaya\" selama pada Jumat-Sabtu, (30-31/10/2026) di Jakarta.",
-   "tanggal": "2026-10-30",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "ba39d4be07b3",
-   "url": "https://pks.id/content/pks-umumkan-pemenang-lomba-cover-lagu-daerah-wadah-generasi-muda-lestarikan-budaya-nusantara",
-   "judul": "PKS Umumkan Pemenang Lomba Cover Lagu Daerah, Wadah Generasi Muda Lestarikan Budaya Nusantara",
-   "ringkas": "Bidang Seni dan Budaya DPP PKS menyelenggarakan Lomba Cover Lagu Daerah 2026 dengan mengusung tema \"Melestarikan Budaya Nusantara melalui Musik dan Kreativitas Generasi Indonesia\" yang terbuka untuk umum pada sejak awal Oktober ini.",
-   "tanggal": "2026-10-30",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "c77520e4c4ac",
-   "url": "https://pks.id/content/pks-dorong-seni-budaya-jadi-gerakan-pelestarian-identitas-bangsa",
-   "judul": "PKS Dorong Seni Budaya Jadi Gerakan Pelestarian Identitas Bangsa",
-   "ringkas": "Presiden Partai Keadilan Sejahtera (PKS) Almuzzammil Yusuf yang diwakili Wakil Sekretaris Jenderal Bidang Protokoler dan Pengamanan Pimpinan Iman Firmansyah mendorong pengembangan seni dan budaya sebagai gerakan kolektif untuk melestarikan identitas bangsa sekaligus memperkuat ka",
-   "tanggal": "2026-10-30",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "580137595b79",
-   "url": "https://pks.id/content/dukung-polri-tetapkan-20-korporasi-tersangka-karhutla-sekjen-pks-hukum-seberat-beratnya-siapa-pun-pemiliknya",
-   "judul": "Dukung Polri Tetapkan 20 Korporasi Tersangka Karhutla, Sekjen PKS: Hukum Seberat-beratnya, Siapa Pun Pemiliknya!",
-   "ringkas": "Sekretaris Jenderal PKS sekaligus Anggota DPR RI, Muhammad Kholid, mendukung langkah Kepolisian Negara Republik Indonesia (Polri) menetapkan 20 korporasi sebagai tersangka kasus kebakaran hutan dan lahan (karhutla).",
-   "tanggal": "2026-10-30",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "6cb3b6b227a1",
    "url": "https://www.kemhan.go.id/2026/10/30/menhan-sjafrie-hadiri-peresmian-sma-taruna-nusantara-cimahi-wujudkan-generasi-unggul-dan-cinta-tanah-air.html",
    "judul": "Menhan Sjafrie Hadiri Peresmian SMA Taruna Nusantara Cimahi, Wujudkan Generasi Unggul dan Cinta Tanah Air",
@@ -291,6 +403,61 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "2c43d08bcda3",
+   "url": "https://pks.id/content/soroti-minimnya-regenerasi-dan-kuota-kebijakan-legislator-pks-dorong-pengarusutamaan-pemuda-di-kancah-nasional",
+   "judul": "Soroti Minimnya Regenerasi dan Kuota Kebijakan, Legislator PKS Dorong Pengarusutamaan Pemuda di Kancah Nasional",
+   "ringkas": "Anggota Komisi X DPR RI Fraksi PKS, Abdul Fikri Faqih, mendorong Kementerian Pemuda dan Olahraga (Kemenpora) segera menyusun desain besar (grand design) pengarusutamaan pemuda pada momentum Hari Sumpah Pemuda, Rabu (28/10/2026). Langkah strategis ini dinilai krusial untuk mengork",
+   "tanggal": "2026-10-29",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "9a963ef906ab",
+   "url": "https://pks.id/content/legislator-pks-dukung-penataan-ekspor-gas-pemerintah-harus-pastikan-manfaatnya-bagi-masyarakat",
+   "judul": "Legislator PKS Dukung Penataan Ekspor Gas, Pemerintah Harus Pastikan Manfaatnya bagi Masyarakat",
+   "ringkas": "Anggota Komisi XII DPR RI Fraksi PKS, Ateng Sutisna, mendukung kebijakan pemerintah mengurangi sebagian ekspor gas bumi melalui pipa ke Singapura untuk memprioritaskan kebutuhan listrik dan industri dalam negeri. Namun, kebijakan tersebut harus didasarkan pada kebutuhan nasional ",
+   "tanggal": "2026-10-29",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "9ca4ca69f652",
+   "url": "https://pks.id/content/legislator-pks-ruu-perampasan-aset-harus-cegah-penyalahgunaan-kekuasaan-dan-lindungi-hak-masyarakat",
+   "judul": "Legislator PKS: RUU Perampasan Aset Harus Cegah Penyalahgunaan Kekuasaan dan Lindungi Hak Masyarakat",
+   "ringkas": "Anggota Komisi III DPR RI Fraksi PKS, Adang Daradjatun, menekankan pentingnya kehati-hatian dalam penyusunan Rancangan Undang-Undang (RUU) tentang Perampasan Aset Terkait Tindak Pidana. Regulasi ini perlu dirancang untuk memperkuat pemberantasan kejahatan dan pemulihan kerugian n",
+   "tanggal": "2026-10-29",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "728ded5fb224",
+   "url": "https://pks.id/content/pks-pertanian-peternakan-dan-perikanan-adalah-bisnis-masa-depan-anak-muda",
+   "judul": "PKS: Pertanian, Peternakan, dan Perikanan adalah Bisnis Masa Depan Anak Muda",
+   "ringkas": "Ketua DPP Partai Keadilan Sejahtera (PKS) Bidang Petani, Peternak, dan Nelayan, Riyono Caping, mengajak generasi muda untuk tidak ragu terjun ke bisnis pertanian, peternakan, dan perikanan.",
+   "tanggal": "2026-10-29",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "98a17ba3f822",
+   "url": "https://pks.id/content/unit-pembinaan-anggota-upa-jantung-regenerasi-dan-masa-depan-kepemimpinan-pks",
+   "judul": "Unit Pembinaan Anggota (UPA): Jantung Regenerasi dan Masa Depan Kepemimpinan PKS",
+   "ringkas": null,
+   "tanggal": "2026-10-29",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "b9848d63ca15",
@@ -593,61 +760,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "2c43d08bcda3",
-   "url": "https://pks.id/content/soroti-minimnya-regenerasi-dan-kuota-kebijakan-legislator-pks-dorong-pengarusutamaan-pemuda-di-kancah-nasional",
-   "judul": "Soroti Minimnya Regenerasi dan Kuota Kebijakan, Legislator PKS Dorong Pengarusutamaan Pemuda di Kancah Nasional",
-   "ringkas": "Anggota Komisi X DPR RI Fraksi PKS, Abdul Fikri Faqih, mendorong Kementerian Pemuda dan Olahraga (Kemenpora) segera menyusun desain besar (grand design) pengarusutamaan pemuda pada momentum Hari Sumpah Pemuda, Rabu (28/10/2026). Langkah strategis ini dinilai krusial untuk mengork",
-   "tanggal": "2026-10-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "9a963ef906ab",
-   "url": "https://pks.id/content/legislator-pks-dukung-penataan-ekspor-gas-pemerintah-harus-pastikan-manfaatnya-bagi-masyarakat",
-   "judul": "Legislator PKS Dukung Penataan Ekspor Gas, Pemerintah Harus Pastikan Manfaatnya bagi Masyarakat",
-   "ringkas": "Anggota Komisi XII DPR RI Fraksi PKS, Ateng Sutisna, mendukung kebijakan pemerintah mengurangi sebagian ekspor gas bumi melalui pipa ke Singapura untuk memprioritaskan kebutuhan listrik dan industri dalam negeri. Namun, kebijakan tersebut harus didasarkan pada kebutuhan nasional ",
-   "tanggal": "2026-10-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "9ca4ca69f652",
-   "url": "https://pks.id/content/legislator-pks-ruu-perampasan-aset-harus-cegah-penyalahgunaan-kekuasaan-dan-lindungi-hak-masyarakat",
-   "judul": "Legislator PKS: RUU Perampasan Aset Harus Cegah Penyalahgunaan Kekuasaan dan Lindungi Hak Masyarakat",
-   "ringkas": "Anggota Komisi III DPR RI Fraksi PKS, Adang Daradjatun, menekankan pentingnya kehati-hatian dalam penyusunan Rancangan Undang-Undang (RUU) tentang Perampasan Aset Terkait Tindak Pidana. Regulasi ini perlu dirancang untuk memperkuat pemberantasan kejahatan dan pemulihan kerugian n",
-   "tanggal": "2026-10-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "728ded5fb224",
-   "url": "https://pks.id/content/pks-pertanian-peternakan-dan-perikanan-adalah-bisnis-masa-depan-anak-muda",
-   "judul": "PKS: Pertanian, Peternakan, dan Perikanan adalah Bisnis Masa Depan Anak Muda",
-   "ringkas": "Ketua DPP Partai Keadilan Sejahtera (PKS) Bidang Petani, Peternak, dan Nelayan, Riyono Caping, mengajak generasi muda untuk tidak ragu terjun ke bisnis pertanian, peternakan, dan perikanan.",
-   "tanggal": "2026-10-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "98a17ba3f822",
-   "url": "https://pks.id/content/unit-pembinaan-anggota-upa-jantung-regenerasi-dan-masa-depan-kepemimpinan-pks",
-   "judul": "Unit Pembinaan Anggota (UPA): Jantung Regenerasi dan Masa Depan Kepemimpinan PKS",
-   "ringkas": null,
-   "tanggal": "2026-10-29",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "4b2a4e5b0d60",
    "url": "https://www.kemhan.go.id/2026/10/29/menhan-tinjau-yonif-tp-886-pj-di-tulungagung-tekankan-kesiapsiagaan-prajurit-hadapi-risiko-kebakaran-dan-kemampuan-tempur.html",
    "judul": "Menhan Tinjau Yonif TP 886/PJ di Tulungagung, Tekankan Kesiapsiagaan Prajurit Hadapi Risiko Kebakaran dan Kemampuan Tempur",
@@ -709,6 +821,50 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "9569a2a3f26c",
+   "url": "https://pks.id/content/cegah-pendidikan-kehilangan-arah-moral-legislator-pks-ajak-masyarakat-aktif-kawal-kebijakan-publik",
+   "judul": "Cegah Pendidikan Kehilangan Arah Moral, Legislator PKS Ajak Masyarakat Aktif Kawal Kebijakan Publik",
+   "ringkas": "Anggota Komisi X DPR RI Fraksi PKS, Abdul Fikri Faqih, mengingatkan masyarakat agar tidak bersikap apatis terhadap politik guna mencegah kekosongan kepemimpinan bermoral (vacuum of power) dalam pengambilan kebijakan publik.",
+   "tanggal": "2026-10-28",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "a9dff0b06f58",
+   "url": "https://pks.id/content/wacana-127-juta-ha-hutan-rusak-untuk-usaha-sawit-pks-hutan-rusak-wajib-dipulihkan-bukan-dialihfungsikan",
+   "judul": "Wacana 12,7 Juta Ha Hutan Rusak untuk Usaha Sawit, PKS: Hutan Rusak Wajib Dipulihkan, Bukan Dialihfungsikan",
+   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS, Riyono ‘Caping’, meminta pemerintah mengkaji secara cermat wacana pemanfaatan 12,7 juta hektare hutan rusak untuk pengembangan perkebunan sawit guna mendukung program biodiesel B50 hingga B100. Wacana tersebut sebelumnya disampaikan Utusan Khu",
+   "tanggal": "2026-10-28",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "13e4655615f1",
+   "url": "https://pks.id/content/pks-dorong-pemeriksaan-mainan-squishy-suntikan-keselamatan-anak-harus-diutamakan",
+   "judul": "PKS Dorong Pemeriksaan Mainan Squishy Suntikan: Keselamatan Anak Harus Diutamakan!",
+   "ringkas": "Angota Komisi IX DPR RI, Netty Prasetiyani Aher meminta pemerintah memperkuat pengawasan terhadap peredaran mainan squishy yang dilengkapi alat suntik berjarum dan dilaporkan dijual kepada anak-anak.",
+   "tanggal": "2026-10-28",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
+  },
+  {
+   "id": "a2a67ffabb23",
+   "url": "https://pks.id/content/peringati-98-tahun-sumpah-pemuda-pks-muda-luncurkan-gerakan-muda-berkontribusi",
+   "judul": "Peringati 98 Tahun Sumpah Pemuda, PKS Muda Luncurkan Gerakan Muda Berkontribusi",
+   "ringkas": "Memperingati 98 Tahun Sumpah Pemuda, Bidang Kepemudaan DPP Partai Keadilan Sejahtera (PKS) meluncurkan Gerakan Muda Berkontribusi dengan mengusung semangat Dari Ikrar Menuju Amal Nyata, Rabu (28/10/2026).",
+   "tanggal": "2026-10-28",
+   "kanal": "pks",
+   "lembaga": "PKS",
+   "cabang": "partai",
+   "partai": "pks"
   },
   {
    "id": "a277992d098c",
@@ -799,130 +955,6 @@
    "kanal": "dewan",
    "lembaga": "DPR RI · e-Media",
    "cabang": "legislatif"
-  },
-  {
-   "id": "62f0d4c4b72a",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/wujudkan-keterbukaan-informasi-setjen-dpr-perkuat-sinergi-komunikasi-berbasis-riset",
-   "judul": "Wujudkan Keterbukaan Informasi, Setjen DPR Perkuat Sinergi Komunikasi Berbasis Riset",
-   "ringkas": "PARLEMENTARIA, Jakarta — Dalam upaya mewujudkan keterbukaan informasi yang utuh dan akurat, Sekretariat Jenderal (Setjen) DPR RI terus memperkuat sinergi komunikasi antar-unit kerja. Pelaksana Tugas (Plt.) Sekretaris Jenderal DPR RI, Suprihartini, menekankan bahwa di era yang ser",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "dd229b2a0709",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/el-nino-tekan-produksi-pangan-riyono-minta-bulog-mitigasi-86-daerah-defisit-pangan",
-   "judul": "El Niño Tekan Produksi Pangan, Riyono Minta Bulog Mitigasi 86 Daerah Defisit Pangan",
-   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi IV DPR RI Riyono menegaskan bahwa ketahanan pangan nasional harus dijaga secara ketat melalui pilar ketersediaan, distribusi, cadangan, hingga kemudahan akses masyarakat di tengah hantaman musim El Nino yang cukup keras. Meski potensi penur",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "f8c09ab005bc",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/ruu-hak-cipta-harus-jamin-keadilan-ekonomi-di-tengah-pesatnya-teknologi-digital-dan-ai",
-   "judul": "RUU Hak Cipta Harus Jamin Keadilan Ekonomi di Tengah Pesatnya Teknologi Digital dan AI",
-   "ringkas": "PARLEMENTARIA, Makassar - Wakil Ketua Badan Legislasi (Baleg) DPR RI, Ahmad Doli Kurnia Tandjung, menyoroti urgensi pembaruan pelindungan karya intelektual yang kian rentan di tengah pesatnya transformasi teknologi digital dan Akal Imitasi (Artificial Intelligence/AI). Hal terseb",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "adabee03f6dc",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/tantangan-besar-perlindungan-hak-cipta-terkait-dengan-ai-dan-seni-tari",
-   "judul": "Tantangan Besar Perlindungan Hak Cipta terkait dengan AI dan Seni Tari",
-   "ringkas": "PARLEMENTARIA, Denpasar - Perkembangan akal imitasi atau artificial intelligence (AI) menghadirkan tantangan baru dalam pelindungan hak cipta, mulai dari potensi penggunaan karya tanpa izin hingga sulitnya mengidentifikasi orisinalitas sebuah karya seni. Hal tersebut menjadi sala",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "b5fe366e6760",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/dengar-masukan-pakar-komisi-iii-dalami-aspek-pengawasan-dalam-ruu-perampasan-aset",
-   "judul": "Dengar Masukan Pakar, Komisi III Dalami Aspek Pengawasan dalam RUU Perampasan Aset",
-   "ringkas": "PARLEMENTARIA, Jakarta — Komisi III DPR RI terus mendalami berbagai masukan masyarakat dalam pembahasan Rancangan Undang-Undang (RUU) tentang Perampasan Aset Terkait Tindak Pidana guna mempercepat penyelesaian regulasi tersebut. Pendalaman dilakukan dengan mempertimbangkan berbag",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "9a58b3e86b51",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/digugat-ke-mk-pasal-27-dan-164-kuhap-2025-beri-kepastian-hukum-jpu-wajib-lanjutkan-perkara",
-   "judul": "Digugat ke MK, Pasal 27 dan 164 KUHAP 2025 Beri Kepastian Hukum JPU Wajib Lanjutkan Perkara",
-   "ringkas": "PARLEMENTARIA, Jakarta — DPR RI berpandangan Pasal 27 dan Pasal 164 ayat (2) Undang-Undang Nomor 20 Tahun 2025 tentang Kitab Undang-Undang Hukum Acara Pidana (KUHAP) tidak bertentangan dengan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945. Kedua ketentuan tersebut dinil",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "d68ce183d806",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/dpr-kawal-penanganan-kesehatan-warga-terdampak-karhutla-di-kalimantan-selatan",
-   "judul": "DPR Kawal Penanganan Kesehatan Warga Terdampak Karhutla di Kalimantan Selatan",
-   "ringkas": "PARLEMENTARIA, Banjarbaru — Wakil Ketua DPR RI Cucun Ahmad Syamsurijal menegaskan keselamatan dan kesehatan masyarakat harus menjadi prioritas utama dalam penanganan kebakaran hutan dan lahan (karhutla) di Kecamatan Landasan Ulin, Kota Banjarbaru, Kalimantan Selatan. Ia meminta p",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "3d5578b5fdd4",
-   "url": "https://emedia.dpr.go.id/news/2026/10/28/komisi-iii-dpr-ri-rdpu-mendengarkan-masukan-terkait-ruu-tentang-perampasan-aset-terkait-tindak-pidana",
-   "judul": "KOMISI III DPR RI - RDPU MENDENGARKAN MASUKAN TERKAIT RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA",
-   "ringkas": "KOMISI III DPR RI - RDPU MENDENGARKAN MASUKAN TERKAIT RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA",
-   "tanggal": "2026-10-28",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "9569a2a3f26c",
-   "url": "https://pks.id/content/cegah-pendidikan-kehilangan-arah-moral-legislator-pks-ajak-masyarakat-aktif-kawal-kebijakan-publik",
-   "judul": "Cegah Pendidikan Kehilangan Arah Moral, Legislator PKS Ajak Masyarakat Aktif Kawal Kebijakan Publik",
-   "ringkas": "Anggota Komisi X DPR RI Fraksi PKS, Abdul Fikri Faqih, mengingatkan masyarakat agar tidak bersikap apatis terhadap politik guna mencegah kekosongan kepemimpinan bermoral (vacuum of power) dalam pengambilan kebijakan publik.",
-   "tanggal": "2026-10-28",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "a9dff0b06f58",
-   "url": "https://pks.id/content/wacana-127-juta-ha-hutan-rusak-untuk-usaha-sawit-pks-hutan-rusak-wajib-dipulihkan-bukan-dialihfungsikan",
-   "judul": "Wacana 12,7 Juta Ha Hutan Rusak untuk Usaha Sawit, PKS: Hutan Rusak Wajib Dipulihkan, Bukan Dialihfungsikan",
-   "ringkas": "Anggota Komisi IV DPR RI Fraksi PKS, Riyono ‘Caping’, meminta pemerintah mengkaji secara cermat wacana pemanfaatan 12,7 juta hektare hutan rusak untuk pengembangan perkebunan sawit guna mendukung program biodiesel B50 hingga B100. Wacana tersebut sebelumnya disampaikan Utusan Khu",
-   "tanggal": "2026-10-28",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "13e4655615f1",
-   "url": "https://pks.id/content/pks-dorong-pemeriksaan-mainan-squishy-suntikan-keselamatan-anak-harus-diutamakan",
-   "judul": "PKS Dorong Pemeriksaan Mainan Squishy Suntikan: Keselamatan Anak Harus Diutamakan!",
-   "ringkas": "Angota Komisi IX DPR RI, Netty Prasetiyani Aher meminta pemerintah memperkuat pengawasan terhadap peredaran mainan squishy yang dilengkapi alat suntik berjarum dan dilaporkan dijual kepada anak-anak.",
-   "tanggal": "2026-10-28",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "a2a67ffabb23",
-   "url": "https://pks.id/content/peringati-98-tahun-sumpah-pemuda-pks-muda-luncurkan-gerakan-muda-berkontribusi",
-   "judul": "Peringati 98 Tahun Sumpah Pemuda, PKS Muda Luncurkan Gerakan Muda Berkontribusi",
-   "ringkas": "Memperingati 98 Tahun Sumpah Pemuda, Bidang Kepemudaan DPP Partai Keadilan Sejahtera (PKS) meluncurkan Gerakan Muda Berkontribusi dengan mengusung semangat Dari Ikrar Menuju Amal Nyata, Rabu (28/10/2026).",
-   "tanggal": "2026-10-28",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
   },
   {
    "id": "924a6c427b87",
@@ -2310,28 +2342,6 @@
    "partai": "pks"
   },
   {
-   "id": "f3dc3aaae675",
-   "url": "https://pks.id/content/legislator-pks-imbau-pemerintah-tolak-konser-andrea-bocelli-solidaritas-palestina-jangan-diabaikan",
-   "judul": "Legislator PKS Imbau Pemerintah Tolak Konser Andrea Bocelli, Solidaritas Palestina Jangan Diabaikan",
-   "ringkas": "Menjelang rencana konser Andrea Bocelli di Indonesia pada akhir Oktober 2026, Anggota DPR RI Fraksi PKS dari Daerah Pemilihan Jawa Barat II, Ahmad Heryawan, menegaskan bahwa penyelenggaraan konser musisi internasional di Indonesia tidak seharusnya dilepaskan dari pertimbangan kem",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
-   "id": "7e2b135a8c40",
-   "url": "https://pks.id/content/legislator-pks-penghentian-ekspor-bbl-harus-prioritaskan-perlindungan-nelayan-kecil",
-   "judul": "Legislator PKS: Penghentian Ekspor BBL Harus Prioritaskan Perlindungan Nelayan Kecil",
-   "ringkas": "Anggota Komisi IV DPR RI dari Fraksi PKS, Riyono, menanggapi pernyataan Menteri Kelautan dan Perikanan Sakti Wahyu Trenggono yang menghentikan izin ekspor Benih Bening Lobster (BBL) “selamanya”. Pernyataan itu disampaikan saat peluncuran Satgas Pemberantasan Pengeluaran BBL, Seni",
-   "tanggal": "2026-10-15",
-   "kanal": "pks",
-   "lembaga": "PKS",
-   "cabang": "partai",
-   "partai": "pks"
-  },
-  {
    "id": "70605fc1c884",
    "url": "https://kontras.org/rilis-pers-ahli-bongkar-problem-gelar-pahlawan-soeharto-konflik-kepentingan-dan-pengkhianatan-reformasi/",
    "judul": "Rilis Pers Ahli Bongkar Problem Gelar Pahlawan Soeharto: Konflik Kepentingan dan Pengkhianatan Reformasi!",
@@ -2889,16 +2899,6 @@
    "tanggal": "2026-09-28",
    "kanal": "tniad",
    "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e33a9de111b3",
-   "url": "https://www.kemhan.go.id/2026/09/27/kunker-di-tasikmalaya-menhan-sjafrie-tinjau-yonif-tp-335-macan-sukapura-tegaskan-sinergitas-tni-pemda-dan-tugas-pengabdian-kepada-rakyat.html",
-   "judul": "Kunker di Tasikmalaya, Menhan Sjafrie Tinjau Yonif TP 335/Macan Sukapura: Tegaskan Sinergitas TNI-Pemda dan Tugas Pengabdian kepada Rakyat",
-   "ringkas": "Tasikmalaya – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area Batalyon Infanteri...",
-   "tanggal": "2026-09-27",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
