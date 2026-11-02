@@ -4,8 +4,55 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-10-30T01:13:40+00:00",
+ "diambil": "2026-11-02T19:39:50+00:00",
  "acara": [
+  {
+   "id": "fb42d5f0bc5f",
+   "url": "https://wapresri.go.id/serap-aspirasi-petani-kakao-mamuju-wapres-dorong-peningkatan-produktivitas-dan-kesejahteraan-petani/",
+   "judul": "Serap Aspirasi Petani Kakao Mamuju, Wapres Dorong Peningkatan Produktivitas dan Kesejahteraan Petani",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [
+    "pangan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "7c96183b01d3",
+   "url": "https://wapresri.go.id/hadiri-100-tahun-imtk-wapres-apresiasi-masyarakat-kalumpang-jaga-keimanan-budaya-dan-pelestarian-alam/",
+   "judul": "Hadiri 100 Tahun IMTK, Wapres Apresiasi Masyarakat Kalumpang Jaga Keimanan, Budaya, dan Pelestarian Alam",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2ac5d72b0df6",
+   "url": "https://wapresri.go.id/wapres-dorong-penguatan-kapasitas-layanan-rsud-kondosapata-agar-warga-mamasa-tak-perlu-jauh-berobat/",
+   "judul": "Wapres Dorong Penguatan Kapasitas Layanan RSUD Kondosapata Agar Warga Mamasa Tak Perlu Jauh Berobat",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e0bec9f2ac09",
    "url": "https://setkab.go.id/terima-tim-perumus-uu-satu-data-indonesia-presiden-prabowo-tekankan-kedaulatan-data-sebagai-fondasi-keutuhan-bangsa/",
