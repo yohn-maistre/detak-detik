@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-02T19:39:50+00:00",
+ "diambil": "2026-11-02T20:09:44+00:00",
  "acara": [
   {
    "id": "fb42d5f0bc5f",
@@ -48,6 +48,40 @@
    "tanggal_terbit": "2026-11-02",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2f4d7cdb0c79",
+   "url": "https://setkab.go.id/presiden-prabowo-berikan-taklimat-kepada-peserta-p3mdi-dan-rapimnas-kadin-di-hambalang/",
+   "judul": "Presiden Prabowo Berikan Taklimat kepada Peserta P3MDI dan Rapimnas Kadin di Hambalang",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-31",
+   "tanggal_terbit": "2026-10-31",
+   "audiens": "Peserta P3MDI dan Rapimnas Kadin",
+   "topik": [
+    "ekonomi"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
+  {
+   "id": "b8423efe9ae5",
+   "url": "https://setkab.go.id/era-baru-sma-taruna-nusantara-presiden-prabowo-perluas-kampus-dan-gratiskan-pendidikan-bagi-seluruh-siswa/",
+   "judul": "Era Baru SMA Taruna Nusantara, Presiden Prabowo Perluas Kampus dan Gratiskan Pendidikan bagi Seluruh Siswa",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-10-30",
+   "tanggal_terbit": "2026-10-30",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,
