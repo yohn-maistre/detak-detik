@@ -4,7 +4,7 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-02T20:09:44+00:00",
+ "diambil": "2026-11-03T03:00:16+00:00",
  "acara": [
   {
    "id": "fb42d5f0bc5f",
@@ -48,6 +48,57 @@
    "tanggal_terbit": "2026-11-02",
    "audiens": null,
    "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "3ea579686467",
+   "url": "https://wapresri.go.id/pastikan-pemerataan-akses-pendidikan-di-daerah-wapres-tinjau-sman-1-mamasa-dan-sdn-samak-mamuju/",
+   "judul": "Pastikan Pemerataan Akses Pendidikan di Daerah, Wapres Tinjau SMAN 1 Mamasa dan SDN Samak Mamuju",
+   "aktor": "WAPRES",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "4d292ac7e51b",
+   "url": "https://wapresri.go.id/kawal-bedah-rumah-untuk-warga-mamuju-wapres-tekankan-sanitasi-dan-kesehatan-berkualitas/",
+   "judul": "Kawal ”Bedah Rumah” untuk Warga Mamuju, Wapres Tekankan Sanitasi dan Kesehatan Berkualitas",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [
+    "kesehatan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "2c4c74a0afa9",
+   "url": "https://wapresri.go.id/dengar-aspirasi-mahasiswa-mamasa-wapres-tekankan-peningkatan-sdm-dan-pengembangan-generasi-muda/",
+   "judul": "Dengar Aspirasi Mahasiswa Mamasa, Wapres Tekankan Peningkatan SDM dan Pengembangan Generasi Muda",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
    "venue": null,
    "kota": null,
    "prov": null,

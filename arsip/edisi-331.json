@@ -1,6 +1,6 @@
 {
  "edisi": 331,
- "terbit": "2026-11-02T19:38:55.477536+00:00",
+ "terbit": "2026-11-03T02:59:54.416131+00:00",
  "sesi": "pagi",
  "angka": {
   "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
@@ -8,64 +8,64 @@
  },
  "kliping": [
   {
+   "id": "klp-331-01",
+   "judul": "Kirim 7 Ton Cabai Rawit ke Halmahera Utara, Upaya Tekan Harga Jelang Nataru",
+   "skor": 30
+  },
+  {
    "id": "klp-331-02",
-   "judul": "Polri Ungkap 5 Kasus Rekrutmen WNI Jadi Tentara Bayaran Rusia, 13 Orang Jadi Tersangka Termasuk WNA",
-   "skor": 25
+   "judul": "Sejumlah politisi dorong wacana hak angket usai putusan Mahkamah Agung soal surat keterangan ijazah Gibran - 'Kuncinya ada di Presiden Prabowo'",
+   "skor": 24
   },
   {
    "id": "klp-331-03",
-   "judul": "Kemenhub Ungkap Truk Molen Maut di Bekasi Tak Uji Kir 6 Tahun, KNKT Dikerahkan Untuk Investigasi",
+   "judul": "Saksi Penyidik Polres Jakarta Pusat Dihadirkan dalam Sidang Dugaan Pemerasan Pengusaha",
+   "skor": 20
+  },
+  {
+   "id": "klp-331-04",
+   "judul": "Kapolri Terbitkan Surat Edaran Larangan Vape bagi Seluruh Pegawai dan Anggota Polri",
    "skor": 19
   },
   {
    "id": "klp-331-05",
-   "judul": "Sejumlah politisi dorong wacana hak angket usai putusan Mahkamah Agung soal surat keterangan ijazah Gibran - 'Kuncinya ada di Presiden Prabowo'",
-   "skor": 18
+   "judul": "Ahli Waris Korban Kecelakaan Maut Truk di Bekasi Sudah Menerima Santunan dari Jasa Raharja",
+   "skor": 16
   },
   {
-   "id": "klp-331-13",
-   "judul": "Foto: Banjir Lahar Dingin Semeru Picu Tanggul Sungai Glidik Jebol, Ratusan Warga Terdampak",
-   "skor": 9
-  },
-  {
-   "id": "klp-331-01",
-   "judul": "Kasus Penggerebekan Ponpes Hamalatul Quran, KPAI: Perlindungan dan Martabat Santriwati Anak Harus Dijamin",
-   "skor": 26
-  },
-  {
-   "id": "klp-331-09",
-   "judul": "20 Korporasi Tersangka Karhutla, Anggota DPR Rina Saadah: Siapa Menanggung Biaya Pemulihan?",
-   "skor": 12
+   "id": "klp-331-06",
+   "judul": "Bareskrim Bongkar Kasus TPPO Tentara Bayaran Rusia, Sasar Warga Sipil hingga Eks TNI-Polri",
+   "skor": 16
   },
   {
    "id": "klp-331-07",
-   "judul": "Ferry Boboho Ungkap Pernah Lapor Febrie soal Kasus Harvey Moeis, Dijawab 'Jangan Ikut Campur'",
+   "judul": "Danantara (DIM) Catat Laba Rp705,7 Miliar Sepanjang Kuartal I-2026, Pendapatan Rp1,09 Triliun",
+   "skor": 15
+  },
+  {
+   "id": "klp-331-08",
+   "judul": "Didesak Netanyahu, Trump akan Gunakan Senjata Nuklir Serang Iran 7 November?",
    "skor": 14
   },
   {
-   "id": "klp-331-18",
-   "judul": "Hadapi Musim Hujan, Ratu Dewa Instruksikan OPD Siaga Banjir dan Pohon Tumbang",
-   "skor": 9
+   "id": "klp-331-09",
+   "judul": "Kasus Penggerebekan Ponpes Hamalatul Quran, KPAI: Perlindungan dan Martabat Santriwati Anak Harus Dijamin",
+   "skor": 14
   },
   {
-   "id": "klp-331-04",
-   "judul": "Bahlil Sebut Kebutuhan Domestik Prioritas, tapi Kalau Harga Cocok Memungkinkan Ekspor Listrik",
-   "skor": 18
+   "id": "klp-331-10",
+   "judul": "Harga Minyak Brent US$ 105 per Barel usai Anjlok 7% Seiring Kabar Damai AS-Iran",
+   "skor": 12
   },
   {
-   "id": "klp-331-21",
-   "judul": "MAKI Duga Rencana Dinas Nusron Wahid ke Jepang Modus Mangkir Panggilan KPK",
-   "skor": 7
+   "id": "klp-331-11",
+   "judul": "[Foto] Sungai Meluap Imbas Hujan Lebat, 43 Desa di Aceh Barat Terendam Banjir",
+   "skor": 12
   },
   {
-   "id": "klp-331-22",
-   "judul": "Kerap Jadi Lintasan Balap Liar, Akses JLNT Antasari Bakal Ditutup Portal",
-   "skor": 7
-  },
-  {
-   "id": "klp-331-23",
-   "judul": "Ratusan Pengungsi Banjir di Aceh Selatan Jalani Pemeriksaan Kesehatan",
-   "skor": 7
+   "id": "klp-331-12",
+   "judul": "MilkLife Superliga Junior 2026 Terapkan Format Skor Baru 3x15, Ikuti Regulasi Baru BWF",
+   "skor": 12
   }
  ],
  "janji": [
