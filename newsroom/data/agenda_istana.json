@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-03T03:00:16+00:00",
+ "diambil": "2026-11-04T01:34:07+00:00",
  "acara": [
+  {
+   "id": "e0c71a97b269",
+   "url": "https://setkab.go.id/pimpin-rapat-terbatas-presiden-prabowo-bahas-stabilitas-ekonomi-hingga-efisiensi-apbn/",
+   "judul": "Pimpin Rapat Terbatas, Presiden Prabowo Bahas Stabilitas Ekonomi hingga Efisiensi APBN",
+   "aktor": "PRESIDEN",
+   "jenis": "SIDANG KABINET",
+   "tanggal_acara": "2026-11-03",
+   "tanggal_terbit": "2026-11-03",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "fb42d5f0bc5f",
    "url": "https://wapresri.go.id/serap-aspirasi-petani-kakao-mamuju-wapres-dorong-peningkatan-produktivitas-dan-kesejahteraan-petani/",
@@ -98,6 +116,24 @@
    "audiens": null,
    "topik": [
     "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "9f316347cba8",
+   "url": "https://setkab.go.id/pimpin-ratas-presiden-prabowo-pastikan-fundamental-ekonomi-tetap-kuat/",
+   "judul": "Pimpin Ratas, Presiden Prabowo Pastikan Fundamental Ekonomi Tetap Kuat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-02",
+   "tanggal_terbit": "2026-11-02",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "energi-sda"
    ],
    "venue": null,
    "kota": null,
