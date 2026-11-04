@@ -4,8 +4,40 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-04T01:34:07+00:00",
+ "diambil": "2026-11-04T17:23:43+00:00",
  "acara": [
+  {
+   "id": "56e0d6f12c7d",
+   "url": "https://setkab.go.id/presiden-prabowo-prihatin-atas-dugaan-penyadapan-terhadap-kepala-negara-dan-sejumlah-tokoh/",
+   "judul": "Presiden Prabowo Prihatin atas Dugaan Penyadapan terhadap Kepala Negara dan Sejumlah Tokoh",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-04",
+   "tanggal_terbit": "2026-11-04",
+   "audiens": null,
+   "topik": [
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "fb42307ae8a7",
+   "url": "https://setkab.go.id/presiden-prabowo-tekankan-penguatan-kompetensi-dan-jiwa-kebangsaan-peserta-p3mdi/",
+   "judul": "Presiden Prabowo Tekankan Penguatan Kompetensi dan Jiwa Kebangsaan Peserta P3MDI",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-04",
+   "tanggal_terbit": "2026-11-04",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e0c71a97b269",
    "url": "https://setkab.go.id/pimpin-rapat-terbatas-presiden-prabowo-bahas-stabilitas-ekonomi-hingga-efisiensi-apbn/",
