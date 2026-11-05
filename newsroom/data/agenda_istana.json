@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-04T17:23:43+00:00",
+ "diambil": "2026-11-05T17:30:31+00:00",
  "acara": [
+  {
+   "id": "3cca772dcfb6",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-menteri-kebudayaan-bahas-rekomendasi-usulan-gelar-pahlawan-nasional-2026/",
+   "judul": "Presiden Prabowo Terima Menteri Kebudayaan, Bahas Rekomendasi Usulan Gelar Pahlawan Nasional 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-11-05",
+   "tanggal_terbit": "2026-11-05",
+   "audiens": null,
+   "topik": [
+    "infrastruktur"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "56e0d6f12c7d",
    "url": "https://setkab.go.id/presiden-prabowo-prihatin-atas-dugaan-penyadapan-terhadap-kepala-negara-dan-sejumlah-tokoh/",

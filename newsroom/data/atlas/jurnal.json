@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-11-04T17:26:10.445790+00:00",
- "edisi": 335,
+ "diperbarui": "2026-11-05T17:33:50.133857+00:00",
+ "edisi": 337,
  "pilihan": [
+  {
+   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
+   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
+   "doi": "10.25105/mraai.v26i1.23615",
+   "tanggal": "2027-7-30",
+   "alasan": "Meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Relevan bagi pembaca untuk memahami kebijakan pemerintah dalam mendorong praktik bisnis berkelanjutan dan dampaknya terhadap ekonomi nasional.",
+   "kategori": "KEBIJAKAN LINGKUNGAN",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia dengan membandingkan dua rejimen obat. Informasi ini krusial bagi pembuat kebijakan kesehatan untuk mengoptimalkan alokasi anggaran dan meningkatkan aksesibilitas pengobatan bagi pasien.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102072",
+   "tanggal": "2027-3",
+   "alasan": "Membahas kontrol operasional penambangan timah lepas pantai di Pulau Bangka. Relevan untuk memahami konflik pengelolaan ruang laut, dampak lingkungan, dan dinamika sosial-ekonomi di wilayah pesisir Indonesia.",
+   "kategori": "SUMBER DAYA PESISIR",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102147",
+   "tanggal": "2027-1",
+   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan iklim. Studi ini vital untuk perencanaan infrastruktur energi yang resilien menghadapi perubahan iklim di masa depan.",
+   "kategori": "ENERGI & IKLIM",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Pengaruh Profitabilitas, Struktur Modal, dan Pertumbuhan Penjualan terhadap Financial Distress pada Perusahaan Subsektor Konstruksi BUMN yang Terdaftar di Bursa Efek Indonesia Periode 2019–2024",
+   "wadah": "Jurnal EMT KITA",
+   "doi": "10.35870/emt.v11i1.8598",
+   "tanggal": "2027-1-1",
+   "alasan": "Menganalisis faktor-faktor yang memengaruhi kesulitan keuangan perusahaan konstruksi BUMN di Bursa Efek Indonesia. Relevan bagi investor dan pembuat kebijakan untuk menilai kesehatan finansial sektor strategis ini.",
+   "kategori": "KEUANGAN & BUMN",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Affirmative Discourse and Sherly Tjoanda’s Political Authority in Indonesia",
+   "wadah": "Women's Studies International Forum",
+   "doi": "10.1016/j.wsif.2026.103452",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis wacana afirmatif dan otoritas politik Sherly Tjoanda di Indonesia. Riset ini memberikan perspektif tentang dinamika politik, representasi perempuan, dan narasi kepemimpinan di Indonesia.",
+   "kategori": "POLITIK & GENDER",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "Non-stationary generalised extreme value modeling of extreme rainfall in Makassar, Indonesia",
+   "wadah": "Kuwait Journal of Science",
+   "doi": "10.1016/j.kjs.2026.100696",
+   "tanggal": "2027-1",
+   "alasan": "Memodelkan curah hujan ekstrem di Makassar, Indonesia, dengan mempertimbangkan variasi non-stasioner. Penelitian ini relevan untuk mitigasi bencana banjir dan perencanaan kota yang adaptif terhadap perubahan iklim.",
+   "kategori": "IKLIM & BENCANA",
+   "sejak_edisi": 337
+  },
+  {
+   "judul": "First report of Lasiodiplodia mahajangana and Lasiodiplodia theobromae causing pod rot on cacao in South Sulawesi, Indonesia",
+   "wadah": "Crop Protection",
+   "doi": "10.1016/j.cropro.2026.107867",
+   "tanggal": "2027-1",
+   "alasan": "Laporan pertama tentang dua spesies jamur penyebab busuk buah kakao di Sulawesi Selatan. Informasi ini krusial bagi petani dan peneliti untuk mengelola penyakit tanaman dan menjaga produktivitas komoditas penting ini.",
+   "kategori": "PERTANIAN & HAMA",
+   "sejak_edisi": 337
+  },
   {
    "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
    "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
@@ -37,78 +109,6 @@
    "alasan": "Mengevaluasi potensi biomassa dan keberlanjutan bioenergi di Indonesia. Relevan untuk pengembangan energi terbarukan, diversifikasi sumber energi nasional, serta strategi pencapaian target emisi karbon dan kemandirian energi Indonesia.",
    "kategori": "ENERGI TERBARUKAN",
    "sejak_edisi": 335
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah perifer Indonesia. Relevan untuk memahami kesenjangan digital, efektivitas pelayanan publik, serta perancangan kebijakan untuk pemerataan akses teknologi dan keadilan sosial.",
-   "kategori": "PEMERINTAHAN DIGITAL",
-   "sejak_edisi": 335
-  },
-  {
-   "judul": "Intergenerational eco-craft, women's agency, and climate adaptation in Telaga Biru Coastal Village, Madura, Indonesia",
-   "wadah": "Women's Studies International Forum",
-   "doi": "10.1016/j.wsif.2026.103450",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji kerajinan ramah lingkungan, agensi perempuan, dan adaptasi iklim di Desa Pesisir Telaga Biru, Madura. Relevan untuk memahami resiliensi komunitas lokal, peran gender dalam perubahan iklim, serta potensi kearifan lokal dalam pembangunan berkelanjutan.",
-   "kategori": "MASYARAKAT PESISIR",
-   "sejak_edisi": 335
-  },
-  {
-   "judul": "Plastic sachet pollution on beaches of East Java, Indonesia: Spatial distribution, composition, and weathering characteristics",
-   "wadah": "Marine Pollution Bulletin",
-   "doi": "10.1016/j.marpolbul.2026.120552",
-   "tanggal": "2027-1",
-   "alasan": "Mengkaji polusi saset plastik di pantai Jawa Timur, termasuk distribusi spasial dan komposisinya. Relevan untuk pemahaman masalah sampah laut, perumusan kebijakan pengelolaan limbah, serta upaya konservasi lingkungan pesisir di Indonesia.",
-   "kategori": "PENCEMARAN LAUT",
-   "sejak_edisi": 335
-  },
-  {
-   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
-   "wadah": "Expert Systems with Applications",
-   "doi": "10.1016/j.eswa.2026.133748",
-   "tanggal": "2027-1",
-   "alasan": "Mengembangkan kerangka kerja AI untuk rekomendasi putusan pidana di Indonesia. Relevan untuk inovasi sistem hukum, peningkatan efisiensi peradilan, serta pemanfaatan teknologi dalam tata kelola pemerintahan dan penegakan hukum di Indonesia.",
-   "kategori": "HUKUM & TEKNOLOGI",
-   "sejak_edisi": 335
-  },
-  {
-   "judul": "The origin of natural hydrogen in the Banggai Peninsula, Central Sulawesi, Indonesia",
-   "wadah": "Geoscience Frontiers",
-   "doi": "10.1016/j.gsf.2026.102472",
-   "tanggal": "2027-3",
-   "alasan": "Penelitian ini menginvestigasi asal-usul hidrogen alami di Sulawesi Tengah, memberikan potensi untuk memahami sumber energi bersih baru yang relevan bagi masa depan energi Indonesia.",
-   "kategori": "SUMBER ENERGI BARU",
-   "sejak_edisi": 333
-  },
-  {
-   "judul": "Connecting Hospital and Home After Fracture Surgery in Indonesia: Policy Options for an Accountable Transitional-Care Pathway",
-   "wadah": "Health Policy and Technology",
-   "doi": "10.1016/j.hlpt.2026.101356",
-   "tanggal": "2027-2",
-   "alasan": "Makalah ini membahas opsi kebijakan untuk meningkatkan jalur perawatan pasien pascaoperasi fraktur di Indonesia, penting untuk sistem kesehatan yang lebih baik dan pemulihan pasien.",
-   "kategori": "KEBIJAKAN KESEHATAN",
-   "sejak_edisi": 333
-  },
-  {
-   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107325",
-   "tanggal": "2027-2",
-   "alasan": "Studi ini menganalisis penurunan perikanan skala kecil di Indonesia dari sudut pandang ekologi politik, menyoroti isu mata pencarian nelayan dan keberlanjutan sumber daya laut nasional.",
-   "kategori": "KELAUTAN & MASYARAKAT",
-   "sejak_edisi": 333
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Penelitian ini mengidentifikasi faktor-faktor kunci percepatan pendaftaran tanah di Indonesia, relevan untuk efisiensi birokrasi dan kepastian hukum kepemilikan lahan masyarakat.",
-   "kategori": "LAYANAN PUBLIK",
-   "sejak_edisi": 333
   }
  ]
 }

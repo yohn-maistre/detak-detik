@@ -1,0 +1,121 @@
+{
+ "edisi": 337,
+ "terbit": "2026-11-05T17:30:12.268052+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-337-01",
+   "judul": "Kasus penyadapan Presiden Prabowo: Polri tetapkan tersangka baru selain mantan Kapolri Listyo Sigit",
+   "skor": 45
+  },
+  {
+   "id": "klp-337-02",
+   "judul": "Kecelakaan Mi-17V5 Puspenerbad di Seruyan: Jalankan Misi Karhutla, Satu Prajurit Gugur",
+   "skor": 22
+  },
+  {
+   "id": "klp-337-03",
+   "judul": "Airlangga soal Ekonomi RI Tumbuh 5,47%: Fundamental Kuat, Arahan Presiden Tepat",
+   "skor": 20
+  },
+  {
+   "id": "klp-337-04",
+   "judul": "KONE Masuk Jajaran Perusahaan Terbaik di Asia Pasifik dalam Daftar \"Best Employers 2027\" Versi TIME dan Statista",
+   "skor": 15
+  },
+  {
+   "id": "klp-337-05",
+   "judul": "Fantastis! Samin Tan Didakwa Cuci Uang Hasil Tambang Ilegal Rp18,1 Triliun",
+   "skor": 12
+  },
+  {
+   "id": "klp-337-06",
+   "judul": "Pemerintah dan DPR Sepakat Frasa Korupsi Dipertegas di RUU Perampasan Aset",
+   "skor": 11
+  },
+  {
+   "id": "klp-337-07",
+   "judul": "Seskab Teddy: Prabowo Perintahkan Revitalisasi Stasiun Gambir dan Kawasan Monas",
+   "skor": 10
+  },
+  {
+   "id": "klp-337-08",
+   "judul": "Mendagri Dukung Implementasi Satu Data Indonesia untuk Pembangunan Daerah",
+   "skor": 9
+  },
+  {
+   "id": "klp-337-09",
+   "judul": "UNAIR jadi Tuan Rumah KPPTI, 1.500 Peserta Bakal Bahas Masa Depan Pendidikan Tinggi",
+   "skor": 9
+  },
+  {
+   "id": "klp-337-10",
+   "judul": "Daftar Stimulus Pemerintah sampai 2027: Bansos hingga Diskon Tiket Pesawat",
+   "skor": 9
+  },
+  {
+   "id": "klp-337-11",
+   "judul": "PDC Perkuat Standar Keselamatan, Integritas, dan Kompetensi Mitra Demi Keandalan Operasional Energi",
+   "skor": 9
+  },
+  {
+   "id": "klp-337-12",
+   "judul": "KSrelief dan Baznas Salurkan 30.000 Paket Bantuan untuk Korban Gempa Flores",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
