@@ -9,7 +9,7 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-11-05T17:56:20+00:00",
+ "diambil": "2026-11-06T01:57:05+00:00",
  "baris": [
   {
    "id": "a7c543255a1b",
@@ -266,6 +266,16 @@
    "url": "https://tniad.mil.id/tni-ad-tertibkan-bendera-bulan-bintang-di-pidie-situasi-kembali-kondusif/",
    "judul": "TNI AD Tertibkan Bendera Bulan Bintang di Pidie, Situasi Kembali Kondusif",
    "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat melalui Kodim 0102/Pidie bersama unsur terkait melaksanakan penertiban dan penurunan Bendera Bulan Bintang yang dikibarkan dalam peringatan Maulid Nabi Muhammad SAW di Meunasah Desa...",
+   "tanggal": "2026-11-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "6dab6d76db6c",
+   "url": "https://tniad.mil.id/kasad-pimpin-pemakaman-militer-kapten-cpn-anumerta-nurhafiz/",
+   "judul": "Kasad Pimpin Pemakaman Militer Kapten Cpn (Anumerta) Nurhafiz",
+   "ringkas": "Semarang, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. memimpin upacara pemakaman militer Kapten Cpn (Anumerta) Nurhafiz Akbar Rizky Hartio, S.H., M.H., prajurit Pusat Penerbangan TNI...",
    "tanggal": "2026-11-05",
    "kanal": "tniad",
    "lembaga": "TNI AD",
@@ -687,16 +697,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "2863ee0ea6e7",
-   "url": "https://www.kemhan.go.id/2026/11/04/menhan-sjafrie-perkuat-hubungan-kemitraan-dengan-aljazair.html",
-   "judul": "Menhan Sjafrie Perkuat Hubungan Kemitraan dengan Aljazair",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan kehormatan Duta Besar Republik Demokratik Rakyat Aljazair untuk...",
-   "tanggal": "2026-11-04",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "b848fcaac886",
    "url": "https://tniad.mil.id/tni-ad-gerak-cepat-evakuasi-kru-heli-operasi-karhutla-yang-alami-kecelakaan/",
    "judul": "TNI AD Gerak Cepat Evakuasi Kru Heli Operasi Karhutla yang Alami Kecelakaan",
@@ -704,6 +704,16 @@
    "tanggal": "2026-11-04",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "2863ee0ea6e7",
+   "url": "https://www.kemhan.go.id/2026/11/04/menhan-sjafrie-perkuat-hubungan-kemitraan-dengan-aljazair.html",
+   "judul": "Menhan Sjafrie Perkuat Hubungan Kemitraan dengan Aljazair",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima kunjungan kehormatan Duta Besar Republik Demokratik Rakyat Aljazair untuk...",
+   "tanggal": "2026-11-04",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -1288,16 +1298,6 @@
    "partai": "pks"
   },
   {
-   "id": "4e5b912cee44",
-   "url": "https://www.kemhan.go.id/2026/11/01/menhan-hadiri-taklimat-presiden-kepada-peserta-p3mdi-dan-anggota-kadin-di-hambalang.html",
-   "judul": "Menhan Hadiri Taklimat Presiden kepada Peserta P3MDI dan Anggota Kadin di Hambalang",
-   "ringkas": "Bogor – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Taklimat Presiden RI Prabowo Subianto kepada sekitar 400 peserta...",
-   "tanggal": "2026-11-01",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "c5b7de86337e",
    "url": "https://tniad.mil.id/kasad-tandyo-budi-dan-kasad-australia-bahas-penguatan-kerja-sama-militer/",
    "judul": "Kasad Tandyo Budi dan Kasad Australia Bahas Penguatan Kerja Sama Militer",
@@ -1305,6 +1305,16 @@
    "tanggal": "2026-11-01",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "4e5b912cee44",
+   "url": "https://www.kemhan.go.id/2026/11/01/menhan-hadiri-taklimat-presiden-kepada-peserta-p3mdi-dan-anggota-kadin-di-hambalang.html",
+   "judul": "Menhan Hadiri Taklimat Presiden kepada Peserta P3MDI dan Anggota Kadin di Hambalang",
+   "ringkas": "Bogor – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri Taklimat Presiden RI Prabowo Subianto kepada sekitar 400 peserta...",
+   "tanggal": "2026-11-01",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -1643,16 +1653,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "924a6c427b87",
-   "url": "https://www.kemhan.go.id/2026/10/28/kepala-bpsdm-han-kemhan-pimpin-upacara-peringatan-hari-sumpah-pemuda-ke-98-tahun-2026.html",
-   "judul": "Kepala BPSDM Han Kemhan Pimpin Upacara Peringatan Hari Sumpah Pemuda Ke-98 Tahun 2026",
-   "ringkas": "Jakarta – Kepala Badan Pengembangan Sumber Daya Manusia Pertahanan Kementerian Pertahanan (BPSDM Han Kemhan) Mayor Jenderal TNI Ketut Gede Wetan...",
-   "tanggal": "2026-10-28",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "d5687f27c307",
    "url": "https://tniad.mil.id/kasad-lepas-kontingen-aarm-ke-34-2026-bawa-misi-kibarkan-merah-putih/",
    "judul": "Kasad Lepas Kontingen AARM ke-34/2026, Bawa Misi Kibarkan Merah Putih",
@@ -1670,6 +1670,16 @@
    "tanggal": "2026-10-28",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "924a6c427b87",
+   "url": "https://www.kemhan.go.id/2026/10/28/kepala-bpsdm-han-kemhan-pimpin-upacara-peringatan-hari-sumpah-pemuda-ke-98-tahun-2026.html",
+   "judul": "Kepala BPSDM Han Kemhan Pimpin Upacara Peringatan Hari Sumpah Pemuda Ke-98 Tahun 2026",
+   "ringkas": "Jakarta – Kepala Badan Pengembangan Sumber Daya Manusia Pertahanan Kementerian Pertahanan (BPSDM Han Kemhan) Mayor Jenderal TNI Ketut Gede Wetan...",
+   "tanggal": "2026-10-28",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -1956,16 +1966,6 @@
    "partai": "pks"
   },
   {
-   "id": "c5bb4adbfc60",
-   "url": "https://www.kemhan.go.id/2026/10/25/menhan-hadiri-upacara-pemakaman-militer-laksamana-tni-purn-widodo-adi-sutjipto.html",
-   "judul": "Menhan Hadiri Upacara Pemakaman Militer Laksamana TNI (Purn.) Widodo Adi Sutjipto",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri upacara pemakaman militer almarhum Laksamana TNI (Purn.) H. Widodo...",
-   "tanggal": "2026-10-25",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "a21450049f12",
    "url": "https://tniad.mil.id/tni-ad-berduka-cita-atas-wafatnya-mantan-panglima-tni-laksamana-tni-purn-widodo-adi-sutjpto/",
    "judul": "TNI AD Berduka Cita Atas Wafatnya Mantan Panglima TNI Laksamana TNI (Purn) Widodo Adi Sutjpto",
@@ -1973,6 +1973,16 @@
    "tanggal": "2026-10-25",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "c5bb4adbfc60",
+   "url": "https://www.kemhan.go.id/2026/10/25/menhan-hadiri-upacara-pemakaman-militer-laksamana-tni-purn-widodo-adi-sutjipto.html",
+   "judul": "Menhan Hadiri Upacara Pemakaman Militer Laksamana TNI (Purn.) Widodo Adi Sutjipto",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menghadiri upacara pemakaman militer almarhum Laksamana TNI (Purn.) H. Widodo...",
+   "tanggal": "2026-10-25",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2160,16 +2170,6 @@
    "partai": "gerindra"
   },
   {
-   "id": "c2db7ce38432",
-   "url": "https://www.kemhan.go.id/2026/10/23/kemhan-kemenkes-dan-tni-gelar-simulasi-evakuasi-medik-udara-di-rsppn-soedirman.html",
-   "judul": "Kemhan, Kemenkes dan TNI Gelar Simulasi Evakuasi Medik Udara di RSPPN Soedirman",
-   "ringkas": "Jakarta – Kementerian Pertahanan Republik Indonesia (Kemhan RI) melalui Pusat Kesehatan Pertahanan (Puskeshan) Kemhan bersama Kementerian Kesehatan dan TNI Angkatan...",
-   "tanggal": "2026-10-23",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "89c9b7ab03f9",
    "url": "https://tniad.mil.id/penpas-rumah-negara-milik-negara-untuk-tugas-negara/",
    "judul": "Rumah Negara Milik Negara Untuk Tugas Negara",
@@ -2187,6 +2187,16 @@
    "tanggal": "2026-10-23",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "c2db7ce38432",
+   "url": "https://www.kemhan.go.id/2026/10/23/kemhan-kemenkes-dan-tni-gelar-simulasi-evakuasi-medik-udara-di-rsppn-soedirman.html",
+   "judul": "Kemhan, Kemenkes dan TNI Gelar Simulasi Evakuasi Medik Udara di RSPPN Soedirman",
+   "ringkas": "Jakarta – Kementerian Pertahanan Republik Indonesia (Kemhan RI) melalui Pusat Kesehatan Pertahanan (Puskeshan) Kemhan bersama Kementerian Kesehatan dan TNI Angkatan...",
+   "tanggal": "2026-10-23",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2272,6 +2282,16 @@
    "cabang": "pengawas"
   },
   {
+   "id": "9b5bba18e5c5",
+   "url": "https://tniad.mil.id/rangkaian-penghormatan-terakhir-tni-ad-untuk-mantan-kasad-subagyo-hadi-siswoyo/",
+   "judul": "Rangkaian Penghormatan Terakhir TNI AD untuk Mantan Kasad Subagyo Hadi Siswoyo",
+   "ringkas": "Jakarta, tniad.mil.id – Suasana duka menyelimuti Markas Besar Angkatan Darat (Mabesad) hingga Taman Makam Pahlawan Nasional (TMPN) Utama Kalibata, Jakarta, saat keluarga besar TNI Angkatan Darat mengantarkan mantan Kepala Staf...",
+   "tanggal": "2026-10-20",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "dd8f88b16c8f",
    "url": "https://www.kemhan.go.id/2026/10/20/wamenhan-ri-richard-tampubolon-emban-amanah-sebagai-sekretaris-dewan-pertahanan-nasional.html",
    "judul": "Wamenhan RI Richard Tampubolon Emban Amanah sebagai Sekretaris Dewan Pertahanan Nasional",
@@ -2312,16 +2332,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "9b5bba18e5c5",
-   "url": "https://tniad.mil.id/rangkaian-penghormatan-terakhir-tni-ad-untuk-mantan-kasad-subagyo-hadi-siswoyo/",
-   "judul": "Rangkaian Penghormatan Terakhir TNI AD untuk Mantan Kasad Subagyo Hadi Siswoyo",
-   "ringkas": "Jakarta, tniad.mil.id – Suasana duka menyelimuti Markas Besar Angkatan Darat (Mabesad) hingga Taman Makam Pahlawan Nasional (TMPN) Utama Kalibata, Jakarta, saat keluarga besar TNI Angkatan Darat mengantarkan mantan Kepala Staf...",
-   "tanggal": "2026-10-20",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "6a0410b8c334",
    "url": "https://kontras.org/rilis-dua-tahun-prabowo-gibran-impunitas-merajalela-kekerasan-terus-berulang/",
    "judul": "Rilis  Dua Tahun Prabowo-Gibran: Impunitas Merajalela, Kekerasan Terus Berulang",
@@ -2330,16 +2340,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "3b1f3553e0b6",
-   "url": "https://www.kemhan.go.id/2026/10/19/menhan-sjafrie-tinjau-yonif-tp-929-mmm-di-soe-tekankan-kesiapan-tempur-dan-pembangunan-teritorial.html",
-   "judul": "Menhan Sjafrie Tinjau Yonif TP 929/MMM di Soe, Tekankan Kesiapan Tempur dan Pembangunan Teritorial",
-   "ringkas": "Soe, Timor Tengah Selatan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meninjau Marshalling Area Batalyon Infanteri Teritorial Pembangunan...",
-   "tanggal": "2026-10-19",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "aca7f2d896c4",
@@ -2352,31 +2352,21 @@
    "cabang": "aparat"
   },
   {
+   "id": "3b1f3553e0b6",
+   "url": "https://www.kemhan.go.id/2026/10/19/menhan-sjafrie-tinjau-yonif-tp-929-mmm-di-soe-tekankan-kesiapan-tempur-dan-pembangunan-teritorial.html",
+   "judul": "Menhan Sjafrie Tinjau Yonif TP 929/MMM di Soe, Tekankan Kesiapan Tempur dan Pembangunan Teritorial",
+   "ringkas": "Soe, Timor Tengah Selatan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meninjau Marshalling Area Batalyon Infanteri Teritorial Pembangunan...",
+   "tanggal": "2026-10-19",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "cb4c98795f39",
    "url": "https://www.kemhan.go.id/2026/10/18/kunker-ke-jembrana-bali-menhan-sjafrie-tinjau-yonif-tp-928-brata-sena-yudha.html",
    "judul": "Kunker ke Jembrana Bali, Menhan Sjafrie Tinjau Yonif TP 928/Brata Sena Yudha",
    "ringkas": "Gilimanuk, Jembrana – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja dalam rangka meninjau Marshalling Area Batalyon...",
    "tanggal": "2026-10-18",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "67755c12e808",
-   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-kunjungi-yonif-tp-876-palatana-di-sumba-timur-tegaskan-peran-prajurit.html",
-   "judul": "Menhan Sjafrie Kunjungi Yonif TP 876/Palatana di Sumba Timur, Tegaskan Peran Prajurit",
-   "ringkas": "Umalulu, Sumba Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
-   "tanggal": "2026-10-16",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "9ea95a585d74",
-   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-tinjau-yonif-tp-930-toda-tebi-kalian-adalah-prajurit-bhinneka-tunggal-ika-pengawal-kedaulatan-di-tanah-sumba.html",
-   "judul": "Menhan Sjafrie Tinjau Yonif TP 930/Toda Tebi: “Kalian Adalah Prajurit Bhinneka Tunggal Ika, Pengawal Kedaulatan di Tanah Sumba”",
-   "ringkas": "Katikutama, Sumba Tengah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) peninjauan ke Marshalling Area...",
-   "tanggal": "2026-10-16",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
    "cabang": "aparat"
@@ -2402,6 +2392,26 @@
    "cabang": "aparat"
   },
   {
+   "id": "67755c12e808",
+   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-kunjungi-yonif-tp-876-palatana-di-sumba-timur-tegaskan-peran-prajurit.html",
+   "judul": "Menhan Sjafrie Kunjungi Yonif TP 876/Palatana di Sumba Timur, Tegaskan Peran Prajurit",
+   "ringkas": "Umalulu, Sumba Timur – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melanjutkan rangkaian kunjungan kerja (kunker) ke Marshalling Area...",
+   "tanggal": "2026-10-16",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9ea95a585d74",
+   "url": "https://www.kemhan.go.id/2026/10/16/menhan-sjafrie-tinjau-yonif-tp-930-toda-tebi-kalian-adalah-prajurit-bhinneka-tunggal-ika-pengawal-kedaulatan-di-tanah-sumba.html",
+   "judul": "Menhan Sjafrie Tinjau Yonif TP 930/Toda Tebi: “Kalian Adalah Prajurit Bhinneka Tunggal Ika, Pengawal Kedaulatan di Tanah Sumba”",
+   "ringkas": "Katikutama, Sumba Tengah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) peninjauan ke Marshalling Area...",
+   "tanggal": "2026-10-16",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
    "id": "14f903ef1ab7",
    "url": "https://kontras.org/61-tahun-peristiwa-1965-1966-sejarah-diputihkan-korban-diabaikan-impunitas-dipertahankan/",
    "judul": "61 Tahun Peristiwa 1965 – 1966: Sejarah Diputihkan, Korban Diabaikan, Impunitas Dipertahankan!",
@@ -2410,6 +2420,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "e108c263eacf",
+   "url": "https://tniad.mil.id/bakti-tni-ad-untuk-pesantren-53-truk-bantuan-disalurkan-ke-30-ponpes/",
+   "judul": "Bakti TNI AD untuk Pesantren, 53 Truk Bantuan Disalurkan ke 30 Ponpes",
+   "ringkas": "Tasikmalaya, tniad.mil.id – TNI Angkatan Darat menyalurkan bantuan untuk mendukung kebutuhan pendidikan dan kehidupan sehari-hari santri di 30 pondok pesantren (Ponpes) wilayah Garut dan Tasikmalaya, Jawa Barat. Sebanyak 53 truk...",
+   "tanggal": "2026-10-15",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "665480129dd2",
@@ -2429,16 +2449,6 @@
    "tanggal": "2026-10-15",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e108c263eacf",
-   "url": "https://tniad.mil.id/bakti-tni-ad-untuk-pesantren-53-truk-bantuan-disalurkan-ke-30-ponpes/",
-   "judul": "Bakti TNI AD untuk Pesantren, 53 Truk Bantuan Disalurkan ke 30 Ponpes",
-   "ringkas": "Tasikmalaya, tniad.mil.id – TNI Angkatan Darat menyalurkan bantuan untuk mendukung kebutuhan pendidikan dan kehidupan sehari-hari santri di 30 pondok pesantren (Ponpes) wilayah Garut dan Tasikmalaya, Jawa Barat. Sebanyak 53 truk...",
-   "tanggal": "2026-10-15",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
    "cabang": "aparat"
   },
   {
@@ -2562,6 +2572,16 @@
    "cabang": "aparat"
   },
   {
+   "id": "85996b8d6157",
+   "url": "https://tniad.mil.id/bangun-komunikasi-terbuka-kasad-undang-pemred-media-nasional-ke-mabesad/",
+   "judul": "Bangun Komunikasi Terbuka, Kasad Undang Pemred Media Nasional ke Mabesad",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengundang para pemimpin redaksi (Pemred) media nasional untuk berdiskusi dan mengevaluasi komunikasi publik TNI AD di Aula...",
+   "tanggal": "2026-10-09",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
    "id": "65a4a4091de2",
    "url": "https://www.kemhan.go.id/2026/10/09/kunker-ke-bengkayang-menhan-sjafrie-tinjau-yonif-tp-926-pl-minta-prajurit-kuasai-kemampuan-tempur-dan-teritorial-pembangunan-untuk-amankan-perbatasan.html",
    "judul": "Kunker ke Bengkayang, Menhan Sjafrie Tinjau Yonif TP 926/PL: Minta Prajurit Kuasai Kemampuan Tempur dan Teritorial Pembangunan untuk Amankan Perbatasan",
@@ -2602,16 +2622,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "85996b8d6157",
-   "url": "https://tniad.mil.id/bangun-komunikasi-terbuka-kasad-undang-pemred-media-nasional-ke-mabesad/",
-   "judul": "Bangun Komunikasi Terbuka, Kasad Undang Pemred Media Nasional ke Mabesad",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengundang para pemimpin redaksi (Pemred) media nasional untuk berdiskusi dan mengevaluasi komunikasi publik TNI AD di Aula...",
-   "tanggal": "2026-10-09",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "f1b28bf8c28a",
    "url": "https://kontras.org/laporan-situasi-hukuman-mati-indonesia-tahun-2026-kebijakan-pidana-mati-berubah-negara-belum-berbenah/",
    "judul": "Laporan Situasi Hukuman Mati Indonesia Tahun 2026: Kebijakan Pidana Mati Berubah, Negara Belum Berbenah",
@@ -2620,6 +2630,16 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
+  },
+  {
+   "id": "97c1d43a2552",
+   "url": "https://tniad.mil.id/wisuda-1-944-prabahtar-kasad-tekankan-pentingnya-sinergi-tni-polri/",
+   "judul": "Wisuda 1.944 Prabahtar, Kasad Tekankan Pentingnya Sinergi TNI-Polri",
+   "ringkas": "Magelang, tniad.mil.id – Sebanyak 1.944 Prajurit Taruna Akademi TNI dan Bhayangkara Taruna Akademi Kepolisian (Prabahtar) Tahun 2026 menyelesaikan pendidikan dasar keprajuritan integratif dan mengikuti upacara wisuda di Magelang, Jawa Tengah,...",
+   "tanggal": "2026-10-08",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "4110172264b0",
@@ -2652,16 +2672,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "97c1d43a2552",
-   "url": "https://tniad.mil.id/wisuda-1-944-prabahtar-kasad-tekankan-pentingnya-sinergi-tni-polri/",
-   "judul": "Wisuda 1.944 Prabahtar, Kasad Tekankan Pentingnya Sinergi TNI-Polri",
-   "ringkas": "Magelang, tniad.mil.id – Sebanyak 1.944 Prajurit Taruna Akademi TNI dan Bhayangkara Taruna Akademi Kepolisian (Prabahtar) Tahun 2026 menyelesaikan pendidikan dasar keprajuritan integratif dan mengikuti upacara wisuda di Magelang, Jawa Tengah,...",
-   "tanggal": "2026-10-08",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "d866fb6d03b5",
    "url": "https://www.kemhan.go.id/2026/10/07/menhan-hadiri-taklimat-presiden-kepada-800-perwira-tinggi-tni-polri-di-istana-kepresidenan.html",
    "judul": "Menhan Hadiri Taklimat Presiden kepada 800 Perwira Tinggi TNI-Polri di Istana Kepresidenan",
@@ -2682,16 +2692,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "9c86f837f839",
-   "url": "https://www.kemhan.go.id/2026/10/06/menhan-sjafrie-terima-courtesy-call-athan-singapura-apresiasi-dedikasi-selama-bertugas.html",
-   "judul": "Menhan Sjafrie Terima Courtesy Call Athan Singapura, Apresiasi Dedikasi Selama Bertugas",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima courtesy call Atase Pertahanan (Athan) Singapura, ME7 Gan Chee...",
-   "tanggal": "2026-10-06",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "95d458d8190c",
    "url": "https://tniad.mil.id/hut-ke-81-tni-kasad-saksikan-peresmian-enam-kodam-baru/",
    "judul": "HUT ke-81 TNI, Kasad Saksikan Peresmian Enam Kodam Baru",
@@ -2699,6 +2699,16 @@
    "tanggal": "2026-10-06",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "9c86f837f839",
+   "url": "https://www.kemhan.go.id/2026/10/06/menhan-sjafrie-terima-courtesy-call-athan-singapura-apresiasi-dedikasi-selama-bertugas.html",
+   "judul": "Menhan Sjafrie Terima Courtesy Call Athan Singapura, Apresiasi Dedikasi Selama Bertugas",
+   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin menerima courtesy call Atase Pertahanan (Athan) Singapura, ME7 Gan Chee...",
+   "tanggal": "2026-10-06",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2802,16 +2812,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "b0b7a6215586",
-   "url": "https://www.kemhan.go.id/2026/10/02/kunker-ke-kaltara-menhan-sjafrie-tinjau-yonif-tp-880-banuanta-di-bulungan-tegaskan-kemampuan-tempur-dan-teritorial-pembangunan-untuk-kedaulatan-perbatasan.html",
-   "judul": "Kunker ke Kaltara, Menhan Sjafrie Tinjau Yonif TP 880/Banuanta di Bulungan: Tegaskan Kemampuan Tempur dan Teritorial Pembangunan untuk Kedaulatan Perbatasan",
-   "ringkas": "Tanjung Selor, Bulungan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
-   "tanggal": "2026-10-02",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "96b7bab0a0d8",
    "url": "https://tniad.mil.id/pendekatan-prajurit-berbuah-kepercayaan-masyarakat-sukarela-serahkan-75-senjata/",
    "judul": "Pendekatan Prajurit Berbuah Kepercayaan, Masyarakat Sukarela Serahkan 75 Senjata",
@@ -2819,6 +2819,16 @@
    "tanggal": "2026-10-02",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "b0b7a6215586",
+   "url": "https://www.kemhan.go.id/2026/10/02/kunker-ke-kaltara-menhan-sjafrie-tinjau-yonif-tp-880-banuanta-di-bulungan-tegaskan-kemampuan-tempur-dan-teritorial-pembangunan-untuk-kedaulatan-perbatasan.html",
+   "judul": "Kunker ke Kaltara, Menhan Sjafrie Tinjau Yonif TP 880/Banuanta di Bulungan: Tegaskan Kemampuan Tempur dan Teritorial Pembangunan untuk Kedaulatan Perbatasan",
+   "ringkas": "Tanjung Selor, Bulungan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
+   "tanggal": "2026-10-02",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -2872,16 +2882,6 @@
    "cabang": "pengawas"
   },
   {
-   "id": "837776853317",
-   "url": "https://www.kemhan.go.id/2026/09/30/atas-nama-negara-menhan-sjafrie-anugerahkan-satyalancana-dharma-samudera-kepada-personel-jmsdf-yang-terlibat-penanganan-karhutla.html",
-   "judul": "Atas Nama Negara, Menhan Sjafrie Anugerahkan Satyalancana Dharma Samudera kepada Personel JMSDF yang Terlibat Penanganan Karhutla",
-   "ringkas": "Mempawah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin atas nama negara menganugerahkan Tanda Kehormatan Republik Indonesia Satyalancana Dharma...",
-   "tanggal": "2026-09-30",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "bddc2751d07d",
    "url": "https://tniad.mil.id/buku-publikasi-unggulan-yonzipur-1-dhira-dharma/",
    "judul": "Buku Publikasi Unggulan Yonzipur 1/Dhira Dharma",
@@ -2899,6 +2899,16 @@
    "tanggal": "2026-09-30",
    "kanal": "tniad",
    "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "837776853317",
+   "url": "https://www.kemhan.go.id/2026/09/30/atas-nama-negara-menhan-sjafrie-anugerahkan-satyalancana-dharma-samudera-kepada-personel-jmsdf-yang-terlibat-penanganan-karhutla.html",
+   "judul": "Atas Nama Negara, Menhan Sjafrie Anugerahkan Satyalancana Dharma Samudera kepada Personel JMSDF yang Terlibat Penanganan Karhutla",
+   "ringkas": "Mempawah – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin atas nama negara menganugerahkan Tanda Kehormatan Republik Indonesia Satyalancana Dharma...",
+   "tanggal": "2026-09-30",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
    "cabang": "aparat"
   },
   {
@@ -3547,16 +3557,6 @@
    "judul": "Kasad Ajak Dansat Perkuat Kepedulian dan Dukung Program Pemerintah",
    "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., mengajak seluruh Komandan Satuan (Dansat) TNI Angkatan Darat untuk memperkuat kepedulian terhadap prajurit, institusi, dan masyarakat, sekaligus...",
    "tanggal": "2026-08-07",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "e4dca02c1f97",
-   "url": "https://tniad.mil.id/kasad-dikukuhkan-sebagai-warga-kehormatan-korps-marinir-tni-al/",
-   "judul": "Kasad Dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI AL",
-   "ringkas": "Dabo Singkep, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Maruli Simanjuntak, M.Sc., dikukuhkan sebagai Warga Kehormatan Korps Marinir TNI Angkatan Laut di sela peninjauan Latihan Operasi Laut Gabungan...",
-   "tanggal": "2026-08-05",
    "kanal": "tniad",
    "lembaga": "TNI AD",
    "cabang": "aparat"
