@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-11-06T16:55:10.786771+00:00",
- "edisi": 338,
+ "diperbarui": "2026-11-07T15:51:31.971053+00:00",
+ "edisi": 340,
  "pilihan": [
+  {
+   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
+   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
+   "doi": "10.37373/jenius.v8i1.2344",
+   "tanggal": "2027-5-31",
+   "alasan": "Meneliti ketahanan manajemen industri pertahanan Indonesia pasca-pembentukan holding Defend ID. Relevan untuk memahami kapasitas dan kemandirian sektor pertahanan nasional.",
+   "kategori": "KEBIJAKAN & EKONOMI",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Investigating potentially permeable zones in volcanic geothermal system in Solok Selatan regency, Indonesia: A role of inherited structures",
+   "wadah": "Geosystems and Geoenvironment",
+   "doi": "10.1016/j.geogeo.2026.100570",
+   "tanggal": "2027-2",
+   "alasan": "Mempelajari zona permeabel pada sistem panas bumi vulkanik di Solok Selatan, Indonesia. Penelitian ini penting untuk pengembangan energi terbarukan dan eksplorasi sumber daya alam lokal.",
+   "kategori": "ENERGI & SDA",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Mengidentifikasi faktor-faktor kunci percepatan pendaftaran tanah di Indonesia. Penelitian ini penting untuk kepastian hukum kepemilikan tanah dan efisiensi administrasi publik di negara ini.",
+   "kategori": "KEBIJAKAN & TATA KELOLA",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Membandingkan metode deteksi patogen pernapasan pada pasien SARI di Indonesia. Penelitian ini penting untuk peningkatan diagnostik dan penanganan penyakit infeksi pernapasan di fasilitas kesehatan.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Lending in Need: Natural Disaster Shocks and Online Borrowing in Indonesia",
+   "wadah": "Journal of Business Research",
+   "doi": "10.1016/j.jbusres.2026.116587",
+   "tanggal": "2027-1",
+   "alasan": "Menganalisis dampak guncangan bencana alam terhadap pinjaman daring di Indonesia. Relevan untuk memahami adaptasi finansial masyarakat dan peran teknologi dalam krisis di negara ini.",
+   "kategori": "SOSIAL & EKONOMI",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Microplastic concentration in the water column of the Banggai Sea, Central Sulawesi, Indonesia",
+   "wadah": "Water Biology and Security",
+   "doi": "10.1016/j.watbs.2026.100553",
+   "tanggal": "2027-1",
+   "alasan": "Meneliti konsentrasi mikroplastik di kolom air Laut Banggai, Sulawesi Tengah. Penting untuk pemahaman pencemaran laut, kesehatan ekosistem bahari, dan masyarakat pesisir Indonesia.",
+   "kategori": "LINGKUNGAN & BAHARI",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "Intergenerational eco-craft, women's agency, and climate adaptation in Telaga Biru Coastal Village, Madura, Indonesia",
+   "wadah": "Women's Studies International Forum",
+   "doi": "10.1016/j.wsif.2026.103450",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji kerajinan ramah lingkungan, agensi perempuan, dan adaptasi iklim di Desa Pesisir Telaga Biru, Madura. Relevan untuk pemberdayaan masyarakat lokal dan strategi adaptasi perubahan iklim.",
+   "kategori": "KOMUNITAS & IKLIM",
+   "sejak_edisi": 340
+  },
+  {
+   "judul": "An expert-augmented case-based reasoning framework with knowledge graph for criminal verdict recommendation in Indonesia",
+   "wadah": "Expert Systems with Applications",
+   "doi": "10.1016/j.eswa.2026.133748",
+   "tanggal": "2027-1",
+   "alasan": "Mengembangkan kerangka rekomendasi putusan pidana dengan kecerdasan buatan untuk Indonesia. Penelitian ini relevan untuk modernisasi sistem peradilan dan efisiensi pengambilan keputusan hukum.",
+   "kategori": "HUKUM & TEKNOLOGI",
+   "sejak_edisi": 340
+  },
   {
    "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
    "wadah": "Unconventional Resources",
@@ -37,78 +109,6 @@
    "alasan": "Menilai risiko iklim dan kerentanan keanekaragaman hayati padang lamun untuk mendukung perencanaan tata ruang laut di Indonesia. Studi ini krusial untuk menjaga ekosistem laut yang kaya dan mendukung kebijakan konservasi perairan nasional.",
    "kategori": "LAUT & LINGKUNGAN",
    "sejak_edisi": 338
-  },
-  {
-   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107325",
-   "tanggal": "2027-2",
-   "alasan": "Menganalisis ekologi politik kemunduran perikanan skala kecil di Indonesia, yang dampaknya terasa pada nelayan tradisional. Penelitian ini relevan untuk memahami akar masalah penghidupan masyarakat pesisir dan merumuskan kebijakan perikanan yang berkelanjutan.",
-   "kategori": "MASYARAKAT & EKONOMI",
-   "sejak_edisi": 338
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik di Indonesia untuk menjembatani kesenjangan digital di daerah terpencil. Riset ini penting untuk meningkatkan akses layanan publik dan pemerataan pembangunan di seluruh wilayah.",
-   "kategori": "TATA KELOLA DIGITAL",
-   "sejak_edisi": 338
-  },
-  {
-   "judul": "Plastic sachet pollution on beaches of East Java, Indonesia: Spatial distribution, composition, and weathering characteristics",
-   "wadah": "Marine Pollution Bulletin",
-   "doi": "10.1016/j.marpolbul.2026.120552",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis pencemaran saset plastik di pantai Jawa Timur, termasuk distribusi dan komposisinya. Temuan ini krusial untuk memahami skala masalah sampah plastik di Indonesia dan merumuskan strategi penanggulangan yang efektif.",
-   "kategori": "PENCEMARAN LINGKUNGAN",
-   "sejak_edisi": 338
-  },
-  {
-   "judul": "Household economic burden, rehabilitation affordability, and recovery reintegration among people affected by drug use in South Sulawesi, Indonesia",
-   "wadah": "Journal of Substance Use and Addiction Treatment",
-   "doi": "10.1016/j.josat.2026.210129",
-   "tanggal": "2027-1",
-   "alasan": "Meneliti beban ekonomi rumah tangga, keterjangkauan rehabilitasi, dan reintegrasi pemulihan bagi pengguna narkoba di Sulawesi Selatan. Studi ini penting untuk merumuskan kebijakan kesehatan masyarakat dan dukungan sosial yang lebih baik di Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 338
-  },
-  {
-   "judul": "ENVIRONMENTAL TAX INCENTIVES AND GREEN INVESTMENT: A STUDY OF MULTINATIONAL COMPANIES IN INDONESIA",
-   "wadah": "Media Riset Akuntansi, Auditing &amp; Informasi",
-   "doi": "10.25105/mraai.v26i1.23615",
-   "tanggal": "2027-7-30",
-   "alasan": "Meneliti insentif pajak lingkungan dan investasi hijau oleh perusahaan multinasional di Indonesia. Relevan bagi pembaca untuk memahami kebijakan pemerintah dalam mendorong praktik bisnis berkelanjutan dan dampaknya terhadap ekonomi nasional.",
-   "kategori": "KEBIJAKAN LINGKUNGAN",
-   "sejak_edisi": 337
-  },
-  {
-   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
-   "wadah": "Value in Health Regional Issues",
-   "doi": "10.1016/j.vhri.2026.101676",
-   "tanggal": "2027-3",
-   "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia dengan membandingkan dua rejimen obat. Informasi ini krusial bagi pembuat kebijakan kesehatan untuk mengoptimalkan alokasi anggaran dan meningkatkan aksesibilitas pengobatan bagi pasien.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 337
-  },
-  {
-   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102072",
-   "tanggal": "2027-3",
-   "alasan": "Membahas kontrol operasional penambangan timah lepas pantai di Pulau Bangka. Relevan untuk memahami konflik pengelolaan ruang laut, dampak lingkungan, dan dinamika sosial-ekonomi di wilayah pesisir Indonesia.",
-   "kategori": "SUMBER DAYA PESISIR",
-   "sejak_edisi": 337
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan iklim. Studi ini vital untuk perencanaan infrastruktur energi yang resilien menghadapi perubahan iklim di masa depan.",
-   "kategori": "ENERGI & IKLIM",
-   "sejak_edisi": 337
   }
  ]
 }
