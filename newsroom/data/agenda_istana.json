@@ -4,8 +4,25 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-05T17:30:31+00:00",
+ "diambil": "2026-11-09T19:57:04+00:00",
  "acara": [
+  {
+   "id": "f26dea70eb8e",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-sepuluh-mantan-kapolri-beserta-kapolri-di-hambalang/",
+   "judul": "Presiden Prabowo Terima Sepuluh Mantan Kapolri beserta Kapolri di Hambalang",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-11-08",
+   "tanggal_terbit": "2026-11-08",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
   {
    "id": "3cca772dcfb6",
    "url": "https://setkab.go.id/presiden-prabowo-terima-menteri-kebudayaan-bahas-rekomendasi-usulan-gelar-pahlawan-nasional-2026/",
