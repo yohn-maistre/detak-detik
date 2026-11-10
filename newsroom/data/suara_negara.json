@@ -9,8 +9,48 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-11-09T20:36:09+00:00",
+ "diambil": "2026-11-10T03:55:49+00:00",
  "baris": [
+  {
+   "id": "aa17737cb5d0",
+   "url": "https://emedia.dpr.go.id/news/2026/11/10/prabowo-undang-10-mantan-kapolri-sejumlah-fraksi-dorong-ruu-penyadapan-segera-dibahas",
+   "judul": "Prabowo Undang 10 Mantan Kapolri, Sejumlah Fraksi Dorong RUU Penyadapan Segera Dibahas",
+   "ringkas": "PARLEMENTARIA, Jakarta – Wakil Ketua DPR RI Koordinator Politik dan Keamanan (Korpolkam) Sufmi Dasco Ahmad mengungkapkan bahwa persoalan dugaan penyadapan ilegal turut menjadi salah satu materi pembahasan dalam pertemuan Presiden Prabowo Subianto bersama 10 mantan Kapolri. Pertem",
+   "tanggal": "2026-11-10",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "28058f16e99d",
+   "url": "https://emedia.dpr.go.id/news/2026/11/10/komisi-iii-dpr-ri-rapat-panja-ruu-tentang-perampasan-aset-terkait-tindak-pidana-membahas-daftar-inventarisasi-masalah-dim",
+   "judul": "KOMISI III DPR RI - RAPAT PANJA RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA MEMBAHAS DAFTAR INVENTARISASI MASALAH (DIM)",
+   "ringkas": "KOMISI III DPR RI - RAPAT PANJA RUU TENTANG PERAMPASAN ASET TERKAIT TINDAK PIDANA",
+   "tanggal": "2026-11-10",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "0be415b9602d",
+   "url": "https://emedia.dpr.go.id/news/2026/11/10/komisi-iii-dpr-ri-rdpu-dengan-dr-suhardi-sumomuljono-dan-prof-marjan-miharja-terhadap-ruu-tentang-perampasan-aset-terkait-dengan-tindak-pidana",
+   "judul": "KOMISI III DPR RI - RDPU DENGAN  DR. SUHARDI SUMOMULJONO DAN PROF. MARJAN MIHARJA TERHADAP RUU TENTANG PERAMPASAN ASET TERKAIT DENGAN TINDAK PIDANA",
+   "ringkas": "KOMISI III DPR RI - RDPU TERHADAP RUU TENTANG PERAMPASAN ASET TERKAIT DENGAN TINDAK PIDANA",
+   "tanggal": "2026-11-10",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "d60c6c27316b",
+   "url": "https://emedia.dpr.go.id/news/2026/11/10/rapat-paripurna-ke-11-dpr-ri-masa-persidangan-ii-tahun-sidang-2026-2027",
+   "judul": "RAPAT PARIPURNA KE-11 DPR RI MASA PERSIDANGAN II TAHUN SIDANG 2026-2027",
+   "ringkas": "RAPAT PARIPURNA KE-11 DPR RI MASA PERSIDANGAN II TAHUN SIDANG 2026-2027",
+   "tanggal": "2026-11-10",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
   {
    "id": "7856955f6216",
    "url": "https://www.kemhan.go.id/2026/11/09/menhan-dampingi-presiden-prabowo-terima-sepuluh-mantan-kapolri-di-hambalang.html",
@@ -889,16 +929,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "e4d834986e78",
-   "url": "https://tniad.mil.id/jenazah-korban-terakhir-kecelakaan-heli-mi-17v5-tni-ad-berhasil-dievakuasi/",
-   "judul": "Jenazah Korban Terakhir Kecelakaan Heli MI-17V5 TNI AD Berhasil Dievakuasi",
-   "ringkas": "Seruyan, tniad.mil.id – Tim gabungan TNI, Polri, Basarnas, BNPB, pemerintah daerah, dan masyarakat berhasil mengevakuasi jenazah korban terakhir kecelakaan helikopter MI-17V5 TNI AD nomor registrasi HA-5235 di perairan Desa Pematang...",
-   "tanggal": "2026-11-06",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "25bfcae4db5f",
    "url": "https://gerindra.id/2026/11/06/dasco-dpr-dan-pemerintah-sepakati-peningkatan-status-pppk-paruh-waktu-mulai-2027/",
    "judul": "Dasco: DPR dan Pemerintah Sepakati Peningkatan Status PPPK Paruh Waktu Mulai 2027",
@@ -963,6 +993,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "e4d834986e78",
+   "url": "https://tniad.mil.id/jenazah-korban-terakhir-kecelakaan-heli-mi-17v5-tni-ad-berhasil-dievakuasi/",
+   "judul": "Jenazah Korban Terakhir Kecelakaan Heli MI-17V5 TNI AD Berhasil Dievakuasi",
+   "ringkas": "Seruyan, tniad.mil.id – Tim gabungan TNI, Polri, Basarnas, BNPB, pemerintah daerah, dan masyarakat berhasil mengevakuasi jenazah korban terakhir kecelakaan helikopter MI-17V5 TNI AD nomor registrasi HA-5235 di perairan Desa Pematang...",
+   "tanggal": "2026-11-06",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "909a4d3cd1be",
@@ -1070,76 +1110,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "761ed5fe9c00",
-   "url": "https://emedia.dpr.go.id/news/2026/11/05/ruu-perampasan-aset-tidak-boleh-menjadi-alat-kekuasaan",
-   "judul": "RUU Perampasan Aset Tidak Boleh Menjadi Alat Kekuasaan",
-   "ringkas": "PARLEMENTARIA, Jakarta - Komisi III DPR RI kembali menggelar rapat dengar pendapat umum (RDPU) untuk membahas Rancangan Undang-Undang (RUU) Perampasan Aset Terkait Tindak Pidana. Kali ini, DPR menghadirkan akademisi, ekonom, dan organisasi mahasiswa guna menghimpun pandangan sebe",
-   "tanggal": "2026-11-05",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "32d42d079ee3",
-   "url": "https://emedia.dpr.go.id/news/2026/11/05/puan-minta-pemerintah-jadikan-aspirasi-masyarakat-soal-pajak-pembalut-sebagai-masukan-bermakna",
-   "judul": "Puan Minta Pemerintah Jadikan Aspirasi Masyarakat Soal Pajak Pembalut Sebagai Masukan Bermakna",
-   "ringkas": "PARLEMENTARIA, Jakarta — Ketua DPR RI Puan Maharani meminta Pemerintah untuk menjadikan aspirasi masyarakat terkait pajak pembalut atau period tax sebagai masukan yang membangun. Ia menilai perhatian masyarakat terhadap keterjangkauan pembalut perlu didengar sebagai masukan dalam",
-   "tanggal": "2026-11-05",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "614002d6e291",
-   "url": "https://emedia.dpr.go.id/news/2026/11/05/lindungi-generasi-muda-dari-narkoba-lola-nelria-dorong-pengungkapan-jaringan-hingga-bandar-besar",
-   "judul": "Lindungi Generasi Muda dari Narkoba, Lola Nelria Dorong Pengungkapan Jaringan hingga Bandar Besar",
-   "ringkas": "PARLEMENTARIA, Jakarta — Pemberantasan narkotika dinilai tidak cukup hanya melalui penangkapan pengguna dan kurir. Pengungkapan jaringan bandar besar, pencegahan, perlindungan pelapor, hingga rehabilitasi korban juga perlu diperkuat.",
-   "tanggal": "2026-11-05",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "54945d41597e",
-   "url": "https://emedia.dpr.go.id/news/2026/11/05/pembentukan-ditjen-pesantren-jadi-langkah-penting-perkuat-pendidikan-keagamaan",
-   "judul": "Pembentukan Ditjen Pesantren Jadi Langkah Penting Perkuat Pendidikan Keagamaan",
-   "ringkas": "PARLEMENTARIA, Jakarta — Anggota Komisi VIII DPR RI M. Husni mengapresiasi pembentukan Direktorat Jenderal (Ditjen) Pesantren di lingkungan Kementerian Agama (Kemenag). Menurutnya, kehadiran direktorat tersebut menjadi langkah penting dalam memperkuat pendidikan pesantren sekalig",
-   "tanggal": "2026-11-05",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
-   "id": "8bb0826f6687",
-   "url": "https://tniad.mil.id/tni-ad-berikan-penghormatan-terakhir-kepada-dua-prajurit-korban-kecelakaan-heli-karhutla/",
-   "judul": "TNI AD Berikan Penghormatan Terakhir kepada Dua Prajurit Korban Kecelakaan Heli Karhutla",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat memberikan penghormatan terakhir kepada Letkol Cpn (Anm) Dudi Firmansyah dan Kapten Cpn (Anm) Nurhafiz Akbar Rizki Hartio, S.H., M.H., dua prajurit Pusat Penerbangan TNI...",
-   "tanggal": "2026-11-05",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "088ff3d7b14a",
-   "url": "https://tniad.mil.id/tni-ad-tertibkan-bendera-bulan-bintang-di-pidie-situasi-kembali-kondusif/",
-   "judul": "TNI AD Tertibkan Bendera Bulan Bintang di Pidie, Situasi Kembali Kondusif",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat melalui Kodim 0102/Pidie bersama unsur terkait melaksanakan penertiban dan penurunan Bendera Bulan Bintang yang dikibarkan dalam peringatan Maulid Nabi Muhammad SAW di Meunasah Desa...",
-   "tanggal": "2026-11-05",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "6dab6d76db6c",
-   "url": "https://tniad.mil.id/kasad-pimpin-pemakaman-militer-kapten-cpn-anumerta-nurhafiz/",
-   "judul": "Kasad Pimpin Pemakaman Militer Kapten Cpn (Anumerta) Nurhafiz",
-   "ringkas": "Semarang, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. memimpin upacara pemakaman militer Kapten Cpn (Anumerta) Nurhafiz Akbar Rizky Hartio, S.H., M.H., prajurit Pusat Penerbangan TNI...",
-   "tanggal": "2026-11-05",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "a1dbb9b588f5",
    "url": "https://gerindra.id/2026/11/05/annisa-mahesa-ingatkan-masyarakat-waspadai-penipuan-digital-dan-pinjol-ilegal/",
    "judul": "Annisa Mahesa Ingatkan Masyarakat Waspadai Penipuan Digital dan Pinjol Ilegal",
@@ -1193,6 +1163,36 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "8bb0826f6687",
+   "url": "https://tniad.mil.id/tni-ad-berikan-penghormatan-terakhir-kepada-dua-prajurit-korban-kecelakaan-heli-karhutla/",
+   "judul": "TNI AD Berikan Penghormatan Terakhir kepada Dua Prajurit Korban Kecelakaan Heli Karhutla",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat memberikan penghormatan terakhir kepada Letkol Cpn (Anm) Dudi Firmansyah dan Kapten Cpn (Anm) Nurhafiz Akbar Rizki Hartio, S.H., M.H., dua prajurit Pusat Penerbangan TNI...",
+   "tanggal": "2026-11-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "088ff3d7b14a",
+   "url": "https://tniad.mil.id/tni-ad-tertibkan-bendera-bulan-bintang-di-pidie-situasi-kembali-kondusif/",
+   "judul": "TNI AD Tertibkan Bendera Bulan Bintang di Pidie, Situasi Kembali Kondusif",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat melalui Kodim 0102/Pidie bersama unsur terkait melaksanakan penertiban dan penurunan Bendera Bulan Bintang yang dikibarkan dalam peringatan Maulid Nabi Muhammad SAW di Meunasah Desa...",
+   "tanggal": "2026-11-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "6dab6d76db6c",
+   "url": "https://tniad.mil.id/kasad-pimpin-pemakaman-militer-kapten-cpn-anumerta-nurhafiz/",
+   "judul": "Kasad Pimpin Pemakaman Militer Kapten Cpn (Anumerta) Nurhafiz",
+   "ringkas": "Semarang, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. memimpin upacara pemakaman militer Kapten Cpn (Anumerta) Nurhafiz Akbar Rizky Hartio, S.H., M.H., prajurit Pusat Penerbangan TNI...",
+   "tanggal": "2026-11-05",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "2863ee0ea6e7",
@@ -1282,16 +1282,6 @@
    "partai": "pks"
   },
   {
-   "id": "b848fcaac886",
-   "url": "https://tniad.mil.id/tni-ad-gerak-cepat-evakuasi-kru-heli-operasi-karhutla-yang-alami-kecelakaan/",
-   "judul": "TNI AD Gerak Cepat Evakuasi Kru Heli Operasi Karhutla yang Alami Kecelakaan",
-   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat bergerak cepat mengevakuasi delapan personel kru Helikopter Mi 17V5 yang mengalami kecelakaan saat melaksanakan operasi pemadaman Kebakaran Hutan dan Lahan (Karhutla) di perairan Desa...",
-   "tanggal": "2026-11-04",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "b8b283216984",
    "url": "https://gerindra.id/2026/11/04/sugiono-kedepankan-penegakan-hukum-jaga-soliditas-institusi-dan-perkuat-komitmen-pembangunan-nasional/",
    "judul": "Sugiono: Kedepankan Penegakan Hukum, Jaga Soliditas Institusi, dan Perkuat Komitmen Pembangunan Nasional",
@@ -1378,6 +1368,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "b848fcaac886",
+   "url": "https://tniad.mil.id/tni-ad-gerak-cepat-evakuasi-kru-heli-operasi-karhutla-yang-alami-kecelakaan/",
+   "judul": "TNI AD Gerak Cepat Evakuasi Kru Heli Operasi Karhutla yang Alami Kecelakaan",
+   "ringkas": "Jakarta, tniad.mil.id – TNI Angkatan Darat bergerak cepat mengevakuasi delapan personel kru Helikopter Mi 17V5 yang mengalami kecelakaan saat melaksanakan operasi pemadaman Kebakaran Hutan dan Lahan (Karhutla) di perairan Desa...",
+   "tanggal": "2026-11-04",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "85695816af87",
@@ -2073,26 +2073,6 @@
    "partai": "pks"
   },
   {
-   "id": "d5687f27c307",
-   "url": "https://tniad.mil.id/kasad-lepas-kontingen-aarm-ke-34-2026-bawa-misi-kibarkan-merah-putih/",
-   "judul": "Kasad Lepas Kontingen AARM ke-34/2026, Bawa Misi Kibarkan Merah Putih",
-   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. melepas Kontingen TNI Angkatan Darat yang akan berlaga pada ASEAN Armies Rifle Meet (AARM) ke-34 Tahun 2026...",
-   "tanggal": "2026-10-28",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
-   "id": "de16a096334b",
-   "url": "https://tniad.mil.id/4-satuan-tni-ad-terima-samkaryanugraha-kasad-jadikan-pemacu-prestasi/",
-   "judul": "4 Satuan TNI AD Terima Samkaryanugraha, Kasad: Jadikan Pemacu Prestasi",
-   "ringkas": "JAKARTA, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. memimpin upacara penganugerahan Tanda Kehormatan Samkaryanugraha kepada empat satuan TNI Angkatan Darat sebagai bentuk penghargaan negara atas...",
-   "tanggal": "2026-10-28",
-   "kanal": "tniad",
-   "lembaga": "TNI AD",
-   "cabang": "aparat"
-  },
-  {
    "id": "394938fd0e9f",
    "url": "https://gerindra.id/2026/10/28/bob-hasan-ruu-hak-cipta-harus-adaptif-terhadap-perkembangan-ai/",
    "judul": "Bob Hasan: RUU Hak Cipta Harus Adaptif terhadap Perkembangan AI",
@@ -2124,6 +2104,26 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "d5687f27c307",
+   "url": "https://tniad.mil.id/kasad-lepas-kontingen-aarm-ke-34-2026-bawa-misi-kibarkan-merah-putih/",
+   "judul": "Kasad Lepas Kontingen AARM ke-34/2026, Bawa Misi Kibarkan Merah Putih",
+   "ringkas": "Jakarta, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. melepas Kontingen TNI Angkatan Darat yang akan berlaga pada ASEAN Armies Rifle Meet (AARM) ke-34 Tahun 2026...",
+   "tanggal": "2026-10-28",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
+  },
+  {
+   "id": "de16a096334b",
+   "url": "https://tniad.mil.id/4-satuan-tni-ad-terima-samkaryanugraha-kasad-jadikan-pemacu-prestasi/",
+   "judul": "4 Satuan TNI AD Terima Samkaryanugraha, Kasad: Jadikan Pemacu Prestasi",
+   "ringkas": "JAKARTA, tniad.mil.id – Kepala Staf Angkatan Darat (Kasad) Jenderal TNI Tandyo Budi R. memimpin upacara penganugerahan Tanda Kehormatan Samkaryanugraha kepada empat satuan TNI Angkatan Darat sebagai bentuk penghargaan negara atas...",
+   "tanggal": "2026-10-28",
+   "kanal": "tniad",
+   "lembaga": "TNI AD",
+   "cabang": "aparat"
   },
   {
    "id": "96359f546a28",
