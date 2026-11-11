@@ -4,8 +4,62 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-09T19:57:04+00:00",
+ "diambil": "2026-11-11T17:19:19+00:00",
  "acara": [
+  {
+   "id": "e298c40444cf",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-pembentangan-kain-merah-putih-sepanjang-24-kilometer-di-nagan-raya/",
+   "judul": "Presiden Prabowo Hadiri Pembentangan Kain Merah Putih Sepanjang 24 Kilometer di Nagan Raya",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-11",
+   "tanggal_terbit": "2026-11-11",
+   "audiens": null,
+   "topik": [
+    "infrastruktur",
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "11",
+   "prov_nama": "Aceh"
+  },
+  {
+   "id": "515d6559ecd4",
+   "url": "https://setkab.go.id/seskab-teddy-presiden-prabowo-kunjungi-aceh-apresiasi-bentangan-merah-putih-24-kilometer-resmikan-masjid-dan-sekolah-rakyat/",
+   "judul": "Seskab Teddy: Presiden Prabowo Kunjungi Aceh, Apresiasi Bentangan Merah Putih 24 Kilometer, Resmikan Masjid dan Sekolah Rakyat",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-11",
+   "tanggal_terbit": "2026-11-11",
+   "audiens": null,
+   "topik": [
+    "pendidikan",
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "11",
+   "prov_nama": "Aceh"
+  },
+  {
+   "id": "5c437fa3fca7",
+   "url": "https://setkab.go.id/presiden-prabowo-anugerahkan-gelar-pahlawan-nasional-kepada-19-tokoh-dari-berbagai-daerah/",
+   "judul": "Presiden Prabowo Anugerahkan Gelar Pahlawan Nasional kepada 19 Tokoh dari Berbagai Daerah",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-10",
+   "tanggal_terbit": "2026-11-10",
+   "audiens": "19 Tokoh dari Berbagai Daerah",
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "f26dea70eb8e",
    "url": "https://setkab.go.id/presiden-prabowo-terima-sepuluh-mantan-kapolri-beserta-kapolri-di-hambalang/",
