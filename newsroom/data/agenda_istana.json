@@ -4,8 +4,40 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-11T17:19:19+00:00",
+ "diambil": "2026-11-12T17:40:21+00:00",
  "acara": [
+  {
+   "id": "85b05d7358ca",
+   "url": "https://setkab.go.id/presiden-prabowo-menerima-surat-pernyataan-berhenti-wapres-gibran/",
+   "judul": "Presiden Prabowo Menerima Surat Pernyataan Berhenti Wapres Gibran",
+   "aktor": "WAPRES",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-11-12",
+   "tanggal_terbit": "2026-11-12",
+   "audiens": null,
+   "topik": [
+    "hukum"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "b15b6bbc0841",
+   "url": "https://wapresri.go.id/pamit-kepada-jajaran-setwapres-gibran-lanjutkan-pengabdian-untuk-masyarakat/",
+   "judul": "Pamit kepada Jajaran Setwapres, Gibran: Lanjutkan Pengabdian untuk Masyarakat",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-12",
+   "tanggal_terbit": "2026-11-12",
+   "audiens": "Jajaran Setwapres",
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "e298c40444cf",
    "url": "https://setkab.go.id/presiden-prabowo-hadiri-pembentangan-kain-merah-putih-sepanjang-24-kilometer-di-nagan-raya/",
