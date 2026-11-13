@@ -1,0 +1,121 @@
+{
+ "edisi": 353,
+ "terbit": "2026-11-13T17:17:46.346458+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-353-01",
+   "judul": "Wakil presiden pengganti Gibran akan dipilih dan dilantik MPR pada 2 Desember 2026 – Lima tahapan di MPR yang perlu diketahui",
+   "skor": 46
+  },
+  {
+   "id": "klp-353-03",
+   "judul": "UGM kecam kekerasan aparat dalam demo di Yogyakarta, 11 polisi diperiksa – Sejumlah mahasiswa masih dirawat di RS",
+   "skor": 19
+  },
+  {
+   "id": "klp-353-17",
+   "judul": "Bayi 9 Bulan Tewas Kedinginan di Gaza, Hujan dan Banjir Perparah Krisis Pengungsian",
+   "skor": 9
+  },
+  {
+   "id": "klp-353-06",
+   "judul": "MPR Percepat Pengisian Jabatan Wapres, Muzani: Jangan Terlalu Lama Kosong",
+   "skor": 13
+  },
+  {
+   "id": "klp-353-08",
+   "judul": "Realisasi Subsidi dan Kompensasi Energi Capai Rp 415,8 Triliun hingga Oktober 2026",
+   "skor": 13
+  },
+  {
+   "id": "klp-353-02",
+   "judul": "Ukraina tangkap WNI yang direkrut militer Rusia – Tawanan perang pertama dari Indonesia",
+   "skor": 25
+  },
+  {
+   "id": "klp-353-12",
+   "judul": "Gangguan global Microsoft, puluhan ribu pengguna di Indonesia dan berbagai negara terdampak – Sejauh mana upaya pemulihannya?",
+   "skor": 11
+  },
+  {
+   "id": "klp-353-22",
+   "judul": "Crane Jatuh di Jaksel Tewaskan 1 Pekerja, Pemprov DKI Cek Standar Keselamatan",
+   "skor": 7
+  },
+  {
+   "id": "klp-353-09",
+   "judul": "Dialog Lintas Agama, MUI Ajak Umat Beragama Rawat Kerukunan dan Jaga Kesejukan Bangsa",
+   "skor": 13
+  },
+  {
+   "id": "klp-353-10",
+   "judul": "Investasi Manusia, Investasi Masa Depan: Optimalisasi Bonus Demografi untuk Indonesia Emas 2045",
+   "skor": 12
+  },
+  {
+   "id": "klp-353-11",
+   "judul": "Beton Dibongkar Total, Flyover Pesing Daan Mogot Ditutup hingga Minggu Malam",
+   "skor": 12
+  },
+  {
+   "id": "klp-353-16",
+   "judul": "Parkiran Lapangan Padel di Kemang Longsor, Pram Sebut Jika Tak Punya PBG Akan Ditutup",
+   "skor": 9
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}
