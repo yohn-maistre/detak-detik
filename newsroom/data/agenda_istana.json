@@ -4,8 +4,46 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-12T17:40:21+00:00",
+ "diambil": "2026-11-15T16:29:36+00:00",
  "acara": [
+  {
+   "id": "fa694ba8d64c",
+   "url": "https://setkab.go.id/presiden-prabowo-buka-tanwir-dan-milad-ke-114-muhammadiyah-di-palu/",
+   "judul": "Presiden Prabowo Buka Tanwir dan Milad ke-114 Muhammadiyah di Palu",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-14",
+   "tanggal_terbit": "2026-11-14",
+   "audiens": null,
+   "topik": [
+    "pendidikan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "be06d03b0dc1",
+   "url": "https://setkab.go.id/presiden-prabowo-anugerahkan-bintang-jasa-beri-santunan-dan-jaminan-pendidikan-bagi-anak-relawan-karhutla-dan-bencana-alam-serta-tenaga-kesehatan/",
+   "judul": "Presiden Prabowo Anugerahkan Bintang Jasa, Beri Santunan dan Jaminan Pendidikan bagi Anak Relawan Karhutla dan Bencana Alam, serta Tenaga Kesehatan",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-13",
+   "tanggal_terbit": "2026-11-13",
+   "audiens": null,
+   "topik": [
+    "pertahanan-keamanan",
+    "infrastruktur",
+    "pendidikan",
+    "kesehatan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "85b05d7358ca",
    "url": "https://setkab.go.id/presiden-prabowo-menerima-surat-pernyataan-berhenti-wapres-gibran/",
