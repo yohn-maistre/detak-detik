@@ -9,8 +9,28 @@
   "https://kontras.org/feed/",
   "https://antikorupsi.org/rss.xml"
  ],
- "diambil": "2026-11-16T20:12:29+00:00",
+ "diambil": "2026-11-17T04:16:15+00:00",
  "baris": [
+  {
+   "id": "bf267467f22f",
+   "url": "https://emedia.dpr.go.id/news/2026/11/17/rapat-paripurna-ke-12-dpr-ri-masa-persidangan-ii-tahun-sidang-2026-2027",
+   "judul": "RAPAT PARIPURNA KE-12 DPR RI MASA PERSIDANGAN Ii TAHUN SIDANG 2026-2027",
+   "ringkas": "RAPAT PARIPURNA KE-12 DPR RI MASA PERSIDANGAN Ii TAHUN SIDANG 2026-2027",
+   "tanggal": "2026-11-17",
+   "kanal": "dewan",
+   "lembaga": "DPR RI · e-Media",
+   "cabang": "legislatif"
+  },
+  {
+   "id": "9393198e5654",
+   "url": "https://www.kemhan.go.id/2026/11/17/menhan-resmikan-wisma-jenderal-tni-purn-m-jusuf-di-makassar.html",
+   "judul": "Menhan Resmikan Wisma Jenderal TNI (Purn.) M. Jusuf di Makassar",
+   "ringkas": "Makassar – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin meresmikan Wisma Jenderal TNI (Purn.) M. Jusuf, di Makassar, Sulawesi...",
+   "tanggal": "2026-11-17",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
   {
    "id": "1d096caf93d9",
    "url": "https://pks.id/content/pembangunan-manusia-sebagai-jalan-kemajuan-peradaban",
@@ -326,6 +346,16 @@
    "url": "https://www.kemhan.go.id/2026/11/16/menhan-sjafrie-sampaikan-belasungkawa-kepada-keluarga-prajurit-tni-ad-korban-kecelakaan-helikopter-mi-17.html",
    "judul": "Menhan Sjafrie Sampaikan Belasungkawa kepada Keluarga Prajurit TNI AD Korban Kecelakaan Helikopter MI-17",
    "ringkas": "Semarang – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin mengunjungi keluarga tiga prajurit TNI Angkatan Darat (TNI AD)...",
+   "tanggal": "2026-11-16",
+   "kanal": "kemhan",
+   "lembaga": "Kemhan",
+   "cabang": "aparat"
+  },
+  {
+   "id": "3cbcd807cda4",
+   "url": "https://www.kemhan.go.id/2026/11/17/tinjau-yonif-tp-920-lasalaga-di-bone-menhan-sjafrie-gelorakan-semangat-prajurit-lewat-sejarah-kepahlawanan-tanah-bugis.html",
+   "judul": "Tinjau Yonif TP 920/Lasalaga di Bone, Menhan Sjafrie Gelorakan Semangat Prajurit Lewat Sejarah Kepahlawanan Tanah Bugis",
+   "ringkas": "Bone, Sulawesi Selatan – Menteri Pertahanan Republik Indonesia (Menhan RI) Sjafrie Sjamsoeddin melaksanakan kunjungan kerja (kunker) ke Marshalling Area Batalyon...",
    "tanggal": "2026-11-16",
    "kanal": "kemhan",
    "lembaga": "Kemhan",
@@ -907,16 +937,6 @@
    "cabang": "legislatif"
   },
   {
-   "id": "b2b3d7f632e2",
-   "url": "https://emedia.dpr.go.id/news/2026/11/14/dede-yusuf-layanan-jemput-bola-bisa-pangkas-mata-rantai-pungli",
-   "judul": "Dede Yusuf: Layanan Jemput Bola Bisa Pangkas Mata Rantai Pungli",
-   "ringkas": "PARLEMENTARIA, Bekasi - Sulitnya akses pelayanan publik secara mandiri kerap memicu praktik pungutan liar (pungli) melalui perantara berbiaya tinggi. Wakil Ketua Komisi II DPR RI Dede Yusuf menilai persoalan ini masih menjadi tantangan di berbagai daerah.",
-   "tanggal": "2026-11-14",
-   "kanal": "dewan",
-   "lembaga": "DPR RI · e-Media",
-   "cabang": "legislatif"
-  },
-  {
    "id": "4f2e3370ea7c",
    "url": "https://www.kemhan.go.id/2026/11/14/menhan-sjafrie-hadiri-rapat-terbatas-di-istana-bogor-bahas-penguatan-ekonomi-nasional.html",
    "judul": "Menhan Sjafrie Hadiri Rapat Terbatas di Istana Bogor, Bahas Penguatan Ekonomi Nasional",
@@ -1008,6 +1028,28 @@
    "cabang": "aparat"
   },
   {
+   "id": "ec19b9fe841e",
+   "url": "https://gerindra.id/2026/11/13/alimudin-kolatlena-kawal-optimalisasi-program-sekolah-rakyat-di-banyumas/",
+   "judul": "Alimudin Kolatlena Kawal Optimalisasi Program Sekolah Rakyat di Banyumas",
+   "ringkas": "Komisi VIII DPR RI melakukan kunjungan kerja spesifik ke Sekolah Rakyat Terintegrasi I Banyumas, Jawa Tengah, Kamis (12/11/2026), untuk memastikan program Sekolah Rakyat berjalan optimal. Program prioritas Presiden Prabowo Subianto ini diharapkan menjadi instrumen pemerintah dala",
+   "tanggal": "2026-11-13",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
+   "id": "28de1b97e926",
+   "url": "https://gerindra.id/2026/11/13/presiden-prabowo-terima-surat-pengunduran-diri-gibran-dari-jabatan-wakil-presiden/",
+   "judul": "Presiden Prabowo Terima Surat Pengunduran Diri Gibran dari Jabatan Wakil Presiden",
+   "ringkas": "Presiden Prabowo Subianto menerima surat pernyataan pengunduran diri Wakil Presiden Gibran Rakabuming Raka dari jabatannya sebagai Wakil Presiden Republik Indonesia. Surat tersebut diserahkan langsung oleh Gibran kepada Presiden Prabowo di Istana Merdeka, Jakarta, Kamis (12/11/20",
+   "tanggal": "2026-11-13",
+   "kanal": "gerindra",
+   "lembaga": "Partai Gerindra",
+   "cabang": "partai",
+   "partai": "gerindra"
+  },
+  {
    "id": "ada9ef5bc3fb",
    "url": "https://kontras.org/putusan-kasasi-peristiwa-paniai-2014-satu-vonis-tak-cukup-seluruh-rantai-komando-harus-diusut/",
    "judul": "Putusan Kasasi Peristiwa Paniai 2014: Satu Vonis Tak Cukup, Seluruh Rantai Komando Harus Diusut!",
@@ -1036,28 +1078,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "ec19b9fe841e",
-   "url": "https://gerindra.id/2026/11/13/alimudin-kolatlena-kawal-optimalisasi-program-sekolah-rakyat-di-banyumas/",
-   "judul": "Alimudin Kolatlena Kawal Optimalisasi Program Sekolah Rakyat di Banyumas",
-   "ringkas": "Komisi VIII DPR RI melakukan kunjungan kerja spesifik ke Sekolah Rakyat Terintegrasi I Banyumas, Jawa Tengah, Kamis (12/11/2026), untuk memastikan program Sekolah Rakyat berjalan optimal. Program prioritas Presiden Prabowo Subianto ini diharapkan menjadi instrumen pemerintah dala",
-   "tanggal": "2026-11-13",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
-  },
-  {
-   "id": "28de1b97e926",
-   "url": "https://gerindra.id/2026/11/13/presiden-prabowo-terima-surat-pengunduran-diri-gibran-dari-jabatan-wakil-presiden/",
-   "judul": "Presiden Prabowo Terima Surat Pengunduran Diri Gibran dari Jabatan Wakil Presiden",
-   "ringkas": "Presiden Prabowo Subianto menerima surat pernyataan pengunduran diri Wakil Presiden Gibran Rakabuming Raka dari jabatannya sebagai Wakil Presiden Republik Indonesia. Surat tersebut diserahkan langsung oleh Gibran kepada Presiden Prabowo di Istana Merdeka, Jakarta, Kamis (12/11/20",
-   "tanggal": "2026-11-13",
-   "kanal": "gerindra",
-   "lembaga": "Partai Gerindra",
-   "cabang": "partai",
-   "partai": "gerindra"
   },
   {
    "id": "93d012f5a77c",
@@ -1121,16 +1141,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "2351909feeed",
-   "url": "https://kontras.org/dwifungsi-abri-hidup-kembali-hentikan-represi-dan-kembalikan-tni-ke-barak/",
-   "judul": "Dwifungsi ABRI Hidup Kembali: Hentikan Represi dan Kembalikan TNI ke Barak!",
-   "ringkas": "Jakarta, 11 November 2026 – Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) kembali mengecam segala bentuk tindakan kekerasan, represifitas hingga penggunaan kekuatan secara berlebihan yang dilakukan oleh aparat Kepolisian Republik Indonesia (POLRI) dan Tentara Na",
-   "tanggal": "2026-11-12",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "a2dfcd08c32d",
    "url": "https://gerindra.id/2026/11/12/habiburokhman-komisi-iii-dpr-minta-kapolri-terapkan-pasal-makar-terhadap-tersangka-penyadapan-ilegal/",
    "judul": "Habiburokhman: Komisi III DPR Minta Kapolri Terapkan Pasal Makar terhadap Tersangka Penyadapan Ilegal",
@@ -1173,6 +1183,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "2351909feeed",
+   "url": "https://kontras.org/dwifungsi-abri-hidup-kembali-hentikan-represi-dan-kembalikan-tni-ke-barak/",
+   "judul": "Dwifungsi ABRI Hidup Kembali: Hentikan Represi dan Kembalikan TNI ke Barak!",
+   "ringkas": "Jakarta, 11 November 2026 – Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) kembali mengecam segala bentuk tindakan kekerasan, represifitas hingga penggunaan kekuatan secara berlebihan yang dilakukan oleh aparat Kepolisian Republik Indonesia (POLRI) dan Tentara Na",
+   "tanggal": "2026-11-12",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "b41e15b4efab",
@@ -1440,16 +1460,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "8051976a90a2",
-   "url": "https://kontras.org/hari-pahlawan-terkooptasi-kekuasaan-tolak-pemutihan-sejarah-soeharto-dan-politisasi-gelar-kepahlawanan/",
-   "judul": "HARI PAHLAWAN TERKOOPTASI KEKUASAAN: TOLAK PEMUTIHAN SEJARAH SOEHARTO DAN POLITISASI GELAR KEPAHLAWANAN!",
-   "ringkas": "Pada momentum peringatan Hari Pahlawan Nasional, Selasa, 10 November 2026, Gerakan Masyarakat Sipil Adili Soeharto (GEMAS), yang terdiri atas berbagai organisasi masyarakat sipil, individu, serta keluarga korban pelanggaran berat HAM masa lalu, menggelar konferensi pers untuk men",
-   "tanggal": "2026-11-10",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "7cada8894bff",
    "url": "https://gerindra.id/2026/11/10/dasco-dugaan-penyadapan-ilegal-turut-dibahas-prabowo-dan-10-mantan-kapolri/",
    "judul": "Dasco: Dugaan Penyadapan Ilegal Turut Dibahas Prabowo dan 10 Mantan Kapolri",
@@ -1514,6 +1524,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "8051976a90a2",
+   "url": "https://kontras.org/hari-pahlawan-terkooptasi-kekuasaan-tolak-pemutihan-sejarah-soeharto-dan-politisasi-gelar-kepahlawanan/",
+   "judul": "HARI PAHLAWAN TERKOOPTASI KEKUASAAN: TOLAK PEMUTIHAN SEJARAH SOEHARTO DAN POLITISASI GELAR KEPAHLAWANAN!",
+   "ringkas": "Pada momentum peringatan Hari Pahlawan Nasional, Selasa, 10 November 2026, Gerakan Masyarakat Sipil Adili Soeharto (GEMAS), yang terdiri atas berbagai organisasi masyarakat sipil, individu, serta keluarga korban pelanggaran berat HAM masa lalu, menggelar konferensi pers untuk men",
+   "tanggal": "2026-11-10",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "c929830fa3b2",
@@ -1873,16 +1893,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "909a4d3cd1be",
-   "url": "https://kontras.org/rilis-pers-bendera-bulan-bintang-bukan-alasan-menembak-warga-usut-tuntas-kekerasan-tni-dan-hentikan-impunitas-di-pidie/",
-   "judul": "Rilis Pers Bendera Bulan Bintang Bukan Alasan Menembak Warga: Usut Tuntas Kekerasan TNI dan Hentikan Impunitas di Pidie!",
-   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) mengecam keras segala bentuk tindakan kekerasan yang diduga dilakukan oleh Tentara Nasional Indonesia (TNI) dalam perayaan Maulid Nabi Muhammad SAW di Desa Pulo Keunari, Kecamatan Tiro, Kabupaten Pidie tanggal 4 Nove",
-   "tanggal": "2026-11-06",
-   "kanal": "kontras",
-   "lembaga": "KontraS",
-   "cabang": "pengawas"
-  },
-  {
    "id": "25bfcae4db5f",
    "url": "https://gerindra.id/2026/11/06/dasco-dpr-dan-pemerintah-sepakati-peningkatan-status-pppk-paruh-waktu-mulai-2027/",
    "judul": "Dasco: DPR dan Pemerintah Sepakati Peningkatan Status PPPK Paruh Waktu Mulai 2027",
@@ -1947,6 +1957,16 @@
    "lembaga": "Partai Gerindra",
    "cabang": "partai",
    "partai": "gerindra"
+  },
+  {
+   "id": "909a4d3cd1be",
+   "url": "https://kontras.org/rilis-pers-bendera-bulan-bintang-bukan-alasan-menembak-warga-usut-tuntas-kekerasan-tni-dan-hentikan-impunitas-di-pidie/",
+   "judul": "Rilis Pers Bendera Bulan Bintang Bukan Alasan Menembak Warga: Usut Tuntas Kekerasan TNI dan Hentikan Impunitas di Pidie!",
+   "ringkas": "Komisi untuk Orang Hilang dan Korban Tindak Kekerasan (KontraS) mengecam keras segala bentuk tindakan kekerasan yang diduga dilakukan oleh Tentara Nasional Indonesia (TNI) dalam perayaan Maulid Nabi Muhammad SAW di Desa Pulo Keunari, Kecamatan Tiro, Kabupaten Pidie tanggal 4 Nove",
+   "tanggal": "2026-11-06",
+   "kanal": "kontras",
+   "lembaga": "KontraS",
+   "cabang": "pengawas"
   },
   {
    "id": "e4d834986e78",
@@ -2882,16 +2902,6 @@
    "cabang": "aparat"
   },
   {
-   "id": "2d48113dafac",
-   "url": "https://www.kemhan.go.id/2026/10/14/kemhan-dorong-penguatan-kerja-sama-teknik-militer-dan-industri-pertahanan-pada-mtc-ke-17-ri-rusia.html",
-   "judul": "Kemhan Dorong Penguatan Kerja Sama Teknik Militer dan Industri Pertahanan pada MTC Ke-17 RI–Rusia",
-   "ringkas": "Jakarta – Direktur Jenderal Potensi Pertahanan Kementerian Pertahanan Republik Indonesia (Dirjen Pothan Kemhan RI), Laksamana Muda TNI Sri Yanto, mewakili...",
-   "tanggal": "2026-10-14",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
-  },
-  {
    "id": "019eb470d32e",
    "url": "https://kontras.org/more-numerous-yet-invisible-the-situation-of-people-sentenced-to-death-in-indonesia/",
    "judul": "More Numerous, Yet Invisible: The Situation of People Sentenced to Death in Indonesia",
@@ -2910,16 +2920,6 @@
    "kanal": "kontras",
    "lembaga": "KontraS",
    "cabang": "pengawas"
-  },
-  {
-   "id": "c3736cb79ab2",
-   "url": "https://www.kemhan.go.id/2026/10/13/menhan-ri-hadiri-rapat-terbatas-bahas-penanganan-karhutla.html",
-   "judul": "Menhan RI Hadiri Rapat Terbatas Bahas Penanganan Karhutla",
-   "ringkas": "Jakarta – Menteri Pertahanan Republik Indonesia (Menhan RI) menghadiri Rapat Terbatas bersama Presiden Republik Indonesia Prabowo Subianto yang membahas penanganan...",
-   "tanggal": "2026-10-13",
-   "kanal": "kemhan",
-   "lembaga": "Kemhan",
-   "cabang": "aparat"
   },
   {
    "id": "f1b28bf8c28a",
