@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-11-21T16:56:08.806049+00:00",
- "edisi": 368,
+ "diperbarui": "2026-11-22T17:18:28.989572+00:00",
+ "edisi": 371,
  "pilihan": [
+  {
+   "judul": "Structural controls on permeability and fluid circulation in the Dieng volcanic geothermal system, Indonesia: Insights from geological-3D structural modelling, stress analysis, and fault reactivation assessment",
+   "wadah": "Geothermics",
+   "doi": "10.1016/j.geothermics.2026.103894",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini menyelidiki sistem panas bumi vulkanik Dieng, Indonesia, fokus pada kontrol struktural permeabilitas. Penting untuk memahami potensi energi terbarukan dan pengembangan sumber daya panas bumi di Jawa Tengah.",
+   "kategori": "GEOTERMAL DIENG",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
+   "wadah": "Fuel",
+   "doi": "10.1016/j.fuel.2026.139840",
+   "tanggal": "2027-1",
+   "alasan": "Penelitian ini fokus pada pirolisis aspal batu dari Buton, Indonesia, serta karakterisasi produk cairnya. Relevan untuk eksplorasi dan pemanfaatan sumber daya alam unik yang dimiliki Indonesia secara berkelanjutan.",
+   "kategori": "SUMBER DAYA BUTON",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Microplastic concentration in the water column of the Banggai Sea, Central Sulawesi, Indonesia",
+   "wadah": "Water Biology and Security",
+   "doi": "10.1016/j.watbs.2026.100553",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini mengukur konsentrasi mikroplastik di kolom air Laut Banggai, Sulawesi Tengah. Penting untuk memahami dampak pencemaran terhadap ekosistem laut Indonesia dan upaya konservasi perairan nasional.",
+   "kategori": "LAUT & POLUSI",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Phenotypic and morphometric characterisation of the 'Bangkok Ekor Lidi' Gamefowl population in East Java, Indonesia",
+   "wadah": "Poultry Science",
+   "doi": "10.1016/j.psj.2026.108089",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini mengkarakterisasi populasi ayam aduan 'Bangkok Ekor Lidi' di Jawa Timur. Relevan untuk menjaga keanekaragaman genetik, peternakan lokal, serta pemahaman spesies asli Indonesia.",
+   "kategori": "BIODIVERSITAS HEWAN",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Knowledge Meets Readiness: Integrating an Early Warning System into Disaster Education for Students in Coastal Banten, Indonesia",
+   "wadah": "Jurnal Ilmiah Multidisiplin",
+   "doi": "10.62282/juilmu.v4i1.90-104",
+   "tanggal": "2027-1-15",
+   "alasan": "Penelitian ini mengkaji integrasi sistem peringatan dini ke dalam edukasi bencana bagi siswa di pesisir Banten. Krusial untuk meningkatkan kesiapsiagaan masyarakat dan mengurangi risiko bencana di wilayah rawan Indonesia.",
+   "kategori": "PENDIDIKAN BENCANA",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
+   "wadah": "Diagnostic Microbiology and Infectious Disease",
+   "doi": "10.1016/j.diagmicrobio.2026.117663",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini membandingkan metode deteksi patogen pernapasan pada pasien SARI yang dirawat di Indonesia. Penting untuk pengembangan diagnostik yang lebih baik dan strategi penanganan penyakit infeksi di sistem kesehatan nasional.",
+   "kategori": "KESEHATAN MASYARAKAT",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Lending in Need: Natural Disaster Shocks and Online Borrowing in Indonesia",
+   "wadah": "Journal of Business Research",
+   "doi": "10.1016/j.jbusres.2026.116587",
+   "tanggal": "2027-1",
+   "alasan": "Makalah ini menganalisis dampak guncangan bencana alam terhadap pola pinjaman daring di Indonesia. Memberikan wawasan tentang perilaku ekonomi masyarakat dan peran teknologi finansial dalam situasi krisis di Indonesia.",
+   "kategori": "EKONOMI DIGITAL",
+   "sejak_edisi": 371
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Studi ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah terpencil Indonesia. Relevan untuk upaya pemerataan akses digital dan peningkatan kualitas pelayanan publik di seluruh wilayah Indonesia.",
+   "kategori": "E-PEMERINTAHAN",
+   "sejak_edisi": 371
+  },
   {
    "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
    "wadah": "Unconventional Resources",
@@ -37,78 +109,6 @@
    "alasan": "Mengkaji pilihan kebijakan untuk jalur perawatan transisional yang akuntabel pasca-operasi fraktur di Indonesia. Relevan untuk meningkatkan kualitas pelayanan kesehatan dan kesinambungan perawatan pasien di rumah.",
    "kategori": "KEBIJAKAN KESEHATAN",
    "sejak_edisi": 368
-  },
-  {
-   "judul": "Assessing seagrass climate risk and biodiversity vulnerability to support marine spatial planning in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107326",
-   "tanggal": "2027-2",
-   "alasan": "Menilai risiko iklim dan kerentanan keanekaragaman hayati lamun untuk mendukung perencanaan ruang laut di Indonesia. Relevan untuk upaya konservasi ekosistem laut vital dan adaptasi perubahan iklim di perairan Indonesia.",
-   "kategori": "LINGKUNGAN LAUT",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Menganalisis determinan utama organisasi berkinerja tinggi dalam mempercepat pendaftaran tanah di Indonesia. Relevan untuk perbaikan layanan publik dan tata kelola agraria nasional.",
-   "kategori": "TATA KELOLA PERTANAHAN",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Menilai kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Relevan untuk perencanaan energi nasional dan adaptasi terhadap dampak perubahan iklim.",
-   "kategori": "KETAHANAN ENERGI",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Affirmative Discourse and Sherly Tjoanda’s Political Authority in Indonesia",
-   "wadah": "Women's Studies International Forum",
-   "doi": "10.1016/j.wsif.2026.103452",
-   "tanggal": "2027-1",
-   "alasan": "Menganalisis wacana afirmatif dan otoritas politik Sherly Tjoanda di Indonesia. Relevan untuk memahami dinamika politik dan representasi perempuan dalam arena publik tanah air.",
-   "kategori": "POLITIK & GENDER",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
-   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
-   "doi": "10.37373/jenius.v8i1.2344",
-   "tanggal": "2027-5-31",
-   "alasan": "Meneliti ketahanan manajemen industri pertahanan Indonesia pasca restrukturisasi Defend ID. Studi ini relevan untuk memahami kapasitas strategis dan kemandirian keamanan nasional Indonesia.",
-   "kategori": "INDUSTRI & PERTAHANAN",
-   "sejak_edisi": 367
-  },
-  {
-   "judul": "The origin of natural hydrogen in the Banggai Peninsula, Central Sulawesi, Indonesia",
-   "wadah": "Geoscience Frontiers",
-   "doi": "10.1016/j.gsf.2026.102472",
-   "tanggal": "2027-3",
-   "alasan": "Menjelajahi asal mula hidrogen alami di Semenanjung Banggai, Sulawesi Tengah. Penemuan ini penting untuk potensi sumber daya energi masa depan dan pemahaman geologi regional Indonesia.",
-   "kategori": "GEOLOGI & SUMBER DAYA",
-   "sejak_edisi": 367
-  },
-  {
-   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
-   "wadah": "Value in Health Regional Issues",
-   "doi": "10.1016/j.vhri.2026.101676",
-   "tanggal": "2027-3",
-   "alasan": "Menganalisis efektivitas biaya pengobatan HIV di Indonesia. Studi ini krusial untuk perumusan kebijakan kesehatan dan akses perawatan yang terjangkau bagi pasien HIV di seluruh Indonesia.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 367
-  },
-  {
-   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
-   "wadah": "Marine Policy",
-   "doi": "10.1016/j.marpol.2026.107325",
-   "tanggal": "2027-2",
-   "alasan": "Menganalisis penurunan perikanan skala kecil di Indonesia dari perspektif ekologi politik. Studi ini penting untuk memahami tantangan mata pencarian nelayan dan keberlanjutan kebijakan maritim nasional.",
-   "kategori": "PERIKANAN & PESISIR",
-   "sejak_edisi": 367
   }
  ]
 }
