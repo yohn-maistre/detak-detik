@@ -4,8 +4,176 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-17T18:41:32+00:00",
+ "diambil": "2026-11-23T01:54:14+00:00",
  "acara": [
+  {
+   "id": "be7d9f767be2",
+   "url": "https://setkab.go.id/indonesia-uni-eropa-resmi-tandatangani-ieu-cepa-tarif-ekspor-turun-hingga-0-persen/",
+   "judul": "Indonesia-Uni Eropa Resmi Tandatangani IEU-CEPA, Tarif Ekspor Turun hingga 0 Persen",
+   "aktor": "ISTANA",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-22",
+   "tanggal_terbit": "2026-11-22",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "d453e30e0fec",
+   "url": "https://setkab.go.id/presiden-prabowo-tekankan-optimisme-terhadap-masa-depan-perdamaian-dunia-pada-forum-bisnis-indonesia-tiongkok/",
+   "judul": "Presiden Prabowo Tekankan Optimisme terhadap Masa Depan Perdamaian Dunia pada Forum Bisnis Indonesia-Tiongkok",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-22",
+   "tanggal_terbit": "2026-11-22",
+   "audiens": "Forum Bisnis Indonesia-Tiongkok",
+   "topik": [
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "432dacd7d1f1",
+   "url": "https://setkab.go.id/presiden-prabowo-dan-presiden-xi-jinping-tegaskan-penguatan-kemitraan-strategis-indonesia-tiongkok/",
+   "judul": "Presiden Prabowo dan Presiden Xi Jinping Tegaskan Penguatan Kemitraan Strategis Indonesia-Tiongkok",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-20",
+   "tanggal_terbit": "2026-11-20",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "0bebb2800ea2",
+   "url": "https://setkab.go.id/seskab-teddy-ungkap-pertemuan-empat-mata-presiden-prabowo-dan-presiden-putin-di-sela-ktt-apec-2026/",
+   "judul": "Seskab Teddy Ungkap Pertemuan Empat Mata Presiden Prabowo dan Presiden Putin di Sela KTT APEC 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-19",
+   "tanggal_terbit": "2026-11-19",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ac48850af777",
+   "url": "https://setkab.go.id/di-hadapan-pemimpin-dunia-presiden-putin-soroti-kekuatan-ekonomi-indonesia-salah-satu-yang-terbesar-dan-tercepat-berkembang-di-dunia/",
+   "judul": "Di Hadapan Pemimpin Dunia, Presiden Putin Soroti Kekuatan Ekonomi Indonesia: Salah Satu yang Terbesar dan Tercepat Berkembang di Dunia",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-19",
+   "tanggal_terbit": "2026-11-19",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "8dc734189ee0",
+   "url": "https://setkab.go.id/disambut-hangat-presiden-xi-jinping-presiden-prabowo-hadiri-jamuan-makan-malam-ktt-apec-2026-di-shenzhen/",
+   "judul": "Disambut Hangat Presiden Xi Jinping, Presiden Prabowo Hadiri Jamuan Makan Malam KTT APEC 2026 di Shenzhen",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-18",
+   "tanggal_terbit": "2026-11-18",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "cc2c3bf84e04",
+   "url": "https://setkab.go.id/disaksikan-presiden-prabowo-indonesia-tiongkok-sepakati-empat-kerja-sama-strategis-senilai-usd-718-miliar-lebih-dari-rp1-300-triliun/",
+   "judul": "Disaksikan Presiden Prabowo, Indonesia–Tiongkok Sepakati Empat Kerja Sama Strategis Senilai USD 71,8 Miliar, Lebih Dari Rp1.300 Triliun",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-18",
+   "tanggal_terbit": "2026-11-18",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "infrastruktur",
+    "luar-negeri",
+    "pendidikan",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "e1720ff0d41e",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-ktt-khusus-asean-as-presiden-trump-apresiasi-kepemimpinan-dan-kerja-sama-indonesia/",
+   "judul": "Presiden Prabowo Hadiri KTT Khusus ASEAN-AS, Presiden Trump Apresiasi Kepemimpinan dan Kerja Sama Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-17",
+   "tanggal_terbit": "2026-11-17",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "f8d1b1c41266",
+   "url": "https://setkab.go.id/presiden-prabowo-di-ktt-asean-jepang-saatnya-kemitraan-strategis-diwujudkan-dalam-aksi-nyata/",
+   "judul": "Presiden Prabowo di KTT ASEAN–Jepang: Saatnya Kemitraan Strategis Diwujudkan dalam Aksi Nyata",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-17",
+   "tanggal_terbit": "2026-11-17",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "pertahanan-keamanan",
+    "luar-negeri",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "1bbb1f909846",
    "url": "https://setkab.go.id/presiden-prabowo-hadiri-jamuan-makan-malam-ktt-ke-49-asean-momentum-hangat-perkuat-persahabatan-kawasan/",
