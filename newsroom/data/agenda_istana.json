@@ -4,8 +4,23 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-23T01:54:14+00:00",
+ "diambil": "2026-11-24T05:25:52+00:00",
  "acara": [
+  {
+   "id": "c41cde1c1448",
+   "url": "https://setkab.go.id/presiden-prabowo-serahkan-nama-calon-wakil-presiden-ri-sisa-masa-jabatan-2024-2029-ke-mpr/",
+   "judul": "Presiden Prabowo Serahkan Nama Calon Wakil Presiden RI Sisa Masa Jabatan 2024–2029 ke MPR",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-23",
+   "tanggal_terbit": "2026-11-23",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "be7d9f767be2",
    "url": "https://setkab.go.id/indonesia-uni-eropa-resmi-tandatangani-ieu-cepa-tarif-ekspor-turun-hingga-0-persen/",
@@ -329,6 +344,21 @@
     "pangan",
     "pertahanan-keamanan"
    ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "96bbcee94722",
+   "url": "https://wapresri.go.id/bekali-aparatur-keterampilan-public-speaking-dan-keprotokolan-setwapres-gelar-lokakarya-pembawa-acara/",
+   "judul": "Bekali Aparatur Keterampilan Public Speaking dan Keprotokolan, Setwapres Gelar Lokakarya Pembawa Acara",
+   "aktor": "WAPRES",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-09",
+   "tanggal_terbit": "2026-11-09",
+   "audiens": null,
+   "topik": [],
    "venue": null,
    "kota": null,
    "prov": null,
