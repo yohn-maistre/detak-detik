@@ -4,8 +4,42 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-24T05:25:52+00:00",
+ "diambil": "2026-11-25T19:29:54+00:00",
  "acara": [
+  {
+   "id": "5cbc021835e5",
+   "url": "https://setkab.go.id/presiden-prabowo-bertemu-empat-mata-dengan-sufmi-dasco-di-istana-merdeka-bahas-laporan-dan-aspirasi-masyarakat/",
+   "judul": "Presiden Prabowo Bertemu Empat Mata dengan Sufmi Dasco di Istana Merdeka, Bahas Laporan dan Aspirasi Masyarakat",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-11-24",
+   "tanggal_terbit": "2026-11-24",
+   "audiens": null,
+   "topik": [],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "ac37f6f29a30",
+   "url": "https://setkab.go.id/presiden-prabowo-bahas-proyeksi-ekonomi-2027-instruksikan-investasi-usd15-miliar-dari-shenzhen-segera-ditindaklanjuti/",
+   "judul": "Presiden Prabowo Bahas Proyeksi Ekonomi 2027, Instruksikan Investasi USD15 Miliar dari Shenzhen Segera Ditindaklanjuti",
+   "aktor": "PRESIDEN",
+   "jenis": "LAINNYA",
+   "tanggal_acara": "2026-11-24",
+   "tanggal_terbit": "2026-11-24",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri",
+    "energi-sda"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "c41cde1c1448",
    "url": "https://setkab.go.id/presiden-prabowo-serahkan-nama-calon-wakil-presiden-ri-sisa-masa-jabatan-2024-2029-ke-mpr/",

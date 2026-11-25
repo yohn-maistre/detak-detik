@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-11-22T17:18:28.989572+00:00",
- "edisi": 371,
+ "diperbarui": "2026-11-25T19:32:27.786293+00:00",
+ "edisi": 377,
  "pilihan": [
+  {
+   "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
+   "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
+   "doi": "10.37373/jenius.v8i1.2344",
+   "tanggal": "2027-5-31",
+   "alasan": "Makalah ini menganalisis ketahanan manajemen di holding Defend ID pasca-MEF, penting untuk memahami kapasitas industri pertahanan dan kemandirian teknologi Indonesia. Riset ini relevan bagi pembaca yang tertarik pada keamanan nasional dan kebijakan strategis.",
+   "kategori": "INDUSTRI PERTAHANAN",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Cost-Utility Analysis of Dolutegravir Versus Efavirenz-Based Regimens for HIV Treatment in Indonesia: A Model-Based Extrapolation From Primary Healthcare Settings",
+   "wadah": "Value in Health Regional Issues",
+   "doi": "10.1016/j.vhri.2026.101676",
+   "tanggal": "2027-3",
+   "alasan": "Riset ini menganalisis efektivitas biaya rejimen pengobatan HIV di Indonesia, membandingkan Dolutegravir dan Efavirenz. Temuan ini sangat relevan untuk pengembangan kebijakan kesehatan nasional, memastikan pilihan pengobatan yang efektif dan terjangkau bagi pasien HIV.",
+   "kategori": "KESEHATAN PUBLIK",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Assessing seagrass climate risk and biodiversity vulnerability to support marine spatial planning in Indonesia",
+   "wadah": "Marine Policy",
+   "doi": "10.1016/j.marpol.2026.107326",
+   "tanggal": "2027-2",
+   "alasan": "Makalah ini mengevaluasi risiko iklim dan kerentanan keanekaragaman hayati padang lamun untuk mendukung perencanaan tata ruang laut di Indonesia. Riset ini penting untuk pelestarian ekosistem pesisir dan pengelolaan sumber daya kelautan berkelanjutan bagi negara kepulauan.",
+   "kategori": "KONSERVASI LAUT",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Defisherization: The political ecology of small-scale fisheries decline in Indonesia",
+   "wadah": "Marine Policy",
+   "doi": "10.1016/j.marpol.2026.107325",
+   "tanggal": "2027-2",
+   "alasan": "Studi ini meneliti ekologi politik di balik penurunan perikanan skala kecil di Indonesia, mengidentifikasi faktor-faktor yang memengaruhi keberlangsungan hidup nelayan tradisional. Pemahaman ini krusial untuk merumuskan kebijakan perikanan yang berpihak pada masyarakat pesisir.",
+   "kategori": "PERIKANAN RAKYAT",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Pengaruh Iklan Pinjaman Daring terhadap Perilaku Konsumtif Remaja di Desa Simpang Kubu",
+   "wadah": "Jurnal Indonesia : Manajemen Informatika dan Komunikasi",
+   "doi": "10.63447/jimik.v8i1.2165",
+   "tanggal": "2027-1-10",
+   "alasan": "Makalah ini menganalisis pengaruh iklan pinjaman daring terhadap perilaku konsumtif remaja di Desa Simpang Kubu. Riset ini penting untuk memahami dinamika sosial-ekonomi di pedesaan Indonesia dan implikasi literasi keuangan bagi generasi muda di era digital.",
+   "kategori": "PERILAKU KONSUMEN",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
+   "wadah": "International Journal of Management Practice",
+   "doi": "10.1504/ijmp.2027.10079818",
+   "tanggal": "2027",
+   "alasan": "Makalah ini mengidentifikasi faktor-faktor kunci dalam mempercepat pendaftaran tanah di Indonesia. Riset ini sangat penting untuk peningkatan efisiensi pelayanan publik dan reformasi agraria, memastikan kepastian hukum hak atas tanah bagi masyarakat.",
+   "kategori": "TATA KELOLA LAHAN",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Biomass potential and sustainability assessment of bioenergy in Indonesia",
+   "wadah": "Environmental Development",
+   "doi": "10.1016/j.envdev.2026.101576",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini menilai potensi biomassa dan keberlanjutan bioenergi di Indonesia sebagai sumber energi alternatif. Temuan ini krusial untuk merancang kebijakan energi nasional yang berkelanjutan, mendukung transisi menuju energi bersih dan mengurangi ketergantungan pada fosil.",
+   "kategori": "ENERGI TERBARUKAN",
+   "sejak_edisi": 377
+  },
+  {
+   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
+   "wadah": "Energy for Sustainable Development",
+   "doi": "10.1016/j.esd.2026.102147",
+   "tanggal": "2027-1",
+   "alasan": "Studi ini mengevaluasi kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Informasi ini vital untuk perencanaan infrastruktur energi yang tangguh dan adaptasi terhadap dampak perubahan iklim di tingkat nasional demi keberlangsungan pasokan listrik.",
+   "kategori": "KETAHANAN ENERGI",
+   "sejak_edisi": 377
+  },
   {
    "judul": "Structural controls on permeability and fluid circulation in the Dieng volcanic geothermal system, Indonesia: Insights from geological-3D structural modelling, stress analysis, and fault reactivation assessment",
    "wadah": "Geothermics",
@@ -37,78 +109,6 @@
    "alasan": "Makalah ini mengkarakterisasi populasi ayam aduan 'Bangkok Ekor Lidi' di Jawa Timur. Relevan untuk menjaga keanekaragaman genetik, peternakan lokal, serta pemahaman spesies asli Indonesia.",
    "kategori": "BIODIVERSITAS HEWAN",
    "sejak_edisi": 371
-  },
-  {
-   "judul": "Knowledge Meets Readiness: Integrating an Early Warning System into Disaster Education for Students in Coastal Banten, Indonesia",
-   "wadah": "Jurnal Ilmiah Multidisiplin",
-   "doi": "10.62282/juilmu.v4i1.90-104",
-   "tanggal": "2027-1-15",
-   "alasan": "Penelitian ini mengkaji integrasi sistem peringatan dini ke dalam edukasi bencana bagi siswa di pesisir Banten. Krusial untuk meningkatkan kesiapsiagaan masyarakat dan mengurangi risiko bencana di wilayah rawan Indonesia.",
-   "kategori": "PENDIDIKAN BENCANA",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Targeted metagenomic sequencing for respiratory pathogen detection in hospitalized SARI patients in Indonesia: Comparison with routine RT-qPCR",
-   "wadah": "Diagnostic Microbiology and Infectious Disease",
-   "doi": "10.1016/j.diagmicrobio.2026.117663",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini membandingkan metode deteksi patogen pernapasan pada pasien SARI yang dirawat di Indonesia. Penting untuk pengembangan diagnostik yang lebih baik dan strategi penanganan penyakit infeksi di sistem kesehatan nasional.",
-   "kategori": "KESEHATAN MASYARAKAT",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Lending in Need: Natural Disaster Shocks and Online Borrowing in Indonesia",
-   "wadah": "Journal of Business Research",
-   "doi": "10.1016/j.jbusres.2026.116587",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini menganalisis dampak guncangan bencana alam terhadap pola pinjaman daring di Indonesia. Memberikan wawasan tentang perilaku ekonomi masyarakat dan peran teknologi finansial dalam situasi krisis di Indonesia.",
-   "kategori": "EKONOMI DIGITAL",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
-   "wadah": "Electronic Government, an International Journal",
-   "doi": "10.1504/eg.2027.10079753",
-   "tanggal": "2027",
-   "alasan": "Studi ini mengevaluasi implementasi sistem pemerintahan berbasis elektronik di daerah terpencil Indonesia. Relevan untuk upaya pemerataan akses digital dan peningkatan kualitas pelayanan publik di seluruh wilayah Indonesia.",
-   "kategori": "E-PEMERINTAHAN",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
-   "wadah": "Unconventional Resources",
-   "doi": "10.1016/j.uncres.2026.100518",
-   "tanggal": "2027-5",
-   "alasan": "Meninjau hambatan pengembangan panas bumi berbasis cekungan sedimen di Indonesia melalui tinjauan kebijakan naratif. Relevan untuk memahami tantangan dan arah kebijakan energi terbarukan di tanah air.",
-   "kategori": "KEBIJAKAN ENERGI",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
-   "wadah": "The Extractive Industries and Society",
-   "doi": "10.1016/j.exis.2026.102072",
-   "tanggal": "2027-3",
-   "alasan": "Menganalisis kontrol operasional yang terfragmentasi dalam penambangan timah lepas pantai di Pulau Bangka. Relevan untuk memahami tata kelola sumber daya dan dampak lingkungan di wilayah pesisir Indonesia.",
-   "kategori": "SUMBER DAYA PESISIR",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Beyond the dualism: exploring the role of structure and agency in conservation success in Raja Ampat, Indonesia",
-   "wadah": "Journal for Nature Conservation",
-   "doi": "10.1016/j.jnc.2026.127496",
-   "tanggal": "2027-3",
-   "alasan": "Menjelajahi peran struktur dan agensi dalam keberhasilan konservasi di Raja Ampat, Indonesia. Relevan untuk memahami strategi pelestarian alam dan keanekaragaman hayati yang kaya di salah satu wilayah penting Indonesia.",
-   "kategori": "KONSERVASI ALAM",
-   "sejak_edisi": 368
-  },
-  {
-   "judul": "Connecting Hospital and Home After Fracture Surgery in Indonesia: Policy Options for an Accountable Transitional-Care Pathway",
-   "wadah": "Health Policy and Technology",
-   "doi": "10.1016/j.hlpt.2026.101356",
-   "tanggal": "2027-2",
-   "alasan": "Mengkaji pilihan kebijakan untuk jalur perawatan transisional yang akuntabel pasca-operasi fraktur di Indonesia. Relevan untuk meningkatkan kualitas pelayanan kesehatan dan kesinambungan perawatan pasien di rumah.",
-   "kategori": "KEBIJAKAN KESEHATAN",
-   "sejak_edisi": 368
   }
  ]
 }
