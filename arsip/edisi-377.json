@@ -1,6 +1,6 @@
 {
  "edisi": 377,
- "terbit": "2026-11-25T19:29:26.680502+00:00",
+ "terbit": "2026-11-26T03:41:48.706453+00:00",
  "sesi": "pagi",
  "angka": {
   "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
@@ -8,64 +8,64 @@
  },
  "kliping": [
   {
-   "id": "klp-377-03",
-   "judul": "BNPB: Penambang di Bogor Terjebak Longsor, 16 Kecamatan di Tasikmalaya Terdampak Bencana",
-   "skor": 20
-  },
-  {
-   "id": "klp-377-11",
-   "judul": "Panitia Ad Hoc MPR Sepakati 6 Rancangan, Salah Satunya Pemberhentian Gibran dari Kursi Wapres",
-   "skor": 10
-  },
-  {
-   "id": "klp-377-15",
-   "judul": "Daftar UMK Jatim 2027 Setelah Ditetapkan Oleh Pemprov, Surabaya Rp5,6 Juta",
-   "skor": 9
-  },
-  {
-   "id": "klp-377-19",
-   "judul": "Listyo Sigit dkk tersangka makar – Satu warga sipil jadi tersangka karena sablon baju bertuliskan ACAB",
-   "skor": 9
-  },
-  {
-   "id": "klp-377-23",
-   "judul": "Menko Pangan Janji Gelontor Beras Subsidi, Antisipasi Lonjakan Harga saat Nataru",
-   "skor": 6
-  },
-  {
    "id": "klp-377-01",
-   "judul": "Tim Verifikasi MPR Pastikan Amran Sulaiman dan Sugiono Tak Punya Catatan Hukum di Pengadilan",
-   "skor": 28
+   "judul": "Tim Verifikasi MPR Temukan Perbedaan Nama Amran di Ijazah, Sugiono Klir Lulusan SMA Taruna Nusantara",
+   "skor": 40
   },
   {
    "id": "klp-377-02",
-   "judul": "Panitia Ad Hoc MPR Usulkan Rapat Paripurna Digelar 2 Hari untuk Pemilihan Wapres: 10 dan 11 Desember 2026",
-   "skor": 22
+   "judul": "5 Berita Terpopuler:  ASN Tidak Harus Menunggu 10 Tahun, Kesempatan Terbuka Lebar Buat Guru PPPK 35+ Ikut Tes CPNS",
+   "skor": 33
   },
   {
-   "id": "klp-377-07",
-   "judul": "Jimly Usulkan MPR Musyawarah Pilih Wapres: Bila Perlu Dilakukan dengan Presiden",
-   "skor": 12
+   "id": "klp-377-03",
+   "judul": "Eks Kapolri Listyo Sigit akan jalani sidang etik kasus dugaan makar dan penyadapan – Apa saja fakta yang diketahui?",
+   "skor": 32
+  },
+  {
+   "id": "klp-377-04",
+   "judul": "Penambang Emas di Bogor Terjebak di Lubang 100 Meter: 13 Orang Tewas, Lainnya Masih Dicari",
+   "skor": 29
   },
   {
    "id": "klp-377-05",
-   "judul": "Terdeteksi di Luar Negeri, Kejagung Siapkan Pencekalan Tersangka TPPU Tambang Nikel Arif Kurniawan",
-   "skor": 15
-  },
-  {
-   "id": "klp-377-12",
-   "judul": "Apresiasi Polri Bongkar Sindikat Online Scam di Filipina, Sahroni Desak Jaringan Dibongkar Tuntas",
-   "skor": 10
-  },
-  {
-   "id": "klp-377-20",
-   "judul": "SPBU di Kramatjati Jaktim Hangus Terbakar, Api Muncul dari Mobil Sedan",
-   "skor": 9
+   "judul": "Gerindra Bulat Dukung Sugiono sebagai Cawapres, Ajak Fraksi Lain di DPR dan DPD Beri Dukungan",
+   "skor": 20
   },
   {
    "id": "klp-377-06",
-   "judul": "Sidang KKEP Putuskan Eks Kasatgaswil Jateng Densus 88 Polri Kombes Chairul Anam Dipecat",
+   "judul": "Bupati Kupang Yosef Lede Tersangka Pemerkosaan Mahasiswi, Tuh Tampangnya saat Ditahan Polisi",
+   "skor": 19
+  },
+  {
+   "id": "klp-377-07",
+   "judul": "Rupiah Dibuka Melemah ke Rp 18.340 Per Dolar AS Hari Ini (26/11), Terburuk di Asia",
+   "skor": 18
+  },
+  {
+   "id": "klp-377-08",
+   "judul": "Trump Umumkan Tarif Baru untuk 14 Mitra Dagang AS, Indonesia Masuk Daftar Sasaran",
+   "skor": 17
+  },
+  {
+   "id": "klp-377-09",
+   "judul": "Mantan Ketua MK Jimly Usul Pilpres Hanya Pilih Presiden, Wapres Ditentukan MPR",
    "skor": 13
+  },
+  {
+   "id": "klp-377-10",
+   "judul": "Prediksi Skor Torreense vs Celtic: The Bhoys Bidik Kemenangan Kedua, Tuan Rumah Beri Kejutan di Liga",
+   "skor": 12
+  },
+  {
+   "id": "klp-377-11",
+   "judul": "IHSG Melorot ke 5.197, Saham Barang Baku dan Infrastruktur Paling Tertekan (25/11)",
+   "skor": 12
+  },
+  {
+   "id": "klp-377-12",
+   "judul": "Harga Emas Antam Naik Rp 2.000 Jadi Rp 2.501.000/Gram, Galeri24 Turun di Rp 2.329.000/Gram",
+   "skor": 12
   }
  ],
  "janji": [
