@@ -4,8 +4,44 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-25T19:29:54+00:00",
+ "diambil": "2026-11-26T19:11:54+00:00",
  "acara": [
+  {
+   "id": "bdce87b6b03e",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-pemusnahan-6017-ton-barang-bukti-narkoba-dan-pengungkapan-penipuan-daring-internasional/",
+   "judul": "Presiden Prabowo Hadiri Pemusnahan 601,7 Ton Barang Bukti Narkoba dan Pengungkapan Penipuan Daring Internasional",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-26",
+   "tanggal_terbit": "2026-11-26",
+   "audiens": null,
+   "topik": [
+    "pangan",
+    "pertahanan-keamanan"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
+  {
+   "id": "671f8be50e2e",
+   "url": "https://setkab.go.id/presiden-prabowo-terima-sekjen-oecd-bahas-perkembangan-aksesi-indonesia-dan-perkuat-kemitraan-untuk-transformasi-ekonomi-indonesia/",
+   "judul": "Presiden Prabowo Terima Sekjen OECD, Bahas Perkembangan Aksesi Indonesia dan Perkuat Kemitraan untuk Transformasi Ekonomi Indonesia",
+   "aktor": "PRESIDEN",
+   "jenis": "MENERIMA",
+   "tanggal_acara": "2026-11-26",
+   "tanggal_terbit": "2026-11-26",
+   "audiens": null,
+   "topik": [
+    "ekonomi",
+    "luar-negeri"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": null,
+   "prov_nama": null
+  },
   {
    "id": "5cbc021835e5",
    "url": "https://setkab.go.id/presiden-prabowo-bertemu-empat-mata-dengan-sufmi-dasco-di-istana-merdeka-bahas-laporan-dan-aspirasi-masyarakat/",
