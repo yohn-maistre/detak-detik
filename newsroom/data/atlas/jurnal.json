@@ -1,7 +1,79 @@
 {
- "diperbarui": "2026-11-25T19:32:27.786293+00:00",
- "edisi": 377,
+ "diperbarui": "2026-11-27T03:45:34.241256+00:00",
+ "edisi": 379,
  "pilihan": [
+  {
+   "judul": "Overcoming geothermal development barriers in Indonesia: A narrative policy review of sedimentary basin-based geothermal development",
+   "wadah": "Unconventional Resources",
+   "doi": "10.1016/j.uncres.2026.100518",
+   "tanggal": "2027-5",
+   "alasan": "Meninjau hambatan pengembangan energi panas bumi di Indonesia, khususnya di cekungan sedimen. Studi ini penting untuk memahami tantangan transisi energi nasional dan pemanfaatan sumber daya panas bumi berkelanjutan bagi masa depan energi bersih Indonesia.",
+   "kategori": "ENERGI & KEBIJAKAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Territorializing the sea: fragmented operational control in offshore tin mining on Bangka Island, Indonesia",
+   "wadah": "The Extractive Industries and Society",
+   "doi": "10.1016/j.exis.2026.102072",
+   "tanggal": "2027-3",
+   "alasan": "Menjelajahi kontrol terfragmentasi dalam penambangan timah lepas pantai di Pulau Bangka. Riset ini relevan untuk memahami konflik tata ruang laut, dampak sosial-lingkungan industri ekstraktif, serta upaya pengelolaan sumber daya alam di wilayah pesisir Indonesia.",
+   "kategori": "EKONOMI & LINGKUNGAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Beyond the dualism: exploring the role of structure and agency in conservation success in Raja Ampat, Indonesia",
+   "wadah": "Journal for Nature Conservation",
+   "doi": "10.1016/j.jnc.2026.127496",
+   "tanggal": "2027-3",
+   "alasan": "Menyelidiki peran struktur dan agensi dalam keberhasilan konservasi di Raja Ampat, Indonesia. Studi ini penting untuk mengembangkan strategi pelestarian keanekaragaman hayati laut yang efektif dan pembangunan berkelanjutan di salah satu surga bahari dunia.",
+   "kategori": "KONSERVASI & LINGKUNGAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Connecting Hospital and Home After Fracture Surgery in Indonesia: Policy Options for an Accountable Transitional-Care Pathway",
+   "wadah": "Health Policy and Technology",
+   "doi": "10.1016/j.hlpt.2026.101356",
+   "tanggal": "2027-2",
+   "alasan": "Mengulas opsi kebijakan untuk jalur perawatan transisi pasien pasca operasi fraktur di Indonesia. Relevan untuk meningkatkan kualitas layanan kesehatan, efisiensi sistem rujukan, dan pemulihan pasien yang lebih baik saat kembali ke rumah di seluruh rumah sakit Indonesia.",
+   "kategori": "KESEHATAN & KEBIJAKAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Knowledge Meets Readiness: Integrating an Early Warning System into Disaster Education for Students in Coastal Banten, Indonesia",
+   "wadah": "Jurnal Ilmiah Multidisiplin",
+   "doi": "10.62282/juilmu.v4i1.90-104",
+   "tanggal": "2027-1-15",
+   "alasan": "Memadukan sistem peringatan dini ke dalam pendidikan bencana bagi siswa di pesisir Banten. Riset ini krusial untuk meningkatkan kesiapsiagaan masyarakat, terutama generasi muda, dalam menghadapi potensi bencana alam yang sering melanda wilayah pesisir Indonesia.",
+   "kategori": "BENCANA & PENDIDIKAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Analisis Wacana Kritis terhadap Kritik Kebijakan Pemotongan Bantuan Sosial Pelaku Judi Online di TikTok",
+   "wadah": "Jurnal Indonesia : Manajemen Informatika dan Komunikasi",
+   "doi": "10.63447/jimik.v8i1.2137",
+   "tanggal": "2027-1-10",
+   "alasan": "Menganalisis wacana kritis mengenai kritik kebijakan pemotongan bantuan sosial bagi pelaku judi online di TikTok. Studi ini relevan untuk memahami dinamika kebijakan sosial, respons publik, dan implikasi media digital terhadap perdebatan isu-isu krusial di Indonesia.",
+   "kategori": "SOSIAL & KEBIJAKAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Seasonal variability of chlorophyll-a and its environmental drivers in the waters of the Kei Islands, Indonesia (2001–2025)",
+   "wadah": "Estuarine, Coastal and Shelf Science",
+   "doi": "10.1016/j.ecss.2026.110409",
+   "tanggal": "2027-1",
+   "alasan": "Mengkaji variabilitas musiman klorofil-a dan faktor lingkungannya di perairan Kepulauan Kei, Indonesia. Penelitian ini penting untuk memahami produktivitas ekosistem laut, potensi perikanan, dan dampaknya terhadap masyarakat pesisir di wilayah timur Indonesia.",
+   "kategori": "LAUT & LINGKUNGAN",
+   "sejak_edisi": 379
+  },
+  {
+   "judul": "Bridging the digital divide in peripheral regions: evaluation of Indonesias electronic-based government system implementation",
+   "wadah": "Electronic Government, an International Journal",
+   "doi": "10.1504/eg.2027.10079753",
+   "tanggal": "2027",
+   "alasan": "Mengevaluasi implementasi sistem pemerintahan berbasis elektronik Indonesia di daerah terpencil. Penelitian ini penting untuk mengatasi kesenjangan digital, meningkatkan kualitas layanan publik, dan memastikan transformasi digital yang inklusif di seluruh wilayah Indonesia.",
+   "kategori": "KEBIJAKAN & DIGITAL",
+   "sejak_edisi": 379
+  },
   {
    "judul": "Asesmen Pasca-MEF dalam Holding Defend ID Terhadap Resiliensi Manajemen Industri Pertahanan Indonesia",
    "wadah": "JENIUS : Jurnal Terapan Teknik Industri",
@@ -37,78 +109,6 @@
    "alasan": "Studi ini meneliti ekologi politik di balik penurunan perikanan skala kecil di Indonesia, mengidentifikasi faktor-faktor yang memengaruhi keberlangsungan hidup nelayan tradisional. Pemahaman ini krusial untuk merumuskan kebijakan perikanan yang berpihak pada masyarakat pesisir.",
    "kategori": "PERIKANAN RAKYAT",
    "sejak_edisi": 377
-  },
-  {
-   "judul": "Pengaruh Iklan Pinjaman Daring terhadap Perilaku Konsumtif Remaja di Desa Simpang Kubu",
-   "wadah": "Jurnal Indonesia : Manajemen Informatika dan Komunikasi",
-   "doi": "10.63447/jimik.v8i1.2165",
-   "tanggal": "2027-1-10",
-   "alasan": "Makalah ini menganalisis pengaruh iklan pinjaman daring terhadap perilaku konsumtif remaja di Desa Simpang Kubu. Riset ini penting untuk memahami dinamika sosial-ekonomi di pedesaan Indonesia dan implikasi literasi keuangan bagi generasi muda di era digital.",
-   "kategori": "PERILAKU KONSUMEN",
-   "sejak_edisi": 377
-  },
-  {
-   "judul": "Key determinants of high-performance organisations in accelerating land registration in Indonesia: a configurational analysis",
-   "wadah": "International Journal of Management Practice",
-   "doi": "10.1504/ijmp.2027.10079818",
-   "tanggal": "2027",
-   "alasan": "Makalah ini mengidentifikasi faktor-faktor kunci dalam mempercepat pendaftaran tanah di Indonesia. Riset ini sangat penting untuk peningkatan efisiensi pelayanan publik dan reformasi agraria, memastikan kepastian hukum hak atas tanah bagi masyarakat.",
-   "kategori": "TATA KELOLA LAHAN",
-   "sejak_edisi": 377
-  },
-  {
-   "judul": "Biomass potential and sustainability assessment of bioenergy in Indonesia",
-   "wadah": "Environmental Development",
-   "doi": "10.1016/j.envdev.2026.101576",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini menilai potensi biomassa dan keberlanjutan bioenergi di Indonesia sebagai sumber energi alternatif. Temuan ini krusial untuk merancang kebijakan energi nasional yang berkelanjutan, mendukung transisi menuju energi bersih dan mengurangi ketergantungan pada fosil.",
-   "kategori": "ENERGI TERBARUKAN",
-   "sejak_edisi": 377
-  },
-  {
-   "judul": "Assessing power system vulnerability to climate-related stressors and shocks: The case of Indonesia",
-   "wadah": "Energy for Sustainable Development",
-   "doi": "10.1016/j.esd.2026.102147",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini mengevaluasi kerentanan sistem tenaga listrik Indonesia terhadap tekanan dan guncangan terkait iklim. Informasi ini vital untuk perencanaan infrastruktur energi yang tangguh dan adaptasi terhadap dampak perubahan iklim di tingkat nasional demi keberlangsungan pasokan listrik.",
-   "kategori": "KETAHANAN ENERGI",
-   "sejak_edisi": 377
-  },
-  {
-   "judul": "Structural controls on permeability and fluid circulation in the Dieng volcanic geothermal system, Indonesia: Insights from geological-3D structural modelling, stress analysis, and fault reactivation assessment",
-   "wadah": "Geothermics",
-   "doi": "10.1016/j.geothermics.2026.103894",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini menyelidiki sistem panas bumi vulkanik Dieng, Indonesia, fokus pada kontrol struktural permeabilitas. Penting untuk memahami potensi energi terbarukan dan pengembangan sumber daya panas bumi di Jawa Tengah.",
-   "kategori": "GEOTERMAL DIENG",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Direct pyrolysis of rock asphalt from Buton Indonesia: characterization of liquid product and the role of calcite",
-   "wadah": "Fuel",
-   "doi": "10.1016/j.fuel.2026.139840",
-   "tanggal": "2027-1",
-   "alasan": "Penelitian ini fokus pada pirolisis aspal batu dari Buton, Indonesia, serta karakterisasi produk cairnya. Relevan untuk eksplorasi dan pemanfaatan sumber daya alam unik yang dimiliki Indonesia secara berkelanjutan.",
-   "kategori": "SUMBER DAYA BUTON",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Microplastic concentration in the water column of the Banggai Sea, Central Sulawesi, Indonesia",
-   "wadah": "Water Biology and Security",
-   "doi": "10.1016/j.watbs.2026.100553",
-   "tanggal": "2027-1",
-   "alasan": "Studi ini mengukur konsentrasi mikroplastik di kolom air Laut Banggai, Sulawesi Tengah. Penting untuk memahami dampak pencemaran terhadap ekosistem laut Indonesia dan upaya konservasi perairan nasional.",
-   "kategori": "LAUT & POLUSI",
-   "sejak_edisi": 371
-  },
-  {
-   "judul": "Phenotypic and morphometric characterisation of the 'Bangkok Ekor Lidi' Gamefowl population in East Java, Indonesia",
-   "wadah": "Poultry Science",
-   "doi": "10.1016/j.psj.2026.108089",
-   "tanggal": "2027-1",
-   "alasan": "Makalah ini mengkarakterisasi populasi ayam aduan 'Bangkok Ekor Lidi' di Jawa Timur. Relevan untuk menjaga keanekaragaman genetik, peternakan lokal, serta pemahaman spesies asli Indonesia.",
-   "kategori": "BIODIVERSITAS HEWAN",
-   "sejak_edisi": 371
   }
  ]
 }
