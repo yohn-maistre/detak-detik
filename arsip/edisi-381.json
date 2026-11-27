@@ -1,0 +1,121 @@
+{
+ "edisi": 381,
+ "terbit": "2026-11-27T19:06:08.970193+00:00",
+ "sesi": "pagi",
+ "angka": {
+  "label": "Total kerugian negara dalam vonis korupsi yang diputus bulan ini.",
+  "nilai": 388350000000.0
+ },
+ "kliping": [
+  {
+   "id": "klp-381-01",
+   "judul": "Eks Kapolri Listyo Sigit tak hadir di sidang etik kasus dugaan makar dan penyadapan – Apa saja fakta yang diketahui soal kasusnya?",
+   "skor": 32
+  },
+  {
+   "id": "klp-381-07",
+   "judul": "Pemkab Sumbawa Waspadai Lonjakan Harga Pangan Jelang Nataru, Pasokan Ayam Jadi Sorotan",
+   "skor": 12
+  },
+  {
+   "id": "klp-381-08",
+   "judul": "Satu Lagi Jenazah Ditemukan, Basarnas Perpanjangan Pencarian Korban Kebakaran Pabrik Milkita",
+   "skor": 12
+  },
+  {
+   "id": "klp-381-02",
+   "judul": "Operasi pencarian penambang emas Pongkor memasuki 'fase kritis' – Bagaimana awal mula munculnya gurandil, siapa dua tersangka yang terlibat?",
+   "skor": 19
+  },
+  {
+   "id": "klp-381-20",
+   "judul": "Polri Tetapkan PT DTA dan PT USD Tersangka Korporasi di Kasus Beras Fortifikasi amp;nbsp;",
+   "skor": 9
+  },
+  {
+   "id": "klp-381-05",
+   "judul": "CPNS 2026 Buka 154.052 Formasi, Pelamar Diminta Tak Ragu Ambil Penempatan Luar Jawa",
+   "skor": 13
+  },
+  {
+   "id": "klp-381-06",
+   "judul": "Usut Kasus Korupsi Bupati Klaten, KPK Temukan Mark Up Harga Sup Ayam Rp35 Ribu",
+   "skor": 12
+  },
+  {
+   "id": "klp-381-11",
+   "judul": "Syahganda Ungkap Pengusaha Tambang Arif Kurniawan Terindikasi Aktor Intelektual di Balik Upaya Makar",
+   "skor": 10
+  },
+  {
+   "id": "klp-381-14",
+   "judul": "Bupati Kupang ditetapkan tersangka kasus kekerasan seksual – Bagaimana kronologinya dan apakah ada pola?",
+   "skor": 9
+  },
+  {
+   "id": "klp-381-15",
+   "judul": "13 Orang Tewas, Pakar Sebut Tragedi Tambang Pongkor Bukan Cuma Bencana",
+   "skor": 9
+  },
+  {
+   "id": "klp-381-24",
+   "judul": "KPK Panggil Kepala Kantor Pertanahan Mojokerto Istri Lampri Tersangka Korupsi Kementerian ATR/BPN",
+   "skor": 7
+  },
+  {
+   "id": "klp-381-12",
+   "judul": "Hasil Verifikasi Ijazah SMA Dua Cawapres: Ada yang Beda Nama, Ada yang Clear",
+   "skor": 10
+  }
+ ],
+ "janji": [
+  {
+   "id": "pdb-8",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "mbg-82jt",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "rumah-3jt",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "beras-impor-0",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "b50-2026",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "miskin-ekstrem-0",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "elektrifikasi-100",
+   "status": "BERJALAN"
+  },
+  {
+   "id": "kopdes-80rb",
+   "status": "TIDAK TERCAPAI"
+  },
+  {
+   "id": "sekolah-rakyat-100",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "guru-nonasn-2jt",
+   "status": "TERCAPAI"
+  },
+  {
+   "id": "jetp-cair",
+   "status": "DATA TIDAK TERSEDIA"
+  },
+  {
+   "id": "hutan-12jt-ha",
+   "status": "DATA TIDAK TERSEDIA"
+  }
+ ]
+}

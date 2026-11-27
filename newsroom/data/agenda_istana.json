@@ -4,8 +4,26 @@
   "https://setkab.go.id/feed/",
   "https://www.wapresri.go.id/feed/"
  ],
- "diambil": "2026-11-26T19:11:54+00:00",
+ "diambil": "2026-11-27T19:06:35+00:00",
  "acara": [
+  {
+   "id": "b9cd21595f42",
+   "url": "https://setkab.go.id/presiden-prabowo-hadiri-puncak-peringatan-hari-guru-nasional-2026/",
+   "judul": "Presiden Prabowo Hadiri Puncak Peringatan Hari Guru Nasional 2026",
+   "aktor": "PRESIDEN",
+   "jenis": "KUNJUNGAN",
+   "tanggal_acara": "2026-11-27",
+   "tanggal_terbit": "2026-11-27",
+   "audiens": null,
+   "topik": [
+    "pendidikan",
+    "agama"
+   ],
+   "venue": null,
+   "kota": null,
+   "prov": "32",
+   "prov_nama": "Jawa Barat"
+  },
   {
    "id": "bdce87b6b03e",
    "url": "https://setkab.go.id/presiden-prabowo-hadiri-pemusnahan-6017-ton-barang-bukti-narkoba-dan-pengungkapan-penipuan-daring-internasional/",
